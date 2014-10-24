@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.19"
+    ComputedModelVersion    "1.21"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -64,11 +64,11 @@ Model {
 	$ObjectID		6
 	$ClassName		"Simulink.EditorInfo"
 	IsActive		[1]
-	ViewObjType		"SimulinkTopLevel"
-	LoadSaveID		"0"
+	ViewObjType		"SimulinkSubsys"
+	LoadSaveID		"1706"
 	Extents			[1332.0, 570.0]
 	ZoomFactor		[1.0]
-	Offset			[0.0, 0.0]
+	Offset			[935.03142991365758, 187.90796022328192]
       }
     }
   }
@@ -81,9 +81,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Templomos"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Oct 16 12:40:54 2014"
-  RTWModifiedTimeStamp	  335363909
-  ModelVersionFormat	  "1.%<AutoIncrement:19>"
+  LastModifiedDate	  "Wed Oct 22 22:29:40 2014"
+  RTWModifiedTimeStamp	  335917757
+  ModelVersionFormat	  "1.%<AutoIncrement:21>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -963,7 +963,7 @@ Model {
   System {
     Name		    "Symmetry"
     Location		    [35, 6, 1417, 750]
-    Open		    on
+    Open		    off
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
     ScreenColor		    "white"
@@ -976,7 +976,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "1910"
+    SIDHighWatermark	    "1932"
     Block {
       BlockType		      SubSystem
       Name		      "Control_Current"
@@ -5249,7 +5249,7 @@ Model {
 	  System {
 	    Name		    "Log_Signals"
 	    Location		    [35, 6, 1417, 750]
-	    Open		    off
+	    Open		    on
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -5986,6 +5986,92 @@ Model {
 	      }
 	    }
 	    Block {
+	      BlockType		      Reference
+	      Name		      "Complex Phase\nDifference"
+	      SID		      "1927"
+	      Ports		      [2, 1]
+	      Position		      [1535, 418, 1615, 462]
+	      ZOrder		      548
+	      LibraryVersion	      "1.271"
+	      SourceBlock	      "commutil2/Complex Phase\nDifference"
+	      SourceType	      "Complex Phase Difference"
+	      ContentPreviewEnabled   off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Complex Phase\nDifference1"
+	      SID		      "1929"
+	      Ports		      [2, 1]
+	      Position		      [1535, 498, 1615, 542]
+	      ZOrder		      550
+	      LibraryVersion	      "1.271"
+	      SourceBlock	      "commutil2/Complex Phase\nDifference"
+	      SourceType	      "Complex Phase Difference"
+	      ContentPreviewEnabled   off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Complex Phase\nDifference2"
+	      SID		      "1930"
+	      Ports		      [2, 1]
+	      Position		      [1535, 578, 1615, 622]
+	      ZOrder		      551
+	      LibraryVersion	      "1.271"
+	      SourceBlock	      "commutil2/Complex Phase\nDifference"
+	      SourceType	      "Complex Phase Difference"
+	      ContentPreviewEnabled   off
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux"
+	      SID		      "1928"
+	      Ports		      [1, 3]
+	      Position		      [1415, 398, 1420, 572]
+	      ZOrder		      549
+	      ShowName		      off
+	      Outputs		      "3"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux"
+	      SID		      "1932"
+	      Ports		      [3, 1]
+	      Position		      [1685, 398, 1690, 642]
+	      ZOrder		      553
+	      ShowName		      off
+	      Inputs		      "3"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "Sources1"
+	      SID		      "1926"
+	      Ports		      [1]
+	      Position		      [1740, 285, 1870, 315]
+	      ZOrder		      547
+	      ShowName		      off
+	      VariableName	      "V"
+	      MaxDataPoints	      "inf"
+	      SaveFormat	      "Structure With Time"
+	      FixptAsFi		      on
+	      SampleTime	      "sample"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "Sources2"
+	      SID		      "1931"
+	      Ports		      [1]
+	      Position		      [1740, 505, 1870, 535]
+	      ZOrder		      552
+	      ShowName		      off
+	      VariableName	      "Phase_Diff"
+	      MaxDataPoints	      "inf"
+	      SaveFormat	      "Structure With Time"
+	      FixptAsFi		      on
+	      SampleTime	      "sample"
+	    }
+	    Block {
 	      BlockType		      ToWorkspace
 	      Name		      "To Workspace"
 	      SID		      "1743"
@@ -6107,8 +6193,27 @@ Model {
 		Points			[0, 75; 1, 0]
 		Branch {
 		  ZOrder		  9
-		  DstBlock		  "To Workspace5"
-		  DstPort		  1
+		  Points		  [155, 0]
+		  Branch {
+		    ZOrder		    16
+		    Points		    [0, 35; 281, 0]
+		    Branch {
+		    ZOrder		    36
+		    Points		    [0, 185]
+		    DstBlock		    "Demux"
+		    DstPort		    1
+		    }
+		    Branch {
+		    ZOrder		    35
+		    DstBlock		    "Sources1"
+		    DstPort		    1
+		    }
+		  }
+		  Branch {
+		    ZOrder		    15
+		    DstBlock		    "To Workspace5"
+		    DstPort		    1
+		  }
 		}
 		Branch {
 		  ZOrder		  10
@@ -6144,6 +6249,90 @@ Model {
 	      SrcBlock		      "3_Phase_THD"
 	      SrcPort		      1
 	      DstBlock		      "To Workspace2"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      24
+	      SrcBlock		      "Demux"
+	      SrcPort		      1
+	      Points		      [57, 0]
+	      Branch {
+		ZOrder			34
+		Points			[0, 180]
+		DstBlock		"Complex Phase\nDifference2"
+		DstPort			2
+	      }
+	      Branch {
+		ZOrder			33
+		DstBlock		"Complex Phase\nDifference"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      ZOrder		      25
+	      SrcBlock		      "Demux"
+	      SrcPort		      2
+	      Points		      [82, 0]
+	      Branch {
+		ZOrder			30
+		Points			[0, 25]
+		DstBlock		"Complex Phase\nDifference1"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			29
+		Points			[0, -35]
+		DstBlock		"Complex Phase\nDifference"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      ZOrder		      28
+	      SrcBlock		      "Demux"
+	      SrcPort		      3
+	      Points		      [84, 0]
+	      Branch {
+		ZOrder			32
+		Points			[0, 50]
+		DstBlock		"Complex Phase\nDifference2"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			31
+		Points			[0, -10]
+		DstBlock		"Complex Phase\nDifference1"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      ZOrder		      37
+	      SrcBlock		      "Complex Phase\nDifference"
+	      SrcPort		      1
+	      Points		      [50, 0]
+	      DstBlock		      "Mux"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      38
+	      SrcBlock		      "Complex Phase\nDifference1"
+	      SrcPort		      1
+	      Points		      [50, 0]
+	      DstBlock		      "Mux"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      39
+	      SrcBlock		      "Complex Phase\nDifference2"
+	      SrcPort		      1
+	      Points		      [50, 0]
+	      DstBlock		      "Mux"
+	      DstPort		      3
+	    }
+	    Line {
+	      ZOrder		      40
+	      SrcBlock		      "Mux"
+	      SrcPort		      1
+	      DstBlock		      "Sources2"
 	      DstPort		      1
 	    }
 	  }
@@ -8003,7 +8192,7 @@ Model {
       Ports		      []
       Position		      [305, 175, 365, 199]
       ZOrder		      1
-      LibraryVersion	      "*1.2362"
+      LibraryVersion	      "1.2362"
       UserDataPersistent      on
       UserData		      "DataTag0"
       FontSize		      11

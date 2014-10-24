@@ -2,32 +2,33 @@
 clear all;
 close all;
 
-% Simulation initialisation parameters
+%% Simulation initialisation parameters
 CLK=1000;                                           %[sample/s]
 tfin=0.1;                                           %[s]
 sample=10e-5;                                       %[s/sample]
 t=0:sample:tfin;                                    %[tick]
 
-% Transformator Station parameters
+%% Transformator Station parameters
 Urms_Source=[230,230,230];                          %[Vrms]
 Source_Frequency=[50,50,50];                        %[Hz]
 Phase_Source=[0,2/3*pi,4/3*pi];                     %[rad]
 R_Source=[0.4, 0.4, 0.4];                           %[Ohm]
 L_Source=[3.185e-3, 3.185e-3, 3.185e-3];            %[H]
 
-% Network parameters
+%% Network parameters
 R_Network=[0.4, 0.4, 0.4, 0.4];                     %[Ohm]
 L_Network=[3.185e-3, 3.185e-3, 3.185e-3, 3.185e-3]; %[H]
 C_Network=[0, 0, 0];                                %[F]
 
-% Control_Current 
+%% Control_Current 
 Butterworth_filter_order=8;
 Butterworth_passband_frequency=5000;
 % Control_Current_frequency=[20,     30,     40];       %[Hz]
 % Control_Current_Amplitude=[0,     0,     0];       %[A]
 % Control_Current_Phase=    [0,      2/3*pi, 4/3*pi];   %[rad]
 % Control_Current_DC=       [0,      0,      0];        %[A]
-% Input dialog
+
+%Input dialog
         prompt = {'Enter the 3 phase Control current frequencies:','Enter the 3 phase Control current amplitudes:','Enter the 3 phase Control current phases:','Enter the 3 phase Control current DC components:'};
         dlg_title = 'Control current parameters';
         num_lines = 1;
@@ -56,7 +57,7 @@ Butterworth_passband_frequency=5000;
             CC_mtx(3,1)*sin(2*pi*CC_mtx(3,2)*t+CC_mtx(3,3))+CC_mtx(3,4)];
         Control_Current.signals.values=CC;
 
-% Network Loads
+%% Network Loads
 Load_Wire_Resistance=[0.1,0.2];                     %[Ohm]
 Switch_Load_R= [1,1,1];                             %[Boolean]
 Switch_Load_RL=[1,1,1];                             %[Boolean]
@@ -115,15 +116,140 @@ Switch_Load_RC=[1,1,1];                             %[Boolean]
          Capacitive_Load_R_Switching_Sequence=Capacitive_Load_R_Switching_Sequence_';
          Capacitive_Load_S_Switching_Sequence=Capacitive_Load_S_Switching_Sequence_';
          Capacitive_Load_T_Switching_Sequence=Capacitive_Load_T_Switching_Sequence_';
-         
-         
 
-% Simulation
-paramNameValStruct.AbsTol         = '1e-9';
-paramNameValStruct.RelTol         = '1e-9';
-sim('Symmetry');
+%% Simulation
+        paramNameValStruct.AbsTol         = '1e-9';
+        paramNameValStruct.RelTol         = '1e-9';
+        sim('Symmetry');
 
-% %plotting
+%% Angle
+
+%% 1#
+% function anglet = PhaseAngle(x,y) %give two column vectors with equal sizes
+% if(size(x)~=size(y))
+%     errordlg('Size inequality!')
+% end
+% n = size(x);
+% anglet = zeros(1,size(x));
+% s=[0,1,2];
+% angle=1;
+% for i=1:n
+%     s(1)=s(1)+1;
+%     if (( i<n && y(i)*y(i+1) < 0) && s(1) > 500)
+%         s(1)=s(2);
+%         t=0;
+%     end
+%     if ( i<n && (x(i)*x(i+1) < 0) && (x(i+1)*y(i)>0) && s(3)~=s(2))
+%         s(3)=s(2);
+%         angle=s(1);
+%     end
+%     anglet(i)=180*(angle/s(3));
+% end 
+% p1=PhaseAngle(V.signals.values(:,1),V.signals.values(:,2));
+
+%% 2#
+%         n=size(V.signals.values(:,1),1); 
+%         r=0;
+%         s=1;
+%         s1=2;
+%         szog=1;
+%         for (i=1 : n)
+%                 r=r+1;
+%             if ( i<n && (V.signals.values(i,2)*V.signals.values(i+1,2) < 0) && r > 500)
+%                 s=r;
+%                 t=0;
+%             end
+%             if ( i<n && (V.signals.values(i,1)*V.signals.values(i+1,1) < 0) && (V.signals.values(i+1,1)*V.signals.values(i,2)>0) && s1~=s )
+%                 s1=s;
+%                 szog=r;
+%             end
+%             szogt(i,1)=180*(szog/s1);           %fél periódusonként szög számolása
+%       end
+
+%% 3#
+% Fs = 100;
+% A = V.signals.values(:,1);
+% B = V.signals.values(:,2);
+% s = length(A);
+% samplesize=16;
+% DispvsInput=zeros(1,s);
+% Displacement=zeros(samplesize,1);
+% Input=zeros(samplesize,1);
+% n=1;
+% p=1;
+% j=1;
+% for i=2:s
+%     Displacement(j,1)=B(i);
+%     Input(j,1)=A(i);
+% 
+%     if n==samplesize
+% 
+%         NFFT = 2^nextpow2(samplesize); % Next power of 2 
+% 
+%         %% Create Hanning Window and Buffer the Data
+%         window=hann(NFFT);
+% 
+%         Displacement_Buffered=buffer(Displacement,NFFT,10);
+%         Input_Buffered=buffer(Input,NFFT,10);
+% 
+%         Displacement_Buffered=Displacement_Buffered'*diag(window);
+%         Input_Buffered=Input_Buffered'*diag(window);
+% 
+%         %% Calculate the FFT of the Signals now
+%         Displacement_FFT=fft(Displacement_Buffered,NFFT)/samplesize;
+%         Input_FFT=fft(Input_Buffered,NFFT)/samplesize;
+% 
+%         %Calculate the length of the frequency axis to be displayed
+%         f = Fs/2*linspace(0,1,NFFT/2+1);
+% 
+%         %Take the average
+%         Displacement_FFT=mean(Displacement_FFT);
+%         Input_FFT=mean(Input_FFT);
+% 
+%         %Calculate the phase angles
+%         Displacement_Phase=(angle(Displacement_FFT));
+%         Input_Phase=(angle(Input_FFT));
+% 
+%         %Identify the largest component
+%         [Displacement_Max_Value Displacement_Max_Index]=max(abs(Displacement_FFT));
+%         [Input_Max_Value Input_Max_Index]=max(abs(Input_FFT));
+% 
+%         %Get the Phase angles that correspond to the largest harmonic
+%         Z_Displacement=Displacement_Phase(Displacement_Max_Index);
+%         Z_Input=Input_Phase(Input_Max_Index);
+% 
+%         %Calculate the Phase angle differences
+%         Z_Displacement_Input=Z_Displacement-Z_Input;
+% 
+%         %Consolidate them in a matrix
+% 
+%         DispvsInput(i)=Z_Displacement_Input*180/pi;
+% 
+%         p=p+1;
+%         j=1;
+%         n=1;
+% 
+%     
+% %     else
+% %         if DispvsInput(i)==0
+% %           DispvsInput(i,1)=DispvsInput(i-1,1);
+% %         end
+% %         DispvsInput(i,1)=DispvsInput(i-1,1);
+%     end
+%     
+%     %Counter
+%     n=n+1;
+%     j=j+1;
+% end
+% 
+%        figure
+%        plot(DispvsInput)
+%        grid on
+%        title('Angle R-S')
+%        ylabel('Angle R_S (degree)')
+       
+
+%% Plotting
 % %%%Transformator Station%%%
 %         figure
 %         %Voltage Source Signals
@@ -165,6 +291,15 @@ sim('Symmetry');
         title('Control Current')
         xlabel('t')
         ylabel('Control Current Values (RST)')
+        
+%         figure
+%         plot(Phase_Diff.time,Phase_Diff.signals.values(:,1),...
+%              Phase_Diff.time,Phase_Diff.signals.values(:,2),...
+%              Phase_Diff.time,Phase_Diff.signals.values(:,3));
+%          grid on
+%         title('Phase_Shift')
+%         xlabel('t')
+%         ylabel('Phase_Shift (rad)')
 %         
 %%%THD%%%
 %         figure

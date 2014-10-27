@@ -29,12 +29,17 @@ y_3 = Intersection(2,:);
 %haromszogek között, ekkor az eredeti haromszögek pontjait kell használni,
 %bizonys feltételek melett
 
+% 2 metszéspont: meg kell írni!!!
+% 1 metszéspont: nem lehet
+% 0 metszéspont: a nagyobból ki kell vonni a kisebbet
 
 % Calculate the areas of the polygons
 A_1 = polyarea(x_1,y_1)
 A_2 = polyarea(x_2,y_2)
 A_intersection = polyarea(x_3,y_3)
 A_union = A_1+A_2-A_intersection
+
+Error_Space=A_union-A_intersection
 
 %Polar plot
 figure

@@ -1,16 +1,16 @@
 Model {
   Name			  "Symmetry"
-  Version		  8.3
+  Version		  8.1
   MdlSubVersion		  0
-  SavedCharacterEncoding  "windows-1250"
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.21"
+    ComputedModelVersion    "1.22"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
+  SavedCharacterEncoding  "windows-1250"
   slprops.hdlmdlprops {
     $PropName		    "HDLParams"
     $ObjectID		    1
@@ -42,7 +42,7 @@ Model {
       $ObjectID		      3
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [35.0, 6.0, 1382.0, 744.0]
+      Location		      [-1.0, 31.0, 1382.0, 744.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		4
@@ -68,22 +68,22 @@ Model {
 	LoadSaveID		"1706"
 	Extents			[1332.0, 570.0]
 	ZoomFactor		[1.0]
-	Offset			[935.03142991365758, 187.90796022328192]
+	Offset			[532.0, 28.0]
       }
     }
   }
-  PhysicalModelingChecksum "1985450294"
-  PhysicalModelingParameterChecksum "3346084845"
+  PhysicalModelingChecksum "2693049496"
+  PhysicalModelingParameterChecksum "1825117715"
   PhysicalModelingProducts "Power_System_Blocks"
   Created		  "Thu Oct 02 12:18:57 2014"
   Creator		  "gorbep"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "Templomos"
+  LastModifiedBy	  "Neukirchner László"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Oct 22 22:29:40 2014"
-  RTWModifiedTimeStamp	  335917757
-  ModelVersionFormat	  "1.%<AutoIncrement:21>"
+  LastModifiedDate	  "Mon Oct 27 14:57:39 2014"
+  RTWModifiedTimeStamp	  336320627
+  ModelVersionFormat	  "1.%<AutoIncrement:22>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -109,11 +109,6 @@ Model {
   BrowserShowLibraryLinks off
   BrowserLookUnderMasks	  off
   SimulationMode	  "normal"
-  PauseTimes		  "5"
-  NumberOfSteps		  1
-  SnapshotBufferSize	  10
-  SnapshotInterval	  10
-  NumberOfLastSnapshots	  0
   LinearizationMsg	  "none"
   Profile		  off
   ParamWorkspaceSource	  "MATLABWorkspace"
@@ -147,7 +142,6 @@ Model {
   CovNameIncrementing	  off
   CovHtmlReporting	  on
   CovForceBlockReductionOff on
-  CovEnableCumulative	  on
   covSaveCumulativeToWorkspaceVar on
   CovSaveSingleToWorkspaceVar on
   CovCumulativeVarName	  "covCumulativeData"
@@ -155,9 +149,6 @@ Model {
   CovReportOnPause	  on
   CovModelRefEnable	  "Off"
   CovExternalEMLEnable	  off
-  CovSFcnEnable		  off
-  CovBoundaryAbsTol	  0.000010
-  CovBoundaryRelTol	  0.010000
   ExtModeBatchMode	  off
   ExtModeEnableFloating	  on
   ExtModeTrigType	  "manual"
@@ -187,13 +178,13 @@ Model {
     Dimension		    1
     Simulink.ConfigSet {
       $ObjectID		      8
-      Version		      "1.14.2"
+      Version		      "1.13.0"
       Array {
 	Type			"Handle"
 	Dimension		10
 	Simulink.SolverCC {
 	  $ObjectID		  9
-	  Version		  "1.14.2"
+	  Version		  "1.13.0"
 	  StartTime		  "0.0"
 	  StopTime		  "tfin"
 	  AbsTol		  "auto"
@@ -228,7 +219,7 @@ Model {
 	}
 	Simulink.DataIOCC {
 	  $ObjectID		  10
-	  Version		  "1.14.2"
+	  Version		  "1.13.0"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
 	  FinalStateName	  "xFinal"
@@ -246,7 +237,6 @@ Model {
 	  SignalLogging		  on
 	  DSMLogging		  on
 	  InspectSignalLogs	  off
-	  VisualizeSimOutput	  on
 	  SaveTime		  on
 	  ReturnWorkspaceOutputs  off
 	  StateSaveName		  "xout"
@@ -261,7 +251,7 @@ Model {
 	}
 	Simulink.OptimizationCC {
 	  $ObjectID		  11
-	  Version		  "1.14.2"
+	  Version		  "1.13.0"
 	  Array {
 	    Type		    "Cell"
 	    Dimension		    8
@@ -281,14 +271,11 @@ Model {
 	  InlineParams		  off
 	  UseIntDivNetSlope	  off
 	  UseFloatMulNetSlope	  off
-	  DefaultUnderspecifiedDataType	"double"
 	  UseSpecifiedMinMax	  off
 	  InlineInvariantSignals  off
 	  OptimizeBlockIOStorage  on
 	  BufferReuse		  on
 	  EnhancedBackFolding	  off
-	  CachingGlobalReferences off
-	  GlobalBufferReuse	  on
 	  StrengthReduction	  off
 	  ExpressionFolding	  on
 	  BooleansAsBitfields	  off
@@ -303,7 +290,6 @@ Model {
 	  SystemCodeInlineAuto	  off
 	  StateBitsets		  off
 	  DataBitsets		  off
-	  ActiveStateOutputEnumStorageType "Native Integer"
 	  UseTempVars		  off
 	  ZeroExternalMemoryAtStartup on
 	  ZeroInternalMemoryAtStartup on
@@ -321,7 +307,7 @@ Model {
 	}
 	Simulink.DebuggingCC {
 	  $ObjectID		  12
-	  Version		  "1.14.2"
+	  Version		  "1.13.0"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
 	  ArrayBoundsChecking	  "none"
@@ -411,7 +397,7 @@ Model {
 	}
 	Simulink.HardwareCC {
 	  $ObjectID		  13
-	  Version		  "1.14.2"
+	  Version		  "1.13.0"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
 	  ProdBitPerInt		  32
@@ -452,7 +438,7 @@ Model {
 	}
 	Simulink.ModelReferenceCC {
 	  $ObjectID		  14
-	  Version		  "1.14.2"
+	  Version		  "1.13.0"
 	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
 	  CheckModelReferenceTargetMessage "error"
 	  EnableParallelModelReferenceBuilds off
@@ -467,7 +453,7 @@ Model {
 	}
 	Simulink.SFSimCC {
 	  $ObjectID		  15
-	  Version		  "1.14.2"
+	  Version		  "1.13.0"
 	  SFSimEnableDebug	  on
 	  SFSimOverflowDetection  on
 	  SFSimEcho		  on
@@ -478,12 +464,11 @@ Model {
 	  SimUseLocalCustomCode	  off
 	  SimParseCustomCode	  on
 	  SimBuildMode		  "sf_incremental_build"
-	  SimGenImportedTypeDefs  off
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
 	  $ObjectID		  16
-	  Version		  "1.14.2"
+	  Version		  "1.13.0"
 	  Array {
 	    Type		    "Cell"
 	    Dimension		    15
@@ -505,15 +490,11 @@ Model {
 	    PropName		    "DisabledProps"
 	  }
 	  SystemTargetFile	  "grt.tlc"
-	  TLCOptions		  ""
 	  GenCodeOnly		  off
 	  MakeCommand		  "make_rtw"
 	  GenerateMakefile	  on
 	  PackageGeneratedCodeAndArtifacts off
-	  PackageName		  ""
 	  TemplateMakefile	  "grt_default_tmf"
-	  PostCodeGenCommand	  ""
-	  Description		  ""
 	  GenerateReport	  off
 	  SaveLog		  off
 	  RTWVerbose		  on
@@ -524,23 +505,13 @@ Model {
 	  TLCAssert		  off
 	  ProcessScriptMode	  "Default"
 	  ConfigurationMode	  "Optimized"
-	  ProcessScript		  ""
-	  ConfigurationScript	  ""
 	  ConfigAtBuild		  off
 	  RTWUseLocalCustomCode	  off
 	  RTWUseSimCustomCode	  off
-	  CustomSourceCode	  ""
-	  CustomHeaderCode	  ""
-	  CustomInclude		  ""
-	  CustomSource		  ""
-	  CustomLibrary		  ""
-	  CustomInitializer	  ""
-	  CustomTerminator	  ""
-	  Toolchain		  "Automatically locate an installed toolchain"
-	  BuildConfiguration	  "Faster Builds"
 	  IncludeHyperlinkInReport off
 	  LaunchReport		  off
 	  PortableWordSizes	  off
+	  GenerateErtSFunction	  off
 	  CreateSILPILBlock	  "None"
 	  CodeExecutionProfiling  off
 	  CodeExecutionProfileVariable "executionProfile"
@@ -560,17 +531,14 @@ Model {
 	  GenerateCodeMetricsReport off
 	  GenerateCodeReplacementReport	off
 	  RTWCompilerOptimization "Off"
-	  RTWCustomCompilerOptimizations ""
 	  CheckMdlBeforeBuild	  "Off"
 	  CustomRebuildMode	  "OnUpdate"
-	  DataInitializer	  ""
-	  SharedConstantsCachingThreshold 1024
 	  Array {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
 	      $ObjectID		      17
-	      Version		      "1.14.2"
+	      Version		      "1.13.0"
 	      Array {
 		Type			"Cell"
 		Dimension		23
@@ -601,7 +569,6 @@ Model {
 	      }
 	      ForceParamTrailComments off
 	      GenerateComments	      on
-	      CommentStyle	      "Auto"
 	      IgnoreCustomStorageClasses on
 	      IgnoreTestpoints	      off
 	      IncHierarchyInIds	      off
@@ -624,7 +591,6 @@ Model {
 	      CustomSymbolStrBlkIO    "rtb_$N$M"
 	      CustomSymbolStrTmpVar   "$N$M"
 	      CustomSymbolStrMacro    "$R$N$M"
-	      CustomSymbolStrUtil     "$N$C"
 	      DefineNamingRule	      "None"
 	      ParamNamingRule	      "None"
 	      SignalNamingRule	      "None"
@@ -641,7 +607,7 @@ Model {
 	    Simulink.GRTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
 	      $ObjectID		      18
-	      Version		      "1.14.2"
+	      Version		      "1.13.0"
 	      Array {
 		Type			"Cell"
 		Dimension		14
@@ -664,8 +630,6 @@ Model {
 	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
 	      TargetLibSuffix	      ""
 	      TargetPreCompLibLocation ""
-	      GenFloatMathFcnCalls    "NOT IN USE"
-	      TargetLangStandard      "C89/C90 (ANSI)"
 	      CodeReplacementLibrary  "None"
 	      UtilityFuncGeneration   "Auto"
 	      ERTMultiwordTypeDef     "System defined"
@@ -674,6 +638,7 @@ Model {
 	      GenerateFullHeader      on
 	      GenerateSampleERTMain   off
 	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
 	      ModelReferenceCompliant on
 	      ParMdlRefBuildCompliant on
 	      CompOptLevelCompliant   on
@@ -690,7 +655,6 @@ Model {
 	      LogVarNameModifier      "rt_"
 	      MatFileLogging	      on
 	      MultiInstanceERTCode    off
-	      CodeInterfacePackaging  "Nonreusable function"
 	      SupportNonFinite	      on
 	      SupportComplex	      on
 	      PurelyIntegerCode	      off
@@ -718,14 +682,13 @@ Model {
 	      RTWCAPIStates	      off
 	      RTWCAPIRootIO	      off
 	      GenerateASAP2	      off
-	      MultiInstanceErrorCode  "Error"
 	    }
 	    PropName		    "Components"
 	  }
 	}
 	hdlcoderui.hdlcc {
 	  $ObjectID		  19
-	  Version		  "1.14.2"
+	  Version		  "1.13.0"
 	  Description		  "HDL Coder custom configuration component"
 	  Name			  "HDL Coder"
 	  Array {
@@ -923,15 +886,11 @@ Model {
       Permissions	      "ReadWrite"
       PermitHierarchicalResolution "All"
       TreatAsAtomicUnit	      off
-      MinAlgLoopOccurrences   off
-      PropExecContextOutsideSubsystem off
       CheckFcnCallInpInsideContextMsg off
       SystemSampleTime	      "-1"
-      RTWSystemCode	      "Auto"
       RTWFcnNameOpts	      "Auto"
       RTWFileNameOpts	      "Auto"
       FunctionInterfaceSpec   "void_void"
-      FunctionWithSeparateData off
       RTWMemSecFuncInitTerm   "Inherit from model"
       RTWMemSecFuncExecute    "Inherit from model"
       RTWMemSecDataConstants  "Inherit from model"
@@ -941,28 +900,24 @@ Model {
       DataTypeOverride	      "UseLocalSettings"
       DataTypeOverrideAppliesTo	"AllNumericTypes"
       MinMaxOverflowLogging   "UseLocalSettings"
-      Opaque		      off
-      MaskHideContents	      off
       SFBlockType	      "NONE"
       Variant		      off
       GeneratePreprocessorConditionals off
-      ContentPreviewEnabled   off
     }
     Block {
       BlockType		      ToWorkspace
       VariableName	      "simulink_output"
       MaxDataPoints	      "1000"
       Decimation	      "1"
+      SampleTime	      "0"
       SaveFormat	      "Array"
-      Save2DSignal	      "Inherit from input (this choice will be removed - see release notes)"
       FixptAsFi		      off
       NumInputs		      "1"
-      SampleTime	      "0"
     }
   }
   System {
     Name		    "Symmetry"
-    Location		    [35, 6, 1417, 750]
+    Location		    [-1, 31, 1381, 775]
     Open		    off
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -976,7 +931,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "1932"
+    SIDHighWatermark	    "1907"
     Block {
       BlockType		      SubSystem
       Name		      "Control_Current"
@@ -985,10 +940,16 @@ Model {
       Position		      [537, 120, 598, 200]
       ZOrder		      545
       BlockRotation	      270
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
       RequestExecContextInheritance off
+      MaskHideContents	      off
       System {
 	Name			"Control_Current"
-	Location		[35, 6, 1417, 750]
+	Location		[-1, 31, 1381, 775]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -1009,10 +970,9 @@ Model {
 	  Position		  [475, 47, 520, 83]
 	  ZOrder		  183
 	  ShowName		  off
-	  LibraryVersion	  "1.2362"
+	  LibraryVersion	  "1.2191"
 	  SourceBlock		  "powerlib/Electrical\nSources/Controlled Current Source"
 	  SourceType		  "Controlled Current Source"
-	  ContentPreviewEnabled	  off
 	  Initialize		  on
 	  Source_Type		  "AC"
 	  Amplitude		  "0"
@@ -1028,10 +988,9 @@ Model {
 	  Position		  [475, 107, 520, 143]
 	  ZOrder		  218
 	  ShowName		  off
-	  LibraryVersion	  "1.2362"
+	  LibraryVersion	  "1.2191"
 	  SourceBlock		  "powerlib/Electrical\nSources/Controlled Current Source"
 	  SourceType		  "Controlled Current Source"
-	  ContentPreviewEnabled	  off
 	  Initialize		  on
 	  Source_Type		  "AC"
 	  Amplitude		  "0"
@@ -1047,10 +1006,9 @@ Model {
 	  Position		  [475, 167, 520, 203]
 	  ZOrder		  225
 	  ShowName		  off
-	  LibraryVersion	  "1.2362"
+	  LibraryVersion	  "1.2191"
 	  SourceBlock		  "powerlib/Electrical\nSources/Controlled Current Source"
 	  SourceType		  "Controlled Current Source"
-	  ContentPreviewEnabled	  off
 	  Initialize		  on
 	  Source_Type		  "AC"
 	  Amplitude		  "0"
@@ -1089,10 +1047,9 @@ Model {
 	  Position		  [565, 32, 600, 213]
 	  ZOrder		  514
 	  ShowName		  off
-	  LibraryVersion	  "1.2362"
+	  LibraryVersion	  "1.2191"
 	  SourceBlock		  "powerlib/Measurements/Three-Phase\nV-I Measurement"
 	  SourceType		  "Three-Phase VI Measurement"
-	  ContentPreviewEnabled	  off
 	  VoltageMeasurement	  "no"
 	  SetLabelV		  off
 	  LabelV		  "V_RST"
@@ -1175,9 +1132,9 @@ Model {
 	  ShowName		  off
 	  VariableName		  "Control_Current_Values"
 	  MaxDataPoints		  "inf"
+	  SampleTime		  "sample"
 	  SaveFormat		  "Structure With Time"
 	  FixptAsFi		  on
-	  SampleTime		  "sample"
 	}
 	Block {
 	  BlockType		  PMIOPort
@@ -1221,7 +1178,6 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  1
 	  SrcBlock		  "Controlled Current Source"
 	  SrcPort		  LConn1
 	  Points		  [-30, 0; 0, 60]
@@ -1248,7 +1204,6 @@ Model {
 	  }
 	}
 	Line {
-	  ZOrder		  6
 	  SrcBlock		  "From\nWorkspace"
 	  SrcPort		  1
 	  DstBlock		  "Demux"
@@ -1256,7 +1211,6 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  7
 	  SrcBlock		  "M3"
 	  SrcPort		  LConn1
 	  DstBlock		  "Controlled Current Source"
@@ -1264,7 +1218,6 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  8
 	  SrcBlock		  "M3"
 	  SrcPort		  LConn2
 	  DstBlock		  "Controlled Current Source1"
@@ -1272,7 +1225,6 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  9
 	  SrcBlock		  "M3"
 	  SrcPort		  LConn3
 	  DstBlock		  "Controlled Current Source2"
@@ -1280,7 +1232,6 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  10
 	  SrcBlock		  "R"
 	  SrcPort		  RConn1
 	  DstBlock		  "M3"
@@ -1288,7 +1239,6 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  11
 	  SrcBlock		  "S"
 	  SrcPort		  RConn1
 	  DstBlock		  "M3"
@@ -1296,56 +1246,48 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  12
 	  SrcBlock		  "T"
 	  SrcPort		  RConn1
 	  DstBlock		  "M3"
 	  DstPort		  RConn3
 	}
 	Line {
-	  ZOrder		  13
 	  SrcBlock		  "M3"
 	  SrcPort		  1
 	  DstBlock		  "Sources1"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  14
 	  SrcBlock		  "P(t) Filter2"
 	  SrcPort		  1
 	  DstBlock		  "Controlled Current Source2"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  15
 	  SrcBlock		  "Demux"
 	  SrcPort		  1
 	  DstBlock		  "P(t) Filter"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  16
 	  SrcBlock		  "Demux"
 	  SrcPort		  2
 	  DstBlock		  "P(t) Filter1"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  17
 	  SrcBlock		  "P(t) Filter1"
 	  SrcPort		  1
 	  DstBlock		  "Controlled Current Source1"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  18
 	  SrcBlock		  "P(t) Filter"
 	  SrcPort		  1
 	  DstBlock		  "Controlled Current Source"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  19
 	  SrcBlock		  "Demux"
 	  SrcPort		  3
 	  DstBlock		  "P(t) Filter2"
@@ -1360,10 +1302,16 @@ Model {
       Ports		      [0, 0, 0, 0, 0, 4]
       Position		      [635, 23, 695, 107]
       ZOrder		      530
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
       RequestExecContextInheritance off
+      MaskHideContents	      off
       System {
 	Name			"Load"
-	Location		[35, 6, 1417, 750]
+	Location		[-1, 31, 1381, 775]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -1383,7 +1331,13 @@ Model {
 	  Ports			  [0, 2, 0, 0, 0, 4, 4]
 	  Position		  [290, 73, 345, 187]
 	  ZOrder		  385
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
 	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
 	  System {
 	    Name		    "Conncection_Measurements"
 	    Location		    [35, 6, 1417, 750]
@@ -1407,10 +1361,9 @@ Model {
 	      Position		      [260, 113, 285, 137]
 	      ZOrder		      361
 	      ShowName		      off
-	      LibraryVersion	      "1.2362"
+	      LibraryVersion	      "1.2191"
 	      SourceBlock	      "powerlib/Measurements/Current Measurement"
 	      SourceType	      "Current Measurement"
-	      ContentPreviewEnabled   off
 	      PhasorSimulation	      off
 	      OutputType	      "Complex"
 	      PSBequivalent	      "0"
@@ -1423,10 +1376,9 @@ Model {
 	      Position		      [260, 203, 285, 227]
 	      ZOrder		      367
 	      ShowName		      off
-	      LibraryVersion	      "1.2362"
+	      LibraryVersion	      "1.2191"
 	      SourceBlock	      "powerlib/Measurements/Current Measurement"
 	      SourceType	      "Current Measurement"
-	      ContentPreviewEnabled   off
 	      PhasorSimulation	      off
 	      OutputType	      "Complex"
 	      PSBequivalent	      "0"
@@ -1439,10 +1391,9 @@ Model {
 	      Position		      [260, 268, 285, 292]
 	      ZOrder		      368
 	      ShowName		      off
-	      LibraryVersion	      "1.2362"
+	      LibraryVersion	      "1.2191"
 	      SourceBlock	      "powerlib/Measurements/Current Measurement"
 	      SourceType	      "Current Measurement"
-	      ContentPreviewEnabled   off
 	      PhasorSimulation	      off
 	      OutputType	      "Complex"
 	      PSBequivalent	      "0"
@@ -1477,10 +1428,9 @@ Model {
 	      Position		      [260, 153, 285, 177]
 	      ZOrder		      360
 	      ShowName		      off
-	      LibraryVersion	      "1.2362"
+	      LibraryVersion	      "1.2191"
 	      SourceBlock	      "powerlib/Measurements/Voltage Measurement"
 	      SourceType	      "Voltage Measurement"
-	      ContentPreviewEnabled   off
 	      PhasorSimulation	      off
 	      OutputType	      "Complex"
 	      PSBequivalent	      "0"
@@ -1493,10 +1443,9 @@ Model {
 	      Position		      [260, 238, 285, 262]
 	      ZOrder		      363
 	      ShowName		      off
-	      LibraryVersion	      "1.2362"
+	      LibraryVersion	      "1.2191"
 	      SourceBlock	      "powerlib/Measurements/Voltage Measurement"
 	      SourceType	      "Voltage Measurement"
-	      ContentPreviewEnabled   off
 	      PhasorSimulation	      off
 	      OutputType	      "Complex"
 	      PSBequivalent	      "0"
@@ -1509,10 +1458,9 @@ Model {
 	      Position		      [260, 303, 285, 327]
 	      ZOrder		      365
 	      ShowName		      off
-	      LibraryVersion	      "1.2362"
+	      LibraryVersion	      "1.2191"
 	      SourceBlock	      "powerlib/Measurements/Voltage Measurement"
 	      SourceType	      "Voltage Measurement"
-	      ContentPreviewEnabled   off
 	      PhasorSimulation	      off
 	      OutputType	      "Complex"
 	      PSBequivalent	      "0"
@@ -1611,7 +1559,6 @@ Model {
 	      IconDisplay	      "Port number"
 	    }
 	    Line {
-	      ZOrder		      1
 	      SrcBlock		      "Current Measurement1"
 	      SrcPort		      1
 	      Points		      [102, 0; 0, -165]
@@ -1619,7 +1566,6 @@ Model {
 	      DstPort		      2
 	    }
 	    Line {
-	      ZOrder		      2
 	      SrcBlock		      "Mux1"
 	      SrcPort		      1
 	      DstBlock		      "V_abc"
@@ -1627,7 +1573,6 @@ Model {
 	    }
 	    Line {
 	      LineType		      "Connection"
-	      ZOrder		      3
 	      SrcBlock		      "Current Measurement2"
 	      SrcPort		      RConn1
 	      DstBlock		      "c"
@@ -1635,14 +1580,12 @@ Model {
 	    }
 	    Line {
 	      LineType		      "Connection"
-	      ZOrder		      4
 	      SrcBlock		      "Current Measurement"
 	      SrcPort		      RConn1
 	      DstBlock		      "a"
 	      DstPort		      RConn1
 	    }
 	    Line {
-	      ZOrder		      5
 	      SrcBlock		      "Mux"
 	      SrcPort		      1
 	      DstBlock		      "I_abc"
@@ -1650,7 +1593,6 @@ Model {
 	    }
 	    Line {
 	      LineType		      "Connection"
-	      ZOrder		      6
 	      SrcBlock		      "Current Measurement1"
 	      SrcPort		      RConn1
 	      DstBlock		      "b"
@@ -1658,7 +1600,6 @@ Model {
 	    }
 	    Line {
 	      LineType		      "Connection"
-	      ZOrder		      7
 	      SrcBlock		      "Voltage Measurement2"
 	      SrcPort		      LConn1
 	      Points		      [-9, 0; 0, -30]
@@ -1675,7 +1616,6 @@ Model {
 	      }
 	    }
 	    Line {
-	      ZOrder		      10
 	      SrcBlock		      "Current Measurement"
 	      SrcPort		      1
 	      Points		      [70, 0; 0, -95]
@@ -1684,7 +1624,6 @@ Model {
 	    }
 	    Line {
 	      LineType		      "Connection"
-	      ZOrder		      11
 	      SrcBlock		      "Voltage Measurement2"
 	      SrcPort		      LConn2
 	      Points		      [-75, 0]
@@ -1722,7 +1661,6 @@ Model {
 	    }
 	    Line {
 	      LineType		      "Connection"
-	      ZOrder		      18
 	      SrcBlock		      "Voltage Measurement1"
 	      SrcPort		      LConn1
 	      Points		      [-9, 0; 0, -30]
@@ -1739,7 +1677,6 @@ Model {
 	      }
 	    }
 	    Line {
-	      ZOrder		      21
 	      SrcBlock		      "Voltage Measurement"
 	      SrcPort		      1
 	      Points		      [71, 0; 0, 250]
@@ -1747,7 +1684,6 @@ Model {
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      22
 	      SrcBlock		      "Current Measurement2"
 	      SrcPort		      1
 	      Points		      [128, 0; 0, -210]
@@ -1755,7 +1691,6 @@ Model {
 	      DstPort		      3
 	    }
 	    Line {
-	      ZOrder		      23
 	      SrcBlock		      "Voltage Measurement1"
 	      SrcPort		      1
 	      Points		      [50, 0; 0, 185]
@@ -1764,7 +1699,6 @@ Model {
 	    }
 	    Line {
 	      LineType		      "Connection"
-	      ZOrder		      24
 	      SrcBlock		      "Voltage Measurement"
 	      SrcPort		      LConn1
 	      Points		      [-74, 0; 0, -35]
@@ -1781,7 +1715,6 @@ Model {
 	      }
 	    }
 	    Line {
-	      ZOrder		      27
 	      SrcBlock		      "Voltage Measurement2"
 	      SrcPort		      1
 	      Points		      [29, 0; 0, 140]
@@ -1797,10 +1730,16 @@ Model {
 	  Ports			  [0, 0, 0, 0, 0, 4]
 	  Position		  [500, 114, 685, 186]
 	  ZOrder		  343
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
 	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
 	  System {
 	    Name		    "Loads"
-	    Location		    [35, 6, 1417, 750]
+	    Location		    [-1, 31, 1381, 775]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -1821,10 +1760,16 @@ Model {
 	      Position		      [450, 350, 490, 450]
 	      ZOrder		      216
 	      BlockMirror	      on
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
 	      RequestExecContextInheritance off
+	      MaskHideContents	      off
 	      System {
 		Name			"Capacitive_Loads_RST"
-		Location		[35, 6, 1417, 750]
+		Location		[-1, 31, 1381, 775]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -1846,16 +1791,15 @@ Model {
 		  ZOrder		  219
 		  NamePlacement		  "alternate"
 		  ShowName		  off
-		  LibraryVersion	  "1.2362"
+		  LibraryVersion	  "1.2191"
 		  SourceBlock		  "powerlib/Elements/Breaker"
 		  SourceType		  "Breaker"
-		  ContentPreviewEnabled	  off
-		  InitialState		  "0"
-		  SwitchingTimes	  "[ 1/60  5/60 ]"
-		  External		  on
 		  BreakerResistance	  "0.01"
+		  InitialState		  "0"
 		  SnubberResistance	  "1e7"
 		  SnubberCapacitance	  "inf"
+		  SwitchingTimes	  "[ 1/60  5/60 ]"
+		  External		  on
 		  Measurements		  "None"
 		  MoreParameters	  off
 		  NoBreakLoop		  off
@@ -1869,16 +1813,15 @@ Model {
 		  ZOrder		  169
 		  NamePlacement		  "alternate"
 		  ShowName		  off
-		  LibraryVersion	  "1.2362"
+		  LibraryVersion	  "1.2191"
 		  SourceBlock		  "powerlib/Elements/Breaker"
 		  SourceType		  "Breaker"
-		  ContentPreviewEnabled	  off
-		  InitialState		  "0"
-		  SwitchingTimes	  "[ 1/60  5/60 ]"
-		  External		  on
 		  BreakerResistance	  "0.01"
+		  InitialState		  "0"
 		  SnubberResistance	  "1e7"
 		  SnubberCapacitance	  "inf"
+		  SwitchingTimes	  "[ 1/60  5/60 ]"
+		  External		  on
 		  Measurements		  "None"
 		  MoreParameters	  off
 		  NoBreakLoop		  off
@@ -1892,16 +1835,15 @@ Model {
 		  ZOrder		  221
 		  NamePlacement		  "alternate"
 		  ShowName		  off
-		  LibraryVersion	  "1.2362"
+		  LibraryVersion	  "1.2191"
 		  SourceBlock		  "powerlib/Elements/Breaker"
 		  SourceType		  "Breaker"
-		  ContentPreviewEnabled	  off
-		  InitialState		  "0"
-		  SwitchingTimes	  "[ 1/60  5/60 ]"
-		  External		  on
 		  BreakerResistance	  "0.01"
+		  InitialState		  "0"
 		  SnubberResistance	  "1e7"
 		  SnubberCapacitance	  "inf"
+		  SwitchingTimes	  "[ 1/60  5/60 ]"
+		  External		  on
 		  Measurements		  "None"
 		  MoreParameters	  off
 		  NoBreakLoop		  off
@@ -1913,10 +1855,16 @@ Model {
 		  Ports			  [0, 0, 0, 0, 0, 2]
 		  Position		  [560, 47, 650, 83]
 		  ZOrder		  332
+		  MinAlgLoopOccurrences	  off
+		  PropExecContextOutsideSubsystem off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  Opaque		  off
 		  RequestExecContextInheritance	off
+		  MaskHideContents	  off
 		  System {
 		    Name		    "Capacitive_Load_R"
-		    Location		    [35, 6, 1417, 750]
+		    Location		    [-1, 31, 1381, 775]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -1937,10 +1885,16 @@ Model {
 		    Position		    [300, 19, 395, 86]
 		    ZOrder		    225
 		    BlockMirror		    on
+		    MinAlgLoopOccurrences   off
+		    PropExecContextOutsideSubsystem off
+		    RTWSystemCode	    "Auto"
+		    FunctionWithSeparateData off
+		    Opaque		    off
 		    RequestExecContextInheritance off
+		    MaskHideContents	    off
 		    System {
 		    Name		    "Capacitive_Load_R_1"
-		    Location		    [35, 6, 1417, 750]
+		    Location		    [-1, 31, 1381, 775]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -1962,46 +1916,18 @@ Model {
 		    ZOrder		    168
 		    NamePlacement	    "alternate"
 		    ShowName		    off
-		    LibraryVersion	    "1.2362"
+		    LibraryVersion	    "1.2191"
 		    SourceBlock		    "powerlib/Elements/Breaker"
 		    SourceType		    "Breaker"
-		    ContentPreviewEnabled   off
-		    InitialState	    "0"
-		    SwitchingTimes	    "[ 1/60  5/60 ]"
-		    External		    on
 		    BreakerResistance	    "0.01"
+		    InitialState	    "0"
 		    SnubberResistance	    "1e7"
 		    SnubberCapacitance	    "inf"
+		    SwitchingTimes	    "[ 1/60  5/60 ]"
+		    External		    on
 		    Measurements	    "None"
 		    MoreParameters	    off
 		    NoBreakLoop		    off
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "Parallel RLC Branch"
-		    SID			    "1827"
-		    Ports		    [0, 0, 0, 0, 0, 1, 1]
-		    Position		    [424, 225, 476, 280]
-		    ZOrder		    173
-		    BlockRotation	    270
-		    BlockMirror		    on
-		    NamePlacement	    "alternate"
-		    ShowName		    off
-		    AttributesFormatString  "\\n"
-		    LibraryVersion	    "1.2362"
-		    SourceBlock		    "powerlib/Elements/Parallel RLC Branch"
-		    SourceType		    "Parallel RLC Branch"
-		    LConnTagsString	    "a"
-		    RConnTagsString	    "__new0"
-		    BranchType		    "RC"
-		    Resistance		    "Capacitive_Load_R_RC(1,1)"
-		    Inductance		    "1e-3"
-		    SetiL0		    off
-		    InitialCurrent	    "0"
-		    Capacitance		    "Capacitive_Load_R_RC(2,1)"
-		    Setx0		    off
-		    InitialVoltage	    "0"
-		    Measurements	    "None"
 		    }
 		    Block {
 		    BlockType		    Reference
@@ -2011,10 +1937,9 @@ Model {
 		    Position		    [85, 196, 115, 214]
 		    ZOrder		    178
 		    ShowName		    off
-		    LibraryVersion	    "1.287"
+		    LibraryVersion	    "1.274"
 		    SourceBlock		    "simulink/Sources/Repeating\nSequence\nStair"
 		    SourceType		    "Repeating Sequence Stair"
-		    ContentPreviewEnabled   off
 		    OutValues		    "Capacitive_Load_R_Switching_Sequence(:,1)"
 		    tsamp		    "Capacitive_Load_R_Switching_Speed(1)"
 		    OutMin		    "[]"
@@ -2028,16 +1953,39 @@ Model {
 		    }
 		    Block {
 		    BlockType		    Reference
+		    Name		    "Series RLC Branch"
+		    SID			    "1897"
+		    Ports		    [0, 0, 0, 0, 0, 1, 1]
+		    Position		    [461, 220, 489, 290]
+		    ZOrder		    181
+		    BlockRotation	    270
+		    BlockMirror		    on
+		    LibraryVersion	    "1.2191"
+		    SourceBlock		    "powerlib/Elements/Series RLC Branch"
+		    SourceType		    "Series RLC Branch"
+		    LConnTagsString	    "__new0"
+		    RConnTagsString	    "__new0"
+		    BranchType		    "RC"
+		    Resistance		    "Capacitive_Load_R_RC(1,1)"
+		    Inductance		    "1e-3"
+		    SetiL0		    off
+		    InitialCurrent	    "0"
+		    Capacitance		    "Capacitive_Load_R_RC(2,1)"
+		    Setx0		    off
+		    InitialVoltage	    "0"
+		    Measurements	    "None"
+		    }
+		    Block {
+		    BlockType		    Reference
 		    Name		    "Universal Bridge"
 		    SID			    "1829"
 		    Ports		    [0, 0, 0, 0, 0, 2, 2]
 		    Position		    [315, 177, 405, 333]
 		    ZOrder		    105
 		    ShowName		    off
-		    LibraryVersion	    "1.2362"
+		    LibraryVersion	    "1.2191"
 		    SourceBlock		    "powerlib/Power\nElectronics/Universal Bridge"
 		    SourceType		    "Universal Bridge"
-		    ContentPreviewEnabled   off
 		    Arms		    "2"
 		    SnubberResistance	    "1e5"
 		    SnubberCapacitance	    "inf"
@@ -2071,7 +2019,6 @@ Model {
 		    Side		    "Right"
 		    }
 		    Line {
-		    ZOrder		    1
 		    SrcBlock		    "Ron3"
 		    SrcPort		    1
 		    DstBlock		    "Breaker5"
@@ -2079,7 +2026,6 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    2
 		    SrcBlock		    "Universal Bridge"
 		    SrcPort		    LConn2
 		    DstBlock		    "N"
@@ -2087,7 +2033,6 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    3
 		    SrcBlock		    "Breaker5"
 		    SrcPort		    RConn1
 		    DstBlock		    "Universal Bridge"
@@ -2095,16 +2040,6 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    4
-		    SrcBlock		    "Universal Bridge"
-		    SrcPort		    RConn1
-		    Points		    [30, 0]
-		    DstBlock		    "Parallel RLC Branch"
-		    DstPort		    LConn1
-		    }
-		    Line {
-		    LineType		    "Connection"
-		    ZOrder		    5
 		    SrcBlock		    "AC"
 		    SrcPort		    RConn1
 		    DstBlock		    "Breaker5"
@@ -2112,10 +2047,18 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    6
+		    SrcBlock		    "Universal Bridge"
+		    SrcPort		    RConn1
+		    Points		    [36, 0; 0, -10]
+		    DstBlock		    "Series RLC Branch"
+		    DstPort		    LConn1
+		    }
+		    Line {
+		    LineType		    "Connection"
 		    SrcBlock		    "Universal Bridge"
 		    SrcPort		    RConn2
-		    DstBlock		    "Parallel RLC Branch"
+		    Points		    [55, 0]
+		    DstBlock		    "Series RLC Branch"
 		    DstPort		    RConn1
 		    }
 		    }
@@ -2127,10 +2070,16 @@ Model {
 		    Ports		    [0, 0, 0, 0, 0, 2]
 		    Position		    [300, 104, 395, 171]
 		    ZOrder		    224
+		    MinAlgLoopOccurrences   off
+		    PropExecContextOutsideSubsystem off
+		    RTWSystemCode	    "Auto"
+		    FunctionWithSeparateData off
+		    Opaque		    off
 		    RequestExecContextInheritance off
+		    MaskHideContents	    off
 		    System {
 		    Name		    "Capacitive_Load_R_2"
-		    Location		    [148, 83, 964, 621]
+		    Location		    [-1, 31, 1381, 775]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -2152,46 +2101,18 @@ Model {
 		    ZOrder		    171
 		    NamePlacement	    "alternate"
 		    ShowName		    off
-		    LibraryVersion	    "1.2362"
+		    LibraryVersion	    "1.2191"
 		    SourceBlock		    "powerlib/Elements/Breaker"
 		    SourceType		    "Breaker"
-		    ContentPreviewEnabled   off
-		    InitialState	    "0"
-		    SwitchingTimes	    "[ 1/60  5/60 ]"
-		    External		    on
 		    BreakerResistance	    "0.01"
+		    InitialState	    "0"
 		    SnubberResistance	    "1e7"
 		    SnubberCapacitance	    "inf"
+		    SwitchingTimes	    "[ 1/60  5/60 ]"
+		    External		    on
 		    Measurements	    "None"
 		    MoreParameters	    off
 		    NoBreakLoop		    off
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "Parallel RLC Branch"
-		    SID			    "1834"
-		    Ports		    [0, 0, 0, 0, 0, 1, 1]
-		    Position		    [454, 75, 506, 130]
-		    ZOrder		    180
-		    BlockRotation	    270
-		    BlockMirror		    on
-		    NamePlacement	    "alternate"
-		    ShowName		    off
-		    AttributesFormatString  "\\n"
-		    LibraryVersion	    "1.2362"
-		    SourceBlock		    "powerlib/Elements/Parallel RLC Branch"
-		    SourceType		    "Parallel RLC Branch"
-		    LConnTagsString	    "a"
-		    RConnTagsString	    "__new0"
-		    BranchType		    "RC"
-		    Resistance		    "Capacitive_Load_R_RC(1,2)"
-		    Inductance		    "1e-3"
-		    SetiL0		    off
-		    InitialCurrent	    "0"
-		    Capacitance		    "Capacitive_Load_R_RC(2,2)"
-		    Setx0		    off
-		    InitialVoltage	    "0"
-		    Measurements	    "None"
 		    }
 		    Block {
 		    BlockType		    Reference
@@ -2201,10 +2122,9 @@ Model {
 		    Position		    [165, 41, 195, 59]
 		    ZOrder		    178
 		    ShowName		    off
-		    LibraryVersion	    "1.287"
+		    LibraryVersion	    "1.274"
 		    SourceBlock		    "simulink/Sources/Repeating\nSequence\nStair"
 		    SourceType		    "Repeating Sequence Stair"
-		    ContentPreviewEnabled   off
 		    OutValues		    "Capacitive_Load_R_Switching_Sequence(:,2)"
 		    tsamp		    "Capacitive_Load_R_Switching_Speed(2)"
 		    OutMin		    "[]"
@@ -2218,16 +2138,39 @@ Model {
 		    }
 		    Block {
 		    BlockType		    Reference
+		    Name		    "Series RLC Branch"
+		    SID			    "1898"
+		    Ports		    [0, 0, 0, 0, 0, 1, 1]
+		    Position		    [496, 65, 524, 135]
+		    ZOrder		    182
+		    BlockRotation	    270
+		    BlockMirror		    on
+		    LibraryVersion	    "1.2191"
+		    SourceBlock		    "powerlib/Elements/Series RLC Branch"
+		    SourceType		    "Series RLC Branch"
+		    LConnTagsString	    "__new0"
+		    RConnTagsString	    "__new0"
+		    BranchType		    "RC"
+		    Resistance		    "Capacitive_Load_R_RC(1,2)"
+		    Inductance		    "1e-3"
+		    SetiL0		    off
+		    InitialCurrent	    "0"
+		    Capacitance		    "Capacitive_Load_R_RC(2,2)"
+		    Setx0		    off
+		    InitialVoltage	    "0"
+		    Measurements	    "None"
+		    }
+		    Block {
+		    BlockType		    Reference
 		    Name		    "Universal Bridge1"
 		    SID			    "1836"
 		    Ports		    [0, 0, 0, 0, 0, 2, 2]
 		    Position		    [345, 22, 435, 178]
 		    ZOrder		    104
 		    ShowName		    off
-		    LibraryVersion	    "1.2362"
+		    LibraryVersion	    "1.2191"
 		    SourceBlock		    "powerlib/Power\nElectronics/Universal Bridge"
 		    SourceType		    "Universal Bridge"
-		    ContentPreviewEnabled   off
 		    Arms		    "2"
 		    SnubberResistance	    "1e5"
 		    SnubberCapacitance	    "inf"
@@ -2262,16 +2205,6 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    1
-		    SrcBlock		    "Universal Bridge1"
-		    SrcPort		    RConn2
-		    Points		    [30, 0]
-		    DstBlock		    "Parallel RLC Branch"
-		    DstPort		    RConn1
-		    }
-		    Line {
-		    LineType		    "Connection"
-		    ZOrder		    2
 		    SrcBlock		    "Universal Bridge1"
 		    SrcPort		    LConn2
 		    DstBlock		    "N"
@@ -2279,7 +2212,6 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    3
 		    SrcBlock		    "Breaker2"
 		    SrcPort		    RConn1
 		    DstBlock		    "Universal Bridge1"
@@ -2287,26 +2219,32 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    4
-		    SrcBlock		    "Parallel RLC Branch"
-		    SrcPort		    LConn1
-		    DstBlock		    "Universal Bridge1"
-		    DstPort		    RConn1
-		    }
-		    Line {
-		    LineType		    "Connection"
-		    ZOrder		    5
 		    SrcBlock		    "AC"
 		    SrcPort		    RConn1
 		    DstBlock		    "Breaker2"
 		    DstPort		    LConn1
 		    }
 		    Line {
-		    ZOrder		    6
 		    SrcBlock		    "Ron1"
 		    SrcPort		    1
 		    DstBlock		    "Breaker2"
 		    DstPort		    1
+		    }
+		    Line {
+		    LineType		    "Connection"
+		    SrcBlock		    "Series RLC Branch"
+		    SrcPort		    LConn1
+		    Points		    [-44, 0; 0, 10]
+		    DstBlock		    "Universal Bridge1"
+		    DstPort		    RConn1
+		    }
+		    Line {
+		    LineType		    "Connection"
+		    SrcBlock		    "Series RLC Branch"
+		    SrcPort		    RConn1
+		    Points		    [0, -10]
+		    DstBlock		    "Universal Bridge1"
+		    DstPort		    RConn2
 		    }
 		    }
 		    }
@@ -2317,10 +2255,16 @@ Model {
 		    Ports		    [0, 0, 0, 0, 0, 2]
 		    Position		    [300, 189, 395, 256]
 		    ZOrder		    223
+		    MinAlgLoopOccurrences   off
+		    PropExecContextOutsideSubsystem off
+		    RTWSystemCode	    "Auto"
+		    FunctionWithSeparateData off
+		    Opaque		    off
 		    RequestExecContextInheritance off
+		    MaskHideContents	    off
 		    System {
 		    Name		    "Capacitive_Load_R_3"
-		    Location		    [148, 83, 964, 621]
+		    Location		    [-1, 31, 1381, 775]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -2342,46 +2286,18 @@ Model {
 		    ZOrder		    170
 		    NamePlacement	    "alternate"
 		    ShowName		    off
-		    LibraryVersion	    "1.2362"
+		    LibraryVersion	    "1.2191"
 		    SourceBlock		    "powerlib/Elements/Breaker"
 		    SourceType		    "Breaker"
-		    ContentPreviewEnabled   off
-		    InitialState	    "0"
-		    SwitchingTimes	    "[ 1/60  5/60 ]"
-		    External		    on
 		    BreakerResistance	    "0.01"
+		    InitialState	    "0"
 		    SnubberResistance	    "1e7"
 		    SnubberCapacitance	    "inf"
+		    SwitchingTimes	    "[ 1/60  5/60 ]"
+		    External		    on
 		    Measurements	    "None"
 		    MoreParameters	    off
 		    NoBreakLoop		    off
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "Parallel RLC Branch"
-		    SID			    "1841"
-		    Ports		    [0, 0, 0, 0, 0, 1, 1]
-		    Position		    [434, 65, 486, 120]
-		    ZOrder		    182
-		    BlockRotation	    270
-		    BlockMirror		    on
-		    NamePlacement	    "alternate"
-		    ShowName		    off
-		    AttributesFormatString  "\\n"
-		    LibraryVersion	    "1.2362"
-		    SourceBlock		    "powerlib/Elements/Parallel RLC Branch"
-		    SourceType		    "Parallel RLC Branch"
-		    LConnTagsString	    "a"
-		    RConnTagsString	    "__new0"
-		    BranchType		    "RC"
-		    Resistance		    "Capacitive_Load_R_RC(1,3)"
-		    Inductance		    "1e-3"
-		    SetiL0		    off
-		    InitialCurrent	    "0"
-		    Capacitance		    "Capacitive_Load_R_RC(2,3)"
-		    Setx0		    off
-		    InitialVoltage	    "0"
-		    Measurements	    "None"
 		    }
 		    Block {
 		    BlockType		    Reference
@@ -2391,10 +2307,9 @@ Model {
 		    Position		    [135, 36, 165, 54]
 		    ZOrder		    180
 		    ShowName		    off
-		    LibraryVersion	    "1.287"
+		    LibraryVersion	    "1.274"
 		    SourceBlock		    "simulink/Sources/Repeating\nSequence\nStair"
 		    SourceType		    "Repeating Sequence Stair"
-		    ContentPreviewEnabled   off
 		    OutValues		    "Capacitive_Load_R_Switching_Sequence(:,3)"
 		    tsamp		    "Capacitive_Load_R_Switching_Speed(3)"
 		    OutMin		    "[]"
@@ -2408,16 +2323,39 @@ Model {
 		    }
 		    Block {
 		    BlockType		    Reference
+		    Name		    "Series RLC Branch"
+		    SID			    "1899"
+		    Ports		    [0, 0, 0, 0, 0, 1, 1]
+		    Position		    [456, 60, 484, 130]
+		    ZOrder		    184
+		    BlockRotation	    270
+		    BlockMirror		    on
+		    LibraryVersion	    "1.2191"
+		    SourceBlock		    "powerlib/Elements/Series RLC Branch"
+		    SourceType		    "Series RLC Branch"
+		    LConnTagsString	    "__new0"
+		    RConnTagsString	    "__new0"
+		    BranchType		    "RC"
+		    Resistance		    "Capacitive_Load_R_RC(1,3)"
+		    Inductance		    "1e-3"
+		    SetiL0		    off
+		    InitialCurrent	    "0"
+		    Capacitance		    "Capacitive_Load_R_RC(2,3)"
+		    Setx0		    off
+		    InitialVoltage	    "0"
+		    Measurements	    "None"
+		    }
+		    Block {
+		    BlockType		    Reference
 		    Name		    "Universal Bridge2"
 		    SID			    "1843"
 		    Ports		    [0, 0, 0, 0, 0, 2, 2]
 		    Position		    [315, 17, 405, 173]
 		    ZOrder		    103
 		    ShowName		    off
-		    LibraryVersion	    "1.2362"
+		    LibraryVersion	    "1.2191"
 		    SourceBlock		    "powerlib/Power\nElectronics/Universal Bridge"
 		    SourceType		    "Universal Bridge"
-		    ContentPreviewEnabled   off
 		    Arms		    "2"
 		    SnubberResistance	    "1e5"
 		    SnubberCapacitance	    "inf"
@@ -2451,24 +2389,6 @@ Model {
 		    Side		    "Left"
 		    }
 		    Line {
-		    LineType		    "Connection"
-		    ZOrder		    1
-		    SrcBlock		    "Universal Bridge2"
-		    SrcPort		    RConn2
-		    DstBlock		    "Parallel RLC Branch"
-		    DstPort		    RConn1
-		    }
-		    Line {
-		    LineType		    "Connection"
-		    ZOrder		    2
-		    SrcBlock		    "Universal Bridge2"
-		    SrcPort		    RConn1
-		    Points		    [40, 0]
-		    DstBlock		    "Parallel RLC Branch"
-		    DstPort		    LConn1
-		    }
-		    Line {
-		    ZOrder		    3
 		    SrcBlock		    "Ron4"
 		    SrcPort		    1
 		    DstBlock		    "Breaker3"
@@ -2476,7 +2396,6 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    4
 		    SrcBlock		    "Breaker3"
 		    SrcPort		    RConn1
 		    DstBlock		    "Universal Bridge2"
@@ -2484,7 +2403,6 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    5
 		    SrcBlock		    "Universal Bridge2"
 		    SrcPort		    LConn2
 		    DstBlock		    "N "
@@ -2492,12 +2410,27 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    6
 		    SrcBlock		    "AC"
 		    SrcPort		    RConn1
-		    Points		    [135, 0]
+		    Points		    [0, 5]
 		    DstBlock		    "Breaker3"
 		    DstPort		    LConn1
+		    }
+		    Line {
+		    LineType		    "Connection"
+		    SrcBlock		    "Series RLC Branch"
+		    SrcPort		    LConn1
+		    Points		    [-39, 0; 0, 10]
+		    DstBlock		    "Universal Bridge2"
+		    DstPort		    RConn1
+		    }
+		    Line {
+		    LineType		    "Connection"
+		    SrcBlock		    "Series RLC Branch"
+		    SrcPort		    RConn1
+		    Points		    [0, -10]
+		    DstBlock		    "Universal Bridge2"
+		    DstPort		    RConn2
 		    }
 		    }
 		    }
@@ -2521,7 +2454,6 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    1
 		    Points		    [235, 240; -165, 0]
 		    DstBlock		    "N"
 		    DstPort		    RConn1
@@ -2550,7 +2482,6 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    6
 		    Points		    [185, 120; 0, 85]
 		    Branch {
 		    ConnectType		    "SRC_DEST"
@@ -2585,10 +2516,16 @@ Model {
 		  Ports			  [0, 0, 0, 0, 0, 2]
 		  Position		  [560, 117, 650, 153]
 		  ZOrder		  333
+		  MinAlgLoopOccurrences	  off
+		  PropExecContextOutsideSubsystem off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  Opaque		  off
 		  RequestExecContextInheritance	off
+		  MaskHideContents	  off
 		  System {
 		    Name		    "Capacitive_Load_S"
-		    Location		    [148, 83, 964, 621]
+		    Location		    [-1, 31, 1381, 775]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -2609,10 +2546,16 @@ Model {
 		    Position		    [300, 19, 395, 86]
 		    ZOrder		    225
 		    BlockMirror		    on
+		    MinAlgLoopOccurrences   off
+		    PropExecContextOutsideSubsystem off
+		    RTWSystemCode	    "Auto"
+		    FunctionWithSeparateData off
+		    Opaque		    off
 		    RequestExecContextInheritance off
+		    MaskHideContents	    off
 		    System {
 		    Name		    "Capacitive_Load_S_1"
-		    Location		    [148, 83, 964, 621]
+		    Location		    [-1, 31, 1381, 775]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -2634,46 +2577,18 @@ Model {
 		    ZOrder		    168
 		    NamePlacement	    "alternate"
 		    ShowName		    off
-		    LibraryVersion	    "1.2362"
+		    LibraryVersion	    "1.2191"
 		    SourceBlock		    "powerlib/Elements/Breaker"
 		    SourceType		    "Breaker"
-		    ContentPreviewEnabled   off
-		    InitialState	    "0"
-		    SwitchingTimes	    "[ 1/60  5/60 ]"
-		    External		    on
 		    BreakerResistance	    "0.01"
+		    InitialState	    "0"
 		    SnubberResistance	    "1e7"
 		    SnubberCapacitance	    "inf"
+		    SwitchingTimes	    "[ 1/60  5/60 ]"
+		    External		    on
 		    Measurements	    "None"
 		    MoreParameters	    off
 		    NoBreakLoop		    off
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "Parallel RLC Branch"
-		    SID			    "1851"
-		    Ports		    [0, 0, 0, 0, 0, 1, 1]
-		    Position		    [424, 225, 476, 280]
-		    ZOrder		    173
-		    BlockRotation	    270
-		    BlockMirror		    on
-		    NamePlacement	    "alternate"
-		    ShowName		    off
-		    AttributesFormatString  "\\n"
-		    LibraryVersion	    "1.2362"
-		    SourceBlock		    "powerlib/Elements/Parallel RLC Branch"
-		    SourceType		    "Parallel RLC Branch"
-		    LConnTagsString	    "a"
-		    RConnTagsString	    "__new0"
-		    BranchType		    "RC"
-		    Resistance		    "Capacitive_Load_S_RC(1,1)"
-		    Inductance		    "1e-3"
-		    SetiL0		    off
-		    InitialCurrent	    "0"
-		    Capacitance		    "Capacitive_Load_S_RC(2,1)"
-		    Setx0		    off
-		    InitialVoltage	    "0"
-		    Measurements	    "None"
 		    }
 		    Block {
 		    BlockType		    Reference
@@ -2683,10 +2598,9 @@ Model {
 		    Position		    [85, 196, 115, 214]
 		    ZOrder		    178
 		    ShowName		    off
-		    LibraryVersion	    "1.287"
+		    LibraryVersion	    "1.274"
 		    SourceBlock		    "simulink/Sources/Repeating\nSequence\nStair"
 		    SourceType		    "Repeating Sequence Stair"
-		    ContentPreviewEnabled   off
 		    OutValues		    "Capacitive_Load_S_Switching_Sequence(:,1)"
 		    tsamp		    "Capacitive_Load_S_Switching_Speed(1)"
 		    OutMin		    "[]"
@@ -2700,16 +2614,39 @@ Model {
 		    }
 		    Block {
 		    BlockType		    Reference
+		    Name		    "Series RLC Branch"
+		    SID			    "1900"
+		    Ports		    [0, 0, 0, 0, 0, 1, 1]
+		    Position		    [446, 220, 474, 290]
+		    ZOrder		    182
+		    BlockRotation	    270
+		    BlockMirror		    on
+		    LibraryVersion	    "1.2191"
+		    SourceBlock		    "powerlib/Elements/Series RLC Branch"
+		    SourceType		    "Series RLC Branch"
+		    LConnTagsString	    "__new0"
+		    RConnTagsString	    "__new0"
+		    BranchType		    "RC"
+		    Resistance		    "Capacitive_Load_S_RC(1,1)"
+		    Inductance		    "1e-3"
+		    SetiL0		    off
+		    InitialCurrent	    "0"
+		    Capacitance		    "Capacitive_Load_S_RC(2,1)"
+		    Setx0		    off
+		    InitialVoltage	    "0"
+		    Measurements	    "None"
+		    }
+		    Block {
+		    BlockType		    Reference
 		    Name		    "Universal Bridge"
 		    SID			    "1853"
 		    Ports		    [0, 0, 0, 0, 0, 2, 2]
 		    Position		    [315, 177, 405, 333]
 		    ZOrder		    105
 		    ShowName		    off
-		    LibraryVersion	    "1.2362"
+		    LibraryVersion	    "1.2191"
 		    SourceBlock		    "powerlib/Power\nElectronics/Universal Bridge"
 		    SourceType		    "Universal Bridge"
-		    ContentPreviewEnabled   off
 		    Arms		    "2"
 		    SnubberResistance	    "1e5"
 		    SnubberCapacitance	    "inf"
@@ -2744,15 +2681,6 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    1
-		    SrcBlock		    "Universal Bridge"
-		    SrcPort		    RConn2
-		    DstBlock		    "Parallel RLC Branch"
-		    DstPort		    RConn1
-		    }
-		    Line {
-		    LineType		    "Connection"
-		    ZOrder		    2
 		    SrcBlock		    "AC"
 		    SrcPort		    RConn1
 		    DstBlock		    "Breaker5"
@@ -2760,16 +2688,6 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    3
-		    SrcBlock		    "Universal Bridge"
-		    SrcPort		    RConn1
-		    Points		    [30, 0]
-		    DstBlock		    "Parallel RLC Branch"
-		    DstPort		    LConn1
-		    }
-		    Line {
-		    LineType		    "Connection"
-		    ZOrder		    4
 		    SrcBlock		    "Breaker5"
 		    SrcPort		    RConn1
 		    DstBlock		    "Universal Bridge"
@@ -2777,18 +2695,32 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    5
 		    SrcBlock		    "Universal Bridge"
 		    SrcPort		    LConn2
 		    DstBlock		    "N"
 		    DstPort		    RConn1
 		    }
 		    Line {
-		    ZOrder		    6
 		    SrcBlock		    "Ron3"
 		    SrcPort		    1
 		    DstBlock		    "Breaker5"
 		    DstPort		    1
+		    }
+		    Line {
+		    LineType		    "Connection"
+		    SrcBlock		    "Series RLC Branch"
+		    SrcPort		    LConn1
+		    Points		    [-34, 0; 0, 10]
+		    DstBlock		    "Universal Bridge"
+		    DstPort		    RConn1
+		    }
+		    Line {
+		    LineType		    "Connection"
+		    SrcBlock		    "Series RLC Branch"
+		    SrcPort		    RConn1
+		    Points		    [0, -10]
+		    DstBlock		    "Universal Bridge"
+		    DstPort		    RConn2
 		    }
 		    }
 		    }
@@ -2799,10 +2731,16 @@ Model {
 		    Ports		    [0, 0, 0, 0, 0, 2]
 		    Position		    [300, 104, 395, 171]
 		    ZOrder		    224
+		    MinAlgLoopOccurrences   off
+		    PropExecContextOutsideSubsystem off
+		    RTWSystemCode	    "Auto"
+		    FunctionWithSeparateData off
+		    Opaque		    off
 		    RequestExecContextInheritance off
+		    MaskHideContents	    off
 		    System {
 		    Name		    "Capacitive_Load_S_2"
-		    Location		    [148, 83, 964, 621]
+		    Location		    [-1, 31, 1381, 775]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -2824,46 +2762,18 @@ Model {
 		    ZOrder		    171
 		    NamePlacement	    "alternate"
 		    ShowName		    off
-		    LibraryVersion	    "1.2362"
+		    LibraryVersion	    "1.2191"
 		    SourceBlock		    "powerlib/Elements/Breaker"
 		    SourceType		    "Breaker"
-		    ContentPreviewEnabled   off
-		    InitialState	    "0"
-		    SwitchingTimes	    "[ 1/60  5/60 ]"
-		    External		    on
 		    BreakerResistance	    "0.01"
+		    InitialState	    "0"
 		    SnubberResistance	    "1e7"
 		    SnubberCapacitance	    "inf"
+		    SwitchingTimes	    "[ 1/60  5/60 ]"
+		    External		    on
 		    Measurements	    "None"
 		    MoreParameters	    off
 		    NoBreakLoop		    off
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "Parallel RLC Branch"
-		    SID			    "1858"
-		    Ports		    [0, 0, 0, 0, 0, 1, 1]
-		    Position		    [454, 75, 506, 130]
-		    ZOrder		    180
-		    BlockRotation	    270
-		    BlockMirror		    on
-		    NamePlacement	    "alternate"
-		    ShowName		    off
-		    AttributesFormatString  "\\n"
-		    LibraryVersion	    "1.2362"
-		    SourceBlock		    "powerlib/Elements/Parallel RLC Branch"
-		    SourceType		    "Parallel RLC Branch"
-		    LConnTagsString	    "a"
-		    RConnTagsString	    "__new0"
-		    BranchType		    "RC"
-		    Resistance		    "Capacitive_Load_S_RC(1,2)"
-		    Inductance		    "1e-3"
-		    SetiL0		    off
-		    InitialCurrent	    "0"
-		    Capacitance		    "Capacitive_Load_S_RC(2,2)"
-		    Setx0		    off
-		    InitialVoltage	    "0"
-		    Measurements	    "None"
 		    }
 		    Block {
 		    BlockType		    Reference
@@ -2873,10 +2783,9 @@ Model {
 		    Position		    [165, 41, 195, 59]
 		    ZOrder		    178
 		    ShowName		    off
-		    LibraryVersion	    "1.287"
+		    LibraryVersion	    "1.274"
 		    SourceBlock		    "simulink/Sources/Repeating\nSequence\nStair"
 		    SourceType		    "Repeating Sequence Stair"
-		    ContentPreviewEnabled   off
 		    OutValues		    "Capacitive_Load_S_Switching_Sequence(:,2)"
 		    tsamp		    "Capacitive_Load_S_Switching_Speed(2)"
 		    OutMin		    "[]"
@@ -2890,16 +2799,39 @@ Model {
 		    }
 		    Block {
 		    BlockType		    Reference
+		    Name		    "Series RLC Branch"
+		    SID			    "1901"
+		    Ports		    [0, 0, 0, 0, 0, 1, 1]
+		    Position		    [476, 65, 504, 135]
+		    ZOrder		    182
+		    BlockRotation	    270
+		    BlockMirror		    on
+		    LibraryVersion	    "1.2191"
+		    SourceBlock		    "powerlib/Elements/Series RLC Branch"
+		    SourceType		    "Series RLC Branch"
+		    LConnTagsString	    "__new0"
+		    RConnTagsString	    "__new0"
+		    BranchType		    "RC"
+		    Resistance		    "Capacitive_Load_S_RC(1,2)"
+		    Inductance		    "1e-3"
+		    SetiL0		    off
+		    InitialCurrent	    "0"
+		    Capacitance		    "Capacitive_Load_S_RC(2,2)"
+		    Setx0		    off
+		    InitialVoltage	    "0"
+		    Measurements	    "None"
+		    }
+		    Block {
+		    BlockType		    Reference
 		    Name		    "Universal Bridge1"
 		    SID			    "1860"
 		    Ports		    [0, 0, 0, 0, 0, 2, 2]
 		    Position		    [345, 22, 435, 178]
 		    ZOrder		    104
 		    ShowName		    off
-		    LibraryVersion	    "1.2362"
+		    LibraryVersion	    "1.2191"
 		    SourceBlock		    "powerlib/Power\nElectronics/Universal Bridge"
 		    SourceType		    "Universal Bridge"
-		    ContentPreviewEnabled   off
 		    Arms		    "2"
 		    SnubberResistance	    "1e5"
 		    SnubberCapacitance	    "inf"
@@ -2933,7 +2865,6 @@ Model {
 		    Side		    "Left"
 		    }
 		    Line {
-		    ZOrder		    1
 		    SrcBlock		    "Ron1"
 		    SrcPort		    1
 		    DstBlock		    "Breaker2"
@@ -2941,7 +2872,6 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    2
 		    SrcBlock		    "AC"
 		    SrcPort		    RConn1
 		    DstBlock		    "Breaker2"
@@ -2949,15 +2879,6 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    3
-		    SrcBlock		    "Parallel RLC Branch"
-		    SrcPort		    LConn1
-		    DstBlock		    "Universal Bridge1"
-		    DstPort		    RConn1
-		    }
-		    Line {
-		    LineType		    "Connection"
-		    ZOrder		    4
 		    SrcBlock		    "Breaker2"
 		    SrcPort		    RConn1
 		    DstBlock		    "Universal Bridge1"
@@ -2965,7 +2886,6 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    5
 		    SrcBlock		    "Universal Bridge1"
 		    SrcPort		    LConn2
 		    DstBlock		    "N"
@@ -2973,12 +2893,19 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    6
-		    SrcBlock		    "Universal Bridge1"
-		    SrcPort		    RConn2
-		    Points		    [30, 0]
-		    DstBlock		    "Parallel RLC Branch"
+		    SrcBlock		    "Series RLC Branch"
+		    SrcPort		    LConn1
+		    Points		    [-34, 0; 0, 10]
+		    DstBlock		    "Universal Bridge1"
 		    DstPort		    RConn1
+		    }
+		    Line {
+		    LineType		    "Connection"
+		    SrcBlock		    "Series RLC Branch"
+		    SrcPort		    RConn1
+		    Points		    [0, -10]
+		    DstBlock		    "Universal Bridge1"
+		    DstPort		    RConn2
 		    }
 		    }
 		    }
@@ -2989,10 +2916,16 @@ Model {
 		    Ports		    [0, 0, 0, 0, 0, 2]
 		    Position		    [300, 189, 395, 256]
 		    ZOrder		    223
+		    MinAlgLoopOccurrences   off
+		    PropExecContextOutsideSubsystem off
+		    RTWSystemCode	    "Auto"
+		    FunctionWithSeparateData off
+		    Opaque		    off
 		    RequestExecContextInheritance off
+		    MaskHideContents	    off
 		    System {
 		    Name		    "Capacitive_Load_S_3"
-		    Location		    [148, 83, 964, 621]
+		    Location		    [-1, 31, 1381, 775]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -3014,46 +2947,18 @@ Model {
 		    ZOrder		    170
 		    NamePlacement	    "alternate"
 		    ShowName		    off
-		    LibraryVersion	    "1.2362"
+		    LibraryVersion	    "1.2191"
 		    SourceBlock		    "powerlib/Elements/Breaker"
 		    SourceType		    "Breaker"
-		    ContentPreviewEnabled   off
-		    InitialState	    "0"
-		    SwitchingTimes	    "[ 1/60  5/60 ]"
-		    External		    on
 		    BreakerResistance	    "0.01"
+		    InitialState	    "0"
 		    SnubberResistance	    "1e7"
 		    SnubberCapacitance	    "inf"
+		    SwitchingTimes	    "[ 1/60  5/60 ]"
+		    External		    on
 		    Measurements	    "None"
 		    MoreParameters	    off
 		    NoBreakLoop		    off
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "Parallel RLC Branch"
-		    SID			    "1865"
-		    Ports		    [0, 0, 0, 0, 0, 1, 1]
-		    Position		    [434, 65, 486, 120]
-		    ZOrder		    182
-		    BlockRotation	    270
-		    BlockMirror		    on
-		    NamePlacement	    "alternate"
-		    ShowName		    off
-		    AttributesFormatString  "\\n"
-		    LibraryVersion	    "1.2362"
-		    SourceBlock		    "powerlib/Elements/Parallel RLC Branch"
-		    SourceType		    "Parallel RLC Branch"
-		    LConnTagsString	    "a"
-		    RConnTagsString	    "__new0"
-		    BranchType		    "RC"
-		    Resistance		    "Capacitive_Load_S_RC(1,3)"
-		    Inductance		    "1e-3"
-		    SetiL0		    off
-		    InitialCurrent	    "0"
-		    Capacitance		    "Capacitive_Load_S_RC(2,3)"
-		    Setx0		    off
-		    InitialVoltage	    "0"
-		    Measurements	    "None"
 		    }
 		    Block {
 		    BlockType		    Reference
@@ -3063,10 +2968,9 @@ Model {
 		    Position		    [135, 36, 165, 54]
 		    ZOrder		    180
 		    ShowName		    off
-		    LibraryVersion	    "1.287"
+		    LibraryVersion	    "1.274"
 		    SourceBlock		    "simulink/Sources/Repeating\nSequence\nStair"
 		    SourceType		    "Repeating Sequence Stair"
-		    ContentPreviewEnabled   off
 		    OutValues		    "Capacitive_Load_S_Switching_Sequence(:,3)"
 		    tsamp		    "Capacitive_Load_S_Switching_Speed(3)"
 		    OutMin		    "[]"
@@ -3080,16 +2984,39 @@ Model {
 		    }
 		    Block {
 		    BlockType		    Reference
+		    Name		    "Series RLC Branch"
+		    SID			    "1902"
+		    Ports		    [0, 0, 0, 0, 0, 1, 1]
+		    Position		    [441, 60, 469, 130]
+		    ZOrder		    184
+		    BlockRotation	    270
+		    BlockMirror		    on
+		    LibraryVersion	    "1.2191"
+		    SourceBlock		    "powerlib/Elements/Series RLC Branch"
+		    SourceType		    "Series RLC Branch"
+		    LConnTagsString	    "__new0"
+		    RConnTagsString	    "__new0"
+		    BranchType		    "RC"
+		    Resistance		    "Capacitive_Load_S_RC(1,3)"
+		    Inductance		    "1e-3"
+		    SetiL0		    off
+		    InitialCurrent	    "0"
+		    Capacitance		    "Capacitive_Load_S_RC(2,3)"
+		    Setx0		    off
+		    InitialVoltage	    "0"
+		    Measurements	    "None"
+		    }
+		    Block {
+		    BlockType		    Reference
 		    Name		    "Universal Bridge2"
 		    SID			    "1867"
 		    Ports		    [0, 0, 0, 0, 0, 2, 2]
 		    Position		    [315, 17, 405, 173]
 		    ZOrder		    103
 		    ShowName		    off
-		    LibraryVersion	    "1.2362"
+		    LibraryVersion	    "1.2191"
 		    SourceBlock		    "powerlib/Power\nElectronics/Universal Bridge"
 		    SourceType		    "Universal Bridge"
-		    ContentPreviewEnabled   off
 		    Arms		    "2"
 		    SnubberResistance	    "1e5"
 		    SnubberCapacitance	    "inf"
@@ -3124,7 +3051,6 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    1
 		    SrcBlock		    "AC"
 		    SrcPort		    RConn1
 		    Points		    [135, 0]
@@ -3133,7 +3059,6 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    2
 		    SrcBlock		    "Universal Bridge2"
 		    SrcPort		    LConn2
 		    DstBlock		    "N "
@@ -3141,14 +3066,12 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    3
 		    SrcBlock		    "Breaker3"
 		    SrcPort		    RConn1
 		    DstBlock		    "Universal Bridge2"
 		    DstPort		    LConn1
 		    }
 		    Line {
-		    ZOrder		    4
 		    SrcBlock		    "Ron4"
 		    SrcPort		    1
 		    DstBlock		    "Breaker3"
@@ -3156,20 +3079,19 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    5
-		    SrcBlock		    "Universal Bridge2"
-		    SrcPort		    RConn1
-		    Points		    [40, 0]
-		    DstBlock		    "Parallel RLC Branch"
-		    DstPort		    LConn1
+		    SrcBlock		    "Series RLC Branch"
+		    SrcPort		    LConn1
+		    Points		    [-32, 0; 0, 10]
+		    DstBlock		    "Universal Bridge2"
+		    DstPort		    RConn1
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    6
-		    SrcBlock		    "Universal Bridge2"
-		    SrcPort		    RConn2
-		    DstBlock		    "Parallel RLC Branch"
-		    DstPort		    RConn1
+		    SrcBlock		    "Series RLC Branch"
+		    SrcPort		    RConn1
+		    Points		    [0, -10]
+		    DstBlock		    "Universal Bridge2"
+		    DstPort		    RConn2
 		    }
 		    }
 		    }
@@ -3193,7 +3115,6 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    1
 		    Points		    [185, 205; -115, 0]
 		    DstBlock		    "AC"
 		    DstPort		    RConn1
@@ -3222,7 +3143,6 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    6
 		    SrcBlock		    "Capacitive_Load_S_1"
 		    SrcPort		    RConn2
 		    Points		    [-50, 0; 0, 85]
@@ -3257,10 +3177,16 @@ Model {
 		  Ports			  [0, 0, 0, 0, 0, 2]
 		  Position		  [560, 187, 650, 223]
 		  ZOrder		  334
+		  MinAlgLoopOccurrences	  off
+		  PropExecContextOutsideSubsystem off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  Opaque		  off
 		  RequestExecContextInheritance	off
+		  MaskHideContents	  off
 		  System {
 		    Name		    "Capacitive_Load_T"
-		    Location		    [148, 83, 964, 621]
+		    Location		    [-1, 31, 1381, 775]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -3281,10 +3207,16 @@ Model {
 		    Position		    [300, 19, 395, 86]
 		    ZOrder		    225
 		    BlockMirror		    on
+		    MinAlgLoopOccurrences   off
+		    PropExecContextOutsideSubsystem off
+		    RTWSystemCode	    "Auto"
+		    FunctionWithSeparateData off
+		    Opaque		    off
 		    RequestExecContextInheritance off
+		    MaskHideContents	    off
 		    System {
 		    Name		    "Capacitive_Load_R_1"
-		    Location		    [148, 83, 964, 621]
+		    Location		    [-1, 31, 1381, 775]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -3306,46 +3238,18 @@ Model {
 		    ZOrder		    168
 		    NamePlacement	    "alternate"
 		    ShowName		    off
-		    LibraryVersion	    "1.2362"
+		    LibraryVersion	    "1.2191"
 		    SourceBlock		    "powerlib/Elements/Breaker"
 		    SourceType		    "Breaker"
-		    ContentPreviewEnabled   off
-		    InitialState	    "0"
-		    SwitchingTimes	    "[ 1/60  5/60 ]"
-		    External		    on
 		    BreakerResistance	    "0.01"
+		    InitialState	    "0"
 		    SnubberResistance	    "1e7"
 		    SnubberCapacitance	    "inf"
+		    SwitchingTimes	    "[ 1/60  5/60 ]"
+		    External		    on
 		    Measurements	    "None"
 		    MoreParameters	    off
 		    NoBreakLoop		    off
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "Parallel RLC Branch"
-		    SID			    "1875"
-		    Ports		    [0, 0, 0, 0, 0, 1, 1]
-		    Position		    [424, 225, 476, 280]
-		    ZOrder		    173
-		    BlockRotation	    270
-		    BlockMirror		    on
-		    NamePlacement	    "alternate"
-		    ShowName		    off
-		    AttributesFormatString  "\\n"
-		    LibraryVersion	    "1.2362"
-		    SourceBlock		    "powerlib/Elements/Parallel RLC Branch"
-		    SourceType		    "Parallel RLC Branch"
-		    LConnTagsString	    "a"
-		    RConnTagsString	    "__new0"
-		    BranchType		    "RC"
-		    Resistance		    "Capacitive_Load_T_RC(1,1)"
-		    Inductance		    "1e-3"
-		    SetiL0		    off
-		    InitialCurrent	    "0"
-		    Capacitance		    "Capacitive_Load_T_RC(2,1)"
-		    Setx0		    off
-		    InitialVoltage	    "0"
-		    Measurements	    "None"
 		    }
 		    Block {
 		    BlockType		    Reference
@@ -3355,10 +3259,9 @@ Model {
 		    Position		    [85, 196, 115, 214]
 		    ZOrder		    178
 		    ShowName		    off
-		    LibraryVersion	    "1.287"
+		    LibraryVersion	    "1.274"
 		    SourceBlock		    "simulink/Sources/Repeating\nSequence\nStair"
 		    SourceType		    "Repeating Sequence Stair"
-		    ContentPreviewEnabled   off
 		    OutValues		    "Capacitive_Load_T_Switching_Sequence(:,1)"
 		    tsamp		    "Capacitive_Load_T_Switching_Speed(1)"
 		    OutMin		    "[]"
@@ -3372,16 +3275,39 @@ Model {
 		    }
 		    Block {
 		    BlockType		    Reference
+		    Name		    "Series RLC Branch"
+		    SID			    "1903"
+		    Ports		    [0, 0, 0, 0, 0, 1, 1]
+		    Position		    [451, 220, 479, 290]
+		    ZOrder		    182
+		    BlockRotation	    270
+		    BlockMirror		    on
+		    LibraryVersion	    "1.2191"
+		    SourceBlock		    "powerlib/Elements/Series RLC Branch"
+		    SourceType		    "Series RLC Branch"
+		    LConnTagsString	    "__new0"
+		    RConnTagsString	    "__new0"
+		    BranchType		    "RC"
+		    Resistance		    "Capacitive_Load_T_RC(1,1)"
+		    Inductance		    "1e-3"
+		    SetiL0		    off
+		    InitialCurrent	    "0"
+		    Capacitance		    "Capacitive_Load_T_RC(2,1)"
+		    Setx0		    off
+		    InitialVoltage	    "0"
+		    Measurements	    "None"
+		    }
+		    Block {
+		    BlockType		    Reference
 		    Name		    "Universal Bridge"
 		    SID			    "1877"
 		    Ports		    [0, 0, 0, 0, 0, 2, 2]
 		    Position		    [315, 177, 405, 333]
 		    ZOrder		    105
 		    ShowName		    off
-		    LibraryVersion	    "1.2362"
+		    LibraryVersion	    "1.2191"
 		    SourceBlock		    "powerlib/Power\nElectronics/Universal Bridge"
 		    SourceType		    "Universal Bridge"
-		    ContentPreviewEnabled   off
 		    Arms		    "2"
 		    SnubberResistance	    "1e5"
 		    SnubberCapacitance	    "inf"
@@ -3415,7 +3341,6 @@ Model {
 		    Side		    "Right"
 		    }
 		    Line {
-		    ZOrder		    1
 		    SrcBlock		    "Ron3"
 		    SrcPort		    1
 		    DstBlock		    "Breaker5"
@@ -3423,7 +3348,6 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    2
 		    SrcBlock		    "Universal Bridge"
 		    SrcPort		    LConn2
 		    DstBlock		    "N"
@@ -3431,7 +3355,6 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    3
 		    SrcBlock		    "Breaker5"
 		    SrcPort		    RConn1
 		    DstBlock		    "Universal Bridge"
@@ -3439,16 +3362,6 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    4
-		    SrcBlock		    "Universal Bridge"
-		    SrcPort		    RConn1
-		    Points		    [30, 0]
-		    DstBlock		    "Parallel RLC Branch"
-		    DstPort		    LConn1
-		    }
-		    Line {
-		    LineType		    "Connection"
-		    ZOrder		    5
 		    SrcBlock		    "AC"
 		    SrcPort		    RConn1
 		    DstBlock		    "Breaker5"
@@ -3456,10 +3369,18 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    6
-		    SrcBlock		    "Universal Bridge"
-		    SrcPort		    RConn2
-		    DstBlock		    "Parallel RLC Branch"
+		    SrcBlock		    "Series RLC Branch"
+		    SrcPort		    RConn1
+		    Points		    [0, -10]
+		    DstBlock		    "Universal Bridge"
+		    DstPort		    RConn2
+		    }
+		    Line {
+		    LineType		    "Connection"
+		    SrcBlock		    "Series RLC Branch"
+		    SrcPort		    LConn1
+		    Points		    [-37, 0; 0, 10]
+		    DstBlock		    "Universal Bridge"
 		    DstPort		    RConn1
 		    }
 		    }
@@ -3471,10 +3392,16 @@ Model {
 		    Ports		    [0, 0, 0, 0, 0, 2]
 		    Position		    [300, 104, 395, 171]
 		    ZOrder		    224
+		    MinAlgLoopOccurrences   off
+		    PropExecContextOutsideSubsystem off
+		    RTWSystemCode	    "Auto"
+		    FunctionWithSeparateData off
+		    Opaque		    off
 		    RequestExecContextInheritance off
+		    MaskHideContents	    off
 		    System {
 		    Name		    "Capacitive_Load_R_2"
-		    Location		    [148, 83, 964, 621]
+		    Location		    [-1, 31, 1381, 775]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -3496,46 +3423,18 @@ Model {
 		    ZOrder		    171
 		    NamePlacement	    "alternate"
 		    ShowName		    off
-		    LibraryVersion	    "1.2362"
+		    LibraryVersion	    "1.2191"
 		    SourceBlock		    "powerlib/Elements/Breaker"
 		    SourceType		    "Breaker"
-		    ContentPreviewEnabled   off
-		    InitialState	    "0"
-		    SwitchingTimes	    "[ 1/60  5/60 ]"
-		    External		    on
 		    BreakerResistance	    "0.01"
+		    InitialState	    "0"
 		    SnubberResistance	    "1e7"
 		    SnubberCapacitance	    "inf"
+		    SwitchingTimes	    "[ 1/60  5/60 ]"
+		    External		    on
 		    Measurements	    "None"
 		    MoreParameters	    off
 		    NoBreakLoop		    off
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "Parallel RLC Branch"
-		    SID			    "1882"
-		    Ports		    [0, 0, 0, 0, 0, 1, 1]
-		    Position		    [454, 75, 506, 130]
-		    ZOrder		    180
-		    BlockRotation	    270
-		    BlockMirror		    on
-		    NamePlacement	    "alternate"
-		    ShowName		    off
-		    AttributesFormatString  "\\n"
-		    LibraryVersion	    "1.2362"
-		    SourceBlock		    "powerlib/Elements/Parallel RLC Branch"
-		    SourceType		    "Parallel RLC Branch"
-		    LConnTagsString	    "a"
-		    RConnTagsString	    "__new0"
-		    BranchType		    "RC"
-		    Resistance		    "Capacitive_Load_T_RC(1,2)"
-		    Inductance		    "1e-3"
-		    SetiL0		    off
-		    InitialCurrent	    "0"
-		    Capacitance		    "Capacitive_Load_T_RC(2,2)"
-		    Setx0		    off
-		    InitialVoltage	    "0"
-		    Measurements	    "None"
 		    }
 		    Block {
 		    BlockType		    Reference
@@ -3545,10 +3444,9 @@ Model {
 		    Position		    [165, 41, 195, 59]
 		    ZOrder		    178
 		    ShowName		    off
-		    LibraryVersion	    "1.287"
+		    LibraryVersion	    "1.274"
 		    SourceBlock		    "simulink/Sources/Repeating\nSequence\nStair"
 		    SourceType		    "Repeating Sequence Stair"
-		    ContentPreviewEnabled   off
 		    OutValues		    "Capacitive_Load_T_Switching_Sequence(:,2)"
 		    tsamp		    "Capacitive_Load_T_Switching_Speed(2)"
 		    OutMin		    "[]"
@@ -3562,16 +3460,39 @@ Model {
 		    }
 		    Block {
 		    BlockType		    Reference
+		    Name		    "Series RLC Branch"
+		    SID			    "1904"
+		    Ports		    [0, 0, 0, 0, 0, 1, 1]
+		    Position		    [476, 65, 504, 135]
+		    ZOrder		    182
+		    BlockRotation	    270
+		    BlockMirror		    on
+		    LibraryVersion	    "1.2191"
+		    SourceBlock		    "powerlib/Elements/Series RLC Branch"
+		    SourceType		    "Series RLC Branch"
+		    LConnTagsString	    "__new0"
+		    RConnTagsString	    "__new0"
+		    BranchType		    "RC"
+		    Resistance		    "Capacitive_Load_T_RC(1,2)"
+		    Inductance		    "1e-3"
+		    SetiL0		    off
+		    InitialCurrent	    "0"
+		    Capacitance		    "Capacitive_Load_T_RC(2,2)"
+		    Setx0		    off
+		    InitialVoltage	    "0"
+		    Measurements	    "None"
+		    }
+		    Block {
+		    BlockType		    Reference
 		    Name		    "Universal Bridge1"
 		    SID			    "1884"
 		    Ports		    [0, 0, 0, 0, 0, 2, 2]
 		    Position		    [345, 22, 435, 178]
 		    ZOrder		    104
 		    ShowName		    off
-		    LibraryVersion	    "1.2362"
+		    LibraryVersion	    "1.2191"
 		    SourceBlock		    "powerlib/Power\nElectronics/Universal Bridge"
 		    SourceType		    "Universal Bridge"
-		    ContentPreviewEnabled   off
 		    Arms		    "2"
 		    SnubberResistance	    "1e5"
 		    SnubberCapacitance	    "inf"
@@ -3606,16 +3527,6 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    1
-		    SrcBlock		    "Universal Bridge1"
-		    SrcPort		    RConn2
-		    Points		    [30, 0]
-		    DstBlock		    "Parallel RLC Branch"
-		    DstPort		    RConn1
-		    }
-		    Line {
-		    LineType		    "Connection"
-		    ZOrder		    2
 		    SrcBlock		    "Universal Bridge1"
 		    SrcPort		    LConn2
 		    DstBlock		    "N"
@@ -3623,7 +3534,6 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    3
 		    SrcBlock		    "Breaker2"
 		    SrcPort		    RConn1
 		    DstBlock		    "Universal Bridge1"
@@ -3631,26 +3541,32 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    4
-		    SrcBlock		    "Parallel RLC Branch"
-		    SrcPort		    LConn1
-		    DstBlock		    "Universal Bridge1"
-		    DstPort		    RConn1
-		    }
-		    Line {
-		    LineType		    "Connection"
-		    ZOrder		    5
 		    SrcBlock		    "AC"
 		    SrcPort		    RConn1
 		    DstBlock		    "Breaker2"
 		    DstPort		    LConn1
 		    }
 		    Line {
-		    ZOrder		    6
 		    SrcBlock		    "Ron1"
 		    SrcPort		    1
 		    DstBlock		    "Breaker2"
 		    DstPort		    1
+		    }
+		    Line {
+		    LineType		    "Connection"
+		    SrcBlock		    "Series RLC Branch"
+		    SrcPort		    RConn1
+		    Points		    [0, -10]
+		    DstBlock		    "Universal Bridge1"
+		    DstPort		    RConn2
+		    }
+		    Line {
+		    LineType		    "Connection"
+		    SrcBlock		    "Series RLC Branch"
+		    SrcPort		    LConn1
+		    Points		    [-34, 0; 0, 10]
+		    DstBlock		    "Universal Bridge1"
+		    DstPort		    RConn1
 		    }
 		    }
 		    }
@@ -3661,10 +3577,16 @@ Model {
 		    Ports		    [0, 0, 0, 0, 0, 2]
 		    Position		    [300, 189, 395, 256]
 		    ZOrder		    223
+		    MinAlgLoopOccurrences   off
+		    PropExecContextOutsideSubsystem off
+		    RTWSystemCode	    "Auto"
+		    FunctionWithSeparateData off
+		    Opaque		    off
 		    RequestExecContextInheritance off
+		    MaskHideContents	    off
 		    System {
 		    Name		    "Capacitive_Load_R_3"
-		    Location		    [148, 83, 964, 621]
+		    Location		    [-1, 31, 1381, 775]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -3686,46 +3608,18 @@ Model {
 		    ZOrder		    170
 		    NamePlacement	    "alternate"
 		    ShowName		    off
-		    LibraryVersion	    "1.2362"
+		    LibraryVersion	    "1.2191"
 		    SourceBlock		    "powerlib/Elements/Breaker"
 		    SourceType		    "Breaker"
-		    ContentPreviewEnabled   off
-		    InitialState	    "0"
-		    SwitchingTimes	    "[ 1/60  5/60 ]"
-		    External		    on
 		    BreakerResistance	    "0.01"
+		    InitialState	    "0"
 		    SnubberResistance	    "1e7"
 		    SnubberCapacitance	    "inf"
+		    SwitchingTimes	    "[ 1/60  5/60 ]"
+		    External		    on
 		    Measurements	    "None"
 		    MoreParameters	    off
 		    NoBreakLoop		    off
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "Parallel RLC Branch"
-		    SID			    "1889"
-		    Ports		    [0, 0, 0, 0, 0, 1, 1]
-		    Position		    [434, 65, 486, 120]
-		    ZOrder		    182
-		    BlockRotation	    270
-		    BlockMirror		    on
-		    NamePlacement	    "alternate"
-		    ShowName		    off
-		    AttributesFormatString  "\\n"
-		    LibraryVersion	    "1.2362"
-		    SourceBlock		    "powerlib/Elements/Parallel RLC Branch"
-		    SourceType		    "Parallel RLC Branch"
-		    LConnTagsString	    "a"
-		    RConnTagsString	    "__new0"
-		    BranchType		    "RC"
-		    Resistance		    "Capacitive_Load_T_RC(1,3)"
-		    Inductance		    "1e-3"
-		    SetiL0		    off
-		    InitialCurrent	    "0"
-		    Capacitance		    "Capacitive_Load_T_RC(2,3)"
-		    Setx0		    off
-		    InitialVoltage	    "0"
-		    Measurements	    "None"
 		    }
 		    Block {
 		    BlockType		    Reference
@@ -3735,10 +3629,9 @@ Model {
 		    Position		    [135, 36, 165, 54]
 		    ZOrder		    180
 		    ShowName		    off
-		    LibraryVersion	    "1.287"
+		    LibraryVersion	    "1.274"
 		    SourceBlock		    "simulink/Sources/Repeating\nSequence\nStair"
 		    SourceType		    "Repeating Sequence Stair"
-		    ContentPreviewEnabled   off
 		    OutValues		    "Capacitive_Load_T_Switching_Sequence(:,3)"
 		    tsamp		    "Capacitive_Load_T_Switching_Speed(3)"
 		    OutMin		    "[]"
@@ -3752,16 +3645,39 @@ Model {
 		    }
 		    Block {
 		    BlockType		    Reference
+		    Name		    "Series RLC Branch"
+		    SID			    "1905"
+		    Ports		    [0, 0, 0, 0, 0, 1, 1]
+		    Position		    [451, 60, 479, 130]
+		    ZOrder		    184
+		    BlockRotation	    270
+		    BlockMirror		    on
+		    LibraryVersion	    "1.2191"
+		    SourceBlock		    "powerlib/Elements/Series RLC Branch"
+		    SourceType		    "Series RLC Branch"
+		    LConnTagsString	    "__new0"
+		    RConnTagsString	    "__new0"
+		    BranchType		    "RC"
+		    Resistance		    "Capacitive_Load_T_RC(1,3)"
+		    Inductance		    "1e-3"
+		    SetiL0		    off
+		    InitialCurrent	    "0"
+		    Capacitance		    "Capacitive_Load_T_RC(2,3)"
+		    Setx0		    off
+		    InitialVoltage	    "0"
+		    Measurements	    "None"
+		    }
+		    Block {
+		    BlockType		    Reference
 		    Name		    "Universal Bridge2"
 		    SID			    "1891"
 		    Ports		    [0, 0, 0, 0, 0, 2, 2]
 		    Position		    [315, 17, 405, 173]
 		    ZOrder		    103
 		    ShowName		    off
-		    LibraryVersion	    "1.2362"
+		    LibraryVersion	    "1.2191"
 		    SourceBlock		    "powerlib/Power\nElectronics/Universal Bridge"
 		    SourceType		    "Universal Bridge"
-		    ContentPreviewEnabled   off
 		    Arms		    "2"
 		    SnubberResistance	    "1e5"
 		    SnubberCapacitance	    "inf"
@@ -3795,24 +3711,6 @@ Model {
 		    Side		    "Left"
 		    }
 		    Line {
-		    LineType		    "Connection"
-		    ZOrder		    1
-		    SrcBlock		    "Universal Bridge2"
-		    SrcPort		    RConn2
-		    DstBlock		    "Parallel RLC Branch"
-		    DstPort		    RConn1
-		    }
-		    Line {
-		    LineType		    "Connection"
-		    ZOrder		    2
-		    SrcBlock		    "Universal Bridge2"
-		    SrcPort		    RConn1
-		    Points		    [40, 0]
-		    DstBlock		    "Parallel RLC Branch"
-		    DstPort		    LConn1
-		    }
-		    Line {
-		    ZOrder		    3
 		    SrcBlock		    "Ron4"
 		    SrcPort		    1
 		    DstBlock		    "Breaker3"
@@ -3820,7 +3718,6 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    4
 		    SrcBlock		    "Breaker3"
 		    SrcPort		    RConn1
 		    DstBlock		    "Universal Bridge2"
@@ -3828,7 +3725,6 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    5
 		    SrcBlock		    "Universal Bridge2"
 		    SrcPort		    LConn2
 		    DstBlock		    "N "
@@ -3836,12 +3732,27 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    6
 		    SrcBlock		    "AC"
 		    SrcPort		    RConn1
 		    Points		    [135, 0]
 		    DstBlock		    "Breaker3"
 		    DstPort		    LConn1
+		    }
+		    Line {
+		    LineType		    "Connection"
+		    SrcBlock		    "Series RLC Branch"
+		    SrcPort		    RConn1
+		    Points		    [0, -10]
+		    DstBlock		    "Universal Bridge2"
+		    DstPort		    RConn2
+		    }
+		    Line {
+		    LineType		    "Connection"
+		    SrcBlock		    "Series RLC Branch"
+		    SrcPort		    LConn1
+		    Points		    [-37, 0; 0, 10]
+		    DstBlock		    "Universal Bridge2"
+		    DstPort		    RConn1
 		    }
 		    }
 		    }
@@ -3865,7 +3776,6 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    1
 		    Points		    [235, 240; -165, 0]
 		    DstBlock		    "N"
 		    DstPort		    RConn1
@@ -3894,7 +3804,6 @@ Model {
 		    }
 		    Line {
 		    LineType		    "Connection"
-		    ZOrder		    6
 		    SrcBlock		    "Capacitive_Load_R_2"
 		    SrcPort		    LConn1
 		    Points		    [-100, 0]
@@ -3987,14 +3896,12 @@ Model {
 		}
 		Line {
 		  LineType		  "Connection"
-		  ZOrder		  1
 		  SrcBlock		  "R"
 		  SrcPort		  RConn1
 		  DstBlock		  "Breaker4"
 		  DstPort		  LConn1
 		}
 		Line {
-		  ZOrder		  2
 		  SrcBlock		  "NL Loads\nOn grid"
 		  SrcPort		  1
 		  DstBlock		  "Breaker4"
@@ -4002,14 +3909,12 @@ Model {
 		}
 		Line {
 		  LineType		  "Connection"
-		  ZOrder		  3
 		  SrcBlock		  "S"
 		  SrcPort		  RConn1
 		  DstBlock		  "Breaker1"
 		  DstPort		  LConn1
 		}
 		Line {
-		  ZOrder		  4
 		  SrcBlock		  "NL Loads\nOn grid1"
 		  SrcPort		  1
 		  DstBlock		  "Breaker1"
@@ -4017,14 +3922,12 @@ Model {
 		}
 		Line {
 		  LineType		  "Connection"
-		  ZOrder		  5
 		  SrcBlock		  "T"
 		  SrcPort		  RConn1
 		  DstBlock		  "Breaker6"
 		  DstPort		  LConn1
 		}
 		Line {
-		  ZOrder		  6
 		  SrcBlock		  "NL Loads\nOn grid2"
 		  SrcPort		  1
 		  DstBlock		  "Breaker6"
@@ -4032,7 +3935,6 @@ Model {
 		}
 		Line {
 		  LineType		  "Connection"
-		  ZOrder		  7
 		  SrcBlock		  "Capacitive_Load_R"
 		  SrcPort		  LConn1
 		  DstBlock		  "Breaker4"
@@ -4040,7 +3942,6 @@ Model {
 		}
 		Line {
 		  LineType		  "Connection"
-		  ZOrder		  8
 		  SrcBlock		  "Capacitive_Load_S"
 		  SrcPort		  LConn1
 		  DstBlock		  "Breaker1"
@@ -4048,7 +3949,6 @@ Model {
 		}
 		Line {
 		  LineType		  "Connection"
-		  ZOrder		  9
 		  SrcBlock		  "Capacitive_Load_T"
 		  SrcPort		  LConn1
 		  DstBlock		  "Breaker6"
@@ -4056,7 +3956,6 @@ Model {
 		}
 		Line {
 		  LineType		  "Connection"
-		  ZOrder		  10
 		  SrcBlock		  "Capacitive_Load_R"
 		  SrcPort		  LConn2
 		  Points		  [-117, 0; 0, 70]
@@ -4092,10 +3991,16 @@ Model {
 	      Ports		      [0, 0, 0, 0, 0, 3, 1]
 	      Position		      [450, 225, 490, 325]
 	      ZOrder		      188
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
 	      RequestExecContextInheritance off
+	      MaskHideContents	      off
 	      System {
 		Name			"Inductive_Loads_RST"
-		Location		[35, 6, 1417, 750]
+		Location		[36, 54, 1418, 798]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -4117,16 +4022,15 @@ Model {
 		  ZOrder		  224
 		  NamePlacement		  "alternate"
 		  ShowName		  off
-		  LibraryVersion	  "1.2362"
+		  LibraryVersion	  "1.2191"
 		  SourceBlock		  "powerlib/Elements/Breaker"
 		  SourceType		  "Breaker"
-		  ContentPreviewEnabled	  off
-		  InitialState		  "0"
-		  SwitchingTimes	  "[ 1/60  5/60 ]"
-		  External		  on
 		  BreakerResistance	  "0.01"
+		  InitialState		  "0"
 		  SnubberResistance	  "1e7"
 		  SnubberCapacitance	  "inf"
+		  SwitchingTimes	  "[ 1/60  5/60 ]"
+		  External		  on
 		  Measurements		  "None"
 		  MoreParameters	  off
 		  NoBreakLoop		  off
@@ -4140,16 +4044,15 @@ Model {
 		  ZOrder		  222
 		  NamePlacement		  "alternate"
 		  ShowName		  off
-		  LibraryVersion	  "1.2362"
+		  LibraryVersion	  "1.2191"
 		  SourceBlock		  "powerlib/Elements/Breaker"
 		  SourceType		  "Breaker"
-		  ContentPreviewEnabled	  off
-		  InitialState		  "0"
-		  SwitchingTimes	  "[ 1/60  5/60 ]"
-		  External		  on
 		  BreakerResistance	  "0.01"
+		  InitialState		  "0"
 		  SnubberResistance	  "1e7"
 		  SnubberCapacitance	  "inf"
+		  SwitchingTimes	  "[ 1/60  5/60 ]"
+		  External		  on
 		  Measurements		  "None"
 		  MoreParameters	  off
 		  NoBreakLoop		  off
@@ -4163,85 +4066,15 @@ Model {
 		  ZOrder		  226
 		  NamePlacement		  "alternate"
 		  ShowName		  off
-		  LibraryVersion	  "1.2362"
+		  LibraryVersion	  "1.2191"
 		  SourceBlock		  "powerlib/Elements/Breaker"
 		  SourceType		  "Breaker"
-		  ContentPreviewEnabled	  off
-		  InitialState		  "0"
-		  SwitchingTimes	  "[ 1/60  5/60 ]"
-		  External		  on
 		  BreakerResistance	  "0.01"
+		  InitialState		  "0"
 		  SnubberResistance	  "1e7"
 		  SnubberCapacitance	  "inf"
-		  Measurements		  "None"
-		  MoreParameters	  off
-		  NoBreakLoop		  off
-		}
-		Block {
-		  BlockType		  Reference
-		  Name			  "Breaker3"
-		  SID			  "1905"
-		  Ports			  [1, 0, 0, 0, 0, 1, 1]
-		  Position		  [410, 80, 465, 120]
-		  ZOrder		  242
-		  NamePlacement		  "alternate"
-		  ShowName		  off
-		  LibraryVersion	  "1.2362"
-		  SourceBlock		  "powerlib/Elements/Breaker"
-		  SourceType		  "Breaker"
-		  ContentPreviewEnabled	  off
-		  InitialState		  "0"
 		  SwitchingTimes	  "[ 1/60  5/60 ]"
 		  External		  on
-		  BreakerResistance	  "0.01"
-		  SnubberResistance	  "1e7"
-		  SnubberCapacitance	  "inf"
-		  Measurements		  "None"
-		  MoreParameters	  off
-		  NoBreakLoop		  off
-		}
-		Block {
-		  BlockType		  Reference
-		  Name			  "Breaker4"
-		  SID			  "1906"
-		  Ports			  [1, 0, 0, 0, 0, 1, 1]
-		  Position		  [410, 5, 465, 45]
-		  ZOrder		  241
-		  NamePlacement		  "alternate"
-		  ShowName		  off
-		  LibraryVersion	  "1.2362"
-		  SourceBlock		  "powerlib/Elements/Breaker"
-		  SourceType		  "Breaker"
-		  ContentPreviewEnabled	  off
-		  InitialState		  "0"
-		  SwitchingTimes	  "[ 1/60  5/60 ]"
-		  External		  on
-		  BreakerResistance	  "0.01"
-		  SnubberResistance	  "1e7"
-		  SnubberCapacitance	  "inf"
-		  Measurements		  "None"
-		  MoreParameters	  off
-		  NoBreakLoop		  off
-		}
-		Block {
-		  BlockType		  Reference
-		  Name			  "Breaker5"
-		  SID			  "1907"
-		  Ports			  [1, 0, 0, 0, 0, 1, 1]
-		  Position		  [410, 160, 465, 200]
-		  ZOrder		  243
-		  NamePlacement		  "alternate"
-		  ShowName		  off
-		  LibraryVersion	  "1.2362"
-		  SourceBlock		  "powerlib/Elements/Breaker"
-		  SourceType		  "Breaker"
-		  ContentPreviewEnabled	  off
-		  InitialState		  "0"
-		  SwitchingTimes	  "[ 1/60  5/60 ]"
-		  External		  on
-		  BreakerResistance	  "0.01"
-		  SnubberResistance	  "1e7"
-		  SnubberCapacitance	  "inf"
 		  Measurements		  "None"
 		  MoreParameters	  off
 		  NoBreakLoop		  off
@@ -4278,10 +4111,10 @@ Model {
 		  Name			  "RL_load"
 		  SID			  "1681"
 		  Ports			  [0, 0, 0, 0, 0, 1, 1]
-		  Position		  [635, 11, 705, 39]
+		  Position		  [285, 21, 355, 49]
 		  ZOrder		  128
 		  ShowName		  off
-		  LibraryVersion	  "1.2362"
+		  LibraryVersion	  "1.2191"
 		  SourceBlock		  "powerlib/Elements/Series RLC Branch"
 		  SourceType		  "Series RLC Branch"
 		  LConnTagsString	  "__new0"
@@ -4301,10 +4134,10 @@ Model {
 		  Name			  "RL_load1"
 		  SID			  "1682"
 		  Ports			  [0, 0, 0, 0, 0, 1, 1]
-		  Position		  [635, 86, 705, 114]
+		  Position		  [285, 96, 355, 124]
 		  ZOrder		  231
 		  ShowName		  off
-		  LibraryVersion	  "1.2362"
+		  LibraryVersion	  "1.2191"
 		  SourceBlock		  "powerlib/Elements/Series RLC Branch"
 		  SourceType		  "Series RLC Branch"
 		  LConnTagsString	  "__new0"
@@ -4324,10 +4157,10 @@ Model {
 		  Name			  "RL_load2"
 		  SID			  "1683"
 		  Ports			  [0, 0, 0, 0, 0, 1, 1]
-		  Position		  [635, 166, 705, 194]
+		  Position		  [285, 176, 355, 204]
 		  ZOrder		  232
 		  ShowName		  off
-		  LibraryVersion	  "1.2362"
+		  LibraryVersion	  "1.2191"
 		  SourceBlock		  "powerlib/Elements/Series RLC Branch"
 		  SourceType		  "Series RLC Branch"
 		  LConnTagsString	  "__new0"
@@ -4341,75 +4174,6 @@ Model {
 		  Setx0			  off
 		  InitialVoltage	  "0"
 		  Measurements		  "None"
-		}
-		Block {
-		  BlockType		  Reference
-		  Name			  "Ron1"
-		  SID			  "1908"
-		  Ports			  [0, 1]
-		  Position		  [330, 81, 360, 99]
-		  ZOrder		  245
-		  ShowName		  off
-		  LibraryVersion	  "1.287"
-		  SourceBlock		  "simulink/Sources/Repeating\nSequence\nStair"
-		  SourceType		  "Repeating Sequence Stair"
-		  ContentPreviewEnabled	  off
-		  OutValues		  "Inductive_Load_Switching_Sequence(:,2)"
-		  tsamp			  "Inductive_Load_Switching_Speed(2)"
-		  OutMin		  "[]"
-		  OutMax		  "[]"
-		  OutDataTypeStr	  "float('double')"
-		  OutputDataTypeScalingMode "Specify via dialog"
-		  OutDataType		  "float('double')"
-		  ConRadixGroup		  "Best Precision: Vector-wise"
-		  OutScaling		  "2^-12"
-		  LockScale		  off
-		}
-		Block {
-		  BlockType		  Reference
-		  Name			  "Ron2"
-		  SID			  "1909"
-		  Ports			  [0, 1]
-		  Position		  [330, 161, 360, 179]
-		  ZOrder		  246
-		  ShowName		  off
-		  LibraryVersion	  "1.287"
-		  SourceBlock		  "simulink/Sources/Repeating\nSequence\nStair"
-		  SourceType		  "Repeating Sequence Stair"
-		  ContentPreviewEnabled	  off
-		  OutValues		  "Inductive_Load_Switching_Sequence(:,3)"
-		  tsamp			  "Inductive_Load_Switching_Speed(3)"
-		  OutMin		  "[]"
-		  OutMax		  "[]"
-		  OutDataTypeStr	  "float('double')"
-		  OutputDataTypeScalingMode "Specify via dialog"
-		  OutDataType		  "float('double')"
-		  ConRadixGroup		  "Best Precision: Vector-wise"
-		  OutScaling		  "2^-12"
-		  LockScale		  off
-		}
-		Block {
-		  BlockType		  Reference
-		  Name			  "Ron3"
-		  SID			  "1910"
-		  Ports			  [0, 1]
-		  Position		  [330, 6, 360, 24]
-		  ZOrder		  244
-		  ShowName		  off
-		  LibraryVersion	  "1.287"
-		  SourceBlock		  "simulink/Sources/Repeating\nSequence\nStair"
-		  SourceType		  "Repeating Sequence Stair"
-		  ContentPreviewEnabled	  off
-		  OutValues		  "Inductive_Load_Switching_Sequence(:,1)"
-		  tsamp			  "Inductive_Load_Switching_Speed(1)"
-		  OutMin		  "[]"
-		  OutMax		  "[]"
-		  OutDataTypeStr	  "float('double')"
-		  OutputDataTypeScalingMode "Specify via dialog"
-		  OutDataType		  "float('double')"
-		  ConRadixGroup		  "Best Precision: Vector-wise"
-		  OutScaling		  "2^-12"
-		  LockScale		  off
 		}
 		Block {
 		  BlockType		  PMIOPort
@@ -4449,7 +4213,6 @@ Model {
 		}
 		Line {
 		  LineType		  "Connection"
-		  ZOrder		  1
 		  SrcBlock		  "RL_load"
 		  SrcPort		  RConn1
 		  Points		  [30, 0; 0, 75]
@@ -4470,14 +4233,13 @@ Model {
 		    }
 		    Branch {
 		    ConnectType		    "DEST_SRC"
-		    Points		    [0, 70]
+		    Points		    [0, 60]
 		    DstBlock		    "N"
 		    DstPort		    RConn1
 		    }
 		  }
 		}
 		Line {
-		  ZOrder		  6
 		  SrcBlock		  "Constant"
 		  SrcPort		  1
 		  DstBlock		  "Breaker13"
@@ -4485,7 +4247,6 @@ Model {
 		}
 		Line {
 		  LineType		  "Connection"
-		  ZOrder		  7
 		  SrcBlock		  "R"
 		  SrcPort		  RConn1
 		  DstBlock		  "Breaker13"
@@ -4493,14 +4254,12 @@ Model {
 		}
 		Line {
 		  LineType		  "Connection"
-		  ZOrder		  8
 		  SrcBlock		  "Breaker1"
 		  SrcPort		  LConn1
 		  DstBlock		  "S"
 		  DstPort		  RConn1
 		}
 		Line {
-		  ZOrder		  9
 		  SrcBlock		  "Constant1"
 		  SrcPort		  1
 		  DstBlock		  "Breaker1"
@@ -4508,87 +4267,37 @@ Model {
 		}
 		Line {
 		  LineType		  "Connection"
-		  ZOrder		  10
 		  SrcBlock		  "Breaker2"
 		  SrcPort		  LConn1
 		  DstBlock		  "T"
 		  DstPort		  RConn1
 		}
 		Line {
-		  ZOrder		  11
 		  SrcBlock		  "Constant2"
 		  SrcPort		  1
 		  DstBlock		  "Breaker2"
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  18
-		  SrcBlock		  "Ron3"
-		  SrcPort		  1
-		  DstBlock		  "Breaker4"
-		  DstPort		  1
-		}
-		Line {
-		  ZOrder		  19
-		  SrcBlock		  "Ron1"
-		  SrcPort		  1
-		  DstBlock		  "Breaker3"
-		  DstPort		  1
-		}
-		Line {
-		  ZOrder		  20
-		  SrcBlock		  "Ron2"
-		  SrcPort		  1
-		  DstBlock		  "Breaker5"
-		  DstPort		  1
-		}
-		Line {
 		  LineType		  "Connection"
-		  ZOrder		  21
-		  SrcBlock		  "Breaker4"
-		  SrcPort		  LConn1
-		  DstBlock		  "Breaker13"
-		  DstPort		  RConn1
-		}
-		Line {
-		  LineType		  "Connection"
-		  ZOrder		  22
-		  SrcBlock		  "Breaker3"
-		  SrcPort		  LConn1
-		  DstBlock		  "Breaker1"
-		  DstPort		  RConn1
-		}
-		Line {
-		  LineType		  "Connection"
-		  ZOrder		  23
-		  SrcBlock		  "Breaker5"
-		  SrcPort		  LConn1
-		  DstBlock		  "Breaker2"
-		  DstPort		  RConn1
-		}
-		Line {
-		  LineType		  "Connection"
-		  ZOrder		  25
-		  SrcBlock		  "Breaker4"
+		  SrcBlock		  "Breaker13"
 		  SrcPort		  RConn1
 		  DstBlock		  "RL_load"
 		  DstPort		  LConn1
 		}
 		Line {
 		  LineType		  "Connection"
-		  ZOrder		  26
-		  SrcBlock		  "Breaker3"
-		  SrcPort		  RConn1
-		  DstBlock		  "RL_load1"
-		  DstPort		  LConn1
+		  SrcBlock		  "RL_load1"
+		  SrcPort		  LConn1
+		  DstBlock		  "Breaker1"
+		  DstPort		  RConn1
 		}
 		Line {
 		  LineType		  "Connection"
-		  ZOrder		  27
-		  SrcBlock		  "Breaker5"
-		  SrcPort		  RConn1
-		  DstBlock		  "RL_load2"
-		  DstPort		  LConn1
+		  SrcBlock		  "RL_load2"
+		  SrcPort		  LConn1
+		  DstBlock		  "Breaker2"
+		  DstPort		  RConn1
 		}
 	      }
 	    }
@@ -4599,10 +4308,16 @@ Model {
 	      Ports		      [0, 0, 0, 0, 0, 3, 1]
 	      Position		      [450, 100, 490, 200]
 	      ZOrder		      187
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
 	      RequestExecContextInheritance off
+	      MaskHideContents	      off
 	      System {
 		Name			"Ohmic_Loads_RST"
-		Location		[35, 6, 1417, 750]
+		Location		[36, 54, 1418, 798]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -4620,20 +4335,19 @@ Model {
 		  Name			  "Breaker1"
 		  SID			  "1689"
 		  Ports			  [1, 0, 0, 0, 0, 1, 1]
-		  Position		  [175, 175, 230, 215]
+		  Position		  [210, 175, 265, 215]
 		  ZOrder		  219
 		  NamePlacement		  "alternate"
 		  ShowName		  off
-		  LibraryVersion	  "1.2362"
+		  LibraryVersion	  "1.2191"
 		  SourceBlock		  "powerlib/Elements/Breaker"
 		  SourceType		  "Breaker"
-		  ContentPreviewEnabled	  off
-		  InitialState		  "0"
-		  SwitchingTimes	  "[ 1/60  5/60 ]"
-		  External		  on
 		  BreakerResistance	  "0.01"
+		  InitialState		  "0"
 		  SnubberResistance	  "1e7"
 		  SnubberCapacitance	  "inf"
+		  SwitchingTimes	  "[ 1/60  5/60 ]"
+		  External		  on
 		  Measurements		  "None"
 		  MoreParameters	  off
 		  NoBreakLoop		  off
@@ -4643,20 +4357,19 @@ Model {
 		  Name			  "Breaker13"
 		  SID			  "1690"
 		  Ports			  [1, 0, 0, 0, 0, 1, 1]
-		  Position		  [175, 110, 230, 150]
+		  Position		  [210, 110, 265, 150]
 		  ZOrder		  218
 		  NamePlacement		  "alternate"
 		  ShowName		  off
-		  LibraryVersion	  "1.2362"
+		  LibraryVersion	  "1.2191"
 		  SourceBlock		  "powerlib/Elements/Breaker"
 		  SourceType		  "Breaker"
-		  ContentPreviewEnabled	  off
-		  InitialState		  "0"
-		  SwitchingTimes	  "[ 1/60  5/60 ]"
-		  External		  on
 		  BreakerResistance	  "0.01"
+		  InitialState		  "0"
 		  SnubberResistance	  "1e7"
 		  SnubberCapacitance	  "inf"
+		  SwitchingTimes	  "[ 1/60  5/60 ]"
+		  External		  on
 		  Measurements		  "None"
 		  MoreParameters	  off
 		  NoBreakLoop		  off
@@ -4666,89 +4379,19 @@ Model {
 		  Name			  "Breaker2"
 		  SID			  "1691"
 		  Ports			  [1, 0, 0, 0, 0, 1, 1]
-		  Position		  [175, 240, 230, 280]
+		  Position		  [210, 240, 265, 280]
 		  ZOrder		  220
 		  NamePlacement		  "alternate"
 		  ShowName		  off
-		  LibraryVersion	  "1.2362"
+		  LibraryVersion	  "1.2191"
 		  SourceBlock		  "powerlib/Elements/Breaker"
 		  SourceType		  "Breaker"
-		  ContentPreviewEnabled	  off
-		  InitialState		  "0"
-		  SwitchingTimes	  "[ 1/60  5/60 ]"
-		  External		  on
 		  BreakerResistance	  "0.01"
+		  InitialState		  "0"
 		  SnubberResistance	  "1e7"
 		  SnubberCapacitance	  "inf"
-		  Measurements		  "None"
-		  MoreParameters	  off
-		  NoBreakLoop		  off
-		}
-		Block {
-		  BlockType		  Reference
-		  Name			  "Breaker3"
-		  SID			  "1896"
-		  Ports			  [1, 0, 0, 0, 0, 1, 1]
-		  Position		  [395, 165, 450, 205]
-		  ZOrder		  233
-		  NamePlacement		  "alternate"
-		  ShowName		  off
-		  LibraryVersion	  "1.2362"
-		  SourceBlock		  "powerlib/Elements/Breaker"
-		  SourceType		  "Breaker"
-		  ContentPreviewEnabled	  off
-		  InitialState		  "0"
 		  SwitchingTimes	  "[ 1/60  5/60 ]"
 		  External		  on
-		  BreakerResistance	  "0.01"
-		  SnubberResistance	  "1e7"
-		  SnubberCapacitance	  "inf"
-		  Measurements		  "None"
-		  MoreParameters	  off
-		  NoBreakLoop		  off
-		}
-		Block {
-		  BlockType		  Reference
-		  Name			  "Breaker4"
-		  SID			  "1897"
-		  Ports			  [1, 0, 0, 0, 0, 1, 1]
-		  Position		  [395, 100, 450, 140]
-		  ZOrder		  232
-		  NamePlacement		  "alternate"
-		  ShowName		  off
-		  LibraryVersion	  "1.2362"
-		  SourceBlock		  "powerlib/Elements/Breaker"
-		  SourceType		  "Breaker"
-		  ContentPreviewEnabled	  off
-		  InitialState		  "0"
-		  SwitchingTimes	  "[ 1/60  5/60 ]"
-		  External		  on
-		  BreakerResistance	  "0.01"
-		  SnubberResistance	  "1e7"
-		  SnubberCapacitance	  "inf"
-		  Measurements		  "None"
-		  MoreParameters	  off
-		  NoBreakLoop		  off
-		}
-		Block {
-		  BlockType		  Reference
-		  Name			  "Breaker5"
-		  SID			  "1898"
-		  Ports			  [1, 0, 0, 0, 0, 1, 1]
-		  Position		  [395, 230, 450, 270]
-		  ZOrder		  234
-		  NamePlacement		  "alternate"
-		  ShowName		  off
-		  LibraryVersion	  "1.2362"
-		  SourceBlock		  "powerlib/Elements/Breaker"
-		  SourceType		  "Breaker"
-		  ContentPreviewEnabled	  off
-		  InitialState		  "0"
-		  SwitchingTimes	  "[ 1/60  5/60 ]"
-		  External		  on
-		  BreakerResistance	  "0.01"
-		  SnubberResistance	  "1e7"
-		  SnubberCapacitance	  "inf"
 		  Measurements		  "None"
 		  MoreParameters	  off
 		  NoBreakLoop		  off
@@ -4757,7 +4400,7 @@ Model {
 		  BlockType		  Constant
 		  Name			  "Constant"
 		  SID			  "1692"
-		  Position		  [100, 110, 130, 130]
+		  Position		  [135, 110, 165, 130]
 		  ZOrder		  221
 		  ShowName		  off
 		  Value			  "Switch_Load_R(1)"
@@ -4766,7 +4409,7 @@ Model {
 		  BlockType		  Constant
 		  Name			  "Constant1"
 		  SID			  "1693"
-		  Position		  [100, 175, 130, 195]
+		  Position		  [135, 175, 165, 195]
 		  ZOrder		  226
 		  ShowName		  off
 		  Value			  "Switch_Load_R(2)"
@@ -4775,7 +4418,7 @@ Model {
 		  BlockType		  Constant
 		  Name			  "Constant2"
 		  SID			  "1694"
-		  Position		  [100, 240, 130, 260]
+		  Position		  [135, 240, 165, 260]
 		  ZOrder		  227
 		  ShowName		  off
 		  Value			  "Switch_Load_R(3)"
@@ -4785,10 +4428,10 @@ Model {
 		  Name			  "R_load"
 		  SID			  "1695"
 		  Ports			  [0, 0, 0, 0, 0, 1, 1]
-		  Position		  [500, 106, 570, 134]
+		  Position		  [380, 116, 450, 144]
 		  ZOrder		  125
 		  ShowName		  off
-		  LibraryVersion	  "1.2362"
+		  LibraryVersion	  "1.2191"
 		  SourceBlock		  "powerlib/Elements/Series RLC Branch"
 		  SourceType		  "Series RLC Branch"
 		  LConnTagsString	  "__new0"
@@ -4808,10 +4451,10 @@ Model {
 		  Name			  "R_load1"
 		  SID			  "1696"
 		  Ports			  [0, 0, 0, 0, 0, 1, 1]
-		  Position		  [500, 171, 570, 199]
+		  Position		  [380, 181, 450, 209]
 		  ZOrder		  229
 		  ShowName		  off
-		  LibraryVersion	  "1.2362"
+		  LibraryVersion	  "1.2191"
 		  SourceBlock		  "powerlib/Elements/Series RLC Branch"
 		  SourceType		  "Series RLC Branch"
 		  LConnTagsString	  "__new0"
@@ -4831,10 +4474,10 @@ Model {
 		  Name			  "R_load2"
 		  SID			  "1697"
 		  Ports			  [0, 0, 0, 0, 0, 1, 1]
-		  Position		  [500, 236, 570, 264]
+		  Position		  [380, 246, 450, 274]
 		  ZOrder		  230
 		  ShowName		  off
-		  LibraryVersion	  "1.2362"
+		  LibraryVersion	  "1.2191"
 		  SourceBlock		  "powerlib/Elements/Series RLC Branch"
 		  SourceType		  "Series RLC Branch"
 		  LConnTagsString	  "__new0"
@@ -4848,75 +4491,6 @@ Model {
 		  Setx0			  off
 		  InitialVoltage	  "0"
 		  Measurements		  "None"
-		}
-		Block {
-		  BlockType		  Reference
-		  Name			  "Ron1"
-		  SID			  "1903"
-		  Ports			  [0, 1]
-		  Position		  [315, 166, 345, 184]
-		  ZOrder		  239
-		  ShowName		  off
-		  LibraryVersion	  "1.287"
-		  SourceBlock		  "simulink/Sources/Repeating\nSequence\nStair"
-		  SourceType		  "Repeating Sequence Stair"
-		  ContentPreviewEnabled	  off
-		  OutValues		  "Ohmic_Load_Switching_Sequence(:,2)"
-		  tsamp			  "Ohmic_Load_Switching_Speed(2)"
-		  OutMin		  "[]"
-		  OutMax		  "[]"
-		  OutDataTypeStr	  "float('double')"
-		  OutputDataTypeScalingMode "Specify via dialog"
-		  OutDataType		  "float('double')"
-		  ConRadixGroup		  "Best Precision: Vector-wise"
-		  OutScaling		  "2^-12"
-		  LockScale		  off
-		}
-		Block {
-		  BlockType		  Reference
-		  Name			  "Ron2"
-		  SID			  "1904"
-		  Ports			  [0, 1]
-		  Position		  [315, 231, 345, 249]
-		  ZOrder		  240
-		  ShowName		  off
-		  LibraryVersion	  "1.287"
-		  SourceBlock		  "simulink/Sources/Repeating\nSequence\nStair"
-		  SourceType		  "Repeating Sequence Stair"
-		  ContentPreviewEnabled	  off
-		  OutValues		  "Ohmic_Load_Switching_Sequence(:,3)"
-		  tsamp			  "Ohmic_Load_Switching_Speed(3)"
-		  OutMin		  "[]"
-		  OutMax		  "[]"
-		  OutDataTypeStr	  "float('double')"
-		  OutputDataTypeScalingMode "Specify via dialog"
-		  OutDataType		  "float('double')"
-		  ConRadixGroup		  "Best Precision: Vector-wise"
-		  OutScaling		  "2^-12"
-		  LockScale		  off
-		}
-		Block {
-		  BlockType		  Reference
-		  Name			  "Ron3"
-		  SID			  "1902"
-		  Ports			  [0, 1]
-		  Position		  [315, 101, 345, 119]
-		  ZOrder		  238
-		  ShowName		  off
-		  LibraryVersion	  "1.287"
-		  SourceBlock		  "simulink/Sources/Repeating\nSequence\nStair"
-		  SourceType		  "Repeating Sequence Stair"
-		  ContentPreviewEnabled	  off
-		  OutValues		  "Ohmic_Load_Switching_Sequence(:,1)"
-		  tsamp			  "Ohmic_Load_Switching_Speed(1)"
-		  OutMin		  "[]"
-		  OutMax		  "[]"
-		  OutDataTypeStr	  "float('double')"
-		  OutputDataTypeScalingMode "Specify via dialog"
-		  OutDataType		  "float('double')"
-		  ConRadixGroup		  "Best Precision: Vector-wise"
-		  OutScaling		  "2^-12"
-		  LockScale		  off
 		}
 		Block {
 		  BlockType		  PMIOPort
@@ -4956,7 +4530,6 @@ Model {
 		}
 		Line {
 		  LineType		  "Connection"
-		  ZOrder		  1
 		  SrcBlock		  "R_load"
 		  SrcPort		  RConn1
 		  Points		  [35, 0; 0, 65]
@@ -4977,7 +4550,7 @@ Model {
 		    }
 		    Branch {
 		    ConnectType		    "DEST_SRC"
-		    Points		    [0, 75]
+		    Points		    [0, 65]
 		    DstBlock		    "N"
 		    DstPort		    RConn1
 		    }
@@ -4985,7 +4558,6 @@ Model {
 		}
 		Line {
 		  LineType		  "Connection"
-		  ZOrder		  6
 		  SrcBlock		  "Breaker13"
 		  SrcPort		  LConn1
 		  DstBlock		  "R"
@@ -4993,7 +4565,13 @@ Model {
 		}
 		Line {
 		  LineType		  "Connection"
-		  ZOrder		  8
+		  SrcBlock		  "Breaker13"
+		  SrcPort		  RConn1
+		  DstBlock		  "R_load"
+		  DstPort		  LConn1
+		}
+		Line {
+		  LineType		  "Connection"
 		  SrcBlock		  "Breaker1"
 		  SrcPort		  LConn1
 		  DstBlock		  "S"
@@ -5001,100 +4579,41 @@ Model {
 		}
 		Line {
 		  LineType		  "Connection"
-		  ZOrder		  10
+		  SrcBlock		  "R_load1"
+		  SrcPort		  LConn1
+		  DstBlock		  "Breaker1"
+		  DstPort		  RConn1
+		}
+		Line {
+		  LineType		  "Connection"
 		  SrcBlock		  "Breaker2"
 		  SrcPort		  LConn1
 		  DstBlock		  "T"
 		  DstPort		  RConn1
 		}
 		Line {
-		  ZOrder		  12
+		  LineType		  "Connection"
+		  SrcBlock		  "R_load2"
+		  SrcPort		  LConn1
+		  DstBlock		  "Breaker2"
+		  DstPort		  RConn1
+		}
+		Line {
 		  SrcBlock		  "Constant"
 		  SrcPort		  1
 		  DstBlock		  "Breaker13"
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  13
 		  SrcBlock		  "Constant1"
 		  SrcPort		  1
 		  DstBlock		  "Breaker1"
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  14
 		  SrcBlock		  "Constant2"
 		  SrcPort		  1
 		  DstBlock		  "Breaker2"
-		  DstPort		  1
-		}
-		Line {
-		  LineType		  "Connection"
-		  ZOrder		  21
-		  SrcBlock		  "Breaker4"
-		  SrcPort		  LConn1
-		  DstBlock		  "Breaker13"
-		  DstPort		  RConn1
-		}
-		Line {
-		  LineType		  "Connection"
-		  ZOrder		  22
-		  SrcBlock		  "Breaker3"
-		  SrcPort		  LConn1
-		  DstBlock		  "Breaker1"
-		  DstPort		  RConn1
-		}
-		Line {
-		  LineType		  "Connection"
-		  ZOrder		  23
-		  SrcBlock		  "Breaker5"
-		  SrcPort		  LConn1
-		  DstBlock		  "Breaker2"
-		  DstPort		  RConn1
-		}
-		Line {
-		  LineType		  "Connection"
-		  ZOrder		  24
-		  SrcBlock		  "R_load"
-		  SrcPort		  LConn1
-		  DstBlock		  "Breaker4"
-		  DstPort		  RConn1
-		}
-		Line {
-		  LineType		  "Connection"
-		  ZOrder		  25
-		  SrcBlock		  "R_load1"
-		  SrcPort		  LConn1
-		  DstBlock		  "Breaker3"
-		  DstPort		  RConn1
-		}
-		Line {
-		  LineType		  "Connection"
-		  ZOrder		  26
-		  SrcBlock		  "R_load2"
-		  SrcPort		  LConn1
-		  DstBlock		  "Breaker5"
-		  DstPort		  RConn1
-		}
-		Line {
-		  ZOrder		  27
-		  SrcBlock		  "Ron3"
-		  SrcPort		  1
-		  DstBlock		  "Breaker4"
-		  DstPort		  1
-		}
-		Line {
-		  ZOrder		  28
-		  SrcBlock		  "Ron1"
-		  SrcPort		  1
-		  DstBlock		  "Breaker3"
-		  DstPort		  1
-		}
-		Line {
-		  ZOrder		  29
-		  SrcBlock		  "Ron2"
-		  SrcPort		  1
-		  DstBlock		  "Breaker5"
 		  DstPort		  1
 		}
 	      }
@@ -5137,7 +4656,6 @@ Model {
 	    }
 	    Line {
 	      LineType		      "Connection"
-	      ZOrder		      1
 	      SrcBlock		      "Ohmic_Loads_RST"
 	      SrcPort		      LConn1
 	      Points		      [-168, 0; 0, 125]
@@ -5161,7 +4679,6 @@ Model {
 	    }
 	    Line {
 	      LineType		      "Connection"
-	      ZOrder		      5
 	      SrcBlock		      "Capacitive_Loads_RST"
 	      SrcPort		      RConn2
 	      Points		      [-141, 0; 0, -125]
@@ -5185,7 +4702,6 @@ Model {
 	    }
 	    Line {
 	      LineType		      "Connection"
-	      ZOrder		      9
 	      SrcBlock		      "Capacitive_Loads_RST"
 	      SrcPort		      RConn3
 	      Points		      [-111, 0; 0, -125]
@@ -5209,7 +4725,6 @@ Model {
 	    }
 	    Line {
 	      LineType		      "Connection"
-	      ZOrder		      13
 	      Points		      [533, 400; 0, 85; -298, 0]
 	      DstBlock		      "N"
 	      DstPort		      RConn1
@@ -5245,10 +4760,16 @@ Model {
 	  Ports			  [2]
 	  Position		  [500, 49, 685, 91]
 	  ZOrder		  359
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
 	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
 	  System {
 	    Name		    "Log_Signals"
-	    Location		    [35, 6, 1417, 750]
+	    Location		    [-1, 31, 1381, 775]
 	    Open		    on
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -5285,7 +4806,13 @@ Model {
 	      Ports		      [2, 1]
 	      Position		      [960, 320, 1080, 360]
 	      ZOrder		      246
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
 	      RequestExecContextInheritance off
+	      MaskHideContents	      off
 	      System {
 		Name			"3_Phase_P_Q"
 		Location		[-8, 0, 1374, 744]
@@ -5359,10 +4886,9 @@ Model {
 		  Position		  [295, 32, 375, 88]
 		  ZOrder		  224
 		  ShowName		  off
-		  LibraryVersion	  "1.666"
+		  LibraryVersion	  "1.664"
 		  SourceBlock		  "powerlib_extras/Measurements/Active & Reactive\nPower"
 		  SourceType		  "Active & Reactive Power "
-		  ContentPreviewEnabled	  off
 		  f1			  "Source_Frequency(1)"
 		}
 		Block {
@@ -5373,10 +4899,9 @@ Model {
 		  Position		  [295, 91, 375, 149]
 		  ZOrder		  229
 		  ShowName		  off
-		  LibraryVersion	  "1.666"
+		  LibraryVersion	  "1.664"
 		  SourceBlock		  "powerlib_extras/Measurements/Active & Reactive\nPower"
 		  SourceType		  "Active & Reactive Power "
-		  ContentPreviewEnabled	  off
 		  f1			  "Source_Frequency(2)"
 		}
 		Block {
@@ -5387,10 +4912,9 @@ Model {
 		  Position		  [295, 151, 375, 209]
 		  ZOrder		  230
 		  ShowName		  off
-		  LibraryVersion	  "1.666"
+		  LibraryVersion	  "1.664"
 		  SourceBlock		  "powerlib_extras/Measurements/Active & Reactive\nPower"
 		  SourceType		  "Active & Reactive Power "
-		  ContentPreviewEnabled	  off
 		  f1			  "Source_Frequency(3)"
 		}
 		Block {
@@ -5402,14 +4926,12 @@ Model {
 		  IconDisplay		  "Port number"
 		}
 		Line {
-		  ZOrder		  1
 		  SrcBlock		  "I_RMS"
 		  SrcPort		  1
 		  DstBlock		  "Demux1"
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  2
 		  SrcBlock		  "Demux1"
 		  SrcPort		  3
 		  Points		  [114, 0; 0, -160]
@@ -5417,7 +4939,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  ZOrder		  3
 		  SrcBlock		  "Demux1"
 		  SrcPort		  2
 		  Points		  [88, 0; 0, -160]
@@ -5425,7 +4946,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  ZOrder		  4
 		  SrcBlock		  "Demux1"
 		  SrcPort		  1
 		  Points		  [63, 0; 0, -160]
@@ -5433,56 +4953,48 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  ZOrder		  5
 		  SrcBlock		  "Demux3"
 		  SrcPort		  3
 		  DstBlock		  "P Q in5"
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  6
 		  SrcBlock		  "Demux3"
 		  SrcPort		  2
 		  DstBlock		  "P Q in4"
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  7
 		  SrcBlock		  "Demux3"
 		  SrcPort		  1
 		  DstBlock		  "P Q in3"
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  8
 		  SrcBlock		  "P Q in5"
 		  SrcPort		  1
 		  DstBlock		  "Mux4"
 		  DstPort		  3
 		}
 		Line {
-		  ZOrder		  9
 		  SrcBlock		  "Mux4"
 		  SrcPort		  1
 		  DstBlock		  "P_Q_RMS"
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  10
 		  SrcBlock		  "U_RMS"
 		  SrcPort		  1
 		  DstBlock		  "Demux3"
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  11
 		  SrcBlock		  "P Q in4"
 		  SrcPort		  1
 		  DstBlock		  "Mux4"
 		  DstPort		  2
 		}
 		Line {
-		  ZOrder		  12
 		  SrcBlock		  "P Q in3"
 		  SrcPort		  1
 		  DstBlock		  "Mux4"
@@ -5497,10 +5009,16 @@ Model {
 	      Ports		      [1, 1]
 	      Position		      [960, 170, 1080, 210]
 	      ZOrder		      247
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
 	      RequestExecContextInheritance off
+	      MaskHideContents	      off
 	      System {
 		Name			"3_Phase_RMS"
-		Location		[-8, 0, 1378, 788]
+		Location		[36, 54, 1418, 798]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -5551,12 +5069,11 @@ Model {
 		  Position		  [185, 68, 260, 92]
 		  ZOrder		  246
 		  ShowName		  off
-		  LibraryVersion	  "1.666"
+		  LibraryVersion	  "1.664"
 		  FontName		  "Verdana"
 		  FontSize		  11
 		  SourceBlock		  "powerlib_extras/Measurements/RMS"
 		  SourceType		  "RMS"
-		  ContentPreviewEnabled	  off
 		  f1			  "Source_Frequency(2)"
 		}
 		Block {
@@ -5567,12 +5084,11 @@ Model {
 		  Position		  [185, 108, 260, 132]
 		  ZOrder		  247
 		  ShowName		  off
-		  LibraryVersion	  "1.666"
+		  LibraryVersion	  "1.664"
 		  FontName		  "Verdana"
 		  FontSize		  11
 		  SourceBlock		  "powerlib_extras/Measurements/RMS"
 		  SourceType		  "RMS"
-		  ContentPreviewEnabled	  off
 		  f1			  "Source_Frequency(3)"
 		}
 		Block {
@@ -5583,12 +5099,11 @@ Model {
 		  Position		  [185, 28, 260, 52]
 		  ZOrder		  221
 		  ShowName		  off
-		  LibraryVersion	  "1.666"
+		  LibraryVersion	  "1.664"
 		  FontName		  "Verdana"
 		  FontSize		  11
 		  SourceBlock		  "powerlib_extras/Measurements/RMS"
 		  SourceType		  "RMS"
-		  ContentPreviewEnabled	  off
 		  f1			  "Source_Frequency(1)"
 		}
 		Block {
@@ -5600,56 +5115,48 @@ Model {
 		  IconDisplay		  "Port number"
 		}
 		Line {
-		  ZOrder		  1
 		  SrcBlock		  "RMS2"
 		  SrcPort		  1
 		  DstBlock		  "Mux2"
 		  DstPort		  3
 		}
 		Line {
-		  ZOrder		  2
 		  SrcBlock		  "Demux5"
 		  SrcPort		  2
 		  DstBlock		  "RMS1"
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  3
 		  SrcBlock		  "U_RST"
 		  SrcPort		  1
 		  DstBlock		  "Demux5"
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  4
 		  SrcBlock		  "Demux5"
 		  SrcPort		  3
 		  DstBlock		  "RMS2"
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  5
 		  SrcBlock		  "RMS6"
 		  SrcPort		  1
 		  DstBlock		  "Mux2"
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  6
 		  SrcBlock		  "Demux5"
 		  SrcPort		  1
 		  DstBlock		  "RMS6"
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  7
 		  SrcBlock		  "RMS1"
 		  SrcPort		  1
 		  DstBlock		  "Mux2"
 		  DstPort		  2
 		}
 		Line {
-		  ZOrder		  8
 		  SrcBlock		  "Mux2"
 		  SrcPort		  1
 		  DstBlock		  "U_RMS"
@@ -5664,7 +5171,13 @@ Model {
 	      Ports		      [1, 1]
 	      Position		      [960, 395, 1080, 435]
 	      ZOrder		      248
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
 	      RequestExecContextInheritance off
+	      MaskHideContents	      off
 	      System {
 		Name			"3_Phase_RMS1"
 		Location		[-8, 0, 1378, 788]
@@ -5718,12 +5231,11 @@ Model {
 		  Position		  [180, 68, 255, 92]
 		  ZOrder		  249
 		  ShowName		  off
-		  LibraryVersion	  "1.666"
+		  LibraryVersion	  "1.664"
 		  FontName		  "Verdana"
 		  FontSize		  11
 		  SourceBlock		  "powerlib_extras/Measurements/RMS"
 		  SourceType		  "RMS"
-		  ContentPreviewEnabled	  off
 		  f1			  "Source_Frequency(2)"
 		}
 		Block {
@@ -5734,12 +5246,11 @@ Model {
 		  Position		  [180, 108, 255, 132]
 		  ZOrder		  250
 		  ShowName		  off
-		  LibraryVersion	  "1.666"
+		  LibraryVersion	  "1.664"
 		  FontName		  "Verdana"
 		  FontSize		  11
 		  SourceBlock		  "powerlib_extras/Measurements/RMS"
 		  SourceType		  "RMS"
-		  ContentPreviewEnabled	  off
 		  f1			  "Source_Frequency(3)"
 		}
 		Block {
@@ -5750,12 +5261,11 @@ Model {
 		  Position		  [180, 28, 255, 52]
 		  ZOrder		  248
 		  ShowName		  off
-		  LibraryVersion	  "1.666"
+		  LibraryVersion	  "1.664"
 		  FontName		  "Verdana"
 		  FontSize		  11
 		  SourceBlock		  "powerlib_extras/Measurements/RMS"
 		  SourceType		  "RMS"
-		  ContentPreviewEnabled	  off
 		  f1			  "Source_Frequency(1)"
 		}
 		Block {
@@ -5767,56 +5277,48 @@ Model {
 		  IconDisplay		  "Port number"
 		}
 		Line {
-		  ZOrder		  1
 		  SrcBlock		  "Demux5"
 		  SrcPort		  3
 		  DstBlock		  "RMS2"
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  2
 		  SrcBlock		  "Demux5"
 		  SrcPort		  2
 		  DstBlock		  "RMS1"
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  3
 		  SrcBlock		  "Demux5"
 		  SrcPort		  1
 		  DstBlock		  "RMS6"
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  4
 		  SrcBlock		  "Mux2"
 		  SrcPort		  1
 		  DstBlock		  "I_RMS"
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  5
 		  SrcBlock		  "RMS1"
 		  SrcPort		  1
 		  DstBlock		  "Mux2"
 		  DstPort		  2
 		}
 		Line {
-		  ZOrder		  6
 		  SrcBlock		  "RMS6"
 		  SrcPort		  1
 		  DstBlock		  "Mux2"
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  7
 		  SrcBlock		  "I_RST"
 		  SrcPort		  1
 		  DstBlock		  "Demux5"
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  8
 		  SrcBlock		  "RMS2"
 		  SrcPort		  1
 		  DstBlock		  "Mux2"
@@ -5831,7 +5333,13 @@ Model {
 	      Ports		      [1, 1]
 	      Position		      [960, 95, 1080, 135]
 	      ZOrder		      244
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
 	      RequestExecContextInheritance off
+	      MaskHideContents	      off
 	      System {
 		Name			"3_Phase_THD"
 		Location		[-8, 0, 1378, 788]
@@ -5885,10 +5393,9 @@ Model {
 		  Position		  [185, 66, 260, 94]
 		  ZOrder		  241
 		  ShowName		  off
-		  LibraryVersion	  "1.666"
+		  LibraryVersion	  "1.664"
 		  SourceBlock		  "powerlib_extras/Measurements/Total Harmonic\nDistortion"
 		  SourceType		  "Total Harmonic Distortion"
-		  ContentPreviewEnabled	  off
 		  f1			  "Source_Frequency(2)"
 		}
 		Block {
@@ -5899,10 +5406,9 @@ Model {
 		  Position		  [185, 106, 260, 134]
 		  ZOrder		  242
 		  ShowName		  off
-		  LibraryVersion	  "1.666"
+		  LibraryVersion	  "1.664"
 		  SourceBlock		  "powerlib_extras/Measurements/Total Harmonic\nDistortion"
 		  SourceType		  "Total Harmonic Distortion"
-		  ContentPreviewEnabled	  off
 		  f1			  "Source_Frequency(3)"
 		}
 		Block {
@@ -5913,10 +5419,9 @@ Model {
 		  Position		  [185, 26, 260, 54]
 		  ZOrder		  212
 		  ShowName		  off
-		  LibraryVersion	  "1.666"
+		  LibraryVersion	  "1.664"
 		  SourceBlock		  "powerlib_extras/Measurements/Total Harmonic\nDistortion"
 		  SourceType		  "Total Harmonic Distortion"
-		  ContentPreviewEnabled	  off
 		  f1			  "Source_Frequency(1)"
 		}
 		Block {
@@ -5928,56 +5433,48 @@ Model {
 		  IconDisplay		  "Port number"
 		}
 		Line {
-		  ZOrder		  1
 		  SrcBlock		  "THD1"
 		  SrcPort		  1
 		  DstBlock		  "Mux7"
 		  DstPort		  2
 		}
 		Line {
-		  ZOrder		  2
 		  SrcBlock		  "THD2"
 		  SrcPort		  1
 		  DstBlock		  "Mux7"
 		  DstPort		  3
 		}
 		Line {
-		  ZOrder		  3
 		  SrcBlock		  "THD3"
 		  SrcPort		  1
 		  DstBlock		  "Mux7"
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  4
 		  SrcBlock		  "Demux1"
 		  SrcPort		  3
 		  DstBlock		  "THD2"
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  5
 		  SrcBlock		  "Mux7"
 		  SrcPort		  1
 		  DstBlock		  "THD_RST"
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  6
 		  SrcBlock		  "U_RST"
 		  SrcPort		  1
 		  DstBlock		  "Demux1"
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  7
 		  SrcBlock		  "Demux1"
 		  SrcPort		  2
 		  DstBlock		  "THD1"
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  8
 		  SrcBlock		  "Demux1"
 		  SrcPort		  1
 		  DstBlock		  "THD3"
@@ -5986,90 +5483,32 @@ Model {
 	      }
 	    }
 	    Block {
-	      BlockType		      Reference
-	      Name		      "Complex Phase\nDifference"
-	      SID		      "1927"
-	      Ports		      [2, 1]
-	      Position		      [1535, 418, 1615, 462]
-	      ZOrder		      548
-	      LibraryVersion	      "1.271"
-	      SourceBlock	      "commutil2/Complex Phase\nDifference"
-	      SourceType	      "Complex Phase Difference"
-	      ContentPreviewEnabled   off
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "Complex Phase\nDifference1"
-	      SID		      "1929"
-	      Ports		      [2, 1]
-	      Position		      [1535, 498, 1615, 542]
-	      ZOrder		      550
-	      LibraryVersion	      "1.271"
-	      SourceBlock	      "commutil2/Complex Phase\nDifference"
-	      SourceType	      "Complex Phase Difference"
-	      ContentPreviewEnabled   off
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "Complex Phase\nDifference2"
-	      SID		      "1930"
-	      Ports		      [2, 1]
-	      Position		      [1535, 578, 1615, 622]
-	      ZOrder		      551
-	      LibraryVersion	      "1.271"
-	      SourceBlock	      "commutil2/Complex Phase\nDifference"
-	      SourceType	      "Complex Phase Difference"
-	      ContentPreviewEnabled   off
-	    }
-	    Block {
-	      BlockType		      Demux
-	      Name		      "Demux"
-	      SID		      "1928"
-	      Ports		      [1, 3]
-	      Position		      [1415, 398, 1420, 572]
-	      ZOrder		      549
-	      ShowName		      off
-	      Outputs		      "3"
-	      DisplayOption	      "bar"
-	    }
-	    Block {
-	      BlockType		      Mux
-	      Name		      "Mux"
-	      SID		      "1932"
-	      Ports		      [3, 1]
-	      Position		      [1685, 398, 1690, 642]
-	      ZOrder		      553
-	      ShowName		      off
-	      Inputs		      "3"
-	      DisplayOption	      "bar"
-	    }
-	    Block {
 	      BlockType		      ToWorkspace
 	      Name		      "Sources1"
-	      SID		      "1926"
+	      SID		      "1906"
 	      Ports		      [1]
-	      Position		      [1740, 285, 1870, 315]
-	      ZOrder		      547
+	      Position		      [1345, 285, 1475, 315]
+	      ZOrder		      510
 	      ShowName		      off
 	      VariableName	      "V"
 	      MaxDataPoints	      "inf"
+	      SampleTime	      "sample"
 	      SaveFormat	      "Structure With Time"
 	      FixptAsFi		      on
-	      SampleTime	      "sample"
 	    }
 	    Block {
 	      BlockType		      ToWorkspace
 	      Name		      "Sources2"
-	      SID		      "1931"
+	      SID		      "1907"
 	      Ports		      [1]
-	      Position		      [1740, 505, 1870, 535]
-	      ZOrder		      552
+	      Position		      [1345, 210, 1475, 240]
+	      ZOrder		      511
 	      ShowName		      off
-	      VariableName	      "Phase_Diff"
+	      VariableName	      "Vrms"
 	      MaxDataPoints	      "inf"
+	      SampleTime	      "sample"
 	      SaveFormat	      "Structure With Time"
 	      FixptAsFi		      on
-	      SampleTime	      "sample"
 	    }
 	    Block {
 	      BlockType		      ToWorkspace
@@ -6081,8 +5520,8 @@ Model {
 	      ShowName		      off
 	      VariableName	      "Connection_Current_RST"
 	      MaxDataPoints	      "inf"
-	      SaveFormat	      "Timeseries"
 	      SampleTime	      "sample"
+	      SaveFormat	      "Timeseries"
 	    }
 	    Block {
 	      BlockType		      ToWorkspace
@@ -6094,8 +5533,8 @@ Model {
 	      ShowName		      off
 	      VariableName	      "Connection_Currnet_RMS_RST"
 	      MaxDataPoints	      "inf"
-	      SaveFormat	      "Timeseries"
 	      SampleTime	      "sample"
+	      SaveFormat	      "Timeseries"
 	    }
 	    Block {
 	      BlockType		      ToWorkspace
@@ -6107,8 +5546,8 @@ Model {
 	      ShowName		      off
 	      VariableName	      "Connection_Voltage_THD_RST"
 	      MaxDataPoints	      "inf"
-	      SaveFormat	      "Timeseries"
 	      SampleTime	      "sample"
+	      SaveFormat	      "Timeseries"
 	    }
 	    Block {
 	      BlockType		      ToWorkspace
@@ -6120,8 +5559,8 @@ Model {
 	      ShowName		      off
 	      VariableName	      "Connection_Voltage_RMS_RST"
 	      MaxDataPoints	      "inf"
-	      SaveFormat	      "Timeseries"
 	      SampleTime	      "sample"
+	      SaveFormat	      "Timeseries"
 	    }
 	    Block {
 	      BlockType		      ToWorkspace
@@ -6133,8 +5572,8 @@ Model {
 	      ShowName		      off
 	      VariableName	      "Connection_Voltage_RST"
 	      MaxDataPoints	      "inf"
-	      SaveFormat	      "Timeseries"
 	      SampleTime	      "sample"
+	      SaveFormat	      "Timeseries"
 	    }
 	    Block {
 	      BlockType		      ToWorkspace
@@ -6146,77 +5585,56 @@ Model {
 	      ShowName		      off
 	      VariableName	      "Connection_P_Q_RST"
 	      MaxDataPoints	      "inf"
-	      SaveFormat	      "Timeseries"
 	      SampleTime	      "sample"
+	      SaveFormat	      "Timeseries"
 	    }
 	    Line {
-	      ZOrder		      1
 	      SrcBlock		      "I_ABC"
 	      SrcPort		      1
 	      Points		      [30, 0]
 	      Branch {
-		ZOrder			2
 		DstBlock		"3_Phase_RMS1"
 		DstPort			1
 	      }
 	      Branch {
-		ZOrder			3
 		Points			[0, 70]
 		DstBlock		"To Workspace"
 		DstPort			1
 	      }
 	      Branch {
-		ZOrder			4
 		Points			[0, -65]
 		DstBlock		"3_Phase_P_Q"
 		DstPort			2
 	      }
 	    }
 	    Line {
-	      ZOrder		      5
 	      SrcBlock		      "V_ABC"
 	      SrcPort		      1
 	      Points		      [27, 0]
 	      Branch {
-		ZOrder			6
 		DstBlock		"3_Phase_RMS"
 		DstPort			1
 	      }
 	      Branch {
-		ZOrder			7
 		Points			[0, -75]
 		DstBlock		"3_Phase_THD"
 		DstPort			1
 	      }
 	      Branch {
-		ZOrder			8
 		Points			[0, 75; 1, 0]
 		Branch {
-		  ZOrder		  9
-		  Points		  [155, 0]
+		  Points		  [154, 0]
 		  Branch {
-		    ZOrder		    16
-		    Points		    [0, 35; 281, 0]
-		    Branch {
-		    ZOrder		    36
-		    Points		    [0, 185]
-		    DstBlock		    "Demux"
-		    DstPort		    1
-		    }
-		    Branch {
-		    ZOrder		    35
+		    Points		    [0, 35]
 		    DstBlock		    "Sources1"
 		    DstPort		    1
-		    }
 		  }
 		  Branch {
-		    ZOrder		    15
 		    DstBlock		    "To Workspace5"
 		    DstPort		    1
 		  }
 		}
 		Branch {
-		  ZOrder		  10
 		  Points		  [0, 65]
 		  DstBlock		  "3_Phase_P_Q"
 		  DstPort		  1
@@ -6224,115 +5642,35 @@ Model {
 	      }
 	    }
 	    Line {
-	      ZOrder		      11
 	      SrcBlock		      "3_Phase_RMS1"
 	      SrcPort		      1
 	      DstBlock		      "To Workspace1"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      12
 	      SrcBlock		      "3_Phase_RMS"
 	      SrcPort		      1
-	      DstBlock		      "To Workspace4"
-	      DstPort		      1
+	      Points		      [6, 0]
+	      Branch {
+		Points			[0, 35]
+		DstBlock		"Sources2"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"To Workspace4"
+		DstPort			1
+	      }
 	    }
 	    Line {
-	      ZOrder		      13
 	      SrcBlock		      "3_Phase_P_Q"
 	      SrcPort		      1
 	      DstBlock		      "To Workspace6"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      14
 	      SrcBlock		      "3_Phase_THD"
 	      SrcPort		      1
 	      DstBlock		      "To Workspace2"
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      24
-	      SrcBlock		      "Demux"
-	      SrcPort		      1
-	      Points		      [57, 0]
-	      Branch {
-		ZOrder			34
-		Points			[0, 180]
-		DstBlock		"Complex Phase\nDifference2"
-		DstPort			2
-	      }
-	      Branch {
-		ZOrder			33
-		DstBlock		"Complex Phase\nDifference"
-		DstPort			1
-	      }
-	    }
-	    Line {
-	      ZOrder		      25
-	      SrcBlock		      "Demux"
-	      SrcPort		      2
-	      Points		      [82, 0]
-	      Branch {
-		ZOrder			30
-		Points			[0, 25]
-		DstBlock		"Complex Phase\nDifference1"
-		DstPort			1
-	      }
-	      Branch {
-		ZOrder			29
-		Points			[0, -35]
-		DstBlock		"Complex Phase\nDifference"
-		DstPort			2
-	      }
-	    }
-	    Line {
-	      ZOrder		      28
-	      SrcBlock		      "Demux"
-	      SrcPort		      3
-	      Points		      [84, 0]
-	      Branch {
-		ZOrder			32
-		Points			[0, 50]
-		DstBlock		"Complex Phase\nDifference2"
-		DstPort			1
-	      }
-	      Branch {
-		ZOrder			31
-		Points			[0, -10]
-		DstBlock		"Complex Phase\nDifference1"
-		DstPort			2
-	      }
-	    }
-	    Line {
-	      ZOrder		      37
-	      SrcBlock		      "Complex Phase\nDifference"
-	      SrcPort		      1
-	      Points		      [50, 0]
-	      DstBlock		      "Mux"
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      38
-	      SrcBlock		      "Complex Phase\nDifference1"
-	      SrcPort		      1
-	      Points		      [50, 0]
-	      DstBlock		      "Mux"
-	      DstPort		      2
-	    }
-	    Line {
-	      ZOrder		      39
-	      SrcBlock		      "Complex Phase\nDifference2"
-	      SrcPort		      1
-	      Points		      [50, 0]
-	      DstBlock		      "Mux"
-	      DstPort		      3
-	    }
-	    Line {
-	      ZOrder		      40
-	      SrcBlock		      "Mux"
-	      SrcPort		      1
-	      DstBlock		      "Sources2"
 	      DstPort		      1
 	    }
 	  }
@@ -6344,7 +5682,13 @@ Model {
 	  Ports			  [0, 0, 0, 0, 0, 4, 4]
 	  Position		  [160, 69, 200, 191]
 	  ZOrder		  399
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
 	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
 	  System {
 	    Name		    "Wire_resistance_1"
 	    Location		    [35, 6, 1417, 750]
@@ -6368,7 +5712,7 @@ Model {
 	      Position		      [80, 21, 150, 49]
 	      ZOrder		      386
 	      ShowName		      off
-	      LibraryVersion	      "1.2362"
+	      LibraryVersion	      "1.2191"
 	      SourceBlock	      "powerlib/Elements/Series RLC Branch"
 	      SourceType	      "Series RLC Branch"
 	      LConnTagsString	      "__new0"
@@ -6391,7 +5735,7 @@ Model {
 	      Position		      [80, 71, 150, 99]
 	      ZOrder		      395
 	      ShowName		      off
-	      LibraryVersion	      "1.2362"
+	      LibraryVersion	      "1.2191"
 	      SourceBlock	      "powerlib/Elements/Series RLC Branch"
 	      SourceType	      "Series RLC Branch"
 	      LConnTagsString	      "__new0"
@@ -6414,7 +5758,7 @@ Model {
 	      Position		      [80, 121, 150, 149]
 	      ZOrder		      396
 	      ShowName		      off
-	      LibraryVersion	      "1.2362"
+	      LibraryVersion	      "1.2191"
 	      SourceBlock	      "powerlib/Elements/Series RLC Branch"
 	      SourceType	      "Series RLC Branch"
 	      LConnTagsString	      "__new0"
@@ -6437,7 +5781,7 @@ Model {
 	      Position		      [80, 171, 150, 199]
 	      ZOrder		      397
 	      ShowName		      off
-	      LibraryVersion	      "1.2362"
+	      LibraryVersion	      "1.2191"
 	      SourceBlock	      "powerlib/Elements/Series RLC Branch"
 	      SourceType	      "Series RLC Branch"
 	      LConnTagsString	      "__new0"
@@ -6530,7 +5874,6 @@ Model {
 	    }
 	    Line {
 	      LineType		      "Connection"
-	      ZOrder		      1
 	      SrcBlock		      "Series RLC Branch7"
 	      SrcPort		      RConn1
 	      DstBlock		      "n"
@@ -6538,7 +5881,6 @@ Model {
 	    }
 	    Line {
 	      LineType		      "Connection"
-	      ZOrder		      2
 	      SrcBlock		      "Series RLC Branch5"
 	      SrcPort		      LConn1
 	      DstBlock		      "B"
@@ -6546,7 +5888,6 @@ Model {
 	    }
 	    Line {
 	      LineType		      "Connection"
-	      ZOrder		      3
 	      SrcBlock		      "Series RLC Branch6"
 	      SrcPort		      LConn1
 	      DstBlock		      "C"
@@ -6554,7 +5895,6 @@ Model {
 	    }
 	    Line {
 	      LineType		      "Connection"
-	      ZOrder		      4
 	      SrcBlock		      "Series RLC Branch"
 	      SrcPort		      RConn1
 	      DstBlock		      "a"
@@ -6562,7 +5902,6 @@ Model {
 	    }
 	    Line {
 	      LineType		      "Connection"
-	      ZOrder		      5
 	      SrcBlock		      "Series RLC Branch"
 	      SrcPort		      LConn1
 	      DstBlock		      "A"
@@ -6570,7 +5909,6 @@ Model {
 	    }
 	    Line {
 	      LineType		      "Connection"
-	      ZOrder		      6
 	      SrcBlock		      "Series RLC Branch7"
 	      SrcPort		      LConn1
 	      DstBlock		      "N"
@@ -6578,7 +5916,6 @@ Model {
 	    }
 	    Line {
 	      LineType		      "Connection"
-	      ZOrder		      7
 	      SrcBlock		      "Series RLC Branch6"
 	      SrcPort		      RConn1
 	      DstBlock		      "c"
@@ -6586,7 +5923,6 @@ Model {
 	    }
 	    Line {
 	      LineType		      "Connection"
-	      ZOrder		      8
 	      SrcBlock		      "Series RLC Branch5"
 	      SrcPort		      RConn1
 	      DstBlock		      "b"
@@ -6601,7 +5937,13 @@ Model {
 	  Ports			  [0, 0, 0, 0, 0, 4, 4]
 	  Position		  [430, 111, 470, 189]
 	  ZOrder		  398
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
 	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
 	  System {
 	    Name		    "Wire_resistance_2"
 	    Location		    [35, 6, 1417, 750]
@@ -6625,7 +5967,7 @@ Model {
 	      Position		      [80, 21, 150, 49]
 	      ZOrder		      387
 	      ShowName		      off
-	      LibraryVersion	      "1.2362"
+	      LibraryVersion	      "1.2191"
 	      SourceBlock	      "powerlib/Elements/Series RLC Branch"
 	      SourceType	      "Series RLC Branch"
 	      LConnTagsString	      "__new0"
@@ -6648,7 +5990,7 @@ Model {
 	      Position		      [80, 66, 150, 94]
 	      ZOrder		      392
 	      ShowName		      off
-	      LibraryVersion	      "1.2362"
+	      LibraryVersion	      "1.2191"
 	      SourceBlock	      "powerlib/Elements/Series RLC Branch"
 	      SourceType	      "Series RLC Branch"
 	      LConnTagsString	      "__new0"
@@ -6671,7 +6013,7 @@ Model {
 	      Position		      [80, 111, 150, 139]
 	      ZOrder		      393
 	      ShowName		      off
-	      LibraryVersion	      "1.2362"
+	      LibraryVersion	      "1.2191"
 	      SourceBlock	      "powerlib/Elements/Series RLC Branch"
 	      SourceType	      "Series RLC Branch"
 	      LConnTagsString	      "__new0"
@@ -6694,7 +6036,7 @@ Model {
 	      Position		      [80, 156, 150, 184]
 	      ZOrder		      394
 	      ShowName		      off
-	      LibraryVersion	      "1.2362"
+	      LibraryVersion	      "1.2191"
 	      SourceBlock	      "powerlib/Elements/Series RLC Branch"
 	      SourceType	      "Series RLC Branch"
 	      LConnTagsString	      "__new0"
@@ -6787,7 +6129,6 @@ Model {
 	    }
 	    Line {
 	      LineType		      "Connection"
-	      ZOrder		      1
 	      SrcBlock		      "Series RLC Branch2"
 	      SrcPort		      RConn1
 	      DstBlock		      "b"
@@ -6795,7 +6136,6 @@ Model {
 	    }
 	    Line {
 	      LineType		      "Connection"
-	      ZOrder		      2
 	      SrcBlock		      "Series RLC Branch1"
 	      SrcPort		      RConn1
 	      DstBlock		      "a"
@@ -6803,7 +6143,6 @@ Model {
 	    }
 	    Line {
 	      LineType		      "Connection"
-	      ZOrder		      3
 	      SrcBlock		      "Series RLC Branch4"
 	      SrcPort		      RConn1
 	      DstBlock		      "n"
@@ -6811,7 +6150,6 @@ Model {
 	    }
 	    Line {
 	      LineType		      "Connection"
-	      ZOrder		      4
 	      SrcBlock		      "Series RLC Branch2"
 	      SrcPort		      LConn1
 	      DstBlock		      "B"
@@ -6819,7 +6157,6 @@ Model {
 	    }
 	    Line {
 	      LineType		      "Connection"
-	      ZOrder		      5
 	      SrcBlock		      "Series RLC Branch3"
 	      SrcPort		      RConn1
 	      DstBlock		      "c"
@@ -6827,7 +6164,6 @@ Model {
 	    }
 	    Line {
 	      LineType		      "Connection"
-	      ZOrder		      6
 	      SrcBlock		      "Series RLC Branch3"
 	      SrcPort		      LConn1
 	      DstBlock		      "C"
@@ -6835,7 +6171,6 @@ Model {
 	    }
 	    Line {
 	      LineType		      "Connection"
-	      ZOrder		      7
 	      SrcBlock		      "Series RLC Branch1"
 	      SrcPort		      LConn1
 	      DstBlock		      "A"
@@ -6843,7 +6178,6 @@ Model {
 	    }
 	    Line {
 	      LineType		      "Connection"
-	      ZOrder		      8
 	      SrcBlock		      "Series RLC Branch4"
 	      SrcPort		      LConn1
 	      DstBlock		      "N"
@@ -6889,7 +6223,6 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  1
 	  SrcBlock		  "Conncection_Measurements"
 	  SrcPort		  RConn1
 	  DstBlock		  "Wire_resistance_2"
@@ -6897,7 +6230,6 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  2
 	  SrcBlock		  "Conncection_Measurements"
 	  SrcPort		  RConn2
 	  DstBlock		  "Wire_resistance_2"
@@ -6905,7 +6237,6 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  3
 	  SrcBlock		  "Conncection_Measurements"
 	  SrcPort		  RConn3
 	  DstBlock		  "Wire_resistance_2"
@@ -6913,7 +6244,6 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  4
 	  SrcBlock		  "Wire_resistance_1"
 	  SrcPort		  LConn1
 	  DstBlock		  "R"
@@ -6921,7 +6251,6 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  5
 	  SrcBlock		  "Wire_resistance_1"
 	  SrcPort		  LConn2
 	  DstBlock		  "S"
@@ -6929,7 +6258,6 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  6
 	  SrcBlock		  "Wire_resistance_1"
 	  SrcPort		  LConn3
 	  DstBlock		  "T"
@@ -6937,7 +6265,6 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  7
 	  SrcBlock		  "Wire_resistance_1"
 	  SrcPort		  LConn4
 	  DstBlock		  "N"
@@ -6945,7 +6272,6 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  8
 	  SrcBlock		  "Conncection_Measurements"
 	  SrcPort		  LConn1
 	  DstBlock		  "Wire_resistance_1"
@@ -6953,7 +6279,6 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  9
 	  SrcBlock		  "Conncection_Measurements"
 	  SrcPort		  LConn2
 	  DstBlock		  "Wire_resistance_1"
@@ -6961,14 +6286,12 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  10
 	  SrcBlock		  "Conncection_Measurements"
 	  SrcPort		  LConn3
 	  DstBlock		  "Wire_resistance_1"
 	  DstPort		  RConn3
 	}
 	Line {
-	  ZOrder		  11
 	  SrcBlock		  "Conncection_Measurements"
 	  SrcPort		  2
 	  Points		  [58, 0; 0, -20]
@@ -6976,7 +6299,6 @@ Model {
 	  DstPort		  2
 	}
 	Line {
-	  ZOrder		  12
 	  SrcBlock		  "Conncection_Measurements"
 	  SrcPort		  1
 	  Points		  [27, 0; 0, -20]
@@ -6985,7 +6307,6 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  13
 	  SrcBlock		  "Wire_resistance_2"
 	  SrcPort		  RConn1
 	  DstBlock		  "Loads"
@@ -6993,7 +6314,6 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  14
 	  SrcBlock		  "Wire_resistance_2"
 	  SrcPort		  RConn2
 	  DstBlock		  "Loads"
@@ -7001,7 +6321,6 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  15
 	  SrcBlock		  "Wire_resistance_2"
 	  SrcPort		  RConn3
 	  DstBlock		  "Loads"
@@ -7009,7 +6328,6 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  16
 	  SrcBlock		  "Wire_resistance_2"
 	  SrcPort		  RConn4
 	  DstBlock		  "Loads"
@@ -7017,7 +6335,6 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  17
 	  SrcBlock		  "Wire_resistance_1"
 	  SrcPort		  RConn4
 	  DstBlock		  "Conncection_Measurements"
@@ -7025,7 +6342,6 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  18
 	  SrcBlock		  "Wire_resistance_2"
 	  SrcPort		  LConn4
 	  DstBlock		  "Conncection_Measurements"
@@ -7040,10 +6356,16 @@ Model {
       Ports		      [0, 0, 0, 0, 0, 4, 4]
       Position		      [450, 23, 510, 107]
       ZOrder		      324
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
       RequestExecContextInheritance off
+      MaskHideContents	      off
       System {
 	Name			"Network"
-	Location		[35, 6, 1417, 750]
+	Location		[36, 54, 1418, 798]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -7077,9 +6399,9 @@ Model {
 	  ShowName		  off
 	  VariableName		  "Network_Voltage"
 	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
 	  SaveFormat		  "Structure With Time"
 	  FixptAsFi		  on
-	  SampleTime		  "-1"
 	}
 	Block {
 	  BlockType		  Reference
@@ -7088,7 +6410,7 @@ Model {
 	  Ports			  [0, 0, 0, 0, 0, 1, 1]
 	  Position		  [350, 11, 420, 39]
 	  ZOrder		  191
-	  LibraryVersion	  "1.2362"
+	  LibraryVersion	  "1.2191"
 	  SourceBlock		  "powerlib/Elements/Series RLC Branch"
 	  SourceType		  "Series RLC Branch"
 	  LConnTagsString	  "__new0"
@@ -7110,7 +6432,7 @@ Model {
 	  Ports			  [0, 0, 0, 0, 0, 1, 1]
 	  Position		  [350, 156, 420, 184]
 	  ZOrder		  209
-	  LibraryVersion	  "1.2362"
+	  LibraryVersion	  "1.2191"
 	  SourceBlock		  "powerlib/Elements/Series RLC Branch"
 	  SourceType		  "Series RLC Branch"
 	  LConnTagsString	  "__new0"
@@ -7132,7 +6454,7 @@ Model {
 	  Ports			  [0, 0, 0, 0, 0, 1, 1]
 	  Position		  [350, 301, 420, 329]
 	  ZOrder		  210
-	  LibraryVersion	  "1.2362"
+	  LibraryVersion	  "1.2191"
 	  SourceBlock		  "powerlib/Elements/Series RLC Branch"
 	  SourceType		  "Series RLC Branch"
 	  LConnTagsString	  "__new0"
@@ -7158,7 +6480,7 @@ Model {
 	  BlockMirror		  on
 	  NamePlacement		  "alternate"
 	  ShowName		  off
-	  LibraryVersion	  "1.2362"
+	  LibraryVersion	  "1.2191"
 	  SourceBlock		  "powerlib/Elements/Series RLC Branch"
 	  SourceType		  "Series RLC Branch"
 	  LConnTagsString	  "__new0"
@@ -7184,7 +6506,7 @@ Model {
 	  BlockMirror		  on
 	  NamePlacement		  "alternate"
 	  ShowName		  off
-	  LibraryVersion	  "1.2362"
+	  LibraryVersion	  "1.2191"
 	  SourceBlock		  "powerlib/Elements/Series RLC Branch"
 	  SourceType		  "Series RLC Branch"
 	  LConnTagsString	  "__new0"
@@ -7210,7 +6532,7 @@ Model {
 	  BlockMirror		  on
 	  NamePlacement		  "alternate"
 	  ShowName		  off
-	  LibraryVersion	  "1.2362"
+	  LibraryVersion	  "1.2191"
 	  SourceBlock		  "powerlib/Elements/Series RLC Branch"
 	  SourceType		  "Series RLC Branch"
 	  LConnTagsString	  "__new0"
@@ -7232,7 +6554,7 @@ Model {
 	  Ports			  [0, 0, 0, 0, 0, 1, 1]
 	  Position		  [360, 511, 430, 539]
 	  ZOrder		  214
-	  LibraryVersion	  "1.2362"
+	  LibraryVersion	  "1.2191"
 	  SourceBlock		  "powerlib/Elements/Series RLC Branch"
 	  SourceType		  "Series RLC Branch"
 	  LConnTagsString	  "__new0"
@@ -7255,10 +6577,9 @@ Model {
 	  Position		  [715, 378, 740, 402]
 	  ZOrder		  515
 	  ShowName		  off
-	  LibraryVersion	  "1.2362"
+	  LibraryVersion	  "1.2191"
 	  SourceBlock		  "powerlib/Measurements/Voltage Measurement"
 	  SourceType		  "Voltage Measurement"
-	  ContentPreviewEnabled	  off
 	  PhasorSimulation	  off
 	  OutputType		  "Complex"
 	  PSBequivalent		  "0"
@@ -7271,10 +6592,9 @@ Model {
 	  Position		  [715, 413, 740, 437]
 	  ZOrder		  518
 	  ShowName		  off
-	  LibraryVersion	  "1.2362"
+	  LibraryVersion	  "1.2191"
 	  SourceBlock		  "powerlib/Measurements/Voltage Measurement"
 	  SourceType		  "Voltage Measurement"
-	  ContentPreviewEnabled	  off
 	  PhasorSimulation	  off
 	  OutputType		  "Complex"
 	  PSBequivalent		  "0"
@@ -7287,10 +6607,9 @@ Model {
 	  Position		  [715, 448, 740, 472]
 	  ZOrder		  519
 	  ShowName		  off
-	  LibraryVersion	  "1.2362"
+	  LibraryVersion	  "1.2191"
 	  SourceBlock		  "powerlib/Measurements/Voltage Measurement"
 	  SourceType		  "Voltage Measurement"
-	  ContentPreviewEnabled	  off
 	  PhasorSimulation	  off
 	  OutputType		  "Complex"
 	  PSBequivalent		  "0"
@@ -7373,7 +6692,6 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  1
 	  SrcBlock		  "Transf-L  Line -R4"
 	  SrcPort		  LConn1
 	  Points		  [0, -10]
@@ -7401,7 +6719,6 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  6
 	  SrcBlock		  "Transf-L  Line -R2"
 	  SrcPort		  RConn1
 	  Points		  [20, 0]
@@ -7429,7 +6746,6 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  11
 	  SrcBlock		  "Transf-L  Line -R7"
 	  SrcPort		  LConn1
 	  Points		  [0, -25]
@@ -7457,7 +6773,6 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  16
 	  SrcBlock		  "Transf-L  Line -R3"
 	  SrcPort		  LConn1
 	  DstBlock		  "T"
@@ -7465,7 +6780,6 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  17
 	  SrcBlock		  "Transf-L  Line -R2"
 	  SrcPort		  LConn1
 	  DstBlock		  "S"
@@ -7473,35 +6787,30 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  18
 	  SrcBlock		  "R"
 	  SrcPort		  RConn1
 	  DstBlock		  "Transf-L  Line -R1"
 	  DstPort		  LConn1
 	}
 	Line {
-	  ZOrder		  19
 	  SrcBlock		  "Voltage Measurement"
 	  SrcPort		  1
 	  DstBlock		  "Mux"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  20
 	  SrcBlock		  "Voltage Measurement1"
 	  SrcPort		  1
 	  DstBlock		  "Mux"
 	  DstPort		  2
 	}
 	Line {
-	  ZOrder		  21
 	  SrcBlock		  "Voltage Measurement2"
 	  SrcPort		  1
 	  DstBlock		  "Mux"
 	  DstPort		  3
 	}
 	Line {
-	  ZOrder		  22
 	  SrcBlock		  "Mux"
 	  SrcPort		  1
 	  DstBlock		  "Sources1"
@@ -7509,7 +6818,6 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  23
 	  SrcBlock		  "Voltage Measurement"
 	  SrcPort		  LConn2
 	  Points		  [-5, 0; 0, 35]
@@ -7577,7 +6885,6 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  36
 	  SrcBlock		  "Transf-L  Line -R9"
 	  SrcPort		  LConn1
 	  DstBlock		  "N"
@@ -7592,10 +6899,16 @@ Model {
       Ports		      [0, 0, 0, 0, 0, 0, 4]
       Position		      [320, 23, 380, 107]
       ZOrder		      325
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
       RequestExecContextInheritance off
+      MaskHideContents	      off
       System {
 	Name			"Transformator_station"
-	Location		[35, 6, 1417, 750]
+	Location		[36, 54, 1418, 798]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -7647,10 +6960,9 @@ Model {
 	  ZOrder		  8
 	  NamePlacement		  "alternate"
 	  ShowName		  off
-	  LibraryVersion	  "1.2362"
+	  LibraryVersion	  "1.2191"
 	  SourceBlock		  "powerlib/Electrical\nSources/Controlled Voltage Source"
 	  SourceType		  "Controlled Voltage Source"
-	  ContentPreviewEnabled	  off
 	  Initialize		  off
 	  Source_Type		  "AC"
 	  Amplitude		  "0"
@@ -7667,10 +6979,9 @@ Model {
 	  ZOrder		  202
 	  NamePlacement		  "alternate"
 	  ShowName		  off
-	  LibraryVersion	  "1.2362"
+	  LibraryVersion	  "1.2191"
 	  SourceBlock		  "powerlib/Electrical\nSources/Controlled Voltage Source"
 	  SourceType		  "Controlled Voltage Source"
-	  ContentPreviewEnabled	  off
 	  Initialize		  off
 	  Source_Type		  "AC"
 	  Amplitude		  "0"
@@ -7687,10 +6998,9 @@ Model {
 	  ZOrder		  210
 	  NamePlacement		  "alternate"
 	  ShowName		  off
-	  LibraryVersion	  "1.2362"
+	  LibraryVersion	  "1.2191"
 	  SourceBlock		  "powerlib/Electrical\nSources/Controlled Voltage Source"
 	  SourceType		  "Controlled Voltage Source"
-	  ContentPreviewEnabled	  off
 	  Initialize		  off
 	  Source_Type		  "AC"
 	  Amplitude		  "0"
@@ -7731,7 +7041,7 @@ Model {
 	  BlockMirror		  on
 	  ShowName		  off
 	  AttributesFormatString  "node %<NodeNumber>"
-	  LibraryVersion	  "1.2362"
+	  LibraryVersion	  "1.2191"
 	  SourceBlock		  "powerlib/Elements/Neutral"
 	  SourceType		  "Neutral"
 	  LConnTagsString	  "a"
@@ -7747,9 +7057,9 @@ Model {
 	  ShowName		  off
 	  VariableName		  "Sources"
 	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
 	  SaveFormat		  "Structure With Time"
 	  FixptAsFi		  on
-	  SampleTime		  "-1"
 	}
 	Block {
 	  BlockType		  ToWorkspace
@@ -7761,9 +7071,9 @@ Model {
 	  ShowName		  off
 	  VariableName		  "Voltage_Sources"
 	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
 	  SaveFormat		  "Structure With Time"
 	  FixptAsFi		  on
-	  SampleTime		  "-1"
 	}
 	Block {
 	  BlockType		  Reference
@@ -7772,7 +7082,7 @@ Model {
 	  Ports			  [0, 0, 0, 0, 0, 1, 1]
 	  Position		  [695, 236, 765, 264]
 	  ZOrder		  509
-	  LibraryVersion	  "1.2362"
+	  LibraryVersion	  "1.2191"
 	  SourceBlock		  "powerlib/Elements/Series RLC Branch"
 	  SourceType		  "Series RLC Branch"
 	  LConnTagsString	  "__new0"
@@ -7794,7 +7104,7 @@ Model {
 	  Ports			  [0, 0, 0, 0, 0, 1, 1]
 	  Position		  [695, 281, 765, 309]
 	  ZOrder		  511
-	  LibraryVersion	  "1.2362"
+	  LibraryVersion	  "1.2191"
 	  SourceBlock		  "powerlib/Elements/Series RLC Branch"
 	  SourceType		  "Series RLC Branch"
 	  LConnTagsString	  "__new0"
@@ -7816,7 +7126,7 @@ Model {
 	  Ports			  [0, 0, 0, 0, 0, 1, 1]
 	  Position		  [695, 326, 765, 354]
 	  ZOrder		  512
-	  LibraryVersion	  "1.2362"
+	  LibraryVersion	  "1.2191"
 	  SourceBlock		  "powerlib/Elements/Series RLC Branch"
 	  SourceType		  "Series RLC Branch"
 	  LConnTagsString	  "__new0"
@@ -7839,10 +7149,9 @@ Model {
 	  Position		  [860, 438, 885, 462]
 	  ZOrder		  522
 	  ShowName		  off
-	  LibraryVersion	  "1.2362"
+	  LibraryVersion	  "1.2191"
 	  SourceBlock		  "powerlib/Measurements/Voltage Measurement"
 	  SourceType		  "Voltage Measurement"
-	  ContentPreviewEnabled	  off
 	  PhasorSimulation	  off
 	  OutputType		  "Complex"
 	  PSBequivalent		  "0"
@@ -7855,10 +7164,9 @@ Model {
 	  Position		  [860, 473, 885, 497]
 	  ZOrder		  523
 	  ShowName		  off
-	  LibraryVersion	  "1.2362"
+	  LibraryVersion	  "1.2191"
 	  SourceBlock		  "powerlib/Measurements/Voltage Measurement"
 	  SourceType		  "Voltage Measurement"
-	  ContentPreviewEnabled	  off
 	  PhasorSimulation	  off
 	  OutputType		  "Complex"
 	  PSBequivalent		  "0"
@@ -7871,10 +7179,9 @@ Model {
 	  Position		  [860, 508, 885, 532]
 	  ZOrder		  524
 	  ShowName		  off
-	  LibraryVersion	  "1.2362"
+	  LibraryVersion	  "1.2191"
 	  SourceBlock		  "powerlib/Measurements/Voltage Measurement"
 	  SourceType		  "Voltage Measurement"
-	  ContentPreviewEnabled	  off
 	  PhasorSimulation	  off
 	  OutputType		  "Complex"
 	  PSBequivalent		  "0"
@@ -7929,7 +7236,6 @@ Model {
 	  Side			  "Right"
 	}
 	Line {
-	  ZOrder		  1
 	  SrcBlock		  "Mux"
 	  SrcPort		  1
 	  DstBlock		  "Sources"
@@ -7937,7 +7243,6 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  2
 	  SrcBlock		  "N"
 	  SrcPort		  RConn1
 	  Points		  [-122, 0]
@@ -8004,82 +7309,68 @@ Model {
 	  }
 	}
 	Line {
-	  ZOrder		  15
 	  SrcBlock		  " R_USource_sign"
 	  SrcPort		  1
 	  Points		  [71, 0]
 	  Branch {
-	    ZOrder		    16
 	    Points		    [0, 215]
 	    DstBlock		    "Mux"
 	    DstPort		    1
 	  }
 	  Branch {
-	    ZOrder		    17
 	    DstBlock		    "Controlled voltage source"
 	    DstPort		    1
 	  }
 	}
 	Line {
-	  ZOrder		  18
 	  SrcBlock		  " S_USource_sign"
 	  SrcPort		  1
 	  Points		  [9, 0; 0, -10; 36, 0]
 	  Branch {
-	    ZOrder		    19
 	    Points		    [0, 190]
 	    DstBlock		    "Mux"
 	    DstPort		    2
 	  }
 	  Branch {
-	    ZOrder		    20
 	    DstBlock		    "Controlled voltage source1"
 	    DstPort		    1
 	  }
 	}
 	Line {
-	  ZOrder		  21
 	  SrcBlock		  " T_USource_sign"
 	  SrcPort		  1
 	  Points		  [9, 0; 0, -20; 16, 0]
 	  Branch {
-	    ZOrder		    22
 	    Points		    [0, 165]
 	    DstBlock		    "Mux"
 	    DstPort		    3
 	  }
 	  Branch {
-	    ZOrder		    23
 	    DstBlock		    "Controlled voltage source2"
 	    DstPort		    1
 	  }
 	}
 	Line {
-	  ZOrder		  24
 	  SrcBlock		  "t"
 	  SrcPort		  1
 	  Points		  [20, 0]
 	  Branch {
-	    ZOrder		    25
 	    Points		    [0, -55]
 	    DstBlock		    " R_USource_sign"
 	    DstPort		    1
 	  }
 	  Branch {
-	    ZOrder		    26
 	    Points		    [0, 55]
 	    DstBlock		    " T_USource_sign"
 	    DstPort		    1
 	  }
 	  Branch {
-	    ZOrder		    27
 	    DstBlock		    " S_USource_sign"
 	    DstPort		    1
 	  }
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  28
 	  SrcBlock		  "Transf-L  Line -R2"
 	  SrcPort		  LConn1
 	  DstBlock		  "Controlled voltage source1"
@@ -8087,7 +7378,6 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  29
 	  SrcBlock		  "Transf-L  Line -R3"
 	  SrcPort		  LConn1
 	  DstBlock		  "Controlled voltage source2"
@@ -8095,7 +7385,6 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  30
 	  SrcBlock		  "Transf-L  Line -R1"
 	  SrcPort		  LConn1
 	  DstBlock		  "Controlled voltage source"
@@ -8103,7 +7392,6 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  31
 	  SrcBlock		  "R"
 	  SrcPort		  RConn1
 	  Points		  [-46, 0]
@@ -8121,7 +7409,6 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  34
 	  SrcBlock		  "S"
 	  SrcPort		  RConn1
 	  Points		  [-62, 0]
@@ -8139,7 +7426,6 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  37
 	  SrcBlock		  "T"
 	  SrcPort		  RConn1
 	  Points		  [-82, 0]
@@ -8156,28 +7442,24 @@ Model {
 	  }
 	}
 	Line {
-	  ZOrder		  40
 	  SrcBlock		  "Voltage Measurement"
 	  SrcPort		  1
 	  DstBlock		  "Mux1"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  41
 	  SrcBlock		  "Voltage Measurement1"
 	  SrcPort		  1
 	  DstBlock		  "Mux1"
 	  DstPort		  2
 	}
 	Line {
-	  ZOrder		  42
 	  SrcBlock		  "Voltage Measurement2"
 	  SrcPort		  1
 	  DstBlock		  "Mux1"
 	  DstPort		  3
 	}
 	Line {
-	  ZOrder		  43
 	  SrcBlock		  "Mux1"
 	  SrcPort		  1
 	  DstBlock		  "Sources1"
@@ -8192,13 +7474,12 @@ Model {
       Ports		      []
       Position		      [305, 175, 365, 199]
       ZOrder		      1
-      LibraryVersion	      "1.2362"
+      LibraryVersion	      "*1.2191"
       UserDataPersistent      on
       UserData		      "DataTag0"
       FontSize		      11
       SourceBlock	      "powerlib/powergui"
       SourceType	      "PSB option menu block"
-      ContentPreviewEnabled   off
       SimulationMode	      "Continuous"
       SolverType	      "Tustin"
       SampleTime	      "50e-6"
@@ -8210,8 +7491,6 @@ Model {
       SwTol		      "0"
       Interpol		      off
       DisplayEquations	      off
-      Ts		      "0"
-      methode		      off
       frequencyindice	      "0"
       Pbase		      "100e6"
       ErrMax		      "1e-4"
@@ -8242,10 +7521,11 @@ Model {
       frequencyindicesteady   "1"
       RmsSteady		      "1"
       display		      off
+      Ts		      "0"
+      methode		      off
     }
     Line {
       LineType		      "Connection"
-      ZOrder		      1
       SrcBlock		      "Transformator_station"
       SrcPort		      RConn1
       DstBlock		      "Network"
@@ -8253,7 +7533,6 @@ Model {
     }
     Line {
       LineType		      "Connection"
-      ZOrder		      2
       SrcBlock		      "Transformator_station"
       SrcPort		      RConn2
       DstBlock		      "Network"
@@ -8261,7 +7540,6 @@ Model {
     }
     Line {
       LineType		      "Connection"
-      ZOrder		      3
       SrcBlock		      "Transformator_station"
       SrcPort		      RConn3
       DstBlock		      "Network"
@@ -8269,7 +7547,6 @@ Model {
     }
     Line {
       LineType		      "Connection"
-      ZOrder		      4
       SrcBlock		      "Transformator_station"
       SrcPort		      RConn4
       DstBlock		      "Network"
@@ -8277,7 +7554,6 @@ Model {
     }
     Line {
       LineType		      "Connection"
-      ZOrder		      5
       SrcBlock		      "Load"
       SrcPort		      LConn1
       Points		      [-75, 0]
@@ -8295,7 +7571,6 @@ Model {
     }
     Line {
       LineType		      "Connection"
-      ZOrder		      8
       SrcBlock		      "Load"
       SrcPort		      LConn2
       Points		      [-60, 0]
@@ -8313,7 +7588,6 @@ Model {
     }
     Line {
       LineType		      "Connection"
-      ZOrder		      11
       SrcBlock		      "Load"
       SrcPort		      LConn3
       Points		      [-45, 0]
@@ -8331,7 +7605,6 @@ Model {
     }
     Line {
       LineType		      "Connection"
-      ZOrder		      14
       SrcBlock		      "Load"
       SrcPort		      LConn4
       Points		      [-30, 0]

@@ -4,7 +4,7 @@ close all;
 
 %% Simulation initialisation parameters
 CLK=1000;                                           %[sample/s]
-tfin=0.1;                                           %[s]
+tfin=0.2;                                           %[s]
 sample=10e-5;                                       %[s/sample]
 t=0:sample:tfin;                                    %[tick]
 
@@ -85,14 +85,14 @@ Switch_Load_RC=[1,1,1];                             %[Boolean]
                                              randi([0 1],1,tfin/Inductive_Load_Switching_Speed(3))];
          Inductive_Load_Switching_Sequence=Inductive_Load_Switching_Sequence_';
          %%%Capacitive Loads%%%
-         Capacitive_Load_R_RC=[25,    50,   35;...  %[Ohm]
-                               10e-3, 5e-3, 7e-3];  %[F]
-         Capacitive_Load_S_RC=[25,    50,   35;...  %[Ohm]
-                               10e-3, 5e-3, 7e-3];  %[F]
-         Capacitive_Load_T_RC=[25,    50,   35;...  %[Ohm]
-                               10e-3, 5e-3, 7e-3];  %[F]
+         Capacitive_Load_R_RC=[30e-3,  60e-3,  40e-3;...  %[Ohm]
+                               1e-3, 5e-3, 3e-3];  %[F]
+         Capacitive_Load_S_RC=[30e-3,  60e-3,  40e-3;...  %[Ohm]
+                               1e-3, 5e-3, 3e-3];  %[F]
+         Capacitive_Load_T_RC=[30e-3,  60e-3,  40e-3;...  %[Ohm]
+                               1e-3, 5e-3, 3e-3];  %[F]
          %%%Randomised Switching Sequence%%%
-         Capacitive_Load_R_Switching_Speed=[0.02,0.02,0.02];%[s]
+         Capacitive_Load_R_Switching_Speed=[0.01,0.01,0.01];%[s]
          Capacitive_Load_S_Switching_Speed=[0.01,0.01,0.01];%[s]
          Capacitive_Load_T_Switching_Speed=[0.01,0.01,0.01];%[s]                  
          Capacitive_Load_R_Switching_Sequence_=[randi([0 1],1,tfin/Capacitive_Load_R_Switching_Speed(1));...
@@ -104,15 +104,15 @@ Switch_Load_RC=[1,1,1];                             %[Boolean]
          Capacitive_Load_T_Switching_Sequence_=[randi([0 1],1,tfin/Capacitive_Load_T_Switching_Speed(1));...
                                                 randi([0 1],1,tfin/Capacitive_Load_T_Switching_Speed(2));...
                                                 randi([0 1],1,tfin/Capacitive_Load_T_Switching_Speed(3))];        
-%          Capacitive_Load_R_Switching_Sequence_=[1, 1, 0, 0, 0, 0, 0, 0, 0, 0;...
-%                                                 0, 0, 0, 1, 1, 0, 0, 0, 0, 0;...
-%                                                 0, 0, 0, 0, 1, 0, 0, 0, 0, 0];
-%          Capacitive_Load_S_Switching_Sequence_=[1, 1, 0, 0, 0, 0, 0, 0, 0, 0;...
-%                                                 0, 0, 0, 1, 1, 0, 0, 0, 0, 0;...
-%                                                 0, 0, 0, 0, 1, 0, 0, 0, 0, 0];
-%          Capacitive_Load_T_Switching_Sequence_=[1, 1, 0, 0, 0, 0, 0, 0, 0, 0;...
-%                                                 0, 0, 0, 1, 1, 0, 0, 0, 0, 0;...
-%                                                 0, 0, 0, 0, 1, 0, 0, 0, 0, 0];
+%          Capacitive_Load_R_Switching_Sequence_=[0, 1, 1, 1, 1, 1, 1, 1, 1, 1;...
+%                                                 0, 0, 1, 1, 1, 1, 1, 1, 1, 0;...
+%                                                 0, 0, 0, 1, 1, 1, 1, 1, 0, 0];
+%          Capacitive_Load_S_Switching_Sequence_=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0;...
+%                                                 0, 0, 0, 0, 0, 0, 0, 0, 0, 0;...
+%                                                 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+%          Capacitive_Load_T_Switching_Sequence_=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0;...
+%                                                 0, 0, 0, 0, 0, 0, 0, 0, 0, 0;...
+%                                                 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
          Capacitive_Load_R_Switching_Sequence=Capacitive_Load_R_Switching_Sequence_';
          Capacitive_Load_S_Switching_Sequence=Capacitive_Load_S_Switching_Sequence_';
          Capacitive_Load_T_Switching_Sequence=Capacitive_Load_T_Switching_Sequence_';
@@ -123,132 +123,97 @@ Switch_Load_RC=[1,1,1];                             %[Boolean]
         sim('Symmetry');
 
 %% Angle
+        n=size(V.signals.values(:,1),1); 
+        r=0;
+        s=1;
+        s1=2;
+        s2=2;
+        szog1=s1/3;
+        szog2=s2*2/3;
+        for (i=1 : n)
+                r=r+1;
+            if i<n && V.signals.values(i,1)*V.signals.values(i+1,1) <= 0 
+                s=r;
+                r=0;
+            end
+            if i<n && V.signals.values(i,2)*V.signals.values(i+1,2) <= 0 && s1~=s
+                s1=s;
+                szog1=r;
+            end
+            if i<n && V.signals.values(i,3)*V.signals.values(i+1,3) <= 0 && s2~=s
+                s2=s;
+                szog2=r;
+            end
+            szogt(i,1)=180*(szog1/s1)-60;           %fél periódusonként szög számolása
+            szogt(i,2)=180*(szog2/s2); 
+            if szogt(i,1)>360
+                szogt(i,1)=360;
+            end
+            if szogt(i,2)>360
+                szogt(i,2)=360;
+            end
+            szogt(i,3)=360-(szogt(i,2)+szogt(i,1));
+        end
+       figure
+       plot(V.time,szogt(:,1),V.time,szogt(:,2),V.time,szogt(:,3)),grid on
+       title('Phase Angle')
+       xlabel('t')
+       ylabel('Phase Angle Values (RST)')
+%% Voltage Asymmetry Norm
 
-%% 1#
-% function anglet = PhaseAngle(x,y) %give two column vectors with equal sizes
-% if(size(x)~=size(y))
-%     errordlg('Size inequality!')
-% end
-% n = size(x);
-% anglet = zeros(1,size(x));
-% s=[0,1,2];
-% angle=1;
-% for i=1:n
-%     s(1)=s(1)+1;
-%     if (( i<n && y(i)*y(i+1) < 0) && s(1) > 500)
-%         s(1)=s(2);
-%         t=0;
-%     end
-%     if ( i<n && (x(i)*x(i+1) < 0) && (x(i+1)*y(i)>0) && s(3)~=s(2))
-%         s(3)=s(2);
-%         angle=s(1);
-%     end
-%     anglet(i)=180*(angle/s(3));
-% end 
-% p1=PhaseAngle(V.signals.values(:,1),V.signals.values(:,2));
+for (i=1 : n)
+        % kérdés hogy bármely tengelyre illeszthetem-e a referenciát?
+        % Ideal parameters
+        Amplitude_1=[230,230,230];                     %[V]
+        Phase_1=[0,2/3*pi,4/3*pi];                     %[rad]
+%        Frequency_1=[50,50,50];                       %[Hz]
 
-%% 2#
-%         n=size(V.signals.values(:,1),1); 
-%         r=0;
-%         s=1;
-%         s1=2;
-%         szog=1;
-%         for (i=1 : n)
-%                 r=r+1;
-%             if ( i<n && (V.signals.values(i,2)*V.signals.values(i+1,2) < 0) && r > 500)
-%                 s=r;
-%                 t=0;
-%             end
-%             if ( i<n && (V.signals.values(i,1)*V.signals.values(i+1,1) < 0) && (V.signals.values(i+1,1)*V.signals.values(i,2)>0) && s1~=s )
-%                 s1=s;
-%                 szog=r;
-%             end
-%             szogt(i,1)=180*(szog/s1);           %fél periódusonként szög számolása
-%       end
+        % Real parameters
+        Amplitude_2=[Vrms.signals.values(i,1),...
+                     Vrms.signals.values(i,2),...
+                     Vrms.signals.values(i,3)];        %[V]
+        Phase_2=[degtorad(szogt(i,1)),...
+                 degtorad(szogt(i,3)),...
+                 degtorad(szogt(i,3))];                %[rad]
+%        Frequency_2=[50,50,50];                       %[Hz]
 
-%% 3#
-% Fs = 100;
-% A = V.signals.values(:,1);
-% B = V.signals.values(:,2);
-% s = length(A);
-% samplesize=16;
-% DispvsInput=zeros(1,s);
-% Displacement=zeros(samplesize,1);
-% Input=zeros(samplesize,1);
-% n=1;
-% p=1;
-% j=1;
-% for i=2:s
-%     Displacement(j,1)=B(i);
-%     Input(j,1)=A(i);
-% 
-%     if n==samplesize
-% 
-%         NFFT = 2^nextpow2(samplesize); % Next power of 2 
-% 
-%         %% Create Hanning Window and Buffer the Data
-%         window=hann(NFFT);
-% 
-%         Displacement_Buffered=buffer(Displacement,NFFT,10);
-%         Input_Buffered=buffer(Input,NFFT,10);
-% 
-%         Displacement_Buffered=Displacement_Buffered'*diag(window);
-%         Input_Buffered=Input_Buffered'*diag(window);
-% 
-%         %% Calculate the FFT of the Signals now
-%         Displacement_FFT=fft(Displacement_Buffered,NFFT)/samplesize;
-%         Input_FFT=fft(Input_Buffered,NFFT)/samplesize;
-% 
-%         %Calculate the length of the frequency axis to be displayed
-%         f = Fs/2*linspace(0,1,NFFT/2+1);
-% 
-%         %Take the average
-%         Displacement_FFT=mean(Displacement_FFT);
-%         Input_FFT=mean(Input_FFT);
-% 
-%         %Calculate the phase angles
-%         Displacement_Phase=(angle(Displacement_FFT));
-%         Input_Phase=(angle(Input_FFT));
-% 
-%         %Identify the largest component
-%         [Displacement_Max_Value Displacement_Max_Index]=max(abs(Displacement_FFT));
-%         [Input_Max_Value Input_Max_Index]=max(abs(Input_FFT));
-% 
-%         %Get the Phase angles that correspond to the largest harmonic
-%         Z_Displacement=Displacement_Phase(Displacement_Max_Index);
-%         Z_Input=Input_Phase(Input_Max_Index);
-% 
-%         %Calculate the Phase angle differences
-%         Z_Displacement_Input=Z_Displacement-Z_Input;
-% 
-%         %Consolidate them in a matrix
-% 
-%         DispvsInput(i)=Z_Displacement_Input*180/pi;
-% 
-%         p=p+1;
-%         j=1;
-%         n=1;
-% 
-%     
-% %     else
-% %         if DispvsInput(i)==0
-% %           DispvsInput(i,1)=DispvsInput(i-1,1);
-% %         end
-% %         DispvsInput(i,1)=DispvsInput(i-1,1);
-%     end
-%     
-%     %Counter
-%     n=n+1;
-%     j=j+1;
-% end
-% 
-%        figure
-%        plot(DispvsInput)
-%        grid on
-%        title('Angle R-S')
-%        ylabel('Angle R_S (degree)')
+        %Extension of the vectors with the first element to get closed triangles on
+        %plots and for use as polygons
+        Amplitude_1_ex=[Amplitude_1 Amplitude_1(1)];
+        Phase_1_ex=[Phase_1 Phase_1(1)];
+        Amplitude_2_ex=[Amplitude_2 Amplitude_2(1)];
+        Phase_2_ex=[Phase_2 Phase_2(1)];
+        %Transforming to Cartesian coordinates
+        [x_1,y_1] = pol2cart(Phase_1_ex,Amplitude_1_ex);
+        [x_2,y_2] = pol2cart(Phase_2_ex,Amplitude_2_ex);
+
+        %Intersection of the triangles
+        Intersection = poly2poly([x_1;y_1],[x_2;y_2]);
+        x_3 = Intersection(1,:);
+        y_3 = Intersection(2,:);
+        %[x_3,y_3]=poly2ccw(x_3,y_3);
+        %Mukodni latszik, de akkor van gond, ha csak 2 vagy 1? metszespont van a
+        %haromszogek között, ekkor az eredeti haromszögek pontjait kell használni,
+        %bizonys feltételek melett
+
+        % 2 metszéspont: meg kell írni!!!
+        % 1 metszéspont: nem lehet
+        % 0 metszéspont: a nagyobból ki kell vonni a kisebbet
+
+        % Calculate the areas of the polygons
+        A_1(i) = polyarea(x_1,y_1);
+        A_2(i) = polyarea(x_2,y_2);
+        A_intersection(i) = polyarea(x_3,y_3);
+        A_union(i) = A_1(i)+A_2(i)-A_intersection(i);
+
+        Error_Space(i)=A_union(i)-A_intersection(i);
+end
+figure
+plot(Vrms.time,Error_Space), grid on
+title('Vector Triangle Union-Intersectrion')
+xlabel('t')
+ylabel('Geometry Norm')    
        
-
 %% Plotting
 % %%%Transformator Station%%%
 %         figure

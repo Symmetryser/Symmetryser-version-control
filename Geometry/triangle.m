@@ -1,14 +1,14 @@
 %Triangle plot and area calculation from tri-phase current parameters
 
 % Ideal parameters
-Amplitude_1=[10,10,10];                          %[A]
+Amplitude_1=[9,9,9];                          %[A]
 Frequency_1=[50,50,50];                        %[Hz]
 Phase_1=[0,2/3*pi,4/3*pi];                     %[rad]
 
 % Real parameters
-Amplitude_2=[11,10,9];                          %[A]
+Amplitude_2=[5,5,9];                          %[A]
 Frequency_2=[50,50,50];                        %[Hz]
-Phase_2=[0.1*pi,0.6*pi,1.25*pi];                     %[rad]
+Phase_2=[0,2/3*pi,4/3*pi]+0.1;                     %[rad]
 
 %Extension of the vectors with the first element to get closed triangles on
 %plots and for use as polygons
@@ -22,6 +22,8 @@ Phase_2_ex=[Phase_2 Phase_2(1)];
 
 %Intersection of the triangles
 Intersection = poly2poly([x_1;y_1],[x_2;y_2]);
+%Intersection = polyxpoly(x_1,y_1,x_2,y_2);
+Isize=size(Intersection);
 x_3 = Intersection(1,:);
 y_3 = Intersection(2,:);
 %[x_3,y_3]=poly2ccw(x_3,y_3);
@@ -34,12 +36,28 @@ y_3 = Intersection(2,:);
 % 0 metszéspont: a nagyobból ki kell vonni a kisebbet
 
 % Calculate the areas of the polygons
-A_1 = polyarea(x_1,y_1)
-A_2 = polyarea(x_2,y_2)
-A_intersection = polyarea(x_3,y_3)
-A_union = A_1+A_2-A_intersection
 
-Error_Space=A_union-A_intersection
+A1 = polyarea(x_1,y_1)
+A2 = polyarea(x_2,y_2)
+
+if A1==A2
+    Error_Space = 0;
+else if Isize(2)==0
+        Error_Space=abs(A1-A2);
+    else if Isize(2)==2
+            A_intersection = polyarea(Twodotintersect(Phase_1_ex,Amplitude_1_ex,Phase_2_ex,Amplitude_2_ex));
+            A_union = A1+A2-A_intersection;
+            Error_Space = A_union-A_intersection;
+         else
+            A_intersection = polyarea(x_3,y_3);
+            A_union = A1+A2-A_intersection;
+            Error_Space = A_union-A_intersection;
+         end
+    end
+end
+
+
+
 
 %Polar plot
 figure

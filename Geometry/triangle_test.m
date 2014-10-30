@@ -121,7 +121,8 @@ comp = zeros(1,size(x1,2)-1);
             if abs(tianglera)>0.01
             x5 = [x3(1),x3(2),x1(3),x3(1)];
             y5 = [y3(1),y3(2),y1(3),y3(1)];
-            triangle_intersect = polyaera(x5,y5);
+            %triangle_intersect = polyaera(x5,y5);
+            triangle_intersect = abs(tianglera);
             else
                 x5=zeros(1,4);
                 y5=zeros(1,4);
@@ -138,7 +139,8 @@ comp = zeros(1,size(x1,2)-1);
             if abs(tianglera)>0.01
             x5 = [x3(1),x3(2),x2(3),x3(1)];
             y5 = [y3(1),y3(2),y2(3),y3(1)];
-            triangle_intersect = polyaera(x5,y5);
+            %triangle_intersect = polyaera(x5,y5);
+            triangle_intersect = abs(tianglera);
             else
                 x5=zeros(1,4);
                 y5=zeros(1,4);
@@ -155,7 +157,8 @@ comp = zeros(1,size(x1,2)-1);
             if abs(tianglera)>0.01
             x5 = [x3(1),x3(2),x1(1),x3(1)];
             y5 = [y3(1),y3(2),y1(1),y3(1)];
-            triangle_intersect = polyaera(x5,y5);
+            %triangle_intersect = polyaera(x5,y5);
+            triangle_intersect = abs(tianglera);
             else
                 x5=zeros(1,4);
                 y5=zeros(1,4);
@@ -171,7 +174,8 @@ comp = zeros(1,size(x1,2)-1);
             if abs(tianglera)>0.01
             x5 = [x3(1),x3(2),x2(1),x3(1)];
             y5 = [y3(1),y3(2),y2(1),y3(1)];
-            triangle_intersect = polyaera(x5,y5);
+            %triangle_intersect = polyaera(x5,y5);
+            triangle_intersect = abs(tianglera);
              else
                 x5=zeros(1,4);
                 y5=zeros(1,4);
@@ -187,7 +191,9 @@ comp = zeros(1,size(x1,2)-1);
             if abs(tianglera)>0.01
             x5 = [x3(1),x3(2),x1(2),x3(1)];
             y5 = [y3(1),y3(2),y1(2),y3(1)];
-            triangle_intersect = polyaera(x5,y5);
+            %triangle_intersect = polyaera(x5,y5);
+            triangle_intersect = abs(tianglera);
+            
             else
                 x5=zeros(1,4);
                 y5=zeros(1,4);
@@ -203,7 +209,8 @@ comp = zeros(1,size(x1,2)-1);
             if abs(tianglera)>0.01
             x5 = [x3(1),x3(2),x2(2),x3(1)];
             y5 = [y3(1),y3(2),y2(2),y3(1)];
-            triangle_intersect = polyaera(x5,y5);
+            %triangle_intersect = polyaera(x5,y5);
+            triangle_intersect = abs(tianglera);
             else
                 x5=zeros(1,4);
                 y5=zeros(1,4);

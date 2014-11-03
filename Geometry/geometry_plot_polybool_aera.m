@@ -1,21 +1,34 @@
-theta = linspace(0, 2*pi, 100);
-x1 = cos(theta) - 0.5;
-y1 = -sin(theta);    % -sin(theta) to make a clockwise contour
-x2 = x1 + 1;
-y2 = y1;
-
-%[x1,y1] = poly2cw([15;15;14;15],[15;16;16;15]); % triangle
-%[x3,y3] = poly2cw([15;15;14;15]/19,[15;16;16;15]/19); % triangle2
+close all;
 
 %% Ideal parameters
-Amplitude_1=[10,10,10];                          %[A]
-Frequency1=[50,50,50];                        %[Hz]
+Amplitude_1=[230,230,230];                          %[A]
 Phase_1=[0,2/3*pi,4/3*pi];                     %[rad]
 
+
 %% Real parameters
-Amplitude_2=[15,44,5];                          %[A]
-Frequency2=[50,50,50];                        %[Hz]
-Phase_2=[0,2/3*pi,4/3*pi]+2*pi;                     %[rad]
+
+prompt = {'Enter the measurement time'};
+        dlg_title = 'Inspect Geometry';
+        num_lines = 1;
+        defAns = {'1'};
+        options = 'off';
+        answer = inputdlg(prompt,dlg_title,num_lines,defAns,options);
+        if str2num(answer{1})>max(Vrms.time)
+                errordlg('Time out of time range')
+        end
+
+i=str2num(answer{1})/sample;
+
+% Amplitude_2=[Vrms.signals.values(i,1),...
+%              Vrms.signals.values(i,2),...
+%              Vrms.signals.values(i,3)];                           %[A]
+% Phase_2=[degtorad(szogt(i,1)),...
+%          degtorad(szogt(i,3)),...
+%          degtorad(szogt(i,3))];        %[rad]
+
+Amplitude_2=[Vrms.signals.values(i,:)];
+Phase_2=[degtorad(szogt(i,:))];
+             
 
 %% Extension of the vectors with the first element to get closed triangles on
 %plots and for use as polygons
@@ -26,6 +39,13 @@ Phase_2_ex=[Phase_2 Phase_2(1)];
 %Transforming to Cartesian coordinates
 [x1,y1] = pol2cart(Phase_1_ex,Amplitude_1_ex);
 [x2,y2] = pol2cart(Phase_2_ex,Amplitude_2_ex);
+
+figure
+polar(Phase_1_ex,Amplitude_1_ex,'-*')
+hold on
+polar(Phase_2_ex,Amplitude_2_ex,'r-*')
+axis tight
+legend('Ideal','Real','Intersection')
 
 
 [xa, ya] = polybool('union', x1, y1, x2, y2);

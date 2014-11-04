@@ -15,8 +15,9 @@ ErrorSpace=zeros(1,n);
  A0x    = zeros(3,n)';
  
 % By geometry
+
 for i=1 : n
-        
+   tStart1=tic;     
         % Ideal parameters
         Amplitude_1=[230,230,230];                     %[V]
         Phase_1=[0,2/3*pi,4/3*pi];                     %[rad]
@@ -38,10 +39,15 @@ for i=1 : n
         [xa, ya] = polybool('union', x1, y1, x2, y2);
         [xb, yb] = polybool('intersection', x1, y1, x2, y2);
         ErrorSpace(i)=polyarea(xa,ya)-polyarea(xb,yb);
-      
+        
+        
+     tElapsed_Geom(i)=toc(tStart1); 
 end
+
 % By regulation
+
 for s=1 : n
+   tStart2=tic;
    
     V_real(s,1)=exp(1i*szogt(s,1));
     V_real(s,2)=exp(1i*szogt(s,2));
@@ -56,44 +62,66 @@ for s=1 : n
     
     Ax(s,1)=abs(V_012(s,3))/abs(V_012(s,2));
     A0x(s,1)=V_012(s,1)/V_012(s,2);
+    
+                
+    tElapsed_Regul(s)=toc(tStart2);
 end
 
+
+
 for p=1 : n
+   tStart3=tic;
    
     R_error=230*exp(1j*0)  -Vrms.signals.values*exp(1i*szogt(p,1));
     S_error=230*exp(1j*120)-Vrms.signals.values*exp(1i*szogt(p,2));
     T_error=230*exp(1j*240)-Vrms.signals.values*exp(1i*szogt(p,3));
    
     N(p)=R_error(p)*S_error(p)+R_error(p)*T_error(p)+S_error(p)*T_error(p);
+    absN=abs(N);
     
+    tElapsed_Vect(p)=toc(tStart3);
 end
+
 
 figure
 plot(Vrms.time,ErrorSpace), grid on
 
 figure
-        subplot(3,1,1)
+        subplot(4,1,1)
         %Connection Voltage RMS
         plot(Vrms.time,Ax),grid on
         title('Regulated asymmetry norm')
         xlabel('t')
         ylabel('A_x')
-        subplot(3,1,2)
+        subplot(4,1,2)
         %Connection Current RMS
         plot(Vrms.time,A0x(:,1)),grid on
         title('Regulated zero asymmetry norm')
         xlabel('t')
         ylabel('A_{0x}')
-        subplot(3,1,2)
+        subplot(4,1,3)
         %Connection Current RMS
-        plot(Vrms.time,ErrorSpace),grid on
+        plot(Vrms.time,ErrorSpace), grid on
         title('Geometry asymmetry norm')
         xlabel('t')
         ylabel('Error aera')
+        subplot(4,1,4)
+        %Connection Current RMS
+        plot(Vrms.time,absN),grid on
+        title('Vector subtraction asymmetry norm')
+        xlabel('t')
+        ylabel('N')
 
 figure
-plot(Vrms.time,ErrorSpace*1e-3,Vrms.time,Ax*5,Vrms.time,abs(N)*1e-5), grid on
+plot(Vrms.time,ErrorSpace*1e-4,Vrms.time,Ax,Vrms.time,absN*1e-6), grid on
 xlabel('t')
-legend('Geometry*1e-3','A_x*5','N')
+legend('Geometry*1e-3','A_x*5','N*1e-5')
+
+figure
+plot(Vrms.time,tElapsed_Geom,Vrms.time,tElapsed_Regul,Vrms.time,tElapsed_Vect), grid on
+title('Runtime')
+xlabel('t(s)')
+ylabel('runtime(s)')
+legend('Geometry','Regulated','Vectorial')
 
 

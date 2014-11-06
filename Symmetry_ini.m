@@ -4,7 +4,7 @@ close all;
 
 %% Simulation initialisation parameters
 CLK=1000;                                           %[sample/s]
-tfin=0.5;                                           %[s]
+tfin=1.5;                                           %[s]
 sample=10e-5;                                       %[s/sample]
 t=0:sample:tfin;                                    %[tick]
 
@@ -271,3 +271,39 @@ Switch_Load_RC=[1,1,1];                             %[Boolean]
         title('Connection Current')
         xlabel('t')
         ylabel('Connection Current Values (RST)')
+        
+%%Save variables
+    VR=V.signals.values(:,1);
+    VS=V.signals.values(:,2);
+    VT=V.signals.values(:,3);
+    
+    VrmsR=Vrms.signals.values(:,1);
+    VrmsS=Vrms.signals.values(:,2);
+    VrmsT=Vrms.signals.values(:,3);
+   
+    angleR=szogt(:,1);
+    angleS=szogt(:,2);
+    angleT=szogt(:,3);
+    
+    CCR=Control_Current_Values.signals.values(:,1);
+    CCS=Control_Current_Values.signals.values(:,2);
+    CCT=Control_Current_Values.signals.values(:,3);
+    
+    
+    save('Measurements/VoltageR.dat','VR','-ascii');
+    save('Measurements/VoltageS.dat','VS','-ascii');
+    save('Measurements/VoltageT.dat','VT','-ascii');
+    
+    save('Measurements/VrmsR.dat','VrmsR','-ascii');
+    save('Measurements/VrmsS.dat','VrmsS','-ascii');
+    save('Measurements/VrmsT.dat','VrmsT','-ascii');
+    
+    save('Measurements/angleR.dat','angleR','-ascii');
+    save('Measurements/angleS.dat','angleS','-ascii');
+    save('Measurements/angleT.dat','angleT','-ascii');
+    
+    save('Measurements/ConnectionCurrentR.dat','CCR','-ascii');
+    save('Measurements/ConnectionCurrentS.dat','CCS','-ascii');
+    save('Measurements/ConnectionCurrentT.dat','CCT','-ascii');
+    
+    save('Measurements/time.dat','t','-ascii');

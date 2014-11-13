@@ -272,6 +272,7 @@ Switch_Load_RC=[1,1,1];                             %[Boolean]
         xlabel('t')
         ylabel('Connection Current Values (RST)')
         
+<<<<<<< HEAD
 %%Save variables
     VR=[t,V.signals.values(:,1)];
     VS=[t,V.signals.values(:,2)];
@@ -288,6 +289,42 @@ Switch_Load_RC=[1,1,1];                             %[Boolean]
     CCR=[t,Control_Current_Values.signals.values(:,1)];
     CCS=[t,Control_Current_Values.signals.values(:,2)];
     CCT=[t,Control_Current_Values.signals.values(:,3)];
+=======
+%%Save variables form 0.5s to 0.6s (kÈsıbb dialÛgus ablakot bele!)
+    
+  prompt = {'Enter the START time of data log','Enter the END time of data log'};
+        dlg_title = 'Logging parameters';
+        num_lines = 1;
+        defAns = {'0.5','0.6'};
+        options = 'off';
+        answer = inputdlg(prompt,dlg_title,num_lines,defAns,options);
+        % Error handling
+        if str2num(answer{2})>max(Vrms.time) 
+                errordlg('Time out of time range!')
+        end
+        if str2num(answer{1})>=str2num(answer{2})
+                errordlg('No valid range of data!')
+        end
+        
+        logstart = str2num(answer{1})/sample;
+        logend =  str2num(answer{2})/sample;
+
+    VR=[t(logstart:logend),V.signals.values((logstart:logend),1)];
+    VS=[t(logstart:logend),V.signals.values((logstart:logend),2)];
+    VT=[t(logstart:logend),V.signals.values((logstart:logend),3)];
+    
+    VrmsR=[t(logstart:logend),Vrms.signals.values((logstart:logend),1)];
+    VrmsS=[t(logstart:logend),Vrms.signals.values((logstart:logend),2)];
+    VrmsT=[t(logstart:logend),Vrms.signals.values((logstart:logend),3)];
+   
+    angleR=[t(logstart:logend),szogt((logstart:logend),1)];
+    angleS=[t(logstart:logend),szogt((logstart:logend),2)];
+    angleT=[t(logstart:logend),szogt((logstart:logend),3)];
+    
+    CCR=[t(logstart:logend),Control_Current_Values.signals.values((logstart:logend),1)];
+    CCS=[t(logstart:logend),Control_Current_Values.signals.values((logstart:logend),2)];
+    CCT=[t(logstart:logend),Control_Current_Values.signals.values((logstart:logend),3)];
+>>>>>>> origin/√Åramalak-norma
     
     
     save('Measurements/VoltageR.dat','VR','-ascii');
@@ -305,4 +342,8 @@ Switch_Load_RC=[1,1,1];                             %[Boolean]
     save('Measurements/ConnectionCurrentR.dat','CCR','-ascii');
     save('Measurements/ConnectionCurrentS.dat','CCS','-ascii');
     save('Measurements/ConnectionCurrentT.dat','CCT','-ascii');
+<<<<<<< HEAD
     
+=======
+    
+>>>>>>> origin/√Åramalak-norma

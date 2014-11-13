@@ -113,9 +113,9 @@ figure
         ylabel('N')
 
 figure
-plot(Vrms.time,ErrorSpace*1e-4,Vrms.time,Ax,Vrms.time,absN*1e-6), grid on
+plot(Vrms.time,ErrorSpace*1e-2,Vrms.time,Ax*100,Vrms.time,absN*1e-4), grid on
 xlabel('t')
-legend('Geometry*1e-3','A_x*5','N*1e-5')
+legend('Geometry*1e-2','A_x*100','N*1e-4')
 
 figure
 plot(Vrms.time,tElapsed_Geom,Vrms.time,tElapsed_Regul,Vrms.time,tElapsed_Vect), grid on

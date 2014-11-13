@@ -273,21 +273,21 @@ Switch_Load_RC=[1,1,1];                             %[Boolean]
         ylabel('Connection Current Values (RST)')
         
 %%Save variables
-    VR=V.signals.values(:,1);
-    VS=V.signals.values(:,2);
-    VT=V.signals.values(:,3);
+    VR=[t,V.signals.values(:,1)];
+    VS=[t,V.signals.values(:,2)];
+    VT=[t,V.signals.values(:,3)];
     
-    VrmsR=Vrms.signals.values(:,1);
-    VrmsS=Vrms.signals.values(:,2);
-    VrmsT=Vrms.signals.values(:,3);
+    VrmsR=[t,Vrms.signals.values(:,1)];
+    VrmsS=[t,Vrms.signals.values(:,2)];
+    VrmsT=[t,Vrms.signals.values(:,3)];
    
-    angleR=szogt(:,1);
-    angleS=szogt(:,2);
-    angleT=szogt(:,3);
+    angleR=[t,szogt(:,1)];
+    angleS=[t,szogt(:,2)];
+    angleT=[t,szogt(:,3)];
     
-    CCR=Control_Current_Values.signals.values(:,1);
-    CCS=Control_Current_Values.signals.values(:,2);
-    CCT=Control_Current_Values.signals.values(:,3);
+    CCR=[t,Control_Current_Values.signals.values(:,1)];
+    CCS=[t,Control_Current_Values.signals.values(:,2)];
+    CCT=[t,Control_Current_Values.signals.values(:,3)];
     
     
     save('Measurements/VoltageR.dat','VR','-ascii');
@@ -306,4 +306,3 @@ Switch_Load_RC=[1,1,1];                             %[Boolean]
     save('Measurements/ConnectionCurrentS.dat','CCS','-ascii');
     save('Measurements/ConnectionCurrentT.dat','CCT','-ascii');
     
-    save('Measurements/time.dat','t','-ascii');

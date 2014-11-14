@@ -49,18 +49,23 @@ end
 for s=1 : n
    tStart2=tic;
    
-    V_real(s,1)=exp(1i*szogt(s,1));
-    V_real(s,2)=exp(1i*szogt(s,2));
-    V_real(s,3)=exp(1i*szogt(s,3));
+%     V_real(s,1)=exp(1i*szogt(s,1));
+%     V_real(s,2)=exp(1i*szogt(s,2));
+%     V_real(s,3)=exp(1i*szogt(s,3));
     
 
-      V_real(s,1)=V_real(s,1).*Vrms_c(s,1);
-      V_real(s,2)=V_real(s,2).*Vrms_c(s,2);
-      V_real(s,3)=V_real(s,3).*Vrms_c(s,3);
+%       V_real(s,1)=V_real(s,1).*Vrms_c(s,1);
+%       V_real(s,2)=V_real(s,2).*Vrms_c(s,2);
+%       V_real(s,3)=V_real(s,3).*Vrms_c(s,3);
+
+
+     V_real(s,1)=Vrms_c(s,1).*exp(1i*szogt(s,1));
+     V_real(s,2)=Vrms_c(s,2).*exp(1i*szogt(s,2));
+     V_real(s,3)=Vrms_c(s,3).*exp(1i*szogt(s,3));
 
     V_012(s,:)=A*V_real(s,:)';
     
-    Ax(s,1)=abs(V_012(s,3))/abs(V_012(s,2));
+    Ax(s,1)=100*abs(V_012(s,3))/abs(V_012(s,2));
     A0x(s,1)=V_012(s,1)/V_012(s,2);
     
                 
@@ -113,9 +118,9 @@ figure
         ylabel('N')
 
 figure
-plot(Vrms.time,ErrorSpace*1e-2,Vrms.time,Ax*100,Vrms.time,absN*1e-4), grid on
+plot(Vrms.time,ErrorSpace*1e-2,Vrms.time,Ax,Vrms.time,absN*1e-4), grid on
 xlabel('t')
-legend('Geometry*1e-2','A_x*100','N*1e-4')
+legend('Geometry*1e-2','A_x','N*1e-4')
 
 figure
 plot(Vrms.time,tElapsed_Geom,Vrms.time,tElapsed_Regul,Vrms.time,tElapsed_Vect), grid on

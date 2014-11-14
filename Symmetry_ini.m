@@ -103,7 +103,8 @@ Switch_Load_RC=[1,1,1];                             %[Boolean]
                                                 randi([0 1],1,tfin/Capacitive_Load_S_Switching_Speed(3))];
          Capacitive_Load_T_Switching_Sequence_=[randi([0 1],1,tfin/Capacitive_Load_T_Switching_Speed(1));...
                                                 randi([0 1],1,tfin/Capacitive_Load_T_Switching_Speed(2));...
-                                                randi([0 1],1,tfin/Capacitive_Load_T_Switching_Speed(3))];        
+                                                randi([0 1],1,tfin/Capacitive_Load_T_Switching_Speed(3))]; 
+                                     
 %          Capacitive_Load_R_Switching_Sequence_=[0, 1, 1, 1, 1, 1, 1, 1, 1, 1;...
 %                                                 0, 0, 1, 1, 1, 1, 1, 1, 1, 0;...
 %                                                 0, 0, 0, 1, 1, 1, 1, 1, 0, 0];
@@ -116,6 +117,18 @@ Switch_Load_RC=[1,1,1];                             %[Boolean]
          Capacitive_Load_R_Switching_Sequence=Capacitive_Load_R_Switching_Sequence_';
          Capacitive_Load_S_Switching_Sequence=Capacitive_Load_S_Switching_Sequence_';
          Capacitive_Load_T_Switching_Sequence=Capacitive_Load_T_Switching_Sequence_';
+         
+         UsedCapacitanceR=(Capacitive_Load_R_Switching_Sequence(:,1)*Capacitive_Load_R_RC(2,1))+...
+                          (Capacitive_Load_R_Switching_Sequence(:,2)*Capacitive_Load_R_RC(2,2))+...
+                          (Capacitive_Load_R_Switching_Sequence(:,3)*Capacitive_Load_R_RC(2,3));
+         UsedCapacitanceS=(Capacitive_Load_S_Switching_Sequence(:,1)*Capacitive_Load_S_RC(2,1))+...
+                          (Capacitive_Load_S_Switching_Sequence(:,2)*Capacitive_Load_S_RC(2,2))+...
+                          (Capacitive_Load_S_Switching_Sequence(:,3)*Capacitive_Load_S_RC(2,3));
+         UsedCapacitanceT=(Capacitive_Load_T_Switching_Sequence(:,1)*Capacitive_Load_T_RC(2,1))+...
+                          (Capacitive_Load_T_Switching_Sequence(:,2)*Capacitive_Load_T_RC(2,2))+...
+                          (Capacitive_Load_T_Switching_Sequence(:,3)*Capacitive_Load_T_RC(2,3));
+                          
+                      
 
 %% Simulation
         paramNameValStruct.AbsTol         = '1e-9';
@@ -160,38 +173,19 @@ Switch_Load_RC=[1,1,1];                             %[Boolean]
        xlabel('t')
        ylabel('Phase Angle Values (RST)')   
 %% Plotting
-% %%%Transformator Station%%%
-%         figure
-%         %Voltage Source Signals
-%         plot(Sources.time,Sources.signals.values(:,1),...
-%             Sources.time,Sources.signals.values(:,2),...
-%             Sources.time,Sources.signals.values(:,3))
-%         grid on
-%         title('Source Voltage Signals')
-%         xlabel('t')
-%         ylabel('Source Volage Signals Values (RST)')
-% 
-%         figure
-%         %Voltage Source 
-%         plot(Voltage_Sources.time,Voltage_Sources.signals.values(:,1),...
-%             Voltage_Sources.time,Voltage_Sources.signals.values(:,2),...
-%             Voltage_Sources.time,Voltage_Sources.signals.values(:,3))
-%         grid on
-%         title('Source Voltage')
-%         xlabel('t')
-%         ylabel('Source Volage Values (RSTN)')
-% 
-% %%%Network Voltage%%%
-%         figure
-%         %Network Voltage 
-%         plot(Network_Voltage.time,Network_Voltage.signals.values(:,1),...
-%             Network_Voltage.time,Network_Voltage.signals.values(:,2),...
-%             Network_Voltage.time,Network_Voltage.signals.values(:,3))
-%         grid on
-%         title('Network Voltage')
-%         xlabel('t')
-%         ylabel('Network Volage Values (RST)')
-% %%%Control Current%%%
+
+
+r=tfin/Capacitive_Load_R_Switching_Speed(1);
+t_axis_switch=zeros(1,r);
+for i=2:r
+    t_axis_switch(i)=t_axis_switch(i-1)+Capacitive_Load_R_Switching_Speed(1);
+    
+end
+t_axis_switch=t_axis_switch';
+
+%legend('Phase R','Phase S','Phase T')
+
+%% Control Current%%%
         figure
         %Control Current Values
         plot(Control_Current_Values.time,Control_Current_Values.signals.values(:,1),...
@@ -201,45 +195,15 @@ Switch_Load_RC=[1,1,1];                             %[Boolean]
         title('Control Current')
         xlabel('t')
         ylabel('Control Current Values (RST)')
-        
-%         figure
-%         plot(Phase_Diff.time,Phase_Diff.signals.values(:,1),...
-%              Phase_Diff.time,Phase_Diff.signals.values(:,2),...
-%              Phase_Diff.time,Phase_Diff.signals.values(:,3));
-%          grid on
-%         title('Phase_Shift')
-%         xlabel('t')
-%         ylabel('Phase_Shift (rad)')
-%         
-%%%THD%%%
-%         figure
-%         %Connection Voltage THD
-%         plot(Connection_Voltage_THD_RST.time,Connection_Voltage_THD_RST.signals.values(:,1),...
-%             Connection_Voltage_THD_RST.time,Connection_Voltage_THD_RST.signals.values(:,2),...
-%             Connection_Voltage_THD_RST.time,Connection_Voltage_THD_RST.signals.values(:,3))
-%         grid on
-%         title('Connection Voltage THD')
-%         xlabel('t')
-%         ylabel('Connection Voltage THD Values (RST)')
-%         
-%%%FFT%%%
-%         %Connection Voltage FFT
-%         plot(Connection_Voltage_FFT_RST.time,Connection_Voltage_FFT_RST.signals.values(:,1),...
-%             Connection_Voltage_FFT_RST.time,Connection_Voltage_FFT_RST.signals.values(:,2),...
-%             Connection_Voltage_FFT_RST.time,Connection_Voltage_FFT_RST.signals.values(:,3))
-%         grid on
-%         title('Connection Voltage FFT')
-%         xlabel('t')
-%         ylabel('Connection Voltage FFT Values (RST)')
-        
-%%%Load Power Measurement%%%
+                
+%% Load Power Measurement%%%
         figure
         plot(Connection_P_Q_RST)
         grid on
         title('Connection_P_Q')
         xlabel('t')
         ylabel('Connection_P_Q Values (RST)')
-%%%RMS%%%
+%% RMS%%%
         figure
         subplot(2,1,1)
         %Connection Voltage RMS
@@ -257,23 +221,31 @@ Switch_Load_RC=[1,1,1];                             %[Boolean]
         ylabel('Connection Current RMS Values (RST)')
         
         figure
-        subplot(2,1,1)
-%%%Connection%%%
+        subplot(3,1,1)
+%% Connection%%%
         plot(Connection_Voltage_RST)
         grid on
         title('Connection Voltage')
         xlabel('t')
         ylabel('Connection Voltage Values (RST)')
-        subplot(2,1,2)
-        %Connection Current RMS
+        subplot(3,1,2)
+%% Connection Current RMS
         plot(Connection_Current_RST)
         grid on
         title('Connection Current')
         xlabel('t')
         ylabel('Connection Current Values (RST)')
+%% Voltage line-to-line%%%
+        subplot(3,1,3)
+        plot(V_line.time,V_line.signals.values(:,1),...
+            V_line.time,V_line.signals.values(:,2),...
+            V_line.time,V_line.signals.values(:,3))
+        grid on
+        title('Voltage line-to-line')
+        xlabel('t')
+        ylabel('Voltage line-to-line')
         
-<<<<<<< HEAD
-%%Save variables
+%% Save variables
     VR=[t,V.signals.values(:,1)];
     VS=[t,V.signals.values(:,2)];
     VT=[t,V.signals.values(:,3)];
@@ -289,13 +261,13 @@ Switch_Load_RC=[1,1,1];                             %[Boolean]
     CCR=[t,Control_Current_Values.signals.values(:,1)];
     CCS=[t,Control_Current_Values.signals.values(:,2)];
     CCT=[t,Control_Current_Values.signals.values(:,3)];
-=======
-%%Save variables form 0.5s to 0.6s (kÈsıbb dialÛgus ablakot bele!)
+
+%% Save variables form 0.5s to 0.6s (kÈsıbb dialÛgus ablakot bele!)
     
   prompt = {'Enter the START time of data log','Enter the END time of data log'};
         dlg_title = 'Logging parameters';
         num_lines = 1;
-        defAns = {'0.5','0.6'};
+        defAns = {'0.8','1'};
         options = 'off';
         answer = inputdlg(prompt,dlg_title,num_lines,defAns,options);
         % Error handling
@@ -308,6 +280,8 @@ Switch_Load_RC=[1,1,1];                             %[Boolean]
         
         logstart = str2num(answer{1})/sample;
         logend =  str2num(answer{2})/sample;
+        logstart_switch = round((str2num(answer{1})/sample)*Capacitive_Load_R_Switching_Speed(1));
+        logend_switch =  round((str2num(answer{2})/sample)*Capacitive_Load_R_Switching_Speed(1));
 
     VR=[t(logstart:logend),V.signals.values((logstart:logend),1)];
     VS=[t(logstart:logend),V.signals.values((logstart:logend),2)];
@@ -324,8 +298,10 @@ Switch_Load_RC=[1,1,1];                             %[Boolean]
     CCR=[t(logstart:logend),Control_Current_Values.signals.values((logstart:logend),1)];
     CCS=[t(logstart:logend),Control_Current_Values.signals.values((logstart:logend),2)];
     CCT=[t(logstart:logend),Control_Current_Values.signals.values((logstart:logend),3)];
->>>>>>> origin/√Åramalak-norma
     
+    CapacityAmountR=[t_axis_switch(logstart_switch:logend_switch),UsedCapacitanceR(logstart_switch:logend_switch)];
+    CapacityAmountS=[t_axis_switch(logstart_switch:logend_switch),UsedCapacitanceS(logstart_switch:logend_switch)];
+    CapacityAmountT=[t_axis_switch(logstart_switch:logend_switch),UsedCapacitanceT(logstart_switch:logend_switch)];
     
     save('Measurements/VoltageR.dat','VR','-ascii');
     save('Measurements/VoltageS.dat','VS','-ascii');
@@ -342,8 +318,7 @@ Switch_Load_RC=[1,1,1];                             %[Boolean]
     save('Measurements/ConnectionCurrentR.dat','CCR','-ascii');
     save('Measurements/ConnectionCurrentS.dat','CCS','-ascii');
     save('Measurements/ConnectionCurrentT.dat','CCT','-ascii');
-<<<<<<< HEAD
     
-=======
-    
->>>>>>> origin/√Åramalak-norma
+    save('Measurements/CapacityAmountR.dat','CapacityAmountR','-ascii');
+    save('Measurements/CapacityAmountS.dat','CapacityAmountS','-ascii');
+    save('Measurements/CapacityAmountT.dat','CapacityAmountT','-ascii');

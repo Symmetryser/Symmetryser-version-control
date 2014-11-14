@@ -11,8 +11,13 @@ ErrorSpace=zeros(1,n);
  N = zeros(1,n)';
  V_real = zeros(3,n)';
  V_012  = zeros(3,n)';
+ Ax_    = zeros(1,n)';
  Ax     = zeros(1,n)';
  A0x    = zeros(3,n)';
+ alpha  = zeros(1,n)';
+ beta   = zeros(1,n)';
+ U1     = zeros(1,n)';
+ U2     = zeros(1,n)';
  
 % By geometry
 
@@ -48,22 +53,35 @@ end
 
 for s=1 : n
    tStart2=tic;
-   
-    V_real(s,1)=exp(1i*szogt(s,1));
-    V_real(s,2)=exp(1i*szogt(s,2));
-    V_real(s,3)=exp(1i*szogt(s,3));
-    
+%       V_real(s,1)=Vrms_c(s,1).*exp(1i*szogt(s,1));
+%       V_real(s,2)=Vrms_c(s,2).*exp(1i*szogt(s,2));
+%       V_real(s,3)=Vrms_c(s,3).*exp(1i*szogt(s,3)); 
+%     V_012(s,:)=A*V_real(s,:)';
+%     Ax(s,1)=abs(V_012(s,3))/abs(V_012(s,2));
+%     A0x(s,1)=V_012(s,1)/V_012(s,2);
 
-      V_real(s,1)=V_real(s,1).*Vrms_c(s,1);
-      V_real(s,2)=V_real(s,2).*Vrms_c(s,2);
-      V_real(s,3)=V_real(s,3).*Vrms_c(s,3);
+% Ups(s,1)=(V_line.signals.values(s,1)+V_line.signals.values(s,2)*exp(1i*120)+V_line.signals.values(s,3)*exp(1i*240))/3;
+% Uns(s,1)=(V_line.signals.values(s,1)+V_line.signals.values(s,2)*exp(1i*240)+V_line.signals.values(s,3)*exp(1i*120))/3;
+% Ax(s,1)=(Uns(s,1)/Ups(s,1))*100;  
 
-    V_012(s,:)=A*V_real(s,:)';
-    
-    Ax(s,1)=abs(V_012(s,3))/abs(V_012(s,2));
-    A0x(s,1)=V_012(s,1)/V_012(s,2);
-    
-                
+    alpha(s,1)=acos((V.signals.values(s,1)^2+V.signals.values(s,2)^2+V_line.signals.values(s,1)^2)/...
+               (2*V.signals.values(s,1)*V.signals.values(s,2)));
+    beta(s,1)=acos((V.signals.values(s,2)^2+V.signals.values(s,3)^2+V_line.signals.values(s,2)^2)/...
+                   (2*V.signals.values(s,2)*V.signals.values(s,3)));
+
+%     alpha(s,1)=deg2rad(szogt(s,2));
+%     beta(s,1)=deg2rad(szogt(s,3));
+    U1(s,1)=(1/3)*sqrt(V.signals.values(s,1)^2+V.signals.values(s,2)^2+V.signals.values(s,3)^2-...
+                  2*V.signals.values(s,1)*V.signals.values(s,2)*cos(alpha(s,1)+pi/3)-...
+                  2*V.signals.values(s,2)*V.signals.values(s,3)*cos(beta(s,1)+pi/3)-...
+                  2*V.signals.values(s,1)*V.signals.values(s,3)*cos(alpha(s,1)+beta(s,1)-pi/3));
+    U2(s,1)=(1/3)*sqrt(V.signals.values(s,1)^2+V.signals.values(s,2)^2+V.signals.values(s,3)^2-...
+                  2*V.signals.values(s,1)*V.signals.values(s,2)*cos(alpha(s,1)-pi/3)-...
+                  2*V.signals.values(s,2)*V.signals.values(s,3)*cos(beta(s,1)-pi/3)-...
+                  2*V.signals.values(s,1)*V.signals.values(s,3)*cos(alpha(s,1)+beta(s,1)+pi/3));
+              
+    Ax_(s,1)=(U2(s,1)/U1(s,1))*100;
+    Ax=abs(Ax_);
     tElapsed_Regul(s)=toc(tStart2);
 end
 
@@ -113,7 +131,7 @@ figure
         ylabel('N')
 
 figure
-plot(Vrms.time,ErrorSpace*1e-4,Vrms.time,Ax,Vrms.time,absN*1e-6), grid on
+plot(Vrms.time,ErrorSpace*1e-6,Vrms.time,Ax,Vrms.time,absN*1e-8), grid on
 xlabel('t')
 legend('Geometry*1e-4','A_x','N*1e-6')
 
@@ -129,7 +147,7 @@ legend('Geometry','Regulated','Vectorial')
  prompt = {'Enter the START time of data log','Enter the END time of data log'};
         dlg_title = 'Logging parameters';
         num_lines = 1;
-        defAns = {'0.5','0.6'};
+        defAns = {'0.8','1'};
         options = 'off';
         answer = inputdlg(prompt,dlg_title,num_lines,defAns,options);
         % Error handling

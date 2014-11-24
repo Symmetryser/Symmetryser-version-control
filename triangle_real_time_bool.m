@@ -5,8 +5,8 @@ n=size(V.signals.values(:,1),1);
 ErrorSpace=zeros(1,n);
 % V0,1,2=A*Va,b,c
  A=(1/3)*[1,                1,                  1;...
-          1,      exp(1i*120),        exp(1i*240);...
-          1,      exp(1i*240),       exp(1i*120)];
+          1,      exp(1i*120/360*2*pi),        exp(1i*240/360*2*pi);...
+          1,      exp(1i*240/360*2*pi),       exp(1i*120/360*2*pi)];
  Vrms_c = complex(Vrms.signals.values);
  N = zeros(1,n)';
  V_real = zeros(3,n)';
@@ -18,6 +18,8 @@ ErrorSpace=zeros(1,n);
  beta   = zeros(1,n)';
  U1     = zeros(1,n)';
  U2     = zeros(1,n)';
+ 
+
  
 % By geometry
 
@@ -52,36 +54,35 @@ end
 % By regulation
 
 for s=1 : n
-   tStart2=tic;
-%       V_real(s,1)=Vrms_c(s,1).*exp(1i*szogt(s,1));
-%       V_real(s,2)=Vrms_c(s,2).*exp(1i*szogt(s,2));
-%       V_real(s,3)=Vrms_c(s,3).*exp(1i*szogt(s,3)); 
-%     V_012(s,:)=A*V_real(s,:)';
-%     Ax(s,1)=abs(V_012(s,3))/abs(V_012(s,2));
-%     A0x(s,1)=V_012(s,1)/V_012(s,2);
+tStart2=tic;
+%% 1#
+      V_real(s,1)=Vrms_c(s,1).*exp(1i*szogt(s,1)/360*2*pi);
+      V_real(s,2)=Vrms_c(s,2).*exp(1i*szogt(s,2)/360*2*pi);
+      V_real(s,3)=Vrms_c(s,3).*exp(1i*szogt(s,3)/360*2*pi); 
+    V_012(s,:)=A*V_real(s,:)';
+    Ax(s,1)=(abs(V_012(s,3))/abs(V_012(s,2)))*100;
+    A0x(s,1)=V_012(s,1)/V_012(s,2);
+%% 2#
+% U1(s,1)=(V_line.signals.values(s,1)+V_line.signals.values(s,2)*exp(1i*120)+V_line.signals.values(s,3)*exp(1i*-120))/3;
+% U2(s,1)=(V_line.signals.values(s,1)+V_line.signals.values(s,2)*exp(1i*-120)+V_line.signals.values(s,3)*exp(1i*120))/3;
 
-% Ups(s,1)=(V_line.signals.values(s,1)+V_line.signals.values(s,2)*exp(1i*120)+V_line.signals.values(s,3)*exp(1i*240))/3;
-% Uns(s,1)=(V_line.signals.values(s,1)+V_line.signals.values(s,2)*exp(1i*240)+V_line.signals.values(s,3)*exp(1i*120))/3;
-% Ax(s,1)=(Uns(s,1)/Ups(s,1))*100;  
+%% 3#
+%     alpha(s,1)=acos((V.signals.values(s,1)^2+V.signals.values(s,2)^2+V_line.signals.values(s,1)^2)/...
+%                (2*V.signals.values(s,1)*V.signals.values(s,2)));
+%     beta(s,1)=acos((V.signals.values(s,2)^2+V.signals.values(s,3)^2+V_line.signals.values(s,2)^2)/...
+%                    (2*V.signals.values(s,2)*V.signals.values(s,3)));
 
-    alpha(s,1)=acos((V.signals.values(s,1)^2+V.signals.values(s,2)^2+V_line.signals.values(s,1)^2)/...
-               (2*V.signals.values(s,1)*V.signals.values(s,2)));
-    beta(s,1)=acos((V.signals.values(s,2)^2+V.signals.values(s,3)^2+V_line.signals.values(s,2)^2)/...
-                   (2*V.signals.values(s,2)*V.signals.values(s,3)));
-
-%     alpha(s,1)=deg2rad(szogt(s,2));
-%     beta(s,1)=deg2rad(szogt(s,3));
-    U1(s,1)=(1/3)*sqrt(V.signals.values(s,1)^2+V.signals.values(s,2)^2+V.signals.values(s,3)^2-...
-                  2*V.signals.values(s,1)*V.signals.values(s,2)*cos(alpha(s,1)+pi/3)-...
-                  2*V.signals.values(s,2)*V.signals.values(s,3)*cos(beta(s,1)+pi/3)-...
-                  2*V.signals.values(s,1)*V.signals.values(s,3)*cos(alpha(s,1)+beta(s,1)-pi/3));
-    U2(s,1)=(1/3)*sqrt(V.signals.values(s,1)^2+V.signals.values(s,2)^2+V.signals.values(s,3)^2-...
-                  2*V.signals.values(s,1)*V.signals.values(s,2)*cos(alpha(s,1)-pi/3)-...
-                  2*V.signals.values(s,2)*V.signals.values(s,3)*cos(beta(s,1)-pi/3)-...
-                  2*V.signals.values(s,1)*V.signals.values(s,3)*cos(alpha(s,1)+beta(s,1)+pi/3));
+%     U1(s,1)=(1/3)*sqrt(V.signals.values(s,1)^2+V.signals.values(s,2)^2+V.signals.values(s,3)^2-...
+%                   2*V.signals.values(s,1)*V.signals.values(s,2)*cos(alpha(s,1)+pi/3)-...
+%                   2*V.signals.values(s,2)*V.signals.values(s,3)*cos(beta(s,1)+pi/3)-...
+%                   2*V.signals.values(s,1)*V.signals.values(s,3)*cos(alpha(s,1)+beta(s,1)-pi/3));
+%     U2(s,1)=(1/3)*sqrt(V.signals.values(s,1)^2+V.signals.values(s,2)^2+V.signals.values(s,3)^2-...
+%                   2*V.signals.values(s,1)*V.signals.values(s,2)*cos(alpha(s,1)-pi/3)-...
+%                   2*V.signals.values(s,2)*V.signals.values(s,3)*cos(beta(s,1)-pi/3)-...
+%                   2*V.signals.values(s,1)*V.signals.values(s,3)*cos(alpha(s,1)+beta(s,1)+pi/3));
               
-    Ax_(s,1)=(U2(s,1)/U1(s,1))*100;
-    Ax=abs(Ax_);
+%     Ax_(s,1)=(abs(U2(s,1))/abs(U1(s,1)))*100;
+%     Ax=Ax_;
     tElapsed_Regul(s)=toc(tStart2);
 end
 
@@ -90,9 +91,9 @@ end
 for p=1 : n
    tStart3=tic;
    
-    R_error=230*exp(1j*0)  -Vrms.signals.values*exp(1i*szogt(p,1));
-    S_error=230*exp(1j*120)-Vrms.signals.values*exp(1i*szogt(p,2));
-    T_error=230*exp(1j*240)-Vrms.signals.values*exp(1i*szogt(p,3));
+    R_error=230*exp(1j*0/360*2*pi)  -Vrms.signals.values*exp(1i*szogt(p,1)/360*2*pi);
+    S_error=230*exp(1j*120/360*2*pi)-Vrms.signals.values*exp(1i*szogt(p,2)/360*2*pi);
+    T_error=230*exp(1j*240/360*2*pi)-Vrms.signals.values*exp(1i*szogt(p,3)/360*2*pi);
    
     N(p)=R_error(p)*S_error(p)+R_error(p)*T_error(p)+S_error(p)*T_error(p);
     absN=abs(N);
@@ -131,9 +132,20 @@ figure
         ylabel('N')
 
 figure
-plot(Vrms.time,ErrorSpace*1e-6,Vrms.time,Ax,Vrms.time,absN*1e-8), grid on
+plot(Vrms.time,ErrorSpace*1e-3,Vrms.time,Ax,Vrms.time,absN*1e-2), grid on
 xlabel('t')
-legend('Geometry*1e-4','A_x','N*1e-6')
+legend('Geometry*1e-3','A_x','N*1e-2')
+
+figure
+subplot(2,1,1)
+plot(ErrorSpace*1e-3,Ax,'x')
+xlabel('ErrorSpace*1e-3')
+ylabel('Ax')
+subplot(2,1,2)
+plot(absN*1e-2,Ax,'x')
+xlabel('N*1e-2')
+ylabel('Ax')
+
 
 figure
 plot(Vrms.time,tElapsed_Geom,Vrms.time,tElapsed_Regul,Vrms.time,tElapsed_Vect), grid on

@@ -4,7 +4,7 @@ close all;
 
 %% Simulation initialisation parameters
 CLK=1000;                                           %[sample/s]
-tfin=1.5;                                           %[s]
+tfin=0.5;                                           %[s]
 sample=10e-5;                                       %[s/sample]
 t=0:sample:tfin;                                    %[tick]
 
@@ -60,8 +60,8 @@ Butterworth_passband_frequency=5000;
 %% Network Loads
 Load_Wire_Resistance=[0.1,0.2];                     %[Ohm]
 Switch_Load_R= [1,1,1];                             %[Boolean]
-Switch_Load_RL=[1,1,1];                             %[Boolean]
-Switch_Load_RC=[1,1,1];                             %[Boolean]
+Switch_Load_RL=[0,0,0];                             %[Boolean]
+Switch_Load_RC=[0,0,0];                             %[Boolean]
 %          %%%FFT%%%
 %          s=zeros(1,128);
 %          s(4)=1;
@@ -76,6 +76,7 @@ Switch_Load_RC=[1,1,1];                             %[Boolean]
                                          randi([0 1],1,tfin/Ohmic_Load_Switching_Speed(2));...
                                          randi([0 1],1,tfin/Ohmic_Load_Switching_Speed(3))];
          Ohmic_Load_Switching_Sequence=Ohmic_Load_Switching_Sequence_';
+         Ohmic_Load_Switching_Sequence=ones(3,size(Ohmic_Load_Switching_Sequence,1)');
          %%%Inductive Loads%%%
          Load_RL=[35.35,   35.35,   35.35;...       %[Ohm]
                  0.1125,  0.1125,  0.1125];         %[H]

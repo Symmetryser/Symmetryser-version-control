@@ -28,12 +28,10 @@ for i=1 : n
         % Ideal parameters
         Amplitude_1=[230,230,230];                     %[V]
         Phase_1=[0,2/3*pi,4/3*pi];                     %[rad]
-%        Frequency_1=[50,50,50];                       %[Hz]
-
+        %Frequency_1=[50,50,50];                       %[Hz]
         % Real parameters
         Amplitude_2=[Vrms.signals.values(i,:)];
         Phase_2=[degtorad(szogt(i,:))];
-
         %Extension of the vectors with the first element to get closed triangles on
         %plots and for use as polygons
         Amplitude_1_ex=[Amplitude_1 Amplitude_1(1)];
@@ -46,59 +44,32 @@ for i=1 : n
         [xa, ya] = polybool('union', x1, y1, x2, y2);
         [xb, yb] = polybool('intersection', x1, y1, x2, y2);
         ErrorSpace(i)=polyarea(xa,ya)-polyarea(xb,yb);
-        
-        
-     tElapsed_Geom(i)=toc(tStart1); 
+    tElapsed_Geom(i)=toc(tStart1); 
 end
 
 % By regulation
 
 for s=1 : n
 tStart2=tic;
-%% 1#
-      V_real(s,1)=Vrms_c(s,1).*exp(1i*szogt(s,1)/360*2*pi);
-      V_real(s,2)=Vrms_c(s,2).*exp(1i*szogt(s,2)/360*2*pi);
-      V_real(s,3)=Vrms_c(s,3).*exp(1i*szogt(s,3)/360*2*pi); 
-    V_012(s,:)=A*V_real(s,:)';
-    Ax(s,1)=(abs(V_012(s,3))/abs(V_012(s,2)))*100;
-    A0x(s,1)=V_012(s,1)/V_012(s,2);
-%% 2#
-% U1(s,1)=(V_line.signals.values(s,1)+V_line.signals.values(s,2)*exp(1i*120)+V_line.signals.values(s,3)*exp(1i*-120))/3;
-% U2(s,1)=(V_line.signals.values(s,1)+V_line.signals.values(s,2)*exp(1i*-120)+V_line.signals.values(s,3)*exp(1i*120))/3;
-
-%% 3#
-%     alpha(s,1)=acos((V.signals.values(s,1)^2+V.signals.values(s,2)^2+V_line.signals.values(s,1)^2)/...
-%                (2*V.signals.values(s,1)*V.signals.values(s,2)));
-%     beta(s,1)=acos((V.signals.values(s,2)^2+V.signals.values(s,3)^2+V_line.signals.values(s,2)^2)/...
-%                    (2*V.signals.values(s,2)*V.signals.values(s,3)));
-
-%     U1(s,1)=(1/3)*sqrt(V.signals.values(s,1)^2+V.signals.values(s,2)^2+V.signals.values(s,3)^2-...
-%                   2*V.signals.values(s,1)*V.signals.values(s,2)*cos(alpha(s,1)+pi/3)-...
-%                   2*V.signals.values(s,2)*V.signals.values(s,3)*cos(beta(s,1)+pi/3)-...
-%                   2*V.signals.values(s,1)*V.signals.values(s,3)*cos(alpha(s,1)+beta(s,1)-pi/3));
-%     U2(s,1)=(1/3)*sqrt(V.signals.values(s,1)^2+V.signals.values(s,2)^2+V.signals.values(s,3)^2-...
-%                   2*V.signals.values(s,1)*V.signals.values(s,2)*cos(alpha(s,1)-pi/3)-...
-%                   2*V.signals.values(s,2)*V.signals.values(s,3)*cos(beta(s,1)-pi/3)-...
-%                   2*V.signals.values(s,1)*V.signals.values(s,3)*cos(alpha(s,1)+beta(s,1)+pi/3));
-              
-%     Ax_(s,1)=(abs(U2(s,1))/abs(U1(s,1)))*100;
-%     Ax=Ax_;
-    tElapsed_Regul(s)=toc(tStart2);
+   V_real(s,1)=Vrms_c(s,1).*exp(1i*szogt(s,1)/360*2*pi);
+   V_real(s,2)=Vrms_c(s,2).*exp(1i*szogt(s,2)/360*2*pi);
+   V_real(s,3)=Vrms_c(s,3).*exp(1i*szogt(s,3)/360*2*pi); 
+   V_012(s,:)=A*V_real(s,:)';
+   Ax(s,1)=(abs(V_012(s,3))/abs(V_012(s,2)))*100;
+   A0x(s,1)=V_012(s,1)/V_012(s,2);
+   tElapsed_Regul(s)=toc(tStart2);
 end
 
 
 
 for p=1 : n
    tStart3=tic;
-   
-    R_error=230*exp(1j*0/360*2*pi)  -Vrms.signals.values*exp(1i*szogt(p,1)/360*2*pi);
-    S_error=230*exp(1j*120/360*2*pi)-Vrms.signals.values*exp(1i*szogt(p,2)/360*2*pi);
-    T_error=230*exp(1j*240/360*2*pi)-Vrms.signals.values*exp(1i*szogt(p,3)/360*2*pi);
-   
-    N(p)=R_error(p)*S_error(p)+R_error(p)*T_error(p)+S_error(p)*T_error(p);
-    absN=abs(N);
-    
-    tElapsed_Vect(p)=toc(tStart3);
+   R_error=230*exp(1j*0/360*2*pi)  -Vrms.signals.values*exp(1i*szogt(p,1)/360*2*pi);
+   S_error=230*exp(1j*120/360*2*pi)-Vrms.signals.values*exp(1i*szogt(p,2)/360*2*pi);
+   T_error=230*exp(1j*240/360*2*pi)-Vrms.signals.values*exp(1i*szogt(p,3)/360*2*pi);
+   N(p)=R_error(p)*S_error(p)+R_error(p)*T_error(p)+S_error(p)*T_error(p);
+   absN=abs(N);
+   tElapsed_Vect(p)=toc(tStart3);
 end
 
 
@@ -136,15 +107,6 @@ plot(Vrms.time,ErrorSpace*1e-3,Vrms.time,Ax,Vrms.time,absN*1e-2), grid on
 xlabel('t')
 legend('Geometry*1e-3','A_x','N*1e-2')
 
-figure
-subplot(2,1,1)
-plot(ErrorSpace*1e-3,Ax,'x')
-xlabel('ErrorSpace*1e-3')
-ylabel('Ax')
-subplot(2,1,2)
-plot(absN*1e-2,Ax,'x')
-xlabel('N*1e-2')
-ylabel('Ax')
 
 
 figure
@@ -154,7 +116,7 @@ xlabel('t(s)')
 ylabel('runtime(s)')
 legend('Geometry','Regulated','Vectorial')
 
-%% Save
+%% Save 
 
  prompt = {'Enter the START time of data log','Enter the END time of data log'};
         dlg_title = 'Logging parameters';
@@ -180,3 +142,21 @@ absN_=[t(logstart:logend),absN(logstart:logend)*1e-6];
 save('Measurements/ErrorSpace.dat','ErrorSpace_','-ascii');
 save('Measurements/Ax.dat','Ax_','-ascii');
 save('Measurements/N.dat','absN_','-ascii');
+
+
+%% Focused plot
+figure
+title('Focused plot')
+plot(Vrms.time(logstart:logend),ErrorSpace(logstart:logend)*1e-3,Vrms.time(logstart:logend),Ax(logstart:logend),Vrms.time(logstart:logend),absN(logstart:logend)*1e-2), grid on
+xlabel('t')
+legend('Geometry*1e-3','A_x','N*1e-2')
+
+figure
+subplot(2,1,1)
+plot(ErrorSpace(logstart:logend)*1e-3,Ax(logstart:logend),'x')
+xlabel('ErrorSpace*1e-3')
+ylabel('Ax')
+subplot(2,1,2)
+plot(absN(logstart:logend)*1e-2,Ax(logstart:logend),'x')
+xlabel('N*1e-2')
+ylabel('Ax')

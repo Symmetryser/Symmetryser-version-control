@@ -19,11 +19,11 @@ s(2)=1;
 %% Loads
 
 R=100;
-L=0;
-%L=0.01125;
+%L=0;
+L=0.01125;
 R_l=0.5;
-C=0;
-%C=5e-3;
+%C=0;
+C=5e-3;
 R_c=0.005;
 
 
@@ -72,6 +72,16 @@ figure
 plot(REG.time,REG.signals.values(:,1))
     
 grid on
-title('REG')
+title('Regular norm')
+xlabel('t')
+ylabel('[%]')
+
+
+figure
+%Voltage Source 
+plot(VEC.time,VEC.signals.values(:,1))
+    
+grid on
+title('Vectorial norm')
 xlabel('t')
 ylabel('[%]')

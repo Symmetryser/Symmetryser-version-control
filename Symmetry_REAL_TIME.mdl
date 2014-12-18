@@ -1,16 +1,16 @@
 Model {
   Name			  "Symmetry_REAL_TIME"
-  Version		  8.1
+  Version		  8.3
   MdlSubVersion		  0
+  SavedCharacterEncoding  "windows-1250"
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.28"
+    ComputedModelVersion    "1.33"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
-  SavedCharacterEncoding  "windows-1250"
   SaveDefaultBlockParams  on
   ScopeRefreshTime	  0.035000
   OverrideScopeRefreshTime on
@@ -31,7 +31,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-8.0, 0.0, 1456.0, 876.0]
+      Location		      [-8.0, 0.0, 1378.0, 780.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -53,48 +53,48 @@ Model {
 	Dimension		3
 	Object {
 	  $ObjectID		  5
-	  IsActive		  [1]
+	  IsActive		  [0]
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
-	  Extents		  [1406.0, 699.0]
+	  Extents		  [1334.0, 617.0]
 	  ZoomFactor		  [0.8]
 	  Offset		  [0.0, 0.0]
 	}
 	Object {
 	  $ObjectID		  6
-	  IsActive		  [0]
+	  IsActive		  [1]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "1"
-	  Extents		  [1406.0, 699.0]
+	  Extents		  [1334.0, 617.0]
 	  ZoomFactor		  [1.0]
-	  Offset		  [382.25459851968594, 295.2120074837739]
+	  Offset		  [484.76998300492278, 390.5124101338161]
 	}
 	Object {
 	  $ObjectID		  7
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "56"
-	  Extents		  [1406.0, 699.0]
-	  ZoomFactor		  [0.6]
-	  Offset		  [-323.16666666666674, -77.25]
+	  Extents		  [1334.0, 617.0]
+	  ZoomFactor		  [0.8]
+	  Offset		  [724.128645432851, 266.20750363933405]
 	}
 	PropName		"EditorsInfo"
       }
     }
   }
-  PhysicalModelingChecksum "2893672449"
-  PhysicalModelingParameterChecksum "3901422622"
+  PhysicalModelingChecksum "2804401807"
+  PhysicalModelingParameterChecksum "1873903462"
   PhysicalModelingProducts "Power_System_Blocks"
   Created		  "Tue Oct 07 13:23:53 2014"
   Creator		  "Neukirchner László"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "Neukirchner László"
+  LastModifiedBy	  "Templomos"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue Dec 16 10:59:18 2014"
-  RTWModifiedTimeStamp	  340627904
-  ModelVersionFormat	  "1.%<AutoIncrement:28>"
-  ConfigurationManager	  "None"
+  LastModifiedDate	  "Thu Dec 18 11:52:56 2014"
+  RTWModifiedTimeStamp	  340804291
+  ModelVersionFormat	  "1.%<AutoIncrement:33>"
+  ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "disabled"
@@ -119,6 +119,11 @@ Model {
   BrowserShowLibraryLinks off
   BrowserLookUnderMasks	  off
   SimulationMode	  "normal"
+  PauseTimes		  "5"
+  NumberOfSteps		  1
+  SnapshotBufferSize	  10
+  SnapshotInterval	  10
+  NumberOfLastSnapshots	  0
   LinearizationMsg	  "none"
   Profile		  off
   ParamWorkspaceSource	  "MATLABWorkspace"
@@ -152,6 +157,7 @@ Model {
   CovNameIncrementing	  off
   CovHtmlReporting	  on
   CovForceBlockReductionOff on
+  CovEnableCumulative	  on
   covSaveCumulativeToWorkspaceVar on
   CovSaveSingleToWorkspaceVar on
   CovCumulativeVarName	  "covCumulativeData"
@@ -159,6 +165,9 @@ Model {
   CovReportOnPause	  on
   CovModelRefEnable	  "Off"
   CovExternalEMLEnable	  off
+  CovSFcnEnable		  off
+  CovBoundaryAbsTol	  0.000010
+  CovBoundaryRelTol	  0.010000
   ExtModeBatchMode	  off
   ExtModeEnableFloating	  on
   ExtModeTrigType	  "manual"
@@ -188,13 +197,13 @@ Model {
     Dimension		    1
     Simulink.ConfigSet {
       $ObjectID		      9
-      Version		      "1.13.0"
+      Version		      "1.14.2"
       Array {
 	Type			"Handle"
 	Dimension		10
 	Simulink.SolverCC {
 	  $ObjectID		  10
-	  Version		  "1.13.0"
+	  Version		  "1.14.2"
 	  StartTime		  "0.0"
 	  StopTime		  "tfin"
 	  AbsTol		  "auto"
@@ -229,7 +238,7 @@ Model {
 	}
 	Simulink.DataIOCC {
 	  $ObjectID		  11
-	  Version		  "1.13.0"
+	  Version		  "1.14.2"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
 	  FinalStateName	  "xFinal"
@@ -247,6 +256,7 @@ Model {
 	  SignalLogging		  on
 	  DSMLogging		  on
 	  InspectSignalLogs	  off
+	  VisualizeSimOutput	  on
 	  SaveTime		  on
 	  ReturnWorkspaceOutputs  off
 	  StateSaveName		  "xout"
@@ -261,7 +271,7 @@ Model {
 	}
 	Simulink.OptimizationCC {
 	  $ObjectID		  12
-	  Version		  "1.13.0"
+	  Version		  "1.14.2"
 	  Array {
 	    Type		    "Cell"
 	    Dimension		    8
@@ -281,11 +291,14 @@ Model {
 	  InlineParams		  off
 	  UseIntDivNetSlope	  off
 	  UseFloatMulNetSlope	  off
+	  DefaultUnderspecifiedDataType	"double"
 	  UseSpecifiedMinMax	  off
 	  InlineInvariantSignals  off
 	  OptimizeBlockIOStorage  on
 	  BufferReuse		  on
 	  EnhancedBackFolding	  off
+	  CachingGlobalReferences off
+	  GlobalBufferReuse	  on
 	  StrengthReduction	  off
 	  ExpressionFolding	  on
 	  BooleansAsBitfields	  off
@@ -300,6 +313,7 @@ Model {
 	  SystemCodeInlineAuto	  off
 	  StateBitsets		  off
 	  DataBitsets		  off
+	  ActiveStateOutputEnumStorageType "Native Integer"
 	  UseTempVars		  off
 	  ZeroExternalMemoryAtStartup on
 	  ZeroInternalMemoryAtStartup on
@@ -317,7 +331,7 @@ Model {
 	}
 	Simulink.DebuggingCC {
 	  $ObjectID		  13
-	  Version		  "1.13.0"
+	  Version		  "1.14.2"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
 	  ArrayBoundsChecking	  "none"
@@ -407,7 +421,7 @@ Model {
 	}
 	Simulink.HardwareCC {
 	  $ObjectID		  14
-	  Version		  "1.13.0"
+	  Version		  "1.14.2"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
 	  ProdBitPerInt		  32
@@ -448,7 +462,7 @@ Model {
 	}
 	Simulink.ModelReferenceCC {
 	  $ObjectID		  15
-	  Version		  "1.13.0"
+	  Version		  "1.14.2"
 	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
 	  CheckModelReferenceTargetMessage "error"
 	  EnableParallelModelReferenceBuilds off
@@ -463,7 +477,7 @@ Model {
 	}
 	Simulink.SFSimCC {
 	  $ObjectID		  16
-	  Version		  "1.13.0"
+	  Version		  "1.14.2"
 	  SFSimEnableDebug	  on
 	  SFSimOverflowDetection  on
 	  SFSimEcho		  on
@@ -474,11 +488,12 @@ Model {
 	  SimUseLocalCustomCode	  off
 	  SimParseCustomCode	  on
 	  SimBuildMode		  "sf_incremental_build"
+	  SimGenImportedTypeDefs  off
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
 	  $ObjectID		  17
-	  Version		  "1.13.0"
+	  Version		  "1.14.2"
 	  Array {
 	    Type		    "Cell"
 	    Dimension		    15
@@ -500,11 +515,15 @@ Model {
 	    PropName		    "DisabledProps"
 	  }
 	  SystemTargetFile	  "grt.tlc"
+	  TLCOptions		  ""
 	  GenCodeOnly		  off
 	  MakeCommand		  "make_rtw"
 	  GenerateMakefile	  on
 	  PackageGeneratedCodeAndArtifacts off
+	  PackageName		  ""
 	  TemplateMakefile	  "grt_default_tmf"
+	  PostCodeGenCommand	  ""
+	  Description		  ""
 	  GenerateReport	  off
 	  SaveLog		  off
 	  RTWVerbose		  on
@@ -515,13 +534,23 @@ Model {
 	  TLCAssert		  off
 	  ProcessScriptMode	  "Default"
 	  ConfigurationMode	  "Optimized"
+	  ProcessScript		  ""
+	  ConfigurationScript	  ""
 	  ConfigAtBuild		  off
 	  RTWUseLocalCustomCode	  off
 	  RTWUseSimCustomCode	  off
+	  CustomSourceCode	  ""
+	  CustomHeaderCode	  ""
+	  CustomInclude		  ""
+	  CustomSource		  ""
+	  CustomLibrary		  ""
+	  CustomInitializer	  ""
+	  CustomTerminator	  ""
+	  Toolchain		  "Automatically locate an installed toolchain"
+	  BuildConfiguration	  "Faster Builds"
 	  IncludeHyperlinkInReport off
 	  LaunchReport		  off
 	  PortableWordSizes	  off
-	  GenerateErtSFunction	  off
 	  CreateSILPILBlock	  "None"
 	  CodeExecutionProfiling  off
 	  CodeExecutionProfileVariable "executionProfile"
@@ -541,14 +570,17 @@ Model {
 	  GenerateCodeMetricsReport off
 	  GenerateCodeReplacementReport	off
 	  RTWCompilerOptimization "Off"
+	  RTWCustomCompilerOptimizations ""
 	  CheckMdlBeforeBuild	  "Off"
 	  CustomRebuildMode	  "OnUpdate"
+	  DataInitializer	  ""
+	  SharedConstantsCachingThreshold 1024
 	  Array {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
 	      $ObjectID		      18
-	      Version		      "1.13.0"
+	      Version		      "1.14.2"
 	      Array {
 		Type			"Cell"
 		Dimension		22
@@ -578,6 +610,7 @@ Model {
 	      }
 	      ForceParamTrailComments off
 	      GenerateComments	      on
+	      CommentStyle	      "Auto"
 	      IgnoreCustomStorageClasses on
 	      IgnoreTestpoints	      off
 	      IncHierarchyInIds	      off
@@ -600,6 +633,7 @@ Model {
 	      CustomSymbolStrBlkIO    "rtb_$N$M"
 	      CustomSymbolStrTmpVar   "$N$M"
 	      CustomSymbolStrMacro    "$R$N$M"
+	      CustomSymbolStrUtil     "$N$C"
 	      DefineNamingRule	      "None"
 	      ParamNamingRule	      "None"
 	      SignalNamingRule	      "None"
@@ -616,7 +650,7 @@ Model {
 	    Simulink.GRTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
 	      $ObjectID		      19
-	      Version		      "1.13.0"
+	      Version		      "1.14.2"
 	      Array {
 		Type			"Cell"
 		Dimension		15
@@ -640,7 +674,9 @@ Model {
 	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
 	      TargetLibSuffix	      ""
 	      TargetPreCompLibLocation ""
-	      CodeReplacementLibrary  "ANSI_C"
+	      GenFloatMathFcnCalls    "NOT IN USE"
+	      TargetLangStandard      "C89/C90 (ANSI)"
+	      CodeReplacementLibrary  "None"
 	      UtilityFuncGeneration   "Auto"
 	      ERTMultiwordTypeDef     "System defined"
 	      ERTMultiwordLength      256
@@ -648,7 +684,6 @@ Model {
 	      GenerateFullHeader      on
 	      GenerateSampleERTMain   off
 	      GenerateTestInterfaces  off
-	      IsPILTarget	      off
 	      ModelReferenceCompliant on
 	      ParMdlRefBuildCompliant on
 	      CompOptLevelCompliant   on
@@ -665,6 +700,7 @@ Model {
 	      LogVarNameModifier      "rt_"
 	      MatFileLogging	      on
 	      MultiInstanceERTCode    off
+	      CodeInterfacePackaging  "Nonreusable function"
 	      SupportNonFinite	      on
 	      SupportComplex	      on
 	      PurelyIntegerCode	      off
@@ -675,7 +711,7 @@ Model {
 	      ParenthesesLevel	      "Nominal"
 	      MATLABClassNameForMDSCustomization "Simulink.SoftwareTarget.GRTCustomization"
 	      ModelStepFunctionPrototypeControlCompliant off
-	      CPPClassGenCompliant    off
+	      CPPClassGenCompliant    on
 	      AutosarCompliant	      off
 	      GRTInterface	      off
 	      GenerateAllocFcn	      off
@@ -692,13 +728,14 @@ Model {
 	      RTWCAPIStates	      off
 	      RTWCAPIRootIO	      off
 	      GenerateASAP2	      off
+	      MultiInstanceErrorCode  "Error"
 	    }
 	    PropName		    "Components"
 	  }
 	}
 	hdlcoderui.hdlcc {
 	  $ObjectID		  20
-	  Version		  "1.13.0"
+	  Version		  "1.14.2"
 	  Description		  "HDL Coder custom configuration component"
 	  Name			  "HDL Coder"
 	  Array {
@@ -822,6 +859,19 @@ Model {
       SampleTime	      "-1"
     }
     Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+      PreserveConstantTs      off
+    }
+    Block {
       BlockType		      Demux
       Outputs		      "4"
       DisplayOption	      "none"
@@ -832,6 +882,7 @@ Model {
       Format		      "short"
       Decimation	      "10"
       Floating		      off
+      Lockdown		      off
       SampleTime	      "-1"
     }
     Block {
@@ -916,11 +967,15 @@ Model {
       Permissions	      "ReadWrite"
       PermitHierarchicalResolution "All"
       TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
       CheckFcnCallInpInsideContextMsg off
       SystemSampleTime	      "-1"
+      RTWSystemCode	      "Auto"
       RTWFcnNameOpts	      "Auto"
       RTWFileNameOpts	      "Auto"
       FunctionInterfaceSpec   "void_void"
+      FunctionWithSeparateData off
       RTWMemSecFuncInitTerm   "Inherit from model"
       RTWMemSecFuncExecute    "Inherit from model"
       RTWMemSecDataConstants  "Inherit from model"
@@ -930,9 +985,28 @@ Model {
       DataTypeOverride	      "UseLocalSettings"
       DataTypeOverrideAppliesTo	"AllNumericTypes"
       MinMaxOverflowLogging   "UseLocalSettings"
+      Opaque		      off
+      MaskHideContents	      off
       SFBlockType	      "NONE"
       Variant		      off
       GeneratePreprocessorConditionals off
+      ContentPreviewEnabled   off
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      AccumDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
     }
     Block {
       BlockType		      Terminator
@@ -942,10 +1016,11 @@ Model {
       VariableName	      "simulink_output"
       MaxDataPoints	      "1000"
       Decimation	      "1"
-      SampleTime	      "0"
       SaveFormat	      "Array"
+      Save2DSignal	      "Inherit from input (this choice will be removed - see release notes)"
       FixptAsFi		      off
       NumInputs		      "1"
+      SampleTime	      "0"
     }
     Block {
       BlockType		      ZeroOrderHold
@@ -954,7 +1029,7 @@ Model {
   }
   System {
     Name		    "Symmetry_REAL_TIME"
-    Location		    [-8, 0, 1448, 876]
+    Location		    [-8, 0, 1370, 780]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -968,7 +1043,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "80"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "246"
+    SIDHighWatermark	    "271"
     Block {
       BlockType		      Reference
       Name		      "Series RLC Branch"
@@ -977,7 +1052,7 @@ Model {
       Position		      [760, 156, 830, 184]
       ZOrder		      665
       ShowName		      off
-      LibraryVersion	      "1.2191"
+      LibraryVersion	      "1.2362"
       SourceBlock	      "powerlib/Elements/Series RLC Branch"
       SourceType	      "Series RLC Branch"
       LConnTagsString	      "__new0"
@@ -1000,7 +1075,7 @@ Model {
       Position		      [760, 221, 830, 249]
       ZOrder		      666
       ShowName		      off
-      LibraryVersion	      "1.2191"
+      LibraryVersion	      "1.2362"
       SourceBlock	      "powerlib/Elements/Series RLC Branch"
       SourceType	      "Series RLC Branch"
       LConnTagsString	      "__new0"
@@ -1023,7 +1098,7 @@ Model {
       Position		      [760, 286, 830, 314]
       ZOrder		      667
       ShowName		      off
-      LibraryVersion	      "1.2191"
+      LibraryVersion	      "1.2362"
       SourceBlock	      "powerlib/Elements/Series RLC Branch"
       SourceType	      "Series RLC Branch"
       LConnTagsString	      "__new0"
@@ -1045,16 +1120,10 @@ Model {
       Ports		      [0, 0, 0, 0, 0, 0, 4]
       Position		      [120, 137, 290, 398]
       ZOrder		      219
-      MinAlgLoopOccurrences   off
-      PropExecContextOutsideSubsystem off
-      RTWSystemCode	      "Auto"
-      FunctionWithSeparateData off
-      Opaque		      off
       RequestExecContextInheritance off
-      MaskHideContents	      off
       System {
 	Name			"Transformator_station"
-	Location		[-8, 0, 1448, 876]
+	Location		[-8, 0, 1370, 780]
 	Open			on
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -1106,9 +1175,10 @@ Model {
 	  ZOrder		  8
 	  NamePlacement		  "alternate"
 	  ShowName		  off
-	  LibraryVersion	  "1.2191"
+	  LibraryVersion	  "1.2362"
 	  SourceBlock		  "powerlib/Electrical\nSources/Controlled Voltage Source"
 	  SourceType		  "Controlled Voltage Source"
+	  ContentPreviewEnabled	  off
 	  Initialize		  off
 	  Source_Type		  "AC"
 	  Amplitude		  "0"
@@ -1125,9 +1195,10 @@ Model {
 	  ZOrder		  202
 	  NamePlacement		  "alternate"
 	  ShowName		  off
-	  LibraryVersion	  "1.2191"
+	  LibraryVersion	  "1.2362"
 	  SourceBlock		  "powerlib/Electrical\nSources/Controlled Voltage Source"
 	  SourceType		  "Controlled Voltage Source"
+	  ContentPreviewEnabled	  off
 	  Initialize		  off
 	  Source_Type		  "AC"
 	  Amplitude		  "0"
@@ -1144,9 +1215,10 @@ Model {
 	  ZOrder		  210
 	  NamePlacement		  "alternate"
 	  ShowName		  off
-	  LibraryVersion	  "1.2191"
+	  LibraryVersion	  "1.2362"
 	  SourceBlock		  "powerlib/Electrical\nSources/Controlled Voltage Source"
 	  SourceType		  "Controlled Voltage Source"
+	  ContentPreviewEnabled	  off
 	  Initialize		  off
 	  Source_Type		  "AC"
 	  Amplitude		  "0"
@@ -1159,7 +1231,7 @@ Model {
 	  Name			  "Demux1"
 	  SID			  "240"
 	  Ports			  [1, 3]
-	  Position		  [1240, 773, 1245, 827]
+	  Position		  [1285, 768, 1290, 822]
 	  ZOrder		  764
 	  ShowName		  off
 	  Outputs		  "3"
@@ -1170,7 +1242,7 @@ Model {
 	  Name			  "Demux2"
 	  SID			  "225"
 	  Ports			  [1, 3]
-	  Position		  [1240, 628, 1245, 682]
+	  Position		  [1285, 623, 1290, 677]
 	  ZOrder		  751
 	  ShowName		  off
 	  Outputs		  "3"
@@ -1181,7 +1253,7 @@ Model {
 	  Name			  "Demux3"
 	  SID			  "226"
 	  Ports			  [1, 3]
-	  Position		  [1240, 688, 1245, 742]
+	  Position		  [1285, 683, 1290, 737]
 	  ZOrder		  752
 	  ShowName		  off
 	  Outputs		  "3"
@@ -1192,30 +1264,8 @@ Model {
 	  Name			  "Demux4"
 	  SID			  "241"
 	  Ports			  [1, 3]
-	  Position		  [1240, 833, 1245, 887]
+	  Position		  [1285, 828, 1290, 882]
 	  ZOrder		  765
-	  ShowName		  off
-	  Outputs		  "3"
-	  DisplayOption		  "bar"
-	}
-	Block {
-	  BlockType		  Demux
-	  Name			  "Demux5"
-	  SID			  "243"
-	  Ports			  [1, 3]
-	  Position		  [1240, 923, 1245, 977]
-	  ZOrder		  768
-	  ShowName		  off
-	  Outputs		  "3"
-	  DisplayOption		  "bar"
-	}
-	Block {
-	  BlockType		  Demux
-	  Name			  "Demux6"
-	  SID			  "244"
-	  Ports			  [1, 3]
-	  Position		  [1240, 983, 1245, 1037]
-	  ZOrder		  769
 	  ShowName		  off
 	  Outputs		  "3"
 	  DisplayOption		  "bar"
@@ -1224,19 +1274,13 @@ Model {
 	  BlockType		  SubSystem
 	  Name			  "FFT"
 	  SID			  "56"
-	  Ports			  [1, 2]
-	  Position		  [1030, 511, 1150, 569]
+	  Ports			  [1, 3]
+	  Position		  [1005, 518, 1155, 572]
 	  ZOrder		  511
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
 	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
 	  System {
 	    Name		    "FFT"
-	    Location		    [-8, 0, 1448, 876]
+	    Location		    [-8, 0, 1370, 780]
 	    Open		    on
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -1248,7 +1292,7 @@ Model {
 	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "60"
+	    ZoomFactor		    "80"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Voltage_3Phase"
@@ -1256,6 +1300,36 @@ Model {
 	      Position		      [20, 315, 35, 345]
 	      ZOrder		      -1
 	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      " T_USource_sign"
+	      SID		      "256"
+	      Ports		      [1, 1]
+	      Position		      [1200, 607, 1305, 643]
+	      ZOrder		      489
+	      MATLABFcn		      "u*360/(2*pi)"
+	      SampleTime	      "sample"
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      " T_USource_sign1"
+	      SID		      "257"
+	      Ports		      [1, 1]
+	      Position		      [1200, 687, 1305, 723]
+	      ZOrder		      490
+	      MATLABFcn		      "u*360/(2*pi)"
+	      SampleTime	      "sample"
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      " T_USource_sign2"
+	      SID		      "258"
+	      Ports		      [1, 1]
+	      Position		      [1200, 767, 1305, 803]
+	      ZOrder		      491
+	      MATLABFcn		      "u*360/(2*pi)"
+	      SampleTime	      "sample"
 	    }
 	    Block {
 	      BlockType		      Buffer
@@ -1336,6 +1410,22 @@ Model {
 	      Output		      "Angle"
 	    }
 	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant"
+	      SID		      "262"
+	      Position		      [1420, 665, 1450, 695]
+	      ZOrder		      495
+	      Value		      "360"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant1"
+	      SID		      "266"
+	      Position		      [1515, 840, 1545, 870]
+	      ZOrder		      499
+	      Value		      "360"
+	    }
+	    Block {
 	      BlockType		      Demux
 	      Name		      "Demux"
 	      SID		      "131"
@@ -1354,7 +1444,6 @@ Model {
 	      Position		      [915, 130, 1005, 160]
 	      ZOrder		      29
 	      Decimation	      "1"
-	      Lockdown		      off
 	    }
 	    Block {
 	      BlockType		      Display
@@ -1364,7 +1453,24 @@ Model {
 	      Position		      [915, 75, 1005, 105]
 	      ZOrder		      30
 	      Decimation	      "1"
-	      Lockdown		      off
+	    }
+	    Block {
+	      BlockType		      Display
+	      Name		      "Display10"
+	      SID		      "263"
+	      Ports		      [1]
+	      Position		      [1535, 610, 1625, 640]
+	      ZOrder		      496
+	      Decimation	      "1"
+	    }
+	    Block {
+	      BlockType		      Display
+	      Name		      "Display11"
+	      SID		      "271"
+	      Ports		      [1]
+	      Position		      [1735, 860, 1825, 890]
+	      ZOrder		      504
+	      Decimation	      "1"
 	    }
 	    Block {
 	      BlockType		      Display
@@ -1374,7 +1480,6 @@ Model {
 	      Position		      [915, 20, 1005, 50]
 	      ZOrder		      31
 	      Decimation	      "1"
-	      Lockdown		      off
 	    }
 	    Block {
 	      BlockType		      Display
@@ -1384,7 +1489,6 @@ Model {
 	      Position		      [915, 680, 1005, 710]
 	      ZOrder		      36
 	      Decimation	      "1"
-	      Lockdown		      off
 	    }
 	    Block {
 	      BlockType		      Display
@@ -1394,7 +1498,6 @@ Model {
 	      Position		      [915, 625, 1005, 655]
 	      ZOrder		      37
 	      Decimation	      "1"
-	      Lockdown		      off
 	    }
 	    Block {
 	      BlockType		      Display
@@ -1404,7 +1507,42 @@ Model {
 	      Position		      [915, 570, 1005, 600]
 	      ZOrder		      38
 	      Decimation	      "1"
-	      Lockdown		      off
+	    }
+	    Block {
+	      BlockType		      Display
+	      Name		      "Display6"
+	      SID		      "253"
+	      Ports		      [1]
+	      Position		      [1535, 1100, 1625, 1130]
+	      ZOrder		      45
+	      Decimation	      "1"
+	    }
+	    Block {
+	      BlockType		      Display
+	      Name		      "Display7"
+	      SID		      "254"
+	      Ports		      [1]
+	      Position		      [1535, 1040, 1625, 1070]
+	      ZOrder		      46
+	      Decimation	      "1"
+	    }
+	    Block {
+	      BlockType		      Display
+	      Name		      "Display8"
+	      SID		      "255"
+	      Ports		      [1]
+	      Position		      [1535, 975, 1625, 1005]
+	      ZOrder		      47
+	      Decimation	      "1"
+	    }
+	    Block {
+	      BlockType		      Display
+	      Name		      "Display9"
+	      SID		      "260"
+	      Ports		      [1]
+	      Position		      [1535, 1160, 1625, 1190]
+	      ZOrder		      493
+	      Decimation	      "1"
 	    }
 	    Block {
 	      BlockType		      Reference
@@ -1413,7 +1551,7 @@ Model {
 	      Ports		      [1, 1]
 	      Position		      [335, 168, 375, 202]
 	      ZOrder		      -7
-	      LibraryVersion	      "1.469"
+	      LibraryVersion	      "1.479"
 	      SourceBlock	      "dspxfrm3/FFT"
 	      SourceType	      "FFT"
 	      CompMethod	      "Table lookup"
@@ -1422,6 +1560,7 @@ Model {
 	      BitRevOrder	      off
 	      InheritFFTLength	      on
 	      FFTLength		      "64"
+	      WrapInput		      on
 	      RowConvenienceOn	      on
 	      FFTImplementation	      "Auto"
 	      additionalParams	      off
@@ -1460,7 +1599,7 @@ Model {
 	      Ports		      [1, 1]
 	      Position		      [335, 313, 375, 347]
 	      ZOrder		      6
-	      LibraryVersion	      "1.469"
+	      LibraryVersion	      "1.479"
 	      SourceBlock	      "dspxfrm3/FFT"
 	      SourceType	      "FFT"
 	      CompMethod	      "Table lookup"
@@ -1469,6 +1608,7 @@ Model {
 	      BitRevOrder	      off
 	      InheritFFTLength	      on
 	      FFTLength		      "64"
+	      WrapInput		      on
 	      RowConvenienceOn	      on
 	      FFTImplementation	      "Auto"
 	      additionalParams	      off
@@ -1507,7 +1647,7 @@ Model {
 	      Ports		      [1, 1]
 	      Position		      [335, 458, 375, 492]
 	      ZOrder		      16
-	      LibraryVersion	      "1.469"
+	      LibraryVersion	      "1.479"
 	      SourceBlock	      "dspxfrm3/FFT"
 	      SourceType	      "FFT"
 	      CompMethod	      "Table lookup"
@@ -1516,6 +1656,7 @@ Model {
 	      BitRevOrder	      off
 	      InheritFFTLength	      on
 	      FFTLength		      "64"
+	      WrapInput		      on
 	      RowConvenienceOn	      on
 	      FFTImplementation	      "Auto"
 	      additionalParams	      off
@@ -1584,6 +1725,18 @@ Model {
 	      SampleTime	      "sample"
 	    }
 	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain3"
+	      SID		      "270"
+	      Position		      [1645, 775, 1675, 805]
+	      ZOrder		      503
+	      Gain		      "-1"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	      SampleTime	      "sample"
+	    }
+	    Block {
 	      BlockType		      Mux
 	      Name		      "Mux"
 	      SID		      "132"
@@ -1599,8 +1752,19 @@ Model {
 	      Name		      "Mux1"
 	      SID		      "134"
 	      Ports		      [3, 1]
-	      Position		      [1155, 378, 1160, 572]
+	      Position		      [1420, 378, 1425, 572]
 	      ZOrder		      26
+	      ShowName		      off
+	      Inputs		      "3"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux2"
+	      SID		      "265"
+	      Ports		      [3, 1]
+	      Position		      [1735, 727, 1740, 803]
+	      ZOrder		      498
 	      ShowName		      off
 	      Inputs		      "3"
 	      DisplayOption	      "bar"
@@ -1678,6 +1842,47 @@ Model {
 	      punctureVector	      "s'"
 	    }
 	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum"
+	      SID		      "259"
+	      Ports		      [3, 1]
+	      Position		      [1435, 1137, 1490, 1213]
+	      ZOrder		      492
+	      ShowName		      off
+	      Inputs		      "+++"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum1"
+	      SID		      "261"
+	      Ports		      [2, 1]
+	      Position		      [1460, 615, 1480, 635]
+	      ZOrder		      494
+	      ShowName		      off
+	      IconShape		      "round"
+	      Inputs		      "|++"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum2"
+	      SID		      "269"
+	      Ports		      [3, 1]
+	      Position		      [1570, 780, 1590, 800]
+	      ZOrder		      500
+	      ShowName		      off
+	      IconShape		      "round"
+	      Inputs		      "++-"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
 	      BlockType		      ZeroOrderHold
 	      Name		      "Zero-Order\nHold"
 	      SID		      "65"
@@ -1711,152 +1916,187 @@ Model {
 	    }
 	    Block {
 	      BlockType		      Outport
-	      Name		      "Phase"
+	      Name		      "Phase_in_rad"
 	      SID		      "136"
-	      Position		      [1215, 468, 1245, 482]
+	      Position		      [1480, 468, 1510, 482]
 	      ZOrder		      28
 	      Port		      "2"
 	      IconDisplay	      "Port number"
 	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Phase__in_deg"
+	      SID		      "264"
+	      Position		      [1790, 758, 1820, 772]
+	      ZOrder		      497
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
 	    Line {
+	      ZOrder		      1
 	      SrcBlock		      "FFT1"
 	      SrcPort		      1
 	      Points		      [5, 0]
 	      Branch {
+		ZOrder			2
 		DstBlock		"Complex to\nMagnitude-Angle1"
 		DstPort			1
 	      }
 	      Branch {
+		ZOrder			3
 		Points			[0, 65]
 		DstBlock		"Complex to\nMagnitude-Angle2"
 		DstPort			1
 	      }
 	    }
 	    Line {
+	      ZOrder		      4
 	      SrcBlock		      "Buffer"
 	      SrcPort		      1
 	      DstBlock		      "FFT1"
 	      DstPort		      1
 	    }
 	    Line {
+	      ZOrder		      5
 	      SrcBlock		      "Zero-Order\nHold"
 	      SrcPort		      1
 	      DstBlock		      "Buffer"
 	      DstPort		      1
 	    }
 	    Line {
+	      ZOrder		      6
 	      SrcBlock		      "Complex to\nMagnitude-Angle1"
 	      SrcPort		      1
 	      DstBlock		      "Puncture"
 	      DstPort		      1
 	    }
 	    Line {
+	      ZOrder		      7
 	      SrcBlock		      "Complex to\nMagnitude-Angle2"
 	      SrcPort		      1
 	      DstBlock		      "Puncture1"
 	      DstPort		      1
 	    }
 	    Line {
+	      ZOrder		      8
 	      SrcBlock		      "FFT2"
 	      SrcPort		      1
 	      Points		      [5, 0]
 	      Branch {
+		ZOrder			9
 		Points			[0, 65]
 		DstBlock		"Complex to\nMagnitude-Angle4"
 		DstPort			1
 	      }
 	      Branch {
+		ZOrder			10
 		DstBlock		"Complex to\nMagnitude-Angle3"
 		DstPort			1
 	      }
 	    }
 	    Line {
+	      ZOrder		      11
 	      SrcBlock		      "Buffer1"
 	      SrcPort		      1
 	      DstBlock		      "FFT2"
 	      DstPort		      1
 	    }
 	    Line {
+	      ZOrder		      12
 	      SrcBlock		      "Zero-Order\nHold1"
 	      SrcPort		      1
 	      DstBlock		      "Buffer1"
 	      DstPort		      1
 	    }
 	    Line {
+	      ZOrder		      13
 	      SrcBlock		      "Complex to\nMagnitude-Angle3"
 	      SrcPort		      1
 	      DstBlock		      "Puncture2"
 	      DstPort		      1
 	    }
 	    Line {
+	      ZOrder		      14
 	      SrcBlock		      "Complex to\nMagnitude-Angle4"
 	      SrcPort		      1
 	      DstBlock		      "Puncture3"
 	      DstPort		      1
 	    }
 	    Line {
+	      ZOrder		      15
 	      SrcBlock		      "FFT3"
 	      SrcPort		      1
 	      Points		      [5, 0]
 	      Branch {
+		ZOrder			16
 		DstBlock		"Complex to\nMagnitude-Angle5"
 		DstPort			1
 	      }
 	      Branch {
+		ZOrder			17
 		Points			[0, 65]
 		DstBlock		"Complex to\nMagnitude-Angle6"
 		DstPort			1
 	      }
 	    }
 	    Line {
+	      ZOrder		      18
 	      SrcBlock		      "Buffer2"
 	      SrcPort		      1
 	      DstBlock		      "FFT3"
 	      DstPort		      1
 	    }
 	    Line {
+	      ZOrder		      19
 	      SrcBlock		      "Zero-Order\nHold2"
 	      SrcPort		      1
 	      DstBlock		      "Buffer2"
 	      DstPort		      1
 	    }
 	    Line {
+	      ZOrder		      20
 	      SrcBlock		      "Complex to\nMagnitude-Angle5"
 	      SrcPort		      1
 	      DstBlock		      "Puncture4"
 	      DstPort		      1
 	    }
 	    Line {
+	      ZOrder		      21
 	      SrcBlock		      "Complex to\nMagnitude-Angle6"
 	      SrcPort		      1
 	      DstBlock		      "Puncture5"
 	      DstPort		      1
 	    }
 	    Line {
+	      ZOrder		      22
 	      SrcBlock		      "Voltage_3Phase"
 	      SrcPort		      1
 	      DstBlock		      "Demux"
 	      DstPort		      1
 	    }
 	    Line {
+	      ZOrder		      23
 	      SrcBlock		      "Demux"
 	      SrcPort		      2
 	      DstBlock		      "Zero-Order\nHold1"
 	      DstPort		      1
 	    }
 	    Line {
+	      ZOrder		      24
 	      SrcBlock		      "Demux"
 	      SrcPort		      3
 	      DstBlock		      "Zero-Order\nHold2"
 	      DstPort		      1
 	    }
 	    Line {
+	      ZOrder		      25
 	      SrcBlock		      "Puncture"
 	      SrcPort		      1
 	      DstBlock		      "Gain"
 	      DstPort		      1
 	    }
 	    Line {
+	      ZOrder		      26
 	      SrcBlock		      "Puncture2"
 	      SrcPort		      1
 	      Points		      [82, 0; 0, -80]
@@ -1864,6 +2104,7 @@ Model {
 	      DstPort		      1
 	    }
 	    Line {
+	      ZOrder		      27
 	      SrcBlock		      "Puncture4"
 	      SrcPort		      1
 	      Points		      [9, 0; 0, -22; 93, 0; 0, -138]
@@ -1871,117 +2112,334 @@ Model {
 	      DstPort		      1
 	    }
 	    Line {
+	      ZOrder		      28
 	      SrcBlock		      "Puncture1"
 	      SrcPort		      1
 	      Points		      [60, 0; 0, 160; 239, 0]
 	      Branch {
+		ZOrder			29
 		Points			[0, 175]
 		DstBlock		"Display5"
 		DstPort			1
 	      }
 	      Branch {
-		DstBlock		"Mux1"
-		DstPort			1
-	      }
-	    }
-	    Line {
-	      SrcBlock		      "Puncture3"
-	      SrcPort		      1
-	      Points		      [40, 0; 0, 80; 155, 0]
-	      Branch {
-		Points			[0, 220]
-		DstBlock		"Display3"
-		DstPort			1
-	      }
-	      Branch {
-		Points			[60, 0]
+		ZOrder			30
+		Points			[266, 0]
 		Branch {
-		  Points		  [0, 165]
-		  DstBlock		  "Display4"
+		  ZOrder		  71
+		  Points		  [0, 215]
+		  DstBlock		  " T_USource_sign"
 		  DstPort		  1
 		}
 		Branch {
+		  ZOrder		  62
+		  DstBlock		  "Mux1"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Line {
+	      ZOrder		      31
+	      SrcBlock		      "Puncture3"
+	      SrcPort		      1
+	      Points		      [40, 0; 0, 80; 215, 0]
+	      Branch {
+		ZOrder			34
+		Points			[0, 165]
+		DstBlock		"Display4"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			35
+		Points			[291, 0]
+		Branch {
+		  ZOrder		  72
+		  Points		  [0, 230]
+		  DstBlock		  " T_USource_sign1"
+		  DstPort		  1
+		}
+		Branch {
+		  ZOrder		  64
 		  DstBlock		  "Mux1"
 		  DstPort		  2
 		}
 	      }
 	    }
 	    Line {
+	      ZOrder		      36
 	      SrcBlock		      "Puncture5"
 	      SrcPort		      1
-	      DstBlock		      "Mux1"
-	      DstPort		      3
+	      Points		      [211, 0]
+	      Branch {
+		ZOrder			50
+		Points			[0, 155]
+		DstBlock		"Display3"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			49
+		Points			[304, 0]
+		Branch {
+		  ZOrder		  73
+		  Points		  [0, 245]
+		  DstBlock		  " T_USource_sign2"
+		  DstPort		  1
+		}
+		Branch {
+		  ZOrder		  66
+		  DstBlock		  "Mux1"
+		  DstPort		  3
+		}
+	      }
 	    }
 	    Line {
+	      ZOrder		      37
 	      SrcBlock		      "Mux"
 	      SrcPort		      1
 	      DstBlock		      "Amplitude"
 	      DstPort		      1
 	    }
 	    Line {
+	      ZOrder		      38
 	      SrcBlock		      "Mux1"
 	      SrcPort		      1
-	      DstBlock		      "Phase"
+	      DstBlock		      "Phase_in_rad"
 	      DstPort		      1
 	    }
 	    Line {
+	      ZOrder		      39
 	      SrcBlock		      "Gain"
 	      SrcPort		      1
 	      Points		      [22, 0]
 	      Branch {
+		ZOrder			40
 		Points			[0, -150]
 		DstBlock		"Display2"
 		DstPort			1
 	      }
 	      Branch {
+		ZOrder			41
 		DstBlock		"Mux"
 		DstPort			1
 	      }
 	    }
 	    Line {
+	      ZOrder		      42
 	      SrcBlock		      "Gain1"
 	      SrcPort		      1
 	      Points		      [73, 0]
 	      Branch {
+		ZOrder			43
 		Points			[0, -160]
 		DstBlock		"Display1"
 		DstPort			1
 	      }
 	      Branch {
+		ZOrder			44
 		DstBlock		"Mux"
 		DstPort			2
 	      }
 	    }
 	    Line {
+	      ZOrder		      45
 	      SrcBlock		      "Gain2"
 	      SrcPort		      1
 	      Points		      [118, 0]
 	      Branch {
+		ZOrder			46
 		Points			[0, -170]
 		DstBlock		"Display"
 		DstPort			1
 	      }
 	      Branch {
+		ZOrder			47
 		DstBlock		"Mux"
 		DstPort			3
 	      }
 	    }
 	    Line {
+	      ZOrder		      48
 	      SrcBlock		      "Demux"
 	      SrcPort		      1
 	      DstBlock		      "Zero-Order\nHold"
 	      DstPort		      1
 	    }
+	    Line {
+	      ZOrder		      74
+	      SrcBlock		      " T_USource_sign"
+	      SrcPort		      1
+	      Points		      [84, 0]
+	      Branch {
+		ZOrder			90
+		Points			[0, 365]
+		Branch {
+		  ZOrder		  78
+		  Points		  [0, 160]
+		  DstBlock		  "Sum"
+		  DstPort		  1
+		}
+		Branch {
+		  ZOrder		  77
+		  DstBlock		  "Display8"
+		  DstPort		  1
+		}
+	      }
+	      Branch {
+		ZOrder			89
+		DstBlock		"Sum1"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      ZOrder		      75
+	      SrcBlock		      " T_USource_sign1"
+	      SrcPort		      1
+	      Points		      [56, 0; 0, 55]
+	      Branch {
+		ZOrder			104
+		Points			[0, 295]
+		Branch {
+		  ZOrder		  80
+		  Points		  [0, 120]
+		  DstBlock		  "Sum"
+		  DstPort		  2
+		}
+		Branch {
+		  ZOrder		  79
+		  DstBlock		  "Display7"
+		  DstPort		  1
+		}
+	      }
+	      Branch {
+		ZOrder			99
+		Points			[171, 0]
+		Branch {
+		  ZOrder		  119
+		  Points		  [0, 30]
+		  DstBlock		  "Sum2"
+		  DstPort		  2
+		}
+		Branch {
+		  ZOrder		  113
+		  Points		  [183, 0]
+		  DstBlock		  "Mux2"
+		  DstPort		  2
+		}
+	      }
+	    }
+	    Line {
+	      ZOrder		      76
+	      SrcBlock		      " T_USource_sign2"
+	      SrcPort		      1
+	      Points		      [25, 0; 0, 330]
+	      Branch {
+		ZOrder			82
+		Points			[0, 85]
+		DstBlock		"Sum"
+		DstPort			3
+	      }
+	      Branch {
+		ZOrder			81
+		DstBlock		"Display6"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      ZOrder		      83
+	      SrcBlock		      "Sum"
+	      SrcPort		      1
+	      DstBlock		      "Display9"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      87
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      Points		      [15, 0]
+	      DstBlock		      "Sum1"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      94
+	      SrcBlock		      "Sum1"
+	      SrcPort		      1
+	      Points		      [10, 0]
+	      Branch {
+		ZOrder			108
+		Points			[0, 110; 85, 0]
+		Branch {
+		  ZOrder		  122
+		  DstBlock		  "Sum2"
+		  DstPort		  1
+		}
+		Branch {
+		  ZOrder		  111
+		  Points		  [140, 0]
+		  DstBlock		  "Mux2"
+		  DstPort		  1
+		}
+	      }
+	      Branch {
+		ZOrder			107
+		DstBlock		"Display10"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      ZOrder		      106
+	      SrcBlock		      "Mux2"
+	      SrcPort		      1
+	      DstBlock		      "Phase__in_deg"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      115
+	      SrcBlock		      "Constant1"
+	      SrcPort		      1
+	      Points		      [30, 0]
+	      DstBlock		      "Sum2"
+	      DstPort		      3
+	    }
+	    Line {
+	      ZOrder		      120
+	      SrcBlock		      "Gain3"
+	      SrcPort		      1
+	      Points		      [17, 0]
+	      Branch {
+		ZOrder			125
+		Points			[0, 85]
+		DstBlock		"Display11"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			124
+		DstBlock		"Mux2"
+		DstPort			3
+	      }
+	    }
+	    Line {
+	      ZOrder		      121
+	      SrcBlock		      "Sum2"
+	      SrcPort		      1
+	      DstBlock		      "Gain3"
+	      DstPort		      1
+	    }
 	    Annotation {
 	      SID		      "119"
 	      Name		      "Phase"
-	      Position		      [525, 429]
+	      Position		      [525, 429, 556, 444]
+	      InternalMargins	      [0, 0, 0, 0]
+	      FixedHeight	      off
+	      FixedWidth	      off
 	      ZOrder		      -1
 	    }
 	    Annotation {
 	      SID		      "130"
 	      Name		      "Phase"
-	      Position		      [525, 574]
+	      Position		      [525, 574, 556, 589]
+	      InternalMargins	      [0, 0, 0, 0]
+	      FixedHeight	      off
+	      FixedWidth	      off
 	      ZOrder		      -2
 	    }
 	  }
@@ -2013,13 +2471,13 @@ Model {
 	  Name			  "Neutral1"
 	  SID			  "55"
 	  Ports			  [0, 0, 0, 0, 0, 1]
-	  Position		  [790, 560, 810, 580]
+	  Position		  [805, 580, 825, 600]
 	  ZOrder		  510
 	  BlockRotation		  270
 	  BlockMirror		  on
 	  ShowName		  off
 	  AttributesFormatString  "node %<NodeNumber>"
-	  LibraryVersion	  "1.2191"
+	  LibraryVersion	  "1.2362"
 	  SourceBlock		  "powerlib/Elements/Neutral"
 	  SourceType		  "Neutral"
 	  LConnTagsString	  "a"
@@ -2035,93 +2493,79 @@ Model {
 	  ShowName		  off
 	  VariableName		  "Sources"
 	  MaxDataPoints		  "inf"
-	  SampleTime		  "-1"
 	  SaveFormat		  "Structure With Time"
 	  FixptAsFi		  on
+	  SampleTime		  "-1"
 	}
 	Block {
 	  BlockType		  ToWorkspace
 	  Name			  "Sources1"
 	  SID			  "48"
 	  Ports			  [1]
-	  Position		  [1240, 480, 1340, 510]
+	  Position		  [1615, 470, 1715, 500]
 	  ZOrder		  503
 	  ShowName		  off
 	  VariableName		  "Voltage_Sources"
 	  MaxDataPoints		  "inf"
-	  SampleTime		  "sample"
 	  SaveFormat		  "Structure With Time"
 	  FixptAsFi		  on
+	  SampleTime		  "sample"
 	}
 	Block {
 	  BlockType		  ToWorkspace
 	  Name			  "Sources2"
 	  SID			  "105"
 	  Ports			  [1]
-	  Position		  [1240, 540, 1340, 570]
+	  Position		  [1615, 530, 1715, 560]
 	  ZOrder		  521
 	  ShowName		  off
 	  VariableName		  "angle"
 	  MaxDataPoints		  "inf"
-	  SampleTime		  "sample"
 	  SaveFormat		  "Structure With Time"
 	  FixptAsFi		  on
+	  SampleTime		  "sample"
 	}
 	Block {
 	  BlockType		  ToWorkspace
 	  Name			  "Sources3"
 	  SID			  "107"
 	  Ports			  [1]
-	  Position		  [1240, 510, 1340, 540]
+	  Position		  [1615, 500, 1715, 530]
 	  ZOrder		  523
 	  ShowName		  off
 	  VariableName		  "amplitude"
 	  MaxDataPoints		  "inf"
-	  SampleTime		  "sample"
 	  SaveFormat		  "Structure With Time"
 	  FixptAsFi		  on
+	  SampleTime		  "sample"
 	}
 	Block {
 	  BlockType		  ToWorkspace
 	  Name			  "Sources4"
 	  SID			  "228"
 	  Ports			  [1]
-	  Position		  [1615, 670, 1715, 700]
+	  Position		  [1660, 665, 1760, 695]
 	  ZOrder		  750
 	  ShowName		  off
 	  VariableName		  "REG"
 	  MaxDataPoints		  "inf"
-	  SampleTime		  "sample"
 	  SaveFormat		  "Structure With Time"
 	  FixptAsFi		  on
+	  SampleTime		  "sample"
 	}
 	Block {
 	  BlockType		  ToWorkspace
 	  Name			  "Sources5"
 	  SID			  "242"
 	  Ports			  [1]
-	  Position		  [1615, 815, 1715, 845]
+	  Position		  [1660, 810, 1760, 840]
 	  ZOrder		  766
 	  ShowName		  off
 	  VariableName		  "VEC"
 	  MaxDataPoints		  "inf"
-	  SampleTime		  "sample"
 	  SaveFormat		  "Structure With Time"
 	  FixptAsFi		  on
-	}
-	Block {
-	  BlockType		  ToWorkspace
-	  Name			  "Sources6"
-	  SID			  "245"
-	  Ports			  [1]
-	  Position		  [1615, 965, 1715, 995]
-	  ZOrder		  770
-	  ShowName		  off
-	  VariableName		  "GEO"
-	  MaxDataPoints		  "inf"
 	  SampleTime		  "sample"
-	  SaveFormat		  "Structure With Time"
-	  FixptAsFi		  on
 	}
 	Block {
 	  BlockType		  Reference
@@ -2131,30 +2575,7 @@ Model {
 	  Position		  [695, 236, 765, 264]
 	  ZOrder		  509
 	  ShowName		  off
-	  LibraryVersion	  "1.2191"
-	  SourceBlock		  "powerlib/Elements/Series RLC Branch"
-	  SourceType		  "Series RLC Branch"
-	  LConnTagsString	  "__new0"
-	  RConnTagsString	  "__new0"
-	  BranchType		  "RL"
-	  Resistance		  "0.4"
-	  Inductance		  "0.003185"
-	  SetiL0		  off
-	  InitialCurrent	  "0"
-	  Capacitance		  "1.0"
-	  Setx0			  off
-	  InitialVoltage	  "0"
-	  Measurements		  "None"
-	}
-	Block {
-	  BlockType		  Reference
-	  Name			  "Transf-L  Line -R2"
-	  SID			  "230"
-	  Ports			  [0, 0, 0, 0, 0, 1, 1]
-	  Position		  [695, 361, 765, 389]
-	  ZOrder		  754
-	  ShowName		  off
-	  LibraryVersion	  "1.2191"
+	  LibraryVersion	  "1.2362"
 	  SourceBlock		  "powerlib/Elements/Series RLC Branch"
 	  SourceType		  "Series RLC Branch"
 	  LConnTagsString	  "__new0"
@@ -2177,7 +2598,7 @@ Model {
 	  Position		  [695, 281, 765, 309]
 	  ZOrder		  201
 	  ShowName		  off
-	  LibraryVersion	  "1.2191"
+	  LibraryVersion	  "1.2362"
 	  SourceBlock		  "powerlib/Elements/Series RLC Branch"
 	  SourceType		  "Series RLC Branch"
 	  LConnTagsString	  "__new0"
@@ -2200,7 +2621,7 @@ Model {
 	  Position		  [695, 326, 765, 354]
 	  ZOrder		  209
 	  ShowName		  off
-	  LibraryVersion	  "1.2191"
+	  LibraryVersion	  "1.2362"
 	  SourceBlock		  "powerlib/Elements/Series RLC Branch"
 	  SourceType		  "Series RLC Branch"
 	  LConnTagsString	  "__new0"
@@ -2223,9 +2644,10 @@ Model {
 	  Position		  [895, 448, 920, 472]
 	  ZOrder		  495
 	  ShowName		  off
-	  LibraryVersion	  "1.2191"
+	  LibraryVersion	  "1.2362"
 	  SourceBlock		  "powerlib/Measurements/Voltage Measurement"
 	  SourceType		  "Voltage Measurement"
+	  ContentPreviewEnabled	  off
 	  PhasorSimulation	  off
 	  OutputType		  "Complex"
 	  PSBequivalent		  "0"
@@ -2238,9 +2660,10 @@ Model {
 	  Position		  [895, 483, 920, 507]
 	  ZOrder		  496
 	  ShowName		  off
-	  LibraryVersion	  "1.2191"
+	  LibraryVersion	  "1.2362"
 	  SourceBlock		  "powerlib/Measurements/Voltage Measurement"
 	  SourceType		  "Voltage Measurement"
+	  ContentPreviewEnabled	  off
 	  PhasorSimulation	  off
 	  OutputType		  "Complex"
 	  PSBequivalent		  "0"
@@ -2253,219 +2676,26 @@ Model {
 	  Position		  [895, 518, 920, 542]
 	  ZOrder		  497
 	  ShowName		  off
-	  LibraryVersion	  "1.2191"
+	  LibraryVersion	  "1.2362"
 	  SourceBlock		  "powerlib/Measurements/Voltage Measurement"
 	  SourceType		  "Voltage Measurement"
+	  ContentPreviewEnabled	  off
 	  PhasorSimulation	  off
 	  OutputType		  "Complex"
 	  PSBequivalent		  "0"
 	}
 	Block {
 	  BlockType		  SubSystem
-	  Name			  "geometrial norm"
-	  SID			  "246"
-	  Ports			  [6, 1]
-	  Position		  [1315, 924, 1500, 1036]
-	  ZOrder		  767
-	  LibraryVersion	  "1.32"
-	  ErrorFcn		  "Stateflow.Translate.translate"
-	  PermitHierarchicalResolution "ExplicitOnly"
-	  TreatAsAtomicUnit	  on
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
-	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
-	  SFBlockType		  "MATLAB Function"
-	  System {
-	    Name		    "geometrial norm"
-	    Location		    [223, 338, 826, 833]
-	    Open		    off
-	    ModelBrowserVisibility  off
-	    ModelBrowserWidth	    200
-	    ScreenColor		    "white"
-	    PaperOrientation	    "landscape"
-	    PaperPositionMode	    "auto"
-	    PaperType		    "A4"
-	    PaperUnits		    "centimeters"
-	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
-	    TiledPageScale	    1
-	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "25"
-	    Block {
-	      BlockType		      Inport
-	      Name		      "amplitude_R"
-	      SID		      "246::1"
-	      Position		      [20, 101, 40, 119]
-	      ZOrder		      -1
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Inport
-	      Name		      "amplitude_S"
-	      SID		      "246::21"
-	      Position		      [20, 136, 40, 154]
-	      ZOrder		      7
-	      Port		      "2"
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Inport
-	      Name		      "amplitude_T"
-	      SID		      "246::22"
-	      Position		      [20, 171, 40, 189]
-	      ZOrder		      8
-	      Port		      "3"
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Inport
-	      Name		      "phase_R"
-	      SID		      "246::23"
-	      Position		      [20, 206, 40, 224]
-	      ZOrder		      9
-	      Port		      "4"
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Inport
-	      Name		      "phase_S"
-	      SID		      "246::24"
-	      Position		      [20, 246, 40, 264]
-	      ZOrder		      10
-	      Port		      "5"
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Inport
-	      Name		      "phase_T"
-	      SID		      "246::25"
-	      Position		      [20, 281, 40, 299]
-	      ZOrder		      11
-	      Port		      "6"
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Demux
-	      Name		      " Demux "
-	      SID		      "246::19"
-	      Ports		      [1, 1]
-	      Position		      [270, 230, 320, 270]
-	      ZOrder		      5
-	      Outputs		      "1"
-	    }
-	    Block {
-	      BlockType		      S-Function
-	      Name		      " SFunction "
-	      SID		      "246::18"
-	      Tag		      "Stateflow S-Function Symmetry_REAL_TIME 3"
-	      Ports		      [6, 2]
-	      Position		      [180, 107, 230, 248]
-	      ZOrder		      4
-	      FunctionName	      "sf_sfun"
-	      PortCounts	      "[6 2]"
-	      EnableBusSupport	      on
-	      Port {
-		PortNumber		2
-		Name			"GEO_norm"
-		RTWStorageClass		"Auto"
-		DataLoggingNameMode	"SignalName"
-	      }
-	    }
-	    Block {
-	      BlockType		      Terminator
-	      Name		      " Terminator "
-	      SID		      "246::20"
-	      Position		      [460, 241, 480, 259]
-	      ZOrder		      6
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "GEO_norm"
-	      SID		      "246::5"
-	      Position		      [460, 101, 480, 119]
-	      ZOrder		      -5
-	      IconDisplay	      "Port number"
-	    }
-	    Line {
-	      SrcBlock		      " SFunction "
-	      SrcPort		      1
-	      DstBlock		      " Demux "
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      " Demux "
-	      SrcPort		      1
-	      DstBlock		      " Terminator "
-	      DstPort		      1
-	    }
-	    Line {
-	      Name		      "GEO_norm"
-	      Labels		      [0, 0]
-	      SrcBlock		      " SFunction "
-	      SrcPort		      2
-	      DstBlock		      "GEO_norm"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "phase_T"
-	      SrcPort		      1
-	      DstBlock		      " SFunction "
-	      DstPort		      6
-	    }
-	    Line {
-	      SrcBlock		      "phase_S"
-	      SrcPort		      1
-	      DstBlock		      " SFunction "
-	      DstPort		      5
-	    }
-	    Line {
-	      SrcBlock		      "phase_R"
-	      SrcPort		      1
-	      DstBlock		      " SFunction "
-	      DstPort		      4
-	    }
-	    Line {
-	      SrcBlock		      "amplitude_T"
-	      SrcPort		      1
-	      DstBlock		      " SFunction "
-	      DstPort		      3
-	    }
-	    Line {
-	      SrcBlock		      "amplitude_S"
-	      SrcPort		      1
-	      DstBlock		      " SFunction "
-	      DstPort		      2
-	    }
-	    Line {
-	      SrcBlock		      "amplitude_R"
-	      SrcPort		      1
-	      DstBlock		      " SFunction "
-	      DstPort		      1
-	    }
-	  }
-	}
-	Block {
-	  BlockType		  SubSystem
 	  Name			  "regular norm"
 	  SID			  "227"
 	  Ports			  [6, 1]
-	  Position		  [1315, 629, 1500, 741]
+	  Position		  [1360, 624, 1545, 736]
 	  ZOrder		  749
 	  LibraryVersion	  "1.32"
 	  ErrorFcn		  "Stateflow.Translate.translate"
 	  PermitHierarchicalResolution "ExplicitOnly"
 	  TreatAsAtomicUnit	  on
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
 	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
 	  SFBlockType		  "MATLAB Function"
 	  System {
 	    Name		    "regular norm"
@@ -2482,7 +2712,7 @@ Model {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "25"
+	    SIDHighWatermark	    "28"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "amplitude_R"
@@ -2539,20 +2769,20 @@ Model {
 	    Block {
 	      BlockType		      Demux
 	      Name		      " Demux "
-	      SID		      "227::19"
+	      SID		      "227::27"
 	      Ports		      [1, 1]
 	      Position		      [270, 230, 320, 270]
-	      ZOrder		      5
+	      ZOrder		      13
 	      Outputs		      "1"
 	    }
 	    Block {
 	      BlockType		      S-Function
 	      Name		      " SFunction "
-	      SID		      "227::18"
+	      SID		      "227::26"
 	      Tag		      "Stateflow S-Function Symmetry_REAL_TIME 1"
 	      Ports		      [6, 2]
-	      Position		      [180, 107, 230, 248]
-	      ZOrder		      4
+	      Position		      [180, 102, 230, 243]
+	      ZOrder		      12
 	      FunctionName	      "sf_sfun"
 	      PortCounts	      "[6 2]"
 	      EnableBusSupport	      on
@@ -2566,9 +2796,9 @@ Model {
 	    Block {
 	      BlockType		      Terminator
 	      Name		      " Terminator "
-	      SID		      "227::20"
+	      SID		      "227::28"
 	      Position		      [460, 241, 480, 259]
-	      ZOrder		      6
+	      ZOrder		      14
 	    }
 	    Block {
 	      BlockType		      Outport
@@ -2579,36 +2809,42 @@ Model {
 	      IconDisplay	      "Port number"
 	    }
 	    Line {
+	      ZOrder		      10
 	      SrcBlock		      "amplitude_R"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      1
 	    }
 	    Line {
+	      ZOrder		      11
 	      SrcBlock		      "amplitude_S"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      2
 	    }
 	    Line {
+	      ZOrder		      12
 	      SrcBlock		      "amplitude_T"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      3
 	    }
 	    Line {
+	      ZOrder		      13
 	      SrcBlock		      "phase_R"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      4
 	    }
 	    Line {
+	      ZOrder		      14
 	      SrcBlock		      "phase_S"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      5
 	    }
 	    Line {
+	      ZOrder		      15
 	      SrcBlock		      "phase_T"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
@@ -2616,6 +2852,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "REG_norm"
+	      ZOrder		      16
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      2
@@ -2623,12 +2860,14 @@ Model {
 	      DstPort		      1
 	    }
 	    Line {
+	      ZOrder		      17
 	      SrcBlock		      " Demux "
 	      SrcPort		      1
 	      DstBlock		      " Terminator "
 	      DstPort		      1
 	    }
 	    Line {
+	      ZOrder		      18
 	      SrcBlock		      " SFunction "
 	      SrcPort		      1
 	      DstBlock		      " Demux "
@@ -2650,19 +2889,13 @@ Model {
 	  Name			  "vectorial norm"
 	  SID			  "239"
 	  Ports			  [6, 1]
-	  Position		  [1315, 774, 1500, 886]
+	  Position		  [1360, 769, 1545, 881]
 	  ZOrder		  763
 	  LibraryVersion	  "1.32"
 	  ErrorFcn		  "Stateflow.Translate.translate"
 	  PermitHierarchicalResolution "ExplicitOnly"
 	  TreatAsAtomicUnit	  on
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
 	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
 	  SFBlockType		  "MATLAB Function"
 	  System {
 	    Name		    "vectorial norm"
@@ -2679,7 +2912,7 @@ Model {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "25"
+	    SIDHighWatermark	    "28"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "amplitude_R"
@@ -2736,20 +2969,20 @@ Model {
 	    Block {
 	      BlockType		      Demux
 	      Name		      " Demux "
-	      SID		      "239::19"
+	      SID		      "239::27"
 	      Ports		      [1, 1]
 	      Position		      [270, 230, 320, 270]
-	      ZOrder		      5
+	      ZOrder		      13
 	      Outputs		      "1"
 	    }
 	    Block {
 	      BlockType		      S-Function
 	      Name		      " SFunction "
-	      SID		      "239::18"
+	      SID		      "239::26"
 	      Tag		      "Stateflow S-Function Symmetry_REAL_TIME 2"
 	      Ports		      [6, 2]
-	      Position		      [180, 107, 230, 248]
-	      ZOrder		      4
+	      Position		      [180, 102, 230, 243]
+	      ZOrder		      12
 	      FunctionName	      "sf_sfun"
 	      PortCounts	      "[6 2]"
 	      EnableBusSupport	      on
@@ -2763,9 +2996,9 @@ Model {
 	    Block {
 	      BlockType		      Terminator
 	      Name		      " Terminator "
-	      SID		      "239::20"
+	      SID		      "239::28"
 	      Position		      [460, 241, 480, 259]
-	      ZOrder		      6
+	      ZOrder		      14
 	    }
 	    Block {
 	      BlockType		      Outport
@@ -2776,19 +3009,50 @@ Model {
 	      IconDisplay	      "Port number"
 	    }
 	    Line {
-	      SrcBlock		      " SFunction "
+	      ZOrder		      10
+	      SrcBlock		      "amplitude_R"
 	      SrcPort		      1
-	      DstBlock		      " Demux "
+	      DstBlock		      " SFunction "
 	      DstPort		      1
 	    }
 	    Line {
-	      SrcBlock		      " Demux "
+	      ZOrder		      11
+	      SrcBlock		      "amplitude_S"
 	      SrcPort		      1
-	      DstBlock		      " Terminator "
-	      DstPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      12
+	      SrcBlock		      "amplitude_T"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      3
+	    }
+	    Line {
+	      ZOrder		      13
+	      SrcBlock		      "phase_R"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      4
+	    }
+	    Line {
+	      ZOrder		      14
+	      SrcBlock		      "phase_S"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      5
+	    }
+	    Line {
+	      ZOrder		      15
+	      SrcBlock		      "phase_T"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      6
 	    }
 	    Line {
 	      Name		      "VEC_norm"
+	      ZOrder		      16
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      2
@@ -2796,39 +3060,17 @@ Model {
 	      DstPort		      1
 	    }
 	    Line {
-	      SrcBlock		      "phase_T"
+	      ZOrder		      17
+	      SrcBlock		      " Demux "
 	      SrcPort		      1
-	      DstBlock		      " SFunction "
-	      DstPort		      6
+	      DstBlock		      " Terminator "
+	      DstPort		      1
 	    }
 	    Line {
-	      SrcBlock		      "phase_S"
+	      ZOrder		      18
+	      SrcBlock		      " SFunction "
 	      SrcPort		      1
-	      DstBlock		      " SFunction "
-	      DstPort		      5
-	    }
-	    Line {
-	      SrcBlock		      "phase_R"
-	      SrcPort		      1
-	      DstBlock		      " SFunction "
-	      DstPort		      4
-	    }
-	    Line {
-	      SrcBlock		      "amplitude_T"
-	      SrcPort		      1
-	      DstBlock		      " SFunction "
-	      DstPort		      3
-	    }
-	    Line {
-	      SrcBlock		      "amplitude_S"
-	      SrcPort		      1
-	      DstBlock		      " SFunction "
-	      DstPort		      2
-	    }
-	    Line {
-	      SrcBlock		      "amplitude_R"
-	      SrcPort		      1
-	      DstBlock		      " SFunction "
+	      DstBlock		      " Demux "
 	      DstPort		      1
 	    }
 	  }
@@ -2875,333 +3117,324 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
+	  ZOrder		  1
 	  SrcBlock		  "Transf-L  Line -R8"
 	  SrcPort		  RConn1
-	  Points		  [80, 0]
-	  Branch {
-	    ConnectType		    "DEST_DEST"
-	    SrcBlock		    "Voltage Measurement1"
-	    SrcPort		    LConn1
-	    Points		    [-20, 0; 0, -195]
-	  }
-	  Branch {
-	    ConnectType		    "DEST_SRC"
-	    DstBlock		    "S"
-	    DstPort		    RConn1
-	  }
+	  DstBlock		  "S"
+	  DstPort		  RConn1
 	}
 	Line {
 	  LineType		  "Connection"
+	  ZOrder		  4
 	  SrcBlock		  "Transf-L  Line -R9"
 	  SrcPort		  RConn1
-	  Points		  [66, 0]
-	  Branch {
-	    ConnectType		    "DEST_DEST"
-	    SrcBlock		    "Voltage Measurement2"
-	    SrcPort		    LConn1
-	    Points		    [-34, 0; 0, -185]
-	  }
-	  Branch {
-	    ConnectType		    "DEST_SRC"
-	    DstBlock		    "T"
-	    DstPort		    RConn1
-	  }
+	  DstBlock		  "T"
+	  DstPort		  RConn1
 	}
 	Line {
+	  ZOrder		  7
 	  SrcBlock		  "Mux"
 	  SrcPort		  1
 	  DstBlock		  "Sources"
 	  DstPort		  1
 	}
 	Line {
+	  ZOrder		  8
 	  SrcBlock		  " R_USource_sign"
 	  SrcPort		  1
 	  Points		  [71, 0]
 	  Branch {
+	    ZOrder		    9
 	    Points		    [0, 177; -63, 0; 0, 43]
 	    DstBlock		    "Mux"
 	    DstPort		    1
 	  }
 	  Branch {
+	    ZOrder		    10
 	    DstBlock		    "Controlled voltage source"
 	    DstPort		    1
 	  }
 	}
 	Line {
+	  ZOrder		  11
 	  SrcBlock		  " S_USource_sign"
 	  SrcPort		  1
 	  Points		  [9, 0; 0, -10; 36, 0]
 	  Branch {
+	    ZOrder		    12
 	    Points		    [0, 31; -31, 0; 0, 164]
 	    DstBlock		    "Mux"
 	    DstPort		    2
 	  }
 	  Branch {
+	    ZOrder		    13
 	    DstBlock		    "Controlled voltage source1"
 	    DstPort		    1
 	  }
 	}
 	Line {
+	  ZOrder		  14
 	  SrcBlock		  " T_USource_sign"
 	  SrcPort		  1
 	  Points		  [9, 0; 0, -20; 16, 0]
 	  Branch {
+	    ZOrder		    15
 	    Points		    [0, 56; -26, 0; 0, 114]
 	    DstBlock		    "Mux"
 	    DstPort		    3
 	  }
 	  Branch {
+	    ZOrder		    16
 	    DstBlock		    "Controlled voltage source2"
 	    DstPort		    1
 	  }
 	}
 	Line {
+	  ZOrder		  17
 	  SrcBlock		  "t"
 	  SrcPort		  1
 	  Points		  [20, 0]
 	  Branch {
+	    ZOrder		    18
 	    Points		    [0, -55]
 	    DstBlock		    " R_USource_sign"
 	    DstPort		    1
 	  }
 	  Branch {
+	    ZOrder		    19
 	    Points		    [0, 55]
 	    DstBlock		    " T_USource_sign"
 	    DstPort		    1
 	  }
 	  Branch {
+	    ZOrder		    20
 	    DstBlock		    " S_USource_sign"
 	    DstPort		    1
 	  }
 	}
 	Line {
+	  ZOrder		  21
 	  SrcBlock		  "Voltage Measurement"
 	  SrcPort		  1
 	  DstBlock		  "Mux1"
 	  DstPort		  1
 	}
 	Line {
+	  ZOrder		  22
 	  SrcBlock		  "Voltage Measurement2"
 	  SrcPort		  1
 	  DstBlock		  "Mux1"
 	  DstPort		  3
 	}
 	Line {
+	  ZOrder		  23
 	  SrcBlock		  "Mux1"
 	  SrcPort		  1
 	  Points		  [23, 0]
 	  Branch {
-	    Points		    [0, 45]
+	    ZOrder		    127
+	    Points		    [0, 50]
 	    DstBlock		    "FFT"
 	    DstPort		    1
 	  }
 	  Branch {
+	    ZOrder		    25
+	    Points		    [0, -10]
 	    DstBlock		    "Sources1"
 	    DstPort		    1
 	  }
 	}
 	Line {
 	  LineType		  "Connection"
+	  ZOrder		  26
 	  SrcBlock		  "Transf-L  Line -R1"
 	  SrcPort		  RConn1
-	  Points		  [91, 0]
+	  DstBlock		  "R"
+	  DstPort		  RConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  ZOrder		  29
+	  SrcBlock		  "Controlled voltage source1"
+	  SrcPort		  RConn1
+	  Points		  [24, 0]
+	  Branch {
+	    ConnectType		    "DEST_DEST"
+	    SrcBlock		    "Voltage Measurement1"
+	    SrcPort		    LConn1
+	    Points		    [-216, 0; 0, -195]
+	  }
+	  Branch {
+	    ConnectType		    "DEST_SRC"
+	    DstBlock		    "Transf-L  Line -R8"
+	    DstPort		    LConn1
+	  }
+	}
+	Line {
+	  LineType		  "Connection"
+	  ZOrder		  30
+	  SrcBlock		  "Controlled voltage source2"
+	  SrcPort		  RConn1
+	  Points		  [5, 0]
+	  Branch {
+	    ConnectType		    "DEST_DEST"
+	    SrcBlock		    "Voltage Measurement2"
+	    SrcPort		    LConn1
+	    Points		    [-235, 0; 0, -185]
+	  }
+	  Branch {
+	    ConnectType		    "DEST_SRC"
+	    DstBlock		    "Transf-L  Line -R9"
+	    DstPort		    LConn1
+	  }
+	}
+	Line {
+	  LineType		  "Connection"
+	  ZOrder		  31
+	  SrcBlock		  "Transf-L  Line -R1"
+	  SrcPort		  LConn1
+	  Points		  [0, 0]
 	  Branch {
 	    ConnectType		    "DEST_DEST"
 	    SrcBlock		    "Voltage Measurement"
 	    SrcPort		    LConn1
-	    Points		    [-9, 0; 0, -205]
+	    Points		    [-200, 0; 0, -205]
 	  }
 	  Branch {
 	    ConnectType		    "DEST_SRC"
-	    DstBlock		    "R"
+	    DstBlock		    "Controlled voltage source"
 	    DstPort		    RConn1
 	  }
 	}
 	Line {
-	  LineType		  "Connection"
-	  SrcBlock		  "Controlled voltage source1"
-	  SrcPort		  RConn1
-	  DstBlock		  "Transf-L  Line -R8"
-	  DstPort		  LConn1
-	}
-	Line {
-	  LineType		  "Connection"
-	  SrcBlock		  "Controlled voltage source2"
-	  SrcPort		  RConn1
-	  DstBlock		  "Transf-L  Line -R9"
-	  DstPort		  LConn1
-	}
-	Line {
-	  LineType		  "Connection"
-	  SrcBlock		  "Transf-L  Line -R1"
-	  SrcPort		  LConn1
-	  DstBlock		  "Controlled voltage source"
-	  DstPort		  RConn1
-	}
-	Line {
+	  ZOrder		  32
 	  SrcBlock		  "Voltage Measurement1"
 	  SrcPort		  1
 	  DstBlock		  "Mux1"
 	  DstPort		  2
 	}
 	Line {
-	  SrcBlock		  "FFT"
-	  SrcPort		  1
-	  Points		  [58, 0]
-	  Branch {
-	    Points		    [0, 130]
-	    Branch {
-	      Points		      [0, 145]
-	      Branch {
-		Points			[0, 150]
-		DstBlock		"Demux5"
-		DstPort			1
-	      }
-	      Branch {
-		DstBlock		"Demux1"
-		DstPort			1
-	      }
-	    }
-	    Branch {
-	      DstBlock		      "Demux2"
-	      DstPort		      1
-	    }
-	  }
-	  Branch {
-	    DstBlock		    "Sources3"
-	    DstPort		    1
-	  }
-	}
-	Line {
-	  SrcBlock		  "FFT"
-	  SrcPort		  2
-	  Points		  [28, 0]
-	  Branch {
-	    Points		    [0, 160]
-	    Branch {
-	      Points		      [0, 145]
-	      Branch {
-		Points			[0, 150]
-		DstBlock		"Demux6"
-		DstPort			1
-	      }
-	      Branch {
-		DstBlock		"Demux4"
-		DstPort			1
-	      }
-	    }
-	    Branch {
-	      DstBlock		      "Demux3"
-	      DstPort		      1
-	    }
-	  }
-	  Branch {
-	    DstBlock		    "Sources2"
-	    DstPort		    1
-	  }
-	}
-	Line {
-	  LineType		  "Connection"
-	  Points		  [798, 465; 0, -90]
-	  Branch {
-	    ConnectType		    "SRC_DEST"
-	    Points		    [798, 500; 0, -35]
-	    Branch {
-	      ConnectType	      "SRC_DEST"
-	      Points		      [800, 535; -2, 0; 0, -35]
-	      Branch {
-		ConnectType		"SRC_DEST"
-		SrcBlock		"Neutral1"
-		SrcPort			LConn1
-		Points			[0, -10]
-	      }
-	      Branch {
-		ConnectType		"SRC_DEST"
-		SrcBlock		"Voltage Measurement2"
-		SrcPort			LConn2
-		Points			[-80, 0]
-	      }
-	    }
-	    Branch {
-	      ConnectType	      "SRC_DEST"
-	      SrcBlock		      "Voltage Measurement1"
-	      SrcPort		      LConn2
-	      Points		      [-82, 0]
-	    }
-	  }
-	  Branch {
-	    ConnectType		    "SRC_DEST"
-	    SrcBlock		    "Voltage Measurement"
-	    SrcPort		    LConn2
-	    Points		    [-82, 0]
-	  }
-	  Branch {
-	    ConnectType		    "DEST_SRC"
-	    DstBlock		    "N"
-	    DstPort		    RConn1
-	  }
-	  Branch {
-	    ConnectType		    "DEST_DEST"
-	    SrcBlock		    "Transf-L  Line -R2"
-	    SrcPort		    RConn1
-	    Points		    [18, 0]
-	  }
-	}
-	Line {
+	  ZOrder		  56
 	  SrcBlock		  "regular norm"
 	  SrcPort		  1
 	  DstBlock		  "Sources4"
 	  DstPort		  1
 	}
 	Line {
+	  ZOrder		  57
 	  SrcBlock		  "Demux2"
 	  SrcPort		  1
 	  DstBlock		  "regular norm"
 	  DstPort		  1
 	}
 	Line {
+	  ZOrder		  58
 	  SrcBlock		  "Demux2"
 	  SrcPort		  2
 	  DstBlock		  "regular norm"
 	  DstPort		  2
 	}
 	Line {
+	  ZOrder		  59
 	  SrcBlock		  "Demux2"
 	  SrcPort		  3
 	  DstBlock		  "regular norm"
 	  DstPort		  3
 	}
 	Line {
+	  ZOrder		  60
 	  SrcBlock		  "Demux3"
 	  SrcPort		  1
 	  DstBlock		  "regular norm"
 	  DstPort		  4
 	}
 	Line {
+	  ZOrder		  61
 	  SrcBlock		  "Demux3"
 	  SrcPort		  2
 	  DstBlock		  "regular norm"
 	  DstPort		  5
 	}
 	Line {
+	  ZOrder		  62
 	  SrcBlock		  "Demux3"
 	  SrcPort		  3
 	  DstBlock		  "regular norm"
 	  DstPort		  6
 	}
 	Line {
+	  ZOrder		  68
+	  SrcBlock		  "Demux1"
+	  SrcPort		  1
+	  DstBlock		  "vectorial norm"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  69
+	  SrcBlock		  "Demux1"
+	  SrcPort		  2
+	  DstBlock		  "vectorial norm"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  70
+	  SrcBlock		  "Demux1"
+	  SrcPort		  3
+	  DstBlock		  "vectorial norm"
+	  DstPort		  3
+	}
+	Line {
+	  ZOrder		  71
+	  SrcBlock		  "Demux4"
+	  SrcPort		  1
+	  DstBlock		  "vectorial norm"
+	  DstPort		  4
+	}
+	Line {
+	  ZOrder		  72
+	  SrcBlock		  "Demux4"
+	  SrcPort		  2
+	  DstBlock		  "vectorial norm"
+	  DstPort		  5
+	}
+	Line {
+	  ZOrder		  73
+	  SrcBlock		  "Demux4"
+	  SrcPort		  3
+	  DstBlock		  "vectorial norm"
+	  DstPort		  6
+	}
+	Line {
+	  ZOrder		  74
+	  SrcBlock		  "vectorial norm"
+	  SrcPort		  1
+	  DstBlock		  "Sources5"
+	  DstPort		  1
+	}
+	Line {
 	  LineType		  "Connection"
-	  SrcBlock		  "Controlled voltage source"
-	  SrcPort		  LConn1
-	  Points		  [-83, 0; 0, 45]
+	  ZOrder		  100
+	  Points		  [815, 375; 70, 0]
+	  DstBlock		  "N"
+	  DstPort		  RConn1
 	  Branch {
-	    ConnectType		    "DEST_SRC"
-	    Points		    [0, 45]
+	    ConnectType		    "SRC_SRC"
+	    Points		    [-333, 0; 0, -25]
 	    Branch {
 	      ConnectType	      "DEST_DEST"
-	      SrcBlock		      "Transf-L  Line -R2"
-	      SrcPort		      LConn1
-	      Points		      [-198, 0; 0, -25]
+	      Points		      [482, 305; 0, 45]
+	      Branch {
+		ConnectType		"SRC_DEST"
+		SrcBlock		"Controlled voltage source"
+		SrcPort			LConn1
+		Points			[-83, 0; 0, 45]
+	      }
+	      Branch {
+		ConnectType		"SRC_DEST"
+		SrcBlock		"Controlled voltage source1"
+		SrcPort			LConn1
+		Points			[-83, 0]
+	      }
 	    }
 	    Branch {
 	      ConnectType	      "DEST_SRC"
@@ -3210,95 +3443,94 @@ Model {
 	    }
 	  }
 	  Branch {
-	    ConnectType		    "DEST_DEST"
-	    SrcBlock		    "Controlled voltage source1"
-	    SrcPort		    LConn1
-	    Points		    [-83, 0]
+	    ConnectType		    "SRC_DEST"
+	    Points		    [815, 465; 0, -90]
+	    Branch {
+	      ConnectType	      "SRC_DEST"
+	      Points		      [815, 500; 0, -35]
+	      Branch {
+		ConnectType		"SRC_DEST"
+		Points			[815, 535; 0, -35]
+		Branch {
+		  ConnectType		  "SRC_DEST"
+		  SrcBlock		  "Voltage Measurement2"
+		  SrcPort		  LConn2
+		  Points		  [-65, 0]
+		}
+		Branch {
+		  ConnectType		  "SRC_DEST"
+		  SrcBlock		  "Neutral1"
+		  SrcPort		  LConn1
+		  Points		  [0, -30]
+		}
+	      }
+	      Branch {
+		ConnectType		"SRC_DEST"
+		SrcBlock		"Voltage Measurement1"
+		SrcPort			LConn2
+		Points			[-65, 0]
+	      }
+	    }
+	    Branch {
+	      ConnectType	      "SRC_DEST"
+	      SrcBlock		      "Voltage Measurement"
+	      SrcPort		      LConn2
+	      Points		      [-65, 0]
+	    }
 	  }
 	}
 	Line {
-	  SrcBlock		  "Demux1"
+	  ZOrder		  128
+	  SrcBlock		  "FFT"
 	  SrcPort		  1
-	  DstBlock		  "vectorial norm"
-	  DstPort		  1
+	  Points		  [105, 0]
+	  Branch {
+	    ZOrder		    131
+	    Points		    [0, 125]
+	    Branch {
+	      ZOrder		      135
+	      Points		      [0, 145]
+	      DstBlock		      "Demux1"
+	      DstPort		      1
+	    }
+	    Branch {
+	      ZOrder		      134
+	      DstBlock		      "Demux2"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    ZOrder		    130
+	    Points		    [120, 0; 0, -10]
+	    DstBlock		    "Sources3"
+	    DstPort		    1
+	  }
 	}
 	Line {
-	  SrcBlock		  "Demux1"
+	  ZOrder		  129
+	  SrcBlock		  "FFT"
 	  SrcPort		  2
-	  DstBlock		  "vectorial norm"
-	  DstPort		  2
-	}
-	Line {
-	  SrcBlock		  "Demux1"
-	  SrcPort		  3
-	  DstBlock		  "vectorial norm"
-	  DstPort		  3
-	}
-	Line {
-	  SrcBlock		  "Demux4"
-	  SrcPort		  1
-	  DstBlock		  "vectorial norm"
-	  DstPort		  4
-	}
-	Line {
-	  SrcBlock		  "Demux4"
-	  SrcPort		  2
-	  DstBlock		  "vectorial norm"
-	  DstPort		  5
-	}
-	Line {
-	  SrcBlock		  "Demux4"
-	  SrcPort		  3
-	  DstBlock		  "vectorial norm"
-	  DstPort		  6
-	}
-	Line {
-	  SrcBlock		  "vectorial norm"
-	  SrcPort		  1
-	  DstBlock		  "Sources5"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "Demux5"
-	  SrcPort		  1
-	  DstBlock		  "geometrial norm"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "Demux5"
-	  SrcPort		  2
-	  DstBlock		  "geometrial norm"
-	  DstPort		  2
-	}
-	Line {
-	  SrcBlock		  "Demux5"
-	  SrcPort		  3
-	  DstBlock		  "geometrial norm"
-	  DstPort		  3
-	}
-	Line {
-	  SrcBlock		  "Demux6"
-	  SrcPort		  1
-	  DstBlock		  "geometrial norm"
-	  DstPort		  4
-	}
-	Line {
-	  SrcBlock		  "Demux6"
-	  SrcPort		  2
-	  DstBlock		  "geometrial norm"
-	  DstPort		  5
-	}
-	Line {
-	  SrcBlock		  "Demux6"
-	  SrcPort		  3
-	  DstBlock		  "geometrial norm"
-	  DstPort		  6
-	}
-	Line {
-	  SrcBlock		  "geometrial norm"
-	  SrcPort		  1
-	  DstBlock		  "Sources6"
-	  DstPort		  1
+	  Points		  [74, 0]
+	  Branch {
+	    ZOrder		    133
+	    Points		    [0, 165]
+	    Branch {
+	      ZOrder		      138
+	      Points		      [0, 145]
+	      DstBlock		      "Demux4"
+	      DstPort		      1
+	    }
+	    Branch {
+	      ZOrder		      137
+	      DstBlock		      "Demux3"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    ZOrder		    132
+	    DstBlock		    "Sources2"
+	    DstPort		    1
+	  }
 	}
       }
     }
@@ -3309,11 +3541,12 @@ Model {
       Ports		      []
       Position		      [165, 475, 225, 499]
       ZOrder		      218
-      LibraryVersion	      "*1.2191"
+      LibraryVersion	      "1.2362"
       UserDataPersistent      on
       FontSize		      11
       SourceBlock	      "powerlib/powergui"
       SourceType	      "PSB option menu block"
+      ContentPreviewEnabled   off
       SimulationMode	      "Continuous"
       SolverType	      "Tustin"
       SampleTime	      "50e-6"
@@ -3325,6 +3558,8 @@ Model {
       SwTol		      "0"
       Interpol		      off
       DisplayEquations	      off
+      Ts		      "0"
+      methode		      off
       frequencyindice	      "0"
       Pbase		      "100e6"
       ErrMax		      "1e-4"
@@ -3355,11 +3590,10 @@ Model {
       frequencyindicesteady   "1"
       RmsSteady		      "1"
       display		      off
-      Ts		      "0"
-      methode		      off
     }
     Line {
       LineType		      "Connection"
+      ZOrder		      1
       SrcBlock		      "Series RLC Branch"
       SrcPort		      LConn1
       DstBlock		      "Transformator_station"
@@ -3367,6 +3601,7 @@ Model {
     }
     Line {
       LineType		      "Connection"
+      ZOrder		      2
       SrcBlock		      "Series RLC Branch2"
       SrcPort		      LConn1
       DstBlock		      "Transformator_station"
@@ -3374,6 +3609,7 @@ Model {
     }
     Line {
       LineType		      "Connection"
+      ZOrder		      3
       SrcBlock		      "Series RLC Branch1"
       SrcPort		      LConn1
       DstBlock		      "Transformator_station"
@@ -3381,6 +3617,7 @@ Model {
     }
     Line {
       LineType		      "Connection"
+      ZOrder		      4
       SrcBlock		      "Series RLC Branch"
       SrcPort		      RConn1
       Points		      [0, 65]
@@ -3409,20 +3646,19 @@ Model {
     }
   }
 }
-# Finite State Machines
+#Finite State Machines
 #
-#    Stateflow Version 7.6 (R2013a) dated Jan 19 2013, 14:32:03
+#   Stateflow Version 8.1 (R2014a) dated Feb  8 2014, 02:29:12
 #
 #
-
 Stateflow {
   machine {
     id			    1
     name		    "Symmetry_REAL_TIME"
     created		    "15-Dec-2014 14:03:44"
     isLibrary		    0
-    firstTarget		    38
-    sfVersion		    76014001.0015
+    firstTarget		    26
+    sfVersion		    76014001.002
   }
   chart {
     id			    2
@@ -3434,7 +3670,10 @@ Stateflow {
     firstTransition	    12
     firstJunction	    11
     viewObj		    2
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    10
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -3666,7 +3905,10 @@ Stateflow {
     firstTransition	    24
     firstJunction	    23
     viewObj		    14
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    10
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -3887,247 +4129,8 @@ Stateflow {
     machine		    1
     chart		    14
   }
-  chart {
-    id			    26
-    name		    "Transformator_station/geometrial norm"
-    windowPosition	    [357.331 483.407 167 391]
-    viewLimits		    [0 156.75 0 153.75]
-    screen		    [1 1 1280 1024 1.041050272174191]
-    treeNode		    [0 27 0 0]
-    firstTransition	    36
-    firstJunction	    35
-    viewObj		    26
-    visible		    1
-    machine		    1
-    subviewS {
-    }
-    ssIdHighWaterMark	    10
-    decomposition	    CLUSTER_CHART
-    type		    EML_CHART
-    firstData		    28
-    chartFileNumber	    3
-    disableImplicitCasting  1
-    eml {
-      name		      "fcn"
-    }
-  }
-  state {
-    id			    27
-    labelString		    "eML_blk_kernel()"
-    position		    [18 64.5 118 66]
-    fontSize		    12
-    chart		    26
-    treeNode		    [26 0 0 0]
-    superState		    SUBCHART
-    subviewer		    26
-    ssIdNumber		    1
-    type		    FUNC_STATE
-    decomposition	    CLUSTER_STATE
-    eml {
-      isEML		      1
-      script		      "function GEO_norm = fcn(amplitude_R,amplitude_S,amplitude_T,phase_R,phase_S,phase_T)\n%#codegen\n"
-      "\n        % Ideal parameters\n        Amplitude_1=[230,230,230];                     %[V]\n        Phase_1=[0,2/"
-      "3*pi,4/3*pi];                     %[rad]\n        %Frequency_1=[50,50,50];                       %[Hz]\n        "
-      "% Real parameters\n        Amplitude_2=[amplitude_R,amplitude_S,amplitude_T];\n        Phase_2=[phase_R,phase_S,"
-      "phase_T];\n        %Extension of the vectors with the first element to get closed triangles on\n        %plots a"
-      "nd for use as polygons\n        Amplitude_1_ex=[Amplitude_1 Amplitude_1(1)];\n        Phase_1_ex=[Phase_1 Phase_"
-      "1(1)];\n        Amplitude_2_ex=[Amplitude_2 Amplitude_2(1)];\n        Phase_2_ex=[Phase_2 Phase_2(1)];\n        "
-      "%Transforming to Cartesian coordinates\n        [x1,y1] = pol2cart(Phase_1_ex,Amplitude_1_ex);\n        [x2,y2] "
-      "= pol2cart(Phase_2_ex,Amplitude_2_ex);\n        [xa, ya] = polybool('union', x1, y1, x2, y2);\n        [xb, yb] "
-      "= polybool('intersection', x1, y1, x2, y2);\n        GEO_norm=polyarea(xa,ya)-polyarea(xb,yb);"
-      editorLayout	      "100 M4x1[10 5 700 500]"
-    }
-  }
-  data {
-    id			    28
-    ssIdNumber		    4
-    name		    "amplitude_R"
-    linkNode		    [26 0 29]
-    scope		    INPUT_DATA
-    machine		    1
-    props {
-      array {
-	size			"-1"
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-      }
-      complexity	      SF_COMPLEX_INHERITED
-    }
-    dataType		    "Inherit: Same as Simulink"
-  }
-  data {
-    id			    29
-    ssIdNumber		    5
-    name		    "GEO_norm"
-    linkNode		    [26 28 30]
-    scope		    OUTPUT_DATA
-    machine		    1
-    props {
-      array {
-	size			"-1"
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-      }
-      complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_NO
-    }
-    dataType		    "Inherit: Same as Simulink"
-  }
-  data {
-    id			    30
-    ssIdNumber		    6
-    name		    "amplitude_S"
-    linkNode		    [26 29 31]
-    scope		    INPUT_DATA
-    machine		    1
-    props {
-      array {
-	size			"-1"
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-      complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_INHERITED
-    }
-    dataType		    "Inherit: Same as Simulink"
-  }
-  data {
-    id			    31
-    ssIdNumber		    7
-    name		    "amplitude_T"
-    linkNode		    [26 30 32]
-    scope		    INPUT_DATA
-    machine		    1
-    props {
-      array {
-	size			"-1"
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-      complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_INHERITED
-    }
-    dataType		    "Inherit: Same as Simulink"
-  }
-  data {
-    id			    32
-    ssIdNumber		    8
-    name		    "phase_R"
-    linkNode		    [26 31 33]
-    scope		    INPUT_DATA
-    machine		    1
-    props {
-      array {
-	size			"-1"
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-      complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_INHERITED
-    }
-    dataType		    "Inherit: Same as Simulink"
-  }
-  data {
-    id			    33
-    ssIdNumber		    9
-    name		    "phase_S"
-    linkNode		    [26 32 34]
-    scope		    INPUT_DATA
-    machine		    1
-    props {
-      array {
-	size			"-1"
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-      complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_INHERITED
-    }
-    dataType		    "Inherit: Same as Simulink"
-  }
-  data {
-    id			    34
-    ssIdNumber		    10
-    name		    "phase_T"
-    linkNode		    [26 33 0]
-    scope		    INPUT_DATA
-    machine		    1
-    props {
-      array {
-	size			"-1"
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-      complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_INHERITED
-    }
-    dataType		    "Inherit: Same as Simulink"
-  }
-  junction {
-    id			    35
-    position		    [23.5747 49.5747 7]
-    chart		    26
-    linkNode		    [26 0 0]
-    subviewer		    26
-    ssIdNumber		    3
-    type		    CONNECTIVE_JUNCTION
-  }
-  transition {
-    id			    36
-    labelString		    "{eML_blk_kernel();}"
-    labelPosition	    [32.125 19.875 102.544 14.964]
-    fontSize		    12
-    src {
-      intersection	      [0 0 1 0 23.5747 14.625 0 0]
-    }
-    dst {
-      id		      35
-      intersection	      [1 0 -1 0 23.5747 42.5747 0 0]
-    }
-    midPoint		    [23.5747 24.9468]
-    chart		    26
-    linkNode		    [26 0 0]
-    dataLimits		    [21.175 25.975 14.625 42.575]
-    subviewer		    26
-    drawStyle		    SMART
-    slide {
-      sticky		      BOTH_STICK
-    }
-    executionOrder	    1
-    ssIdNumber		    2
-  }
-  instance {
-    id			    37
-    name		    "Transformator_station/geometrial norm"
-    machine		    1
-    chart		    26
-  }
   target {
-    id			    38
+    id			    26
     name		    "sfun"
     description		    "Default Simulink S-Function Target."
     machine		    1

@@ -51,9 +51,9 @@ end
 
 for s=1 : n
 tStart2=tic;
-   V_real(s,1)=amplitude.signals.values_c(s,1).*exp(1i*angle.signals.values(s,1)/360*2*pi);
-   V_real(s,2)=amplitude.signals.values_c(s,2).*exp(1i*angle.signals.values(s,2)/360*2*pi);
-   V_real(s,3)=amplitude.signals.values_c(s,3).*exp(1i*angle.signals.values(s,3)/360*2*pi); 
+   V_real(s,1)=amplitude.signals.values_c(s,1).*exp(1i*angle.signals.values(s,1));
+   V_real(s,2)=amplitude.signals.values_c(s,2).*exp(1i*angle.signals.values(s,2));
+   V_real(s,3)=amplitude.signals.values_c(s,3).*exp(1i*angle.signals.values(s,3)); 
    V_012(s,:)=A*V_real(s,:)';
    Ax(s,1)=(abs(V_012(s,3))/abs(V_012(s,2)))*100;
    A0x(s,1)=V_012(s,1)/V_012(s,2);
@@ -64,9 +64,9 @@ end
 
 for p=1 : n
    tStart3=tic;
-   R_error=230*exp(1j*0/360*2*pi)  -amplitude.signals.values*exp(1i*angle.signals.values(p,1)/360*2*pi);
-   S_error=230*exp(1j*120/360*2*pi)-amplitude.signals.values*exp(1i*angle.signals.values(p,2)/360*2*pi);
-   T_error=230*exp(1j*240/360*2*pi)-amplitude.signals.values*exp(1i*angle.signals.values(p,3)/360*2*pi);
+   R_error=230*exp(1j*0/360*2*pi)  -amplitude.signals.values*exp(1i*angle.signals.values(p,1));
+   S_error=230*exp(1j*120/360*2*pi)-amplitude.signals.values*exp(1i*angle.signals.values(p,2));
+   T_error=230*exp(1j*240/360*2*pi)-amplitude.signals.values*exp(1i*angle.signals.values(p,3));
    N(p)=R_error(p)*S_error(p)+R_error(p)*T_error(p)+S_error(p)*T_error(p);
    absN=abs(N);
    tElapsed_Vect(p)=toc(tStart3);

@@ -29,7 +29,7 @@ R_c=0.005;
 
 %% simulation parameters
 CLK=1000;
-tfin=1;
+tfin=0.5;
 sample=10e-5;
 paramNameValStruct.AbsTol         = '1e-9';
 paramNameValStruct.RelTol         = '1e-9';

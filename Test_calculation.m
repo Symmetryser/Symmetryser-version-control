@@ -23,29 +23,29 @@ ErrorSpace=zeros(1,n);
  
 % By geometry
 
-for i=1 : n
-   tStart1=tic;     
-        % Ideal parameters
-        Amplitude_1=[230*sqrt(2),230*sqrt(2),230*sqrt(2)];                     %[V]
-        Phase_1=[0,2/3*pi,4/3*pi];                     %[rad]
-        %Frequency_1=[50,50,50];                       %[Hz]
-        % Real parameters
-        Amplitude_2=amplitude.signals.values(i,:);
-        Phase_2=angle.signals.values(i,:);
-        %Extension of the vectors with the first element to get closed triangle.signals.valuess on
-        %plots and for use as polygons
-        Amplitude_1_ex=[Amplitude_1 Amplitude_1(1)];
-        Phase_1_ex=[Phase_1 Phase_1(1)];
-        Amplitude_2_ex=[Amplitude_2 Amplitude_2(1)];
-        Phase_2_ex=[Phase_2 Phase_2(1)];
-        %Transforming to Cartesian coordinates
-        [x1,y1] = pol2cart(Phase_1_ex,Amplitude_1_ex);
-        [x2,y2] = pol2cart(Phase_2_ex,Amplitude_2_ex);
-        [xa, ya] = polybool('union', x1, y1, x2, y2);
-        [xb, yb] = polybool('intersection', x1, y1, x2, y2);
-        ErrorSpace(i)=polyarea(xa,ya)-polyarea(xb,yb);
-    tElapsed_Geom(i)=toc(tStart1); 
-end
+% for i=1 : n
+%    tStart1=tic;     
+%         % Ideal parameters
+%         Amplitude_1=[230*sqrt(2),230*sqrt(2),230*sqrt(2)];                     %[V]
+%         Phase_1=[0,2/3*pi,4/3*pi];                     %[rad]
+%         %Frequency_1=[50,50,50];                       %[Hz]
+%         % Real parameters
+%         Amplitude_2=amplitude.signals.values(i,:);
+%         Phase_2=angle.signals.values(i,:);
+%         %Extension of the vectors with the first element to get closed triangle.signals.valuess on
+%         %plots and for use as polygons
+%         Amplitude_1_ex=[Amplitude_1 Amplitude_1(1)];
+%         Phase_1_ex=[Phase_1 Phase_1(1)];
+%         Amplitude_2_ex=[Amplitude_2 Amplitude_2(1)];
+%         Phase_2_ex=[Phase_2 Phase_2(1)];
+%         %Transforming to Cartesian coordinates
+%         [x1,y1] = pol2cart(Phase_1_ex,Amplitude_1_ex);
+%         [x2,y2] = pol2cart(Phase_2_ex,Amplitude_2_ex);
+%         [xa, ya] = polybool('union', x1, y1, x2, y2);
+%         [xb, yb] = polybool('intersection', x1, y1, x2, y2);
+%         ErrorSpace(i)=polyarea(xa,ya)-polyarea(xb,yb);
+%     tElapsed_Geom(i)=toc(tStart1); 
+% end
 
 % By regulation
 
@@ -55,22 +55,22 @@ tStart2=tic;
    V_real(s,2)=amplitude.signals.values_c(s,2).*exp(1i*angle.signals.values(s,2));
    V_real(s,3)=amplitude.signals.values_c(s,3).*exp(1i*angle.signals.values(s,3)); 
    V_012(s,:)=A*V_real(s,:)';
-   Ax(s,1)=(abs(V_012(s,3))/abs(V_012(s,2)))*100;
-   A0x(s,1)=V_012(s,1)/V_012(s,2);
+   Ax(s,1)=(abs(V_012(s,2))/abs(V_012(s,3)))*100;
+   %A0x(s,1)=V_012(s,1)/V_012(s,2);
    tElapsed_Regul(s)=toc(tStart2);
 end
 
 
 
-for p=1 : n
-   tStart3=tic;
-   R_error=230*exp(1j*0/360*2*pi)  -amplitude.signals.values*exp(1i*angle.signals.values(p,1));
-   S_error=230*exp(1j*120/360*2*pi)-amplitude.signals.values*exp(1i*angle.signals.values(p,2));
-   T_error=230*exp(1j*240/360*2*pi)-amplitude.signals.values*exp(1i*angle.signals.values(p,3));
-   N(p)=R_error(p)*S_error(p)+R_error(p)*T_error(p)+S_error(p)*T_error(p);
-   absN=abs(N);
-   tElapsed_Vect(p)=toc(tStart3);
-end
+% for p=1 : n
+%    tStart3=tic;
+%    R_error=230*exp(1j*0/360*2*pi)  -amplitude.signals.values*exp(1i*angle.signals.values(p,1));
+%    S_error=230*exp(1j*120/360*2*pi)-amplitude.signals.values*exp(1i*angle.signals.values(p,2));
+%    T_error=230*exp(1j*240/360*2*pi)-amplitude.signals.values*exp(1i*angle.signals.values(p,3));
+%    N(p)=R_error(p)*S_error(p)+R_error(p)*T_error(p)+S_error(p)*T_error(p);
+%    absN=abs(N);
+%    tElapsed_Vect(p)=toc(tStart3);
+% end
 
 
 figure

@@ -4,7 +4,7 @@ close all;
 
 % parameters
 Urms_Source=[230,230,230];
-Phase_Source=[0,2/3*pi,4/3*pi];
+Phase_Source=[0,-2/3*pi,-4/3*pi];
 a=exp(1i*(2*pi/3));
 a_square=exp(1i*(4*pi/3));
 %% FFT
@@ -21,7 +21,7 @@ s(2)=1;
 R=100;
 %L=0;
 L=0.01125;
-R_l=0.5;
+R_l=0.1;
 %C=0;
 C=5e-3;
 R_c=0.005;
@@ -29,7 +29,7 @@ R_c=0.005;
 
 %% simulation parameters
 CLK=1000;
-tfin=0.5;
+tfin=1;
 sample=10e-5;
 paramNameValStruct.AbsTol         = '1e-9';
 paramNameValStruct.RelTol         = '1e-9';

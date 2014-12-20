@@ -5,8 +5,6 @@ close all;
 % parameters
 Urms_Source=[230,230,230];
 Phase_Source=[0,-2/3*pi,-4/3*pi];
-a=exp(1i*(2*pi/3));
-a_square=exp(1i*(4*pi/3));
 %% FFT
 s=zeros(1,128);
 s(2)=1;
@@ -29,7 +27,7 @@ R_c=0.005;
 
 %% simulation parameters
 CLK=1000;
-tfin=1;
+tfin=0.5;
 sample=10e-5;
 paramNameValStruct.AbsTol         = '1e-9';
 paramNameValStruct.RelTol         = '1e-9';
@@ -39,9 +37,9 @@ sim('Symmetry_REAL_TIME');
 
 figure
 %Voltage Source 
-plot(Voltage_Sources.time,Voltage_Sources.signals.values(:,1),...
-    Voltage_Sources.time,Voltage_Sources.signals.values(:,2),...
-    Voltage_Sources.time,Voltage_Sources.signals.values(:,3))
+plot(V_conn.time,V_conn.signals.values(:,1),...
+    V_conn.time,V_conn.signals.values(:,2),...
+    V_conn.time,V_conn.signals.values(:,3))
 grid on
 title('Source Voltage')
 xlabel('t')
@@ -67,21 +65,28 @@ title('amplitude')
 xlabel('t')
 ylabel('V')
 
+%Indicator norms
 figure
-%Voltage Source 
-plot(REG.time,REG.signals.values(:,1))
-    
-grid on
-title('Regular norm')
+plot(REG.time,REG.signals.values(:,1),...
+     VEC.time,VEC.signals.values(:,1)*1e-3,...
+     GEO.time,GEO.signals.values(:,1)*1e-3), grid on
 xlabel('t')
-ylabel('[%]')
+legend('A_x','VEC*1e-2','GEO*1e-3')
 
-
-figure
-%Voltage Source 
-plot(VEC.time,VEC.signals.values(:,1))
-    
-grid on
-title('Vectorial norm')
-xlabel('t')
-ylabel('[%]')
+% figure
+% plot(REG.time,REG.signals.values(:,1)),grid on
+% title('Regular norm')
+% xlabel('t')
+% ylabel('[%]')
+% 
+% figure 
+% plot(VEC.time,VEC.signals.values(:,1)),grid on
+% title('Vectorial norm')
+% xlabel('t')
+% ylabel('[%]')
+% 
+% figure
+% plot(GEO.time,GEO.signals.values(:,1)),grid on
+% title('Geometrial norm')
+% xlabel('t')
+% ylabel('[%]')

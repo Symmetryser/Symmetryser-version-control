@@ -27,46 +27,10 @@ R_Network=[0.4, 0.4, 0.4, 0.4];                     %[Ohm]
 L_Network=[3.185e-3, 3.185e-3, 3.185e-3, 3.185e-3]; %[H]
 C_Network=[0, 0, 0];                                %[F]
 
-%% Control_Current 
-% Butterworth_filter_order=8;
-% Butterworth_passband_frequency=5000;
-% Control_Current_frequency=[20,     30,     40];       %[Hz]
-% Control_Current_Amplitude=[0,     0,     0];       %[A]
-% Control_Current_Phase=    [0,      2/3*pi, 4/3*pi];   %[rad]
-% Control_Current_DC=       [0,      0,      0];        %[A]
+% %% Control_Current 
+Butterworth_filter_order=8;
+Butterworth_passband_frequency=5000;
 
-%Input dialog
-        prompt = {'Enter the 3 phase Control current frequencies:','Enter the 3 phase Control current amplitudes:','Enter the 3 phase Control current phases:','Enter the 3 phase Control current DC components:'};
-        dlg_title = 'Control current parameters';
-        num_lines = 1;
-        defAns = {'50 50 50','0 0 0','0 2/3*pi 4/3*pi','0 0 0'};
-        options = 'off';
-        answer = inputdlg(prompt,dlg_title,num_lines,defAns,options);
-        % Error handling
-        for i=1:4
-            if(max(size(str2num(answer{i})))~=3)
-                errordlg('The control Current elements must consist of three scalars separated by space!')
-            end
-        end
-        Control_Current_frequency = str2num(answer{1});       %[Hz]
-        Control_Current_Amplitude = str2num(answer{2});       %[A]
-        Control_Current_Phase = str2num(answer{3});   %[rad]
-        Control_Current_DC = str2num(answer{4});        %[A]
-        %%%Create parameter matrx%%%
-        CC_mtx=[Control_Current_Amplitude', Control_Current_frequency',...
-                Control_Current_Phase', Control_Current_DC'];
-        %%% Generate Control_Current function %%%
-        t=t';
-        T=100;
-        size_t=size(t);
-        Control_Current.time=t;
-        CC=[(CC_mtx(1,1)*sin(2*pi*CC_mtx(1,2)*t+CC_mtx(1,3))+CC_mtx(1,4)).*(1-exp(-t/T)),...
-            (CC_mtx(2,1)*sin(2*pi*CC_mtx(2,2)*t+CC_mtx(2,3))+CC_mtx(2,4)).*(1-exp(-t/T)),...
-            (CC_mtx(3,1)*sin(2*pi*CC_mtx(3,2)*t+CC_mtx(3,3))+CC_mtx(3,4)).*(1-exp(-t/T))];
-%         CC=[CC_mtx(1,1)*sin(2*pi*CC_mtx(1,2)*t+CC_mtx(1,3))+CC_mtx(1,4),...
-%             CC_mtx(2,1)*sin(2*pi*CC_mtx(2,2)*t+CC_mtx(2,3))+CC_mtx(2,4),...
-%             CC_mtx(3,1)*sin(2*pi*CC_mtx(3,2)*t+CC_mtx(3,3))+CC_mtx(3,4)];
-        Control_Current.signals.values=CC;
 
 %% Network Loads
 Load_Wire_Resistance=[0.1,0.2];                     %[Ohm]
@@ -93,11 +57,11 @@ Switch_Load_RC=[0,0,1];                             %[Boolean]
          %Inductive_Load_Switching_Sequence=Inductive_Load_Switching_Sequence_';
          Inductive_Load_Switching_Sequence=ones(3,tfin/Inductive_Load_Switching_Speed(1))';
          %%%Capacitive Loads%%%
-         Capacitive_Load_R_RC=[30e-3,  60e-3,  40e-3;...  %[Ohm]
+         Capacitive_Load_R_RC=[60e-3,  120e-3,  80e-3;...  %[Ohm]
                                1e-3, 5e-3, 3e-3];  %[F]
-         Capacitive_Load_S_RC=[30e-3,  60e-3,  40e-3;...  %[Ohm]
+         Capacitive_Load_S_RC=[60e-3,  120e-3,  80e-3;...  %[Ohm]
                                1e-3, 5e-3, 3e-3];  %[F]
-         Capacitive_Load_T_RC=[30e-3,  60e-3,  40e-3;...  %[Ohm]
+         Capacitive_Load_T_RC=[60e-3,  120e-3,  80e-3;...  %[Ohm]
                                1e-3, 5e-3, 3e-3];  %[F]
          %%%Randomised Switching Sequence%%%
          Capacitive_Load_R_Switching_Speed=[0.01,0.01,0.01];%[s]
@@ -140,6 +104,19 @@ Switch_Load_RC=[0,0,1];                             %[Boolean]
          Capacitive_Load_S_Switching_Sequence=ones(3,tfin/Capacitive_Load_R_Switching_Speed(1))';
          Capacitive_Load_T_Switching_Sequence=ones(3,tfin/Capacitive_Load_R_Switching_Speed(1))';
                       
+%% Controller
+Start_Control=10;
+P_gain=0.01;
+step_size =     [5,5,5,...          %amp
+                 0.16,0.16,0.16];   %phase
+test_step =     [1,1,1,...          %amp
+                 0.08,0.08,0.08];   %phase   
+initial_value = [1,1,1,...          %amp
+                 0,-2/3*pi,-4/3*pi];%phase
+
+amp_feedback_saturation=400;
+phase_feedback_saturation=pi;
+
 
 %% Simulation
         paramNameValStruct.AbsTol         = '1e-9';
@@ -211,6 +188,16 @@ title('amplitude')
 xlabel('t')
 ylabel('V')
 
+figure
+%Voltage Source 
+plot(CC.time,CC.signals.values(:,1),...
+    CC.time,CC.signals.values(:,2),...
+    CC.time,CC.signals.values(:,3))
+grid on
+title('CC')
+xlabel('t')
+ylabel('A')
+
 %Indicator norms
 figure
 plot(REG.time,REG.signals.values(:,1),...
@@ -234,80 +221,80 @@ t_axis_switch=t_axis_switch';
 
 
         
-%% Save variables
-    VR=[t,V.signals.values(:,1)];
-    VS=[t,V.signals.values(:,2)];
-    VT=[t,V.signals.values(:,3)];
-    
-    VrmsR=[t,Vrms.signals.values(:,1)];
-    VrmsS=[t,Vrms.signals.values(:,2)];
-    VrmsT=[t,Vrms.signals.values(:,3)];
-   
-    angleR=[t,szogt(:,1)];
-    angleS=[t,szogt(:,2)];
-    angleT=[t,szogt(:,3)];
-    
-    CCR=[t,Control_Current_Values.signals.values(:,1)];
-    CCS=[t,Control_Current_Values.signals.values(:,2)];
-    CCT=[t,Control_Current_Values.signals.values(:,3)];
-
-% Save variables form 0.5s to 0.6s (késõbb dialógus ablakot bele!)
-    
-  prompt = {'Enter the START time of data log','Enter the END time of data log'};
-        dlg_title = 'Logging parameters';
-        num_lines = 1;
-        defAns = {'0.8','1'};
-        options = 'off';
-        answer = inputdlg(prompt,dlg_title,num_lines,defAns,options);
-%        Error handling
-        if str2num(answer{2})>max(Vrms.time) 
-                errordlg('Time out of time range!')
-        end
-        if str2num(answer{1})>=str2num(answer{2})
-                errordlg('No valid range of data!')
-        end
-        
-        logstart = str2num(answer{1})/sample;
-        logend =  str2num(answer{2})/sample;
-        logstart_switch = round((str2num(answer{1})/sample)*Capacitive_Load_R_Switching_Speed(1));
-        logend_switch =  round((str2num(answer{2})/sample)*Capacitive_Load_R_Switching_Speed(1));
-
-    VR=[t(logstart:logend),V.signals.values((logstart:logend),1)];
-    VS=[t(logstart:logend),V.signals.values((logstart:logend),2)];
-    VT=[t(logstart:logend),V.signals.values((logstart:logend),3)];
-    
-    VrmsR=[t(logstart:logend),Vrms.signals.values((logstart:logend),1)];
-    VrmsS=[t(logstart:logend),Vrms.signals.values((logstart:logend),2)];
-    VrmsT=[t(logstart:logend),Vrms.signals.values((logstart:logend),3)];
-   
-    angleR=[t(logstart:logend),szogt((logstart:logend),1)];
-    angleS=[t(logstart:logend),szogt((logstart:logend),2)];
-    angleT=[t(logstart:logend),szogt((logstart:logend),3)];
-    
-    CCR=[t(logstart:logend),Control_Current_Values.signals.values((logstart:logend),1)];
-    CCS=[t(logstart:logend),Control_Current_Values.signals.values((logstart:logend),2)];
-    CCT=[t(logstart:logend),Control_Current_Values.signals.values((logstart:logend),3)];
-    
-    CapacityAmountR=[t_axis_switch(logstart_switch:logend_switch),UsedCapacitanceR(logstart_switch:logend_switch)];
-    CapacityAmountS=[t_axis_switch(logstart_switch:logend_switch),UsedCapacitanceS(logstart_switch:logend_switch)];
-    CapacityAmountT=[t_axis_switch(logstart_switch:logend_switch),UsedCapacitanceT(logstart_switch:logend_switch)];
-    
-    save('Measurements/VoltageR.dat','VR','-ascii');
-    save('Measurements/VoltageS.dat','VS','-ascii');
-    save('Measurements/VoltageT.dat','VT','-ascii');
-    
-    save('Measurements/VrmsR.dat','VrmsR','-ascii');
-    save('Measurements/VrmsS.dat','VrmsS','-ascii');
-    save('Measurements/VrmsT.dat','VrmsT','-ascii');
-    
-    save('Measurements/angleR.dat','angleR','-ascii');
-    save('Measurements/angleS.dat','angleS','-ascii');
-    save('Measurements/angleT.dat','angleT','-ascii');
-    
-    save('Measurements/ConnectionCurrentR.dat','CCR','-ascii');
-    save('Measurements/ConnectionCurrentS.dat','CCS','-ascii');
-    save('Measurements/ConnectionCurrentT.dat','CCT','-ascii');
-    
-    save('Measurements/CapacityAmountR.dat','CapacityAmountR','-ascii');
-    save('Measurements/CapacityAmountS.dat','CapacityAmountS','-ascii');
-    save('Measurements/CapacityAmountT.dat','CapacityAmountT','-ascii');
+% %% Save variables
+%     VR=[t,V.signals.values(:,1)];
+%     VS=[t,V.signals.values(:,2)];
+%     VT=[t,V.signals.values(:,3)];
+%     
+%     VrmsR=[t,Vrms.signals.values(:,1)];
+%     VrmsS=[t,Vrms.signals.values(:,2)];
+%     VrmsT=[t,Vrms.signals.values(:,3)];
+%    
+%     angleR=[t,szogt(:,1)];
+%     angleS=[t,szogt(:,2)];
+%     angleT=[t,szogt(:,3)];
+%     
+%     CCR=[t,Control_Current_Values.signals.values(:,1)];
+%     CCS=[t,Control_Current_Values.signals.values(:,2)];
+%     CCT=[t,Control_Current_Values.signals.values(:,3)];
+% 
+% % Save variables form 0.5s to 0.6s (késõbb dialógus ablakot bele!)
+%     
+%   prompt = {'Enter the START time of data log','Enter the END time of data log'};
+%         dlg_title = 'Logging parameters';
+%         num_lines = 1;
+%         defAns = {'0.8','1'};
+%         options = 'off';
+%         answer = inputdlg(prompt,dlg_title,num_lines,defAns,options);
+% %        Error handling
+%         if str2num(answer{2})>max(Vrms.time) 
+%                 errordlg('Time out of time range!')
+%         end
+%         if str2num(answer{1})>=str2num(answer{2})
+%                 errordlg('No valid range of data!')
+%         end
+%         
+%         logstart = str2num(answer{1})/sample;
+%         logend =  str2num(answer{2})/sample;
+%         logstart_switch = round((str2num(answer{1})/sample)*Capacitive_Load_R_Switching_Speed(1));
+%         logend_switch =  round((str2num(answer{2})/sample)*Capacitive_Load_R_Switching_Speed(1));
+% 
+%     VR=[t(logstart:logend),V.signals.values((logstart:logend),1)];
+%     VS=[t(logstart:logend),V.signals.values((logstart:logend),2)];
+%     VT=[t(logstart:logend),V.signals.values((logstart:logend),3)];
+%     
+%     VrmsR=[t(logstart:logend),Vrms.signals.values((logstart:logend),1)];
+%     VrmsS=[t(logstart:logend),Vrms.signals.values((logstart:logend),2)];
+%     VrmsT=[t(logstart:logend),Vrms.signals.values((logstart:logend),3)];
+%    
+%     angleR=[t(logstart:logend),szogt((logstart:logend),1)];
+%     angleS=[t(logstart:logend),szogt((logstart:logend),2)];
+%     angleT=[t(logstart:logend),szogt((logstart:logend),3)];
+%     
+%     CCR=[t(logstart:logend),Control_Current_Values.signals.values((logstart:logend),1)];
+%     CCS=[t(logstart:logend),Control_Current_Values.signals.values((logstart:logend),2)];
+%     CCT=[t(logstart:logend),Control_Current_Values.signals.values((logstart:logend),3)];
+%     
+%     CapacityAmountR=[t_axis_switch(logstart_switch:logend_switch),UsedCapacitanceR(logstart_switch:logend_switch)];
+%     CapacityAmountS=[t_axis_switch(logstart_switch:logend_switch),UsedCapacitanceS(logstart_switch:logend_switch)];
+%     CapacityAmountT=[t_axis_switch(logstart_switch:logend_switch),UsedCapacitanceT(logstart_switch:logend_switch)];
+%     
+%     save('Measurements/VoltageR.dat','VR','-ascii');
+%     save('Measurements/VoltageS.dat','VS','-ascii');
+%     save('Measurements/VoltageT.dat','VT','-ascii');
+%     
+%     save('Measurements/VrmsR.dat','VrmsR','-ascii');
+%     save('Measurements/VrmsS.dat','VrmsS','-ascii');
+%     save('Measurements/VrmsT.dat','VrmsT','-ascii');
+%     
+%     save('Measurements/angleR.dat','angleR','-ascii');
+%     save('Measurements/angleS.dat','angleS','-ascii');
+%     save('Measurements/angleT.dat','angleT','-ascii');
+%     
+%     save('Measurements/ConnectionCurrentR.dat','CCR','-ascii');
+%     save('Measurements/ConnectionCurrentS.dat','CCS','-ascii');
+%     save('Measurements/ConnectionCurrentT.dat','CCT','-ascii');
+%     
+%     save('Measurements/CapacityAmountR.dat','CapacityAmountR','-ascii');
+%     save('Measurements/CapacityAmountS.dat','CapacityAmountS','-ascii');
+%     save('Measurements/CapacityAmountT.dat','CapacityAmountT','-ascii');

@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.54"
+    ComputedModelVersion    "1.55"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -64,7 +64,7 @@ Model {
 	Dimension		3
 	Object {
 	  $ObjectID		  6
-	  IsActive		  [0]
+	  IsActive		  [1]
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
 	  Extents		  [1328.0, 567.0]
@@ -82,12 +82,12 @@ Model {
 	}
 	Object {
 	  $ObjectID		  8
-	  IsActive		  [1]
+	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "1780"
 	  Extents		  [1328.0, 567.0]
 	  ZoomFactor		  [0.8]
-	  Offset		  [532.04137487897412, 195.30115921101878]
+	  Offset		  [532.041374878974, 195.30115921101878]
 	}
 	PropName		"EditorsInfo"
       }
@@ -102,9 +102,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Neukirchner László"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Jan 07 13:58:10 2015"
-  RTWModifiedTimeStamp	  342539404
-  ModelVersionFormat	  "1.%<AutoIncrement:54>"
+  LastModifiedDate	  "Wed Jan 07 14:29:49 2015"
+  RTWModifiedTimeStamp	  342540821
+  ModelVersionFormat	  "1.%<AutoIncrement:55>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -5088,8 +5088,8 @@ Model {
 	      Position		      [2910, 644, 2940, 676]
 	      ZOrder		      1553
 	      Floating		      off
-	      Location		      [-30, 77, 466, 465]
-	      Open		      on
+	      Location		      [6, 77, 502, 465]
+	      Open		      off
 	      NumInputPorts	      "1"
 	      List {
 		ListType		AxesTitles
@@ -14781,7 +14781,7 @@ Model {
     }
     Line {
       SrcBlock		      "Calculate_Norms"
-      SrcPort		      2
+      SrcPort		      3
       Points		      [75, 0]
       DstBlock		      "Control Current"
       DstPort		      1
@@ -15528,10 +15528,7 @@ Stateflow {
     firstTransition	    45
     firstJunction	    44
     viewObj		    38
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    11
     decomposition	    CLUSTER_CHART
     type		    EML_CHART

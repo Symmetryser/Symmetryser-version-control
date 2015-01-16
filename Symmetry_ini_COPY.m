@@ -4,7 +4,7 @@ close all;
 
 %% Simulation initialisation parameters
 CLK=1000;                                           %[sample/s]
-tfin=1;                                           %[s]
+tfin=5;                                           %[s]
 sample=10e-5;                                       %[s/sample]
 t=0:sample:tfin;                                    %[tick]
 %% FFT
@@ -107,8 +107,8 @@ Switch_Load_RC=[0,0,1];                             %[Boolean]
 %% Controller
 Start_Control=0.1;
 P_gain=0.01;
-step_size =     [5,5,5,...          %amp
-                 0.32,0.32,0.32];   %phase
+step_size =     [1,1,1,...          %amp
+                 0.16,0.16,0.16];   %phase
 test_step =     [1,1,1,...          %amp
                  0.08,0.08,0.08];   %phase   
 initial_value = [1,1,1,...          %amp

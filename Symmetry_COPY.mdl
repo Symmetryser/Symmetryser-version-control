@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.53"
+    ComputedModelVersion    "1.55"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -64,21 +64,21 @@ Model {
 	Dimension		3
 	Object {
 	  $ObjectID		  6
-	  IsActive		  [0]
+	  IsActive		  [1]
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
 	  Extents		  [1334.0, 581.0]
-	  ZoomFactor		  [1.0]
-	  Offset		  [18.0, -23.851198180386543]
+	  ZoomFactor		  [1.25]
+	  Offset		  [40.600000000000016, -57.651198180386523]
 	}
 	Object {
 	  $ObjectID		  7
-	  IsActive		  [1]
+	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "2497"
+	  LoadSaveID		  "2184"
 	  Extents		  [1334.0, 581.0]
 	  ZoomFactor		  [0.8]
-	  Offset		  [-103.77236885028515, 110.67220008994678]
+	  Offset		  [1222.5, 126.46012660097868]
 	}
 	Object {
 	  $ObjectID		  8
@@ -87,7 +87,7 @@ Model {
 	  LoadSaveID		  "1780"
 	  Extents		  [1334.0, 581.0]
 	  ZoomFactor		  [1.25]
-	  Offset		  [835.66596299027412, 270.60813690585388]
+	  Offset		  [835.66596299027412, 270.60813690585383]
 	}
 	PropName		"EditorsInfo"
       }
@@ -102,9 +102,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Templomos"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sun Dec 28 19:30:23 2014"
-  RTWModifiedTimeStamp	  341695417
-  ModelVersionFormat	  "1.%<AutoIncrement:53>"
+  LastModifiedDate	  "Sun Jan 18 23:05:18 2015"
+  RTWModifiedTimeStamp	  343517298
+  ModelVersionFormat	  "1.%<AutoIncrement:55>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1129,9 +1129,9 @@ Model {
     TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "100"
+    ZoomFactor		    "125"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "2512"
+    SIDHighWatermark	    "2515"
     Block {
       BlockType		      SubSystem
       Name		      "Calculate_Norms"
@@ -3643,7 +3643,7 @@ Model {
 	      BlockType		      PMIOPort
 	      Name		      "Conn1"
 	      SID		      "2172"
-	      Position		      [791, 93, 821, 107]
+	      Position		      [790, 93, 820, 107]
 	      ZOrder		      516
 	      BlockMirror	      on
 	      Port		      "1"
@@ -3653,7 +3653,7 @@ Model {
 	      BlockType		      PMIOPort
 	      Name		      "Conn2"
 	      SID		      "2173"
-	      Position		      [791, 138, 821, 152]
+	      Position		      [790, 138, 820, 152]
 	      ZOrder		      517
 	      BlockMirror	      on
 	      Port		      "2"
@@ -3663,7 +3663,7 @@ Model {
 	      BlockType		      PMIOPort
 	      Name		      "Conn3"
 	      SID		      "2174"
-	      Position		      [791, 183, 821, 197]
+	      Position		      [790, 183, 820, 197]
 	      ZOrder		      518
 	      BlockMirror	      on
 	      Port		      "3"
@@ -3673,7 +3673,7 @@ Model {
 	      BlockType		      PMIOPort
 	      Name		      "Conn4"
 	      SID		      "2175"
-	      Position		      [791, 223, 821, 237]
+	      Position		      [790, 223, 820, 237]
 	      ZOrder		      519
 	      BlockMirror	      on
 	      Port		      "4"
@@ -3698,7 +3698,7 @@ Model {
 		  ConnectType		  "DEST_DEST"
 		  SrcBlock		  "Conn4"
 		  SrcPort		  RConn1
-		  Points		  [-456, 0; 0, -35]
+		  Points		  [-456, 0; 1, -35]
 		}
 		Branch {
 		  ConnectType		  "DEST_SRC"
@@ -4011,7 +4011,7 @@ Model {
 	  System {
 	    Name		    "Subsystem"
 	    Location		    [-1, 31, 1377, 775]
-	    Open		    off
+	    Open		    on
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -4042,7 +4042,7 @@ Model {
 	      System {
 		Name			"Create_Date"
 		Location		[-1, 31, 1377, 775]
-		Open			on
+		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -4110,13 +4110,12 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "Cp3"
-		  SID			  "2508"
+		  SID			  "2514"
 		  Ports			  [1, 1]
-		  Position		  [1015, 590, 1045, 620]
-		  ZOrder		  1546
+		  Position		  [950, 505, 980, 535]
+		  ZOrder		  1552
 		  BlockRotation		  270
 		  BlockMirror		  on
-		  NamePlacement		  "alternate"
 		  LibraryVersion	  "1.287"
 		  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
 		  SourceType		  "Compare To Constant"
@@ -4179,21 +4178,6 @@ Model {
 		  Ports			  [1, 1, 0, 1]
 		  Position		  [380, 344, 430, 386]
 		  ZOrder		  691
-		  LibraryVersion	  "1.735"
-		  SourceBlock		  "dspsigops/Sample\nand Hold"
-		  SourceType		  "Sample and Hold"
-		  ContentPreviewEnabled	  off
-		  trig			  "Rising edge"
-		  initCond		  "18"
-		  latchinput		  off
-		}
-		Block {
-		  BlockType		  Reference
-		  Name			  "Energy1"
-		  SID			  "2507"
-		  Ports			  [1, 1, 0, 1]
-		  Position		  [1005, 644, 1055, 686]
-		  ZOrder		  1545
 		  LibraryVersion	  "1.735"
 		  SourceBlock		  "dspsigops/Sample\nand Hold"
 		  SourceType		  "Sample and Hold"
@@ -4269,6 +4253,21 @@ Model {
 		  latchinput		  off
 		}
 		Block {
+		  BlockType		  Reference
+		  Name			  "I1"
+		  SID			  "2515"
+		  Ports			  [1, 1, 0, 1]
+		  Position		  [940, 559, 990, 601]
+		  ZOrder		  1551
+		  LibraryVersion	  "1.735"
+		  SourceBlock		  "dspsigops/Sample\nand Hold"
+		  SourceType		  "Sample and Hold"
+		  ContentPreviewEnabled	  off
+		  trig			  "Rising edge"
+		  initCond		  "0"
+		  latchinput		  off
+		}
+		Block {
 		  BlockType		  Mux
 		  Name			  "Mux2"
 		  SID			  "2154"
@@ -4294,7 +4293,7 @@ Model {
 		  SourceType		  "Repeating Sequence Stair"
 		  ContentPreviewEnabled	  off
 		  OutValues		  "[1 2 3 4 5].'"
-		  tsamp			  "sample"
+		  tsamp			  "contol_sample"
 		  OutMin		  "[]"
 		  OutMax		  "[]"
 		  OutDataTypeStr	  "float('double')"
@@ -4309,10 +4308,10 @@ Model {
 		  Name			  "Scope"
 		  SID			  "2312"
 		  Ports			  [1]
-		  Position		  [1160, 729, 1190, 761]
+		  Position		  [1155, 564, 1185, 596]
 		  ZOrder		  1522
 		  Floating		  off
-		  Location		  [1, 45, 1367, 739]
+		  Location		  [5, 45, 1371, 739]
 		  Open			  off
 		  NumInputPorts		  "1"
 		  List {
@@ -4360,36 +4359,6 @@ Model {
 		  }
 		  ShowLegends		  off
 		  SaveName		  "ScopeData7"
-		  DataFormat		  "StructureWithTime"
-		  SampleTime		  "0"
-		}
-		Block {
-		  BlockType		  Scope
-		  Name			  "Scope7"
-		  SID			  "2341"
-		  Ports			  [1]
-		  Position		  [975, 729, 1005, 761]
-		  ZOrder		  1524
-		  Floating		  off
-		  Location		  [188, 390, 512, 629]
-		  Open			  off
-		  NumInputPorts		  "1"
-		  List {
-		    ListType		    AxesTitles
-		    axes1		    "%<SignalLabel>"
-		  }
-		  List {
-		    ListType		    ScopeGraphics
-		    FigureColor		    "[0.5 0.5 0.5]"
-		    AxesColor		    "[0 0 0]"
-		    AxesTickColor	    "[1 1 1]"
-		    LineColors		    "[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
-		    LineStyles		    "-|-|-|-|-|-"
-		    LineWidths		    "[0.5 0.5 0.5 0.5 0.5 0.5]"
-		    MarkerStyles	    "none|none|none|none|none|none"
-		  }
-		  ShowLegends		  off
-		  SaveName		  "ScopeData6"
 		  DataFormat		  "StructureWithTime"
 		  SampleTime		  "0"
 		}
@@ -4534,7 +4503,7 @@ Model {
 		  SourceType		  "Repeating Sequence Stair"
 		  ContentPreviewEnabled	  off
 		  OutValues		  "[-1 0 1 0 0].'"
-		  tsamp			  "0.02"
+		  tsamp			  "updown_switch"
 		  OutMin		  "[]"
 		  OutMax		  "[]"
 		  OutDataTypeStr	  "float('double')"
@@ -4559,7 +4528,7 @@ Model {
 		  BlockType		  Outport
 		  Name			  "Controller_data"
 		  SID			  "2499"
-		  Position		  [1224, 293, 1254, 307]
+		  Position		  [1225, 293, 1255, 307]
 		  ZOrder		  1544
 		  IconDisplay		  "Port number"
 		}
@@ -4787,33 +4756,6 @@ Model {
 		  }
 		}
 		Line {
-		  ZOrder		  413
-		  SrcBlock		  "Sum6"
-		  SrcPort		  1
-		  Points		  [107, 0]
-		  Branch {
-		    ZOrder		    599
-		    Points		    [0, 85]
-		    Branch {
-		    ZOrder		    594
-		    DstBlock		    "Energy1"
-		    DstPort		    1
-		    }
-		    Branch {
-		    ZOrder		    592
-		    Points		    [0, 80]
-		    DstBlock		    "Scope7"
-		    DstPort		    1
-		    }
-		  }
-		  Branch {
-		    ZOrder		    593
-		    Points		    [88, 0]
-		    DstBlock		    "Cp3"
-		    DstPort		    1
-		  }
-		}
-		Line {
 		  ZOrder		  603
 		  SrcBlock		  "on/off"
 		  SrcPort		  1
@@ -4845,31 +4787,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  595
-		  SrcBlock		  "Energy1"
-		  SrcPort		  1
-		  Points		  [26, 0]
-		  Branch {
-		    ZOrder		    598
-		    Points		    [0, -265]
-		    DstBlock		    "Mux2"
-		    DstPort		    5
-		  }
-		  Branch {
-		    ZOrder		    597
-		    Points		    [0, 80]
-		    DstBlock		    "Scope"
-		    DstPort		    1
-		  }
-		}
-		Line {
-		  ZOrder		  596
-		  SrcBlock		  "Cp3"
-		  SrcPort		  1
-		  DstBlock		  "Energy1"
-		  DstPort		  trigger
-		}
-		Line {
 		  ZOrder		  600
 		  SrcBlock		  "const"
 		  SrcPort		  1
@@ -4889,6 +4806,47 @@ Model {
 		  SrcPort		  1
 		  DstBlock		  "on/off"
 		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  648
+		  SrcBlock		  "Sum6"
+		  SrcPort		  1
+		  Points		  [90, 0]
+		  Branch {
+		    ZOrder		    651
+		    Points		    [1, 0; 0, -96; 39, 0]
+		    DstBlock		    "Cp3"
+		    DstPort		    1
+		  }
+		  Branch {
+		    ZOrder		    650
+		    DstBlock		    "I1"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  ZOrder		  649
+		  SrcBlock		  "Cp3"
+		  SrcPort		  1
+		  DstBlock		  "I1"
+		  DstPort		  trigger
+		}
+		Line {
+		  ZOrder		  653
+		  SrcBlock		  "I1"
+		  SrcPort		  1
+		  Points		  [69, 0]
+		  Branch {
+		    ZOrder		    655
+		    DstBlock		    "Scope"
+		    DstPort		    1
+		  }
+		  Branch {
+		    ZOrder		    654
+		    Points		    [0, -180]
+		    DstBlock		    "Mux2"
+		    DstPort		    5
+		  }
 		}
 	      }
 	    }
@@ -5042,7 +5000,7 @@ Model {
 		  SourceType		  "Repeating Sequence Stair"
 		  ContentPreviewEnabled	  off
 		  OutValues		  "[0 0 0 0 1 0].'"
-		  tsamp			  "sample"
+		  tsamp			  "contol_sample"
 		  OutMin		  "[]"
 		  OutMax		  "[]"
 		  OutDataTypeStr	  "float('double')"
@@ -5277,10 +5235,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  2
 		  SrcBlock		  "Product12"
 		  SrcPort		  1
@@ -5288,10 +5242,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  3
 		  SrcBlock		  "Product8"
 		  SrcPort		  1
@@ -5309,10 +5259,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  35
 		  SrcBlock		  "Delay"
 		  SrcPort		  1
@@ -5320,10 +5266,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  7
 		  SrcBlock		  "I3\ninit "
 		  SrcPort		  1
@@ -5331,10 +5273,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  8
 		  SrcBlock		  "Delay4"
 		  SrcPort		  1
@@ -5343,10 +5281,6 @@ Model {
 		  DstPort		  3
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  9
 		  SrcBlock		  "Demux2"
 		  SrcPort		  5
@@ -5354,10 +5288,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  10
 		  SrcBlock		  "Demux2"
 		  SrcPort		  4
@@ -5366,10 +5296,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  11
 		  SrcBlock		  "Demux2"
 		  SrcPort		  3
@@ -5388,10 +5314,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  14
 		  SrcBlock		  "Demux2"
 		  SrcPort		  2
@@ -5400,10 +5322,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  15
 		  SrcBlock		  "Demux2"
 		  SrcPort		  1
@@ -5412,10 +5330,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  16
 		  SrcBlock		  "I3\nStep"
 		  SrcPort		  1
@@ -5424,10 +5338,6 @@ Model {
 		  DstPort		  3
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  17
 		  SrcBlock		  "Cp3"
 		  SrcPort		  1
@@ -5436,10 +5346,6 @@ Model {
 		  DstPort		  trigger
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  18
 		  SrcBlock		  "Mask"
 		  SrcPort		  1
@@ -5457,10 +5363,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  21
 		  SrcBlock		  "Sum5"
 		  SrcPort		  1
@@ -5468,10 +5370,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  22
 		  SrcBlock		  "I3 test\nstep"
 		  SrcPort		  1
@@ -5479,10 +5377,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  23
 		  SrcBlock		  "I Controller"
 		  SrcPort		  1
@@ -5505,10 +5399,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  27
 		  SrcBlock		  "Product4"
 		  SrcPort		  1
@@ -5526,10 +5416,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  30
 		  SrcBlock		  "Product"
 		  SrcPort		  1
@@ -5537,10 +5423,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  31
 		  SrcBlock		  "Sum"
 		  SrcPort		  1
@@ -5558,10 +5440,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  36
 		  SrcBlock		  "Saturation"
 		  SrcPort		  1
@@ -5648,7 +5526,7 @@ Model {
 		  BlockType		  Inport
 		  Name			  "Control"
 		  SID			  "2376"
-		  Position		  [23, 303, 53, 317]
+		  Position		  [25, 303, 55, 317]
 		  ZOrder		  1545
 		  IconDisplay		  "Port number"
 		}
@@ -5749,7 +5627,7 @@ Model {
 		  SourceType		  "Repeating Sequence Stair"
 		  ContentPreviewEnabled	  off
 		  OutValues		  "[1 0 0 0 0 0].'"
-		  tsamp			  "sample"
+		  tsamp			  "contol_sample"
 		  OutMin		  "[]"
 		  OutMax		  "[]"
 		  OutDataTypeStr	  "float('double')"
@@ -5816,6 +5694,36 @@ Model {
 		  InputPortMap		  "u0"
 		  UpperLimit		  "amp_feedback_saturation"
 		  LowerLimit		  "-amp_feedback_saturation"
+		}
+		Block {
+		  BlockType		  Scope
+		  Name			  "Scope1"
+		  SID			  "2513"
+		  Ports			  [1]
+		  Position		  [1305, 394, 1335, 426]
+		  ZOrder		  1547
+		  Floating		  off
+		  Location		  [5, 45, 1371, 739]
+		  Open			  off
+		  NumInputPorts		  "1"
+		  List {
+		    ListType		    AxesTitles
+		    axes1		    "%<SignalLabel>"
+		  }
+		  List {
+		    ListType		    ScopeGraphics
+		    FigureColor		    "[0.5 0.5 0.5]"
+		    AxesColor		    "[0 0 0]"
+		    AxesTickColor	    "[1 1 1]"
+		    LineColors		    "[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+		    LineStyles		    "-|-|-|-|-|-"
+		    LineWidths		    "[0.5 0.5 0.5 0.5 0.5 0.5]"
+		    MarkerStyles	    "none|none|none|none|none|none"
+		  }
+		  ShowLegends		  off
+		  SaveName		  "ScopeData10"
+		  DataFormat		  "StructureWithTime"
+		  SampleTime		  "0"
 		}
 		Block {
 		  BlockType		  Scope
@@ -5919,7 +5827,7 @@ Model {
 		  Position		  [1045, 529, 1075, 561]
 		  ZOrder		  1505
 		  Floating		  off
-		  Location		  [1, 45, 1367, 739]
+		  Location		  [5, 45, 1371, 739]
 		  Open			  off
 		  NumInputPorts		  "1"
 		  List {
@@ -5984,21 +5892,23 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  527
 		  SrcBlock		  "Product12"
 		  SrcPort		  1
-		  DstBlock		  "amp_R"
-		  DstPort		  1
+		  Points		  [30, 0]
+		  Branch {
+		    ZOrder		    561
+		    Points		    [0, 110]
+		    DstBlock		    "Scope1"
+		    DstPort		    1
+		  }
+		  Branch {
+		    ZOrder		    560
+		    DstBlock		    "amp_R"
+		    DstPort		    1
+		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  322
 		  SrcBlock		  "Product8"
 		  SrcPort		  1
@@ -6016,10 +5926,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  323
 		  SrcBlock		  "Delay"
 		  SrcPort		  1
@@ -6027,10 +5933,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  324
 		  SrcBlock		  "I3\ninit "
 		  SrcPort		  1
@@ -6038,10 +5940,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  325
 		  SrcBlock		  "Delay4"
 		  SrcPort		  1
@@ -6050,10 +5948,6 @@ Model {
 		  DstPort		  3
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  326
 		  SrcBlock		  "Demux2"
 		  SrcPort		  5
@@ -6061,10 +5955,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  327
 		  SrcBlock		  "Demux2"
 		  SrcPort		  4
@@ -6073,10 +5963,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  330
 		  SrcBlock		  "Demux2"
 		  SrcPort		  3
@@ -6095,10 +5981,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  331
 		  SrcBlock		  "Demux2"
 		  SrcPort		  2
@@ -6107,10 +5989,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  332
 		  SrcBlock		  "Demux2"
 		  SrcPort		  1
@@ -6119,10 +5997,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  333
 		  SrcBlock		  "I3\nStep"
 		  SrcPort		  1
@@ -6131,10 +6005,6 @@ Model {
 		  DstPort		  3
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  334
 		  SrcBlock		  "Cp3"
 		  SrcPort		  1
@@ -6143,10 +6013,6 @@ Model {
 		  DstPort		  trigger
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  337
 		  SrcBlock		  "Mask"
 		  SrcPort		  1
@@ -6164,10 +6030,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  339
 		  SrcBlock		  "Sum5"
 		  SrcPort		  1
@@ -6175,10 +6037,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  340
 		  SrcBlock		  "I3 test\nstep"
 		  SrcPort		  1
@@ -6186,10 +6044,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  344
 		  SrcBlock		  "I Controller"
 		  SrcPort		  1
@@ -6212,10 +6066,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  366
 		  SrcBlock		  "Product4"
 		  SrcPort		  1
@@ -6233,10 +6083,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  516
 		  SrcBlock		  "Product"
 		  SrcPort		  1
@@ -6244,10 +6090,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  345
 		  SrcBlock		  "Sum"
 		  SrcPort		  1
@@ -6265,10 +6107,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  518
 		  SrcBlock		  "Saturation"
 		  SrcPort		  1
@@ -6406,7 +6244,7 @@ Model {
 		  SourceType		  "Repeating Sequence Stair"
 		  ContentPreviewEnabled	  off
 		  OutValues		  "[0 1 0 0 0 0].'"
-		  tsamp			  "sample"
+		  tsamp			  "contol_sample"
 		  OutMin		  "[]"
 		  OutMax		  "[]"
 		  OutDataTypeStr	  "float('double')"
@@ -6634,10 +6472,6 @@ Model {
 		  IconDisplay		  "Port number"
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  35
 		  SrcBlock		  "Saturation"
 		  SrcPort		  1
@@ -6646,10 +6480,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  2
 		  SrcBlock		  "Sum"
 		  SrcPort		  1
@@ -6667,10 +6497,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  5
 		  SrcBlock		  "Product"
 		  SrcPort		  1
@@ -6678,10 +6504,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  6
 		  SrcBlock		  "Product4"
 		  SrcPort		  1
@@ -6699,10 +6521,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  9
 		  SrcBlock		  "I Controller"
 		  SrcPort		  1
@@ -6725,10 +6543,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  13
 		  SrcBlock		  "I3 test\nstep"
 		  SrcPort		  1
@@ -6736,10 +6550,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  14
 		  SrcBlock		  "Sum5"
 		  SrcPort		  1
@@ -6747,10 +6557,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  15
 		  SrcBlock		  "Mask"
 		  SrcPort		  1
@@ -6768,10 +6574,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  18
 		  SrcBlock		  "Cp3"
 		  SrcPort		  1
@@ -6780,10 +6582,6 @@ Model {
 		  DstPort		  trigger
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  19
 		  SrcBlock		  "I3\nStep"
 		  SrcPort		  1
@@ -6792,10 +6590,6 @@ Model {
 		  DstPort		  3
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  20
 		  SrcBlock		  "Demux2"
 		  SrcPort		  1
@@ -6804,10 +6598,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  21
 		  SrcBlock		  "Demux2"
 		  SrcPort		  2
@@ -6816,10 +6606,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  22
 		  SrcBlock		  "Demux2"
 		  SrcPort		  3
@@ -6838,10 +6624,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  25
 		  SrcBlock		  "Demux2"
 		  SrcPort		  4
@@ -6850,10 +6632,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  26
 		  SrcBlock		  "Demux2"
 		  SrcPort		  5
@@ -6861,10 +6639,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  27
 		  SrcBlock		  "Delay4"
 		  SrcPort		  1
@@ -6873,10 +6647,6 @@ Model {
 		  DstPort		  3
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  28
 		  SrcBlock		  "I3\ninit "
 		  SrcPort		  1
@@ -6884,10 +6654,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  36
 		  SrcBlock		  "Delay"
 		  SrcPort		  1
@@ -6895,10 +6661,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  30
 		  SrcBlock		  "Product8"
 		  SrcPort		  1
@@ -6916,10 +6678,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  33
 		  SrcBlock		  "Product12"
 		  SrcPort		  1
@@ -7063,7 +6821,7 @@ Model {
 		  SourceType		  "Repeating Sequence Stair"
 		  ContentPreviewEnabled	  off
 		  OutValues		  "[0 0 1 0 0 0].'"
-		  tsamp			  "sample"
+		  tsamp			  "contol_sample"
 		  OutMin		  "[]"
 		  OutMax		  "[]"
 		  OutDataTypeStr	  "float('double')"
@@ -7298,10 +7056,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  2
 		  SrcBlock		  "Product12"
 		  SrcPort		  1
@@ -7309,10 +7063,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  3
 		  SrcBlock		  "Product8"
 		  SrcPort		  1
@@ -7330,10 +7080,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  36
 		  SrcBlock		  "Delay"
 		  SrcPort		  1
@@ -7341,10 +7087,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  7
 		  SrcBlock		  "I3\ninit "
 		  SrcPort		  1
@@ -7352,10 +7094,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  8
 		  SrcBlock		  "Delay4"
 		  SrcPort		  1
@@ -7364,10 +7102,6 @@ Model {
 		  DstPort		  3
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  9
 		  SrcBlock		  "Demux2"
 		  SrcPort		  5
@@ -7375,10 +7109,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  10
 		  SrcBlock		  "Demux2"
 		  SrcPort		  4
@@ -7387,10 +7117,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  11
 		  SrcBlock		  "Demux2"
 		  SrcPort		  3
@@ -7409,10 +7135,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  14
 		  SrcBlock		  "Demux2"
 		  SrcPort		  2
@@ -7421,10 +7143,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  15
 		  SrcBlock		  "Demux2"
 		  SrcPort		  1
@@ -7433,10 +7151,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  16
 		  SrcBlock		  "I3\nStep"
 		  SrcPort		  1
@@ -7445,10 +7159,6 @@ Model {
 		  DstPort		  3
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  17
 		  SrcBlock		  "Cp3"
 		  SrcPort		  1
@@ -7457,10 +7167,6 @@ Model {
 		  DstPort		  trigger
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  18
 		  SrcBlock		  "Mask"
 		  SrcPort		  1
@@ -7478,10 +7184,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  21
 		  SrcBlock		  "Sum5"
 		  SrcPort		  1
@@ -7489,10 +7191,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  22
 		  SrcBlock		  "I3 test\nstep"
 		  SrcPort		  1
@@ -7500,10 +7198,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  23
 		  SrcBlock		  "I Controller"
 		  SrcPort		  1
@@ -7526,10 +7220,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  27
 		  SrcBlock		  "Product4"
 		  SrcPort		  1
@@ -7547,10 +7237,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  30
 		  SrcBlock		  "Product"
 		  SrcPort		  1
@@ -7558,10 +7244,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  31
 		  SrcBlock		  "Sum"
 		  SrcPort		  1
@@ -7579,10 +7261,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  35
 		  SrcBlock		  "Saturation"
 		  SrcPort		  1
@@ -7720,7 +7398,7 @@ Model {
 		  SourceType		  "Repeating Sequence Stair"
 		  ContentPreviewEnabled	  off
 		  OutValues		  "[0 0 0 1 0 0].'"
-		  tsamp			  "sample"
+		  tsamp			  "contol_sample"
 		  OutMin		  "[]"
 		  OutMax		  "[]"
 		  OutDataTypeStr	  "float('double')"
@@ -7948,10 +7626,6 @@ Model {
 		  IconDisplay		  "Port number"
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  1
 		  SrcBlock		  "Saturation"
 		  SrcPort		  1
@@ -7960,10 +7634,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  2
 		  SrcBlock		  "Sum"
 		  SrcPort		  1
@@ -7981,10 +7651,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  5
 		  SrcBlock		  "Product"
 		  SrcPort		  1
@@ -7992,10 +7658,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  6
 		  SrcBlock		  "Product4"
 		  SrcPort		  1
@@ -8013,10 +7675,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  9
 		  SrcBlock		  "I Controller"
 		  SrcPort		  1
@@ -8039,10 +7697,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  13
 		  SrcBlock		  "I3 test\nstep"
 		  SrcPort		  1
@@ -8050,10 +7704,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  14
 		  SrcBlock		  "Sum5"
 		  SrcPort		  1
@@ -8061,10 +7711,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  15
 		  SrcBlock		  "Mask"
 		  SrcPort		  1
@@ -8082,10 +7728,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  18
 		  SrcBlock		  "Cp3"
 		  SrcPort		  1
@@ -8094,10 +7736,6 @@ Model {
 		  DstPort		  trigger
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  19
 		  SrcBlock		  "I3\nStep"
 		  SrcPort		  1
@@ -8106,10 +7744,6 @@ Model {
 		  DstPort		  3
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  20
 		  SrcBlock		  "Demux2"
 		  SrcPort		  1
@@ -8118,10 +7752,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  21
 		  SrcBlock		  "Demux2"
 		  SrcPort		  2
@@ -8130,10 +7760,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  22
 		  SrcBlock		  "Demux2"
 		  SrcPort		  3
@@ -8152,10 +7778,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  25
 		  SrcBlock		  "Demux2"
 		  SrcPort		  4
@@ -8164,10 +7786,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  26
 		  SrcBlock		  "Demux2"
 		  SrcPort		  5
@@ -8175,10 +7793,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  27
 		  SrcBlock		  "Delay4"
 		  SrcPort		  1
@@ -8187,10 +7801,6 @@ Model {
 		  DstPort		  3
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  28
 		  SrcBlock		  "I3\ninit "
 		  SrcPort		  1
@@ -8198,10 +7808,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  29
 		  SrcBlock		  "Delay"
 		  SrcPort		  1
@@ -8209,10 +7815,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  30
 		  SrcBlock		  "Product8"
 		  SrcPort		  1
@@ -8230,10 +7832,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  33
 		  SrcBlock		  "Product12"
 		  SrcPort		  1
@@ -8377,7 +7975,7 @@ Model {
 		  SourceType		  "Repeating Sequence Stair"
 		  ContentPreviewEnabled	  off
 		  OutValues		  "[0 0 0 0 0 1].'"
-		  tsamp			  "sample"
+		  tsamp			  "contol_sample"
 		  OutMin		  "[]"
 		  OutMax		  "[]"
 		  OutDataTypeStr	  "float('double')"
@@ -8605,10 +8203,6 @@ Model {
 		  IconDisplay		  "Port number"
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  35
 		  SrcBlock		  "Saturation"
 		  SrcPort		  1
@@ -8617,10 +8211,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  2
 		  SrcBlock		  "Sum"
 		  SrcPort		  1
@@ -8638,10 +8228,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  5
 		  SrcBlock		  "Product"
 		  SrcPort		  1
@@ -8649,10 +8235,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  6
 		  SrcBlock		  "Product4"
 		  SrcPort		  1
@@ -8670,10 +8252,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  9
 		  SrcBlock		  "I Controller"
 		  SrcPort		  1
@@ -8696,10 +8274,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  13
 		  SrcBlock		  "I3 test\nstep"
 		  SrcPort		  1
@@ -8707,10 +8281,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  14
 		  SrcBlock		  "Sum5"
 		  SrcPort		  1
@@ -8718,10 +8288,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  15
 		  SrcBlock		  "Mask"
 		  SrcPort		  1
@@ -8739,10 +8305,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  18
 		  SrcBlock		  "Cp3"
 		  SrcPort		  1
@@ -8751,10 +8313,6 @@ Model {
 		  DstPort		  trigger
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  19
 		  SrcBlock		  "I3\nStep"
 		  SrcPort		  1
@@ -8763,10 +8321,6 @@ Model {
 		  DstPort		  3
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  20
 		  SrcBlock		  "Demux2"
 		  SrcPort		  1
@@ -8775,10 +8329,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  21
 		  SrcBlock		  "Demux2"
 		  SrcPort		  2
@@ -8787,10 +8337,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  22
 		  SrcBlock		  "Demux2"
 		  SrcPort		  3
@@ -8809,10 +8355,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  25
 		  SrcBlock		  "Demux2"
 		  SrcPort		  4
@@ -8821,10 +8363,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  26
 		  SrcBlock		  "Demux2"
 		  SrcPort		  5
@@ -8832,10 +8370,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  27
 		  SrcBlock		  "Delay4"
 		  SrcPort		  1
@@ -8844,10 +8378,6 @@ Model {
 		  DstPort		  3
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  28
 		  SrcBlock		  "I3\ninit "
 		  SrcPort		  1
@@ -8855,10 +8385,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  36
 		  SrcBlock		  "Delay"
 		  SrcPort		  1
@@ -8866,10 +8392,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  30
 		  SrcBlock		  "Product8"
 		  SrcPort		  1
@@ -8887,10 +8409,6 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  33
 		  SrcBlock		  "Product12"
 		  SrcPort		  1
@@ -9219,7 +8737,6 @@ Model {
 	  ZOrder		  348
 	  SrcBlock		  "MATLAB Function"
 	  SrcPort		  1
-	  Points		  [5, 0]
 	  DstBlock		  "Current_Sources"
 	  DstPort		  1
 	}
@@ -16075,9 +15592,9 @@ Model {
       }
     }
     Line {
-      ZOrder		      72
+      ZOrder		      75
       SrcBlock		      "Calculate_Norms"
-      SrcPort		      2
+      SrcPort		      3
       Points		      [75, 0]
       DstBlock		      "Control Current"
       DstPort		      1
@@ -16823,10 +16340,7 @@ Stateflow {
     firstTransition	    45
     firstJunction	    44
     viewObj		    38
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    11
     decomposition	    CLUSTER_CHART
     type		    EML_CHART

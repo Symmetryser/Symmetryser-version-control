@@ -4,7 +4,7 @@ close all;
 
 %% Simulation initialisation parameters
 CLK=1000;                                           %[sample/s]
-tfin=50;                                           %[s]
+tfin=10;                                           %[s]
 sample=10e-5;                                       %[s/sample]
 t=0:sample:tfin;                                    %[tick]
 %% FFT
@@ -106,8 +106,10 @@ Switch_Load_RC=[0,0,1];                             %[Boolean]
                       
 %% Controller
 Start_Control=0.1;
+contol_sample=sample;
+updown_switch=0.02;
 P_gain=0.01;
-step_size =     [1,1,1,...          %amp
+step_size =     [2,2,2,...          %amp
                  0.16,0.16,0.16];   %phase
 test_step =     [1,1,1,...          %amp
                  0.08,0.08,0.08];   %phase   
@@ -240,24 +242,25 @@ t_axis_switch=t_axis_switch';
 % 
 % % Save variables form 0.5s to 0.6s (késõbb dialógus ablakot bele!)
 %     
-%   prompt = {'Enter the START time of data log','Enter the END time of data log'};
-%         dlg_title = 'Logging parameters';
-%         num_lines = 1;
-%         defAns = {'0.8','1'};
-%         options = 'off';
-%         answer = inputdlg(prompt,dlg_title,num_lines,defAns,options);
-% %        Error handling
-%         if str2num(answer{2})>max(Vrms.time) 
-%                 errordlg('Time out of time range!')
-%         end
-%         if str2num(answer{1})>=str2num(answer{2})
-%                 errordlg('No valid range of data!')
-%         end
-%         
-%         logstart = str2num(answer{1})/sample;
-%         logend =  str2num(answer{2})/sample;
-%         logstart_switch = round((str2num(answer{1})/sample)*Capacitive_Load_R_Switching_Speed(1));
-%         logend_switch =  round((str2num(answer{2})/sample)*Capacitive_Load_R_Switching_Speed(1));
+  prompt = {'Enter the START time of data log','Enter the END time of data log','Enter measurement detail'};
+        dlg_title = 'Logging parameters';
+        num_lines = 1;
+        defAns = {'1','5','5'};
+        options = 'off';
+        answer = inputdlg(prompt,dlg_title,num_lines,defAns,options);
+%        Error handling
+        if str2num(answer{2})>max(Vrms.time) 
+                errordlg('Time out of time range!')
+        end
+        if str2num(answer{1})>=str2num(answer{2})
+                errordlg('No valid range of data!')
+        end
+        
+        logstart = str2num(answer{1})/sample;
+        logend =  str2num(answer{2})/sample;
+        logstart_switch = round((str2num(answer{1})/sample)*Capacitive_Load_R_Switching_Speed(1));
+        logend_switch =  round((str2num(answer{2})/sample)*Capacitive_Load_R_Switching_Speed(1));
+        detail=str2num(answer{3});
 % 
 %     VR=[t(logstart:logend),V.signals.values((logstart:logend),1)];
 %     VS=[t(logstart:logend),V.signals.values((logstart:logend),2)];
@@ -278,7 +281,11 @@ t_axis_switch=t_axis_switch';
 %     CapacityAmountR=[t_axis_switch(logstart_switch:logend_switch),UsedCapacitanceR(logstart_switch:logend_switch)];
 %     CapacityAmountS=[t_axis_switch(logstart_switch:logend_switch),UsedCapacitanceS(logstart_switch:logend_switch)];
 %     CapacityAmountT=[t_axis_switch(logstart_switch:logend_switch),UsedCapacitanceT(logstart_switch:logend_switch)];
-%     
+
+REG_=[t(logstart:detail:logend)',REG.signals.values((logstart:detail:logend),1)];
+VEC_=[t(logstart:detail:logend)',VEC.signals.values((logstart:detail:logend),1)];
+GEO_=[t(logstart:detail:logend)',GEO.signals.values((logstart:detail:logend),1)];
+     
 %     save('Measurements/VoltageR.dat','VR','-ascii');
 %     save('Measurements/VoltageS.dat','VS','-ascii');
 %     save('Measurements/VoltageT.dat','VT','-ascii');
@@ -298,3 +305,8 @@ t_axis_switch=t_axis_switch';
 %     save('Measurements/CapacityAmountR.dat','CapacityAmountR','-ascii');
 %     save('Measurements/CapacityAmountS.dat','CapacityAmountS','-ascii');
 %     save('Measurements/CapacityAmountT.dat','CapacityAmountT','-ascii');
+
+    save('norm_measure/REG.dat','REG_','-ascii');
+    save('norm_measure/VEC.dat','VEC_','-ascii');
+    save('norm_measure/GEO.dat','GEO_','-ascii');
+

@@ -4,7 +4,11 @@ close all;
 
 %% Simulation initialisation parameters
 CLK=1000;                                           %[sample/s]
+<<<<<<< HEAD
 tfin=10;                                           %[s]
+=======
+tfin=5;                                           %[s]
+>>>>>>> origin/Szabályozó
 sample=10e-5;                                       %[s/sample]
 t=0:sample:tfin;                                    %[tick]
 %% FFT

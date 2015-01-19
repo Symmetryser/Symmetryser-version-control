@@ -105,14 +105,17 @@ Switch_Load_RC=[0,0,1];                             %[Boolean]
          Capacitive_Load_T_Switching_Sequence=ones(3,tfin/Capacitive_Load_R_Switching_Speed(1))';
                       
 %% Controller
-Start_Control=0.4;
+Start_Control=0.5;
 P_gain=0.01;
-step_size =     [1,1,1,...          %amp
-                 0.18,0.18,0.18];   %phase
-test_step =     [1,1,1,...          %amp
-                 0.08,0.08,0.08];   %phase   
-initial_value = [0.00,0.00,0.00,...          %amp
-                 0,-2/3*pi,-4/3*pi];%phase
+stair_sample=0.02;
+mask_sample=0.002;
+switch_sample=0.02;
+step_size =     [2,2,2,...          %amp[A]
+                 0.08,0.08,0.08];   %phase[rad]
+test_step =     [0,0,0,...          %amp[A]
+                 0.00,0.00,0.00];   %phase[rad]   
+initial_value = [0.01,0.01,0.01,... %amp[A]
+                 0,-2/3*pi,-4/3*pi];%phase[rad]
 
 amp_feedback_saturation=400;
 phase_feedback_saturation=pi;

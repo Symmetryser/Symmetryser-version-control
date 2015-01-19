@@ -4,11 +4,7 @@ close all;
 
 %% Simulation initialisation parameters
 CLK=1000;                                           %[sample/s]
-<<<<<<< HEAD
-tfin=10;                                           %[s]
-=======
-tfin=5;                                           %[s]
->>>>>>> origin/Szab√°lyoz√≥
+tfin=2;                                           %[s]
 sample=10e-5;                                       %[s/sample]
 t=0:sample:tfin;                                    %[tick]
 %% FFT
@@ -109,15 +105,13 @@ Switch_Load_RC=[0,0,1];                             %[Boolean]
          Capacitive_Load_T_Switching_Sequence=ones(3,tfin/Capacitive_Load_R_Switching_Speed(1))';
                       
 %% Controller
-Start_Control=0.1;
-contol_sample=sample;
-updown_switch=0.02;
+Start_Control=0.4;
 P_gain=0.01;
-step_size =     [2,2,2,...          %amp
-                 0.16,0.16,0.16];   %phase
+step_size =     [1,1,1,...          %amp
+                 0.18,0.18,0.18];   %phase
 test_step =     [1,1,1,...          %amp
                  0.08,0.08,0.08];   %phase   
-initial_value = [1,1,1,...          %amp
+initial_value = [0.00,0.00,0.00,...          %amp
                  0,-2/3*pi,-4/3*pi];%phase
 
 amp_feedback_saturation=400;
@@ -129,38 +123,7 @@ phase_feedback_saturation=pi;
         paramNameValStruct.RelTol         = '1e-9';
         sim('Symmetry_COPY');
 
-%% Angle
-        n=size(V.signals.values(:,1),1); 
-        r=0;
-        s=1;
-        s1=2;
-        s2=2;
-        szog1=s1/3;
-        szog2=s2*2/3;
-        for (i=1 : n)
-                r=r+1;
-            if i<n && V.signals.values(i,1)*V.signals.values(i+1,1) <= 0 
-                s=r;
-                r=0;
-            end
-            if i<n && V.signals.values(i,2)*V.signals.values(i+1,2) <= 0 && s1~=s
-                s1=s;
-                szog1=r;
-            end
-            if i<n && V.signals.values(i,3)*V.signals.values(i+1,3) <= 0 && s2~=s
-                s2=s;
-                szog2=r;
-            end
-            szogt(i,1)=180*(szog1/s1)-60;           %fÈl periÛdusonkÈnt szˆg sz·mol·sa
-            szogt(i,2)=180*(szog2/s2); 
-            if szogt(i,1)>360
-                szogt(i,1)=360;
-            end
-            if szogt(i,2)>360
-                szogt(i,2)=360;
-            end
-            szogt(i,3)=360-(szogt(i,2)+szogt(i,1));
-        end
+
    
 %% Plotting
 
@@ -213,47 +176,15 @@ xlabel('t')
 title('Norms')
 legend('A_x','VEC*1e-3','GEO*1e-3')
 
-
-%%
-r=tfin/Capacitive_Load_R_Switching_Speed(1);
-t_axis_switch=zeros(1,r);
-for i=2:r
-    t_axis_switch(i)=t_axis_switch(i-1)+Capacitive_Load_R_Switching_Speed(1);
-    
-end
-t_axis_switch=t_axis_switch';
-
-
-
-
-        
-% %% Save variables
-%     VR=[t,V.signals.values(:,1)];
-%     VS=[t,V.signals.values(:,2)];
-%     VT=[t,V.signals.values(:,3)];
-%     
-%     VrmsR=[t,Vrms.signals.values(:,1)];
-%     VrmsS=[t,Vrms.signals.values(:,2)];
-%     VrmsT=[t,Vrms.signals.values(:,3)];
-%    
-%     angleR=[t,szogt(:,1)];
-%     angleS=[t,szogt(:,2)];
-%     angleT=[t,szogt(:,3)];
-%     
-%     CCR=[t,Control_Current_Values.signals.values(:,1)];
-%     CCS=[t,Control_Current_Values.signals.values(:,2)];
-%     CCT=[t,Control_Current_Values.signals.values(:,3)];
-% 
-% % Save variables form 0.5s to 0.6s (kÈsıbb dialÛgus ablakot bele!)
-%     
-  prompt = {'Enter the START time of data log','Enter the END time of data log','Enter measurement detail'};
+%% Save
+prompt = {'Enter the START time of data log','Enter the END time of data log','Enter measurement detail'};
         dlg_title = 'Logging parameters';
         num_lines = 1;
-        defAns = {'1','5','5'};
+        defAns = {'0.3','1','1'};
         options = 'off';
         answer = inputdlg(prompt,dlg_title,num_lines,defAns,options);
-%        Error handling
-        if str2num(answer{2})>max(Vrms.time) 
+        %Error handling
+        if str2num(answer{2})>max(V_conn.time) 
                 errordlg('Time out of time range!')
         end
         if str2num(answer{1})>=str2num(answer{2})
@@ -265,52 +196,12 @@ t_axis_switch=t_axis_switch';
         logstart_switch = round((str2num(answer{1})/sample)*Capacitive_Load_R_Switching_Speed(1));
         logend_switch =  round((str2num(answer{2})/sample)*Capacitive_Load_R_Switching_Speed(1));
         detail=str2num(answer{3});
-% 
-%     VR=[t(logstart:logend),V.signals.values((logstart:logend),1)];
-%     VS=[t(logstart:logend),V.signals.values((logstart:logend),2)];
-%     VT=[t(logstart:logend),V.signals.values((logstart:logend),3)];
-%     
-%     VrmsR=[t(logstart:logend),Vrms.signals.values((logstart:logend),1)];
-%     VrmsS=[t(logstart:logend),Vrms.signals.values((logstart:logend),2)];
-%     VrmsT=[t(logstart:logend),Vrms.signals.values((logstart:logend),3)];
-%    
-%     angleR=[t(logstart:logend),szogt((logstart:logend),1)];
-%     angleS=[t(logstart:logend),szogt((logstart:logend),2)];
-%     angleT=[t(logstart:logend),szogt((logstart:logend),3)];
-%     
-%     CCR=[t(logstart:logend),Control_Current_Values.signals.values((logstart:logend),1)];
-%     CCS=[t(logstart:logend),Control_Current_Values.signals.values((logstart:logend),2)];
-%     CCT=[t(logstart:logend),Control_Current_Values.signals.values((logstart:logend),3)];
-%     
-%     CapacityAmountR=[t_axis_switch(logstart_switch:logend_switch),UsedCapacitanceR(logstart_switch:logend_switch)];
-%     CapacityAmountS=[t_axis_switch(logstart_switch:logend_switch),UsedCapacitanceS(logstart_switch:logend_switch)];
-%     CapacityAmountT=[t_axis_switch(logstart_switch:logend_switch),UsedCapacitanceT(logstart_switch:logend_switch)];
 
 REG_=[t(logstart:detail:logend)',REG.signals.values((logstart:detail:logend),1)];
-VEC_=[t(logstart:detail:logend)',VEC.signals.values((logstart:detail:logend),1)];
-GEO_=[t(logstart:detail:logend)',GEO.signals.values((logstart:detail:logend),1)];
+VEC_=[t(logstart:detail:logend)',VEC.signals.values((logstart:detail:logend),1)*1e-3];
+GEO_=[t(logstart:detail:logend)',GEO.signals.values((logstart:detail:logend),1)*1e-4];
      
-%     save('Measurements/VoltageR.dat','VR','-ascii');
-%     save('Measurements/VoltageS.dat','VS','-ascii');
-%     save('Measurements/VoltageT.dat','VT','-ascii');
-%     
-%     save('Measurements/VrmsR.dat','VrmsR','-ascii');
-%     save('Measurements/VrmsS.dat','VrmsS','-ascii');
-%     save('Measurements/VrmsT.dat','VrmsT','-ascii');
-%     
-%     save('Measurements/angleR.dat','angleR','-ascii');
-%     save('Measurements/angleS.dat','angleS','-ascii');
-%     save('Measurements/angleT.dat','angleT','-ascii');
-%     
-%     save('Measurements/ConnectionCurrentR.dat','CCR','-ascii');
-%     save('Measurements/ConnectionCurrentS.dat','CCS','-ascii');
-%     save('Measurements/ConnectionCurrentT.dat','CCT','-ascii');
-%     
-%     save('Measurements/CapacityAmountR.dat','CapacityAmountR','-ascii');
-%     save('Measurements/CapacityAmountS.dat','CapacityAmountS','-ascii');
-%     save('Measurements/CapacityAmountT.dat','CapacityAmountT','-ascii');
-
-    save('norm_measure/REG.dat','REG_','-ascii');
+    save('norm_measure/REG1.dat','REG_','-ascii');
     save('norm_measure/VEC.dat','VEC_','-ascii');
-    save('norm_measure/GEO.dat','GEO_','-ascii');
+    save('norm_measure/GEO1.dat','GEO_','-ascii');
 

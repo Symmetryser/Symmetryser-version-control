@@ -64,48 +64,30 @@ Model {
 	Dimension		3
 	Object {
 	  $ObjectID		  6
-	  IsActive		  [1]
+	  IsActive		  [0]
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
-<<<<<<< HEAD
-	  Extents		  [1334.0, 581.0]
-	  ZoomFactor		  [1.25]
-	  Offset		  [40.600000000000016, -57.651198180386523]
-=======
 	  Extents		  [1328.0, 567.0]
 	  ZoomFactor		  [1.0]
 	  Offset		  [18.0, -23.851198180386518]
->>>>>>> origin/Szabályozó
 	}
 	Object {
 	  $ObjectID		  7
-	  IsActive		  [0]
+	  IsActive		  [1]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "2184"
-<<<<<<< HEAD
-	  Extents		  [1334.0, 581.0]
-	  ZoomFactor		  [0.8]
-	  Offset		  [1222.5, 126.46012660097868]
-=======
+	  LoadSaveID		  "2497"
 	  Extents		  [1328.0, 567.0]
-	  ZoomFactor		  [0.6]
-	  Offset		  [1222.41708708081, 282.84318434774741]
->>>>>>> origin/Szabályozó
+	  ZoomFactor		  [0.8]
+	  Offset		  [-103.77236885028515, 110.67220008994678]
 	}
 	Object {
 	  $ObjectID		  8
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "1780"
-<<<<<<< HEAD
-	  Extents		  [1334.0, 581.0]
+	  Extents		  [1328.0, 567.0]
 	  ZoomFactor		  [1.25]
 	  Offset		  [835.66596299027412, 270.60813690585383]
-=======
-	  Extents		  [1328.0, 567.0]
-	  ZoomFactor		  [0.8]
-	  Offset		  [532.041374878974, 195.30115921101878]
->>>>>>> origin/Szabályozó
 	}
 	PropName		"EditorsInfo"
       }
@@ -120,13 +102,8 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Neukirchner L�szl�"
   ModifiedDateFormat	  "%<Auto>"
-<<<<<<< HEAD
-  LastModifiedDate	  "Sun Jan 18 23:05:18 2015"
-  RTWModifiedTimeStamp	  343517298
-=======
-  LastModifiedDate	  "Wed Jan 07 14:29:49 2015"
-  RTWModifiedTimeStamp	  342540821
->>>>>>> origin/Szabályozó
+  LastModifiedDate	  "Mon Jan 19 14:49:54 2015"
+  RTWModifiedTimeStamp	  343579645
   ModelVersionFormat	  "1.%<AutoIncrement:55>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
@@ -1106,9 +1083,9 @@ Model {
     TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "125"
+    ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "2515"
+    SIDHighWatermark	    "2512"
     Block {
       BlockType		      SubSystem
       Name		      "Calculate_Norms"
@@ -1137,7 +1114,7 @@ Model {
 	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"80"
+	ZoomFactor		"125"
 	Block {
 	  BlockType		  Gain
 	  Name			  "Gain"
@@ -3255,7 +3232,7 @@ Model {
 	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"80"
+	ZoomFactor		"125"
 	Block {
 	  BlockType		  Inport
 	  Name			  "NORM"
@@ -3263,6 +3240,60 @@ Model {
 	  Position		  [910, 383, 940, 397]
 	  ZOrder		  610
 	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant1"
+	  SID			  "2118"
+	  Position		  [1105, 687, 1150, 713]
+	  ZOrder		  671
+	  ShowName		  off
+	  Value			  "0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant2"
+	  SID			  "2119"
+	  Position		  [1105, 742, 1150, 768]
+	  ZOrder		  672
+	  ShowName		  off
+	  Value			  "-2/3*pi"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant3"
+	  SID			  "2120"
+	  Position		  [1105, 797, 1150, 823]
+	  ZOrder		  673
+	  ShowName		  off
+	  Value			  "-4/3*pi"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant4"
+	  SID			  "2176"
+	  Position		  [1105, 502, 1150, 528]
+	  ZOrder		  715
+	  ShowName		  off
+	  Value			  "0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant5"
+	  SID			  "2180"
+	  Position		  [1105, 557, 1150, 583]
+	  ZOrder		  719
+	  ShowName		  off
+	  Value			  "0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant6"
+	  SID			  "2181"
+	  Position		  [1105, 612, 1150, 638]
+	  ZOrder		  720
+	  ShowName		  off
+	  Value			  "0"
 	}
 	Block {
 	  BlockType		  SubSystem
@@ -3767,11 +3798,33 @@ Model {
 	}
 	Block {
 	  BlockType		  Mux
+	  Name			  "Mux1"
+	  SID			  "2121"
+	  Ports			  [3, 1]
+	  Position		  [1220, 673, 1225, 837]
+	  ZOrder		  674
+	  ShowName		  off
+	  Inputs		  "3"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Mux
 	  Name			  "Mux2"
 	  SID			  "2304"
 	  Ports			  [3, 1]
 	  Position		  [1230, 343, 1235, 387]
 	  ZOrder		  725
+	  ShowName		  off
+	  Inputs		  "3"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux3"
+	  SID			  "2179"
+	  Ports			  [3, 1]
+	  Position		  [1220, 488, 1225, 652]
+	  ZOrder		  718
 	  ShowName		  off
 	  Inputs		  "3"
 	  DisplayOption		  "bar"
@@ -3804,7 +3857,7 @@ Model {
 	  System {
 	    Name		    "Subsystem"
 	    Location		    [-1, 31, 1377, 775]
-	    Open		    on
+	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -3815,7 +3868,7 @@ Model {
 	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "60"
+	    ZoomFactor		    "80"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Norm"
@@ -3841,7 +3894,7 @@ Model {
 	      System {
 		Name			"Create_Date"
 		Location		[-1, 31, 1377, 775]
-		Open			off
+		Open			on
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -3906,27 +3959,6 @@ Model {
 		}
 		Block {
 		  BlockType		  Reference
-<<<<<<< HEAD
-		  Name			  "Cp3"
-		  SID			  "2514"
-		  Ports			  [1, 1]
-		  Position		  [950, 505, 980, 535]
-		  ZOrder		  1552
-		  BlockRotation		  270
-		  BlockMirror		  on
-		  LibraryVersion	  "1.287"
-		  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
-		  SourceType		  "Compare To Constant"
-		  ContentPreviewEnabled	  off
-		  relop			  "~="
-		  const			  "0"
-		  OutDataTypeStr	  "uint8"
-		  ZeroCross		  off
-		}
-		Block {
-		  BlockType		  Reference
-=======
->>>>>>> origin/Szabályozó
 		  Name			  "Cp7"
 		  SID			  "2136"
 		  Ports			  [1, 1]
@@ -3979,10 +4011,6 @@ Model {
 		  LibraryVersion	  "1.731"
 		  SourceBlock		  "dspsigops/Sample\nand Hold"
 		  SourceType		  "Sample and Hold"
-<<<<<<< HEAD
-		  ContentPreviewEnabled	  off
-=======
->>>>>>> origin/Szabályozó
 		  trig			  "Rising edge"
 		  initCond		  "18"
 		  latchinput		  off
@@ -4051,21 +4079,6 @@ Model {
 		  latchinput		  off
 		}
 		Block {
-		  BlockType		  Reference
-		  Name			  "I1"
-		  SID			  "2515"
-		  Ports			  [1, 1, 0, 1]
-		  Position		  [940, 559, 990, 601]
-		  ZOrder		  1551
-		  LibraryVersion	  "1.735"
-		  SourceBlock		  "dspsigops/Sample\nand Hold"
-		  SourceType		  "Sample and Hold"
-		  ContentPreviewEnabled	  off
-		  trig			  "Rising edge"
-		  initCond		  "0"
-		  latchinput		  off
-		}
-		Block {
 		  BlockType		  Mux
 		  Name			  "Mux2"
 		  SID			  "2154"
@@ -4090,11 +4103,7 @@ Model {
 		  SourceBlock		  "simulink/Sources/Repeating\nSequence\nStair"
 		  SourceType		  "Repeating Sequence Stair"
 		  OutValues		  "[1 2 3 4 5].'"
-<<<<<<< HEAD
-		  tsamp			  "contol_sample"
-=======
-		  tsamp			  "0.02"
->>>>>>> origin/Szabályozó
+		  tsamp			  "sample"
 		  OutMin		  "[]"
 		  OutMax		  "[]"
 		  OutDataTypeStr	  "float('double')"
@@ -4109,14 +4118,10 @@ Model {
 		  Name			  "Scope"
 		  SID			  "2312"
 		  Ports			  [1]
-		  Position		  [1155, 564, 1185, 596]
+		  Position		  [1160, 729, 1190, 761]
 		  ZOrder		  1522
 		  Floating		  off
-<<<<<<< HEAD
-		  Location		  [5, 45, 1371, 739]
-=======
-		  Location		  [6, 45, 1372, 739]
->>>>>>> origin/Szabályozó
+		  Location		  [1, 45, 1367, 739]
 		  Open			  off
 		  NumInputPorts		  "1"
 		  List {
@@ -4307,7 +4312,7 @@ Model {
 		  SourceBlock		  "simulink/Sources/Repeating\nSequence\nStair"
 		  SourceType		  "Repeating Sequence Stair"
 		  OutValues		  "[-1 0 1 0 0].'"
-		  tsamp			  "updown_switch"
+		  tsamp			  "0.02"
 		  OutMin		  "[]"
 		  OutMax		  "[]"
 		  OutDataTypeStr	  "float('double')"
@@ -4523,10 +4528,6 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  603
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "on/off"
 		  SrcPort		  1
 		  Points		  [108, 0; 0, 15]
@@ -4553,10 +4554,21 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  600
-=======
->>>>>>> origin/Szabályozó
+		  SrcBlock		  "Sum6"
+		  SrcPort		  1
+		  Points		  [251, 0]
+		  Branch {
+		    Points		    [0, 165]
+		    DstBlock		    "Scope"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -180]
+		    DstBlock		    "Mux2"
+		    DstPort		    5
+		  }
+		}
+		Line {
 		  SrcBlock		  "const"
 		  SrcPort		  1
 		  DstBlock		  "on/off"
@@ -4573,63 +4585,6 @@ Model {
 		  SrcPort		  1
 		  DstBlock		  "on/off"
 		  DstPort		  2
-		}
-		Line {
-<<<<<<< HEAD
-		  ZOrder		  648
-		  SrcBlock		  "Sum6"
-		  SrcPort		  1
-		  Points		  [90, 0]
-		  Branch {
-		    ZOrder		    651
-		    Points		    [1, 0; 0, -96; 39, 0]
-		    DstBlock		    "Cp3"
-		    DstPort		    1
-		  }
-		  Branch {
-		    ZOrder		    650
-		    DstBlock		    "I1"
-		    DstPort		    1
-		  }
-		}
-		Line {
-		  ZOrder		  649
-		  SrcBlock		  "Cp3"
-		  SrcPort		  1
-		  DstBlock		  "I1"
-		  DstPort		  trigger
-		}
-		Line {
-		  ZOrder		  653
-		  SrcBlock		  "I1"
-		  SrcPort		  1
-		  Points		  [69, 0]
-		  Branch {
-		    ZOrder		    655
-		    DstBlock		    "Scope"
-		    DstPort		    1
-		  }
-		  Branch {
-		    ZOrder		    654
-		    Points		    [0, -180]
-		    DstBlock		    "Mux2"
-		    DstPort		    5
-		  }
-=======
-		  SrcBlock		  "Sum6"
-		  SrcPort		  1
-		  Points		  [145, 0]
-		  Branch {
-		    Points		    [0, -180]
-		    DstBlock		    "Mux2"
-		    DstPort		    5
-		  }
-		  Branch {
-		    Points		    [0, 165]
-		    DstBlock		    "Scope"
-		    DstPort		    1
-		  }
->>>>>>> origin/Szabályozó
 		}
 	      }
 	    }
@@ -4786,11 +4741,7 @@ Model {
 		  SourceBlock		  "simulink/Sources/Repeating\nSequence\nStair"
 		  SourceType		  "Repeating Sequence Stair"
 		  OutValues		  "[0 0 0 0 1 0].'"
-<<<<<<< HEAD
-		  tsamp			  "contol_sample"
-=======
-		  tsamp			  "0.02"
->>>>>>> origin/Szabályozó
+		  tsamp			  "sample"
 		  OutMin		  "[]"
 		  OutMax		  "[]"
 		  OutDataTypeStr	  "float('double')"
@@ -5024,20 +4975,12 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  2
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Product12"
 		  SrcPort		  1
 		  DstBlock		  "phase_S"
 		  DstPort		  1
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  3
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Product8"
 		  SrcPort		  1
 		  Points		  [9, 0]
@@ -5052,30 +4995,18 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  35
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Delay"
 		  SrcPort		  1
 		  DstBlock		  "Saturation"
 		  DstPort		  1
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  7
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "I3\ninit "
 		  SrcPort		  1
 		  DstBlock		  "Sum5"
 		  DstPort		  2
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  8
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Delay4"
 		  SrcPort		  1
 		  Points		  [47, 0; 0, -115]
@@ -5083,20 +5014,12 @@ Model {
 		  DstPort		  3
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  9
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Demux2"
 		  SrcPort		  5
 		  DstBlock		  "Product8"
 		  DstPort		  2
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  10
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Demux2"
 		  SrcPort		  4
 		  Points		  [100, 0; 0, -30]
@@ -5104,10 +5027,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  11
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Demux2"
 		  SrcPort		  3
 		  Points		  [205, 0]
@@ -5123,10 +5042,6 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  14
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Demux2"
 		  SrcPort		  2
 		  Points		  [175, 0; 0, -150]
@@ -5134,10 +5049,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  15
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Demux2"
 		  SrcPort		  1
 		  Points		  [151, 0; 0, -189; 904, 0; 0, 269]
@@ -5145,10 +5056,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  16
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "I3\nStep"
 		  SrcPort		  1
 		  Points		  [104, 0; 0, -20]
@@ -5156,10 +5063,6 @@ Model {
 		  DstPort		  3
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  17
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Cp3"
 		  SrcPort		  1
 		  Points		  [75, 0]
@@ -5167,10 +5070,6 @@ Model {
 		  DstPort		  trigger
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  18
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Mask"
 		  SrcPort		  1
 		  Points		  [19, 0]
@@ -5185,30 +5084,18 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  21
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Sum5"
 		  SrcPort		  1
 		  DstBlock		  "Product12"
 		  DstPort		  2
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  22
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "I3 test\nstep"
 		  SrcPort		  1
 		  DstBlock		  "Product4"
 		  DstPort		  1
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  23
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "I Controller"
 		  SrcPort		  1
 		  Points		  [9, 0; 0, 45]
@@ -5227,10 +5114,6 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  27
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Product4"
 		  SrcPort		  1
 		  Points		  [88, 0; 0, 135]
@@ -5245,20 +5128,12 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  30
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Product"
 		  SrcPort		  1
 		  DstBlock		  "Cp3"
 		  DstPort		  1
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  31
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Sum"
 		  SrcPort		  1
 		  Points		  [3, 0]
@@ -5273,10 +5148,6 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  36
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Saturation"
 		  SrcPort		  1
 		  Points		  [-30, 0]
@@ -5293,7 +5164,7 @@ Model {
 	      Position		      [2910, 644, 2940, 676]
 	      ZOrder		      1553
 	      Floating		      off
-	      Location		      [6, 77, 502, 465]
+	      Location		      [188, 390, 512, 629]
 	      Open		      off
 	      NumInputPorts	      "1"
 	      List {
@@ -5323,22 +5194,12 @@ Model {
 	      Position		      [2910, 1089, 2940, 1121]
 	      ZOrder		      1555
 	      Floating		      off
-	      Location		      [501, 104, 907, 475]
+	      Location		      [188, 390, 512, 629]
 	      Open		      off
 	      NumInputPorts	      "1"
 	      List {
 		ListType		AxesTitles
 		axes1			"%<SignalLabel>"
-	      }
-	      List {
-		ListType		ScopeGraphics
-		FigureColor		"[0.5 0.5 0.5]"
-		AxesColor		"[0 0 0]"
-		AxesTickColor		"[1 1 1]"
-		LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
-		LineStyles		"-|-|-|-|-|-"
-		LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
-		MarkerStyles		"none|none|none|none|none|none"
 	      }
 	      ShowLegends	      off
 	      SaveName		      "ScopeData3"
@@ -5476,11 +5337,7 @@ Model {
 		  SourceBlock		  "simulink/Sources/Repeating\nSequence\nStair"
 		  SourceType		  "Repeating Sequence Stair"
 		  OutValues		  "[1 0 0 0 0 0].'"
-<<<<<<< HEAD
-		  tsamp			  "contol_sample"
-=======
-		  tsamp			  "0.02"
->>>>>>> origin/Szabályozó
+		  tsamp			  "sample"
 		  OutMin		  "[]"
 		  OutMax		  "[]"
 		  OutDataTypeStr	  "float('double')"
@@ -5547,36 +5404,6 @@ Model {
 		  InputPortMap		  "u0"
 		  UpperLimit		  "amp_feedback_saturation"
 		  LowerLimit		  "-amp_feedback_saturation"
-		}
-		Block {
-		  BlockType		  Scope
-		  Name			  "Scope1"
-		  SID			  "2513"
-		  Ports			  [1]
-		  Position		  [1305, 394, 1335, 426]
-		  ZOrder		  1547
-		  Floating		  off
-		  Location		  [5, 45, 1371, 739]
-		  Open			  off
-		  NumInputPorts		  "1"
-		  List {
-		    ListType		    AxesTitles
-		    axes1		    "%<SignalLabel>"
-		  }
-		  List {
-		    ListType		    ScopeGraphics
-		    FigureColor		    "[0.5 0.5 0.5]"
-		    AxesColor		    "[0 0 0]"
-		    AxesTickColor	    "[1 1 1]"
-		    LineColors		    "[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
-		    LineStyles		    "-|-|-|-|-|-"
-		    LineWidths		    "[0.5 0.5 0.5 0.5 0.5 0.5]"
-		    MarkerStyles	    "none|none|none|none|none|none"
-		  }
-		  ShowLegends		  off
-		  SaveName		  "ScopeData10"
-		  DataFormat		  "StructureWithTime"
-		  SampleTime		  "0"
 		}
 		Block {
 		  BlockType		  Scope
@@ -5680,11 +5507,7 @@ Model {
 		  Position		  [1045, 529, 1075, 561]
 		  ZOrder		  1505
 		  Floating		  off
-<<<<<<< HEAD
-		  Location		  [5, 45, 1371, 739]
-=======
-		  Location		  [6, 45, 1372, 739]
->>>>>>> origin/Szabályozó
+		  Location		  [1, 45, 1367, 739]
 		  Open			  off
 		  NumInputPorts		  "1"
 		  List {
@@ -5748,30 +5571,12 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  527
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Product12"
 		  SrcPort		  1
-		  Points		  [30, 0]
-		  Branch {
-		    ZOrder		    561
-		    Points		    [0, 110]
-		    DstBlock		    "Scope1"
-		    DstPort		    1
-		  }
-		  Branch {
-		    ZOrder		    560
-		    DstBlock		    "amp_R"
-		    DstPort		    1
-		  }
+		  DstBlock		  "amp_R"
+		  DstPort		  1
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  322
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Product8"
 		  SrcPort		  1
 		  Points		  [9, 0]
@@ -5786,30 +5591,18 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  323
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Delay"
 		  SrcPort		  1
 		  DstBlock		  "Saturation"
 		  DstPort		  1
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  324
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "I3\ninit "
 		  SrcPort		  1
 		  DstBlock		  "Sum5"
 		  DstPort		  2
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  325
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Delay4"
 		  SrcPort		  1
 		  Points		  [47, 0; 0, -115]
@@ -5817,20 +5610,12 @@ Model {
 		  DstPort		  3
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  326
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Demux2"
 		  SrcPort		  5
 		  DstBlock		  "Product8"
 		  DstPort		  2
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  327
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Demux2"
 		  SrcPort		  4
 		  Points		  [100, 0; 0, -30]
@@ -5838,10 +5623,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  330
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Demux2"
 		  SrcPort		  3
 		  Points		  [205, 0]
@@ -5857,10 +5638,6 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  331
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Demux2"
 		  SrcPort		  2
 		  Points		  [175, 0; 0, -150]
@@ -5868,10 +5645,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  332
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Demux2"
 		  SrcPort		  1
 		  Points		  [151, 0; 0, -189; 904, 0; 0, 269]
@@ -5879,10 +5652,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  333
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "I3\nStep"
 		  SrcPort		  1
 		  Points		  [104, 0; 0, -20]
@@ -5890,10 +5659,6 @@ Model {
 		  DstPort		  3
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  334
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Cp3"
 		  SrcPort		  1
 		  Points		  [75, 0]
@@ -5901,10 +5666,6 @@ Model {
 		  DstPort		  trigger
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  337
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Mask"
 		  SrcPort		  1
 		  Points		  [19, 0]
@@ -5919,30 +5680,18 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  339
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Sum5"
 		  SrcPort		  1
 		  DstBlock		  "Product12"
 		  DstPort		  2
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  340
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "I3 test\nstep"
 		  SrcPort		  1
 		  DstBlock		  "Product4"
 		  DstPort		  1
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  344
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "I Controller"
 		  SrcPort		  1
 		  Points		  [9, 0; 0, 45]
@@ -5961,10 +5710,6 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  366
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Product4"
 		  SrcPort		  1
 		  Points		  [88, 0; 0, 135]
@@ -5979,20 +5724,12 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  516
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Product"
 		  SrcPort		  1
 		  DstBlock		  "Cp3"
 		  DstPort		  1
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  345
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Sum"
 		  SrcPort		  1
 		  Points		  [3, 0]
@@ -6007,10 +5744,6 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  518
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Saturation"
 		  SrcPort		  1
 		  Points		  [-30, 0]
@@ -6150,11 +5883,7 @@ Model {
 		  SourceBlock		  "simulink/Sources/Repeating\nSequence\nStair"
 		  SourceType		  "Repeating Sequence Stair"
 		  OutValues		  "[0 1 0 0 0 0].'"
-<<<<<<< HEAD
-		  tsamp			  "contol_sample"
-=======
-		  tsamp			  "0.02"
->>>>>>> origin/Szabályozó
+		  tsamp			  "sample"
 		  OutMin		  "[]"
 		  OutMax		  "[]"
 		  OutDataTypeStr	  "float('double')"
@@ -6324,7 +6053,7 @@ Model {
 		  Position		  [1045, 529, 1075, 561]
 		  ZOrder		  1505
 		  Floating		  off
-		  Location		  [6, 45, 1372, 739]
+		  Location		  [1, 45, 1367, 739]
 		  Open			  off
 		  NumInputPorts		  "1"
 		  List {
@@ -6382,10 +6111,6 @@ Model {
 		  IconDisplay		  "Port number"
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  35
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Saturation"
 		  SrcPort		  1
 		  Points		  [-35, 0]
@@ -6393,10 +6118,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  2
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Sum"
 		  SrcPort		  1
 		  Points		  [3, 0]
@@ -6411,20 +6132,12 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  5
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Product"
 		  SrcPort		  1
 		  DstBlock		  "Cp3"
 		  DstPort		  1
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  6
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Product4"
 		  SrcPort		  1
 		  Points		  [88, 0; 0, 135]
@@ -6439,10 +6152,6 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  9
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "I Controller"
 		  SrcPort		  1
 		  Points		  [9, 0; 0, 45]
@@ -6461,30 +6170,18 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  13
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "I3 test\nstep"
 		  SrcPort		  1
 		  DstBlock		  "Product4"
 		  DstPort		  1
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  14
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Sum5"
 		  SrcPort		  1
 		  DstBlock		  "Product12"
 		  DstPort		  2
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  15
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Mask"
 		  SrcPort		  1
 		  Points		  [19, 0]
@@ -6499,10 +6196,6 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  18
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Cp3"
 		  SrcPort		  1
 		  Points		  [75, 0]
@@ -6510,10 +6203,6 @@ Model {
 		  DstPort		  trigger
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  19
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "I3\nStep"
 		  SrcPort		  1
 		  Points		  [104, 0; 0, -20]
@@ -6521,10 +6210,6 @@ Model {
 		  DstPort		  3
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  20
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Demux2"
 		  SrcPort		  1
 		  Points		  [151, 0; 0, -189; 904, 0; 0, 269]
@@ -6532,10 +6217,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  21
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Demux2"
 		  SrcPort		  2
 		  Points		  [175, 0; 0, -150]
@@ -6543,10 +6224,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  22
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Demux2"
 		  SrcPort		  3
 		  Points		  [205, 0]
@@ -6562,10 +6239,6 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  25
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Demux2"
 		  SrcPort		  4
 		  Points		  [100, 0; 0, -30]
@@ -6573,20 +6246,12 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  26
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Demux2"
 		  SrcPort		  5
 		  DstBlock		  "Product8"
 		  DstPort		  2
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  27
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Delay4"
 		  SrcPort		  1
 		  Points		  [47, 0; 0, -115]
@@ -6594,30 +6259,18 @@ Model {
 		  DstPort		  3
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  28
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "I3\ninit "
 		  SrcPort		  1
 		  DstBlock		  "Sum5"
 		  DstPort		  2
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  36
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Delay"
 		  SrcPort		  1
 		  DstBlock		  "Saturation"
 		  DstPort		  1
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  30
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Product8"
 		  SrcPort		  1
 		  Points		  [9, 0]
@@ -6632,10 +6285,6 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  33
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Product12"
 		  SrcPort		  1
 		  DstBlock		  "amp_S"
@@ -6780,11 +6429,7 @@ Model {
 		  SourceBlock		  "simulink/Sources/Repeating\nSequence\nStair"
 		  SourceType		  "Repeating Sequence Stair"
 		  OutValues		  "[0 0 1 0 0 0].'"
-<<<<<<< HEAD
-		  tsamp			  "contol_sample"
-=======
-		  tsamp			  "0.02"
->>>>>>> origin/Szabályozó
+		  tsamp			  "sample"
 		  OutMin		  "[]"
 		  OutMax		  "[]"
 		  OutDataTypeStr	  "float('double')"
@@ -6954,7 +6599,7 @@ Model {
 		  Position		  [1045, 529, 1075, 561]
 		  ZOrder		  1505
 		  Floating		  off
-		  Location		  [6, 45, 1372, 739]
+		  Location		  [1, 45, 1367, 739]
 		  Open			  off
 		  NumInputPorts		  "1"
 		  List {
@@ -7018,20 +6663,12 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  2
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Product12"
 		  SrcPort		  1
 		  DstBlock		  "amp_T"
 		  DstPort		  1
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  3
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Product8"
 		  SrcPort		  1
 		  Points		  [9, 0]
@@ -7046,30 +6683,18 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  36
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Delay"
 		  SrcPort		  1
 		  DstBlock		  "Saturation"
 		  DstPort		  1
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  7
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "I3\ninit "
 		  SrcPort		  1
 		  DstBlock		  "Sum5"
 		  DstPort		  2
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  8
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Delay4"
 		  SrcPort		  1
 		  Points		  [47, 0; 0, -115]
@@ -7077,20 +6702,12 @@ Model {
 		  DstPort		  3
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  9
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Demux2"
 		  SrcPort		  5
 		  DstBlock		  "Product8"
 		  DstPort		  2
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  10
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Demux2"
 		  SrcPort		  4
 		  Points		  [100, 0; 0, -30]
@@ -7098,10 +6715,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  11
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Demux2"
 		  SrcPort		  3
 		  Points		  [205, 0]
@@ -7117,10 +6730,6 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  14
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Demux2"
 		  SrcPort		  2
 		  Points		  [175, 0; 0, -150]
@@ -7128,10 +6737,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  15
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Demux2"
 		  SrcPort		  1
 		  Points		  [151, 0; 0, -189; 904, 0; 0, 269]
@@ -7139,10 +6744,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  16
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "I3\nStep"
 		  SrcPort		  1
 		  Points		  [104, 0; 0, -20]
@@ -7150,10 +6751,6 @@ Model {
 		  DstPort		  3
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  17
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Cp3"
 		  SrcPort		  1
 		  Points		  [75, 0]
@@ -7161,10 +6758,6 @@ Model {
 		  DstPort		  trigger
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  18
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Mask"
 		  SrcPort		  1
 		  Points		  [19, 0]
@@ -7179,30 +6772,18 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  21
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Sum5"
 		  SrcPort		  1
 		  DstBlock		  "Product12"
 		  DstPort		  2
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  22
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "I3 test\nstep"
 		  SrcPort		  1
 		  DstBlock		  "Product4"
 		  DstPort		  1
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  23
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "I Controller"
 		  SrcPort		  1
 		  Points		  [9, 0; 0, 45]
@@ -7221,10 +6802,6 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  27
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Product4"
 		  SrcPort		  1
 		  Points		  [88, 0; 0, 135]
@@ -7239,20 +6816,12 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  30
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Product"
 		  SrcPort		  1
 		  DstBlock		  "Cp3"
 		  DstPort		  1
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  31
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Sum"
 		  SrcPort		  1
 		  Points		  [3, 0]
@@ -7267,10 +6836,6 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  35
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Saturation"
 		  SrcPort		  1
 		  Points		  [-30, 0]
@@ -7410,11 +6975,7 @@ Model {
 		  SourceBlock		  "simulink/Sources/Repeating\nSequence\nStair"
 		  SourceType		  "Repeating Sequence Stair"
 		  OutValues		  "[0 0 0 1 0 0].'"
-<<<<<<< HEAD
-		  tsamp			  "contol_sample"
-=======
-		  tsamp			  "0.02"
->>>>>>> origin/Szabályozó
+		  tsamp			  "sample"
 		  OutMin		  "[]"
 		  OutMax		  "[]"
 		  OutDataTypeStr	  "float('double')"
@@ -7642,10 +7203,6 @@ Model {
 		  IconDisplay		  "Port number"
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  1
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Saturation"
 		  SrcPort		  1
 		  Points		  [-30, 0]
@@ -7653,10 +7210,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  2
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Sum"
 		  SrcPort		  1
 		  Points		  [3, 0]
@@ -7671,20 +7224,12 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  5
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Product"
 		  SrcPort		  1
 		  DstBlock		  "Cp3"
 		  DstPort		  1
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  6
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Product4"
 		  SrcPort		  1
 		  Points		  [88, 0; 0, 135]
@@ -7699,10 +7244,6 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  9
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "I Controller"
 		  SrcPort		  1
 		  Points		  [9, 0; 0, 45]
@@ -7721,30 +7262,18 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  13
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "I3 test\nstep"
 		  SrcPort		  1
 		  DstBlock		  "Product4"
 		  DstPort		  1
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  14
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Sum5"
 		  SrcPort		  1
 		  DstBlock		  "Product12"
 		  DstPort		  2
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  15
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Mask"
 		  SrcPort		  1
 		  Points		  [19, 0]
@@ -7759,10 +7288,6 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  18
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Cp3"
 		  SrcPort		  1
 		  Points		  [75, 0]
@@ -7770,10 +7295,6 @@ Model {
 		  DstPort		  trigger
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  19
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "I3\nStep"
 		  SrcPort		  1
 		  Points		  [104, 0; 0, -20]
@@ -7781,10 +7302,6 @@ Model {
 		  DstPort		  3
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  20
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Demux2"
 		  SrcPort		  1
 		  Points		  [151, 0; 0, -189; 904, 0; 0, 269]
@@ -7792,10 +7309,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  21
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Demux2"
 		  SrcPort		  2
 		  Points		  [175, 0; 0, -150]
@@ -7803,10 +7316,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  22
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Demux2"
 		  SrcPort		  3
 		  Points		  [205, 0]
@@ -7822,10 +7331,6 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  25
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Demux2"
 		  SrcPort		  4
 		  Points		  [100, 0; 0, -30]
@@ -7833,20 +7338,12 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  26
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Demux2"
 		  SrcPort		  5
 		  DstBlock		  "Product8"
 		  DstPort		  2
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  27
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Delay4"
 		  SrcPort		  1
 		  Points		  [47, 0; 0, -115]
@@ -7854,30 +7351,18 @@ Model {
 		  DstPort		  3
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  28
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "I3\ninit "
 		  SrcPort		  1
 		  DstBlock		  "Sum5"
 		  DstPort		  2
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  29
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Delay"
 		  SrcPort		  1
 		  DstBlock		  "Saturation"
 		  DstPort		  1
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  30
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Product8"
 		  SrcPort		  1
 		  Points		  [9, 0]
@@ -7892,10 +7377,6 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  33
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Product12"
 		  SrcPort		  1
 		  DstBlock		  "phase_R"
@@ -8040,11 +7521,7 @@ Model {
 		  SourceBlock		  "simulink/Sources/Repeating\nSequence\nStair"
 		  SourceType		  "Repeating Sequence Stair"
 		  OutValues		  "[0 0 0 0 0 1].'"
-<<<<<<< HEAD
-		  tsamp			  "contol_sample"
-=======
-		  tsamp			  "0.02"
->>>>>>> origin/Szabályozó
+		  tsamp			  "sample"
 		  OutMin		  "[]"
 		  OutMax		  "[]"
 		  OutDataTypeStr	  "float('double')"
@@ -8272,10 +7749,6 @@ Model {
 		  IconDisplay		  "Port number"
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  35
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Saturation"
 		  SrcPort		  1
 		  Points		  [-30, 0]
@@ -8283,10 +7756,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  2
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Sum"
 		  SrcPort		  1
 		  Points		  [3, 0]
@@ -8301,20 +7770,12 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  5
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Product"
 		  SrcPort		  1
 		  DstBlock		  "Cp3"
 		  DstPort		  1
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  6
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Product4"
 		  SrcPort		  1
 		  Points		  [88, 0; 0, 135]
@@ -8329,10 +7790,6 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  9
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "I Controller"
 		  SrcPort		  1
 		  Points		  [9, 0; 0, 45]
@@ -8351,30 +7808,18 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  13
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "I3 test\nstep"
 		  SrcPort		  1
 		  DstBlock		  "Product4"
 		  DstPort		  1
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  14
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Sum5"
 		  SrcPort		  1
 		  DstBlock		  "Product12"
 		  DstPort		  2
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  15
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Mask"
 		  SrcPort		  1
 		  Points		  [19, 0]
@@ -8389,10 +7834,6 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  18
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Cp3"
 		  SrcPort		  1
 		  Points		  [75, 0]
@@ -8400,10 +7841,6 @@ Model {
 		  DstPort		  trigger
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  19
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "I3\nStep"
 		  SrcPort		  1
 		  Points		  [104, 0; 0, -20]
@@ -8411,10 +7848,6 @@ Model {
 		  DstPort		  3
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  20
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Demux2"
 		  SrcPort		  1
 		  Points		  [151, 0; 0, -189; 904, 0; 0, 269]
@@ -8422,10 +7855,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  21
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Demux2"
 		  SrcPort		  2
 		  Points		  [175, 0; 0, -150]
@@ -8433,10 +7862,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  22
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Demux2"
 		  SrcPort		  3
 		  Points		  [205, 0]
@@ -8452,10 +7877,6 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  25
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Demux2"
 		  SrcPort		  4
 		  Points		  [100, 0; 0, -30]
@@ -8463,20 +7884,12 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  26
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Demux2"
 		  SrcPort		  5
 		  DstBlock		  "Product8"
 		  DstPort		  2
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  27
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Delay4"
 		  SrcPort		  1
 		  Points		  [47, 0; 0, -115]
@@ -8484,30 +7897,18 @@ Model {
 		  DstPort		  3
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  28
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "I3\ninit "
 		  SrcPort		  1
 		  DstBlock		  "Sum5"
 		  DstPort		  2
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  36
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Delay"
 		  SrcPort		  1
 		  DstBlock		  "Saturation"
 		  DstPort		  1
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  30
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Product8"
 		  SrcPort		  1
 		  Points		  [9, 0]
@@ -8522,10 +7923,6 @@ Model {
 		  }
 		}
 		Line {
-<<<<<<< HEAD
-		  ZOrder		  33
-=======
->>>>>>> origin/Szabályozó
 		  SrcBlock		  "Product12"
 		  SrcPort		  1
 		  DstBlock		  "phase_S"
@@ -8795,6 +8192,24 @@ Model {
 	  DstPort		  3
 	}
 	Line {
+	  SrcBlock		  "Constant1"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant2"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant3"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  3
+	}
+	Line {
 	  SrcBlock		  "MATLAB Function"
 	  SrcPort		  1
 	  DstBlock		  "Current_Sources"
@@ -8827,6 +8242,24 @@ Model {
 	  SrcPort		  RConn1
 	  DstBlock		  "Current_Sources"
 	  DstPort		  RConn4
+	}
+	Line {
+	  SrcBlock		  "Constant4"
+	  SrcPort		  1
+	  DstBlock		  "Mux3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant5"
+	  SrcPort		  1
+	  DstBlock		  "Mux3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant6"
+	  SrcPort		  1
+	  DstBlock		  "Mux3"
+	  DstPort		  3
 	}
 	Line {
 	  SrcBlock		  "NORM"
@@ -15449,10 +14882,6 @@ Model {
       }
     }
     Line {
-<<<<<<< HEAD
-      ZOrder		      75
-=======
->>>>>>> origin/Szabályozó
       SrcBlock		      "Calculate_Norms"
       SrcPort		      3
       Points		      [75, 0]

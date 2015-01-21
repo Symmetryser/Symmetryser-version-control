@@ -1,16 +1,16 @@
 Model {
   Name			  "Vagolap"
-  Version		  8.3
+  Version		  8.1
   MdlSubVersion		  0
-  SavedCharacterEncoding  "windows-1250"
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.11"
+    ComputedModelVersion    "1.12"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
+  SavedCharacterEncoding  "windows-1250"
   SaveDefaultBlockParams  on
   ScopeRefreshTime	  0.035000
   OverrideScopeRefreshTime on
@@ -55,9 +55,9 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[772.0, 378.0]
-	ZoomFactor		[0.6]
-	Offset			[895.17677670000057, 464.83333333333314]
+	Extents			[766.0, 364.0]
+	ZoomFactor		[0.8]
+	Offset			[-160.0294577091704, -110.85141427328085]
       }
     }
   }
@@ -68,11 +68,11 @@ Model {
   Creator		  "Templomos"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "Templomos"
+  LastModifiedBy	  "Neukirchner László"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sun Dec 28 09:27:39 2014"
-  RTWModifiedTimeStamp	  341659658
-  ModelVersionFormat	  "1.%<AutoIncrement:11>"
+  LastModifiedDate	  "Wed Jan 21 14:02:52 2015"
+  RTWModifiedTimeStamp	  343749768
+  ModelVersionFormat	  "1.%<AutoIncrement:12>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -98,11 +98,6 @@ Model {
   BrowserShowLibraryLinks off
   BrowserLookUnderMasks	  off
   SimulationMode	  "normal"
-  PauseTimes		  "5"
-  NumberOfSteps		  1
-  SnapshotBufferSize	  10
-  SnapshotInterval	  10
-  NumberOfLastSnapshots	  0
   LinearizationMsg	  "none"
   Profile		  off
   ParamWorkspaceSource	  "MATLABWorkspace"
@@ -136,7 +131,6 @@ Model {
   CovNameIncrementing	  off
   CovHtmlReporting	  on
   CovForceBlockReductionOff on
-  CovEnableCumulative	  on
   covSaveCumulativeToWorkspaceVar on
   CovSaveSingleToWorkspaceVar on
   CovCumulativeVarName	  "covCumulativeData"
@@ -144,9 +138,6 @@ Model {
   CovReportOnPause	  on
   CovModelRefEnable	  "Off"
   CovExternalEMLEnable	  off
-  CovSFcnEnable		  off
-  CovBoundaryAbsTol	  0.000010
-  CovBoundaryRelTol	  0.010000
   ExtModeBatchMode	  off
   ExtModeEnableFloating	  on
   ExtModeTrigType	  "manual"
@@ -176,13 +167,13 @@ Model {
     Dimension		    1
     Simulink.ConfigSet {
       $ObjectID		      7
-      Version		      "1.14.2"
+      Version		      "1.13.0"
       Array {
 	Type			"Handle"
 	Dimension		10
 	Simulink.SolverCC {
 	  $ObjectID		  8
-	  Version		  "1.14.2"
+	  Version		  "1.13.0"
 	  StartTime		  "0.0"
 	  StopTime		  "10.0"
 	  AbsTol		  "auto"
@@ -217,7 +208,7 @@ Model {
 	}
 	Simulink.DataIOCC {
 	  $ObjectID		  9
-	  Version		  "1.14.2"
+	  Version		  "1.13.0"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
 	  FinalStateName	  "xFinal"
@@ -235,7 +226,6 @@ Model {
 	  SignalLogging		  on
 	  DSMLogging		  on
 	  InspectSignalLogs	  off
-	  VisualizeSimOutput	  on
 	  SaveTime		  on
 	  ReturnWorkspaceOutputs  off
 	  StateSaveName		  "xout"
@@ -250,7 +240,7 @@ Model {
 	}
 	Simulink.OptimizationCC {
 	  $ObjectID		  10
-	  Version		  "1.14.2"
+	  Version		  "1.13.0"
 	  Array {
 	    Type		    "Cell"
 	    Dimension		    8
@@ -270,14 +260,11 @@ Model {
 	  InlineParams		  off
 	  UseIntDivNetSlope	  off
 	  UseFloatMulNetSlope	  off
-	  DefaultUnderspecifiedDataType	"double"
 	  UseSpecifiedMinMax	  off
 	  InlineInvariantSignals  off
 	  OptimizeBlockIOStorage  on
 	  BufferReuse		  on
 	  EnhancedBackFolding	  off
-	  CachingGlobalReferences off
-	  GlobalBufferReuse	  on
 	  StrengthReduction	  off
 	  ExpressionFolding	  on
 	  BooleansAsBitfields	  off
@@ -292,7 +279,6 @@ Model {
 	  SystemCodeInlineAuto	  off
 	  StateBitsets		  off
 	  DataBitsets		  off
-	  ActiveStateOutputEnumStorageType "Native Integer"
 	  UseTempVars		  off
 	  ZeroExternalMemoryAtStartup on
 	  ZeroInternalMemoryAtStartup on
@@ -310,7 +296,7 @@ Model {
 	}
 	Simulink.DebuggingCC {
 	  $ObjectID		  11
-	  Version		  "1.14.2"
+	  Version		  "1.13.0"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
 	  ArrayBoundsChecking	  "none"
@@ -400,7 +386,7 @@ Model {
 	}
 	Simulink.HardwareCC {
 	  $ObjectID		  12
-	  Version		  "1.14.2"
+	  Version		  "1.13.0"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
 	  ProdBitPerInt		  32
@@ -441,7 +427,7 @@ Model {
 	}
 	Simulink.ModelReferenceCC {
 	  $ObjectID		  13
-	  Version		  "1.14.2"
+	  Version		  "1.13.0"
 	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
 	  CheckModelReferenceTargetMessage "error"
 	  EnableParallelModelReferenceBuilds off
@@ -456,7 +442,7 @@ Model {
 	}
 	Simulink.SFSimCC {
 	  $ObjectID		  14
-	  Version		  "1.14.2"
+	  Version		  "1.13.0"
 	  SFSimEnableDebug	  on
 	  SFSimOverflowDetection  on
 	  SFSimEcho		  on
@@ -467,12 +453,11 @@ Model {
 	  SimUseLocalCustomCode	  off
 	  SimParseCustomCode	  on
 	  SimBuildMode		  "sf_incremental_build"
-	  SimGenImportedTypeDefs  off
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
 	  $ObjectID		  15
-	  Version		  "1.14.2"
+	  Version		  "1.13.0"
 	  Array {
 	    Type		    "Cell"
 	    Dimension		    15
@@ -494,15 +479,11 @@ Model {
 	    PropName		    "DisabledProps"
 	  }
 	  SystemTargetFile	  "grt.tlc"
-	  TLCOptions		  ""
 	  GenCodeOnly		  off
 	  MakeCommand		  "make_rtw"
 	  GenerateMakefile	  on
 	  PackageGeneratedCodeAndArtifacts off
-	  PackageName		  ""
 	  TemplateMakefile	  "grt_default_tmf"
-	  PostCodeGenCommand	  ""
-	  Description		  ""
 	  GenerateReport	  off
 	  SaveLog		  off
 	  RTWVerbose		  on
@@ -513,23 +494,13 @@ Model {
 	  TLCAssert		  off
 	  ProcessScriptMode	  "Default"
 	  ConfigurationMode	  "Optimized"
-	  ProcessScript		  ""
-	  ConfigurationScript	  ""
 	  ConfigAtBuild		  off
 	  RTWUseLocalCustomCode	  off
 	  RTWUseSimCustomCode	  off
-	  CustomSourceCode	  ""
-	  CustomHeaderCode	  ""
-	  CustomInclude		  ""
-	  CustomSource		  ""
-	  CustomLibrary		  ""
-	  CustomInitializer	  ""
-	  CustomTerminator	  ""
-	  Toolchain		  "Automatically locate an installed toolchain"
-	  BuildConfiguration	  "Faster Builds"
 	  IncludeHyperlinkInReport off
 	  LaunchReport		  off
 	  PortableWordSizes	  off
+	  GenerateErtSFunction	  off
 	  CreateSILPILBlock	  "None"
 	  CodeExecutionProfiling  off
 	  CodeExecutionProfileVariable "executionProfile"
@@ -549,17 +520,14 @@ Model {
 	  GenerateCodeMetricsReport off
 	  GenerateCodeReplacementReport	off
 	  RTWCompilerOptimization "Off"
-	  RTWCustomCompilerOptimizations ""
 	  CheckMdlBeforeBuild	  "Off"
 	  CustomRebuildMode	  "OnUpdate"
-	  DataInitializer	  ""
-	  SharedConstantsCachingThreshold 1024
 	  Array {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
 	      $ObjectID		      16
-	      Version		      "1.14.2"
+	      Version		      "1.13.0"
 	      Array {
 		Type			"Cell"
 		Dimension		23
@@ -590,7 +558,6 @@ Model {
 	      }
 	      ForceParamTrailComments off
 	      GenerateComments	      on
-	      CommentStyle	      "Auto"
 	      IgnoreCustomStorageClasses on
 	      IgnoreTestpoints	      off
 	      IncHierarchyInIds	      off
@@ -613,7 +580,6 @@ Model {
 	      CustomSymbolStrBlkIO    "rtb_$N$M"
 	      CustomSymbolStrTmpVar   "$N$M"
 	      CustomSymbolStrMacro    "$R$N$M"
-	      CustomSymbolStrUtil     "$N$C"
 	      DefineNamingRule	      "None"
 	      ParamNamingRule	      "None"
 	      SignalNamingRule	      "None"
@@ -630,7 +596,7 @@ Model {
 	    Simulink.GRTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
 	      $ObjectID		      17
-	      Version		      "1.14.2"
+	      Version		      "1.13.0"
 	      Array {
 		Type			"Cell"
 		Dimension		14
@@ -653,8 +619,6 @@ Model {
 	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
 	      TargetLibSuffix	      ""
 	      TargetPreCompLibLocation ""
-	      GenFloatMathFcnCalls    "NOT IN USE"
-	      TargetLangStandard      "C89/C90 (ANSI)"
 	      CodeReplacementLibrary  "None"
 	      UtilityFuncGeneration   "Auto"
 	      ERTMultiwordTypeDef     "System defined"
@@ -663,6 +627,7 @@ Model {
 	      GenerateFullHeader      on
 	      GenerateSampleERTMain   off
 	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
 	      ModelReferenceCompliant on
 	      ParMdlRefBuildCompliant on
 	      CompOptLevelCompliant   on
@@ -679,7 +644,6 @@ Model {
 	      LogVarNameModifier      "rt_"
 	      MatFileLogging	      on
 	      MultiInstanceERTCode    off
-	      CodeInterfacePackaging  "Nonreusable function"
 	      SupportNonFinite	      on
 	      SupportComplex	      on
 	      PurelyIntegerCode	      off
@@ -707,14 +671,13 @@ Model {
 	      RTWCAPIStates	      off
 	      RTWCAPIRootIO	      off
 	      GenerateASAP2	      off
-	      MultiInstanceErrorCode  "Error"
 	    }
 	    PropName		    "Components"
 	  }
 	}
 	hdlcoderui.hdlcc {
 	  $ObjectID		  18
-	  Version		  "1.14.2"
+	  Version		  "1.13.0"
 	  Description		  "HDL Coder custom configuration component"
 	  Name			  "HDL Coder"
 	  Array {
@@ -733,6 +696,76 @@ Model {
 	    Dimension		    1
 	    Cell		    "Name"
 	    PropName		    "DisabledProps"
+	  }
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    MECH.SimMechanicsCC {
+	      $ObjectID		      20
+	      Version		      "1.13.0"
+	      Name		      "SimMechanics"
+	      WarnOnRedundantConstraints on
+	      WarnOnSingularInitialAssembly off
+	      ShowCutJoints	      off
+	      VisOnUpdateDiagram      off
+	      VisDuringSimulation     off
+	      EnableVisSimulationTime on
+	      VisSampleTime	      "0"
+	      DisableBodyVisControl   off
+	      ShowCG		      on
+	      ShowCS		      on
+	      ShowOnlyPortCS	      off
+	      HighlightModel	      on
+	      FramesToBeSkipped	      "0"
+	      AnimationDelay	      "3"
+	      RecordAVI		      off
+	      CompressAVI	      on
+	      AutoFitVis	      "off"
+	      EnableSelection	      on
+	      LastVizWinPosition      "[-1 -1 -1 -1]"
+	      CamPosition	      "[0 0 0]"
+	      CamTarget		      "[0 0 -1]"
+	      CamUpVector	      "[0 1 0]"
+	      CamHeight		      "-1"
+	      CamViewAngle	      "0"
+	      VisBackgroundColor      "[0.9 0.9 0.95]"
+	      DefaultBodyColor	      "[1 0 0]"
+	      MDLBodyVisualizationType "Convex hull from body CS locations"
+	      OVRRIDBodyVisualizationType "NONE"
+	    }
+	    simmechanics.ConfigurationSet {
+	      $ObjectID		      21
+	      Version		      "1.13.0"
+	      Description	      "SimMechanics 2G"
+	      Array {
+		Type			"Handle"
+		Dimension		2
+		simmechanics.DiagnosticsConfigSet {
+		  $ObjectID		  22
+		  Version		  "1.13.0"
+		  Description		  "Diagnostics"
+		  Name			  "DiagnosticsConfigSet"
+		  SimMechanicsInvalidVisualProperty "warning"
+		  SimMechanicsCrossSectionNullEdge "warning"
+		  SimMechanicsUnconnectedFramePorts "warning"
+		  SimMechanicsRedundantBlock "warning"
+		  SimMechanicsConflictingReferenceFrames "warning"
+		  SimMechanicsRigidlyBoundBlock	"error"
+		  SimMechanicsUnsatisfiedHighPriorityTargets "warning"
+		  SimMechanicsJointTargetOverSpecification "error"
+		}
+		simmechanics.ExplorerConfigSet {
+		  $ObjectID		  23
+		  Version		  "1.13.0"
+		  Description		  "Explorer"
+		  Name			  "ExplorerConfigSet"
+		  SimMechanicsOpenEditorOnUpdate on
+		}
+		PropName		"Components"
+	      }
+	      Name		      "SimMechanics2G"
+	    }
+	    PropName		    "Components"
 	  }
 	  Name			  "Simscape"
 	  EditingMode		  "Full"
@@ -759,7 +792,7 @@ Model {
   }
   Object {
     $PropName		    "DataTransfer"
-    $ObjectID		    20
+    $ObjectID		    24
     $ClassName		    "Simulink.GlobalDataTransfer"
     DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
     DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
@@ -826,21 +859,6 @@ Model {
       BusSelectionMode	      off
     }
     Block {
-      BlockType		      Gain
-      Gain		      "1"
-      Multiplication	      "Element-wise(K.*u)"
-      ParamMin		      "[]"
-      ParamMax		      "[]"
-      ParamDataTypeStr	      "Inherit: Same as input"
-      OutMin		      "[]"
-      OutMax		      "[]"
-      OutDataTypeStr	      "Inherit: Same as input"
-      LockScale		      off
-      RndMeth		      "Floor"
-      SaturateOnIntegerOverflow	on
-      SampleTime	      "-1"
-    }
-    Block {
       BlockType		      Inport
       Port		      "1"
       OutputFunctionCall      off
@@ -857,14 +875,6 @@ Model {
       LatchByDelayingOutsideSignal off
       LatchInputForFeedbackSignals off
       Interpolate	      on
-    }
-    Block {
-      BlockType		      Mux
-      Inputs		      "4"
-      DisplayOption	      "none"
-      UseBusObject	      off
-      BusObject		      "BusObject"
-      NonVirtualBus	      off
     }
     Block {
       BlockType		      Outport
@@ -884,21 +894,6 @@ Model {
       InitialOutput	      "[]"
     }
     Block {
-      BlockType		      Product
-      Inputs		      "2"
-      Multiplication	      "Element-wise(.*)"
-      CollapseMode	      "All dimensions"
-      CollapseDim	      "1"
-      InputSameDT	      on
-      OutMin		      "[]"
-      OutMax		      "[]"
-      OutDataTypeStr	      "Inherit: Same as first input"
-      LockScale		      off
-      RndMeth		      "Zero"
-      SaturateOnIntegerOverflow	on
-      SampleTime	      "-1"
-    }
-    Block {
       BlockType		      S-Function
       FunctionName	      "system"
       SFunctionModules	      "''"
@@ -906,25 +901,16 @@ Model {
       SFunctionDeploymentMode off
     }
     Block {
-      BlockType		      Signum
-      ZeroCross		      on
-      SampleTime	      "-1"
-    }
-    Block {
       BlockType		      SubSystem
       ShowPortLabels	      "FromPortIcon"
       Permissions	      "ReadWrite"
       PermitHierarchicalResolution "All"
       TreatAsAtomicUnit	      off
-      MinAlgLoopOccurrences   off
-      PropExecContextOutsideSubsystem off
       CheckFcnCallInpInsideContextMsg off
       SystemSampleTime	      "-1"
-      RTWSystemCode	      "Auto"
       RTWFcnNameOpts	      "Auto"
       RTWFileNameOpts	      "Auto"
       FunctionInterfaceSpec   "void_void"
-      FunctionWithSeparateData off
       RTWMemSecFuncInitTerm   "Inherit from model"
       RTWMemSecFuncExecute    "Inherit from model"
       RTWMemSecDataConstants  "Inherit from model"
@@ -934,51 +920,12 @@ Model {
       DataTypeOverride	      "UseLocalSettings"
       DataTypeOverrideAppliesTo	"AllNumericTypes"
       MinMaxOverflowLogging   "UseLocalSettings"
-      Opaque		      off
-      MaskHideContents	      off
       SFBlockType	      "NONE"
       Variant		      off
       GeneratePreprocessorConditionals off
-      ContentPreviewEnabled   off
-    }
-    Block {
-      BlockType		      Sum
-      IconShape		      "rectangular"
-      Inputs		      "++"
-      CollapseMode	      "All dimensions"
-      CollapseDim	      "1"
-      InputSameDT	      on
-      AccumDataTypeStr	      "Inherit: Inherit via internal rule"
-      OutMin		      "[]"
-      OutMax		      "[]"
-      OutDataTypeStr	      "Inherit: Same as first input"
-      LockScale		      off
-      RndMeth		      "Floor"
-      SaturateOnIntegerOverflow	on
-      SampleTime	      "-1"
     }
     Block {
       BlockType		      Terminator
-    }
-    Block {
-      BlockType		      ToWorkspace
-      VariableName	      "simulink_output"
-      MaxDataPoints	      "1000"
-      Decimation	      "1"
-      SaveFormat	      "Array"
-      Save2DSignal	      "Inherit from input (this choice will be removed - see release notes)"
-      FixptAsFi		      off
-      NumInputs		      "1"
-      SampleTime	      "0"
-    }
-    Block {
-      BlockType		      UnitDelay
-      InitialCondition	      "0"
-      InputProcessing	      "Inherited"
-      SampleTime	      "1"
-      StateMustResolveToSignalObject off
-      CodeGenStateStorageClass "Auto"
-      HasFrameUpgradeWarning  on
     }
   }
   System {
@@ -995,190 +942,74 @@ Model {
     TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "60"
+    ZoomFactor		    "80"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "367"
-    Block {
-      BlockType		      Reference
-      Name		      "Controlled Current Source"
-      SID		      "326"
-      Ports		      [1, 0, 0, 0, 0, 1, 1]
-      Position		      [1625, 607, 1670, 643]
-      ZOrder		      844
-      ShowName		      off
-      LibraryVersion	      "1.2362"
-      SourceBlock	      "powerlib/Electrical\nSources/Controlled Current Source"
-      SourceType	      "Controlled Current Source"
-      ContentPreviewEnabled   off
-      Initialize	      on
-      Source_Type	      "AC"
-      Amplitude		      "0"
-      Phase		      "0"
-      Frequency		      "0"
-      Measurements	      "None"
-    }
-    Block {
-      BlockType		      Reference
-      Name		      "Controlled Current Source1"
-      SID		      "327"
-      Ports		      [1, 0, 0, 0, 0, 1, 1]
-      Position		      [1625, 667, 1670, 703]
-      ZOrder		      845
-      ShowName		      off
-      LibraryVersion	      "1.2362"
-      SourceBlock	      "powerlib/Electrical\nSources/Controlled Current Source"
-      SourceType	      "Controlled Current Source"
-      ContentPreviewEnabled   off
-      Initialize	      on
-      Source_Type	      "AC"
-      Amplitude		      "0"
-      Phase		      "0"
-      Frequency		      "0"
-      Measurements	      "None"
-    }
-    Block {
-      BlockType		      Reference
-      Name		      "Controlled Current Source2"
-      SID		      "328"
-      Ports		      [1, 0, 0, 0, 0, 1, 1]
-      Position		      [1625, 727, 1670, 763]
-      ZOrder		      846
-      ShowName		      off
-      LibraryVersion	      "1.2362"
-      SourceBlock	      "powerlib/Electrical\nSources/Controlled Current Source"
-      SourceType	      "Controlled Current Source"
-      ContentPreviewEnabled   off
-      Initialize	      on
-      Source_Type	      "AC"
-      Amplitude		      "0"
-      Phase		      "0"
-      Frequency		      "0"
-      Measurements	      "None"
-    }
+    SIDHighWatermark	    "373"
     Block {
       BlockType		      Demux
-      Name		      "Demux"
-      SID		      "329"
+      Name		      "Demux1"
+      SID		      "371"
       Ports		      [1, 3]
-      Position		      [1360, 582, 1365, 768]
-      ZOrder		      847
+      Position		      [20, 18, 25, 72]
+      ZOrder		      858
       ShowName		      off
       Outputs		      "3"
       DisplayOption	      "bar"
     }
     Block {
-      BlockType		      Reference
-      Name		      "M3"
-      SID		      "330"
-      Ports		      [0, 1, 0, 0, 0, 3, 3]
-      Position		      [1715, 592, 1750, 773]
-      ZOrder		      849
+      BlockType		      Demux
+      Name		      "Demux2"
+      SID		      "372"
+      Ports		      [1, 3]
+      Position		      [20, 78, 25, 132]
+      ZOrder		      859
       ShowName		      off
-      LibraryVersion	      "1.2362"
-      SourceBlock	      "powerlib/Measurements/Three-Phase\nV-I Measurement"
-      SourceType	      "Three-Phase VI Measurement"
-      ContentPreviewEnabled   off
-      VoltageMeasurement      "no"
-      SetLabelV		      off
-      LabelV		      "V_RST"
-      Vpu		      off
-      VpuLL		      off
-      CurrentMeasurement      "yes"
-      SetLabelI		      off
-      LabelI		      "I_RST"
-      Ipu		      off
-      Pbase		      "100e6"
-      Vbase		      "500e3"
-      OutputType	      "Complex"
-      PhasorSimulation	      off
-      PSBequivalent	      "0"
+      Outputs		      "3"
+      DisplayOption	      "bar"
     }
     Block {
-      BlockType		      Reference
-      Name		      "P(t) Filter"
-      SID		      "331"
-      Ports		      [1, 1]
-      Position		      [1425, 587, 1490, 643]
-      ZOrder		      850
+      BlockType		      Demux
+      Name		      "Demux5"
+      SID		      "368"
+      Ports		      [1, 3]
+      Position		      [3030, 1088, 3035, 1142]
+      ZOrder		      855
       ShowName		      off
-      LibraryVersion	      "1.321"
-      SourceBlock	      "dsparch4/Analog\nFilter Design"
-      SourceType	      "Analog Filter Design"
-      method		      "Butterworth"
-      filttype		      "Lowpass"
-      N			      "Butterworth_filter_order"
-      Wlo		      "Butterworth_passband_frequency"
-      Whi		      "80"
-      Rp		      "2"
-      Rs		      "40"
+      Outputs		      "3"
+      DisplayOption	      "bar"
     }
     Block {
-      BlockType		      Reference
-      Name		      "P(t) Filter1"
-      SID		      "332"
-      Ports		      [1, 1]
-      Position		      [1425, 647, 1490, 703]
-      ZOrder		      851
+      BlockType		      Demux
+      Name		      "Demux6"
+      SID		      "369"
+      Ports		      [1, 3]
+      Position		      [3030, 1148, 3035, 1202]
+      ZOrder		      856
       ShowName		      off
-      LibraryVersion	      "1.321"
-      SourceBlock	      "dsparch4/Analog\nFilter Design"
-      SourceType	      "Analog Filter Design"
-      method		      "Butterworth"
-      filttype		      "Lowpass"
-      N			      "Butterworth_filter_order"
-      Wlo		      "Butterworth_passband_frequency"
-      Whi		      "80"
-      Rp		      "2"
-      Rs		      "40"
-    }
-    Block {
-      BlockType		      Reference
-      Name		      "P(t) Filter2"
-      SID		      "333"
-      Ports		      [1, 1]
-      Position		      [1425, 707, 1490, 763]
-      ZOrder		      852
-      ShowName		      off
-      LibraryVersion	      "1.321"
-      SourceBlock	      "dsparch4/Analog\nFilter Design"
-      SourceType	      "Analog Filter Design"
-      method		      "Butterworth"
-      filttype		      "Lowpass"
-      N			      "Butterworth_filter_order"
-      Wlo		      "Butterworth_passband_frequency"
-      Whi		      "80"
-      Rp		      "2"
-      Rs		      "40"
-    }
-    Block {
-      BlockType		      ToWorkspace
-      Name		      "Sources7"
-      SID		      "334"
-      Ports		      [1]
-      Position		      [1820, 600, 1950, 630]
-      ZOrder		      848
-      ShowName		      off
-      VariableName	      "CC"
-      MaxDataPoints	      "inf"
-      SaveFormat	      "Structure With Time"
-      FixptAsFi		      on
-      SampleTime	      "sample"
+      Outputs		      "3"
+      DisplayOption	      "bar"
     }
     Block {
       BlockType		      SubSystem
-      Name		      "Step_Controller"
-      SID		      "335"
-      Ports		      [2, 1]
-      Position		      [1235, 647, 1305, 698]
-      ZOrder		      843
-      LibraryVersion	      "1.109"
+      Name		      "geometrial norm1"
+      SID		      "370"
+      Ports		      [6, 1]
+      Position		      [3105, 1089, 3290, 1201]
+      ZOrder		      854
+      LibraryVersion	      "1.32"
       ErrorFcn		      "Stateflow.Translate.translate"
       PermitHierarchicalResolution "ExplicitOnly"
       TreatAsAtomicUnit	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
       RequestExecContextInheritance off
+      MaskHideContents	      off
       SFBlockType	      "MATLAB Function"
       System {
-	Name			"Step_Controller"
+	Name			"geometrial norm1"
 	Location		[223, 338, 826, 833]
 	Open			off
 	ModelBrowserVisibility	off
@@ -1192,47 +1023,83 @@ Model {
 	TiledPageScale		1
 	ShowPageBoundaries	off
 	ZoomFactor		"100"
-	SIDHighWatermark	"39"
+	SIDHighWatermark	"31"
 	Block {
 	  BlockType		  Inport
-	  Name			  "norm"
-	  SID			  "335::1"
+	  Name			  "amplitude_R"
+	  SID			  "370::1"
 	  Position		  [20, 101, 40, 119]
 	  ZOrder		  -1
 	  IconDisplay		  "Port number"
 	}
 	Block {
 	  BlockType		  Inport
-	  Name			  "t"
-	  SID			  "335::39"
+	  Name			  "amplitude_S"
+	  SID			  "370::21"
 	  Position		  [20, 136, 40, 154]
-	  ZOrder		  30
+	  ZOrder		  7
 	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "amplitude_T"
+	  SID			  "370::22"
+	  Position		  [20, 171, 40, 189]
+	  ZOrder		  8
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "phase_R"
+	  SID			  "370::23"
+	  Position		  [20, 206, 40, 224]
+	  ZOrder		  9
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "phase_S"
+	  SID			  "370::24"
+	  Position		  [20, 246, 40, 264]
+	  ZOrder		  10
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "phase_T"
+	  SID			  "370::25"
+	  Position		  [20, 281, 40, 299]
+	  ZOrder		  11
+	  Port			  "6"
 	  IconDisplay		  "Port number"
 	}
 	Block {
 	  BlockType		  Demux
 	  Name			  " Demux "
-	  SID			  "335::35"
+	  SID			  "370::30"
 	  Ports			  [1, 1]
 	  Position		  [270, 230, 320, 270]
-	  ZOrder		  26
+	  ZOrder		  16
 	  Outputs		  "1"
 	}
 	Block {
 	  BlockType		  S-Function
 	  Name			  " SFunction "
-	  SID			  "335::34"
-	  Tag			  "Stateflow S-Function Vagolap 4"
-	  Ports			  [2, 2]
-	  Position		  [180, 105, 230, 165]
-	  ZOrder		  25
+	  SID			  "370::29"
+	  Tag			  "Stateflow S-Function Vagolap 3"
+	  Ports			  [6, 2]
+	  Position		  [180, 102, 230, 243]
+	  ZOrder		  15
 	  FunctionName		  "sf_sfun"
-	  PortCounts		  "[2 2]"
+	  PortCounts		  "[6 2]"
 	  EnableBusSupport	  on
 	  Port {
 	    PortNumber		    2
-	    Name		    "CC"
+	    Name		    "GEO_norm"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
@@ -1240,50 +1107,69 @@ Model {
 	Block {
 	  BlockType		  Terminator
 	  Name			  " Terminator "
-	  SID			  "335::36"
+	  SID			  "370::31"
 	  Position		  [460, 241, 480, 259]
-	  ZOrder		  27
+	  ZOrder		  17
 	}
 	Block {
 	  BlockType		  Outport
-	  Name			  "CC"
-	  SID			  "335::5"
+	  Name			  "GEO_norm"
+	  SID			  "370::5"
 	  Position		  [460, 101, 480, 119]
 	  ZOrder		  -5
 	  IconDisplay		  "Port number"
 	}
 	Line {
-	  ZOrder		  1
-	  SrcBlock		  "norm"
+	  SrcBlock		  "amplitude_R"
 	  SrcPort		  1
 	  DstBlock		  " SFunction "
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  2
-	  SrcBlock		  "t"
+	  SrcBlock		  "amplitude_S"
 	  SrcPort		  1
 	  DstBlock		  " SFunction "
 	  DstPort		  2
 	}
 	Line {
-	  Name			  "CC"
-	  ZOrder		  3
+	  SrcBlock		  "amplitude_T"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "phase_R"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "phase_S"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "phase_T"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  6
+	}
+	Line {
+	  Name			  "GEO_norm"
 	  Labels		  [0, 0]
 	  SrcBlock		  " SFunction "
 	  SrcPort		  2
-	  DstBlock		  "CC"
+	  DstBlock		  "GEO_norm"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  4
 	  SrcBlock		  " Demux "
 	  SrcPort		  1
 	  DstBlock		  " Terminator "
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  5
 	  SrcBlock		  " SFunction "
 	  SrcPort		  1
 	  DstBlock		  " Demux "
@@ -1293,15 +1179,26 @@ Model {
     }
     Block {
       BlockType		      SubSystem
-      Name		      "amplitude_controller"
-      SID		      "336"
-      Ports		      [1, 1]
-      Position		      [1275, 860, 1455, 920]
-      ZOrder		      853
+      Name		      "geometrial norm2"
+      SID		      "373"
+      Ports		      [6, 1]
+      Position		      [95, 19, 280, 131]
+      ZOrder		      857
+      LibraryVersion	      "1.32"
+      ErrorFcn		      "Stateflow.Translate.translate"
+      PermitHierarchicalResolution "ExplicitOnly"
+      TreatAsAtomicUnit	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
       RequestExecContextInheritance off
+      MaskHideContents	      off
+      SFBlockType	      "MATLAB Function"
       System {
-	Name			"amplitude_controller"
-	Location		[-1, 31, 1377, 775]
+	Name			"geometrial norm2"
+	Location		[223, 338, 826, 833]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -1313,985 +1210,283 @@ Model {
 	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"60"
+	ZoomFactor		"100"
+	SIDHighWatermark	"31"
 	Block {
 	  BlockType		  Inport
-	  Name			  "Norm"
-	  SID			  "337"
-	  Position		  [20, 73, 50, 87]
-	  ZOrder		  677
+	  Name			  "amplitude_R"
+	  SID			  "373::1"
+	  Position		  [20, 101, 40, 119]
+	  ZOrder		  -1
 	  IconDisplay		  "Port number"
 	}
 	Block {
-	  BlockType		  Reference
-	  Name			  "Cp1"
-	  SID			  "338"
+	  BlockType		  Inport
+	  Name			  "amplitude_S"
+	  SID			  "373::21"
+	  Position		  [20, 136, 40, 154]
+	  ZOrder		  7
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "amplitude_T"
+	  SID			  "373::22"
+	  Position		  [20, 171, 40, 189]
+	  ZOrder		  8
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "phase_R"
+	  SID			  "373::23"
+	  Position		  [20, 206, 40, 224]
+	  ZOrder		  9
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "phase_S"
+	  SID			  "373::24"
+	  Position		  [20, 246, 40, 264]
+	  ZOrder		  10
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "phase_T"
+	  SID			  "373::25"
+	  Position		  [20, 281, 40, 299]
+	  ZOrder		  11
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  " Demux "
+	  SID			  "373::30"
 	  Ports			  [1, 1]
-	  Position		  [790, 395, 820, 425]
-	  ZOrder		  663
-	  BlockRotation		  270
-	  BlockMirror		  on
-	  NamePlacement		  "alternate"
-	  LibraryVersion	  "1.287"
-	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
-	  SourceType		  "Compare To Constant"
-	  ContentPreviewEnabled	  off
-	  relop			  "=="
-	  const			  "1"
-	  OutDataTypeStr	  "uint8"
-	  ZeroCross		  off
+	  Position		  [270, 230, 320, 270]
+	  ZOrder		  16
+	  Outputs		  "1"
 	}
 	Block {
-	  BlockType		  Reference
-	  Name			  "Cp2"
-	  SID			  "339"
-	  Ports			  [1, 1]
-	  Position		  [790, 635, 820, 665]
-	  ZOrder		  664
-	  BlockRotation		  270
-	  BlockMirror		  on
-	  NamePlacement		  "alternate"
-	  LibraryVersion	  "1.287"
-	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
-	  SourceType		  "Compare To Constant"
-	  ContentPreviewEnabled	  off
-	  relop			  "=="
-	  const			  "1"
-	  OutDataTypeStr	  "uint8"
-	  ZeroCross		  off
+	  BlockType		  S-Function
+	  Name			  " SFunction "
+	  SID			  "373::29"
+	  Tag			  "Stateflow S-Function Vagolap 1"
+	  Ports			  [6, 2]
+	  Position		  [180, 102, 230, 243]
+	  ZOrder		  15
+	  FunctionName		  "sf_sfun"
+	  PortCounts		  "[6 2]"
+	  EnableBusSupport	  on
+	  Port {
+	    PortNumber		    2
+	    Name		    "GEO_norm"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
 	}
 	Block {
-	  BlockType		  Reference
-	  Name			  "Cp7"
-	  SID			  "340"
-	  Ports			  [1, 1]
-	  Position		  [790, 150, 820, 180]
-	  ZOrder		  617
-	  BlockRotation		  270
-	  BlockMirror		  on
-	  NamePlacement		  "alternate"
-	  LibraryVersion	  "1.287"
-	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
-	  SourceType		  "Compare To Constant"
-	  ContentPreviewEnabled	  off
-	  relop			  "=="
-	  const			  "1"
-	  OutDataTypeStr	  "uint8"
-	  ZeroCross		  off
-	}
-	Block {
-	  BlockType		  Reference
-	  Name			  "Energy"
-	  SID			  "341"
-	  Ports			  [1, 1, 0, 1]
-	  Position		  [780, 204, 830, 246]
-	  ZOrder		  616
-	  LibraryVersion	  "1.735"
-	  SourceBlock		  "dspsigops/Sample\nand Hold"
-	  SourceType		  "Sample and Hold"
-	  ContentPreviewEnabled	  off
-	  trig			  "Rising edge"
-	  initCond		  "18"
-	  latchinput		  off
-	}
-	Block {
-	  BlockType		  Reference
-	  Name			  "Energy1"
-	  SID			  "342"
-	  Ports			  [1, 1, 0, 1]
-	  Position		  [780, 454, 830, 496]
-	  ZOrder		  633
-	  LibraryVersion	  "1.735"
-	  SourceBlock		  "dspsigops/Sample\nand Hold"
-	  SourceType		  "Sample and Hold"
-	  ContentPreviewEnabled	  off
-	  trig			  "Rising edge"
-	  initCond		  "18"
-	  latchinput		  off
-	}
-	Block {
-	  BlockType		  Reference
-	  Name			  "Energy2"
-	  SID			  "343"
-	  Ports			  [1, 1, 0, 1]
-	  Position		  [780, 689, 830, 731]
-	  ZOrder		  644
-	  LibraryVersion	  "1.735"
-	  SourceBlock		  "dspsigops/Sample\nand Hold"
-	  SourceType		  "Sample and Hold"
-	  ContentPreviewEnabled	  off
-	  trig			  "Rising edge"
-	  initCond		  "18"
-	  latchinput		  off
-	}
-	Block {
-	  BlockType		  Reference
-	  Name			  "Mask"
-	  SID			  "344"
-	  Ports			  [0, 1]
-	  Position		  [590, 20, 620, 50]
-	  ZOrder		  619
-	  LibraryVersion	  "1.287"
-	  SourceBlock		  "simulink/Sources/Repeating\nSequence\nStair"
-	  SourceType		  "Repeating Sequence Stair"
-	  ContentPreviewEnabled	  off
-	  OutValues		  "[1 0 0 0 0 0].'"
-	  tsamp			  "0.1"
-	  OutMin		  "[]"
-	  OutMax		  "[]"
-	  OutDataTypeStr	  "float('double')"
-	  OutputDataTypeScalingMode "Specify via dialog"
-	  OutDataType		  "float('double')"
-	  ConRadixGroup		  "Best Precision: Vector-wise"
-	  OutScaling		  "2^-12"
-	  LockScale		  off
-	}
-	Block {
-	  BlockType		  Reference
-	  Name			  "Mask1"
-	  SID			  "345"
-	  Ports			  [0, 1]
-	  Position		  [600, 590, 630, 620]
-	  ZOrder		  669
-	  LibraryVersion	  "1.287"
-	  SourceBlock		  "simulink/Sources/Repeating\nSequence\nStair"
-	  SourceType		  "Repeating Sequence Stair"
-	  ContentPreviewEnabled	  off
-	  OutValues		  "[0 0 1 0 0 0].'"
-	  tsamp			  "0.1"
-	  OutMin		  "[]"
-	  OutMax		  "[]"
-	  OutDataTypeStr	  "float('double')"
-	  OutputDataTypeScalingMode "Specify via dialog"
-	  OutDataType		  "float('double')"
-	  ConRadixGroup		  "Best Precision: Vector-wise"
-	  OutScaling		  "2^-12"
-	  LockScale		  off
-	}
-	Block {
-	  BlockType		  Reference
-	  Name			  "Mask2"
-	  SID			  "346"
-	  Ports			  [0, 1]
-	  Position		  [595, 360, 625, 390]
-	  ZOrder		  670
-	  LibraryVersion	  "1.287"
-	  SourceBlock		  "simulink/Sources/Repeating\nSequence\nStair"
-	  SourceType		  "Repeating Sequence Stair"
-	  ContentPreviewEnabled	  off
-	  OutValues		  "[0 0 1 0 0 0].'"
-	  tsamp			  "0.1"
-	  OutMin		  "[]"
-	  OutMax		  "[]"
-	  OutDataTypeStr	  "float('double')"
-	  OutputDataTypeScalingMode "Specify via dialog"
-	  OutDataType		  "float('double')"
-	  ConRadixGroup		  "Best Precision: Vector-wise"
-	  OutScaling		  "2^-12"
-	  LockScale		  off
-	}
-	Block {
-	  BlockType		  Mux
-	  Name			  "Mux"
-	  SID			  "347"
-	  Ports			  [3, 1]
-	  Position		  [1045, 288, 1050, 452]
-	  ZOrder		  625
-	  ShowName		  off
-	  Inputs		  "3"
-	  DisplayOption		  "bar"
-	}
-	Block {
-	  BlockType		  Product
-	  Name			  "Product"
-	  SID			  "348"
-	  Ports			  [2, 1]
-	  Position		  [720, 72, 750, 103]
-	  ZOrder		  620
-	  InputSameDT		  off
-	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
-	  RndMeth		  "Floor"
-	  SaturateOnIntegerOverflow off
-	}
-	Block {
-	  BlockType		  Product
-	  Name			  "Product1"
-	  SID			  "349"
-	  Ports			  [2, 1]
-	  Position		  [720, 352, 750, 383]
-	  ZOrder		  666
-	  InputSameDT		  off
-	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
-	  RndMeth		  "Floor"
-	  SaturateOnIntegerOverflow off
-	}
-	Block {
-	  BlockType		  Product
-	  Name			  "Product2"
-	  SID			  "350"
-	  Ports			  [2, 1]
-	  Position		  [720, 582, 750, 613]
-	  ZOrder		  668
-	  InputSameDT		  off
-	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
-	  RndMeth		  "Floor"
-	  SaturateOnIntegerOverflow off
-	}
-	Block {
-	  BlockType		  Signum
-	  Name			  "Sign2"
-	  SID			  "351"
-	  Position		  [590, 80, 620, 110]
-	  ZOrder		  609
-	}
-	Block {
-	  BlockType		  Sum
-	  Name			  "Sum"
-	  SID			  "352"
-	  Ports			  [2, 1]
-	  Position		  [600, 215, 620, 235]
-	  ZOrder		  618
-	  ShowName		  off
-	  IconShape		  "round"
-	  Inputs		  "|++"
-	  InputSameDT		  off
-	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
-	  SaturateOnIntegerOverflow off
-	}
-	Block {
-	  BlockType		  Sum
-	  Name			  "Sum1"
-	  SID			  "353"
-	  Ports			  [2, 1]
-	  Position		  [515, 65, 535, 125]
-	  ZOrder		  608
-	  ShowName		  off
-	  Inputs		  "+-"
-	  InputSameDT		  off
-	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
-	  SaturateOnIntegerOverflow off
-	}
-	Block {
-	  BlockType		  Sum
-	  Name			  "Sum3"
-	  SID			  "354"
-	  Ports			  [2, 1]
-	  Position		  [600, 465, 620, 485]
-	  ZOrder		  635
-	  ShowName		  off
-	  IconShape		  "round"
-	  Inputs		  "|++"
-	  InputSameDT		  off
-	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
-	  SaturateOnIntegerOverflow off
-	}
-	Block {
-	  BlockType		  Sum
-	  Name			  "Sum4"
-	  SID			  "355"
-	  Ports			  [2, 1]
-	  Position		  [605, 700, 625, 720]
-	  ZOrder		  645
-	  ShowName		  off
-	  IconShape		  "round"
-	  Inputs		  "|++"
-	  InputSameDT		  off
-	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
-	  SaturateOnIntegerOverflow off
-	}
-	Block {
-	  BlockType		  UnitDelay
-	  Name			  "Unit Delay1"
-	  SID			  "356"
-	  Position		  [460, 298, 495, 332]
-	  ZOrder		  623
-	  BlockMirror		  on
-	  ShowName		  off
-	  InputProcessing	  "Elements as channels (sample based)"
-	  SampleTime		  "-1"
-	}
-	Block {
-	  BlockType		  UnitDelay
-	  Name			  "Unit Delay2"
-	  SID			  "357"
-	  Position		  [420, 63, 455, 97]
-	  ZOrder		  612
-	  ShowName		  off
-	  InputProcessing	  "Elements as channels (sample based)"
-	  SampleTime		  "-1"
-	}
-	Block {
-	  BlockType		  UnitDelay
-	  Name			  "Unit Delay3"
-	  SID			  "358"
-	  Position		  [260, 63, 295, 97]
-	  ZOrder		  676
-	  ShowName		  off
-	  InputProcessing	  "Elements as channels (sample based)"
-	  SampleTime		  "-1"
-	}
-	Block {
-	  BlockType		  UnitDelay
-	  Name			  "Unit Delay5"
-	  SID			  "359"
-	  Position		  [460, 548, 495, 582]
-	  ZOrder		  640
-	  BlockMirror		  on
-	  ShowName		  off
-	  InputProcessing	  "Elements as channels (sample based)"
-	  SampleTime		  "-1"
-	}
-	Block {
-	  BlockType		  UnitDelay
-	  Name			  "Unit Delay6"
-	  SID			  "360"
-	  Position		  [465, 783, 500, 817]
-	  ZOrder		  647
-	  BlockMirror		  on
-	  ShowName		  off
-	  InputProcessing	  "Elements as channels (sample based)"
-	  SampleTime		  "-1"
-	}
-	Block {
-	  BlockType		  Reference
-	  Name			  "le-0-fel kapcs\ndeltaX sekvencia"
-	  SID			  "361"
-	  Ports			  [0, 1]
-	  Position		  [295, 249, 340, 281]
-	  ZOrder		  585
-	  LibraryVersion	  "1.287"
-	  SourceBlock		  "simulink/Sources/Repeating\nSequence\nStair"
-	  SourceType		  "Repeating Sequence Stair"
-	  ContentPreviewEnabled	  off
-	  OutValues		  "[-1 0 1 0 0].'"
-	  tsamp			  "sample"
-	  OutMin		  "[]"
-	  OutMax		  "[]"
-	  OutDataTypeStr	  "float('double')"
-	  OutputDataTypeScalingMode "Specify via dialog"
-	  OutDataType		  "float('double')"
-	  ConRadixGroup		  "Best Precision: Vector-wise"
-	  OutScaling		  "2^-12"
-	  LockScale		  off
-	}
-	Block {
-	  BlockType		  Reference
-	  Name			  "le-0-fel kapcs\ndeltaX sekvencia1"
-	  SID			  "362"
-	  Ports			  [0, 1]
-	  Position		  [295, 499, 340, 531]
-	  ZOrder		  626
-	  LibraryVersion	  "1.287"
-	  SourceBlock		  "simulink/Sources/Repeating\nSequence\nStair"
-	  SourceType		  "Repeating Sequence Stair"
-	  ContentPreviewEnabled	  off
-	  OutValues		  "[-1 0 1 0 0].'"
-	  tsamp			  "sample"
-	  OutMin		  "[]"
-	  OutMax		  "[]"
-	  OutDataTypeStr	  "float('double')"
-	  OutputDataTypeScalingMode "Specify via dialog"
-	  OutDataType		  "float('double')"
-	  ConRadixGroup		  "Best Precision: Vector-wise"
-	  OutScaling		  "2^-12"
-	  LockScale		  off
-	}
-	Block {
-	  BlockType		  Reference
-	  Name			  "le-0-fel kapcs\ndeltaX sekvencia2"
-	  SID			  "363"
-	  Ports			  [0, 1]
-	  Position		  [300, 734, 345, 766]
-	  ZOrder		  642
-	  LibraryVersion	  "1.287"
-	  SourceBlock		  "simulink/Sources/Repeating\nSequence\nStair"
-	  SourceType		  "Repeating Sequence Stair"
-	  ContentPreviewEnabled	  off
-	  OutValues		  "[-1 0 1 0 0].'"
-	  tsamp			  "sample"
-	  OutMin		  "[]"
-	  OutMax		  "[]"
-	  OutDataTypeStr	  "float('double')"
-	  OutputDataTypeScalingMode "Specify via dialog"
-	  OutDataType		  "float('double')"
-	  ConRadixGroup		  "Best Precision: Vector-wise"
-	  OutScaling		  "2^-12"
-	  LockScale		  off
-	}
-	Block {
-	  BlockType		  Gain
-	  Name			  "step_size"
-	  SID			  "364"
-	  Position		  [555, 250, 585, 280]
-	  ZOrder		  586
-	  Gain			  "5"
-	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
-	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
-	  SaturateOnIntegerOverflow off
-	}
-	Block {
-	  BlockType		  Gain
-	  Name			  "step_size1"
-	  SID			  "365"
-	  Position		  [555, 500, 585, 530]
-	  ZOrder		  627
-	  Gain			  "5"
-	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
-	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
-	  SaturateOnIntegerOverflow off
-	}
-	Block {
-	  BlockType		  Gain
-	  Name			  "step_size2"
-	  SID			  "366"
-	  Position		  [560, 735, 590, 765]
-	  ZOrder		  643
-	  Gain			  "5"
-	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
-	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
-	  SaturateOnIntegerOverflow off
+	  BlockType		  Terminator
+	  Name			  " Terminator "
+	  SID			  "373::31"
+	  Position		  [460, 241, 480, 259]
+	  ZOrder		  17
 	}
 	Block {
 	  BlockType		  Outport
-	  Name			  "Amplitudes"
-	  SID			  "367"
-	  Position		  [1220, 363, 1250, 377]
-	  ZOrder		  678
+	  Name			  "GEO_norm"
+	  SID			  "373::5"
+	  Position		  [460, 101, 480, 119]
+	  ZOrder		  -5
 	  IconDisplay		  "Port number"
 	}
 	Line {
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
-	  ZOrder		  1
-	  SrcBlock		  "Unit Delay3"
+	  SrcBlock		  "amplitude_R"
 	  SrcPort		  1
-	  Points		  [66, 0]
-	  Branch {
-	    ZOrder		    2
-	    Points		    [0, 30]
-	    DstBlock		    "Sum1"
-	    DstPort		    2
-	  }
-	  Branch {
-	    ZOrder		    3
-	    DstBlock		    "Unit Delay2"
-	    DstPort		    1
-	  }
-	}
-	Line {
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
-	  ZOrder		  4
-	  SrcBlock		  "Sum1"
-	  SrcPort		  1
-	  DstBlock		  "Sign2"
+	  DstBlock		  " SFunction "
 	  DstPort		  1
 	}
 	Line {
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
-	  ZOrder		  5
-	  SrcBlock		  "Norm"
+	  SrcBlock		  "amplitude_S"
 	  SrcPort		  1
-	  DstBlock		  "Unit Delay3"
-	  DstPort		  1
-	}
-	Line {
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
-	  ZOrder		  6
-	  SrcBlock		  "Unit Delay2"
-	  SrcPort		  1
-	  DstBlock		  "Sum1"
-	  DstPort		  1
-	}
-	Line {
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
-	  ZOrder		  7
-	  SrcBlock		  "step_size"
-	  SrcPort		  1
-	  Points		  [20, 0]
-	  DstBlock		  "Sum"
+	  DstBlock		  " SFunction "
 	  DstPort		  2
 	}
 	Line {
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
-	  ZOrder		  8
-	  SrcBlock		  "Sum"
+	  SrcBlock		  "amplitude_T"
 	  SrcPort		  1
-	  DstBlock		  "Energy"
+	  DstBlock		  " SFunction "
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "phase_R"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "phase_S"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "phase_T"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  6
+	}
+	Line {
+	  Name			  "GEO_norm"
+	  Labels		  [0, 0]
+	  SrcBlock		  " SFunction "
+	  SrcPort		  2
+	  DstBlock		  "GEO_norm"
 	  DstPort		  1
 	}
 	Line {
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
-	  ZOrder		  9
-	  SrcBlock		  "Sign2"
+	  SrcBlock		  " Demux "
 	  SrcPort		  1
-	  Points		  [56, 0]
-	  Branch {
-	    ZOrder		    10
-	    Points		    [0, 265]
-	    Branch {
-	      ZOrder		      11
-	      Points		      [0, 230]
-	      DstBlock		      "Product2"
-	      DstPort		      1
-	    }
-	    Branch {
-	      ZOrder		      12
-	      DstBlock		      "Product1"
-	      DstPort		      1
-	    }
-	  }
-	  Branch {
-	    ZOrder		    13
-	    DstBlock		    "Product"
-	    DstPort		    2
-	  }
-	}
-	Line {
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
-	  ZOrder		  14
-	  SrcBlock		  "Mask"
-	  SrcPort		  1
-	  Points		  [45, 0; 0, 45]
-	  DstBlock		  "Product"
+	  DstBlock		  " Terminator "
 	  DstPort		  1
 	}
 	Line {
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
-	  ZOrder		  15
-	  SrcBlock		  "Product"
+	  SrcBlock		  " SFunction "
 	  SrcPort		  1
-	  Points		  [50, 0]
-	  DstBlock		  "Cp7"
-	  DstPort		  1
-	}
-	Line {
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
-	  ZOrder		  16
-	  SrcBlock		  "Unit Delay1"
-	  SrcPort		  1
-	  Points		  [-185, 0; 0, -90]
-	  DstBlock		  "Sum"
-	  DstPort		  1
-	}
-	Line {
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
-	  ZOrder		  17
-	  SrcBlock		  "Energy"
-	  SrcPort		  1
-	  Points		  [9, 0; 0, 90]
-	  Branch {
-	    ZOrder		    18
-	    DstBlock		    "Unit Delay1"
-	    DstPort		    1
-	  }
-	  Branch {
-	    ZOrder		    19
-	    DstBlock		    "Mux"
-	    DstPort		    1
-	  }
-	}
-	Line {
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
-	  ZOrder		  20
-	  SrcBlock		  "le-0-fel kapcs\ndeltaX sekvencia"
-	  SrcPort		  1
-	  DstBlock		  "step_size"
-	  DstPort		  1
-	}
-	Line {
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
-	  ZOrder		  21
-	  SrcBlock		  "Mux"
-	  SrcPort		  1
-	  DstBlock		  "Amplitudes"
-	  DstPort		  1
-	}
-	Line {
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
-	  ZOrder		  22
-	  SrcBlock		  "Cp7"
-	  SrcPort		  1
-	  DstBlock		  "Energy"
-	  DstPort		  trigger
-	}
-	Line {
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
-	  ZOrder		  23
-	  SrcBlock		  "step_size1"
-	  SrcPort		  1
-	  Points		  [20, 0]
-	  DstBlock		  "Sum3"
-	  DstPort		  2
-	}
-	Line {
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
-	  ZOrder		  24
-	  SrcBlock		  "Sum3"
-	  SrcPort		  1
-	  DstBlock		  "Energy1"
-	  DstPort		  1
-	}
-	Line {
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
-	  ZOrder		  25
-	  SrcBlock		  "Unit Delay5"
-	  SrcPort		  1
-	  Points		  [-188, 0; 0, -90]
-	  DstBlock		  "Sum3"
-	  DstPort		  1
-	}
-	Line {
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
-	  ZOrder		  26
-	  SrcBlock		  "Energy1"
-	  SrcPort		  1
-	  Points		  [9, 0]
-	  Branch {
-	    ZOrder		    27
-	    Points		    [0, 90]
-	    DstBlock		    "Unit Delay5"
-	    DstPort		    1
-	  }
-	  Branch {
-	    ZOrder		    28
-	    Points		    [66, 0; 0, -105]
-	    DstBlock		    "Mux"
-	    DstPort		    2
-	  }
-	}
-	Line {
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
-	  ZOrder		  29
-	  SrcBlock		  "le-0-fel kapcs\ndeltaX sekvencia1"
-	  SrcPort		  1
-	  DstBlock		  "step_size1"
-	  DstPort		  1
-	}
-	Line {
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
-	  ZOrder		  30
-	  SrcBlock		  "step_size2"
-	  SrcPort		  1
-	  Points		  [20, 0]
-	  DstBlock		  "Sum4"
-	  DstPort		  2
-	}
-	Line {
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
-	  ZOrder		  31
-	  SrcBlock		  "Sum4"
-	  SrcPort		  1
-	  DstBlock		  "Energy2"
-	  DstPort		  1
-	}
-	Line {
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
-	  ZOrder		  32
-	  SrcBlock		  "Unit Delay6"
-	  SrcPort		  1
-	  Points		  [-188, 0; 0, -90]
-	  DstBlock		  "Sum4"
-	  DstPort		  1
-	}
-	Line {
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
-	  ZOrder		  33
-	  SrcBlock		  "Energy2"
-	  SrcPort		  1
-	  Points		  [9, 0]
-	  Branch {
-	    ZOrder		    34
-	    Points		    [103, 0; 0, -285]
-	    DstBlock		    "Mux"
-	    DstPort		    3
-	  }
-	  Branch {
-	    ZOrder		    35
-	    Points		    [0, 90]
-	    DstBlock		    "Unit Delay6"
-	    DstPort		    1
-	  }
-	}
-	Line {
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
-	  ZOrder		  36
-	  SrcBlock		  "le-0-fel kapcs\ndeltaX sekvencia2"
-	  SrcPort		  1
-	  DstBlock		  "step_size2"
-	  DstPort		  1
-	}
-	Line {
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
-	  ZOrder		  37
-	  SrcBlock		  "Cp1"
-	  SrcPort		  1
-	  DstBlock		  "Energy1"
-	  DstPort		  trigger
-	}
-	Line {
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
-	  ZOrder		  38
-	  SrcBlock		  "Cp2"
-	  SrcPort		  1
-	  DstBlock		  "Energy2"
-	  DstPort		  trigger
-	}
-	Line {
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
-	  ZOrder		  39
-	  SrcBlock		  "Product1"
-	  SrcPort		  1
-	  Points		  [50, 0]
-	  DstBlock		  "Cp1"
-	  DstPort		  1
-	}
-	Line {
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
-	  ZOrder		  40
-	  SrcBlock		  "Mask2"
-	  SrcPort		  1
-	  DstBlock		  "Product1"
-	  DstPort		  2
-	}
-	Line {
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
-	  ZOrder		  41
-	  SrcBlock		  "Mask1"
-	  SrcPort		  1
-	  DstBlock		  "Product2"
-	  DstPort		  2
-	}
-	Line {
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
-	  ZOrder		  42
-	  SrcBlock		  "Product2"
-	  SrcPort		  1
-	  Points		  [50, 0]
-	  DstBlock		  "Cp2"
+	  DstBlock		  " Demux "
 	  DstPort		  1
 	}
       }
     }
     Line {
-      LineType		      "Connection"
-      ZOrder		      118
-      Points		      [1580, 695; 0, 60; 30, 0]
-      DstBlock		      "Controlled Current Source2"
-      DstPort		      LConn1
-      Branch {
-	ConnectType		"SRC_DEST"
-	SrcBlock		"Controlled Current Source"
-	SrcPort			LConn1
-	Points			[-30, 0; 0, 60]
-      }
-      Branch {
-	ConnectType		"SRC_DEST"
-	SrcBlock		"Controlled Current Source1"
-	SrcPort			LConn1
-	Points			[-30, 0]
-      }
-    }
-    Line {
-      LineType		      "Connection"
-      ZOrder		      80
-      SrcBlock		      "M3"
-      SrcPort		      LConn2
-      DstBlock		      "Controlled Current Source1"
-      DstPort		      RConn1
-    }
-    Line {
-      LineType		      "Connection"
-      ZOrder		      81
-      SrcBlock		      "M3"
-      SrcPort		      LConn3
-      DstBlock		      "Controlled Current Source2"
-      DstPort		      RConn1
-    }
-    Line {
-      LineType		      "Connection"
-      ZOrder		      82
-      SrcBlock		      "M3"
-      SrcPort		      LConn1
-      DstBlock		      "Controlled Current Source"
-      DstPort		      RConn1
-    }
-    Line {
-      ZOrder		      84
-      SrcBlock		      "Step_Controller"
-      SrcPort		      1
-      DstBlock		      "Demux"
+      Points		      [3010, 955; 0, 160]
+      DstBlock		      "Demux5"
       DstPort		      1
     }
     Line {
-      ZOrder		      85
-      SrcBlock		      "M3"
-      SrcPort		      1
-      DstBlock		      "Sources7"
+      Points		      [2979, 1015; 0, 160]
+      DstBlock		      "Demux6"
       DstPort		      1
     }
     Line {
-      ZOrder		      86
-      SrcBlock		      "P(t) Filter2"
+      SrcBlock		      "Demux5"
       SrcPort		      1
-      DstBlock		      "Controlled Current Source2"
+      DstBlock		      "geometrial norm1"
       DstPort		      1
     }
     Line {
-      ZOrder		      87
-      SrcBlock		      "Demux"
-      SrcPort		      1
-      DstBlock		      "P(t) Filter"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      88
-      SrcBlock		      "Demux"
+      SrcBlock		      "Demux5"
       SrcPort		      2
-      DstBlock		      "P(t) Filter1"
-      DstPort		      1
+      DstBlock		      "geometrial norm1"
+      DstPort		      2
     }
     Line {
-      ZOrder		      89
-      SrcBlock		      "P(t) Filter1"
-      SrcPort		      1
-      DstBlock		      "Controlled Current Source1"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      90
-      SrcBlock		      "P(t) Filter"
-      SrcPort		      1
-      DstBlock		      "Controlled Current Source"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      91
-      SrcBlock		      "Demux"
+      SrcBlock		      "Demux5"
       SrcPort		      3
-      DstBlock		      "P(t) Filter2"
+      DstBlock		      "geometrial norm1"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Demux6"
+      SrcPort		      1
+      DstBlock		      "geometrial norm1"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "Demux6"
+      SrcPort		      2
+      DstBlock		      "geometrial norm1"
+      DstPort		      5
+    }
+    Line {
+      SrcBlock		      "Demux6"
+      SrcPort		      3
+      DstBlock		      "geometrial norm1"
+      DstPort		      6
+    }
+    Line {
+      SrcBlock		      "geometrial norm1"
+      SrcPort		      1
+      Points		      [75, 0]
+    }
+    Line {
+      SrcBlock		      "Demux1"
+      SrcPort		      1
+      DstBlock		      "geometrial norm2"
       DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux1"
+      SrcPort		      2
+      DstBlock		      "geometrial norm2"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Demux1"
+      SrcPort		      3
+      DstBlock		      "geometrial norm2"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Demux2"
+      SrcPort		      1
+      DstBlock		      "geometrial norm2"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "Demux2"
+      SrcPort		      2
+      DstBlock		      "geometrial norm2"
+      DstPort		      5
+    }
+    Line {
+      SrcBlock		      "Demux2"
+      SrcPort		      3
+      DstBlock		      "geometrial norm2"
+      DstPort		      6
     }
   }
 }
-#Finite State Machines
+# Finite State Machines
 #
-#   Stateflow Version 8.1 (R2014a) dated Feb  8 2014, 02:29:12
+#    Stateflow Version 7.6 (R2013a) dated Jan 19 2013, 14:32:03
 #
 #
+
 Stateflow {
   machine {
     id			    1
     name		    "Vagolap"
     created		    "15-Dec-2014 09:59:43"
     isLibrary		    0
-    firstTarget		    10
-    sfVersion		    76014001.002
+    firstTarget		    26
+    sfVersion		    76014001.0015
   }
   chart {
     id			    2
-    name		    "Step_Controller"
-    windowPosition	    [357.12 483.496 167 391]
+    name		    "geometrial norm2"
+    windowPosition	    [357.331 483.407 167 391]
     viewLimits		    [0 156.75 0 153.75]
-    screen		    [1 1 1280 1024 1.041666666666667]
+    screen		    [1 1 1280 1024 1.041050272174191]
     treeNode		    [0 3 0 0]
-    firstTransition	    8
-    firstJunction	    7
+    firstTransition	    12
+    firstJunction	    11
     viewObj		    2
     machine		    1
-    ssIdHighWaterMark	    8
+    subviewS {
+    }
+    ssIdHighWaterMark	    10
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
     firstData		    4
-    chartFileNumber	    4
+    chartFileNumber	    1
     disableImplicitCasting  1
     eml {
       name		      "fcn"
@@ -2311,19 +1506,22 @@ Stateflow {
     decomposition	    CLUSTER_STATE
     eml {
       isEML		      1
-      script		      "function CC= fcn(norm,t)\n%#codegen\n\n\n\nControl_Current_frequency=[20,     30,     40];       "
-      "%[Hz]\nControl_Current_Amplitude=[0,     0,     0];       %[A]\nControl_Current_Phase=    [0,      2/3*pi, 4/3*p"
-      "i];   %[rad]\nControl_Current_DC=       [0,      0,      0];        %[A]\n\nCC_mtx=[Control_Current_Amplitude', "
-      "Control_Current_frequency',...\n            Control_Current_Phase', Control_Current_DC'];\n        \nCC=[CC_mtx("
-      "1,1)*sin(2*pi*CC_mtx(1,2)*t+CC_mtx(1,3))+CC_mtx(1,4),...\n    CC_mtx(2,1)*sin(2*pi*CC_mtx(2,2)*t+CC_mtx(2,3))+CC"
-      "_mtx(2,4),...\n    CC_mtx(3,1)*sin(2*pi*CC_mtx(3,2)*t+CC_mtx(3,3))+CC_mtx(3,4)];\n\n"
+      script		      "function GEO_norm = fcn(amplitude_R,amplitude_S,amplitude_T,phase_R,phase_S,phase_T)\n%#codegen\n"
+      "\nx1=[0,0,0,0];\ny1=[0,0,0,0];\nx2=[0,0,0,0];\ny2=[0,0,0,0];\n\nGEO_norm=0;\n\ncoder.extrinsic('geometry_solver'"
+      ")\n\n        %% Ideal parameters\n        Amplitude_1=[325.3,325.3,325.3];                     %[V]\n        Pha"
+      "se_1=[-1.5855,2.6033,0.5089];\n        %Phase_1=[0,-2/3*pi,-4/3*pi];                     %[rad]\n      \n       "
+      " %% Real parameters\n        Amplitude_2=[amplitude_R,amplitude_S,amplitude_T];\n        Phase_2=[phase_R,phase_"
+      "S,phase_T];\n        %Extension of the vectors with the first element to get closed triangles on\n        %plots"
+      " and for use as polygons\n        Amplitude_1_ex=[Amplitude_1 Amplitude_1(1)];\n        Phase_1_ex=[Phase_1 Phas"
+      "e_1(1)];\n        Amplitude_2_ex=[Amplitude_2 Amplitude_2(1)];\n        Phase_2_ex=[Phase_2 Phase_2(1)];\n      "
+      "  \n        GEO_norm=geometry_solver(Amplitude_1_ex, Phase_1_ex, Amplitude_2_ex, Phase_2_ex);   \n        "
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
   data {
     id			    4
     ssIdNumber		    4
-    name		    "norm"
+    name		    "amplitude_R"
     linkNode		    [2 0 5]
     scope		    INPUT_DATA
     machine		    1
@@ -2342,7 +1540,7 @@ Stateflow {
   data {
     id			    5
     ssIdNumber		    5
-    name		    "CC"
+    name		    "GEO_norm"
     linkNode		    [2 4 6]
     scope		    OUTPUT_DATA
     machine		    1
@@ -2361,9 +1559,97 @@ Stateflow {
   }
   data {
     id			    6
+    ssIdNumber		    6
+    name		    "amplitude_S"
+    linkNode		    [2 5 7]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    7
+    ssIdNumber		    7
+    name		    "amplitude_T"
+    linkNode		    [2 6 8]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    8
     ssIdNumber		    8
-    name		    "t"
-    linkNode		    [2 5 0]
+    name		    "phase_R"
+    linkNode		    [2 7 9]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    9
+    ssIdNumber		    9
+    name		    "phase_S"
+    linkNode		    [2 8 10]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    10
+    ssIdNumber		    10
+    name		    "phase_T"
+    linkNode		    [2 9 0]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -2382,7 +1668,7 @@ Stateflow {
     dataType		    "Inherit: Same as Simulink"
   }
   junction {
-    id			    7
+    id			    11
     position		    [23.5747 49.5747 7]
     chart		    2
     linkNode		    [2 0 0]
@@ -2391,7 +1677,7 @@ Stateflow {
     type		    CONNECTIVE_JUNCTION
   }
   transition {
-    id			    8
+    id			    12
     labelString		    "{eML_blk_kernel();}"
     labelPosition	    [32.125 19.875 102.544 14.964]
     fontSize		    12
@@ -2399,7 +1685,7 @@ Stateflow {
       intersection	      [0 0 1 0 23.5747 14.625 0 0]
     }
     dst {
-      id		      7
+      id		      11
       intersection	      [1 0 -1 0 23.5747 42.5747 0 0]
     }
     midPoint		    [23.5747 24.9468]
@@ -2415,13 +1701,250 @@ Stateflow {
     ssIdNumber		    2
   }
   instance {
-    id			    9
-    name		    "Step_Controller"
+    id			    13
+    name		    "geometrial norm2"
     machine		    1
     chart		    2
   }
+  chart {
+    id			    14
+    name		    "geometrial norm1"
+    windowPosition	    [357.331 483.407 167 391]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1280 1024 1.041050272174191]
+    treeNode		    [0 15 0 0]
+    firstTransition	    24
+    firstJunction	    23
+    viewObj		    14
+    machine		    1
+    subviewS {
+    }
+    ssIdHighWaterMark	    10
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    16
+    chartFileNumber	    3
+    disableImplicitCasting  1
+    eml {
+      name		      "fcn"
+    }
+  }
+  state {
+    id			    15
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    14
+    treeNode		    [14 0 0 0]
+    superState		    SUBCHART
+    subviewer		    14
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function GEO_norm = fcn(amplitude_R,amplitude_S,amplitude_T,phase_R,phase_S,phase_T)\n%#codegen\n"
+      "\nx1=[0,0,0,0];\ny1=[0,0,0,0];\nx2=[0,0,0,0];\ny2=[0,0,0,0];\n\nGEO_norm=0;\n\ncoder.extrinsic('geometry_solver'"
+      ")\n\n        %% Ideal parameters\n        Amplitude_1=[325.3,325.3,325.3];                     %[V]\n        Pha"
+      "se_1=[-1.5855,2.6033,0.5089];\n        %Phase_1=[0,-2/3*pi,-4/3*pi];                     %[rad]\n      \n       "
+      " %% Real parameters\n        Amplitude_2=[amplitude_R,amplitude_S,amplitude_T];\n        Phase_2=[phase_R,phase_"
+      "S,phase_T];\n        %Extension of the vectors with the first element to get closed triangles on\n        %plots"
+      " and for use as polygons\n        Amplitude_1_ex=[Amplitude_1 Amplitude_1(1)];\n        Phase_1_ex=[Phase_1 Phas"
+      "e_1(1)];\n        Amplitude_2_ex=[Amplitude_2 Amplitude_2(1)];\n        Phase_2_ex=[Phase_2 Phase_2(1)];\n      "
+      "  \n        GEO_norm=geometry_solver(Amplitude_1_ex, Phase_1_ex, Amplitude_2_ex, Phase_2_ex);   \n        "
+      editorLayout	      "100 M4x1[10 5 700 500]"
+    }
+  }
+  data {
+    id			    16
+    ssIdNumber		    4
+    name		    "amplitude_R"
+    linkNode		    [14 0 17]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    17
+    ssIdNumber		    5
+    name		    "GEO_norm"
+    linkNode		    [14 16 18]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    18
+    ssIdNumber		    6
+    name		    "amplitude_S"
+    linkNode		    [14 17 19]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    19
+    ssIdNumber		    7
+    name		    "amplitude_T"
+    linkNode		    [14 18 20]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    20
+    ssIdNumber		    8
+    name		    "phase_R"
+    linkNode		    [14 19 21]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    21
+    ssIdNumber		    9
+    name		    "phase_S"
+    linkNode		    [14 20 22]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    22
+    ssIdNumber		    10
+    name		    "phase_T"
+    linkNode		    [14 21 0]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  junction {
+    id			    23
+    position		    [23.5747 49.5747 7]
+    chart		    14
+    linkNode		    [14 0 0]
+    subviewer		    14
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    24
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      23
+      intersection	      [1 0 -1 0 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    14
+    linkNode		    [14 0 0]
+    dataLimits		    [21.175 25.975 14.625 42.575]
+    subviewer		    14
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  instance {
+    id			    25
+    name		    "geometrial norm1"
+    machine		    1
+    chart		    14
+  }
   target {
-    id			    10
+    id			    26
     name		    "sfun"
     description		    "Default Simulink S-Function Target."
     machine		    1

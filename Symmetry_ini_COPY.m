@@ -4,7 +4,7 @@ close all;
 
 %% Simulation initialisation parameters
 CLK=1000;                                           %[sample/s]
-tfin=2;                                           %[s]
+tfin=200;                                           %[s]
 sample=10e-5;                                       %[s/sample]
 t=0:sample:tfin;                                    %[tick]
 %% FFT
@@ -66,7 +66,8 @@ Switch_Load_RC=[0,0,1];                             %[Boolean]
          %%%Randomised Switching Sequence%%%
          Capacitive_Load_R_Switching_Speed=[0.01,0.01,0.01];%[s]
          Capacitive_Load_S_Switching_Speed=[0.01,0.01,0.01];%[s]
-         Capacitive_Load_T_Switching_Speed=[0.01,0.01,0.01];%[s]                  
+         Capacitive_Load_T_Switching_Speed=[0.01,0.01,0.01];%[s] 
+         
          Capacitive_Load_R_Switching_Sequence_=[randi([0 1],1,tfin/Capacitive_Load_R_Switching_Speed(1));...
                                                 randi([0 1],1,tfin/Capacitive_Load_R_Switching_Speed(2));...
                                                 randi([0 1],1,tfin/Capacitive_Load_R_Switching_Speed(3))];
@@ -86,6 +87,7 @@ Switch_Load_RC=[0,0,1];                             %[Boolean]
 %          Capacitive_Load_T_Switching_Sequence_=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0;...
 %                                                 0, 0, 0, 0, 0, 0, 0, 0, 0, 0;...
 %                                                 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
          Capacitive_Load_R_Switching_Sequence=Capacitive_Load_R_Switching_Sequence_';
          Capacitive_Load_S_Switching_Sequence=Capacitive_Load_S_Switching_Sequence_';
          Capacitive_Load_T_Switching_Sequence=Capacitive_Load_T_Switching_Sequence_';
@@ -105,17 +107,18 @@ Switch_Load_RC=[0,0,1];                             %[Boolean]
          Capacitive_Load_T_Switching_Sequence=ones(3,tfin/Capacitive_Load_R_Switching_Speed(1))';
                       
 %% Controller
-Start_Control=0.5;
-P_gain=0.01;
+
+Start_Control=10;
+P_gain=0.0001;
 stair_sample=0.02;
-mask_sample=0.002;
+mask_sample=0.1;
 switch_sample=0.02;
 step_size =     [2,2,2,...          %amp[A]
-                 0.08,0.08,0.08];   %phase[rad]
+                 0.00,0.00,0.00];   %phase[rad]
 test_step =     [0,0,0,...          %amp[A]
-                 0.00,0.00,0.00];   %phase[rad]   
-initial_value = [0.01,0.01,0.01,... %amp[A]
-                 0,-2/3*pi,-4/3*pi];%phase[rad]
+                 0.0,0.0,0.0];   %phase[rad]   
+initial_value = [0.00,0.00,0.00,... %amp[A]
+                 0,0,0];%phase[rad]
 
 amp_feedback_saturation=400;
 phase_feedback_saturation=pi;
@@ -201,8 +204,8 @@ prompt = {'Enter the START time of data log','Enter the END time of data log','E
         detail=str2num(answer{3});
 
 REG_=[t(logstart:detail:logend)',REG.signals.values((logstart:detail:logend),1)];
-VEC_=[t(logstart:detail:logend)',VEC.signals.values((logstart:detail:logend),1)*1e-3];
-GEO_=[t(logstart:detail:logend)',GEO.signals.values((logstart:detail:logend),1)*1e-4];
+VEC_=[t(logstart:detail:logend)',VEC.signals.values((logstart:detail:logend),1)*1e-0];
+GEO_=[t(logstart:detail:logend)',GEO.signals.values((logstart:detail:logend),1)*1e-0];
      
     save('norm_measure/REG1.dat','REG_','-ascii');
     save('norm_measure/VEC.dat','VEC_','-ascii');

@@ -4,7 +4,7 @@ close all;
 
 %% Simulation initialisation parameters
 CLK=1000;                                           %[sample/s]
-tfin=2;                                           %[s]
+tfin=10;                                           %[s]
 sample=10e-5;                                       %[s/sample]
 t=0:sample:tfin;                                    %[tick]
 %% FFT
@@ -108,14 +108,14 @@ Switch_Load_RC=[0,0,1];                             %[Boolean]
                       
 %% Controller
 
-Start_Control=10;
+Start_Control=1;
 P_gain=0.0001;
 stair_sample=0.02;
 mask_sample=0.1;
 switch_sample=0.02;
 step_size =     [2,2,2,...          %amp[A]
                  0.00,0.00,0.00];   %phase[rad]
-test_step =     [0,0,0,...          %amp[A]
+test_step =     [0.5,0.5,0.5,...          %amp[A]
                  0.0,0.0,0.0];   %phase[rad]   
 initial_value = [0.00,0.00,0.00,... %amp[A]
                  0,0,0];%phase[rad]
@@ -130,7 +130,8 @@ phase_feedback_saturation=pi;
         sim('Symmetry_COPY');
 
 
-   
+h = msgbox('Operation Completed','Success');
+
 %% Plotting
 
 figure
@@ -184,7 +185,7 @@ legend('A_x','VEC*1e-3','GEO*1e-3')
 
 %% Save
 prompt = {'Enter the START time of data log','Enter the END time of data log','Enter measurement detail'};
-        dlg_title = 'Logging parameters';
+        dlg_title = 'Save Data';
         num_lines = 1;
         defAns = {'0.3','1','1'};
         options = 'off';
@@ -196,7 +197,7 @@ prompt = {'Enter the START time of data log','Enter the END time of data log','E
         if str2num(answer{1})>=str2num(answer{2})
                 errordlg('No valid range of data!')
         end
-        
+
         logstart = str2num(answer{1})/sample;
         logend =  str2num(answer{2})/sample;
         logstart_switch = round((str2num(answer{1})/sample)*Capacitive_Load_R_Switching_Speed(1));

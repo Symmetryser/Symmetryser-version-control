@@ -4,7 +4,7 @@ close all;
 
 %% Simulation initialisation parameters
 CLK=1000;                                           %[sample/s]
-tfin=10;                                           %[s]
+tfin=40;                                           %[s]
 sample=10e-5;                                       %[s/sample]
 t=0:sample:tfin;                                    %[tick]
 %% FFT
@@ -38,6 +38,10 @@ Switch_Load_R= [1,0,0];                             %[Boolean]
 Switch_Load_RL=[0,1,0];                             %[Boolean]
 Switch_Load_RC=[0,0,1];                             %[Boolean]
 
+START_Load_R= [0.001,4,6];                             %[Boolean]
+START_Load_RL=[6,0.001,4];                             %[Boolean]
+START_Load_RC=[4,6,0.001];                             %[Boolean]
+
          %%%Ohmic Loads%%%
          Load_R=[50,50,50];                         %[Ohm]
          Ohmic_Load_Switching_Speed=[0.01,0.01,0.01];
@@ -64,9 +68,9 @@ Switch_Load_RC=[0,0,1];                             %[Boolean]
          Capacitive_Load_T_RC=[60e-3,  120e-3,  80e-3;...  %[Ohm]
                                1e-3, 5e-3, 3e-3];  %[F]
          %%%Randomised Switching Sequence%%%
-         Capacitive_Load_R_Switching_Speed=[0.01,0.01,0.01];%[s]
-         Capacitive_Load_S_Switching_Speed=[0.01,0.01,0.01];%[s]
-         Capacitive_Load_T_Switching_Speed=[0.01,0.01,0.01];%[s] 
+         Capacitive_Load_R_Switching_Speed=[0.1,0.1,0.1];%[s]
+         Capacitive_Load_S_Switching_Speed=[0.1,0.1,0.1];%[s]
+         Capacitive_Load_T_Switching_Speed=[0.1,0.1,0.1];%[s] 
          
          Capacitive_Load_R_Switching_Sequence_=[randi([0 1],1,tfin/Capacitive_Load_R_Switching_Speed(1));...
                                                 randi([0 1],1,tfin/Capacitive_Load_R_Switching_Speed(2));...
@@ -107,22 +111,20 @@ Switch_Load_RC=[0,0,1];                             %[Boolean]
          Capacitive_Load_T_Switching_Sequence=ones(3,tfin/Capacitive_Load_R_Switching_Speed(1))';
                       
 %% Controller
-
-Start_Control=1;
+Start_Control=2;
 P_gain=0.0001;
 stair_sample=0.02;
 mask_sample=0.1;
 switch_sample=0.02;
 step_size =     [2,2,2,...          %amp[A]
-                 0.00,0.00,0.00];   %phase[rad]
-test_step =     [0.5,0.5,0.5,...          %amp[A]
-                 0.0,0.0,0.0];   %phase[rad]   
+                 0.08,0.08,0.08];   %phase[rad]
+test_step =     [0.5,0.5,0.5,...    %amp[A]
+                 0.02,0.02,0.02];      %phase[rad]   
 initial_value = [0.00,0.00,0.00,... %amp[A]
-                 0,0,0];%phase[rad]
+                 0,0,0];            %phase[rad]
 
 amp_feedback_saturation=400;
 phase_feedback_saturation=pi;
-
 
 %% Simulation
         paramNameValStruct.AbsTol         = '1e-9';
@@ -131,57 +133,6 @@ phase_feedback_saturation=pi;
 
 
 h = msgbox('Operation Completed','Success');
-
-%% Plotting
-
-figure
-%Voltage Source 
-plot(V_conn.time,V_conn.signals.values(:,1),...
-    V_conn.time,V_conn.signals.values(:,2),...
-    V_conn.time,V_conn.signals.values(:,3))
-grid on
-title('Source Voltage')
-xlabel('t')
-ylabel('V')
-
-figure
-%Voltage Source 
-plot(angle.time,angle.signals.values(:,1),...
-    angle.time,angle.signals.values(:,2),...
-    angle.time,angle.signals.values(:,3))
-grid on
-title('angle')
-xlabel('t')
-ylabel('rad')
-
-figure
-%Voltage Source 
-plot(amplitude.time,amplitude.signals.values(:,1),...
-    amplitude.time,amplitude.signals.values(:,2),...
-    amplitude.time,amplitude.signals.values(:,3))
-grid on
-title('amplitude')
-xlabel('t')
-ylabel('V')
-
-figure
-%Voltage Source 
-plot(CC.time,CC.signals.values(:,1),...
-    CC.time,CC.signals.values(:,2),...
-    CC.time,CC.signals.values(:,3))
-grid on
-title('CC')
-xlabel('t')
-ylabel('A')
-
-%Indicator norms
-figure
-plot(REG.time,REG.signals.values(:,1),...
-     VEC.time,VEC.signals.values(:,1)*1e-3,...
-     GEO.time,GEO.signals.values(:,1)*1e-3), grid on
-xlabel('t')
-title('Norms')
-legend('A_x','VEC*1e-3','GEO*1e-3')
 
 %% Save
 prompt = {'Enter the START time of data log','Enter the END time of data log','Enter measurement detail'};
@@ -208,7 +159,7 @@ REG_=[t(logstart:detail:logend)',REG.signals.values((logstart:detail:logend),1)]
 VEC_=[t(logstart:detail:logend)',VEC.signals.values((logstart:detail:logend),1)*1e-0];
 GEO_=[t(logstart:detail:logend)',GEO.signals.values((logstart:detail:logend),1)*1e-0];
      
-    save('norm_measure/REG1.dat','REG_','-ascii');
+    save('norm_measure/REG.dat','REG_','-ascii');
     save('norm_measure/VEC.dat','VEC_','-ascii');
-    save('norm_measure/GEO1.dat','GEO_','-ascii');
+    save('norm_measure/GEO.dat','GEO_','-ascii');
 

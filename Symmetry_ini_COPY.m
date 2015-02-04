@@ -4,7 +4,7 @@ close all;
 
 %% Simulation initialisation parameters
 CLK=1000;                                           %[sample/s]
-tfin=40;                                           %[s]
+tfin=30;                                           %[s]
 sample=10e-5;                                       %[s/sample]
 t=0:sample:tfin;                                    %[tick]
 %% FFT
@@ -38,9 +38,9 @@ Switch_Load_R= [1,0,0];                             %[Boolean]
 Switch_Load_RL=[0,1,0];                             %[Boolean]
 Switch_Load_RC=[0,0,1];                             %[Boolean]
 
-START_Load_R= [0.001,4,6];                             %[Boolean]
-START_Load_RL=[6,0.001,4];                             %[Boolean]
-START_Load_RC=[4,6,0.001];                             %[Boolean]
+START_Load_R= [0.001,5,10];                             %[Boolean in time]
+START_Load_RL=[10,0.001,5];                             %[Boolean in time]
+START_Load_RC=[5,10,0.001];                             %[Boolean in time]
 
          %%%Ohmic Loads%%%
          Load_R=[50,50,50];                         %[Ohm]
@@ -134,32 +134,32 @@ phase_feedback_saturation=pi;
 
 h = msgbox('Operation Completed','Success');
 
-%% Save
-prompt = {'Enter the START time of data log','Enter the END time of data log','Enter measurement detail'};
-        dlg_title = 'Save Data';
-        num_lines = 1;
-        defAns = {'0.3','1','1'};
-        options = 'off';
-        answer = inputdlg(prompt,dlg_title,num_lines,defAns,options);
-        %Error handling
-        if str2num(answer{2})>max(V_conn.time) 
-                errordlg('Time out of time range!')
-        end
-        if str2num(answer{1})>=str2num(answer{2})
-                errordlg('No valid range of data!')
-        end
-
-        logstart = str2num(answer{1})/sample;
-        logend =  str2num(answer{2})/sample;
-        logstart_switch = round((str2num(answer{1})/sample)*Capacitive_Load_R_Switching_Speed(1));
-        logend_switch =  round((str2num(answer{2})/sample)*Capacitive_Load_R_Switching_Speed(1));
-        detail=str2num(answer{3});
-
-REG_=[t(logstart:detail:logend)',REG.signals.values((logstart:detail:logend),1)];
-VEC_=[t(logstart:detail:logend)',VEC.signals.values((logstart:detail:logend),1)*1e-0];
-GEO_=[t(logstart:detail:logend)',GEO.signals.values((logstart:detail:logend),1)*1e-0];
-     
-    save('norm_measure/REG.dat','REG_','-ascii');
-    save('norm_measure/VEC.dat','VEC_','-ascii');
-    save('norm_measure/GEO.dat','GEO_','-ascii');
+% %% Save
+% prompt = {'Enter the START time of data log','Enter the END time of data log','Enter measurement detail'};
+%         dlg_title = 'Save Data';
+%         num_lines = 1;
+%         defAns = {'0.3','1','1'};
+%         options = 'off';
+%         answer = inputdlg(prompt,dlg_title,num_lines,defAns,options);
+%         %Error handling
+%         if str2num(answer{2})>max(V_conn.time) 
+%                 errordlg('Time out of time range!')
+%         end
+%         if str2num(answer{1})>=str2num(answer{2})
+%                 errordlg('No valid range of data!')
+%         end
+% 
+%         logstart = str2num(answer{1})/sample;
+%         logend =  str2num(answer{2})/sample;
+%         logstart_switch = round((str2num(answer{1})/sample)*Capacitive_Load_R_Switching_Speed(1));
+%         logend_switch =  round((str2num(answer{2})/sample)*Capacitive_Load_R_Switching_Speed(1));
+%         detail=str2num(answer{3});
+% 
+% REG_=[t(logstart:detail:logend)',REG.signals.values((logstart:detail:logend),1)];
+% VEC_=[t(logstart:detail:logend)',VEC.signals.values((logstart:detail:logend),1)*1e-0];
+% GEO_=[t(logstart:detail:logend)',GEO.signals.values((logstart:detail:logend),1)*1e-0];
+%      
+%     save('norm_measure/REG.dat','REG_','-ascii');
+%     save('norm_measure/VEC.dat','VEC_','-ascii');
+%     save('norm_measure/GEO.dat','GEO_','-ascii');
 

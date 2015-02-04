@@ -1,5 +1,8 @@
-close all;
-
+%close all;
+load('saved_data/GEO_saved.mat');
+load('saved_data/V_AMP_saved.mat');
+load('saved_data/V_ANG_saved.mat');
+sample=10e-5; 
 %% Ideal parameters
 Amplitude_1=[325.3,325.3,325.3];                          %[A]
 Phase_1=[-1.5855,2.6033,0.5089];
@@ -11,10 +14,10 @@ Phase_1=[-1.5855,2.6033,0.5089];
 prompt = {'Enter the measurement time'};
         dlg_title = 'Inspect Geometry';
         num_lines = 1;
-        defAns = {'0.4'};
+        defAns = {'4'};
         options = 'off';
         answer = inputdlg(prompt,dlg_title,num_lines,defAns,options);
-        if str2num(answer{1})>max(amplitude.time)
+        if str2num(answer{1})>max(V_AMP_saved.time)
                 errordlg('Time out of time range')
         end
 
@@ -27,8 +30,8 @@ i=str2num(answer{1})/sample;
 %          degtorad(szogt(i,3)),...
 %          degtorad(szogt(i,3))];        %[rad]
 
-Amplitude_2=amplitude.signals.values(i,:);
-Phase_2=angle.signals.values(i,:);
+Amplitude_2=V_AMP_saved.data(i,:);
+Phase_2=V_ANG_saved.data(i,:);
              
 
 %% Extension of the vectors with the first element to get closed triangles on

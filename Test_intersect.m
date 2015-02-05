@@ -1,5 +1,4 @@
 %close all;
-load('saved_data/GEO_saved.mat');
 load('saved_data/V_AMP_saved.mat');
 load('saved_data/V_ANG_saved.mat');
 sample=10e-5; 

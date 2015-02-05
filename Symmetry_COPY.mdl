@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.74"
+    ComputedModelVersion    "1.76"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -65,10 +65,10 @@ Model {
 	$ClassName		"Simulink.EditorInfo"
 	IsActive		[1]
 	ViewObjType		"SimulinkSubsys"
-	LoadSaveID		"2184"
+	LoadSaveID		"2497"
 	Extents			[1406.0, 702.0]
-	ZoomFactor		[0.8]
-	Offset			[1524.3591682171625, -105.90442885259972]
+	ZoomFactor		[1.0]
+	Offset			[0.0, 0.0]
       }
     }
   }
@@ -81,9 +81,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Neukirchner László"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Feb 04 15:19:34 2015"
-  RTWModifiedTimeStamp	  344963966
-  ModelVersionFormat	  "1.%<AutoIncrement:74>"
+  LastModifiedDate	  "Thu Feb 05 13:43:47 2015"
+  RTWModifiedTimeStamp	  345044134
+  ModelVersionFormat	  "1.%<AutoIncrement:76>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -3670,7 +3670,7 @@ Model {
 	  System {
 	    Name		    "controller"
 	    Location		    [-8, 0, 1448, 876]
-	    Open		    on
+	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -3758,7 +3758,7 @@ Model {
 	      System {
 		Name			"Create_Date"
 		Location		[-8, 0, 1448, 876]
-		Open			off
+		Open			on
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -3912,7 +3912,7 @@ Model {
 		  BlockType		  Gain
 		  Name			  "Gain1"
 		  SID			  "2144"
-		  Position		  [320, 350, 350, 380]
+		  Position		  [295, 350, 325, 380]
 		  ZOrder		  689
 		  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
 		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
@@ -3933,7 +3933,7 @@ Model {
 		  BlockType		  Gain
 		  Name			  "Gain3"
 		  SID			  "2617"
-		  Position		  [240, 427, 285, 463]
+		  Position		  [225, 542, 270, 578]
 		  ZOrder		  1560
 		  Gain			  "P_gain"
 		  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
@@ -3944,7 +3944,7 @@ Model {
 		  BlockType		  Gain
 		  Name			  "Gain4"
 		  SID			  "2618"
-		  Position		  [240, 477, 285, 513]
+		  Position		  [225, 592, 270, 628]
 		  ZOrder		  1561
 		  Gain			  "P_gain"
 		  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
@@ -4141,7 +4141,7 @@ Model {
 		  BlockType		  Outport
 		  Name			  "Normalised_VEC"
 		  SID			  "2615"
-		  Position		  [310, 438, 340, 452]
+		  Position		  [295, 553, 325, 567]
 		  ZOrder		  1558
 		  Port			  "2"
 		  IconDisplay		  "Port number"
@@ -4150,7 +4150,7 @@ Model {
 		  BlockType		  Outport
 		  Name			  "Normalised_GEO"
 		  SID			  "2616"
-		  Position		  [310, 488, 340, 502]
+		  Position		  [295, 603, 325, 617]
 		  ZOrder		  1559
 		  Port			  "3"
 		  IconDisplay		  "Port number"
@@ -4239,7 +4239,7 @@ Model {
 		Line {
 		  SrcBlock		  "Gain1"
 		  SrcPort		  1
-		  Points		  [43, 0]
+		  Points		  [68, 0]
 		  Branch {
 		    Points		    [0, 130]
 		    Branch {
@@ -4356,7 +4356,7 @@ Model {
 		    DstPort		    1
 		  }
 		  Branch {
-		    Points		    [0, 80]
+		    Points		    [0, 195]
 		    DstBlock		    "Gain3"
 		    DstPort		    1
 		  }
@@ -4414,7 +4414,7 @@ Model {
 		Line {
 		  SrcBlock		  "GEO"
 		  SrcPort		  1
-		  Points		  [115, 0; 0, 90]
+		  Points		  [115, 0; 0, 205]
 		  DstBlock		  "Gain4"
 		  DstPort		  1
 		}
@@ -6991,7 +6991,7 @@ Model {
 	    Line {
 	      SrcBlock		      "Create_Date"
 	      SrcPort		      4
-	      Points		      [0, 0; 104, 0]
+	      Points		      [104, 0]
 	      Branch {
 		Points			[0, 145]
 		Branch {
@@ -14010,7 +14010,6 @@ Model {
     Line {
       SrcBlock		      "Calculate_Norms"
       SrcPort		      1
-      Points		      [205, 0]
       DstBlock		      "To File3"
       DstPort		      1
     }
@@ -14030,14 +14029,12 @@ Model {
     Line {
       SrcBlock		      "Calculate_Norms"
       SrcPort		      2
-      Points		      [205, 0]
       DstBlock		      "To File1"
       DstPort		      1
     }
     Line {
       SrcBlock		      "Calculate_Norms"
       SrcPort		      4
-      Points		      [205, 0]
       DstBlock		      "To File4"
       DstPort		      1
     }
@@ -14079,8 +14076,6 @@ Stateflow {
     created		    "26-Dec-2014 17:23:03"
     isLibrary		    0
     firstTarget		    47
-    debug {
-    }
     sfVersion		    76014001.0015
   }
   chart {
@@ -14556,10 +14551,7 @@ Stateflow {
     firstTransition	    36
     firstJunction	    35
     viewObj		    26
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    10
     decomposition	    CLUSTER_CHART
     type		    EML_CHART

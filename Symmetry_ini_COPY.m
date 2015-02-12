@@ -4,7 +4,7 @@ close all;
 
 %% Simulation initialisation parameters
 CLK=1000;                                           %[sample/s]
-tfin=30;                                           %[s]
+tfin=10;                                           %[s]
 sample=10e-5;                                       %[s/sample]
 t=0:sample:tfin;                                    %[tick]
 %% FFT
@@ -38,9 +38,9 @@ Switch_Load_R= [1,0,0];                             %[Boolean]
 Switch_Load_RL=[0,1,0];                             %[Boolean]
 Switch_Load_RC=[0,0,1];                             %[Boolean]
 
-START_Load_R= [0.001,5,10];                             %[Boolean in time]
-START_Load_RL=[10,0.001,5];                             %[Boolean in time]
-START_Load_RC=[5,10,0.001];                             %[Boolean in time]
+START_Load_R= [0.001,100,100];                             %[Boolean in time]
+START_Load_RL=[100,0.001,100];                             %[Boolean in time]
+START_Load_RC=[100,100,0.001];                             %[Boolean in time]
 
          %%%Ohmic Loads%%%
          Load_R=[50,50,50];                         %[Ohm]

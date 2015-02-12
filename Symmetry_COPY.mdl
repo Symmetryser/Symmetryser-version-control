@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.76"
+    ComputedModelVersion    "1.81"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -64,11 +64,11 @@ Model {
 	$ObjectID		6
 	$ClassName		"Simulink.EditorInfo"
 	IsActive		[1]
-	ViewObjType		"SimulinkSubsys"
-	LoadSaveID		"2497"
+	ViewObjType		"SimulinkTopLevel"
+	LoadSaveID		"0"
 	Extents			[1406.0, 702.0]
 	ZoomFactor		[1.0]
-	Offset			[0.0, 0.0]
+	Offset			[-37.236672994276773, -20.5733459885534]
       }
     }
   }
@@ -81,9 +81,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Neukirchner László"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Feb 05 13:43:47 2015"
-  RTWModifiedTimeStamp	  345044134
-  ModelVersionFormat	  "1.%<AutoIncrement:76>"
+  LastModifiedDate	  "Wed Feb 11 14:25:22 2015"
+  RTWModifiedTimeStamp	  345565431
+  ModelVersionFormat	  "1.%<AutoIncrement:81>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -879,6 +879,12 @@ Model {
       SampleTime	      "-1"
     }
     Block {
+      BlockType		      ManualSwitch
+      CurrentSetting	      "1"
+      varsize		      off
+      SampleTime	      "-1"
+    }
+    Block {
       BlockType		      Mux
       Inputs		      "4"
       DisplayOption	      "none"
@@ -942,24 +948,6 @@ Model {
       OutDataTypeStr	      "Inherit: Same as input"
       LockScale		      off
       RndMeth		      "Floor"
-    }
-    Block {
-      BlockType		      Scope
-      ModelBased	      off
-      TickLabels	      "OneTimeTick"
-      ZoomMode		      "on"
-      Grid		      "on"
-      TimeRange		      "auto"
-      YMin		      "-5"
-      YMax		      "5"
-      SaveToWorkspace	      off
-      SaveName		      "ScopeData"
-      DataFormat	      "Array"
-      LimitDataPoints	      on
-      MaxDataPoints	      "5000"
-      Decimation	      "1"
-      SampleInput	      off
-      SampleTime	      "-1"
     }
     Block {
       BlockType		      Signum
@@ -1059,7 +1047,7 @@ Model {
   System {
     Name		    "Symmetry_COPY"
     Location		    [-8, 0, 1448, 876]
-    Open		    off
+    Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
     ScreenColor		    "white"
@@ -1070,15 +1058,15 @@ Model {
     TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "150"
+    ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "2620"
+    SIDHighWatermark	    "2621"
     Block {
       BlockType		      SubSystem
       Name		      "Calculate_Norms"
       SID		      "1987"
       Ports		      [0, 5, 0, 0, 0, 4]
-      Position		      [535, 266, 610, 474]
+      Position		      [535, 331, 610, 539]
       ZOrder		      851
       MinAlgLoopOccurrences   off
       PropExecContextOutsideSubsystem off
@@ -3657,7 +3645,7 @@ Model {
 	  BlockType		  SubSystem
 	  Name			  "controller"
 	  SID			  "2184"
-	  Ports			  [3, 6]
+	  Ports			  [1, 6]
 	  Position		  [985, 329, 1190, 476]
 	  ZOrder		  723
 	  MinAlgLoopOccurrences	  off
@@ -3684,69 +3672,18 @@ Model {
 	    ZoomFactor		    "80"
 	    Block {
 	      BlockType		      Inport
-	      Name		      "REG"
-	      SID		      "2185"
-	      Position		      [1560, 218, 1590, 232]
-	      ZOrder		      714
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Inport
-	      Name		      "VEC"
+	      Name		      "NORM"
 	      SID		      "2609"
-	      Position		      [1560, 263, 1590, 277]
+	      Position		      [1615, 313, 1645, 327]
 	      ZOrder		      1565
-	      Port		      "2"
 	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Inport
-	      Name		      "GEO"
-	      SID		      "2610"
-	      Position		      [1560, 308, 1590, 322]
-	      ZOrder		      1566
-	      Port		      "3"
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Scope
-	      Name		      "Control_performance"
-	      SID		      "2608"
-	      Ports		      [1]
-	      Position		      [2160, 234, 2190, 266]
-	      ZOrder		      1564
-	      Floating		      off
-	      Location		      [1, 48, 1441, 859]
-	      Open		      off
-	      NumInputPorts	      "1"
-	      List {
-		ListType		AxesTitles
-		axes1			"%<SignalLabel>"
-	      }
-	      List {
-		ListType		ScopeGraphics
-		FigureColor		"[0.501960784313725 0.501960784313725 0.501960784313725]"
-		AxesColor		"[0 0 0]"
-		AxesTickColor		"[1 1 1]"
-		LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
-		LineStyles		"-|-|-|-|-|-"
-		LineWidths		"[1 0.5 0.5 0.5 0.5 0.5]"
-		MarkerStyles		"none|none|none|none|none|none"
-	      }
-	      ShowLegends	      on
-	      LegendLocations	      "0.91725     0.91307    0.089583    0.083025"
-	      YMin		      "0"
-	      YMax		      "8000"
-	      DataFormat	      "StructureWithTime"
-	      LimitDataPoints	      off
-	      SampleTime	      "0"
 	    }
 	    Block {
 	      BlockType		      SubSystem
 	      Name		      "Create_Date"
 	      SID		      "2497"
-	      Ports		      [3, 4]
-	      Position		      [1645, 196, 2005, 339]
+	      Ports		      [1, 1]
+	      Position		      [1710, 248, 2070, 392]
 	      ZOrder		      1552
 	      MinAlgLoopOccurrences   off
 	      PropExecContextOutsideSubsystem off
@@ -3758,7 +3695,7 @@ Model {
 	      System {
 		Name			"Create_Date"
 		Location		[-8, 0, 1448, 876]
-		Open			on
+		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -3772,28 +3709,10 @@ Model {
 		ZoomFactor		"100"
 		Block {
 		  BlockType		  Inport
-		  Name			  "REG"
-		  SID			  "2613"
-		  Position		  [20, 318, 50, 332]
-		  ZOrder		  1556
-		  IconDisplay		  "Port number"
-		}
-		Block {
-		  BlockType		  Inport
-		  Name			  "VEC"
+		  Name			  "Norm"
 		  SID			  "2498"
 		  Position		  [20, 358, 50, 372]
 		  ZOrder		  1543
-		  Port			  "2"
-		  IconDisplay		  "Port number"
-		}
-		Block {
-		  BlockType		  Inport
-		  Name			  "GEO"
-		  SID			  "2614"
-		  Position		  [20, 398, 50, 412]
-		  ZOrder		  1557
-		  Port			  "3"
 		  IconDisplay		  "Port number"
 		}
 		Block {
@@ -3925,28 +3844,6 @@ Model {
 		  Position		  [1030, 565, 1060, 595]
 		  ZOrder		  1551
 		  Gain			  "0.5"
-		  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
-		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
-		  SaturateOnIntegerOverflow off
-		}
-		Block {
-		  BlockType		  Gain
-		  Name			  "Gain3"
-		  SID			  "2617"
-		  Position		  [225, 542, 270, 578]
-		  ZOrder		  1560
-		  Gain			  "P_gain"
-		  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
-		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
-		  SaturateOnIntegerOverflow off
-		}
-		Block {
-		  BlockType		  Gain
-		  Name			  "Gain4"
-		  SID			  "2618"
-		  Position		  [225, 592, 270, 628]
-		  ZOrder		  1561
-		  Gain			  "P_gain"
 		  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
 		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
 		  SaturateOnIntegerOverflow off
@@ -4131,37 +4028,10 @@ Model {
 		}
 		Block {
 		  BlockType		  Outport
-		  Name			  "step_direction"
-		  SID			  "2522"
-		  Position		  [1345, 488, 1375, 502]
-		  ZOrder		  1553
-		  IconDisplay		  "Port number"
-		}
-		Block {
-		  BlockType		  Outport
-		  Name			  "Normalised_VEC"
-		  SID			  "2615"
-		  Position		  [295, 553, 325, 567]
-		  ZOrder		  1558
-		  Port			  "2"
-		  IconDisplay		  "Port number"
-		}
-		Block {
-		  BlockType		  Outport
-		  Name			  "Normalised_GEO"
-		  SID			  "2616"
-		  Position		  [295, 603, 325, 617]
-		  ZOrder		  1559
-		  Port			  "3"
-		  IconDisplay		  "Port number"
-		}
-		Block {
-		  BlockType		  Outport
 		  Name			  "Controller_data"
 		  SID			  "2499"
 		  Position		  [1345, 293, 1375, 307]
 		  ZOrder		  1544
-		  Port			  "4"
 		  IconDisplay		  "Port number"
 		}
 		Line {
@@ -4348,18 +4218,10 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  SrcBlock		  "VEC"
+		  SrcBlock		  "Norm"
 		  SrcPort		  1
-		  Points		  [149, 0]
-		  Branch {
-		    DstBlock		    "Gain1"
-		    DstPort		    1
-		  }
-		  Branch {
-		    Points		    [0, 195]
-		    DstBlock		    "Gain3"
-		    DstPort		    1
-		  }
+		  DstBlock		  "Gain1"
+		  DstPort		  1
 		}
 		Line {
 		  SrcBlock		  "Sum6"
@@ -4388,48 +4250,11 @@ Model {
 		Line {
 		  SrcBlock		  "Gain2"
 		  SrcPort		  1
-		  Points		  [141, 0; 0, -85]
-		  Branch {
-		    DstBlock		    "step_direction"
-		    DstPort		    1
-		  }
-		  Branch {
-		    Points		    [0, -95]
-		    DstBlock		    "Mux2"
-		    DstPort		    5
-		  }
-		}
-		Line {
-		  SrcBlock		  "Gain3"
-		  SrcPort		  1
-		  DstBlock		  "Normalised_VEC"
-		  DstPort		  1
-		}
-		Line {
-		  SrcBlock		  "Gain4"
-		  SrcPort		  1
-		  DstBlock		  "Normalised_GEO"
-		  DstPort		  1
-		}
-		Line {
-		  SrcBlock		  "GEO"
-		  SrcPort		  1
-		  Points		  [115, 0; 0, 205]
-		  DstBlock		  "Gain4"
-		  DstPort		  1
+		  Points		  [141, 0; 0, -180]
+		  DstBlock		  "Mux2"
+		  DstPort		  5
 		}
 	      }
-	    }
-	    Block {
-	      BlockType		      Mux
-	      Name		      "Mux"
-	      SID		      "2620"
-	      Ports		      [3, 1]
-	      Position		      [2100, 199, 2105, 301]
-	      ZOrder		      1568
-	      ShowName		      off
-	      Inputs		      "3"
-	      DisplayOption	      "bar"
 	    }
 	    Block {
 	      BlockType		      Mux
@@ -4855,18 +4680,6 @@ Model {
 		  DstPort		  2
 		}
 	      }
-	    }
-	    Block {
-	      BlockType		      ToFile
-	      Name		      "To File"
-	      SID		      "2552"
-	      Ports		      [1]
-	      Position		      [2885, 37, 3140, 73]
-	      ZOrder		      1559
-	      ShowName		      off
-	      Filename		      "saved_data/STEP_DIRECTION_saved.mat"
-	      MatrixName	      "STEP_DIRECTION_saved"
-	      SaveFormat	      "Timeseries"
 	    }
 	    Block {
 	      BlockType		      ToFile
@@ -6990,8 +6803,8 @@ Model {
 	    }
 	    Line {
 	      SrcBlock		      "Create_Date"
-	      SrcPort		      4
-	      Points		      [104, 0]
+	      SrcPort		      1
+	      Points		      [39, 0]
 	      Branch {
 		Points			[0, 145]
 		Branch {
@@ -7099,54 +6912,10 @@ Model {
 	      DstPort		      1
 	    }
 	    Line {
-	      SrcBlock		      "REG"
+	      SrcBlock		      "NORM"
 	      SrcPort		      1
 	      DstBlock		      "Create_Date"
 	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "VEC"
-	      SrcPort		      1
-	      DstBlock		      "Create_Date"
-	      DstPort		      2
-	    }
-	    Line {
-	      SrcBlock		      "GEO"
-	      SrcPort		      1
-	      DstBlock		      "Create_Date"
-	      DstPort		      3
-	    }
-	    Line {
-	      SrcBlock		      "Mux"
-	      SrcPort		      1
-	      DstBlock		      "Control_performance"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Create_Date"
-	      SrcPort		      1
-	      Points		      [57, 0]
-	      Branch {
-		Points			[0, -160]
-		DstBlock		"To File"
-		DstPort			1
-	      }
-	      Branch {
-		DstBlock		"Mux"
-		DstPort			1
-	      }
-	    }
-	    Line {
-	      SrcBlock		      "Create_Date"
-	      SrcPort		      2
-	      DstBlock		      "Mux"
-	      DstPort		      2
-	    }
-	    Line {
-	      SrcBlock		      "Create_Date"
-	      SrcPort		      3
-	      DstBlock		      "Mux"
-	      DstPort		      3
 	    }
 	  }
 	}
@@ -7248,13 +7017,6 @@ Model {
 	  DstPort		  RConn4
 	}
 	Line {
-	  SrcBlock		  "NORM"
-	  SrcPort		  1
-	  Points		  [25, 0]
-	  DstBlock		  "controller"
-	  DstPort		  1
-	}
-	Line {
 	  SrcBlock		  "controller"
 	  SrcPort		  1
 	  DstBlock		  "Mux2"
@@ -7302,6 +7064,12 @@ Model {
 	  Points		  [57, 0; 0, -45]
 	  DstBlock		  "MATLAB Function"
 	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "NORM"
+	  SrcPort		  1
+	  DstBlock		  "controller"
+	  DstPort		  1
 	}
       }
     }
@@ -12836,6 +12604,15 @@ Model {
       }
     }
     Block {
+      BlockType		      ManualSwitch
+      Name		      "Manual Switch"
+      SID		      "2621"
+      Position		      [599, 265, 726, 300]
+      ZOrder		      1569
+      BlockRotation	      270
+      CurrentSetting	      "0"
+    }
+    Block {
       BlockType		      SubSystem
       Name		      "Network"
       SID		      "668"
@@ -13231,7 +13008,7 @@ Model {
       Name		      "To File1"
       SID		      "2571"
       Ports		      [1]
-      Position		      [835, 312, 1090, 348]
+      Position		      [750, 377, 1005, 413]
       ZOrder		      1565
       ShowName		      off
       Filename		      "saved_data/VEC_saved.mat"
@@ -13243,7 +13020,7 @@ Model {
       Name		      "To File2"
       SID		      "2572"
       Ports		      [1]
-      Position		      [835, 352, 1090, 388]
+      Position		      [750, 417, 1005, 453]
       ZOrder		      1566
       ShowName		      off
       Filename		      "saved_data/GEO_saved.mat"
@@ -13255,7 +13032,7 @@ Model {
       Name		      "To File3"
       SID		      "2570"
       Ports		      [1]
-      Position		      [835, 272, 1090, 308]
+      Position		      [750, 337, 1005, 373]
       ZOrder		      1564
       ShowName		      off
       Filename		      "saved_data/REG_saved.mat"
@@ -13267,7 +13044,7 @@ Model {
       Name		      "To File4"
       SID		      "2605"
       Ports		      [1]
-      Position		      [835, 392, 1090, 428]
+      Position		      [750, 457, 1005, 493]
       ZOrder		      1568
       ShowName		      off
       Filename		      "saved_data/V_AMP_saved.mat"
@@ -13280,7 +13057,7 @@ Model {
       Name		      "To File5"
       SID		      "2604"
       Ports		      [1]
-      Position		      [835, 432, 1090, 468]
+      Position		      [750, 497, 1005, 533]
       ZOrder		      1567
       ShowName		      off
       Filename		      "saved_data/V_ANG_saved.mat"
@@ -13911,7 +13688,7 @@ Model {
 	  ConnectType		  "DEST_DEST"
 	  SrcBlock		  "Calculate_Norms"
 	  SrcPort		  LConn1
-	  Points		  [-38, 0; 0, -260]
+	  Points		  [-38, 0; 0, -325]
 	}
 	Branch {
 	  ConnectType		  "DEST_SRC"
@@ -13938,7 +13715,7 @@ Model {
 	  ConnectType		  "DEST_DEST"
 	  SrcBlock		  "Calculate_Norms"
 	  SrcPort		  LConn2
-	  Points		  [-53, 0; 0, -290]
+	  Points		  [-53, 0; 0, -355]
 	}
 	Branch {
 	  ConnectType		  "DEST_SRC"
@@ -13965,7 +13742,7 @@ Model {
 	  ConnectType		  "DEST_DEST"
 	  SrcBlock		  "Calculate_Norms"
 	  SrcPort		  LConn3
-	  Points		  [-72, 0; 0, -320]
+	  Points		  [-72, 0; 0, -385]
 	}
 	Branch {
 	  ConnectType		  "DEST_SRC"
@@ -13997,7 +13774,7 @@ Model {
 	  ConnectType		  "DEST_DEST"
 	  SrcBlock		  "Calculate_Norms"
 	  SrcPort		  LConn4
-	  Points		  [-90, 0; 0, -350]
+	  Points		  [-90, 0; 0, -415]
 	}
       }
       Branch {
@@ -14016,21 +13793,28 @@ Model {
     Line {
       SrcBlock		      "Calculate_Norms"
       SrcPort		      3
-      Points		      [50, 0]
+      Points		      [80, 0]
       Branch {
 	DstBlock		"To File2"
 	DstPort			1
       }
       Branch {
-	DstBlock		"Control Current"
-	DstPort			1
+	DstBlock		"Manual Switch"
+	DstPort			2
       }
     }
     Line {
       SrcBlock		      "Calculate_Norms"
       SrcPort		      2
-      DstBlock		      "To File1"
-      DstPort		      1
+      Points		      [15, 0]
+      Branch {
+	DstBlock		"To File1"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"Manual Switch"
+	DstPort			1
+      }
     }
     Line {
       SrcBlock		      "Calculate_Norms"
@@ -14042,6 +13826,12 @@ Model {
       SrcBlock		      "Calculate_Norms"
       SrcPort		      5
       DstBlock		      "To File5"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Manual Switch"
+      SrcPort		      1
+      DstBlock		      "Control Current"
       DstPort		      1
     }
   }

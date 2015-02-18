@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.81"
+    ComputedModelVersion    "1.90"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -68,7 +68,7 @@ Model {
 	LoadSaveID		"0"
 	Extents			[1406.0, 702.0]
 	ZoomFactor		[1.0]
-	Offset			[-37.236672994276773, -20.5733459885534]
+	Offset			[0.0, 0.0]
       }
     }
   }
@@ -81,9 +81,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Neukirchner László"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Feb 11 14:25:22 2015"
-  RTWModifiedTimeStamp	  345565431
-  ModelVersionFormat	  "1.%<AutoIncrement:81>"
+  LastModifiedDate	  "Wed Feb 18 14:59:58 2015"
+  RTWModifiedTimeStamp	  346171474
+  ModelVersionFormat	  "1.%<AutoIncrement:90>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -3097,7 +3097,7 @@ Model {
 	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"125"
+	ZoomFactor		"80"
 	Block {
 	  BlockType		  Inport
 	  Name			  "NORM"
@@ -3122,7 +3122,7 @@ Model {
 	  MaskHideContents	  off
 	  System {
 	    Name		    "Current_Sources"
-	    Location		    [-1, 31, 1377, 775]
+	    Location		    [-8, 0, 1448, 876]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -3640,6 +3640,7 @@ Model {
 	  Filename		  "saved_data/CC_saved.mat"
 	  MatrixName		  "CC_saved"
 	  SaveFormat		  "Timeseries"
+	  SampleTime		  "sample"
 	}
 	Block {
 	  BlockType		  SubSystem
@@ -3706,7 +3707,7 @@ Model {
 		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"100"
+		ZoomFactor		"60"
 		Block {
 		  BlockType		  Inport
 		  Name			  "Norm"
@@ -4692,6 +4693,7 @@ Model {
 	      Filename		      "saved_data/AMP_CONTROL_saved.mat"
 	      MatrixName	      "AMP_CONTROL_saved"
 	      SaveFormat	      "Timeseries"
+	      SampleTime	      "sample"
 	    }
 	    Block {
 	      BlockType		      ToFile
@@ -4704,6 +4706,7 @@ Model {
 	      Filename		      "saved_data/PHASE_CONTROL_saved.mat"
 	      MatrixName	      "PHASE_CONTROL_saved"
 	      SaveFormat	      "Timeseries"
+	      SampleTime	      "sample"
 	    }
 	    Block {
 	      BlockType		      SubSystem
@@ -11736,6 +11739,7 @@ Model {
 	      Filename		      "saved_data/Vrms_saved.mat"
 	      MatrixName	      "Vrms_saved"
 	      SaveFormat	      "Timeseries"
+	      SampleTime	      "sample"
 	    }
 	    Block {
 	      BlockType		      ToFile
@@ -11748,6 +11752,7 @@ Model {
 	      Filename		      "saved_data/THD_saved.mat"
 	      MatrixName	      "THD_saved"
 	      SaveFormat	      "Timeseries"
+	      SampleTime	      "sample"
 	    }
 	    Block {
 	      BlockType		      ToFile
@@ -11760,6 +11765,7 @@ Model {
 	      Filename		      "saved_data/V_saved.mat"
 	      MatrixName	      "V_saved"
 	      SaveFormat	      "Timeseries"
+	      SampleTime	      "sample"
 	    }
 	    Block {
 	      BlockType		      ToFile
@@ -11772,6 +11778,7 @@ Model {
 	      Filename		      "saved_data/PQ_R_saved.mat"
 	      MatrixName	      "PQ_R_saved"
 	      SaveFormat	      "Timeseries"
+	      SampleTime	      "sample"
 	    }
 	    Block {
 	      BlockType		      ToFile
@@ -11784,6 +11791,7 @@ Model {
 	      Filename		      "saved_data/Irms_saved.mat"
 	      MatrixName	      "REG_saved"
 	      SaveFormat	      "Timeseries"
+	      SampleTime	      "sample"
 	    }
 	    Block {
 	      BlockType		      ToFile
@@ -11796,6 +11804,7 @@ Model {
 	      Filename		      "saved_data/I_saved.mat"
 	      MatrixName	      "I_saved"
 	      SaveFormat	      "Timeseries"
+	      SampleTime	      "sample"
 	    }
 	    Block {
 	      BlockType		      ToFile
@@ -11808,6 +11817,7 @@ Model {
 	      Filename		      "saved_data/V_line_saved.mat"
 	      MatrixName	      "V_line_saved"
 	      SaveFormat	      "Timeseries"
+	      SampleTime	      "sample"
 	    }
 	    Block {
 	      BlockType		      ToFile
@@ -11820,6 +11830,7 @@ Model {
 	      Filename		      "saved_data/PQ_S_saved.mat"
 	      MatrixName	      "PQ_S_saved"
 	      SaveFormat	      "Timeseries"
+	      SampleTime	      "sample"
 	    }
 	    Block {
 	      BlockType		      ToFile
@@ -11832,6 +11843,7 @@ Model {
 	      Filename		      "saved_data/PQ_T_saved.mat"
 	      MatrixName	      "PQ_T_saved"
 	      SaveFormat	      "Timeseries"
+	      SampleTime	      "sample"
 	    }
 	    Line {
 	      SrcBlock		      "I_ABC"
@@ -12610,7 +12622,6 @@ Model {
       Position		      [599, 265, 726, 300]
       ZOrder		      1569
       BlockRotation	      270
-      CurrentSetting	      "0"
     }
     Block {
       BlockType		      SubSystem
@@ -12630,7 +12641,7 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"Network"
-	Location		[-1, 31, 1377, 775]
+	Location		[-8, 0, 1448, 876]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -13014,6 +13025,7 @@ Model {
       Filename		      "saved_data/VEC_saved.mat"
       MatrixName	      "VEC_saved"
       SaveFormat	      "Timeseries"
+      SampleTime	      "sample"
     }
     Block {
       BlockType		      ToFile
@@ -13026,6 +13038,7 @@ Model {
       Filename		      "saved_data/GEO_saved.mat"
       MatrixName	      "GEO_saved"
       SaveFormat	      "Timeseries"
+      SampleTime	      "sample"
     }
     Block {
       BlockType		      ToFile
@@ -13038,6 +13051,7 @@ Model {
       Filename		      "saved_data/REG_saved.mat"
       MatrixName	      "REG_saved"
       SaveFormat	      "Timeseries"
+      SampleTime	      "sample"
     }
     Block {
       BlockType		      ToFile
@@ -13083,7 +13097,7 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"Transformator"
-	Location		[-1, 31, 1377, 775]
+	Location		[-8, 0, 1448, 876]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -14139,7 +14153,8 @@ Stateflow {
       "\n  \n   N=complex(0);\n   V_real=complex([0,0,0]');\n   V_012=complex([0,0,0]');\n   V_real(1)=amplitude_R.*exp"
       "(1i*phase_R);\n   V_real(2)=amplitude_S.*exp(1i*phase_S);\n   V_real(3)=amplitude_T.*exp(1i*phase_T); \n\n   R_e"
       "rror=230*exp(1j*-0/360*2*pi)  -V_real(1);\n   S_error=230*exp(1j*-120/360*2*pi)-V_real(2);\n   T_error=230*exp(1"
-      "j*-240/360*2*pi)-V_real(3);\n   N=R_error*S_error+R_error*T_error+S_error*T_error;\n   VEC_norm=abs(N);"
+      "j*-240/360*2*pi)-V_real(3);\n   VEC_norm=abs(R_error*S_error)+abs(R_error*T_error)+abs(S_error*T_error);\n   %N="
+      "R_error*S_error+R_error*T_error+S_error*T_error;\n   %VEC_norm=abs(N);"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
@@ -14368,8 +14383,8 @@ Stateflow {
       isEML		      1
       script		      "function GEO_norm = fcn(amplitude_R,amplitude_S,amplitude_T,phase_R,phase_S,phase_T)\n%#codegen\n"
       "\nx1=[0,0,0,0];\ny1=[0,0,0,0];\nx2=[0,0,0,0];\ny2=[0,0,0,0];\n\nGEO_norm=0;\n\ncoder.extrinsic('geometry_solver'"
-      ")\n\n        %% Ideal parameters\n        Amplitude_1=[325.3,325.3,325.3];                     %[V]\n        Pha"
-      "se_1=[-1.5855,2.6033,0.5089];\n        %Phase_1=[0,-2/3*pi,-4/3*pi];                     %[rad]\n      \n       "
+      ")\n\n        %% Ideal parameters\n        Amplitude_1=[325.3,325.3,325.3];                     %[V]\n        %Ph"
+      "ase_1=[-1.5855,2.6033,0.5089];\n        Phase_1=[0,-2/3*pi,-4/3*pi];                     %[rad]\n      \n       "
       " %% Real parameters\n        Amplitude_2=[amplitude_R,amplitude_S,amplitude_T];\n        Phase_2=[phase_R,phase_"
       "S,phase_T];\n        %Extension of the vectors with the first element to get closed triangles on\n        %plots"
       " and for use as polygons\n        Amplitude_1_ex=[Amplitude_1 Amplitude_1(1)];\n        Phase_1_ex=[Phase_1 Phas"

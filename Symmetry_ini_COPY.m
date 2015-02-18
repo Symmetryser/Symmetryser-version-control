@@ -4,7 +4,7 @@ close all;
 
 %% Simulation initialisation parameters
 CLK=1000;                                           %[sample/s]
-tfin=10;                                           %[s]
+tfin=5;                                           %[s]
 sample=10e-5;                                       %[s/sample]
 t=0:sample:tfin;                                    %[tick]
 %% FFT
@@ -111,7 +111,7 @@ START_Load_RC=[100,100,0.001];                             %[Boolean in time]
          Capacitive_Load_T_Switching_Sequence=ones(3,tfin/Capacitive_Load_R_Switching_Speed(1))';
                       
 %% Controller
-Start_Control=2;
+Start_Control=1;
 P_gain=0.0001;
 stair_sample=0.02;
 mask_sample=0.1;
@@ -133,33 +133,3 @@ phase_feedback_saturation=pi;
 
 
 h = msgbox('Operation Completed','Success');
-
-% %% Save
-% prompt = {'Enter the START time of data log','Enter the END time of data log','Enter measurement detail'};
-%         dlg_title = 'Save Data';
-%         num_lines = 1;
-%         defAns = {'0.3','1','1'};
-%         options = 'off';
-%         answer = inputdlg(prompt,dlg_title,num_lines,defAns,options);
-%         %Error handling
-%         if str2num(answer{2})>max(V_conn.time) 
-%                 errordlg('Time out of time range!')
-%         end
-%         if str2num(answer{1})>=str2num(answer{2})
-%                 errordlg('No valid range of data!')
-%         end
-% 
-%         logstart = str2num(answer{1})/sample;
-%         logend =  str2num(answer{2})/sample;
-%         logstart_switch = round((str2num(answer{1})/sample)*Capacitive_Load_R_Switching_Speed(1));
-%         logend_switch =  round((str2num(answer{2})/sample)*Capacitive_Load_R_Switching_Speed(1));
-%         detail=str2num(answer{3});
-% 
-% REG_=[t(logstart:detail:logend)',REG.signals.values((logstart:detail:logend),1)];
-% VEC_=[t(logstart:detail:logend)',VEC.signals.values((logstart:detail:logend),1)*1e-0];
-% GEO_=[t(logstart:detail:logend)',GEO.signals.values((logstart:detail:logend),1)*1e-0];
-%      
-%     save('norm_measure/REG.dat','REG_','-ascii');
-%     save('norm_measure/VEC.dat','VEC_','-ascii');
-%     save('norm_measure/GEO.dat','GEO_','-ascii');
-

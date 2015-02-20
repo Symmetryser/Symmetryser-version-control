@@ -43,7 +43,7 @@ P_R=[PQ_R_saved.time(logstart:detail:logend),PQ_R_saved.data((logstart:detail:lo
 P_S=[PQ_S_saved.time(logstart:detail:logend),PQ_S_saved.data((logstart:detail:logend),1)];
 P_T=[PQ_T_saved.time(logstart:detail:logend),PQ_T_saved.data((logstart:detail:logend),1)];
 Q_R=[PQ_R_saved.time(logstart:detail:logend),PQ_R_saved.data((logstart:detail:logend),2)];
-Q_S=[PQ_S_saved.time(logstart:detail:logend),PQ_S_saved.data((logstart:detail:logend),2)];
+Q_S=[PQ_S_saved.time(logstart:detail:logend),PQ_S_saved.data((logstart:detail:logend),2)*1e-2];
 Q_T=[PQ_T_saved.time(logstart:detail:logend),PQ_T_saved.data((logstart:detail:logend),2)];
 
 AMP_C_R=[AMP_CONTROL_saved.time(logstart:detail:logend),AMP_CONTROL_saved.data((logstart:detail:logend),1)];

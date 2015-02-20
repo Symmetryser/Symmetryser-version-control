@@ -112,12 +112,12 @@ START_Load_RC=[100,100,0.001];                             %[Boolean in time]
                       
 %% Controller
 Start_Control=1;
-P_gain=0.0001;
+P_gain=0.00001;
 stair_sample=0.02;
 mask_sample=0.1;
 switch_sample=0.02;
-step_size =     [2,2,2,...          %amp[A]
-                 0.08,0.08,0.08];   %phase[rad]
+step_size =     [5,5,5,...          %amp[A]
+                 0.18,0.18,0.18];   %phase[rad]
 test_step =     [0.5,0.5,0.5,...    %amp[A]
                  0.02,0.02,0.02];      %phase[rad]   
 initial_value = [0.00,0.00,0.00,... %amp[A]
@@ -125,6 +125,22 @@ initial_value = [0.00,0.00,0.00,... %amp[A]
 
 amp_feedback_saturation=400;
 phase_feedback_saturation=pi;
+
+%% %% Controller
+% Start_Control=1;
+% P_gain=0.0001;
+% stair_sample=0.02;
+% mask_sample=0.1;
+% switch_sample=0.02;
+% step_size =     [2,2,2,...          %amp[A]
+%                  0.08,0.08,0.08];   %phase[rad]
+% test_step =     [0.5,0.5,0.5,...    %amp[A]
+%                  0.02,0.02,0.02];      %phase[rad]   
+% initial_value = [0.00,0.00,0.00,... %amp[A]
+%                  0,0,0];            %phase[rad]
+% 
+% amp_feedback_saturation=400;
+% phase_feedback_saturation=pi;
 
 %% Simulation
         paramNameValStruct.AbsTol         = '1e-9';

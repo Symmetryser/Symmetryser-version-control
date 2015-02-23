@@ -4,7 +4,7 @@ close all;
 
 %% Simulation initialisation parameters
 CLK=1000;                                           %[sample/s]
-tfin=5;                                           %[s]
+tfin=15;                                           %[s]
 sample=10e-5;                                       %[s/sample]
 t=0:sample:tfin;                                    %[tick]
 %% FFT
@@ -116,8 +116,8 @@ P_gain=0.00001;
 stair_sample=0.02;
 mask_sample=0.1;
 switch_sample=0.02;
-step_size =     [5,5,5,...          %amp[A]
-                 0.18,0.18,0.18];   %phase[rad]
+step_size =     [10,10,10,...          %amp[A]
+                 0.36,0.36,0.36];   %phase[rad]
 test_step =     [0.5,0.5,0.5,...    %amp[A]
                  0.02,0.02,0.02];      %phase[rad]   
 initial_value = [0.00,0.00,0.00,... %amp[A]

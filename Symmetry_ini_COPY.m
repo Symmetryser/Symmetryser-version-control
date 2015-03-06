@@ -3,7 +3,7 @@ clear all;
 close all;
 %% Simulation initialisation parameters
 CLK=1000;                                           %[sample/s]
-tfin=3;                                           %[s]
+tfin=5;                                           %[s]
 sample=10e-5;                                       %[s/sample]
 t=0:sample:tfin;                                    %[tick]
 %% FFT
@@ -100,7 +100,7 @@ START_Load_RC=[100,100,0.001];                             %[Boolean in time]
 
 %% Controller
 U_PV_MAX=600;
-PowerGain=5e-3;
+PowerGain=2e-3;
 PowerGain_UpperLimit=10;
 Start_Control=1;
 P_gain=0.00001;

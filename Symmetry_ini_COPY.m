@@ -3,7 +3,7 @@ clear all;
 close all;
 %% Simulation initialisation parameters
 CLK=1000;                                           %[sample/s]
-tfin=5;                                           %[s]
+tfin=3;                                           %[s]
 sample=10e-5;                                       %[s/sample]
 t=0:sample:tfin;                                    %[tick]
 %% FFT
@@ -99,14 +99,15 @@ START_Load_RC=[100,100,0.001];                             %[Boolean in time]
 % Buffer_Initial_Voltage=600;
 
 %% Controller
-PowerGain=1e-3;
-PowerGain_UpperLimit=20;
+U_PV_MAX=600;
+PowerGain=5e-3;
+PowerGain_UpperLimit=5;
 Start_Control=1;
 P_gain=0.00001;
 stair_sample=0.02;
 mask_sample=0.1;
 switch_sample=0.02;
-step_size =     [10,10,10,...          %amp[A]
+step_size =     [5,5,5,...          %amp[A]
                  0.36,0.36,0.36];   %phase[rad]
 test_step =     [0.5,0.5,0.5,...    %amp[A]
                  0.02,0.02,0.02];      %phase[rad]   
@@ -136,6 +137,7 @@ phase_feedback_saturation=pi;
         paramNameValStruct.AbsTol         = '1e-9';
         paramNameValStruct.RelTol         = '1e-9';
         sim('Symmetry_Inverter');
+
 
 
 h = msgbox('Operation Completed','Success');

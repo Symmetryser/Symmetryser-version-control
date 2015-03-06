@@ -101,7 +101,7 @@ START_Load_RC=[100,100,0.001];                             %[Boolean in time]
 %% Controller
 U_PV_MAX=600;
 PowerGain=5e-3;
-PowerGain_UpperLimit=5;
+PowerGain_UpperLimit=10;
 Start_Control=1;
 P_gain=0.00001;
 stair_sample=0.02;

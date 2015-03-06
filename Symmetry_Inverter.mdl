@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.99"
+    ComputedModelVersion    "1.100"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -64,16 +64,16 @@ Model {
 	$ObjectID		6
 	$ClassName		"Simulink.EditorInfo"
 	IsActive		[1]
-	ViewObjType		"SimulinkSubsys"
-	LoadSaveID		"1780"
+	ViewObjType		"SimulinkTopLevel"
+	LoadSaveID		"0"
 	Extents			[1328.0, 606.0]
 	ZoomFactor		[1.0]
-	Offset			[1045.5, 110.19597982434402]
+	Offset			[5.0, 1.0]
       }
     }
   }
-  PhysicalModelingChecksum "388407845"
-  PhysicalModelingParameterChecksum "2198294612"
+  PhysicalModelingChecksum "3740114736"
+  PhysicalModelingParameterChecksum "1913093920"
   PhysicalModelingProducts "Power_System_Blocks"
   Created		  "Thu Oct 02 12:18:57 2014"
   Creator		  "gorbep"
@@ -81,9 +81,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Neukirchner László"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri Mar 06 12:09:57 2015"
-  RTWModifiedTimeStamp	  347541314
-  ModelVersionFormat	  "1.%<AutoIncrement:99>"
+  LastModifiedDate	  "Fri Mar 06 15:09:51 2015"
+  RTWModifiedTimeStamp	  347554443
+  ModelVersionFormat	  "1.%<AutoIncrement:100>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -794,6 +794,17 @@ Model {
   }
   BlockParameterDefaults {
     Block {
+      BlockType		      Abs
+      ZeroCross		      on
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
       BlockType		      Buffer
       N			      "64"
       V			      "0"
@@ -1047,7 +1058,7 @@ Model {
   System {
     Name		    "Symmetry_Inverter"
     Location		    [-8, 0, 1370, 780]
-    Open		    off
+    Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
     ScreenColor		    "white"
@@ -1060,7 +1071,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "2928"
+    SIDHighWatermark	    "2934"
     Block {
       BlockType		      SubSystem
       Name		      "Calculate_Norms"
@@ -3088,7 +3099,7 @@ Model {
       System {
 	Name			"Current Control"
 	Location		[-8, 0, 1370, 780]
-	Open			on
+	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -3107,6 +3118,15 @@ Model {
 	  Position		  [1020, 388, 1050, 402]
 	  ZOrder		  610
 	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Abs
+	  Name			  "Abs"
+	  SID			  "2933"
+	  Position		  [1425, 155, 1455, 185]
+	  ZOrder		  1593
+	  BlockMirror		  on
+	  SaturateOnIntegerOverflow off
 	}
 	Block {
 	  BlockType		  SubSystem
@@ -3704,28 +3724,6 @@ Model {
 	    }
 	    Block {
 	      BlockType		      Reference
-	      Name		      "P(t) Filter3"
-	      SID		      "2927"
-	      Ports		      [1, 1]
-	      Position		      [1072, 260, 1098, 330]
-	      ZOrder		      1586
-	      BlockRotation	      270
-	      BlockMirror	      on
-	      NamePlacement	      "alternate"
-	      ShowName		      off
-	      LibraryVersion	      "1.321"
-	      SourceBlock	      "dsparch4/Analog\nFilter Design"
-	      SourceType	      "Analog Filter Design"
-	      method		      "Butterworth"
-	      filttype		      "Lowpass"
-	      N			      "8"
-	      Wlo		      "200"
-	      Whi		      "80"
-	      Rp		      "2"
-	      Rs		      "40"
-	    }
-	    Block {
-	      BlockType		      Reference
 	      Name		      "PV"
 	      SID		      "2820"
 	      Ports		      [1, 0, 0, 0, 0, 1, 1]
@@ -3748,6 +3746,29 @@ Model {
 	      Ports		      [0, 0, 0, 0, 0, 1, 1]
 	      Position		      [325, 351, 395, 379]
 	      ZOrder		      1576
+	      NamePlacement	      "alternate"
+	      LibraryVersion	      "1.2191"
+	      SourceBlock	      "powerlib/Elements/Series RLC Branch"
+	      SourceType	      "Series RLC Branch"
+	      LConnTagsString	      "__new0"
+	      RConnTagsString	      "__new0"
+	      BranchType	      "R"
+	      Resistance	      "5"
+	      Inductance	      "0.1"
+	      SetiL0		      off
+	      InitialCurrent	      "0"
+	      Capacitance	      "1.0"
+	      Setx0		      off
+	      InitialVoltage	      "0"
+	      Measurements	      "None"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "PV-R1"
+	      SID		      "2932"
+	      Ports		      [0, 0, 0, 0, 0, 1, 1]
+	      Position		      [470, 351, 540, 379]
+	      ZOrder		      1587
 	      NamePlacement	      "alternate"
 	      LibraryVersion	      "1.2191"
 	      SourceBlock	      "powerlib/Elements/Series RLC Branch"
@@ -3877,14 +3898,14 @@ Model {
 	      SID		      "2824"
 	      Position		      [20, 340, 50, 370]
 	      ZOrder		      1573
-	      Value		      "300"
+	      Value		      "U_PV_MAX"
 	    }
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Voltage Measurement"
 	      SID		      "2875"
 	      Ports		      [0, 1, 0, 0, 0, 2]
-	      Position		      [470, 293, 495, 317]
+	      Position		      [640, 293, 665, 317]
 	      ZOrder		      738
 	      LibraryVersion	      "1.2191"
 	      UserDataPersistent      on
@@ -4014,7 +4035,7 @@ Model {
 	    Line {
 	      SrcBlock		      "Voltage Measurement"
 	      SrcPort		      1
-	      Points		      [214, 0; 0, 65]
+	      Points		      [44, 0; 0, 65]
 	      DstBlock		      "Power"
 	      DstPort		      1
 	    }
@@ -4046,20 +4067,10 @@ Model {
 	    }
 	    Line {
 	      LineType		      "Connection"
-	      SrcBlock		      "Voltage Measurement"
-	      SrcPort		      LConn1
-	      Points		      [-175, 0; 0, 65]
-	      Branch {
-		ConnectType		"DEST_SRC"
-		DstBlock		"PV-R"
-		DstPort			LConn1
-	      }
-	      Branch {
-		ConnectType		"DEST_DEST"
-		SrcBlock		"PV"
-		SrcPort			RConn1
-		Points			[0, 0]
-	      }
+	      SrcBlock		      "PV"
+	      SrcPort		      RConn1
+	      DstBlock		      "PV-R"
+	      DstPort		      LConn1
 	    }
 	    Line {
 	      SrcBlock		      "U PV Max"
@@ -4069,19 +4080,19 @@ Model {
 	    }
 	    Line {
 	      LineType		      "Connection"
-	      SrcBlock		      "Voltage Measurement"
-	      SrcPort		      LConn2
-	      Points		      [-31, 0; 0, 55]
+	      SrcBlock		      "PV-R1"
+	      SrcPort		      LConn1
+	      Points		      [-27, 0]
+	      Branch {
+		ConnectType		"DEST_DEST"
+		SrcBlock		"Voltage Measurement"
+		SrcPort			LConn1
+		Points			[-197, 0; 0, 65]
+	      }
 	      Branch {
 		ConnectType		"DEST_SRC"
 		DstBlock		"PV-R"
 		DstPort			RConn1
-	      }
-	      Branch {
-		ConnectType		"DEST_DEST"
-		SrcBlock		"Current Measurement"
-		SrcPort			LConn1
-		Points			[-156, 0]
 	      }
 	    }
 	    Line {
@@ -4197,7 +4208,7 @@ Model {
 	      SrcPort		      1
 	      Points		      [25, 0]
 	      Branch {
-		DstBlock		"P(t) Filter3"
+		DstBlock		"Sum"
 		DstPort			1
 	      }
 	      Branch {
@@ -4206,27 +4217,29 @@ Model {
 	      }
 	    }
 	    Line {
-	      SrcBlock		      "P(t) Filter3"
-	      SrcPort		      1
-	      DstBlock		      "Sum"
-	      DstPort		      1
+	      LineType		      "Connection"
+	      SrcBlock		      "PV-R1"
+	      SrcPort		      RConn1
+	      Points		      [25, 0]
+	      Branch {
+		ConnectType		"DEST_DEST"
+		SrcBlock		"Voltage Measurement"
+		SrcPort			LConn2
+		Points			[-45, 0; 0, 55]
+	      }
+	      Branch {
+		ConnectType		"DEST_SRC"
+		DstBlock		"Current Measurement"
+		DstPort			LConn1
+	      }
 	    }
 	  }
-	}
-	Block {
-	  BlockType		  UnitDelay
-	  Name			  "Delay8"
-	  SID			  "2926"
-	  Position		  [1655, 273, 1690, 307]
-	  ZOrder		  1587
-	  BlockMirror		  on
-	  SampleTime		  "0.02"
 	}
 	Block {
 	  BlockType		  Gain
 	  Name			  "Gain"
 	  SID			  "2922"
-	  Position		  [1600, 275, 1630, 305]
+	  Position		  [1635, 155, 1665, 185]
 	  ZOrder		  745
 	  BlockMirror		  on
 	  Gain			  "PowerGain"
@@ -4401,12 +4414,33 @@ Model {
 	  DisplayOption		  "bar"
 	}
 	Block {
+	  BlockType		  Reference
+	  Name			  "P(t) Filter3"
+	  SID			  "2927"
+	  Ports			  [1, 1]
+	  Position		  [1475, 157, 1545, 183]
+	  ZOrder		  1592
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  LibraryVersion	  "1.321"
+	  SourceBlock		  "dsparch4/Analog\nFilter Design"
+	  SourceType		  "Analog Filter Design"
+	  method		  "Butterworth"
+	  filttype		  "Lowpass"
+	  N			  "8"
+	  Wlo			  "200"
+	  Whi			  "80"
+	  Rp			  "2"
+	  Rs			  "40"
+	}
+	Block {
 	  BlockType		  Product
 	  Name			  "Product"
-	  SID			  "2928"
+	  SID			  "2934"
 	  Ports			  [2, 1]
 	  Position		  [1425, 347, 1455, 378]
-	  ZOrder		  1588
+	  ZOrder		  1594
 	  InputSameDT		  off
 	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
 	  RndMeth		  "Floor"
@@ -4417,7 +4451,7 @@ Model {
 	  Name			  "Saturation"
 	  SID			  "2923"
 	  Ports			  [1, 1]
-	  Position		  [1540, 275, 1570, 305]
+	  Position		  [1575, 155, 1605, 185]
 	  ZOrder		  746
 	  BlockMirror		  on
 	  InputPortMap		  "u0"
@@ -4441,8 +4475,9 @@ Model {
 	  Name			  "To File4"
 	  SID			  "2924"
 	  Ports			  [1]
-	  Position		  [1480, 205, 1620, 235]
+	  Position		  [1250, 155, 1390, 185]
 	  ZOrder		  1583
+	  BlockMirror		  on
 	  ShowName		  off
 	  Filename		  "saved_data/k_normalised_saved.mat"
 	  MatrixName		  "k_normalised_saved"
@@ -7883,32 +7918,37 @@ Model {
 	  DstPort		  1
 	}
 	Line {
+	  SrcBlock		  "Current_Sources"
+	  SrcPort		  1
+	  Points		  [9, 0; 0, -160]
+	  DstBlock		  "Gain"
+	  DstPort		  1
+	}
+	Line {
 	  SrcBlock		  "Saturation"
 	  SrcPort		  1
-	  Points		  [-105, 0]
+	  DstBlock		  "P(t) Filter3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "P(t) Filter3"
+	  SrcPort		  1
+	  DstBlock		  "Abs"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Abs"
+	  SrcPort		  1
+	  Points		  [-9, 0]
 	  Branch {
-	    Points		    [0, 42; -46, 0; 0, 23]
+	    Points		    [0, 185]
 	    DstBlock		    "Product"
 	    DstPort		    1
 	  }
 	  Branch {
-	    Points		    [0, -70]
 	    DstBlock		    "To File4"
 	    DstPort		    1
 	  }
-	}
-	Line {
-	  SrcBlock		  "Current_Sources"
-	  SrcPort		  1
-	  Points		  [9, 0; 0, -40]
-	  DstBlock		  "Delay8"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "Delay8"
-	  SrcPort		  1
-	  DstBlock		  "Gain"
-	  DstPort		  1
 	}
 	Line {
 	  SrcBlock		  "Product"

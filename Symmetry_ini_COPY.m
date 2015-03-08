@@ -3,7 +3,7 @@ clear all;
 close all;
 %% Simulation initialisation parameters
 CLK=1000;                                           %[sample/s]
-tfin=5;                                           %[s]
+tfin=10;                                           %[s]
 sample=10e-5;                                       %[s/sample]
 t=0:sample:tfin;                                    %[tick]
 %% FFT
@@ -92,16 +92,15 @@ START_Load_RC=[100,100,0.001];                             %[Boolean in time]
 %          Capacitive_Load_T_Switching_Sequence=ones(3,tfin/Capacitive_Load_R_Switching_Speed(1))';
                       
 
-% %% Inverter
-% Bridge_Inductances=4e-3;
-% Current_Comparator_Frequencys=1e-6;
-% Buffer_Capacitance=10e-3;
-% Buffer_Initial_Voltage=600;
+%% Inverter
+Bridge_Inductances=4e-3;
+Current_Comparator_Frequencys=5e-4;
+Buffer_Capacitance=10e-3;
+Buffer_Initial_Voltage=600;
 
 %% Controller
-U_PV_MAX=600;
-PowerGain=2e-3;
-PowerGain_UpperLimit=10;
+
+PowerGain=5e-5;
 Start_Control=1;
 P_gain=0.00001;
 stair_sample=0.02;
@@ -136,7 +135,9 @@ phase_feedback_saturation=pi;
 %% Simulation
         paramNameValStruct.AbsTol         = '1e-9';
         paramNameValStruct.RelTol         = '1e-9';
-        sim('Symmetry_Inverter');
+        %feature('ModeIterationsInAlgLoops',0)
+        %set_param('Symmetry_Inverter','AlgebraicLoopSolver','LineSearch')
+        sim('Symmetry_Inverter_imagined');
 
 
 

@@ -10,7 +10,7 @@ t=0:sample:tfin;                                    %[tick]
 
 %% Inverter
 Bridge_Inductances=4e-3;
-Current_Comparator_Frequencys=1e-6;
+Current_Comparator_Frequencys=5e-4;
 Buffer_Capacitance=10e-3;
 Buffer_Initial_Voltage=600;
 

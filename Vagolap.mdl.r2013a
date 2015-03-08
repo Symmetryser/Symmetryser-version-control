@@ -1,26 +1,16 @@
 Model {
   Name			  "Vagolap"
-  Version		  8.3
+  Version		  8.1
   MdlSubVersion		  0
-  SavedCharacterEncoding  "windows-1250"
   GraphicalInterface {
     NumRootInports	    0
-    NumRootOutports	    2
-    Outport {
-      BusObject		      ""
-      BusOutputAsStruct	      "off"
-      Name		      "Regular"
-    }
-    Outport {
-      BusObject		      ""
-      BusOutputAsStruct	      "off"
-      Name		      "Geometrial"
-    }
+    NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.13"
+    ComputedModelVersion    "1.12"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
+  SavedCharacterEncoding  "windows-1250"
   SaveDefaultBlockParams  on
   ScopeRefreshTime	  0.035000
   OverrideScopeRefreshTime on
@@ -65,9 +55,9 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[772.0, 378.0]
+	Extents			[766.0, 364.0]
 	ZoomFactor		[0.8]
-	Offset			[21.929423067991166, -4.7522886006109388]
+	Offset			[-160.0294577091704, -110.85141427328085]
       }
     }
   }
@@ -78,11 +68,11 @@ Model {
   Creator		  "Templomos"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "Templomos"
+  LastModifiedBy	  "Neukirchner László"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sat Mar 07 20:48:15 2015"
-  RTWModifiedTimeStamp	  347662092
-  ModelVersionFormat	  "1.%<AutoIncrement:13>"
+  LastModifiedDate	  "Wed Jan 21 14:02:52 2015"
+  RTWModifiedTimeStamp	  343749768
+  ModelVersionFormat	  "1.%<AutoIncrement:12>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -108,11 +98,6 @@ Model {
   BrowserShowLibraryLinks off
   BrowserLookUnderMasks	  off
   SimulationMode	  "normal"
-  PauseTimes		  "5"
-  NumberOfSteps		  1
-  SnapshotBufferSize	  10
-  SnapshotInterval	  10
-  NumberOfLastSnapshots	  0
   LinearizationMsg	  "none"
   Profile		  off
   ParamWorkspaceSource	  "MATLABWorkspace"
@@ -146,7 +131,6 @@ Model {
   CovNameIncrementing	  off
   CovHtmlReporting	  on
   CovForceBlockReductionOff on
-  CovEnableCumulative	  on
   covSaveCumulativeToWorkspaceVar on
   CovSaveSingleToWorkspaceVar on
   CovCumulativeVarName	  "covCumulativeData"
@@ -154,9 +138,6 @@ Model {
   CovReportOnPause	  on
   CovModelRefEnable	  "Off"
   CovExternalEMLEnable	  off
-  CovSFcnEnable		  off
-  CovBoundaryAbsTol	  0.000010
-  CovBoundaryRelTol	  0.010000
   ExtModeBatchMode	  off
   ExtModeEnableFloating	  on
   ExtModeTrigType	  "manual"
@@ -186,13 +167,13 @@ Model {
     Dimension		    1
     Simulink.ConfigSet {
       $ObjectID		      7
-      Version		      "1.14.2"
+      Version		      "1.13.0"
       Array {
 	Type			"Handle"
 	Dimension		10
 	Simulink.SolverCC {
 	  $ObjectID		  8
-	  Version		  "1.14.2"
+	  Version		  "1.13.0"
 	  StartTime		  "0.0"
 	  StopTime		  "10.0"
 	  AbsTol		  "auto"
@@ -227,7 +208,7 @@ Model {
 	}
 	Simulink.DataIOCC {
 	  $ObjectID		  9
-	  Version		  "1.14.2"
+	  Version		  "1.13.0"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
 	  FinalStateName	  "xFinal"
@@ -245,7 +226,6 @@ Model {
 	  SignalLogging		  on
 	  DSMLogging		  on
 	  InspectSignalLogs	  off
-	  VisualizeSimOutput	  on
 	  SaveTime		  on
 	  ReturnWorkspaceOutputs  off
 	  StateSaveName		  "xout"
@@ -260,7 +240,7 @@ Model {
 	}
 	Simulink.OptimizationCC {
 	  $ObjectID		  10
-	  Version		  "1.14.2"
+	  Version		  "1.13.0"
 	  Array {
 	    Type		    "Cell"
 	    Dimension		    8
@@ -280,14 +260,11 @@ Model {
 	  InlineParams		  off
 	  UseIntDivNetSlope	  off
 	  UseFloatMulNetSlope	  off
-	  DefaultUnderspecifiedDataType	"double"
 	  UseSpecifiedMinMax	  off
 	  InlineInvariantSignals  off
 	  OptimizeBlockIOStorage  on
 	  BufferReuse		  on
 	  EnhancedBackFolding	  off
-	  CachingGlobalReferences off
-	  GlobalBufferReuse	  on
 	  StrengthReduction	  off
 	  ExpressionFolding	  on
 	  BooleansAsBitfields	  off
@@ -302,7 +279,6 @@ Model {
 	  SystemCodeInlineAuto	  off
 	  StateBitsets		  off
 	  DataBitsets		  off
-	  ActiveStateOutputEnumStorageType "Native Integer"
 	  UseTempVars		  off
 	  ZeroExternalMemoryAtStartup on
 	  ZeroInternalMemoryAtStartup on
@@ -320,7 +296,7 @@ Model {
 	}
 	Simulink.DebuggingCC {
 	  $ObjectID		  11
-	  Version		  "1.14.2"
+	  Version		  "1.13.0"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
 	  ArrayBoundsChecking	  "none"
@@ -410,7 +386,7 @@ Model {
 	}
 	Simulink.HardwareCC {
 	  $ObjectID		  12
-	  Version		  "1.14.2"
+	  Version		  "1.13.0"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
 	  ProdBitPerInt		  32
@@ -451,7 +427,7 @@ Model {
 	}
 	Simulink.ModelReferenceCC {
 	  $ObjectID		  13
-	  Version		  "1.14.2"
+	  Version		  "1.13.0"
 	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
 	  CheckModelReferenceTargetMessage "error"
 	  EnableParallelModelReferenceBuilds off
@@ -466,7 +442,7 @@ Model {
 	}
 	Simulink.SFSimCC {
 	  $ObjectID		  14
-	  Version		  "1.14.2"
+	  Version		  "1.13.0"
 	  SFSimEnableDebug	  on
 	  SFSimOverflowDetection  on
 	  SFSimEcho		  on
@@ -477,12 +453,11 @@ Model {
 	  SimUseLocalCustomCode	  off
 	  SimParseCustomCode	  on
 	  SimBuildMode		  "sf_incremental_build"
-	  SimGenImportedTypeDefs  off
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
 	  $ObjectID		  15
-	  Version		  "1.14.2"
+	  Version		  "1.13.0"
 	  Array {
 	    Type		    "Cell"
 	    Dimension		    15
@@ -504,15 +479,11 @@ Model {
 	    PropName		    "DisabledProps"
 	  }
 	  SystemTargetFile	  "grt.tlc"
-	  TLCOptions		  ""
 	  GenCodeOnly		  off
 	  MakeCommand		  "make_rtw"
 	  GenerateMakefile	  on
 	  PackageGeneratedCodeAndArtifacts off
-	  PackageName		  ""
 	  TemplateMakefile	  "grt_default_tmf"
-	  PostCodeGenCommand	  ""
-	  Description		  ""
 	  GenerateReport	  off
 	  SaveLog		  off
 	  RTWVerbose		  on
@@ -523,23 +494,13 @@ Model {
 	  TLCAssert		  off
 	  ProcessScriptMode	  "Default"
 	  ConfigurationMode	  "Optimized"
-	  ProcessScript		  ""
-	  ConfigurationScript	  ""
 	  ConfigAtBuild		  off
 	  RTWUseLocalCustomCode	  off
 	  RTWUseSimCustomCode	  off
-	  CustomSourceCode	  ""
-	  CustomHeaderCode	  ""
-	  CustomInclude		  ""
-	  CustomSource		  ""
-	  CustomLibrary		  ""
-	  CustomInitializer	  ""
-	  CustomTerminator	  ""
-	  Toolchain		  "Automatically locate an installed toolchain"
-	  BuildConfiguration	  "Faster Builds"
 	  IncludeHyperlinkInReport off
 	  LaunchReport		  off
 	  PortableWordSizes	  off
+	  GenerateErtSFunction	  off
 	  CreateSILPILBlock	  "None"
 	  CodeExecutionProfiling  off
 	  CodeExecutionProfileVariable "executionProfile"
@@ -559,17 +520,14 @@ Model {
 	  GenerateCodeMetricsReport off
 	  GenerateCodeReplacementReport	off
 	  RTWCompilerOptimization "Off"
-	  RTWCustomCompilerOptimizations ""
 	  CheckMdlBeforeBuild	  "Off"
 	  CustomRebuildMode	  "OnUpdate"
-	  DataInitializer	  ""
-	  SharedConstantsCachingThreshold 1024
 	  Array {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
 	      $ObjectID		      16
-	      Version		      "1.14.2"
+	      Version		      "1.13.0"
 	      Array {
 		Type			"Cell"
 		Dimension		23
@@ -600,7 +558,6 @@ Model {
 	      }
 	      ForceParamTrailComments off
 	      GenerateComments	      on
-	      CommentStyle	      "Auto"
 	      IgnoreCustomStorageClasses on
 	      IgnoreTestpoints	      off
 	      IncHierarchyInIds	      off
@@ -623,7 +580,6 @@ Model {
 	      CustomSymbolStrBlkIO    "rtb_$N$M"
 	      CustomSymbolStrTmpVar   "$N$M"
 	      CustomSymbolStrMacro    "$R$N$M"
-	      CustomSymbolStrUtil     "$N$C"
 	      DefineNamingRule	      "None"
 	      ParamNamingRule	      "None"
 	      SignalNamingRule	      "None"
@@ -640,7 +596,7 @@ Model {
 	    Simulink.GRTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
 	      $ObjectID		      17
-	      Version		      "1.14.2"
+	      Version		      "1.13.0"
 	      Array {
 		Type			"Cell"
 		Dimension		14
@@ -663,8 +619,6 @@ Model {
 	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
 	      TargetLibSuffix	      ""
 	      TargetPreCompLibLocation ""
-	      GenFloatMathFcnCalls    "NOT IN USE"
-	      TargetLangStandard      "C89/C90 (ANSI)"
 	      CodeReplacementLibrary  "None"
 	      UtilityFuncGeneration   "Auto"
 	      ERTMultiwordTypeDef     "System defined"
@@ -673,6 +627,7 @@ Model {
 	      GenerateFullHeader      on
 	      GenerateSampleERTMain   off
 	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
 	      ModelReferenceCompliant on
 	      ParMdlRefBuildCompliant on
 	      CompOptLevelCompliant   on
@@ -689,7 +644,6 @@ Model {
 	      LogVarNameModifier      "rt_"
 	      MatFileLogging	      on
 	      MultiInstanceERTCode    off
-	      CodeInterfacePackaging  "Nonreusable function"
 	      SupportNonFinite	      on
 	      SupportComplex	      on
 	      PurelyIntegerCode	      off
@@ -717,14 +671,13 @@ Model {
 	      RTWCAPIStates	      off
 	      RTWCAPIRootIO	      off
 	      GenerateASAP2	      off
-	      MultiInstanceErrorCode  "Error"
 	    }
 	    PropName		    "Components"
 	  }
 	}
 	hdlcoderui.hdlcc {
 	  $ObjectID		  18
-	  Version		  "1.14.2"
+	  Version		  "1.13.0"
 	  Description		  "HDL Coder custom configuration component"
 	  Name			  "HDL Coder"
 	  Array {
@@ -749,7 +702,7 @@ Model {
 	    Dimension		    2
 	    MECH.SimMechanicsCC {
 	      $ObjectID		      20
-	      Version		      "1.14.2"
+	      Version		      "1.13.0"
 	      Name		      "SimMechanics"
 	      WarnOnRedundantConstraints on
 	      WarnOnSingularInitialAssembly off
@@ -782,14 +735,14 @@ Model {
 	    }
 	    simmechanics.ConfigurationSet {
 	      $ObjectID		      21
-	      Version		      "1.14.2"
+	      Version		      "1.13.0"
 	      Description	      "SimMechanics 2G"
 	      Array {
 		Type			"Handle"
 		Dimension		2
 		simmechanics.DiagnosticsConfigSet {
 		  $ObjectID		  22
-		  Version		  "1.14.2"
+		  Version		  "1.13.0"
 		  Description		  "Diagnostics"
 		  Name			  "DiagnosticsConfigSet"
 		  SimMechanicsInvalidVisualProperty "warning"
@@ -803,7 +756,7 @@ Model {
 		}
 		simmechanics.ExplorerConfigSet {
 		  $ObjectID		  23
-		  Version		  "1.14.2"
+		  Version		  "1.13.0"
 		  Description		  "Explorer"
 		  Name			  "ExplorerConfigSet"
 		  SimMechanicsOpenEditorOnUpdate on
@@ -953,15 +906,11 @@ Model {
       Permissions	      "ReadWrite"
       PermitHierarchicalResolution "All"
       TreatAsAtomicUnit	      off
-      MinAlgLoopOccurrences   off
-      PropExecContextOutsideSubsystem off
       CheckFcnCallInpInsideContextMsg off
       SystemSampleTime	      "-1"
-      RTWSystemCode	      "Auto"
       RTWFcnNameOpts	      "Auto"
       RTWFileNameOpts	      "Auto"
       FunctionInterfaceSpec   "void_void"
-      FunctionWithSeparateData off
       RTWMemSecFuncInitTerm   "Inherit from model"
       RTWMemSecFuncExecute    "Inherit from model"
       RTWMemSecDataConstants  "Inherit from model"
@@ -971,12 +920,9 @@ Model {
       DataTypeOverride	      "UseLocalSettings"
       DataTypeOverrideAppliesTo	"AllNumericTypes"
       MinMaxOverflowLogging   "UseLocalSettings"
-      Opaque		      off
-      MaskHideContents	      off
       SFBlockType	      "NONE"
       Variant		      off
       GeneratePreprocessorConditionals off
-      ContentPreviewEnabled   off
     }
     Block {
       BlockType		      Terminator
@@ -998,14 +944,14 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "80"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "381"
+    SIDHighWatermark	    "373"
     Block {
       BlockType		      Demux
       Name		      "Demux1"
-      SID		      "376"
+      SID		      "371"
       Ports		      [1, 3]
-      Position		      [440, 318, 445, 372]
-      ZOrder		      869
+      Position		      [20, 18, 25, 72]
+      ZOrder		      858
       ShowName		      off
       Outputs		      "3"
       DisplayOption	      "bar"
@@ -1013,32 +959,10 @@ Model {
     Block {
       BlockType		      Demux
       Name		      "Demux2"
-      SID		      "374"
+      SID		      "372"
       Ports		      [1, 3]
-      Position		      [440, 13, 445, 67]
-      ZOrder		      864
-      ShowName		      off
-      Outputs		      "3"
-      DisplayOption	      "bar"
-    }
-    Block {
-      BlockType		      Demux
-      Name		      "Demux3"
-      SID		      "375"
-      Ports		      [1, 3]
-      Position		      [440, 73, 445, 127]
-      ZOrder		      865
-      ShowName		      off
-      Outputs		      "3"
-      DisplayOption	      "bar"
-    }
-    Block {
-      BlockType		      Demux
-      Name		      "Demux4"
-      SID		      "377"
-      Ports		      [1, 3]
-      Position		      [440, 378, 445, 432]
-      ZOrder		      870
+      Position		      [20, 78, 25, 132]
+      ZOrder		      859
       ShowName		      off
       Outputs		      "3"
       DisplayOption	      "bar"
@@ -1076,7 +1000,13 @@ Model {
       ErrorFcn		      "Stateflow.Translate.translate"
       PermitHierarchicalResolution "ExplicitOnly"
       TreatAsAtomicUnit	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
       RequestExecContextInheritance off
+      MaskHideContents	      off
       SFBlockType	      "MATLAB Function"
       System {
 	Name			"geometrial norm1"
@@ -1093,7 +1023,7 @@ Model {
 	TiledPageScale		1
 	ShowPageBoundaries	off
 	ZoomFactor		"100"
-	SIDHighWatermark	"34"
+	SIDHighWatermark	"31"
 	Block {
 	  BlockType		  Inport
 	  Name			  "amplitude_R"
@@ -1150,23 +1080,23 @@ Model {
 	Block {
 	  BlockType		  Demux
 	  Name			  " Demux "
-	  SID			  "370::33"
+	  SID			  "370::30"
 	  Ports			  [1, 1]
 	  Position		  [270, 230, 320, 270]
-	  ZOrder		  19
+	  ZOrder		  16
 	  Outputs		  "1"
 	}
 	Block {
 	  BlockType		  S-Function
 	  Name			  " SFunction "
-	  SID			  "370::32"
+	  SID			  "370::29"
 	  Tag			  "Stateflow S-Function Vagolap 3"
 	  Ports			  [6, 2]
 	  Position		  [180, 102, 230, 243]
-	  ZOrder		  18
+	  ZOrder		  15
 	  FunctionName		  "sf_sfun"
 	  PortCounts		  "[6 2]"
-	  EnableBusSupport	  off
+	  EnableBusSupport	  on
 	  Port {
 	    PortNumber		    2
 	    Name		    "GEO_norm"
@@ -1177,9 +1107,9 @@ Model {
 	Block {
 	  BlockType		  Terminator
 	  Name			  " Terminator "
-	  SID			  "370::34"
+	  SID			  "370::31"
 	  Position		  [460, 241, 480, 259]
-	  ZOrder		  20
+	  ZOrder		  17
 	}
 	Block {
 	  BlockType		  Outport
@@ -1190,42 +1120,36 @@ Model {
 	  IconDisplay		  "Port number"
 	}
 	Line {
-	  ZOrder		  10
 	  SrcBlock		  "amplitude_R"
 	  SrcPort		  1
 	  DstBlock		  " SFunction "
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  11
 	  SrcBlock		  "amplitude_S"
 	  SrcPort		  1
 	  DstBlock		  " SFunction "
 	  DstPort		  2
 	}
 	Line {
-	  ZOrder		  12
 	  SrcBlock		  "amplitude_T"
 	  SrcPort		  1
 	  DstBlock		  " SFunction "
 	  DstPort		  3
 	}
 	Line {
-	  ZOrder		  13
 	  SrcBlock		  "phase_R"
 	  SrcPort		  1
 	  DstBlock		  " SFunction "
 	  DstPort		  4
 	}
 	Line {
-	  ZOrder		  14
 	  SrcBlock		  "phase_S"
 	  SrcPort		  1
 	  DstBlock		  " SFunction "
 	  DstPort		  5
 	}
 	Line {
-	  ZOrder		  15
 	  SrcBlock		  "phase_T"
 	  SrcPort		  1
 	  DstBlock		  " SFunction "
@@ -1233,7 +1157,6 @@ Model {
 	}
 	Line {
 	  Name			  "GEO_norm"
-	  ZOrder		  16
 	  Labels		  [0, 0]
 	  SrcBlock		  " SFunction "
 	  SrcPort		  2
@@ -1241,14 +1164,12 @@ Model {
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  17
 	  SrcBlock		  " Demux "
 	  SrcPort		  1
 	  DstBlock		  " Terminator "
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  18
 	  SrcBlock		  " SFunction "
 	  SrcPort		  1
 	  DstBlock		  " Demux "
@@ -1259,15 +1180,21 @@ Model {
     Block {
       BlockType		      SubSystem
       Name		      "geometrial norm2"
-      SID		      "378"
+      SID		      "373"
       Ports		      [6, 1]
-      Position		      [515, 319, 700, 431]
-      ZOrder		      868
+      Position		      [95, 19, 280, 131]
+      ZOrder		      857
       LibraryVersion	      "1.32"
       ErrorFcn		      "Stateflow.Translate.translate"
       PermitHierarchicalResolution "ExplicitOnly"
       TreatAsAtomicUnit	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
       RequestExecContextInheritance off
+      MaskHideContents	      off
       SFBlockType	      "MATLAB Function"
       System {
 	Name			"geometrial norm2"
@@ -1284,11 +1211,11 @@ Model {
 	TiledPageScale		1
 	ShowPageBoundaries	off
 	ZoomFactor		"100"
-	SIDHighWatermark	"37"
+	SIDHighWatermark	"31"
 	Block {
 	  BlockType		  Inport
 	  Name			  "amplitude_R"
-	  SID			  "378::1"
+	  SID			  "373::1"
 	  Position		  [20, 101, 40, 119]
 	  ZOrder		  -1
 	  IconDisplay		  "Port number"
@@ -1296,7 +1223,7 @@ Model {
 	Block {
 	  BlockType		  Inport
 	  Name			  "amplitude_S"
-	  SID			  "378::21"
+	  SID			  "373::21"
 	  Position		  [20, 136, 40, 154]
 	  ZOrder		  7
 	  Port			  "2"
@@ -1305,7 +1232,7 @@ Model {
 	Block {
 	  BlockType		  Inport
 	  Name			  "amplitude_T"
-	  SID			  "378::22"
+	  SID			  "373::22"
 	  Position		  [20, 171, 40, 189]
 	  ZOrder		  8
 	  Port			  "3"
@@ -1314,7 +1241,7 @@ Model {
 	Block {
 	  BlockType		  Inport
 	  Name			  "phase_R"
-	  SID			  "378::23"
+	  SID			  "373::23"
 	  Position		  [20, 206, 40, 224]
 	  ZOrder		  9
 	  Port			  "4"
@@ -1323,7 +1250,7 @@ Model {
 	Block {
 	  BlockType		  Inport
 	  Name			  "phase_S"
-	  SID			  "378::24"
+	  SID			  "373::24"
 	  Position		  [20, 246, 40, 264]
 	  ZOrder		  10
 	  Port			  "5"
@@ -1332,7 +1259,7 @@ Model {
 	Block {
 	  BlockType		  Inport
 	  Name			  "phase_T"
-	  SID			  "378::25"
+	  SID			  "373::25"
 	  Position		  [20, 281, 40, 299]
 	  ZOrder		  11
 	  Port			  "6"
@@ -1341,20 +1268,20 @@ Model {
 	Block {
 	  BlockType		  Demux
 	  Name			  " Demux "
-	  SID			  "378::36"
+	  SID			  "373::30"
 	  Ports			  [1, 1]
 	  Position		  [270, 230, 320, 270]
-	  ZOrder		  22
+	  ZOrder		  16
 	  Outputs		  "1"
 	}
 	Block {
 	  BlockType		  S-Function
 	  Name			  " SFunction "
-	  SID			  "378::35"
+	  SID			  "373::29"
 	  Tag			  "Stateflow S-Function Vagolap 1"
 	  Ports			  [6, 2]
 	  Position		  [180, 102, 230, 243]
-	  ZOrder		  21
+	  ZOrder		  15
 	  FunctionName		  "sf_sfun"
 	  PortCounts		  "[6 2]"
 	  EnableBusSupport	  on
@@ -1368,55 +1295,49 @@ Model {
 	Block {
 	  BlockType		  Terminator
 	  Name			  " Terminator "
-	  SID			  "378::37"
+	  SID			  "373::31"
 	  Position		  [460, 241, 480, 259]
-	  ZOrder		  23
+	  ZOrder		  17
 	}
 	Block {
 	  BlockType		  Outport
 	  Name			  "GEO_norm"
-	  SID			  "378::5"
+	  SID			  "373::5"
 	  Position		  [460, 101, 480, 119]
 	  ZOrder		  -5
 	  IconDisplay		  "Port number"
 	}
 	Line {
-	  ZOrder		  1
 	  SrcBlock		  "amplitude_R"
 	  SrcPort		  1
 	  DstBlock		  " SFunction "
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  2
 	  SrcBlock		  "amplitude_S"
 	  SrcPort		  1
 	  DstBlock		  " SFunction "
 	  DstPort		  2
 	}
 	Line {
-	  ZOrder		  3
 	  SrcBlock		  "amplitude_T"
 	  SrcPort		  1
 	  DstBlock		  " SFunction "
 	  DstPort		  3
 	}
 	Line {
-	  ZOrder		  4
 	  SrcBlock		  "phase_R"
 	  SrcPort		  1
 	  DstBlock		  " SFunction "
 	  DstPort		  4
 	}
 	Line {
-	  ZOrder		  5
 	  SrcBlock		  "phase_S"
 	  SrcPort		  1
 	  DstBlock		  " SFunction "
 	  DstPort		  5
 	}
 	Line {
-	  ZOrder		  6
 	  SrcBlock		  "phase_T"
 	  SrcPort		  1
 	  DstBlock		  " SFunction "
@@ -1424,7 +1345,6 @@ Model {
 	}
 	Line {
 	  Name			  "GEO_norm"
-	  ZOrder		  7
 	  Labels		  [0, 0]
 	  SrcBlock		  " SFunction "
 	  SrcPort		  2
@@ -1432,426 +1352,122 @@ Model {
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  8
 	  SrcBlock		  " Demux "
 	  SrcPort		  1
 	  DstBlock		  " Terminator "
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  9
 	  SrcBlock		  " SFunction "
 	  SrcPort		  1
 	  DstBlock		  " Demux "
 	  DstPort		  1
 	}
       }
-    }
-    Block {
-      BlockType		      SubSystem
-      Name		      "regular norm"
-      SID		      "379"
-      Ports		      [6, 1]
-      Position		      [515, 14, 700, 126]
-      ZOrder		      863
-      LibraryVersion	      "1.32"
-      ErrorFcn		      "Stateflow.Translate.translate"
-      PermitHierarchicalResolution "ExplicitOnly"
-      TreatAsAtomicUnit	      on
-      RequestExecContextInheritance off
-      SFBlockType	      "MATLAB Function"
-      System {
-	Name			"regular norm"
-	Location		[223, 338, 826, 833]
-	Open			off
-	ModelBrowserVisibility	off
-	ModelBrowserWidth	200
-	ScreenColor		"white"
-	PaperOrientation	"landscape"
-	PaperPositionMode	"auto"
-	PaperType		"A4"
-	PaperUnits		"centimeters"
-	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
-	TiledPageScale		1
-	ShowPageBoundaries	off
-	ZoomFactor		"100"
-	SIDHighWatermark	"41"
-	Block {
-	  BlockType		  Inport
-	  Name			  "amplitude_R"
-	  SID			  "379::1"
-	  Position		  [20, 101, 40, 119]
-	  ZOrder		  -1
-	  IconDisplay		  "Port number"
-	}
-	Block {
-	  BlockType		  Inport
-	  Name			  "amplitude_S"
-	  SID			  "379::21"
-	  Position		  [20, 136, 40, 154]
-	  ZOrder		  7
-	  Port			  "2"
-	  IconDisplay		  "Port number"
-	}
-	Block {
-	  BlockType		  Inport
-	  Name			  "amplitude_T"
-	  SID			  "379::22"
-	  Position		  [20, 171, 40, 189]
-	  ZOrder		  8
-	  Port			  "3"
-	  IconDisplay		  "Port number"
-	}
-	Block {
-	  BlockType		  Inport
-	  Name			  "phase_R"
-	  SID			  "379::23"
-	  Position		  [20, 206, 40, 224]
-	  ZOrder		  9
-	  Port			  "4"
-	  IconDisplay		  "Port number"
-	}
-	Block {
-	  BlockType		  Inport
-	  Name			  "phase_S"
-	  SID			  "379::24"
-	  Position		  [20, 246, 40, 264]
-	  ZOrder		  10
-	  Port			  "5"
-	  IconDisplay		  "Port number"
-	}
-	Block {
-	  BlockType		  Inport
-	  Name			  "phase_T"
-	  SID			  "379::25"
-	  Position		  [20, 281, 40, 299]
-	  ZOrder		  11
-	  Port			  "6"
-	  IconDisplay		  "Port number"
-	}
-	Block {
-	  BlockType		  Demux
-	  Name			  " Demux "
-	  SID			  "379::40"
-	  Ports			  [1, 1]
-	  Position		  [270, 230, 320, 270]
-	  ZOrder		  25
-	  Outputs		  "1"
-	}
-	Block {
-	  BlockType		  S-Function
-	  Name			  " SFunction "
-	  SID			  "379::39"
-	  Tag			  "Stateflow S-Function Vagolap 2"
-	  Ports			  [6, 2]
-	  Position		  [180, 102, 230, 243]
-	  ZOrder		  24
-	  FunctionName		  "sf_sfun"
-	  PortCounts		  "[6 2]"
-	  EnableBusSupport	  on
-	  Port {
-	    PortNumber		    2
-	    Name		    "REG_norm"
-	    RTWStorageClass	    "Auto"
-	    DataLoggingNameMode	    "SignalName"
-	  }
-	}
-	Block {
-	  BlockType		  Terminator
-	  Name			  " Terminator "
-	  SID			  "379::41"
-	  Position		  [460, 241, 480, 259]
-	  ZOrder		  26
-	}
-	Block {
-	  BlockType		  Outport
-	  Name			  "REG_norm"
-	  SID			  "379::5"
-	  Position		  [460, 101, 480, 119]
-	  ZOrder		  -5
-	  IconDisplay		  "Port number"
-	}
-	Line {
-	  ZOrder		  1
-	  SrcBlock		  "amplitude_R"
-	  SrcPort		  1
-	  DstBlock		  " SFunction "
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  2
-	  SrcBlock		  "amplitude_S"
-	  SrcPort		  1
-	  DstBlock		  " SFunction "
-	  DstPort		  2
-	}
-	Line {
-	  ZOrder		  3
-	  SrcBlock		  "amplitude_T"
-	  SrcPort		  1
-	  DstBlock		  " SFunction "
-	  DstPort		  3
-	}
-	Line {
-	  ZOrder		  4
-	  SrcBlock		  "phase_R"
-	  SrcPort		  1
-	  DstBlock		  " SFunction "
-	  DstPort		  4
-	}
-	Line {
-	  ZOrder		  5
-	  SrcBlock		  "phase_S"
-	  SrcPort		  1
-	  DstBlock		  " SFunction "
-	  DstPort		  5
-	}
-	Line {
-	  ZOrder		  6
-	  SrcBlock		  "phase_T"
-	  SrcPort		  1
-	  DstBlock		  " SFunction "
-	  DstPort		  6
-	}
-	Line {
-	  Name			  "REG_norm"
-	  ZOrder		  7
-	  Labels		  [0, 0]
-	  SrcBlock		  " SFunction "
-	  SrcPort		  2
-	  DstBlock		  "REG_norm"
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  8
-	  SrcBlock		  " Demux "
-	  SrcPort		  1
-	  DstBlock		  " Terminator "
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  9
-	  SrcBlock		  " SFunction "
-	  SrcPort		  1
-	  DstBlock		  " Demux "
-	  DstPort		  1
-	}
-      }
-    }
-    Block {
-      BlockType		      Outport
-      Name		      "Regular"
-      SID		      "380"
-      Position		      [785, 63, 815, 77]
-      ZOrder		      866
-      IconDisplay	      "Port number"
-    }
-    Block {
-      BlockType		      Outport
-      Name		      "Geometrial"
-      SID		      "381"
-      Position		      [785, 368, 815, 382]
-      ZOrder		      867
-      Port		      "2"
-      IconDisplay	      "Port number"
     }
     Line {
-      ZOrder		      1
       Points		      [3010, 955; 0, 160]
       DstBlock		      "Demux5"
       DstPort		      1
     }
     Line {
-      ZOrder		      2
       Points		      [2979, 1015; 0, 160]
       DstBlock		      "Demux6"
       DstPort		      1
     }
     Line {
-      ZOrder		      3
       SrcBlock		      "Demux5"
       SrcPort		      1
       DstBlock		      "geometrial norm1"
       DstPort		      1
     }
     Line {
-      ZOrder		      4
       SrcBlock		      "Demux5"
       SrcPort		      2
       DstBlock		      "geometrial norm1"
       DstPort		      2
     }
     Line {
-      ZOrder		      5
       SrcBlock		      "Demux5"
       SrcPort		      3
       DstBlock		      "geometrial norm1"
       DstPort		      3
     }
     Line {
-      ZOrder		      6
       SrcBlock		      "Demux6"
       SrcPort		      1
       DstBlock		      "geometrial norm1"
       DstPort		      4
     }
     Line {
-      ZOrder		      7
       SrcBlock		      "Demux6"
       SrcPort		      2
       DstBlock		      "geometrial norm1"
       DstPort		      5
     }
     Line {
-      ZOrder		      8
       SrcBlock		      "Demux6"
       SrcPort		      3
       DstBlock		      "geometrial norm1"
       DstPort		      6
     }
     Line {
-      ZOrder		      9
       SrcBlock		      "geometrial norm1"
       SrcPort		      1
       Points		      [75, 0]
     }
     Line {
-      ZOrder		      16
-      SrcBlock		      "regular norm"
-      SrcPort		      1
-      DstBlock		      "Regular"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      17
-      SrcBlock		      "Demux2"
-      SrcPort		      1
-      DstBlock		      "regular norm"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      18
-      SrcBlock		      "Demux2"
-      SrcPort		      2
-      DstBlock		      "regular norm"
-      DstPort		      2
-    }
-    Line {
-      ZOrder		      19
-      SrcBlock		      "Demux2"
-      SrcPort		      3
-      DstBlock		      "regular norm"
-      DstPort		      3
-    }
-    Line {
-      ZOrder		      20
-      SrcBlock		      "Demux3"
-      SrcPort		      1
-      DstBlock		      "regular norm"
-      DstPort		      4
-    }
-    Line {
-      ZOrder		      21
-      SrcBlock		      "Demux3"
-      SrcPort		      2
-      DstBlock		      "regular norm"
-      DstPort		      5
-    }
-    Line {
-      ZOrder		      22
-      SrcBlock		      "Demux3"
-      SrcPort		      3
-      DstBlock		      "regular norm"
-      DstPort		      6
-    }
-    Line {
-      ZOrder		      23
-      Points		      [420, 185; 0, 160]
-      DstBlock		      "Demux1"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      24
-      Points		      [420, 40]
-      DstBlock		      "Demux2"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      25
-      Points		      [389, 245; 0, 160]
-      DstBlock		      "Demux4"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      26
-      Points		      [389, 100]
-      DstBlock		      "Demux3"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      27
       SrcBlock		      "Demux1"
       SrcPort		      1
       DstBlock		      "geometrial norm2"
       DstPort		      1
     }
     Line {
-      ZOrder		      28
       SrcBlock		      "Demux1"
       SrcPort		      2
       DstBlock		      "geometrial norm2"
       DstPort		      2
     }
     Line {
-      ZOrder		      29
       SrcBlock		      "Demux1"
       SrcPort		      3
       DstBlock		      "geometrial norm2"
       DstPort		      3
     }
     Line {
-      ZOrder		      30
-      SrcBlock		      "Demux4"
+      SrcBlock		      "Demux2"
       SrcPort		      1
       DstBlock		      "geometrial norm2"
       DstPort		      4
     }
     Line {
-      ZOrder		      31
-      SrcBlock		      "Demux4"
+      SrcBlock		      "Demux2"
       SrcPort		      2
       DstBlock		      "geometrial norm2"
       DstPort		      5
     }
     Line {
-      ZOrder		      32
-      SrcBlock		      "Demux4"
+      SrcBlock		      "Demux2"
       SrcPort		      3
       DstBlock		      "geometrial norm2"
       DstPort		      6
-    }
-    Line {
-      ZOrder		      33
-      SrcBlock		      "geometrial norm2"
-      SrcPort		      1
-      DstBlock		      "Geometrial"
-      DstPort		      1
     }
   }
 }
-#Finite State Machines
+# Finite State Machines
 #
-#   Stateflow Version 8.1 (R2014a) dated Feb  8 2014, 02:29:12
+#    Stateflow Version 7.6 (R2013a) dated Jan 19 2013, 14:32:03
 #
 #
+
 Stateflow {
   machine {
     id			    1
     name		    "Vagolap"
     created		    "15-Dec-2014 09:59:43"
     isLibrary		    0
-    firstTarget		    38
-    sfVersion		    76014001.002
+    firstTarget		    26
+    sfVersion		    76014001.0015
   }
   chart {
     id			    2
@@ -1892,8 +1508,8 @@ Stateflow {
       isEML		      1
       script		      "function GEO_norm = fcn(amplitude_R,amplitude_S,amplitude_T,phase_R,phase_S,phase_T)\n%#codegen\n"
       "\nx1=[0,0,0,0];\ny1=[0,0,0,0];\nx2=[0,0,0,0];\ny2=[0,0,0,0];\n\nGEO_norm=0;\n\ncoder.extrinsic('geometry_solver'"
-      ")\n\n        %% Ideal parameters\n        Amplitude_1=[325.3,325.3,325.3];                     %[V]\n        %Ph"
-      "ase_1=[-1.5855,2.6033,0.5089];\n        Phase_1=[0,-2/3*pi,-4/3*pi];                     %[rad]\n      \n       "
+      ")\n\n        %% Ideal parameters\n        Amplitude_1=[325.3,325.3,325.3];                     %[V]\n        Pha"
+      "se_1=[-1.5855,2.6033,0.5089];\n        %Phase_1=[0,-2/3*pi,-4/3*pi];                     %[rad]\n      \n       "
       " %% Real parameters\n        Amplitude_2=[amplitude_R,amplitude_S,amplitude_T];\n        Phase_2=[phase_R,phase_"
       "S,phase_T];\n        %Extension of the vectors with the first element to get closed triangles on\n        %plots"
       " and for use as polygons\n        Amplitude_1_ex=[Amplitude_1 Amplitude_1(1)];\n        Phase_1_ex=[Phase_1 Phas"
@@ -2092,7 +1708,7 @@ Stateflow {
   }
   chart {
     id			    14
-    name		    "regular norm"
+    name		    "geometrial norm1"
     windowPosition	    [357.331 483.407 167 391]
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 1280 1024 1.041050272174191]
@@ -2103,11 +1719,11 @@ Stateflow {
     machine		    1
     subviewS {
     }
-    ssIdHighWaterMark	    11
+    ssIdHighWaterMark	    10
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
     firstData		    16
-    chartFileNumber	    2
+    chartFileNumber	    3
     disableImplicitCasting  1
     eml {
       name		      "fcn"
@@ -2127,12 +1743,15 @@ Stateflow {
     decomposition	    CLUSTER_STATE
     eml {
       isEML		      1
-      script		      "function REG_norm = fcn(amplitude_R,amplitude_S,amplitude_T,phase_R,phase_S,phase_T)\n%#codegen\n"
-      "\n A=(1/3)*[1,                1,                  1;...\n          1,      exp(1i*120/360*2*pi),        exp(1i*2"
-      "40/360*2*pi);...\n          1,      exp(1i*240/360*2*pi),       exp(1i*120/360*2*pi)];\n   \n   V_real=complex(["
-      "0,0,0]');\n   V_012=complex([0,0,0]');\n   V_real(1)=amplitude_R.*exp(1i*phase_R);\n   V_real(2)=amplitude_S.*ex"
-      "p(1i*phase_S);\n   V_real(3)=amplitude_T.*exp(1i*phase_T); \n   V_012=A*V_real;\n   REG_norm=(abs(V_012(3))/abs("
-      "V_012(2)))*100;"
+      script		      "function GEO_norm = fcn(amplitude_R,amplitude_S,amplitude_T,phase_R,phase_S,phase_T)\n%#codegen\n"
+      "\nx1=[0,0,0,0];\ny1=[0,0,0,0];\nx2=[0,0,0,0];\ny2=[0,0,0,0];\n\nGEO_norm=0;\n\ncoder.extrinsic('geometry_solver'"
+      ")\n\n        %% Ideal parameters\n        Amplitude_1=[325.3,325.3,325.3];                     %[V]\n        Pha"
+      "se_1=[-1.5855,2.6033,0.5089];\n        %Phase_1=[0,-2/3*pi,-4/3*pi];                     %[rad]\n      \n       "
+      " %% Real parameters\n        Amplitude_2=[amplitude_R,amplitude_S,amplitude_T];\n        Phase_2=[phase_R,phase_"
+      "S,phase_T];\n        %Extension of the vectors with the first element to get closed triangles on\n        %plots"
+      " and for use as polygons\n        Amplitude_1_ex=[Amplitude_1 Amplitude_1(1)];\n        Phase_1_ex=[Phase_1 Phas"
+      "e_1(1)];\n        Amplitude_2_ex=[Amplitude_2 Amplitude_2(1)];\n        Phase_2_ex=[Phase_2 Phase_2(1)];\n      "
+      "  \n        GEO_norm=geometry_solver(Amplitude_1_ex, Phase_1_ex, Amplitude_2_ex, Phase_2_ex);   \n        "
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
@@ -2158,7 +1777,7 @@ Stateflow {
   data {
     id			    17
     ssIdNumber		    5
-    name		    "REG_norm"
+    name		    "GEO_norm"
     linkNode		    [14 16 18]
     scope		    OUTPUT_DATA
     machine		    1
@@ -2320,247 +1939,12 @@ Stateflow {
   }
   instance {
     id			    25
-    name		    "regular norm"
+    name		    "geometrial norm1"
     machine		    1
     chart		    14
   }
-  chart {
-    id			    26
-    name		    "geometrial norm1"
-    windowPosition	    [357.331 483.407 167 391]
-    viewLimits		    [0 156.75 0 153.75]
-    screen		    [1 1 1280 1024 1.041050272174191]
-    treeNode		    [0 27 0 0]
-    firstTransition	    36
-    firstJunction	    35
-    viewObj		    26
-    machine		    1
-    ssIdHighWaterMark	    10
-    decomposition	    CLUSTER_CHART
-    type		    EML_CHART
-    firstData		    28
-    chartFileNumber	    3
-    disableImplicitCasting  1
-    eml {
-      name		      "fcn"
-    }
-  }
-  state {
-    id			    27
-    labelString		    "eML_blk_kernel()"
-    position		    [18 64.5 118 66]
-    fontSize		    12
-    chart		    26
-    treeNode		    [26 0 0 0]
-    superState		    SUBCHART
-    subviewer		    26
-    ssIdNumber		    1
-    type		    FUNC_STATE
-    decomposition	    CLUSTER_STATE
-    eml {
-      isEML		      1
-      script		      "function GEO_norm = fcn(amplitude_R,amplitude_S,amplitude_T,phase_R,phase_S,phase_T)\n%#codegen\n"
-      "\nx1=[0,0,0,0];\ny1=[0,0,0,0];\nx2=[0,0,0,0];\ny2=[0,0,0,0];\n\nGEO_norm=0;\n\ncoder.extrinsic('geometry_solver'"
-      ")\n\n        %% Ideal parameters\n        Amplitude_1=[325.3,325.3,325.3];                     %[V]\n        Pha"
-      "se_1=[-1.5855,2.6033,0.5089];\n        %Phase_1=[0,-2/3*pi,-4/3*pi];                     %[rad]\n      \n       "
-      " %% Real parameters\n        Amplitude_2=[amplitude_R,amplitude_S,amplitude_T];\n        Phase_2=[phase_R,phase_"
-      "S,phase_T];\n        %Extension of the vectors with the first element to get closed triangles on\n        %plots"
-      " and for use as polygons\n        Amplitude_1_ex=[Amplitude_1 Amplitude_1(1)];\n        Phase_1_ex=[Phase_1 Phas"
-      "e_1(1)];\n        Amplitude_2_ex=[Amplitude_2 Amplitude_2(1)];\n        Phase_2_ex=[Phase_2 Phase_2(1)];\n      "
-      "  \n        GEO_norm=geometry_solver(Amplitude_1_ex, Phase_1_ex, Amplitude_2_ex, Phase_2_ex);   \n        "
-      editorLayout	      "100 M4x1[10 5 700 500]"
-    }
-  }
-  data {
-    id			    28
-    ssIdNumber		    4
-    name		    "amplitude_R"
-    linkNode		    [26 0 29]
-    scope		    INPUT_DATA
-    machine		    1
-    props {
-      array {
-	size			"-1"
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-      }
-      complexity	      SF_COMPLEX_INHERITED
-    }
-    dataType		    "Inherit: Same as Simulink"
-  }
-  data {
-    id			    29
-    ssIdNumber		    5
-    name		    "GEO_norm"
-    linkNode		    [26 28 30]
-    scope		    OUTPUT_DATA
-    machine		    1
-    props {
-      array {
-	size			"-1"
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-      }
-      complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_NO
-    }
-    dataType		    "Inherit: Same as Simulink"
-  }
-  data {
-    id			    30
-    ssIdNumber		    6
-    name		    "amplitude_S"
-    linkNode		    [26 29 31]
-    scope		    INPUT_DATA
-    machine		    1
-    props {
-      array {
-	size			"-1"
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-      complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_INHERITED
-    }
-    dataType		    "Inherit: Same as Simulink"
-  }
-  data {
-    id			    31
-    ssIdNumber		    7
-    name		    "amplitude_T"
-    linkNode		    [26 30 32]
-    scope		    INPUT_DATA
-    machine		    1
-    props {
-      array {
-	size			"-1"
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-      complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_INHERITED
-    }
-    dataType		    "Inherit: Same as Simulink"
-  }
-  data {
-    id			    32
-    ssIdNumber		    8
-    name		    "phase_R"
-    linkNode		    [26 31 33]
-    scope		    INPUT_DATA
-    machine		    1
-    props {
-      array {
-	size			"-1"
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-      complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_INHERITED
-    }
-    dataType		    "Inherit: Same as Simulink"
-  }
-  data {
-    id			    33
-    ssIdNumber		    9
-    name		    "phase_S"
-    linkNode		    [26 32 34]
-    scope		    INPUT_DATA
-    machine		    1
-    props {
-      array {
-	size			"-1"
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-      complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_INHERITED
-    }
-    dataType		    "Inherit: Same as Simulink"
-  }
-  data {
-    id			    34
-    ssIdNumber		    10
-    name		    "phase_T"
-    linkNode		    [26 33 0]
-    scope		    INPUT_DATA
-    machine		    1
-    props {
-      array {
-	size			"-1"
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-      complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_INHERITED
-    }
-    dataType		    "Inherit: Same as Simulink"
-  }
-  junction {
-    id			    35
-    position		    [23.5747 49.5747 7]
-    chart		    26
-    linkNode		    [26 0 0]
-    subviewer		    26
-    ssIdNumber		    3
-    type		    CONNECTIVE_JUNCTION
-  }
-  transition {
-    id			    36
-    labelString		    "{eML_blk_kernel();}"
-    labelPosition	    [32.125 19.875 102.544 14.964]
-    fontSize		    12
-    src {
-      intersection	      [0 0 1 0 23.5747 14.625 0 0]
-    }
-    dst {
-      id		      35
-      intersection	      [1 0 -1 0 23.5747 42.5747 0 0]
-    }
-    midPoint		    [23.5747 24.9468]
-    chart		    26
-    linkNode		    [26 0 0]
-    dataLimits		    [21.175 25.975 14.625 42.575]
-    subviewer		    26
-    drawStyle		    SMART
-    slide {
-      sticky		      BOTH_STICK
-    }
-    executionOrder	    1
-    ssIdNumber		    2
-  }
-  instance {
-    id			    37
-    name		    "geometrial norm1"
-    machine		    1
-    chart		    26
-  }
   target {
-    id			    38
+    id			    26
     name		    "sfun"
     description		    "Default Simulink S-Function Target."
     machine		    1

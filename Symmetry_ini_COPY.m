@@ -3,7 +3,7 @@ clear all;
 close all;
 %% Simulation initialisation parameters
 CLK=1000;                                           %[sample/s]
-tfin=10;                                           %[s]
+tfin=5;                                           %[s]
 sample=10e-5;                                       %[s/sample]
 t=0:sample:tfin;                                    %[tick]
 %% FFT
@@ -100,8 +100,8 @@ Buffer_Initial_Voltage=600;
 
 %% Controller
 
-PowerGain=5e-5;
-Start_Control=1;
+PowerGain=1e-5;
+Start_Control=0.5;
 P_gain=0.00001;
 stair_sample=0.02;
 mask_sample=0.1;

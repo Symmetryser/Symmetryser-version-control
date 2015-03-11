@@ -3,7 +3,7 @@ clear all;
 close all;
 %% Simulation initialisation parameters
 CLK=1000;                                           %[sample/s]
-tfin=5;                                           %[s]
+tfin=20;                                           %[s]
 sample=10e-5;                                       %[s/sample]
 t=0:sample:tfin;                                    %[tick]
 %% FFT
@@ -91,39 +91,16 @@ START_Load_RC=[100,100,0.001];                             %[Boolean in time]
 %          Capacitive_Load_S_Switching_Sequence=ones(3,tfin/Capacitive_Load_R_Switching_Speed(1))';
 %          Capacitive_Load_T_Switching_Sequence=ones(3,tfin/Capacitive_Load_R_Switching_Speed(1))';
                       
-
-%% Inverter
-Bridge_Inductances=4e-3;
-Current_Comparator_Frequencys=5e-4;
-Buffer_Capacitance=10e-3;
-Buffer_Initial_Voltage=600;
-
 %% Controller
-
-PowerGain=1e-5;
-Start_Control=0.5;
-P_gain=0.00001;
-stair_sample=0.02;
-mask_sample=0.1;
-switch_sample=0.02;
-step_size =     [5,5,5,...          %amp[A]
-                 0.36,0.36,0.36];   %phase[rad]
-test_step =     [0.5,0.5,0.5,...    %amp[A]
-                 0.02,0.02,0.02];      %phase[rad]   
-initial_value = [0.00,0.00,0.00,... %amp[A]
-                 0,0,0];            %phase[rad]
-
-amp_feedback_saturation=400;
-phase_feedback_saturation=pi;
-
-%% %% Controller
-% Start_Control=1;
+% 
+% PowerGain=1e-5;
+% Start_Control=0.5;
 % P_gain=0.0001;
 % stair_sample=0.02;
 % mask_sample=0.1;
 % switch_sample=0.02;
-% step_size =     [2,2,2,...          %amp[A]
-%                  0.08,0.08,0.08];   %phase[rad]
+% step_size =     [5,5,5,...          %amp[A]
+%                  0.36,0.36,0.36];   %phase[rad]
 % test_step =     [0.5,0.5,0.5,...    %amp[A]
 %                  0.02,0.02,0.02];      %phase[rad]   
 % initial_value = [0.00,0.00,0.00,... %amp[A]
@@ -131,6 +108,23 @@ phase_feedback_saturation=pi;
 % 
 % amp_feedback_saturation=400;
 % phase_feedback_saturation=pi;
+
+%% Controller
+PowerGain=1e-4;
+Start_Control=1;
+P_gain=0.0001;
+stair_sample=0.02;
+mask_sample=0.1;
+switch_sample=0.02;
+step_size =     [2,2,2,...          %amp[A]
+                 0.08,0.08,0.08];   %phase[rad]
+test_step =     [0.5,0.5,0.5,...    %amp[A]
+                 0.02,0.02,0.02];      %phase[rad]   
+initial_value = [0.00,0.00,0.00,... %amp[A]
+                 0,0,0];            %phase[rad]
+
+amp_feedback_saturation=400;
+phase_feedback_saturation=pi;
 
 %% Simulation
         paramNameValStruct.AbsTol         = '1e-9';

@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.110"
+    ComputedModelVersion    "1.117"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -64,11 +64,11 @@ Model {
 	$ObjectID		6
 	$ClassName		"Simulink.EditorInfo"
 	IsActive		[1]
-	ViewObjType		"SimulinkSubsys"
-	LoadSaveID		"3144"
+	ViewObjType		"SimulinkTopLevel"
+	LoadSaveID		"0"
 	Extents			[1328.0, 606.0]
-	ZoomFactor		[1.0]
-	Offset			[299.7310681821852, -66.7845934528379]
+	ZoomFactor		[0.8]
+	Offset			[-33.75, -60.0]
       }
     }
   }
@@ -81,9 +81,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Neukirchner László"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Mar 09 15:20:26 2015"
-  RTWModifiedTimeStamp	  347815184
-  ModelVersionFormat	  "1.%<AutoIncrement:110>"
+  LastModifiedDate	  "Wed Mar 11 15:11:37 2015"
+  RTWModifiedTimeStamp	  347984035
+  ModelVersionFormat	  "1.%<AutoIncrement:117>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1074,7 +1074,7 @@ Model {
   System {
     Name		    "Symmetry_Inverter_imagined"
     Location		    [-8, 0, 1370, 780]
-    Open		    off
+    Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
     ScreenColor		    "white"
@@ -1087,7 +1087,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "80"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "3242"
+    SIDHighWatermark	    "3244"
     Block {
       BlockType		      SubSystem
       Name		      "Calculate_Norms"
@@ -3009,7 +3009,6 @@ Model {
 	Line {
 	  SrcBlock		  "Voltage Measurement"
 	  SrcPort		  1
-	  Points		  [50, 0]
 	  DstBlock		  "Mearusement_calc"
 	  DstPort		  1
 	}
@@ -3029,7 +3028,6 @@ Model {
 	  LineType		  "Connection"
 	  SrcBlock		  "Voltage Measurement2"
 	  SrcPort		  LConn1
-	  Points		  [-225, 0]
 	  DstBlock		  "T"
 	  DstPort		  RConn1
 	}
@@ -3072,7 +3070,6 @@ Model {
 	  LineType		  "Connection"
 	  SrcBlock		  "Voltage Measurement1"
 	  SrcPort		  LConn1
-	  Points		  [-225, 0]
 	  DstBlock		  "S"
 	  DstPort		  RConn1
 	}
@@ -3189,7 +3186,7 @@ Model {
 	  System {
 	    Name		    "Current_Sources"
 	    Location		    [-8, 0, 1370, 780]
-	    Open		    on
+	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -3814,6 +3811,13 @@ Model {
 	      }
 	    }
 	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant"
+	      SID		      "3243"
+	      Position		      [1350, 255, 1380, 285]
+	      ZOrder		      1584
+	    }
+	    Block {
 	      BlockType		      Reference
 	      Name		      "Controlled Current Source"
 	      SID		      "3146"
@@ -3866,6 +3870,38 @@ Model {
 	      Phase		      "0"
 	      Frequency		      "0"
 	      Measurements	      "None"
+	    }
+	    Block {
+	      BlockType		      Scope
+	      Name		      "DeltaP"
+	      SID		      "3203"
+	      Ports		      [1]
+	      Position		      [1340, 114, 1370, 146]
+	      ZOrder		      1582
+	      Floating		      off
+	      Location		      [5, 48, 1445, 859]
+	      Open		      off
+	      NumInputPorts	      "1"
+	      List {
+		ListType		AxesTitles
+		axes1			"%<SignalLabel>"
+	      }
+	      List {
+		ListType		ScopeGraphics
+		FigureColor		"[0.5 0.5 0.5]"
+		AxesColor		"[0 0 0]"
+		AxesTickColor		"[1 1 1]"
+		LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+		LineStyles		"-|-|-|-|-|-"
+		LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
+		MarkerStyles		"none|none|none|none|none|none"
+	      }
+	      ShowLegends	      off
+	      YMin		      "15000"
+	      YMax		      "65000"
+	      DataFormat	      "StructureWithTime"
+	      LimitDataPoints	      off
+	      SampleTime	      "0"
 	    }
 	    Block {
 	      BlockType		      Demux
@@ -3975,71 +4011,6 @@ Model {
 	      Value		      "40000"
 	    }
 	    Block {
-	      BlockType		      Scope
-	      Name		      "Scope"
-	      SID		      "3203"
-	      Ports		      [1]
-	      Position		      [1340, 114, 1370, 146]
-	      ZOrder		      1582
-	      Floating		      off
-	      Location		      [1, 48, 1441, 859]
-	      Open		      on
-	      NumInputPorts	      "1"
-	      List {
-		ListType		AxesTitles
-		axes1			"%<SignalLabel>"
-	      }
-	      List {
-		ListType		ScopeGraphics
-		FigureColor		"[0.5 0.5 0.5]"
-		AxesColor		"[0 0 0]"
-		AxesTickColor		"[1 1 1]"
-		LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
-		LineStyles		"-|-|-|-|-|-"
-		LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
-		MarkerStyles		"none|none|none|none|none|none"
-	      }
-	      ShowLegends	      off
-	      YMin		      "15000"
-	      YMax		      "65000"
-	      DataFormat	      "StructureWithTime"
-	      LimitDataPoints	      off
-	      SampleTime	      "0"
-	    }
-	    Block {
-	      BlockType		      Scope
-	      Name		      "Scope1"
-	      SID		      "3204"
-	      Ports		      [1]
-	      Position		      [1340, 189, 1370, 221]
-	      ZOrder		      1583
-	      Floating		      off
-	      Location		      [1, 48, 1441, 859]
-	      Open		      on
-	      NumInputPorts	      "1"
-	      List {
-		ListType		AxesTitles
-		axes1			"%<SignalLabel>"
-	      }
-	      List {
-		ListType		ScopeGraphics
-		FigureColor		"[0.5 0.5 0.5]"
-		AxesColor		"[0 0 0]"
-		AxesTickColor		"[1 1 1]"
-		LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
-		LineStyles		"-|-|-|-|-|-"
-		LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
-		MarkerStyles		"none|none|none|none|none|none"
-	      }
-	      ShowLegends	      off
-	      YMin		      "1.75"
-	      YMax		      "2.45"
-	      SaveName		      "ScopeData1"
-	      DataFormat	      "StructureWithTime"
-	      LimitDataPoints	      off
-	      SampleTime	      "0"
-	    }
-	    Block {
 	      BlockType		      Sum
 	      Name		      "Sum"
 	      SID		      "3193"
@@ -4092,6 +4063,39 @@ Model {
 	      SampleTime	      "sample"
 	    }
 	    Block {
+	      BlockType		      Scope
+	      Name		      "k_"
+	      SID		      "3204"
+	      Ports		      [1]
+	      Position		      [1340, 189, 1370, 221]
+	      ZOrder		      1583
+	      Floating		      off
+	      Location		      [5, 48, 1445, 859]
+	      Open		      off
+	      NumInputPorts	      "1"
+	      List {
+		ListType		AxesTitles
+		axes1			"%<SignalLabel>"
+	      }
+	      List {
+		ListType		ScopeGraphics
+		FigureColor		"[0.5 0.5 0.5]"
+		AxesColor		"[0 0 0]"
+		AxesTickColor		"[1 1 1]"
+		LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+		LineStyles		"-|-|-|-|-|-"
+		LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
+		MarkerStyles		"none|none|none|none|none|none"
+	      }
+	      ShowLegends	      off
+	      YMin		      "1.75"
+	      YMax		      "2.45"
+	      SaveName		      "ScopeData1"
+	      DataFormat	      "StructureWithTime"
+	      LimitDataPoints	      off
+	      SampleTime	      "0"
+	    }
+	    Block {
 	      BlockType		      PMIOPort
 	      Name		      "U"
 	      SID		      "3155"
@@ -4135,7 +4139,7 @@ Model {
 	      BlockType		      Outport
 	      Name		      "k"
 	      SID		      "3198"
-	      Position		      [1310, 263, 1340, 277]
+	      Position		      [1455, 263, 1485, 277]
 	      ZOrder		      1578
 	      IconDisplay	      "Port number"
 	    }
@@ -4336,7 +4340,7 @@ Model {
 	      }
 	      Branch {
 		Points			[0, -55]
-		DstBlock		"Scope"
+		DstBlock		"DeltaP"
 		DstPort			1
 	      }
 	    }
@@ -4346,26 +4350,25 @@ Model {
 	      Points		      [43, 0]
 	      Branch {
 		Points			[0, -65]
-		DstBlock		"Scope1"
+		DstBlock		"k_"
 		DstPort			1
 	      }
 	      Branch {
-		Points			[32, 0]
-		Branch {
-		  Points		  [0, 125]
-		  DstBlock		  "To File1"
-		  DstPort		  1
-		}
-		Branch {
-		  DstBlock		  "k"
-		  DstPort		  1
-		}
+		Points			[32, 0; 0, 125]
+		DstBlock		"To File1"
+		DstPort			1
 	      }
 	    }
 	    Line {
 	      SrcBlock		      "Gain"
 	      SrcPort		      1
 	      DstBlock		      "Integrator"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      DstBlock		      "k"
 	      DstPort		      1
 	    }
 	  }
@@ -12607,6 +12610,40 @@ Model {
       }
     }
     Block {
+      BlockType		      Scope
+      Name		      "NORM"
+      SID		      "3244"
+      Ports		      [1]
+      Position		      [700, 269, 730, 301]
+      ZOrder		      852
+      Floating		      off
+      Location		      [953, 148, 1418, 673]
+      Open		      off
+      NumInputPorts	      "1"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		ScopeGraphics
+	FigureColor		"[0.5 0.5 0.5]"
+	AxesColor		"[0 0 0]"
+	AxesTickColor		"[1 1 1]"
+	LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	LineStyles		"-|-|-|-|-|-"
+	LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
+	MarkerStyles		"none|none|none|none|none|none"
+      }
+      ShowLegends	      on
+      LegendLocations	      "0.51365     0.89143     0.42026     0.03873"
+      YMin		      "0"
+      YMax		      "70000"
+      SaveName		      "ScopeData2"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+      SampleTime	      "0"
+    }
+    Block {
       BlockType		      SubSystem
       Name		      "Network"
       SID		      "668"
@@ -13718,10 +13755,18 @@ Model {
     }
     Line {
       SrcBlock		      "Calculate_Norms"
-      SrcPort		      1
-      Points		      [65, 0; 0, 30]
-      DstBlock		      "Current Control"
-      DstPort		      1
+      SrcPort		      3
+      Points		      [52, 0]
+      Branch {
+	Points			[0, -30]
+	DstBlock		"Current Control"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 70]
+	DstBlock		"NORM"
+	DstPort			1
+      }
     }
   }
 }
@@ -13768,8 +13813,6 @@ Stateflow {
     firstJunction	    11
     viewObj		    2
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    10
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -14030,11 +14073,11 @@ Stateflow {
     eml {
       isEML		      1
       script		      "function VEC_norm = fcn(amplitude_R,amplitude_S,amplitude_T,phase_R,phase_S,phase_T)\n%#codegen\n"
-      "\n  \n   N=complex(0);\n   V_real=complex([0,0,0]');\n   V_012=complex([0,0,0]');\n   V_real(1)=amplitude_R.*exp"
+      "\n  \n   N=complex(0);\n   V_real=complex([0,0,0]');\n  %V_012=complex([0,0,0]');\n   V_real(1)=amplitude_R.*exp"
       "(1i*phase_R);\n   V_real(2)=amplitude_S.*exp(1i*phase_S);\n   V_real(3)=amplitude_T.*exp(1i*phase_T); \n\n   R_e"
       "rror=230*exp(1j*-0/360*2*pi)  -V_real(1);\n   S_error=230*exp(1j*-120/360*2*pi)-V_real(2);\n   T_error=230*exp(1"
-      "j*-240/360*2*pi)-V_real(3);\n   VEC_norm=abs(R_error*S_error)+abs(R_error*T_error)+abs(S_error*T_error);\n   %N="
-      "R_error*S_error+R_error*T_error+S_error*T_error;\n   %VEC_norm=abs(N);"
+      "j*-240/360*2*pi)-V_real(3);\n   %VEC_norm=abs(R_error*S_error)+abs(R_error*T_error)+abs(S_error*T_error);\n   N="
+      "R_error*S_error+R_error*T_error+S_error*T_error;\n   VEC_norm=abs(N);"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
@@ -14237,8 +14280,6 @@ Stateflow {
     firstJunction	    35
     viewObj		    26
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    11
     decomposition	    CLUSTER_CHART
     type		    EML_CHART

@@ -3,7 +3,7 @@ clear all;
 close all;
 %% Simulation initialisation parameters
 CLK=1000;                                           %[sample/s]
-tfin=20;                                           %[s]
+tfin=1;                                           %[s]
 sample=10e-5;                                       %[s/sample]
 t=0:sample:tfin;                                    %[tick]
 %% FFT
@@ -22,9 +22,8 @@ Butterworth_passband_frequency=5000;
 R_Network=[0.4, 0.4, 0.4, 0.4];                     %[Ohm]
 L_Network=[3.185e-3, 3.185e-3, 3.185e-3, 3.185e-3]; %[H]
 C_Network=[0, 0, 0];                                %[F]
-% Network Loads
-Load_Wire_Resistance=[0.1,0.2];                     %[Ohm]
 %% Loads
+Load_Wire_Resistance=[0.1,0.2];                     %[Ohm]
 Switch_Load_R= [1,0,0];                             %[Boolean]
 Switch_Load_RL=[0,1,0];                             %[Boolean]
 Switch_Load_RC=[0,0,1];                             %[Boolean]
@@ -42,13 +41,11 @@ Capacitive_Load_R_RC=[60e-3,  120e-3,  80e-3;...  %[Ohm]
 Capacitive_Load_S_RC=[60e-3,  120e-3,  80e-3;...  %[Ohm]
                    1e-3, 5e-3, 3e-3];  %[F]
 Capacitive_Load_T_RC=[60e-3,  120e-3,  80e-3;...  %[Ohm]
-                    1e-3, 5e-3, 3e-3];  %[F]   
+                    1e-3, 5e-3, 3e-3];  %[F]
 %% Controller
-PV_Power=2e4;
-PowerGain_P=1e-4;
-PowerGain_I=1e-6;
-PowerGain_D=0;
-Start_Control=1;
+PV_Power_Capacity=2e4;
+PIDPowerGain=[1e-6,1e-4,0];
+Start_Control=100;
 P_gain=0.0001;
 stair_sample=0.02;
 mask_sample=0.1;

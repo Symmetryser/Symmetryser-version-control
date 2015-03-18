@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.117"
+    ComputedModelVersion    "1.118"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -64,11 +64,11 @@ Model {
 	$ObjectID		6
 	$ClassName		"Simulink.EditorInfo"
 	IsActive		[1]
-	ViewObjType		"SimulinkTopLevel"
-	LoadSaveID		"0"
+	ViewObjType		"SimulinkSubsys"
+	LoadSaveID		"3144"
 	Extents			[1328.0, 606.0]
-	ZoomFactor		[0.8]
-	Offset			[-33.75, -60.0]
+	ZoomFactor		[1.0]
+	Offset			[455.97469020527245, -62.0]
       }
     }
   }
@@ -81,9 +81,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Neukirchner László"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Mar 11 15:11:37 2015"
-  RTWModifiedTimeStamp	  347984035
-  ModelVersionFormat	  "1.%<AutoIncrement:117>"
+  LastModifiedDate	  "Wed Mar 18 15:11:40 2015"
+  RTWModifiedTimeStamp	  348588977
+  ModelVersionFormat	  "1.%<AutoIncrement:118>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -794,6 +794,17 @@ Model {
   }
   BlockParameterDefaults {
     Block {
+      BlockType		      Abs
+      ZeroCross		      on
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
       BlockType		      Buffer
       N			      "64"
       V			      "0"
@@ -829,6 +840,10 @@ Model {
       Outputs		      "4"
       DisplayOption	      "none"
       BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Derivative
+      CoefficientInTFapproximation "inf"
     }
     Block {
       BlockType		      Display
@@ -1074,7 +1089,7 @@ Model {
   System {
     Name		    "Symmetry_Inverter_imagined"
     Location		    [-8, 0, 1370, 780]
-    Open		    on
+    Open		    off
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
     ScreenColor		    "white"
@@ -1087,7 +1102,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "80"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "3244"
+    SIDHighWatermark	    "3254"
     Block {
       BlockType		      SubSystem
       Name		      "Calculate_Norms"
@@ -3186,7 +3201,7 @@ Model {
 	  System {
 	    Name		    "Current_Sources"
 	    Location		    [-8, 0, 1370, 780]
-	    Open		    off
+	    Open		    on
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -3409,6 +3424,17 @@ Model {
 		  DstPort		  1
 		}
 	      }
+	    }
+	    Block {
+	      BlockType		      Abs
+	      Name		      "Abs"
+	      SID		      "3254"
+	      Position		      [1095, 125, 1125, 155]
+	      ZOrder		      1594
+	      BlockRotation	      270
+	      BlockMirror	      on
+	      NamePlacement	      "alternate"
+	      SaturateOnIntegerOverflow	off
 	    }
 	    Block {
 	      BlockType		      SubSystem
@@ -3811,13 +3837,6 @@ Model {
 	      }
 	    }
 	    Block {
-	      BlockType		      Constant
-	      Name		      "Constant"
-	      SID		      "3243"
-	      Position		      [1350, 255, 1380, 285]
-	      ZOrder		      1584
-	    }
-	    Block {
 	      BlockType		      Reference
 	      Name		      "Controlled Current Source"
 	      SID		      "3146"
@@ -3879,7 +3898,7 @@ Model {
 	      Position		      [1340, 114, 1370, 146]
 	      ZOrder		      1582
 	      Floating		      off
-	      Location		      [5, 48, 1445, 859]
+	      Location		      [14, 56, 1445, 867]
 	      Open		      off
 	      NumInputPorts	      "1"
 	      List {
@@ -3897,8 +3916,8 @@ Model {
 		MarkerStyles		"none|none|none|none|none|none"
 	      }
 	      ShowLegends	      off
-	      YMin		      "15000"
-	      YMax		      "65000"
+	      YMin		      "7500"
+	      YMax		      "40000"
 	      DataFormat	      "StructureWithTime"
 	      LimitDataPoints	      off
 	      SampleTime	      "0"
@@ -3926,23 +3945,56 @@ Model {
 	      DisplayOption	      "bar"
 	    }
 	    Block {
+	      BlockType		      Derivative
+	      Name		      "Derivative"
+	      SID		      "3251"
+	      Position		      [1185, 370, 1215, 400]
+	      ZOrder		      1591
+	    }
+	    Block {
 	      BlockType		      Gain
 	      Name		      "Gain"
 	      SID		      "3200"
 	      Position		      [1120, 252, 1155, 288]
 	      ZOrder		      1580
-	      Gain		      "PowerGain"
+	      ShowName		      off
+	      Gain		      "PowerGain(1)"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain1"
+	      SID		      "3247"
+	      Position		      [1120, 307, 1155, 343]
+	      ZOrder		      1587
+	      ShowName		      off
+	      Gain		      "PowerGain(2)"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain2"
+	      SID		      "3249"
+	      Position		      [1120, 367, 1155, 403]
+	      ZOrder		      1589
+	      ShowName		      off
+	      Gain		      "PowerGain(3)"
 	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
 	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
 	      SaturateOnIntegerOverflow	off
 	    }
 	    Block {
 	      BlockType		      Integrator
-	      Name		      "Integrator"
-	      SID		      "3202"
+	      Name		      "Integrator1"
+	      SID		      "3248"
 	      Ports		      [1, 1]
-	      Position		      [1185, 255, 1215, 285]
-	      ZOrder		      1581
+	      Position		      [1185, 310, 1215, 340]
+	      ZOrder		      1588
+	      ShowName		      off
 	      InitialCondition	      "1"
 	    }
 	    Block {
@@ -4029,11 +4081,25 @@ Model {
 	      Name		      "Sum1"
 	      SID		      "3195"
 	      Ports		      [2, 1]
-	      Position		      [1050, 175, 1070, 195]
+	      Position		      [1100, 175, 1120, 195]
 	      ZOrder		      1575
 	      ShowName		      off
 	      IconShape		      "round"
 	      Inputs		      "-+|"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum2"
+	      SID		      "3252"
+	      Ports		      [3, 1]
+	      Position		      [1265, 315, 1285, 335]
+	      ZOrder		      1592
+	      ShowName		      off
+	      IconShape		      "round"
+	      Inputs		      "+++"
 	      InputSameDT	      off
 	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
 	      SaturateOnIntegerOverflow	off
@@ -4067,10 +4133,10 @@ Model {
 	      Name		      "k_"
 	      SID		      "3204"
 	      Ports		      [1]
-	      Position		      [1340, 189, 1370, 221]
+	      Position		      [1490, 224, 1520, 256]
 	      ZOrder		      1583
 	      Floating		      off
-	      Location		      [5, 48, 1445, 859]
+	      Location		      [838, 155, 1420, 729]
 	      Open		      off
 	      NumInputPorts	      "1"
 	      List {
@@ -4088,8 +4154,8 @@ Model {
 		MarkerStyles		"none|none|none|none|none|none"
 	      }
 	      ShowLegends	      off
-	      YMin		      "1.75"
-	      YMax		      "2.45"
+	      YMin		      "1.3"
+	      YMax		      "3.1"
 	      SaveName		      "ScopeData1"
 	      DataFormat	      "StructureWithTime"
 	      LimitDataPoints	      off
@@ -4139,7 +4205,7 @@ Model {
 	      BlockType		      Outport
 	      Name		      "k"
 	      SID		      "3198"
-	      Position		      [1455, 263, 1485, 277]
+	      Position		      [1455, 318, 1485, 332]
 	      ZOrder		      1578
 	      IconDisplay	      "Port number"
 	    }
@@ -4325,18 +4391,83 @@ Model {
 	    Line {
 	      SrcBlock		      "Demux1"
 	      SrcPort		      1
-	      Points		      [20, 0]
-	      DstBlock		      "Sum1"
+	      DstBlock		      "Abs"
 	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gain1"
+	      SrcPort		      1
+	      Points		      [10, 0]
+	      DstBlock		      "Integrator1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gain2"
+	      SrcPort		      1
+	      DstBlock		      "Derivative"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Integrator1"
+	      SrcPort		      1
+	      DstBlock		      "Sum2"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Gain"
+	      SrcPort		      1
+	      Points		      [115, 0]
+	      DstBlock		      "Sum2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Derivative"
+	      SrcPort		      1
+	      Points		      [55, 0]
+	      DstBlock		      "Sum2"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Sum2"
+	      SrcPort		      1
+	      Points		      [17, 0]
+	      Branch {
+		Points			[0, -85]
+		DstBlock		"k_"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 70]
+		DstBlock		"To File1"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"k"
+		DstPort			1
+	      }
 	    }
 	    Line {
 	      SrcBlock		      "Sum1"
 	      SrcPort		      1
-	      Points		      [10, 0]
+	      Points		      [69, 0]
 	      Branch {
-		Points			[0, 85]
-		DstBlock		"Gain"
-		DstPort			1
+		Points			[0, 36; -109, 0; 0, 49]
+		Branch {
+		  Points		  [0, 55]
+		  Branch {
+		    Points		    [0, 60]
+		    DstBlock		    "Gain2"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "Gain1"
+		    DstPort		    1
+		  }
+		}
+		Branch {
+		  DstBlock		  "Gain"
+		  DstPort		  1
+		}
 	      }
 	      Branch {
 		Points			[0, -55]
@@ -4345,30 +4476,9 @@ Model {
 	      }
 	    }
 	    Line {
-	      SrcBlock		      "Integrator"
+	      SrcBlock		      "Abs"
 	      SrcPort		      1
-	      Points		      [43, 0]
-	      Branch {
-		Points			[0, -65]
-		DstBlock		"k_"
-		DstPort			1
-	      }
-	      Branch {
-		Points			[32, 0; 0, 125]
-		DstBlock		"To File1"
-		DstPort			1
-	      }
-	    }
-	    Line {
-	      SrcBlock		      "Gain"
-	      SrcPort		      1
-	      DstBlock		      "Integrator"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Constant"
-	      SrcPort		      1
-	      DstBlock		      "k"
+	      DstBlock		      "Sum1"
 	      DstPort		      1
 	    }
 	  }
@@ -12617,7 +12727,7 @@ Model {
       Position		      [700, 269, 730, 301]
       ZOrder		      852
       Floating		      off
-      Location		      [953, 148, 1418, 673]
+      Location		      [1, 48, 1441, 859]
       Open		      off
       NumInputPorts	      "1"
       List {
@@ -12635,9 +12745,9 @@ Model {
 	MarkerStyles		"none|none|none|none|none|none"
       }
       ShowLegends	      on
-      LegendLocations	      "0.51365     0.89143     0.42026     0.03873"
+      LegendLocations	      "0.65562     0.89826     0.13542    0.025072"
       YMin		      "0"
-      YMax		      "70000"
+      YMax		      "140000"
       SaveName		      "ScopeData2"
       DataFormat	      "StructureWithTime"
       LimitDataPoints	      off

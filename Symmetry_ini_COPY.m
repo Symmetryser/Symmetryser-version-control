@@ -3,7 +3,7 @@ clear all;
 close all;
 %% Simulation initialisation parameters
 CLK=1000;                                           %[sample/s]
-tfin=2;                                           %[s]
+tfin=30;                                           %[s]
 sample=10e-5;                                       %[s/sample]
 t=0:sample:tfin;                                    %[tick]
 %% FFT
@@ -50,9 +50,9 @@ START_Load_RC=[100,100,0.001];                             %[Boolean in time]
 
 %% Controller
 k_symmetrcal_gain=50;
-PV_Power_Capacity=1e4;
+PV_Power_Capacity=2e4;
 PowerGain=[1e-5,1e-5,0];
-Start_Control=0.5;
+Start_Control=10;
 P_gain=0.0001;
 stair_sample=0.02;
 mask_sample=0.1;

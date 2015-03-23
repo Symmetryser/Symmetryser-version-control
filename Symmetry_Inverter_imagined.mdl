@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.122"
+    ComputedModelVersion    "1.123"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -64,11 +64,11 @@ Model {
 	$ObjectID		6
 	$ClassName		"Simulink.EditorInfo"
 	IsActive		[1]
-	ViewObjType		"SimulinkTopLevel"
-	LoadSaveID		"0"
+	ViewObjType		"SimulinkSubsys"
+	LoadSaveID		"3144"
 	Extents			[1328.0, 606.0]
 	ZoomFactor		[0.8]
-	Offset			[0.0, 0.0]
+	Offset			[411.75271585386918, -37.5]
       }
     }
   }
@@ -81,9 +81,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Neukirchner László"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri Mar 20 12:09:42 2015"
-  RTWModifiedTimeStamp	  348753648
-  ModelVersionFormat	  "1.%<AutoIncrement:122>"
+  LastModifiedDate	  "Mon Mar 23 14:29:11 2015"
+  RTWModifiedTimeStamp	  349019635
+  ModelVersionFormat	  "1.%<AutoIncrement:123>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1079,7 +1079,7 @@ Model {
   System {
     Name		    "Symmetry_Inverter_imagined"
     Location		    [-8, 0, 1370, 780]
-    Open		    on
+    Open		    off
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
     ScreenColor		    "white"
@@ -3217,7 +3217,7 @@ Model {
 	  System {
 	    Name		    "Current_Sources"
 	    Location		    [-8, 0, 1370, 780]
-	    Open		    off
+	    Open		    on
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -4105,7 +4105,7 @@ Model {
 	      Position		      [1490, 144, 1520, 176]
 	      ZOrder		      1597
 	      Floating		      off
-	      Location		      [6, 119, 1376, 845]
+	      Location		      [21, 119, 1376, 845]
 	      Open		      off
 	      NumInputPorts	      "1"
 	      List {
@@ -4123,8 +4123,8 @@ Model {
 		MarkerStyles		"none|none|none|none|none|none"
 	      }
 	      ShowLegends	      off
-	      YMin		      "-8000"
-	      YMax		      "1000"
+	      YMin		      "0"
+	      YMax		      "27500"
 	      SaveName		      "ScopeData3"
 	      DataFormat	      "StructureWithTime"
 	      LimitDataPoints	      off
@@ -4296,8 +4296,8 @@ Model {
 		MarkerStyles		"none|none|none|none|none|none"
 	      }
 	      ShowLegends	      off
-	      YMin		      "1.0625"
-	      YMax		      "1.1075"
+	      YMin		      "1"
+	      YMax		      "1.55"
 	      SaveName		      "ScopeData1"
 	      DataFormat	      "StructureWithTime"
 	      LimitDataPoints	      off
@@ -4631,7 +4631,7 @@ Model {
 	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "60"
+	    ZoomFactor		    "80"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "k"
@@ -13096,7 +13096,7 @@ Model {
       Position		      [700, 269, 730, 301]
       ZOrder		      852
       Floating		      off
-      Location		      [6, 49, 1376, 775]
+      Location		      [6, 56, 1376, 782]
       Open		      off
       NumInputPorts	      "1"
       List {
@@ -13115,8 +13115,8 @@ Model {
       }
       ShowLegends	      on
       LegendLocations	      "0.83564      0.9208     0.14234    0.028007"
-      YMin		      "30000"
-      YMax		      "140000"
+      YMin		      "65000"
+      YMax		      "160000"
       SaveName		      "ScopeData2"
       DataFormat	      "StructureWithTime"
       LimitDataPoints	      off
@@ -15638,10 +15638,7 @@ Stateflow {
     firstTransition	    45
     firstJunction	    44
     viewObj		    38
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    11
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -15808,10 +15805,7 @@ Stateflow {
     firstTransition	    54
     firstJunction	    53
     viewObj		    47
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    11
     decomposition	    CLUSTER_CHART
     type		    EML_CHART

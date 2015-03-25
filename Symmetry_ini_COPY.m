@@ -49,10 +49,10 @@ START_Load_RC=[100,100,0.001];                             %[Boolean in time]
                                 1e-3, 5e-3, 3e-3];  %[F]
 
 %% Controller
-k_symmetrcal_gain=50;
+k_symmetrcal_gain=1e2;
 PV_Power_Capacity=2e4;
 PowerGain=[1e-5,1e-5,0];
-Start_Control=10;
+Start_Control=5;
 P_gain=0.0001;
 stair_sample=0.02;
 mask_sample=0.1;

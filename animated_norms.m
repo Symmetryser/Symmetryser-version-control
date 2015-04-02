@@ -1,10 +1,10 @@
 close all;
 warning off;
-%clear all;
-% load('saved_data/GEO_saved.mat');
-% load('saved_data/VEC_saved.mat');
-% load('saved_data/V_AMP_saved.mat');
-% load('saved_data/V_ANG_saved.mat');
+% clear all;
+load('saved_data/GEO_saved.mat');
+load('saved_data/VEC_saved.mat');
+load('saved_data/V_AMP_saved.mat');
+load('saved_data/V_ANG_saved.mat');
 sample=10e-5; 
 %% Ideal parameters
 Amplitude_1=[325.3,325.3,325.3];                          %[A]
@@ -17,7 +17,7 @@ Phase_1=[0,-2/3*pi,-4/3*pi];                     %[rad]
 prompt = {'Enter the START time','Enter END time','Animation speed','Animation Detail'};
         dlg_title = 'Inspect animated norms';
         num_lines = 1;
-        defAns = {'0.5','20','0.01','1000'};
+        defAns = {'0.9','5','0.01','100'};
         options = 'off';
         answer = inputdlg(prompt,dlg_title,num_lines,defAns,options);
         if str2num(answer{1})>max(V_AMP_saved.time)||str2num(answer{2})>max(V_AMP_saved.time)

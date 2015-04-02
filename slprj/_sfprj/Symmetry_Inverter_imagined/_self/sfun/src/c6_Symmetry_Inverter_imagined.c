@@ -17,7 +17,6 @@
 /* Variable Declarations */
 
 /* Variable Definitions */
-static real_T _sfTime_;
 static const char * c6_debug_family_names[22] = { "x1", "y1", "x2", "y2",
   "Amplitude_1", "Phase_1", "Amplitude_2", "Phase_2", "Amplitude_1_ex",
   "Phase_1_ex", "Amplitude_2_ex", "Phase_2_ex", "nargin", "nargout",
@@ -42,12 +41,14 @@ static void set_sim_state_c6_Symmetry_Inverter_imagined
    *c6_st);
 static void finalize_c6_Symmetry_Inverter_imagined
   (SFc6_Symmetry_Inverter_imaginedInstanceStruct *chartInstance);
-static void sf_gateway_c6_Symmetry_Inverter_imagined
+static void sf_c6_Symmetry_Inverter_imagined
   (SFc6_Symmetry_Inverter_imaginedInstanceStruct *chartInstance);
 static void initSimStructsc6_Symmetry_Inverter_imagined
   (SFc6_Symmetry_Inverter_imaginedInstanceStruct *chartInstance);
+static void registerMessagesc6_Symmetry_Inverter_imagined
+  (SFc6_Symmetry_Inverter_imaginedInstanceStruct *chartInstance);
 static void init_script_number_translation(uint32_T c6_machineNumber, uint32_T
-  c6_chartNumber, uint32_T c6_instanceNumber);
+  c6_chartNumber);
 static const mxArray *c6_sf_marshallOut(void *chartInstanceVoid, void *c6_inData);
 static void c6_sf_marshallIn(void *chartInstanceVoid, const mxArray
   *c6_mxArrayInData, const char_T *c6_varName, void *c6_outData);
@@ -65,9 +66,6 @@ static void c6_b_emlrt_marshallIn(SFc6_Symmetry_Inverter_imaginedInstanceStruct 
   real_T c6_y[3]);
 static void c6_c_sf_marshallIn(void *chartInstanceVoid, const mxArray
   *c6_mxArrayInData, const char_T *c6_varName, void *c6_outData);
-static void c6_info_helper(const mxArray **c6_info);
-static const mxArray *c6_emlrt_marshallOut(const char * c6_u);
-static const mxArray *c6_b_emlrt_marshallOut(const uint32_T c6_u);
 static real_T c6_c_emlrt_marshallIn
   (SFc6_Symmetry_Inverter_imaginedInstanceStruct *chartInstance, const mxArray
    *c6_geometry_solver, const char_T *c6_identifier);
@@ -95,32 +93,30 @@ static void initialize_c6_Symmetry_Inverter_imagined
   (SFc6_Symmetry_Inverter_imaginedInstanceStruct *chartInstance)
 {
   chartInstance->c6_sfEvent = CALL_EVENT;
-  _sfTime_ = sf_get_time(chartInstance->S);
+  _sfTime_ = (real_T)ssGetT(chartInstance->S);
   chartInstance->c6_is_active_c6_Symmetry_Inverter_imagined = 0U;
 }
 
 static void initialize_params_c6_Symmetry_Inverter_imagined
   (SFc6_Symmetry_Inverter_imaginedInstanceStruct *chartInstance)
 {
-  (void)chartInstance;
 }
 
 static void enable_c6_Symmetry_Inverter_imagined
   (SFc6_Symmetry_Inverter_imaginedInstanceStruct *chartInstance)
 {
-  _sfTime_ = sf_get_time(chartInstance->S);
+  _sfTime_ = (real_T)ssGetT(chartInstance->S);
 }
 
 static void disable_c6_Symmetry_Inverter_imagined
   (SFc6_Symmetry_Inverter_imaginedInstanceStruct *chartInstance)
 {
-  _sfTime_ = sf_get_time(chartInstance->S);
+  _sfTime_ = (real_T)ssGetT(chartInstance->S);
 }
 
 static void c6_update_debugger_state_c6_Symmetry_Inverter_imagined
   (SFc6_Symmetry_Inverter_imaginedInstanceStruct *chartInstance)
 {
-  (void)chartInstance;
 }
 
 static const mxArray *get_sim_state_c6_Symmetry_Inverter_imagined
@@ -144,23 +140,23 @@ static const mxArray *get_sim_state_c6_Symmetry_Inverter_imagined
   c6_st = NULL;
   c6_st = NULL;
   c6_y = NULL;
-  sf_mex_assign(&c6_y, sf_mex_createcellmatrix(3, 1), false);
+  sf_mex_assign(&c6_y, sf_mex_createcellarray(3), FALSE);
   c6_hoistedGlobal = *c6_GEO_norm;
   c6_u = c6_hoistedGlobal;
   c6_b_y = NULL;
-  sf_mex_assign(&c6_b_y, sf_mex_create("y", &c6_u, 0, 0U, 0U, 0U, 0), false);
+  sf_mex_assign(&c6_b_y, sf_mex_create("y", &c6_u, 0, 0U, 0U, 0U, 0), FALSE);
   sf_mex_setcell(c6_y, 0, c6_b_y);
   c6_b_hoistedGlobal = *c6_Mean;
   c6_b_u = c6_b_hoistedGlobal;
   c6_c_y = NULL;
-  sf_mex_assign(&c6_c_y, sf_mex_create("y", &c6_b_u, 0, 0U, 0U, 0U, 0), false);
+  sf_mex_assign(&c6_c_y, sf_mex_create("y", &c6_b_u, 0, 0U, 0U, 0U, 0), FALSE);
   sf_mex_setcell(c6_y, 1, c6_c_y);
   c6_c_hoistedGlobal = chartInstance->c6_is_active_c6_Symmetry_Inverter_imagined;
   c6_c_u = c6_c_hoistedGlobal;
   c6_d_y = NULL;
-  sf_mex_assign(&c6_d_y, sf_mex_create("y", &c6_c_u, 3, 0U, 0U, 0U, 0), false);
+  sf_mex_assign(&c6_d_y, sf_mex_create("y", &c6_c_u, 3, 0U, 0U, 0U, 0), FALSE);
   sf_mex_setcell(c6_y, 2, c6_d_y);
-  sf_mex_assign(&c6_st, c6_y, false);
+  sf_mex_assign(&c6_st, c6_y, FALSE);
   return c6_st;
 }
 
@@ -173,7 +169,7 @@ static void set_sim_state_c6_Symmetry_Inverter_imagined
   real_T *c6_Mean;
   c6_Mean = (real_T *)ssGetOutputPortSignal(chartInstance->S, 2);
   c6_GEO_norm = (real_T *)ssGetOutputPortSignal(chartInstance->S, 1);
-  chartInstance->c6_doneDoubleBufferReInit = true;
+  chartInstance->c6_doneDoubleBufferReInit = TRUE;
   c6_u = sf_mex_dup(c6_st);
   *c6_GEO_norm = c6_c_emlrt_marshallIn(chartInstance, sf_mex_dup(sf_mex_getcell
     (c6_u, 0)), "GEO_norm");
@@ -190,10 +186,9 @@ static void set_sim_state_c6_Symmetry_Inverter_imagined
 static void finalize_c6_Symmetry_Inverter_imagined
   (SFc6_Symmetry_Inverter_imaginedInstanceStruct *chartInstance)
 {
-  (void)chartInstance;
 }
 
-static void sf_gateway_c6_Symmetry_Inverter_imagined
+static void sf_c6_Symmetry_Inverter_imagined
   (SFc6_Symmetry_Inverter_imaginedInstanceStruct *chartInstance)
 {
   real_T c6_hoistedGlobal;
@@ -232,7 +227,6 @@ static void sf_gateway_c6_Symmetry_Inverter_imagined
   real_T c6_A;
   real_T c6_x;
   real_T c6_b_x;
-  real_T c6_c_x;
   int32_T c6_i4;
   int32_T c6_i5;
   int32_T c6_i6;
@@ -266,10 +260,16 @@ static void sf_gateway_c6_Symmetry_Inverter_imagined
   c6_b_amplitude_S = (real_T *)ssGetInputPortSignal(chartInstance->S, 1);
   c6_b_GEO_norm = (real_T *)ssGetOutputPortSignal(chartInstance->S, 1);
   c6_b_amplitude_R = (real_T *)ssGetInputPortSignal(chartInstance->S, 0);
-  _SFD_SYMBOL_SCOPE_PUSH(0U, 0U);
-  _sfTime_ = sf_get_time(chartInstance->S);
+  _sfTime_ = (real_T)ssGetT(chartInstance->S);
   _SFD_CC_CALL(CHART_ENTER_SFUNCTION_TAG, 5U, chartInstance->c6_sfEvent);
   _SFD_DATA_RANGE_CHECK(*c6_b_amplitude_R, 0U);
+  _SFD_DATA_RANGE_CHECK(*c6_b_GEO_norm, 1U);
+  _SFD_DATA_RANGE_CHECK(*c6_b_amplitude_S, 2U);
+  _SFD_DATA_RANGE_CHECK(*c6_b_amplitude_T, 3U);
+  _SFD_DATA_RANGE_CHECK(*c6_b_phase_R, 4U);
+  _SFD_DATA_RANGE_CHECK(*c6_b_phase_S, 5U);
+  _SFD_DATA_RANGE_CHECK(*c6_b_phase_T, 6U);
+  _SFD_DATA_RANGE_CHECK(*c6_b_Mean, 7U);
   chartInstance->c6_sfEvent = CALL_EVENT;
   _SFD_CC_CALL(CHART_ENTER_DURING_FUNCTION_TAG, 5U, chartInstance->c6_sfEvent);
   c6_hoistedGlobal = *c6_b_amplitude_R;
@@ -354,8 +354,7 @@ static void sf_gateway_c6_Symmetry_Inverter_imagined
   c6_A = (c6_amplitude_R + c6_amplitude_S) + c6_amplitude_T;
   c6_x = c6_A;
   c6_b_x = c6_x;
-  c6_c_x = c6_b_x;
-  c6_Mean = c6_c_x / 3.0;
+  c6_Mean = c6_b_x / 3.0;
   _SFD_EML_CALL(0U, chartInstance->c6_sfEvent, 16);
   c6_Amplitude_1[0] = c6_Mean;
   c6_Amplitude_1[1] = c6_Mean;
@@ -403,60 +402,53 @@ static void sf_gateway_c6_Symmetry_Inverter_imagined
   }
 
   c6_y = NULL;
-  sf_mex_assign(&c6_y, sf_mex_create("y", c6_u, 0, 0U, 1U, 0U, 2, 1, 4), false);
+  sf_mex_assign(&c6_y, sf_mex_create("y", c6_u, 0, 0U, 1U, 0U, 2, 1, 4), FALSE);
   for (c6_i10 = 0; c6_i10 < 4; c6_i10++) {
     c6_b_u[c6_i10] = c6_Phase_1_ex[c6_i10];
   }
 
   c6_b_y = NULL;
   sf_mex_assign(&c6_b_y, sf_mex_create("y", c6_b_u, 0, 0U, 1U, 0U, 2, 1, 4),
-                false);
+                FALSE);
   for (c6_i11 = 0; c6_i11 < 4; c6_i11++) {
     c6_c_u[c6_i11] = c6_Amplitude_2_ex[c6_i11];
   }
 
   c6_c_y = NULL;
   sf_mex_assign(&c6_c_y, sf_mex_create("y", c6_c_u, 0, 0U, 1U, 0U, 2, 1, 4),
-                false);
+                FALSE);
   for (c6_i12 = 0; c6_i12 < 4; c6_i12++) {
     c6_d_u[c6_i12] = c6_Phase_2_ex[c6_i12];
   }
 
   c6_d_y = NULL;
   sf_mex_assign(&c6_d_y, sf_mex_create("y", c6_d_u, 0, 0U, 1U, 0U, 2, 1, 4),
-                false);
-  c6_GEO_norm = c6_c_emlrt_marshallIn(chartInstance, sf_mex_call_debug
-    (sfGlobalDebugInstanceStruct, "geometry_solver", 1U, 4U, 14, c6_y, 14,
-     c6_b_y, 14, c6_c_y, 14, c6_d_y), "geometry_solver");
+                FALSE);
+  c6_GEO_norm = c6_c_emlrt_marshallIn(chartInstance, sf_mex_call_debug(
+    "geometry_solver", 1U, 4U, 14, c6_y, 14, c6_b_y, 14, c6_c_y, 14, c6_d_y),
+    "geometry_solver");
   _SFD_EML_CALL(0U, chartInstance->c6_sfEvent, -30);
   _SFD_SYMBOL_SCOPE_POP();
   *c6_b_GEO_norm = c6_GEO_norm;
   *c6_b_Mean = c6_Mean;
   _SFD_CC_CALL(EXIT_OUT_OF_FUNCTION_TAG, 5U, chartInstance->c6_sfEvent);
-  _SFD_SYMBOL_SCOPE_POP();
   _SFD_CHECK_FOR_STATE_INCONSISTENCY(_Symmetry_Inverter_imaginedMachineNumber_,
     chartInstance->chartNumber, chartInstance->instanceNumber);
-  _SFD_DATA_RANGE_CHECK(*c6_b_GEO_norm, 1U);
-  _SFD_DATA_RANGE_CHECK(*c6_b_amplitude_S, 2U);
-  _SFD_DATA_RANGE_CHECK(*c6_b_amplitude_T, 3U);
-  _SFD_DATA_RANGE_CHECK(*c6_b_phase_R, 4U);
-  _SFD_DATA_RANGE_CHECK(*c6_b_phase_S, 5U);
-  _SFD_DATA_RANGE_CHECK(*c6_b_phase_T, 6U);
-  _SFD_DATA_RANGE_CHECK(*c6_b_Mean, 7U);
 }
 
 static void initSimStructsc6_Symmetry_Inverter_imagined
   (SFc6_Symmetry_Inverter_imaginedInstanceStruct *chartInstance)
 {
-  (void)chartInstance;
+}
+
+static void registerMessagesc6_Symmetry_Inverter_imagined
+  (SFc6_Symmetry_Inverter_imaginedInstanceStruct *chartInstance)
+{
 }
 
 static void init_script_number_translation(uint32_T c6_machineNumber, uint32_T
-  c6_chartNumber, uint32_T c6_instanceNumber)
+  c6_chartNumber)
 {
-  (void)c6_machineNumber;
-  (void)c6_chartNumber;
-  (void)c6_instanceNumber;
 }
 
 static const mxArray *c6_sf_marshallOut(void *chartInstanceVoid, void *c6_inData)
@@ -470,8 +462,8 @@ static const mxArray *c6_sf_marshallOut(void *chartInstanceVoid, void *c6_inData
   c6_mxArrayOutData = NULL;
   c6_u = *(real_T *)c6_inData;
   c6_y = NULL;
-  sf_mex_assign(&c6_y, sf_mex_create("y", &c6_u, 0, 0U, 0U, 0U, 0), false);
-  sf_mex_assign(&c6_mxArrayOutData, c6_y, false);
+  sf_mex_assign(&c6_y, sf_mex_create("y", &c6_u, 0, 0U, 0U, 0U, 0), FALSE);
+  sf_mex_assign(&c6_mxArrayOutData, c6_y, FALSE);
   return c6_mxArrayOutData;
 }
 
@@ -518,8 +510,8 @@ static const mxArray *c6_b_sf_marshallOut(void *chartInstanceVoid, void
   }
 
   c6_y = NULL;
-  sf_mex_assign(&c6_y, sf_mex_create("y", c6_u, 0, 0U, 1U, 0U, 2, 1, 4), false);
-  sf_mex_assign(&c6_mxArrayOutData, c6_y, false);
+  sf_mex_assign(&c6_y, sf_mex_create("y", c6_u, 0, 0U, 1U, 0U, 2, 1, 4), FALSE);
+  sf_mex_assign(&c6_mxArrayOutData, c6_y, FALSE);
   return c6_mxArrayOutData;
 }
 
@@ -529,7 +521,6 @@ static void c6_emlrt_marshallIn(SFc6_Symmetry_Inverter_imaginedInstanceStruct
 {
   real_T c6_dv0[4];
   int32_T c6_i15;
-  (void)chartInstance;
   sf_mex_import(c6_parentId, sf_mex_dup(c6_u), c6_dv0, 1, 0, 0U, 1, 0U, 2, 1, 4);
   for (c6_i15 = 0; c6_i15 < 4; c6_i15++) {
     c6_y[c6_i15] = c6_dv0[c6_i15];
@@ -584,8 +575,8 @@ static const mxArray *c6_c_sf_marshallOut(void *chartInstanceVoid, void
   }
 
   c6_y = NULL;
-  sf_mex_assign(&c6_y, sf_mex_create("y", c6_u, 0, 0U, 1U, 0U, 2, 1, 3), false);
-  sf_mex_assign(&c6_mxArrayOutData, c6_y, false);
+  sf_mex_assign(&c6_y, sf_mex_create("y", c6_u, 0, 0U, 1U, 0U, 2, 1, 3), FALSE);
+  sf_mex_assign(&c6_mxArrayOutData, c6_y, FALSE);
   return c6_mxArrayOutData;
 }
 
@@ -595,7 +586,6 @@ static void c6_b_emlrt_marshallIn(SFc6_Symmetry_Inverter_imaginedInstanceStruct 
 {
   real_T c6_dv1[3];
   int32_T c6_i19;
-  (void)chartInstance;
   sf_mex_import(c6_parentId, sf_mex_dup(c6_u), c6_dv1, 1, 0, 0U, 1, 0U, 2, 1, 3);
   for (c6_i19 = 0; c6_i19 < 3; c6_i19++) {
     c6_y[c6_i19] = c6_dv1[c6_i19];
@@ -631,211 +621,90 @@ static void c6_c_sf_marshallIn(void *chartInstanceVoid, const mxArray
 const mxArray *sf_c6_Symmetry_Inverter_imagined_get_eml_resolved_functions_info
   (void)
 {
-  const mxArray *c6_nameCaptureInfo = NULL;
+  const mxArray *c6_nameCaptureInfo;
+  c6_ResolvedFunctionInfo c6_info[5];
+  c6_ResolvedFunctionInfo (*c6_b_info)[5];
+  const mxArray *c6_m0 = NULL;
+  int32_T c6_i21;
+  c6_ResolvedFunctionInfo *c6_r0;
   c6_nameCaptureInfo = NULL;
-  sf_mex_assign(&c6_nameCaptureInfo, sf_mex_createstruct("structure", 2, 7, 1),
-                false);
-  c6_info_helper(&c6_nameCaptureInfo);
+  c6_nameCaptureInfo = NULL;
+  c6_b_info = (c6_ResolvedFunctionInfo (*)[5])c6_info;
+  (*c6_b_info)[0].context = "";
+  (*c6_b_info)[0].name = "mrdivide";
+  (*c6_b_info)[0].dominantType = "double";
+  (*c6_b_info)[0].resolved =
+    "[ILXE]$matlabroot$/toolbox/eml/lib/matlab/ops/mrdivide.p";
+  (*c6_b_info)[0].fileTimeLo = 1357951548U;
+  (*c6_b_info)[0].fileTimeHi = 0U;
+  (*c6_b_info)[0].mFileTimeLo = 1319729966U;
+  (*c6_b_info)[0].mFileTimeHi = 0U;
+  (*c6_b_info)[1].context =
+    "[ILXE]$matlabroot$/toolbox/eml/lib/matlab/ops/mrdivide.p";
+  (*c6_b_info)[1].name = "rdivide";
+  (*c6_b_info)[1].dominantType = "double";
+  (*c6_b_info)[1].resolved =
+    "[ILXE]$matlabroot$/toolbox/eml/lib/matlab/ops/rdivide.m";
+  (*c6_b_info)[1].fileTimeLo = 1346510388U;
+  (*c6_b_info)[1].fileTimeHi = 0U;
+  (*c6_b_info)[1].mFileTimeLo = 0U;
+  (*c6_b_info)[1].mFileTimeHi = 0U;
+  (*c6_b_info)[2].context =
+    "[ILXE]$matlabroot$/toolbox/eml/lib/matlab/ops/rdivide.m";
+  (*c6_b_info)[2].name = "eml_scalexp_compatible";
+  (*c6_b_info)[2].dominantType = "double";
+  (*c6_b_info)[2].resolved =
+    "[ILXE]$matlabroot$/toolbox/eml/lib/matlab/eml/eml_scalexp_compatible.m";
+  (*c6_b_info)[2].fileTimeLo = 1286818796U;
+  (*c6_b_info)[2].fileTimeHi = 0U;
+  (*c6_b_info)[2].mFileTimeLo = 0U;
+  (*c6_b_info)[2].mFileTimeHi = 0U;
+  (*c6_b_info)[3].context =
+    "[ILXE]$matlabroot$/toolbox/eml/lib/matlab/ops/rdivide.m";
+  (*c6_b_info)[3].name = "eml_div";
+  (*c6_b_info)[3].dominantType = "double";
+  (*c6_b_info)[3].resolved =
+    "[ILXE]$matlabroot$/toolbox/eml/lib/matlab/eml/eml_div.m";
+  (*c6_b_info)[3].fileTimeLo = 1313347810U;
+  (*c6_b_info)[3].fileTimeHi = 0U;
+  (*c6_b_info)[3].mFileTimeLo = 0U;
+  (*c6_b_info)[3].mFileTimeHi = 0U;
+  (*c6_b_info)[4].context = "";
+  (*c6_b_info)[4].name = "mtimes";
+  (*c6_b_info)[4].dominantType = "double";
+  (*c6_b_info)[4].resolved =
+    "[ILXE]$matlabroot$/toolbox/eml/lib/matlab/ops/mtimes.m";
+  (*c6_b_info)[4].fileTimeLo = 1289519692U;
+  (*c6_b_info)[4].fileTimeHi = 0U;
+  (*c6_b_info)[4].mFileTimeLo = 0U;
+  (*c6_b_info)[4].mFileTimeHi = 0U;
+  sf_mex_assign(&c6_m0, sf_mex_createstruct("nameCaptureInfo", 1, 5), FALSE);
+  for (c6_i21 = 0; c6_i21 < 5; c6_i21++) {
+    c6_r0 = &c6_info[c6_i21];
+    sf_mex_addfield(c6_m0, sf_mex_create("nameCaptureInfo", c6_r0->context, 15,
+      0U, 0U, 0U, 2, 1, strlen(c6_r0->context)), "context", "nameCaptureInfo",
+                    c6_i21);
+    sf_mex_addfield(c6_m0, sf_mex_create("nameCaptureInfo", c6_r0->name, 15, 0U,
+      0U, 0U, 2, 1, strlen(c6_r0->name)), "name", "nameCaptureInfo", c6_i21);
+    sf_mex_addfield(c6_m0, sf_mex_create("nameCaptureInfo", c6_r0->dominantType,
+      15, 0U, 0U, 0U, 2, 1, strlen(c6_r0->dominantType)), "dominantType",
+                    "nameCaptureInfo", c6_i21);
+    sf_mex_addfield(c6_m0, sf_mex_create("nameCaptureInfo", c6_r0->resolved, 15,
+      0U, 0U, 0U, 2, 1, strlen(c6_r0->resolved)), "resolved", "nameCaptureInfo",
+                    c6_i21);
+    sf_mex_addfield(c6_m0, sf_mex_create("nameCaptureInfo", &c6_r0->fileTimeLo,
+      7, 0U, 0U, 0U, 0), "fileTimeLo", "nameCaptureInfo", c6_i21);
+    sf_mex_addfield(c6_m0, sf_mex_create("nameCaptureInfo", &c6_r0->fileTimeHi,
+      7, 0U, 0U, 0U, 0), "fileTimeHi", "nameCaptureInfo", c6_i21);
+    sf_mex_addfield(c6_m0, sf_mex_create("nameCaptureInfo", &c6_r0->mFileTimeLo,
+      7, 0U, 0U, 0U, 0), "mFileTimeLo", "nameCaptureInfo", c6_i21);
+    sf_mex_addfield(c6_m0, sf_mex_create("nameCaptureInfo", &c6_r0->mFileTimeHi,
+      7, 0U, 0U, 0U, 0), "mFileTimeHi", "nameCaptureInfo", c6_i21);
+  }
+
+  sf_mex_assign(&c6_nameCaptureInfo, c6_m0, FALSE);
   sf_mex_emlrtNameCapturePostProcessR2012a(&c6_nameCaptureInfo);
   return c6_nameCaptureInfo;
-}
-
-static void c6_info_helper(const mxArray **c6_info)
-{
-  const mxArray *c6_rhs0 = NULL;
-  const mxArray *c6_lhs0 = NULL;
-  const mxArray *c6_rhs1 = NULL;
-  const mxArray *c6_lhs1 = NULL;
-  const mxArray *c6_rhs2 = NULL;
-  const mxArray *c6_lhs2 = NULL;
-  const mxArray *c6_rhs3 = NULL;
-  const mxArray *c6_lhs3 = NULL;
-  const mxArray *c6_rhs4 = NULL;
-  const mxArray *c6_lhs4 = NULL;
-  const mxArray *c6_rhs5 = NULL;
-  const mxArray *c6_lhs5 = NULL;
-  const mxArray *c6_rhs6 = NULL;
-  const mxArray *c6_lhs6 = NULL;
-  sf_mex_addfield(*c6_info, c6_emlrt_marshallOut(""), "context", "context", 0);
-  sf_mex_addfield(*c6_info, c6_emlrt_marshallOut("mrdivide"), "name", "name", 0);
-  sf_mex_addfield(*c6_info, c6_emlrt_marshallOut("double"), "dominantType",
-                  "dominantType", 0);
-  sf_mex_addfield(*c6_info, c6_emlrt_marshallOut(
-    "[ILXE]$matlabroot$/toolbox/eml/lib/matlab/ops/mrdivide.p"), "resolved",
-                  "resolved", 0);
-  sf_mex_addfield(*c6_info, c6_b_emlrt_marshallOut(1388460096U), "fileTimeLo",
-                  "fileTimeLo", 0);
-  sf_mex_addfield(*c6_info, c6_b_emlrt_marshallOut(0U), "fileTimeHi",
-                  "fileTimeHi", 0);
-  sf_mex_addfield(*c6_info, c6_b_emlrt_marshallOut(1370009886U), "mFileTimeLo",
-                  "mFileTimeLo", 0);
-  sf_mex_addfield(*c6_info, c6_b_emlrt_marshallOut(0U), "mFileTimeHi",
-                  "mFileTimeHi", 0);
-  sf_mex_assign(&c6_rhs0, sf_mex_createcellmatrix(0, 1), false);
-  sf_mex_assign(&c6_lhs0, sf_mex_createcellmatrix(0, 1), false);
-  sf_mex_addfield(*c6_info, sf_mex_duplicatearraysafe(&c6_rhs0), "rhs", "rhs", 0);
-  sf_mex_addfield(*c6_info, sf_mex_duplicatearraysafe(&c6_lhs0), "lhs", "lhs", 0);
-  sf_mex_addfield(*c6_info, c6_emlrt_marshallOut(
-    "[ILXE]$matlabroot$/toolbox/eml/lib/matlab/ops/mrdivide.p"), "context",
-                  "context", 1);
-  sf_mex_addfield(*c6_info, c6_emlrt_marshallOut("coder.internal.assert"),
-                  "name", "name", 1);
-  sf_mex_addfield(*c6_info, c6_emlrt_marshallOut("char"), "dominantType",
-                  "dominantType", 1);
-  sf_mex_addfield(*c6_info, c6_emlrt_marshallOut(
-    "[IXE]$matlabroot$/toolbox/shared/coder/coder/+coder/+internal/assert.m"),
-                  "resolved", "resolved", 1);
-  sf_mex_addfield(*c6_info, c6_b_emlrt_marshallOut(1363714556U), "fileTimeLo",
-                  "fileTimeLo", 1);
-  sf_mex_addfield(*c6_info, c6_b_emlrt_marshallOut(0U), "fileTimeHi",
-                  "fileTimeHi", 1);
-  sf_mex_addfield(*c6_info, c6_b_emlrt_marshallOut(0U), "mFileTimeLo",
-                  "mFileTimeLo", 1);
-  sf_mex_addfield(*c6_info, c6_b_emlrt_marshallOut(0U), "mFileTimeHi",
-                  "mFileTimeHi", 1);
-  sf_mex_assign(&c6_rhs1, sf_mex_createcellmatrix(0, 1), false);
-  sf_mex_assign(&c6_lhs1, sf_mex_createcellmatrix(0, 1), false);
-  sf_mex_addfield(*c6_info, sf_mex_duplicatearraysafe(&c6_rhs1), "rhs", "rhs", 1);
-  sf_mex_addfield(*c6_info, sf_mex_duplicatearraysafe(&c6_lhs1), "lhs", "lhs", 1);
-  sf_mex_addfield(*c6_info, c6_emlrt_marshallOut(
-    "[ILXE]$matlabroot$/toolbox/eml/lib/matlab/ops/mrdivide.p"), "context",
-                  "context", 2);
-  sf_mex_addfield(*c6_info, c6_emlrt_marshallOut("rdivide"), "name", "name", 2);
-  sf_mex_addfield(*c6_info, c6_emlrt_marshallOut("double"), "dominantType",
-                  "dominantType", 2);
-  sf_mex_addfield(*c6_info, c6_emlrt_marshallOut(
-    "[ILXE]$matlabroot$/toolbox/eml/lib/matlab/ops/rdivide.m"), "resolved",
-                  "resolved", 2);
-  sf_mex_addfield(*c6_info, c6_b_emlrt_marshallOut(1363713880U), "fileTimeLo",
-                  "fileTimeLo", 2);
-  sf_mex_addfield(*c6_info, c6_b_emlrt_marshallOut(0U), "fileTimeHi",
-                  "fileTimeHi", 2);
-  sf_mex_addfield(*c6_info, c6_b_emlrt_marshallOut(0U), "mFileTimeLo",
-                  "mFileTimeLo", 2);
-  sf_mex_addfield(*c6_info, c6_b_emlrt_marshallOut(0U), "mFileTimeHi",
-                  "mFileTimeHi", 2);
-  sf_mex_assign(&c6_rhs2, sf_mex_createcellmatrix(0, 1), false);
-  sf_mex_assign(&c6_lhs2, sf_mex_createcellmatrix(0, 1), false);
-  sf_mex_addfield(*c6_info, sf_mex_duplicatearraysafe(&c6_rhs2), "rhs", "rhs", 2);
-  sf_mex_addfield(*c6_info, sf_mex_duplicatearraysafe(&c6_lhs2), "lhs", "lhs", 2);
-  sf_mex_addfield(*c6_info, c6_emlrt_marshallOut(
-    "[ILXE]$matlabroot$/toolbox/eml/lib/matlab/ops/rdivide.m"), "context",
-                  "context", 3);
-  sf_mex_addfield(*c6_info, c6_emlrt_marshallOut(
-    "coder.internal.isBuiltInNumeric"), "name", "name", 3);
-  sf_mex_addfield(*c6_info, c6_emlrt_marshallOut("double"), "dominantType",
-                  "dominantType", 3);
-  sf_mex_addfield(*c6_info, c6_emlrt_marshallOut(
-    "[IXE]$matlabroot$/toolbox/shared/coder/coder/+coder/+internal/isBuiltInNumeric.m"),
-                  "resolved", "resolved", 3);
-  sf_mex_addfield(*c6_info, c6_b_emlrt_marshallOut(1363714556U), "fileTimeLo",
-                  "fileTimeLo", 3);
-  sf_mex_addfield(*c6_info, c6_b_emlrt_marshallOut(0U), "fileTimeHi",
-                  "fileTimeHi", 3);
-  sf_mex_addfield(*c6_info, c6_b_emlrt_marshallOut(0U), "mFileTimeLo",
-                  "mFileTimeLo", 3);
-  sf_mex_addfield(*c6_info, c6_b_emlrt_marshallOut(0U), "mFileTimeHi",
-                  "mFileTimeHi", 3);
-  sf_mex_assign(&c6_rhs3, sf_mex_createcellmatrix(0, 1), false);
-  sf_mex_assign(&c6_lhs3, sf_mex_createcellmatrix(0, 1), false);
-  sf_mex_addfield(*c6_info, sf_mex_duplicatearraysafe(&c6_rhs3), "rhs", "rhs", 3);
-  sf_mex_addfield(*c6_info, sf_mex_duplicatearraysafe(&c6_lhs3), "lhs", "lhs", 3);
-  sf_mex_addfield(*c6_info, c6_emlrt_marshallOut(
-    "[ILXE]$matlabroot$/toolbox/eml/lib/matlab/ops/rdivide.m"), "context",
-                  "context", 4);
-  sf_mex_addfield(*c6_info, c6_emlrt_marshallOut("eml_scalexp_compatible"),
-                  "name", "name", 4);
-  sf_mex_addfield(*c6_info, c6_emlrt_marshallOut("double"), "dominantType",
-                  "dominantType", 4);
-  sf_mex_addfield(*c6_info, c6_emlrt_marshallOut(
-    "[ILXE]$matlabroot$/toolbox/eml/lib/matlab/eml/eml_scalexp_compatible.m"),
-                  "resolved", "resolved", 4);
-  sf_mex_addfield(*c6_info, c6_b_emlrt_marshallOut(1286818796U), "fileTimeLo",
-                  "fileTimeLo", 4);
-  sf_mex_addfield(*c6_info, c6_b_emlrt_marshallOut(0U), "fileTimeHi",
-                  "fileTimeHi", 4);
-  sf_mex_addfield(*c6_info, c6_b_emlrt_marshallOut(0U), "mFileTimeLo",
-                  "mFileTimeLo", 4);
-  sf_mex_addfield(*c6_info, c6_b_emlrt_marshallOut(0U), "mFileTimeHi",
-                  "mFileTimeHi", 4);
-  sf_mex_assign(&c6_rhs4, sf_mex_createcellmatrix(0, 1), false);
-  sf_mex_assign(&c6_lhs4, sf_mex_createcellmatrix(0, 1), false);
-  sf_mex_addfield(*c6_info, sf_mex_duplicatearraysafe(&c6_rhs4), "rhs", "rhs", 4);
-  sf_mex_addfield(*c6_info, sf_mex_duplicatearraysafe(&c6_lhs4), "lhs", "lhs", 4);
-  sf_mex_addfield(*c6_info, c6_emlrt_marshallOut(
-    "[ILXE]$matlabroot$/toolbox/eml/lib/matlab/ops/rdivide.m"), "context",
-                  "context", 5);
-  sf_mex_addfield(*c6_info, c6_emlrt_marshallOut("eml_div"), "name", "name", 5);
-  sf_mex_addfield(*c6_info, c6_emlrt_marshallOut("double"), "dominantType",
-                  "dominantType", 5);
-  sf_mex_addfield(*c6_info, c6_emlrt_marshallOut(
-    "[ILXE]$matlabroot$/toolbox/eml/lib/matlab/eml/eml_div.m"), "resolved",
-                  "resolved", 5);
-  sf_mex_addfield(*c6_info, c6_b_emlrt_marshallOut(1375980688U), "fileTimeLo",
-                  "fileTimeLo", 5);
-  sf_mex_addfield(*c6_info, c6_b_emlrt_marshallOut(0U), "fileTimeHi",
-                  "fileTimeHi", 5);
-  sf_mex_addfield(*c6_info, c6_b_emlrt_marshallOut(0U), "mFileTimeLo",
-                  "mFileTimeLo", 5);
-  sf_mex_addfield(*c6_info, c6_b_emlrt_marshallOut(0U), "mFileTimeHi",
-                  "mFileTimeHi", 5);
-  sf_mex_assign(&c6_rhs5, sf_mex_createcellmatrix(0, 1), false);
-  sf_mex_assign(&c6_lhs5, sf_mex_createcellmatrix(0, 1), false);
-  sf_mex_addfield(*c6_info, sf_mex_duplicatearraysafe(&c6_rhs5), "rhs", "rhs", 5);
-  sf_mex_addfield(*c6_info, sf_mex_duplicatearraysafe(&c6_lhs5), "lhs", "lhs", 5);
-  sf_mex_addfield(*c6_info, c6_emlrt_marshallOut(
-    "[ILXE]$matlabroot$/toolbox/eml/lib/matlab/eml/eml_div.m"), "context",
-                  "context", 6);
-  sf_mex_addfield(*c6_info, c6_emlrt_marshallOut("coder.internal.div"), "name",
-                  "name", 6);
-  sf_mex_addfield(*c6_info, c6_emlrt_marshallOut("double"), "dominantType",
-                  "dominantType", 6);
-  sf_mex_addfield(*c6_info, c6_emlrt_marshallOut(
-    "[IXE]$matlabroot$/toolbox/coder/coder/+coder/+internal/div.p"), "resolved",
-                  "resolved", 6);
-  sf_mex_addfield(*c6_info, c6_b_emlrt_marshallOut(1389307920U), "fileTimeLo",
-                  "fileTimeLo", 6);
-  sf_mex_addfield(*c6_info, c6_b_emlrt_marshallOut(0U), "fileTimeHi",
-                  "fileTimeHi", 6);
-  sf_mex_addfield(*c6_info, c6_b_emlrt_marshallOut(0U), "mFileTimeLo",
-                  "mFileTimeLo", 6);
-  sf_mex_addfield(*c6_info, c6_b_emlrt_marshallOut(0U), "mFileTimeHi",
-                  "mFileTimeHi", 6);
-  sf_mex_assign(&c6_rhs6, sf_mex_createcellmatrix(0, 1), false);
-  sf_mex_assign(&c6_lhs6, sf_mex_createcellmatrix(0, 1), false);
-  sf_mex_addfield(*c6_info, sf_mex_duplicatearraysafe(&c6_rhs6), "rhs", "rhs", 6);
-  sf_mex_addfield(*c6_info, sf_mex_duplicatearraysafe(&c6_lhs6), "lhs", "lhs", 6);
-  sf_mex_destroy(&c6_rhs0);
-  sf_mex_destroy(&c6_lhs0);
-  sf_mex_destroy(&c6_rhs1);
-  sf_mex_destroy(&c6_lhs1);
-  sf_mex_destroy(&c6_rhs2);
-  sf_mex_destroy(&c6_lhs2);
-  sf_mex_destroy(&c6_rhs3);
-  sf_mex_destroy(&c6_lhs3);
-  sf_mex_destroy(&c6_rhs4);
-  sf_mex_destroy(&c6_lhs4);
-  sf_mex_destroy(&c6_rhs5);
-  sf_mex_destroy(&c6_lhs5);
-  sf_mex_destroy(&c6_rhs6);
-  sf_mex_destroy(&c6_lhs6);
-}
-
-static const mxArray *c6_emlrt_marshallOut(const char * c6_u)
-{
-  const mxArray *c6_y = NULL;
-  c6_y = NULL;
-  sf_mex_assign(&c6_y, sf_mex_create("y", c6_u, 15, 0U, 0U, 0U, 2, 1, strlen
-    (c6_u)), false);
-  return c6_y;
-}
-
-static const mxArray *c6_b_emlrt_marshallOut(const uint32_T c6_u)
-{
-  const mxArray *c6_y = NULL;
-  c6_y = NULL;
-  sf_mex_assign(&c6_y, sf_mex_create("y", &c6_u, 7, 0U, 0U, 0U, 0), false);
-  return c6_y;
 }
 
 static real_T c6_c_emlrt_marshallIn
@@ -858,7 +727,6 @@ static real_T c6_d_emlrt_marshallIn
 {
   real_T c6_y;
   real_T c6_d0;
-  (void)chartInstance;
   sf_mex_import(c6_parentId, sf_mex_dup(c6_u), &c6_d0, 1, 0, 0U, 0, 0U, 0);
   c6_y = c6_d0;
   sf_mex_destroy(&c6_u);
@@ -877,8 +745,8 @@ static const mxArray *c6_d_sf_marshallOut(void *chartInstanceVoid, void
   c6_mxArrayOutData = NULL;
   c6_u = *(int32_T *)c6_inData;
   c6_y = NULL;
-  sf_mex_assign(&c6_y, sf_mex_create("y", &c6_u, 6, 0U, 0U, 0U, 0), false);
-  sf_mex_assign(&c6_mxArrayOutData, c6_y, false);
+  sf_mex_assign(&c6_y, sf_mex_create("y", &c6_u, 6, 0U, 0U, 0U, 0), FALSE);
+  sf_mex_assign(&c6_mxArrayOutData, c6_y, FALSE);
   return c6_mxArrayOutData;
 }
 
@@ -887,10 +755,9 @@ static int32_T c6_e_emlrt_marshallIn
    *c6_u, const emlrtMsgIdentifier *c6_parentId)
 {
   int32_T c6_y;
-  int32_T c6_i21;
-  (void)chartInstance;
-  sf_mex_import(c6_parentId, sf_mex_dup(c6_u), &c6_i21, 1, 6, 0U, 0, 0U, 0);
-  c6_y = c6_i21;
+  int32_T c6_i22;
+  sf_mex_import(c6_parentId, sf_mex_dup(c6_u), &c6_i22, 1, 6, 0U, 0, 0U, 0);
+  c6_y = c6_i22;
   sf_mex_destroy(&c6_u);
   return c6_y;
 }
@@ -936,7 +803,6 @@ static uint8_T c6_g_emlrt_marshallIn
 {
   uint8_T c6_y;
   uint8_T c6_u0;
-  (void)chartInstance;
   sf_mex_import(c6_parentId, sf_mex_dup(c6_u), &c6_u0, 1, 3, 0U, 0, 0U, 0);
   c6_y = c6_u0;
   sf_mex_destroy(&c6_u);
@@ -946,7 +812,6 @@ static uint8_T c6_g_emlrt_marshallIn
 static void init_dsm_address_info(SFc6_Symmetry_Inverter_imaginedInstanceStruct *
   chartInstance)
 {
-  (void)chartInstance;
 }
 
 /* SFunction Glue Code */
@@ -972,10 +837,10 @@ extern void utFree(void*);
 
 void sf_c6_Symmetry_Inverter_imagined_get_check_sum(mxArray *plhs[])
 {
-  ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(1119329280U);
-  ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(379284832U);
-  ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(2680098869U);
-  ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(706269696U);
+  ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(2273311825U);
+  ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(580160021U);
+  ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(1668257993U);
+  ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(2837638537U);
 }
 
 mxArray *sf_c6_Symmetry_Inverter_imagined_get_autoinheritance_info(void)
@@ -987,7 +852,7 @@ mxArray *sf_c6_Symmetry_Inverter_imagined_get_autoinheritance_info(void)
     autoinheritanceFields);
 
   {
-    mxArray *mxChecksum = mxCreateString("ZMplEWZRgRo1fa7IfwcVIF");
+    mxArray *mxChecksum = mxCreateString("nz3sGazSynxpi8tRcYrm5D");
     mxSetField(mxAutoinheritanceInfo,0,"checksum",mxChecksum);
   }
 
@@ -1175,12 +1040,6 @@ mxArray *sf_c6_Symmetry_Inverter_imagined_third_party_uses_info(void)
   return(mxcell3p);
 }
 
-mxArray *sf_c6_Symmetry_Inverter_imagined_updateBuildInfo_args_info(void)
-{
-  mxArray *mxBIArgs = mxCreateCellMatrix(1,0);
-  return mxBIArgs;
-}
-
 static const mxArray *sf_get_sim_state_info_c6_Symmetry_Inverter_imagined(void)
 {
   const char *infoFields[] = { "chartChecksum", "varInfo" };
@@ -1203,10 +1062,8 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
 {
   if (!sim_mode_is_rtw_gen(S)) {
     SFc6_Symmetry_Inverter_imaginedInstanceStruct *chartInstance;
-    ChartRunTimeInfo * crtInfo = (ChartRunTimeInfo *)(ssGetUserData(S));
-    ChartInfoStruct * chartInfo = (ChartInfoStruct *)(crtInfo->instanceInfo);
     chartInstance = (SFc6_Symmetry_Inverter_imaginedInstanceStruct *)
-      chartInfo->chartInstance;
+      ((ChartInfoStruct *)(ssGetUserData(S)))->chartInstance;
     if (ssIsFirstInitCond(S) && fullDebuggerInitialization==1) {
       /* do this only if simulation is starting */
       {
@@ -1217,7 +1074,6 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
            6,
            1,
            1,
-           0,
            8,
            0,
            0,
@@ -1226,13 +1082,13 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
            0,
            &(chartInstance->chartNumber),
            &(chartInstance->instanceNumber),
+           ssGetPath(S),
            (void *)S);
-
-        /* Each instance must initialize ist own list of scripts */
-        init_script_number_translation(_Symmetry_Inverter_imaginedMachineNumber_,
-          chartInstance->chartNumber,chartInstance->instanceNumber);
         if (chartAlreadyPresent==0) {
           /* this is the first instance */
+          init_script_number_translation
+            (_Symmetry_Inverter_imaginedMachineNumber_,
+             chartInstance->chartNumber);
           sf_debug_set_chart_disable_implicit_casting
             (sfGlobalDebugInstanceStruct,
              _Symmetry_Inverter_imaginedMachineNumber_,
@@ -1267,6 +1123,15 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
         /* Initialization of MATLAB Function Model Coverage */
         _SFD_CV_INIT_EML(0,1,1,0,0,0,0,0,0,0,0);
         _SFD_CV_INIT_EML_FCN(0,0,"eML_blk_kernel",0,-1,1017);
+        _SFD_TRANS_COV_WTS(0,0,0,1,0);
+        if (chartAlreadyPresent==0) {
+          _SFD_TRANS_COV_MAPS(0,
+                              0,NULL,NULL,
+                              0,NULL,NULL,
+                              1,NULL,NULL,
+                              0,NULL,NULL);
+        }
+
         _SFD_SET_DATA_COMPILED_PROPS(0,SF_DOUBLE,0,NULL,0,0,0,0.0,1.0,0,0,
           (MexFcnForType)c6_sf_marshallOut,(MexInFcnForType)NULL);
         _SFD_SET_DATA_COMPILED_PROPS(1,SF_DOUBLE,0,NULL,0,0,0,0.0,1.0,0,0,
@@ -1321,7 +1186,7 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
 
 static const char* sf_get_instance_specialization(void)
 {
-  return "uCfp4CsfZCSSr4U6xkaGAH";
+  return "lpG0qEKwZjUPjoy7h02KsH";
 }
 
 static void sf_opaque_initialize_c6_Symmetry_Inverter_imagined(void
@@ -1352,15 +1217,14 @@ static void sf_opaque_disable_c6_Symmetry_Inverter_imagined(void
 static void sf_opaque_gateway_c6_Symmetry_Inverter_imagined(void
   *chartInstanceVar)
 {
-  sf_gateway_c6_Symmetry_Inverter_imagined
+  sf_c6_Symmetry_Inverter_imagined
     ((SFc6_Symmetry_Inverter_imaginedInstanceStruct*) chartInstanceVar);
 }
 
 extern const mxArray* sf_internal_get_sim_state_c6_Symmetry_Inverter_imagined
   (SimStruct* S)
 {
-  ChartRunTimeInfo * crtInfo = (ChartRunTimeInfo *)(ssGetUserData(S));
-  ChartInfoStruct * chartInfo = (ChartInfoStruct *)(crtInfo->instanceInfo);
+  ChartInfoStruct *chartInfo = (ChartInfoStruct*) ssGetUserData(S);
   mxArray *plhs[1] = { NULL };
 
   mxArray *prhs[4];
@@ -1385,19 +1249,20 @@ extern const mxArray* sf_internal_get_sim_state_c6_Symmetry_Inverter_imagined
 extern void sf_internal_set_sim_state_c6_Symmetry_Inverter_imagined(SimStruct* S,
   const mxArray *st)
 {
-  ChartRunTimeInfo * crtInfo = (ChartRunTimeInfo *)(ssGetUserData(S));
-  ChartInfoStruct * chartInfo = (ChartInfoStruct *)(crtInfo->instanceInfo);
+  ChartInfoStruct *chartInfo = (ChartInfoStruct*) ssGetUserData(S);
   mxArray *plhs[1] = { NULL };
 
-  mxArray *prhs[3];
+  mxArray *prhs[4];
   int mxError = 0;
   prhs[0] = mxCreateString("chart_simctx_high2raw");
-  prhs[1] = mxDuplicateArray(st);      /* high level simctx */
-  prhs[2] = (mxArray*) sf_get_sim_state_info_c6_Symmetry_Inverter_imagined();/* state var info */
-  mxError = sf_mex_call_matlab(1, plhs, 3, prhs, "sfprivate");
+  prhs[1] = mxCreateDoubleScalar(ssGetSFuncBlockHandle(S));
+  prhs[2] = mxDuplicateArray(st);      /* high level simctx */
+  prhs[3] = (mxArray*) sf_get_sim_state_info_c6_Symmetry_Inverter_imagined();/* state var info */
+  mxError = sf_mex_call_matlab(1, plhs, 4, prhs, "sfprivate");
   mxDestroyArray(prhs[0]);
   mxDestroyArray(prhs[1]);
   mxDestroyArray(prhs[2]);
+  mxDestroyArray(prhs[3]);
   if (mxError || plhs[0] == NULL) {
     sf_mex_error_message("Stateflow Internal Error: \nError calling 'chart_simctx_high2raw'.\n");
   }
@@ -1426,7 +1291,6 @@ static void sf_opaque_terminate_c6_Symmetry_Inverter_imagined(void
   if (chartInstanceVar!=NULL) {
     SimStruct *S = ((SFc6_Symmetry_Inverter_imaginedInstanceStruct*)
                     chartInstanceVar)->S;
-    ChartRunTimeInfo * crtInfo = (ChartRunTimeInfo *)(ssGetUserData(S));
     if (sim_mode_is_rtw_gen(S) || sim_mode_is_external(S)) {
       sf_clear_rtw_identifier(S);
       unload_Symmetry_Inverter_imagined_optimization_info();
@@ -1435,10 +1299,6 @@ static void sf_opaque_terminate_c6_Symmetry_Inverter_imagined(void
     finalize_c6_Symmetry_Inverter_imagined
       ((SFc6_Symmetry_Inverter_imaginedInstanceStruct*) chartInstanceVar);
     utFree((void *)chartInstanceVar);
-    if (crtInfo != NULL) {
-      utFree((void *)crtInfo);
-    }
-
     ssSetUserData(S,NULL);
   }
 }
@@ -1460,10 +1320,9 @@ static void mdlProcessParameters_c6_Symmetry_Inverter_imagined(SimStruct *S)
   }
 
   if (sf_machine_global_initializer_called()) {
-    ChartRunTimeInfo * crtInfo = (ChartRunTimeInfo *)(ssGetUserData(S));
-    ChartInfoStruct * chartInfo = (ChartInfoStruct *)(crtInfo->instanceInfo);
     initialize_params_c6_Symmetry_Inverter_imagined
-      ((SFc6_Symmetry_Inverter_imaginedInstanceStruct*)(chartInfo->chartInstance));
+      ((SFc6_Symmetry_Inverter_imaginedInstanceStruct*)(((ChartInfoStruct *)
+         ssGetUserData(S))->chartInstance));
   }
 }
 
@@ -1472,16 +1331,17 @@ static void mdlSetWorkWidths_c6_Symmetry_Inverter_imagined(SimStruct *S)
   if (sim_mode_is_rtw_gen(S) || sim_mode_is_external(S)) {
     mxArray *infoStruct = load_Symmetry_Inverter_imagined_optimization_info();
     int_T chartIsInlinable =
-      (int_T)sf_is_chart_inlinable(sf_get_instance_specialization(),infoStruct,6);
+      (int_T)sf_is_chart_inlinable(S,sf_get_instance_specialization(),infoStruct,
+      6);
     ssSetStateflowIsInlinable(S,chartIsInlinable);
-    ssSetRTWCG(S,sf_rtw_info_uint_prop(sf_get_instance_specialization(),
+    ssSetRTWCG(S,sf_rtw_info_uint_prop(S,sf_get_instance_specialization(),
                 infoStruct,6,"RTWCG"));
     ssSetEnableFcnIsTrivial(S,1);
     ssSetDisableFcnIsTrivial(S,1);
-    ssSetNotMultipleInlinable(S,sf_rtw_info_uint_prop
-      (sf_get_instance_specialization(),infoStruct,6,
-       "gatewayCannotBeInlinedMultipleTimes"));
-    sf_update_buildInfo(sf_get_instance_specialization(),infoStruct,6);
+    ssSetNotMultipleInlinable(S,sf_rtw_info_uint_prop(S,
+      sf_get_instance_specialization(),infoStruct,6,
+      "gatewayCannotBeInlinedMultipleTimes"));
+    sf_update_buildInfo(S,sf_get_instance_specialization(),infoStruct,6);
     if (chartIsInlinable) {
       ssSetInputPortOptimOpts(S, 0, SS_REUSABLE_AND_LOCAL);
       ssSetInputPortOptimOpts(S, 1, SS_REUSABLE_AND_LOCAL);
@@ -1515,10 +1375,10 @@ static void mdlSetWorkWidths_c6_Symmetry_Inverter_imagined(SimStruct *S)
   }
 
   ssSetOptions(S,ssGetOptions(S)|SS_OPTION_WORKS_WITH_CODE_REUSE);
-  ssSetChecksum0(S,(3108842029U));
-  ssSetChecksum1(S,(3854741907U));
-  ssSetChecksum2(S,(3700329206U));
-  ssSetChecksum3(S,(1344968425U));
+  ssSetChecksum0(S,(4015556370U));
+  ssSetChecksum1(S,(2554159554U));
+  ssSetChecksum2(S,(2622691268U));
+  ssSetChecksum3(S,(2499627818U));
   ssSetmdlDerivatives(S, NULL);
   ssSetExplicitFCSSCtrl(S,1);
   ssSupportsMultipleExecInstances(S,1);
@@ -1534,8 +1394,6 @@ static void mdlRTW_c6_Symmetry_Inverter_imagined(SimStruct *S)
 static void mdlStart_c6_Symmetry_Inverter_imagined(SimStruct *S)
 {
   SFc6_Symmetry_Inverter_imaginedInstanceStruct *chartInstance;
-  ChartRunTimeInfo * crtInfo = (ChartRunTimeInfo *)utMalloc(sizeof
-    (ChartRunTimeInfo));
   chartInstance = (SFc6_Symmetry_Inverter_imaginedInstanceStruct *)utMalloc
     (sizeof(SFc6_Symmetry_Inverter_imaginedInstanceStruct));
   memset(chartInstance, 0, sizeof(SFc6_Symmetry_Inverter_imaginedInstanceStruct));
@@ -1573,11 +1431,8 @@ static void mdlStart_c6_Symmetry_Inverter_imagined(SimStruct *S)
   chartInstance->chartInfo.restoreLastMajorStepConfiguration = NULL;
   chartInstance->chartInfo.restoreBeforeLastMajorStepConfiguration = NULL;
   chartInstance->chartInfo.storeCurrentConfiguration = NULL;
-  chartInstance->chartInfo.debugInstance = sfGlobalDebugInstanceStruct;
   chartInstance->S = S;
-  crtInfo->instanceInfo = (&(chartInstance->chartInfo));
-  crtInfo->isJITEnabled = false;
-  ssSetUserData(S,(void *)(crtInfo));  /* register the chart instance with simstruct */
+  ssSetUserData(S,(void *)(&(chartInstance->chartInfo)));/* register the chart instance with simstruct */
   init_dsm_address_info(chartInstance);
   if (!sim_mode_is_rtw_gen(S)) {
   }

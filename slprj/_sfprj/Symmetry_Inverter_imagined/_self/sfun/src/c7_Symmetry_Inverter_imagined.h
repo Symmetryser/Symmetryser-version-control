@@ -2,12 +2,27 @@
 #define __c7_Symmetry_Inverter_imagined_h__
 
 /* Include files */
-#include "sf_runtime/sfc_sf.h"
-#include "sf_runtime/sfc_mex.h"
+#include "sfc_sf.h"
+#include "sfc_mex.h"
 #include "rtwtypes.h"
-#include "multiword_types.h"
 
 /* Type Definitions */
+#ifndef typedef_c7_ResolvedFunctionInfo
+#define typedef_c7_ResolvedFunctionInfo
+
+typedef struct {
+  const char * context;
+  const char * name;
+  const char * dominantType;
+  const char * resolved;
+  uint32_T fileTimeLo;
+  uint32_T fileTimeHi;
+  uint32_T mFileTimeLo;
+  uint32_T mFileTimeHi;
+} c7_ResolvedFunctionInfo;
+
+#endif                                 /*typedef_c7_ResolvedFunctionInfo*/
+
 #ifndef typedef_SFc7_Symmetry_Inverter_imaginedInstanceStruct
 #define typedef_SFc7_Symmetry_Inverter_imaginedInstanceStruct
 

@@ -48,13 +48,6 @@ CHARTINSTANCE_INSTANCENUMBER,\
 CHARTINSTANCE_CHARTNUMBER,\
 CHARTINSTANCE_INSTANCENUMBER,\
                                              (v1),(int)(v2),(int)(v3),(int)(v4),(int)(v5),(int)(v6))
-#ifdef INT_TYPE_64_IS_SUPPORTED
-#define _SFD_EML_ARRAY_BOUNDS_CHECK_INT64(v1,v2,v3,v4,v5,v6) \
-                      sf_debug_eml_data_array_bounds_error_check_int64(sfGlobalDebugInstanceStruct, _Symmetry_Inverter_imaginedMachineNumber_,\
-CHARTINSTANCE_CHARTNUMBER,\
-CHARTINSTANCE_INSTANCENUMBER,\
-                                             (v1),(int64_T)(v2),(int)(v3),(int)(v4),(int)(v5),(int)(v6))
-#endif
 #define _SFD_INTEGER_CHECK(v1,v2) \
                       sf_debug_integer_check(sfGlobalDebugInstanceStruct, _Symmetry_Inverter_imaginedMachineNumber_,\
 CHARTINSTANCE_CHARTNUMBER,\
@@ -121,14 +114,13 @@ CHART_OBJECT,v1,v2,v3,v4,\
 #define _SFD_CS_CALL(v2,v3,v4) _SFD_CHART_CALL(STATE_OBJECT,v2,v3,v4)
 #define _SFD_CT_CALL(v2,v3,v4) _SFD_CHART_CALL(TRANSITION_OBJECT,v2,v3,v4)
 #define _SFD_CE_CALL(v2,v3,v4) _SFD_CHART_CALL(EVENT_OBJECT,v2,v3,v4)
-#define _SFD_CM_CALL(v2,v3,v4) _SFD_CHART_CALL(MESSAGE_OBJECT,v2,v3,v4)
 #define _SFD_EML_CALL(v1,v2,v3) eml_debug_line_call(sfGlobalDebugInstanceStruct, _Symmetry_Inverter_imaginedMachineNumber_,\
 CHARTINSTANCE_CHARTNUMBER,\
 CHARTINSTANCE_INSTANCENUMBER,\
 v1,v2,\
 v3,_sfTime_,0)
-#define _SFD_SCRIPT_TRANSLATION(v1,v2,v3,v4) sf_debug_set_script_translation(sfGlobalDebugInstanceStruct, _Symmetry_Inverter_imaginedMachineNumber_,\
-v1,v2,v3,v4)
+#define _SFD_SCRIPT_TRANSLATION(v1,v2,v3) sf_debug_set_script_translation(sfGlobalDebugInstanceStruct, _Symmetry_Inverter_imaginedMachineNumber_,\
+v1,v2,v3)
 #define _SFD_SCRIPT_CALL(v1,v2,v3) eml_debug_line_call(sfGlobalDebugInstanceStruct, _Symmetry_Inverter_imaginedMachineNumber_,\
 CHARTINSTANCE_CHARTNUMBER,\
 CHARTINSTANCE_INSTANCENUMBER,\
@@ -157,10 +149,6 @@ CHARTINSTANCE_INSTANCENUMBER,\
 		  CHARTINSTANCE_CHARTNUMBER,\
 		  CHARTINSTANCE_INSTANCENUMBER,\
 		  TRANSITION_OBJECT,(v1),0,((v2)!=0))
-#define CV_RELATIONAL_EVAL(v1,v2,v3,v4,v5,v6,v7)  cv_eval_relational(sfGlobalDebugInstanceStruct,_Symmetry_Inverter_imaginedMachineNumber_,\
-		  CHARTINSTANCE_CHARTNUMBER,\
-		  CHARTINSTANCE_INSTANCENUMBER,\
-		  (v1),(v2),(v3),(v4),(v5),(v6),(v7))
 #define CV_SATURATION_EVAL(v1,v2,v3,v4,v5)  cv_eval_saturation(sfGlobalDebugInstanceStruct,_Symmetry_Inverter_imaginedMachineNumber_,\
 		  CHARTINSTANCE_CHARTNUMBER,\
 		  CHARTINSTANCE_INSTANCENUMBER,\
@@ -252,12 +240,6 @@ CHARTINSTANCE_INSTANCENUMBER,\
 		  CHARTINSTANCE_INSTANCENUMBER,\
 		  (v1),(v2),(v3),(v4),(v5),(v6),(v7),(v8),(v9),(v10),(v11))
 
-#define _SFD_CV_INIT_EML_RELATIONAL(v1,v2,v3,v4,v5,v6) cv_eml_init_relational(sfGlobalDebugInstanceStruct, \
-       _Symmetry_Inverter_imaginedMachineNumber_,\
-		  CHARTINSTANCE_CHARTNUMBER,\
-		  CHARTINSTANCE_INSTANCENUMBER,\
-		  (v1),(v2),(v3),(v4),(v5),(v6))
-
 #define _SFD_CV_INIT_EML_SWITCH(v1,v2,v3,v4,v5,v6,v7,v8,v9) cv_eml_init_switch(sfGlobalDebugInstanceStruct, \
        _Symmetry_Inverter_imaginedMachineNumber_,\
 		  CHARTINSTANCE_CHARTNUMBER,\
@@ -312,12 +294,6 @@ CHARTINSTANCE_INSTANCENUMBER,\
 		  CHARTINSTANCE_INSTANCENUMBER,\
 		  (v1),(v2),(v3),(v4),(v5),(v6),(v7),(v8),(v9),(v10))
 
-#define _SFD_CV_INIT_SCRIPT_RELATIONAL(v1,v2,v3,v4,v5) cv_script_init_relational(sfGlobalDebugInstanceStruct, \
-       _Symmetry_Inverter_imaginedMachineNumber_,\
-		  CHARTINSTANCE_CHARTNUMBER,\
-		  CHARTINSTANCE_INSTANCENUMBER,\
-		  (v1),(v2),(v3),(v4),(v5))
-
 #define _SFD_CV_INIT_SCRIPT_SWITCH(v1,v2,v3,v4,v5,v6,v7,v8) cv_script_init_switch(sfGlobalDebugInstanceStruct, \
        _Symmetry_Inverter_imaginedMachineNumber_,\
 		  CHARTINSTANCE_CHARTNUMBER,\
@@ -339,6 +315,22 @@ CHARTINSTANCE_INSTANCENUMBER,\
    sf_debug_set_chart_state_substate_index(sfGlobalDebugInstanceStruct, _Symmetry_Inverter_imaginedMachineNumber_,CHARTINSTANCE_CHARTNUMBER,(v1),(v2),(v3))
 #define _SFD_ST_SUBSTATE_COUNT(v1,v2)\
 	sf_debug_set_chart_state_substate_count(sfGlobalDebugInstanceStruct, _Symmetry_Inverter_imaginedMachineNumber_,CHARTINSTANCE_CHARTNUMBER,(v1),(v2))
+#define _SFD_STATE_COV_WTS(v1,v2,v3,v4)\
+	sf_debug_set_instance_state_coverage_weights(sfGlobalDebugInstanceStruct, _Symmetry_Inverter_imaginedMachineNumber_,CHARTINSTANCE_CHARTNUMBER,CHARTINSTANCE_INSTANCENUMBER,(v1),(v2),(v3),(v4))
+#define _SFD_STATE_COV_MAPS(v1,v2,v3,v4,v5,v6,v7,v8,v9,v10) \
+ sf_debug_set_chart_state_coverage_maps(sfGlobalDebugInstanceStruct, _Symmetry_Inverter_imaginedMachineNumber_,CHARTINSTANCE_CHARTNUMBER,\
+   (v1),(v2),(v3),(v4),(v5),(v6),(v7),(v8),(v9),(v10))
+#define _SFD_TRANS_COV_WTS(v1,v2,v3,v4,v5) \
+	sf_debug_set_instance_transition_coverage_weights(sfGlobalDebugInstanceStruct, _Symmetry_Inverter_imaginedMachineNumber_,CHARTINSTANCE_CHARTNUMBER,CHARTINSTANCE_INSTANCENUMBER,\
+   (v1),(v2),(v3),(v4),(v5))
+#define 	_SFD_TRANS_COV_MAPS(v1,v2,v3,v4,v5,v6,v7,v8,v9,v10,v11,v12,v13) \
+	sf_debug_set_chart_transition_coverage_maps(sfGlobalDebugInstanceStruct, _Symmetry_Inverter_imaginedMachineNumber_,CHARTINSTANCE_CHARTNUMBER,\
+      (v1),\
+		(v2),(v3),(v4),\
+		(v5),(v6),(v7),\
+		(v8),(v9),(v10),\
+		(v11),(v12),(v13))
+
 #define _SFD_DATA_CHANGE_EVENT_COUNT(v1,v2) \
 	sf_debug_set_number_of_data_with_change_event_for_chart(sfGlobalDebugInstanceStruct, _Symmetry_Inverter_imaginedMachineNumber_,CHARTINSTANCE_CHARTNUMBER,\
 	(v1),(v2))
@@ -370,12 +362,6 @@ CHARTINSTANCE_INSTANCENUMBER,\
 	  CHARTINSTANCE_CHARTNUMBER,\
 	  CHARTINSTANCE_INSTANCENUMBER,\
 	  TRANSITION_OBJECT,(v1),(v2),(v3),(v4))
-
-#define _SFD_CV_INIT_TRANSITION_RELATIONALOP(v1,v2,v3,v4,v5)\
-     sf_debug_cv_init_relationalop(sfGlobalDebugInstanceStruct, _Symmetry_Inverter_imaginedMachineNumber_,\
-	  CHARTINSTANCE_CHARTNUMBER,\
-	  CHARTINSTANCE_INSTANCENUMBER,\
-	  TRANSITION_OBJECT,(v1),(v2),(v3),(v4),(v5))
 
 #define _SFD_CV_INIT_STATE_SATURATION(v1,v2,v3,v4)\
      sf_debug_cv_init_saturation(sfGlobalDebugInstanceStruct, _Symmetry_Inverter_imaginedMachineNumber_,\

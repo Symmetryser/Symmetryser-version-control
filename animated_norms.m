@@ -1,10 +1,10 @@
 close all;
 warning off;
 % clear all;
-load('saved_data/GEO_saved.mat');
-load('saved_data/VEC_saved.mat');
-load('saved_data/V_AMP_saved.mat');
-load('saved_data/V_ANG_saved.mat');
+%load('saved_data/GEO_saved.mat');
+%load('saved_data/VEC_saved.mat');
+%load('saved_data/V_AMP_saved.mat');
+%load('saved_data/V_ANG_saved.mat');
 sample=10e-5; 
 %% Ideal parameters
 Amplitude_1=[325.3,325.3,325.3];                          %[A]
@@ -79,7 +79,7 @@ legend('Ideal','Real','Uion','Intersection')
 hold off
 %drawnow;
 pause(str2num(answer{3}));
-asd=[i,VEC_saved.data(i),GEO_saved.data(i)]
+asd=[i,VEC_OLD_saved.data(i),GEO_saved.data(i)]
 
 end
 

@@ -3,11 +3,10 @@
 
 /* Include files */
 #define S_FUNCTION_NAME                sf_sfun
-#include "sf_runtime/sfc_sf.h"
-#include "sf_runtime/sfc_mex.h"
+#include "sfc_sf.h"
+#include "sfc_mex.h"
 #include "rtwtypes.h"
-#include "multiword_types.h"
-#include "sf_runtime/sfcdebug.h"
+#include "sfcdebug.h"
 #define rtInf                          (mxGetInf())
 #define rtMinusInf                     (-(mxGetInf()))
 #define rtNaN                          (mxGetNaN())
@@ -23,6 +22,7 @@ extern struct SfDebugInstanceStruct* sfGlobalDebugInstanceStruct;
 
 /* Variable Declarations */
 extern uint32_T _Symmetry_Inverter_imaginedMachineNumber_;
+extern real_T _sfTime_;
 
 /* Variable Definitions */
 

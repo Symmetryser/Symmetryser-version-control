@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.135"
+    ComputedModelVersion    "1.136"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -68,8 +68,8 @@ Model {
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
 	  Extents		  [1334.0, 617.0]
-	  ZoomFactor		  [1.0]
-	  Offset		  [26.022759632987572, -109.30600541527724]
+	  ZoomFactor		  [0.8]
+	  Offset		  [-332.7371820655552, -250.6999157354648]
 	}
 	Object {
 	  $ObjectID		  7
@@ -84,7 +84,7 @@ Model {
       }
     }
   }
-  PhysicalModelingChecksum "3200062764"
+  PhysicalModelingChecksum "2722163928"
   PhysicalModelingParameterChecksum "1114444782"
   PhysicalModelingProducts "Power_System_Blocks"
   Created		  "Thu Oct 02 12:18:57 2014"
@@ -93,9 +93,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Templomos"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sun Apr 05 23:42:52 2015"
-  RTWModifiedTimeStamp	  350158779
-  ModelVersionFormat	  "1.%<AutoIncrement:135>"
+  LastModifiedDate	  "Fri Apr 10 17:20:14 2015"
+  RTWModifiedTimeStamp	  350569947
+  ModelVersionFormat	  "1.%<AutoIncrement:136>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1147,9 +1147,9 @@ Model {
     TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "100"
+    ZoomFactor		    "80"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "3493"
+    SIDHighWatermark	    "3502"
     Block {
       BlockType		      SubSystem
       Name		      "Calculate_Norms"
@@ -15139,7 +15139,7 @@ Model {
       ZOrder		      852
       Floating		      off
       Location		      [5, 43, 1375, 762]
-      Open		      off
+      Open		      on
       NumInputPorts	      "1"
       List {
 	ListType		AxesTitles
@@ -15157,7 +15157,7 @@ Model {
       }
       ShowLegends	      on
       LegendLocations	      "0.83564     0.92003     0.14234     0.02828"
-      YMin		      "0"
+      YMin		      "50000"
       YMax		      "230000"
       SaveName		      "ScopeData2"
       DataFormat	      "StructureWithTime"
@@ -15189,130 +15189,6 @@ Model {
 	TiledPageScale		1
 	ShowPageBoundaries	off
 	ZoomFactor		"80"
-	Block {
-	  BlockType		  Reference
-	  Name			  "Breaker"
-	  SID			  "3445"
-	  Ports			  [1, 0, 0, 0, 0, 1, 1]
-	  Position		  [925, 45, 980, 85]
-	  ZOrder		  523
-	  ShowName		  off
-	  LibraryVersion	  "1.2362"
-	  SourceBlock		  "powerlib/Elements/Breaker"
-	  SourceType		  "Breaker"
-	  ContentPreviewEnabled	  off
-	  InitialState		  "0"
-	  SwitchingTimes	  "[1/60  5/60]"
-	  External		  on
-	  BreakerResistance	  "0.01"
-	  SnubberResistance	  "1e6"
-	  SnubberCapacitance	  "inf"
-	  Measurements		  "None"
-	  MoreParameters	  on
-	  NoBreakLoop		  off
-	}
-	Block {
-	  BlockType		  Reference
-	  Name			  "Breaker1"
-	  SID			  "3446"
-	  Ports			  [1, 0, 0, 0, 0, 1, 1]
-	  Position		  [925, 190, 980, 230]
-	  ZOrder		  524
-	  ShowName		  off
-	  LibraryVersion	  "1.2362"
-	  SourceBlock		  "powerlib/Elements/Breaker"
-	  SourceType		  "Breaker"
-	  ContentPreviewEnabled	  off
-	  InitialState		  "0"
-	  SwitchingTimes	  "[1/60  5/60]"
-	  External		  on
-	  BreakerResistance	  "0.01"
-	  SnubberResistance	  "1e6"
-	  SnubberCapacitance	  "inf"
-	  Measurements		  "None"
-	  MoreParameters	  on
-	  NoBreakLoop		  off
-	}
-	Block {
-	  BlockType		  Reference
-	  Name			  "Breaker2"
-	  SID			  "3447"
-	  Ports			  [1, 0, 0, 0, 0, 1, 1]
-	  Position		  [925, 335, 980, 375]
-	  ZOrder		  525
-	  ShowName		  off
-	  LibraryVersion	  "1.2362"
-	  SourceBlock		  "powerlib/Elements/Breaker"
-	  SourceType		  "Breaker"
-	  ContentPreviewEnabled	  off
-	  InitialState		  "0"
-	  SwitchingTimes	  "[1/60  5/60]"
-	  External		  on
-	  BreakerResistance	  "0.01"
-	  SnubberResistance	  "1e6"
-	  SnubberCapacitance	  "inf"
-	  Measurements		  "None"
-	  MoreParameters	  on
-	  NoBreakLoop		  off
-	}
-	Block {
-	  BlockType		  Reference
-	  Name			  "Breaker3"
-	  SID			  "3448"
-	  Ports			  [1, 0, 0, 0, 0, 1, 1]
-	  Position		  [925, 545, 980, 585]
-	  ZOrder		  526
-	  ShowName		  off
-	  LibraryVersion	  "1.2362"
-	  SourceBlock		  "powerlib/Elements/Breaker"
-	  SourceType		  "Breaker"
-	  ContentPreviewEnabled	  off
-	  InitialState		  "0"
-	  SwitchingTimes	  "[1/60  5/60]"
-	  External		  on
-	  BreakerResistance	  "0.01"
-	  SnubberResistance	  "1e6"
-	  SnubberCapacitance	  "inf"
-	  Measurements		  "None"
-	  MoreParameters	  on
-	  NoBreakLoop		  off
-	}
-	Block {
-	  BlockType		  Clock
-	  Name			  "Clock"
-	  SID			  "3449"
-	  Position		  [695, 17, 730, 53]
-	  ZOrder		  1553
-	  ShowName		  off
-	  Decimation		  "CLK"
-	}
-	Block {
-	  BlockType		  Clock
-	  Name			  "Clock1"
-	  SID			  "3453"
-	  Position		  [695, 167, 730, 203]
-	  ZOrder		  1557
-	  ShowName		  off
-	  Decimation		  "CLK"
-	}
-	Block {
-	  BlockType		  Clock
-	  Name			  "Clock2"
-	  SID			  "3457"
-	  Position		  [695, 302, 730, 338]
-	  ZOrder		  1561
-	  ShowName		  off
-	  Decimation		  "CLK"
-	}
-	Block {
-	  BlockType		  Clock
-	  Name			  "Clock3"
-	  SID			  "3461"
-	  Position		  [695, 512, 730, 548]
-	  ZOrder		  1565
-	  ShowName		  off
-	  Decimation		  "CLK"
-	}
 	Block {
 	  BlockType		  Reference
 	  Name			  "Transf-L  Line -R1"
@@ -15484,122 +15360,6 @@ Model {
 	  Measurements		  "None"
 	}
 	Block {
-	  BlockType		  Constant
-	  Name			  "const"
-	  SID			  "3450"
-	  Position		  [745, 17, 775, 33]
-	  ZOrder		  1550
-	  ShowName		  off
-	  Value			  "0"
-	}
-	Block {
-	  BlockType		  Constant
-	  Name			  "const1"
-	  SID			  "3451"
-	  Position		  [745, 37, 775, 53]
-	  ZOrder		  1552
-	  ShowName		  off
-	}
-	Block {
-	  BlockType		  Constant
-	  Name			  "const2"
-	  SID			  "3454"
-	  Position		  [745, 167, 775, 183]
-	  ZOrder		  1554
-	  ShowName		  off
-	  Value			  "0"
-	}
-	Block {
-	  BlockType		  Constant
-	  Name			  "const3"
-	  SID			  "3455"
-	  Position		  [745, 187, 775, 203]
-	  ZOrder		  1556
-	  ShowName		  off
-	}
-	Block {
-	  BlockType		  Constant
-	  Name			  "const4"
-	  SID			  "3458"
-	  Position		  [745, 302, 775, 318]
-	  ZOrder		  1558
-	  ShowName		  off
-	  Value			  "0"
-	}
-	Block {
-	  BlockType		  Constant
-	  Name			  "const5"
-	  SID			  "3459"
-	  Position		  [745, 322, 775, 338]
-	  ZOrder		  1560
-	  ShowName		  off
-	}
-	Block {
-	  BlockType		  Constant
-	  Name			  "const6"
-	  SID			  "3462"
-	  Position		  [745, 512, 775, 528]
-	  ZOrder		  1562
-	  ShowName		  off
-	  Value			  "0"
-	}
-	Block {
-	  BlockType		  Constant
-	  Name			  "const7"
-	  SID			  "3463"
-	  Position		  [745, 532, 775, 548]
-	  ZOrder		  1564
-	  ShowName		  off
-	}
-	Block {
-	  BlockType		  Switch
-	  Name			  "on/off"
-	  SID			  "3452"
-	  Position		  [820, 17, 890, 53]
-	  ZOrder		  1551
-	  ShowName		  off
-	  Criteria		  "u2 > Threshold"
-	  Threshold		  "NetworkBreaker(1)"
-	  InputSameDT		  off
-	  SaturateOnIntegerOverflow off
-	}
-	Block {
-	  BlockType		  Switch
-	  Name			  "on/off1"
-	  SID			  "3456"
-	  Position		  [820, 167, 890, 203]
-	  ZOrder		  1555
-	  ShowName		  off
-	  Criteria		  "u2 > Threshold"
-	  Threshold		  "NetworkBreaker(2)"
-	  InputSameDT		  off
-	  SaturateOnIntegerOverflow off
-	}
-	Block {
-	  BlockType		  Switch
-	  Name			  "on/off2"
-	  SID			  "3460"
-	  Position		  [820, 302, 890, 338]
-	  ZOrder		  1559
-	  ShowName		  off
-	  Criteria		  "u2 > Threshold"
-	  Threshold		  "NetworkBreaker(3)"
-	  InputSameDT		  off
-	  SaturateOnIntegerOverflow off
-	}
-	Block {
-	  BlockType		  Switch
-	  Name			  "on/off3"
-	  SID			  "3464"
-	  Position		  [820, 512, 890, 548]
-	  ZOrder		  1563
-	  ShowName		  off
-	  Criteria		  "u2 > Threshold"
-	  Threshold		  "NetworkBreaker(4)"
-	  InputSameDT		  off
-	  SaturateOnIntegerOverflow off
-	}
-	Block {
 	  BlockType		  PMIOPort
 	  Name			  "R"
 	  SID			  "669"
@@ -15680,18 +15440,17 @@ Model {
 	  ZOrder		  1
 	  SrcBlock		  "Transf-L  Line -R4"
 	  SrcPort		  LConn1
-	  Points		  [0, 0]
+	  Points		  [0, -10]
 	  Branch {
 	    ConnectType		    "DEST_SRC"
-	    Points		    [0, -10]
 	    DstBlock		    "Transf-L  Line -R1"
 	    DstPort		    RConn1
 	  }
 	  Branch {
 	    ConnectType		    "DEST_DEST"
-	    SrcBlock		    "Breaker"
-	    SrcPort		    LConn1
-	    Points		    [-455, 0]
+	    SrcBlock		    "U"
+	    SrcPort		    RConn1
+	    Points		    [-550, 0]
 	  }
 	}
 	Line {
@@ -15699,17 +15458,17 @@ Model {
 	  ZOrder		  4
 	  SrcBlock		  "Transf-L  Line -R2"
 	  SrcPort		  RConn1
-	  Points		  [20, 0; 0, 10]
-	  Branch {
-	    ConnectType		    "DEST_DEST"
-	    SrcBlock		    "Breaker1"
-	    SrcPort		    LConn1
-	    Points		    [-455, 0]
-	  }
+	  Points		  [20, 0]
 	  Branch {
 	    ConnectType		    "DEST_SRC"
 	    DstBlock		    "Transf-L  Line -R5"
 	    DstPort		    LConn1
+	  }
+	  Branch {
+	    ConnectType		    "DEST_DEST"
+	    SrcBlock		    "V"
+	    SrcPort		    RConn1
+	    Points		    [-550, 0]
 	  }
 	}
 	Line {
@@ -15717,18 +15476,17 @@ Model {
 	  ZOrder		  7
 	  SrcBlock		  "Transf-L  Line -R7"
 	  SrcPort		  LConn1
-	  Points		  [0, -15]
-	  Branch {
-	    ConnectType		    "DEST_SRC"
-	    Points		    [0, -10]
-	    DstBlock		    "Transf-L  Line -R3"
-	    DstPort		    RConn1
-	  }
+	  Points		  [0, -25]
 	  Branch {
 	    ConnectType		    "DEST_DEST"
-	    SrcBlock		    "Breaker2"
-	    SrcPort		    LConn1
-	    Points		    [-455, 0]
+	    SrcBlock		    "W"
+	    SrcPort		    RConn1
+	    Points		    [-550, 0]
+	  }
+	  Branch {
+	    ConnectType		    "DEST_SRC"
+	    DstBlock		    "Transf-L  Line -R3"
+	    DstPort		    RConn1
 	  }
 	}
 	Line {
@@ -15773,9 +15531,9 @@ Model {
 	  }
 	  Branch {
 	    ConnectType		    "DEST_DEST"
-	    SrcBlock		    "Breaker3"
-	    SrcPort		    LConn1
-	    Points		    [-388, 0; 0, -10]
+	    SrcBlock		    "n"
+	    SrcPort		    RConn1
+	    Points		    [-483, 0]
 	  }
 	  Branch {
 	    ConnectType		    "DEST_SRC"
@@ -15801,61 +15559,370 @@ Model {
 	  DstBlock		  "N"
 	  DstPort		  RConn1
 	}
-	Line {
-	  LineType		  "Connection"
-	  ZOrder		  21
-	  SrcBlock		  "Breaker"
-	  SrcPort		  RConn1
-	  DstBlock		  "U"
-	  DstPort		  RConn1
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Timed Breakers"
+      SID		      "3494"
+      Ports		      [0, 0, 0, 0, 0, 4, 4]
+      Position		      [225, 18, 285, 102]
+      ZOrder		      1586
+      RequestExecContextInheritance off
+      System {
+	Name			"Timed Breakers"
+	Location		[-8, 0, 1370, 780]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"80"
+	Block {
+	  BlockType		  Reference
+	  Name			  "Breaker"
+	  SID			  "3445"
+	  Ports			  [1, 0, 0, 0, 0, 1, 1]
+	  Position		  [250, 45, 305, 85]
+	  ZOrder		  1566
+	  ShowName		  off
+	  LibraryVersion	  "1.2362"
+	  SourceBlock		  "powerlib/Elements/Breaker"
+	  SourceType		  "Breaker"
+	  ContentPreviewEnabled	  off
+	  InitialState		  "0"
+	  SwitchingTimes	  "[1/60  5/60]"
+	  External		  on
+	  BreakerResistance	  "0.01"
+	  SnubberResistance	  "1e6"
+	  SnubberCapacitance	  "inf"
+	  Measurements		  "None"
+	  MoreParameters	  on
+	  NoBreakLoop		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Breaker1"
+	  SID			  "3446"
+	  Ports			  [1, 0, 0, 0, 0, 1, 1]
+	  Position		  [250, 190, 305, 230]
+	  ZOrder		  1567
+	  ShowName		  off
+	  LibraryVersion	  "1.2362"
+	  SourceBlock		  "powerlib/Elements/Breaker"
+	  SourceType		  "Breaker"
+	  ContentPreviewEnabled	  off
+	  InitialState		  "0"
+	  SwitchingTimes	  "[1/60  5/60]"
+	  External		  on
+	  BreakerResistance	  "0.01"
+	  SnubberResistance	  "1e6"
+	  SnubberCapacitance	  "inf"
+	  Measurements		  "None"
+	  MoreParameters	  on
+	  NoBreakLoop		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Breaker2"
+	  SID			  "3447"
+	  Ports			  [1, 0, 0, 0, 0, 1, 1]
+	  Position		  [250, 335, 305, 375]
+	  ZOrder		  1568
+	  ShowName		  off
+	  LibraryVersion	  "1.2362"
+	  SourceBlock		  "powerlib/Elements/Breaker"
+	  SourceType		  "Breaker"
+	  ContentPreviewEnabled	  off
+	  InitialState		  "0"
+	  SwitchingTimes	  "[1/60  5/60]"
+	  External		  on
+	  BreakerResistance	  "0.01"
+	  SnubberResistance	  "1e6"
+	  SnubberCapacitance	  "inf"
+	  Measurements		  "None"
+	  MoreParameters	  on
+	  NoBreakLoop		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Breaker3"
+	  SID			  "3448"
+	  Ports			  [1, 0, 0, 0, 0, 1, 1]
+	  Position		  [250, 545, 305, 585]
+	  ZOrder		  1569
+	  ShowName		  off
+	  LibraryVersion	  "1.2362"
+	  SourceBlock		  "powerlib/Elements/Breaker"
+	  SourceType		  "Breaker"
+	  ContentPreviewEnabled	  off
+	  InitialState		  "0"
+	  SwitchingTimes	  "[1/60  5/60]"
+	  External		  on
+	  BreakerResistance	  "0.01"
+	  SnubberResistance	  "1e6"
+	  SnubberCapacitance	  "inf"
+	  Measurements		  "None"
+	  MoreParameters	  on
+	  NoBreakLoop		  off
+	}
+	Block {
+	  BlockType		  Clock
+	  Name			  "Clock"
+	  SID			  "3449"
+	  Position		  [20, 17, 55, 53]
+	  ZOrder		  1573
+	  ShowName		  off
+	  Decimation		  "CLK"
+	}
+	Block {
+	  BlockType		  Clock
+	  Name			  "Clock1"
+	  SID			  "3453"
+	  Position		  [20, 167, 55, 203]
+	  ZOrder		  1577
+	  ShowName		  off
+	  Decimation		  "CLK"
+	}
+	Block {
+	  BlockType		  Clock
+	  Name			  "Clock2"
+	  SID			  "3457"
+	  Position		  [20, 302, 55, 338]
+	  ZOrder		  1581
+	  ShowName		  off
+	  Decimation		  "CLK"
+	}
+	Block {
+	  BlockType		  Clock
+	  Name			  "Clock3"
+	  SID			  "3461"
+	  Position		  [20, 512, 55, 548]
+	  ZOrder		  1585
+	  ShowName		  off
+	  Decimation		  "CLK"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "const"
+	  SID			  "3450"
+	  Position		  [70, 17, 100, 33]
+	  ZOrder		  1570
+	  ShowName		  off
+	  Value			  "0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "const1"
+	  SID			  "3451"
+	  Position		  [70, 37, 100, 53]
+	  ZOrder		  1572
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "const2"
+	  SID			  "3454"
+	  Position		  [70, 167, 100, 183]
+	  ZOrder		  1574
+	  ShowName		  off
+	  Value			  "0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "const3"
+	  SID			  "3455"
+	  Position		  [70, 187, 100, 203]
+	  ZOrder		  1576
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "const4"
+	  SID			  "3458"
+	  Position		  [70, 302, 100, 318]
+	  ZOrder		  1578
+	  ShowName		  off
+	  Value			  "0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "const5"
+	  SID			  "3459"
+	  Position		  [70, 322, 100, 338]
+	  ZOrder		  1580
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "const6"
+	  SID			  "3462"
+	  Position		  [70, 512, 100, 528]
+	  ZOrder		  1582
+	  ShowName		  off
+	  Value			  "0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "const7"
+	  SID			  "3463"
+	  Position		  [70, 532, 100, 548]
+	  ZOrder		  1584
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "on/off"
+	  SID			  "3452"
+	  Position		  [145, 17, 215, 53]
+	  ZOrder		  1571
+	  ShowName		  off
+	  Criteria		  "u2 > Threshold"
+	  Threshold		  "NetworkBreaker(1)"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "on/off1"
+	  SID			  "3456"
+	  Position		  [145, 167, 215, 203]
+	  ZOrder		  1575
+	  ShowName		  off
+	  Criteria		  "u2 > Threshold"
+	  Threshold		  "NetworkBreaker(2)"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "on/off2"
+	  SID			  "3460"
+	  Position		  [145, 302, 215, 338]
+	  ZOrder		  1579
+	  ShowName		  off
+	  Criteria		  "u2 > Threshold"
+	  Threshold		  "NetworkBreaker(3)"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "on/off3"
+	  SID			  "3464"
+	  Position		  [145, 512, 215, 548]
+	  ZOrder		  1583
+	  ShowName		  off
+	  Criteria		  "u2 > Threshold"
+	  Threshold		  "NetworkBreaker(4)"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  PMIOPort
+	  Name			  "U"
+	  SID			  "3495"
+	  Position		  [335, 58, 365, 72]
+	  ZOrder		  1586
+	  BlockMirror		  on
+	  Port			  "1"
+	  Side			  "Right"
+	}
+	Block {
+	  BlockType		  PMIOPort
+	  Name			  "R"
+	  SID			  "3496"
+	  Position		  [190, 68, 220, 82]
+	  ZOrder		  1587
+	  Port			  "2"
+	  Side			  "Left"
+	}
+	Block {
+	  BlockType		  PMIOPort
+	  Name			  "V"
+	  SID			  "3497"
+	  Position		  [335, 203, 365, 217]
+	  ZOrder		  1588
+	  BlockMirror		  on
+	  Port			  "3"
+	  Side			  "Right"
+	}
+	Block {
+	  BlockType		  PMIOPort
+	  Name			  "S"
+	  SID			  "3498"
+	  Position		  [190, 213, 220, 227]
+	  ZOrder		  1589
+	  Port			  "4"
+	  Side			  "Left"
+	}
+	Block {
+	  BlockType		  PMIOPort
+	  Name			  "W"
+	  SID			  "3499"
+	  Position		  [335, 348, 365, 362]
+	  ZOrder		  1590
+	  BlockMirror		  on
+	  Port			  "5"
+	  Side			  "Right"
+	}
+	Block {
+	  BlockType		  PMIOPort
+	  Name			  "T"
+	  SID			  "3500"
+	  Position		  [190, 358, 220, 372]
+	  ZOrder		  1591
+	  Port			  "6"
+	  Side			  "Left"
+	}
+	Block {
+	  BlockType		  PMIOPort
+	  Name			  "n"
+	  SID			  "3501"
+	  Position		  [335, 558, 365, 572]
+	  ZOrder		  1592
+	  BlockMirror		  on
+	  Port			  "7"
+	  Side			  "Right"
+	}
+	Block {
+	  BlockType		  PMIOPort
+	  Name			  "N"
+	  SID			  "3502"
+	  Position		  [190, 568, 220, 582]
+	  ZOrder		  1593
+	  Port			  "8"
+	  Side			  "Left"
 	}
 	Line {
-	  LineType		  "Connection"
-	  ZOrder		  22
-	  SrcBlock		  "Breaker1"
-	  SrcPort		  RConn1
-	  DstBlock		  "V"
-	  DstPort		  RConn1
-	}
-	Line {
-	  LineType		  "Connection"
-	  ZOrder		  23
-	  SrcBlock		  "Breaker2"
-	  SrcPort		  RConn1
-	  DstBlock		  "W"
-	  DstPort		  RConn1
-	}
-	Line {
-	  LineType		  "Connection"
-	  ZOrder		  24
-	  SrcBlock		  "Breaker3"
-	  SrcPort		  RConn1
-	  DstBlock		  "n"
-	  DstPort		  RConn1
-	}
-	Line {
-	  ZOrder		  39
+	  ZOrder		  54
 	  SrcBlock		  "const"
 	  SrcPort		  1
 	  DstBlock		  "on/off"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  40
+	  ZOrder		  55
 	  SrcBlock		  "const1"
 	  SrcPort		  1
 	  DstBlock		  "on/off"
 	  DstPort		  3
 	}
 	Line {
-	  ZOrder		  41
+	  ZOrder		  56
 	  SrcBlock		  "Clock"
 	  SrcPort		  1
 	  DstBlock		  "on/off"
 	  DstPort		  2
 	}
 	Line {
-	  ZOrder		  42
+	  ZOrder		  57
 	  SrcBlock		  "on/off"
 	  SrcPort		  1
 	  Points		  [13, 0; 0, 20]
@@ -15863,70 +15930,71 @@ Model {
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  43
+	  ZOrder		  58
 	  SrcBlock		  "const2"
 	  SrcPort		  1
 	  DstBlock		  "on/off1"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  44
+	  ZOrder		  59
 	  SrcBlock		  "const3"
 	  SrcPort		  1
 	  DstBlock		  "on/off1"
 	  DstPort		  3
 	}
 	Line {
-	  ZOrder		  45
+	  ZOrder		  60
 	  SrcBlock		  "Clock1"
 	  SrcPort		  1
 	  DstBlock		  "on/off1"
 	  DstPort		  2
 	}
 	Line {
-	  ZOrder		  46
+	  ZOrder		  61
 	  SrcBlock		  "const4"
 	  SrcPort		  1
 	  DstBlock		  "on/off2"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  47
+	  ZOrder		  62
 	  SrcBlock		  "const5"
 	  SrcPort		  1
 	  DstBlock		  "on/off2"
 	  DstPort		  3
 	}
 	Line {
-	  ZOrder		  48
+	  ZOrder		  63
 	  SrcBlock		  "Clock2"
 	  SrcPort		  1
+	  Points		  [3, 0; 0, 23; 62, 0; 0, -23]
 	  DstBlock		  "on/off2"
 	  DstPort		  2
 	}
 	Line {
-	  ZOrder		  49
+	  ZOrder		  64
 	  SrcBlock		  "const6"
 	  SrcPort		  1
 	  DstBlock		  "on/off3"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  50
+	  ZOrder		  65
 	  SrcBlock		  "const7"
 	  SrcPort		  1
 	  DstBlock		  "on/off3"
 	  DstPort		  3
 	}
 	Line {
-	  ZOrder		  51
+	  ZOrder		  66
 	  SrcBlock		  "Clock3"
 	  SrcPort		  1
 	  DstBlock		  "on/off3"
 	  DstPort		  2
 	}
 	Line {
-	  ZOrder		  52
+	  ZOrder		  67
 	  SrcBlock		  "on/off1"
 	  SrcPort		  1
 	  Points		  [13, 0; 0, 15]
@@ -15934,7 +16002,7 @@ Model {
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  53
+	  ZOrder		  68
 	  SrcBlock		  "on/off2"
 	  SrcPort		  1
 	  Points		  [13, 0; 0, 25]
@@ -15942,12 +16010,76 @@ Model {
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  54
+	  ZOrder		  69
 	  SrcBlock		  "on/off3"
 	  SrcPort		  1
 	  Points		  [13, 0; 0, 25]
 	  DstBlock		  "Breaker3"
 	  DstPort		  1
+	}
+	Line {
+	  LineType		  "Connection"
+	  ZOrder		  78
+	  SrcBlock		  "Breaker"
+	  SrcPort		  RConn1
+	  DstBlock		  "U"
+	  DstPort		  RConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  ZOrder		  79
+	  SrcBlock		  "Breaker"
+	  SrcPort		  LConn1
+	  DstBlock		  "R"
+	  DstPort		  RConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  ZOrder		  80
+	  SrcBlock		  "Breaker1"
+	  SrcPort		  RConn1
+	  DstBlock		  "V"
+	  DstPort		  RConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  ZOrder		  81
+	  SrcBlock		  "Breaker1"
+	  SrcPort		  LConn1
+	  DstBlock		  "S"
+	  DstPort		  RConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  ZOrder		  84
+	  SrcBlock		  "Breaker3"
+	  SrcPort		  RConn1
+	  DstBlock		  "n"
+	  DstPort		  RConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  ZOrder		  85
+	  SrcBlock		  "Breaker3"
+	  SrcPort		  LConn1
+	  DstBlock		  "N"
+	  DstPort		  RConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  ZOrder		  82
+	  SrcBlock		  "Breaker2"
+	  SrcPort		  RConn1
+	  DstBlock		  "W"
+	  DstPort		  RConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  ZOrder		  83
+	  SrcBlock		  "Breaker2"
+	  SrcPort		  LConn1
+	  DstBlock		  "T"
+	  DstPort		  RConn1
 	}
       }
     }
@@ -15956,7 +16088,7 @@ Model {
       Name		      "Transformator"
       SID		      "715"
       Ports		      [0, 0, 0, 0, 0, 0, 4]
-      Position		      [240, 18, 300, 102]
+      Position		      [110, 18, 170, 102]
       ZOrder		      325
       FontName		      "Times New Roman"
       FontSize		      12
@@ -17411,7 +17543,7 @@ Model {
       Name		      "powergui"
       SID		      "1"
       Ports		      []
-      Position		      [240, 130, 300, 154]
+      Position		      [110, 145, 170, 169]
       ZOrder		      1
       ShowName		      off
       LibraryVersion	      "*1.2362"
@@ -17465,38 +17597,6 @@ Model {
       frequencyindicesteady   "1"
       RmsSteady		      "1"
       display		      off
-    }
-    Line {
-      LineType		      "Connection"
-      ZOrder		      1
-      SrcBlock		      "Transformator"
-      SrcPort		      RConn1
-      DstBlock		      "Network"
-      DstPort		      LConn1
-    }
-    Line {
-      LineType		      "Connection"
-      ZOrder		      2
-      SrcBlock		      "Transformator"
-      SrcPort		      RConn2
-      DstBlock		      "Network"
-      DstPort		      LConn2
-    }
-    Line {
-      LineType		      "Connection"
-      ZOrder		      3
-      SrcBlock		      "Transformator"
-      SrcPort		      RConn3
-      DstBlock		      "Network"
-      DstPort		      LConn3
-    }
-    Line {
-      LineType		      "Connection"
-      ZOrder		      4
-      SrcBlock		      "Transformator"
-      SrcPort		      RConn4
-      DstBlock		      "Network"
-      DstPort		      LConn4
     }
     Line {
       LineType		      "Connection"
@@ -17635,6 +17735,70 @@ Model {
 	DstBlock		"Current Control"
 	DstPort			1
       }
+    }
+    Line {
+      LineType		      "Connection"
+      ZOrder		      79
+      SrcBlock		      "Transformator"
+      SrcPort		      RConn1
+      DstBlock		      "Timed Breakers"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      ZOrder		      80
+      SrcBlock		      "Transformator"
+      SrcPort		      RConn2
+      DstBlock		      "Timed Breakers"
+      DstPort		      LConn2
+    }
+    Line {
+      LineType		      "Connection"
+      ZOrder		      81
+      SrcBlock		      "Transformator"
+      SrcPort		      RConn3
+      DstBlock		      "Timed Breakers"
+      DstPort		      LConn3
+    }
+    Line {
+      LineType		      "Connection"
+      ZOrder		      82
+      SrcBlock		      "Transformator"
+      SrcPort		      RConn4
+      DstBlock		      "Timed Breakers"
+      DstPort		      LConn4
+    }
+    Line {
+      LineType		      "Connection"
+      ZOrder		      83
+      SrcBlock		      "Timed Breakers"
+      SrcPort		      RConn1
+      DstBlock		      "Network"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      ZOrder		      84
+      SrcBlock		      "Timed Breakers"
+      SrcPort		      RConn3
+      DstBlock		      "Network"
+      DstPort		      LConn3
+    }
+    Line {
+      LineType		      "Connection"
+      ZOrder		      85
+      SrcBlock		      "Timed Breakers"
+      SrcPort		      RConn4
+      DstBlock		      "Network"
+      DstPort		      LConn4
+    }
+    Line {
+      LineType		      "Connection"
+      ZOrder		      86
+      SrcBlock		      "Timed Breakers"
+      SrcPort		      RConn2
+      DstBlock		      "Network"
+      DstPort		      LConn2
     }
   }
 }

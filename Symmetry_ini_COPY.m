@@ -3,7 +3,7 @@ clear all;
 close all;
 %% Simulation initialisation parameters
 CLK=1000;                                           %[sample/s]
-tfin=50;                                           %[s]
+tfin=20;                                           %[s]
 sample=10e-5;                                       %[s/sample]
 t=0:sample:tfin;                                    %[tick]
 %% FFT
@@ -15,7 +15,7 @@ Source_Frequency=[50,50,50];                        %[Hz]
 Phase_Source=[0,-2/3*pi,-4/3*pi];                     %[rad]
 R_Source=[0.4, 0.4, 0.4];                           %[Ohm]
 L_Source=[3.185e-3, 3.185e-3, 3.185e-3];            %[H]
-TransformerBreaker=[15,1e5,1e5;...                  %[Nullify RSTN line at given sim.time]
+TransformerBreaker=[1e5,1e5,1e5;...                  %[Nullify RSTN line at given sim.time]
                     1e5,1e5,1e5];
 
 %% Control_Current 
@@ -25,7 +25,7 @@ Butterworth_passband_frequency=5000;
 R_Network=[0.4, 0.4, 0.4, 0.4];                     %[Ohm]
 L_Network=[3.185e-3, 3.185e-3, 3.185e-3, 3.185e-3]; %[H]
 C_Network=[0, 0, 0];                                %[F]
-NetworkBreaker=[1e5,1e5,1e5,1e5];                %[Break RSTN line at given sim.time]
+NetworkBreaker=[5,1e5,1e5,1e5];                %[Break RSTN line at given sim.time]
 % Network Loads
 Load_Wire_Resistance=[0.1,0.2];                     %[Ohm]
 Switch_Load_R= [1,0,0];                             %[Boolean]

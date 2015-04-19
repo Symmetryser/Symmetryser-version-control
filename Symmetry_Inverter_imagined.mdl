@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.141"
+    ComputedModelVersion    "1.142"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -66,10 +66,10 @@ Model {
 	  $ObjectID		  6
 	  IsActive		  [1]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "715"
+	  LoadSaveID		  "3144"
 	  Extents		  [1406.0, 699.0]
 	  ZoomFactor		  [1.0]
-	  Offset		  [367.0, -30.0]
+	  Offset		  [207.96091122268726, -171.96091122268726]
 	}
 	Object {
 	  $ObjectID		  7
@@ -84,8 +84,8 @@ Model {
       }
     }
   }
-  PhysicalModelingChecksum "613073412"
-  PhysicalModelingParameterChecksum "1582927811"
+  PhysicalModelingChecksum "1905370631"
+  PhysicalModelingParameterChecksum "2307803660"
   PhysicalModelingProducts "Power_System_Blocks"
   Created		  "Thu Oct 02 12:18:57 2014"
   Creator		  "gorbep"
@@ -93,9 +93,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Neukirchner László"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Apr 16 14:12:47 2015"
-  RTWModifiedTimeStamp	  351094293
-  ModelVersionFormat	  "1.%<AutoIncrement:141>"
+  LastModifiedDate	  "Sun Apr 19 14:04:09 2015"
+  RTWModifiedTimeStamp	  351353036
+  ModelVersionFormat	  "1.%<AutoIncrement:142>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1104,7 +1104,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "4546"
+    SIDHighWatermark	    "4579"
     Block {
       BlockType		      SubSystem
       Name		      "Asynchronous Inverter"
@@ -1139,7 +1139,7 @@ Model {
 	  Name			  "Calculate_Norms"
 	  SID			  "1987"
 	  Ports			  [0, 8, 0, 0, 0, 4]
-	  Position		  [140, 169, 240, 351]
+	  Position		  [75, 169, 175, 351]
 	  ZOrder		  851
 	  MinAlgLoopOccurrences	  off
 	  PropExecContextOutsideSubsystem off
@@ -4562,7 +4562,7 @@ Model {
 	  Name			  "Current Control"
 	  SID			  "1780"
 	  Ports			  [2, 0, 0, 0, 0, 0, 4]
-	  Position		  [350, 166, 450, 349]
+	  Position		  [500, 166, 600, 349]
 	  ZOrder		  545
 	  FontName		  "Times New Roman"
 	  FontSize		  12
@@ -4622,7 +4622,7 @@ Model {
 	      System {
 		Name			"Current_Sources"
 		Location		[-8, 0, 1448, 876]
-		Open			off
+		Open			on
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -5640,6 +5640,20 @@ Model {
 		  SaturateOnIntegerOverflow off
 		}
 		Block {
+		  BlockType		  Terminator
+		  Name			  "Terminator"
+		  SID			  "4578"
+		  Position		  [655, 50, 675, 70]
+		  ZOrder		  1601
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  "Terminator1"
+		  SID			  "4579"
+		  Position		  [655, 90, 675, 110]
+		  ZOrder		  1602
+		}
+		Block {
 		  BlockType		  ToFile
 		  Name			  "To File"
 		  SID			  "3161"
@@ -6007,6 +6021,20 @@ Model {
 		    DstBlock		    "DeltaP"
 		    DstPort		    1
 		  }
+		}
+		Line {
+		  SrcBlock		  "Conncection_Measurements"
+		  SrcPort		  1
+		  Points		  [32, 0; 0, -55]
+		  DstBlock		  "Terminator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Conncection_Measurements"
+		  SrcPort		  2
+		  Points		  [50, 0; 0, -30]
+		  DstBlock		  "Terminator1"
+		  DstPort		  1
 		}
 	      }
 	    }
@@ -9871,7 +9899,7 @@ Model {
 	  Name			  "NORM"
 	  SID			  "3244"
 	  Ports			  [1]
-	  Position		  [305, 244, 335, 276]
+	  Position		  [455, 244, 485, 276]
 	  ZOrder		  852
 	  Floating		  off
 	  Location		  [5, 43, 1375, 762]
@@ -9901,10 +9929,58 @@ Model {
 	  SampleTime		  "0"
 	}
 	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator1"
+	  SID			  "4573"
+	  Position		  [250, 260, 270, 280]
+	  ZOrder		  1611
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator2"
+	  SID			  "4574"
+	  Position		  [250, 240, 270, 260]
+	  ZOrder		  1612
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator3"
+	  SID			  "4575"
+	  Position		  [250, 220, 270, 240]
+	  ZOrder		  1613
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator4"
+	  SID			  "4576"
+	  Position		  [250, 200, 270, 220]
+	  ZOrder		  1614
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator5"
+	  SID			  "4577"
+	  Position		  [250, 180, 270, 200]
+	  ZOrder		  1615
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator9"
+	  SID			  "4570"
+	  Position		  [250, 300, 270, 320]
+	  ZOrder		  1608
+	  ShowName		  off
+	}
+	Block {
 	  BlockType		  PMIOPort
 	  Name			  "U"
 	  SID			  "3523"
-	  Position		  [455, 75, 485, 90]
+	  Position		  [605, 75, 635, 90]
 	  ZOrder		  860
 	  BlockRotation		  270
 	  BlockMirror		  on
@@ -9915,7 +9991,7 @@ Model {
 	  BlockType		  PMIOPort
 	  Name			  "V"
 	  SID			  "3524"
-	  Position		  [500, 75, 530, 90]
+	  Position		  [650, 75, 680, 90]
 	  ZOrder		  861
 	  BlockRotation		  270
 	  BlockMirror		  on
@@ -9926,7 +10002,7 @@ Model {
 	  BlockType		  PMIOPort
 	  Name			  "W"
 	  SID			  "3525"
-	  Position		  [545, 75, 575, 90]
+	  Position		  [695, 75, 725, 90]
 	  ZOrder		  862
 	  BlockRotation		  270
 	  BlockMirror		  on
@@ -9937,7 +10013,7 @@ Model {
 	  BlockType		  PMIOPort
 	  Name			  "n"
 	  SID			  "3526"
-	  Position		  [595, 75, 625, 90]
+	  Position		  [745, 75, 775, 90]
 	  ZOrder		  863
 	  BlockRotation		  270
 	  BlockMirror		  on
@@ -9948,7 +10024,7 @@ Model {
 	  LineType		  "Connection"
 	  SrcBlock		  "Calculate_Norms"
 	  SrcPort		  LConn1
-	  Points		  [-5, 0; 0, -37; 350, 0]
+	  Points		  [0, -37; 560, 0]
 	  Branch {
 	    ConnectType		    "DEST_DEST"
 	    SrcBlock		    "Current Control"
@@ -9965,7 +10041,7 @@ Model {
 	  LineType		  "Connection"
 	  SrcBlock		  "Calculate_Norms"
 	  SrcPort		  LConn3
-	  Points		  [-28, 0; 0, -156; 463, 0]
+	  Points		  [-28, 0; 0, -156; 678, 0]
 	  Branch {
 	    ConnectType		    "DEST_DEST"
 	    SrcBlock		    "Current Control"
@@ -9982,7 +10058,7 @@ Model {
 	  LineType		  "Connection"
 	  SrcBlock		  "Calculate_Norms"
 	  SrcPort		  LConn2
-	  Points		  [-17, 0; 0, -96; 407, 0]
+	  Points		  [-14, 0; 0, -96; 619, 0]
 	  Branch {
 	    ConnectType		    "DEST_DEST"
 	    SrcBlock		    "Current Control"
@@ -9999,7 +10075,7 @@ Model {
 	  LineType		  "Connection"
 	  SrcBlock		  "Calculate_Norms"
 	  SrcPort		  LConn4
-	  Points		  [-41, 0; 0, -215; 526, 0]
+	  Points		  [-42, 0; 0, -215; 742, 0]
 	  Branch {
 	    ConnectType		    "DEST_SRC"
 	    Points		    [0, 210]
@@ -10016,14 +10092,14 @@ Model {
 	Line {
 	  SrcBlock		  "Calculate_Norms"
 	  SrcPort		  8
-	  Points		  [81, 0; 0, -25]
+	  Points		  [296, 0; 0, -25]
 	  DstBlock		  "Current Control"
 	  DstPort		  2
 	}
 	Line {
 	  SrcBlock		  "Calculate_Norms"
 	  SrcPort		  6
-	  Points		  [38, 0; 0, -30]
+	  Points		  [253, 0; 0, -30]
 	  Branch {
 	    DstBlock		    "NORM"
 	    DstPort		    1
@@ -10033,6 +10109,42 @@ Model {
 	    DstBlock		    "Current Control"
 	    DstPort		    1
 	  }
+	}
+	Line {
+	  SrcBlock		  "Calculate_Norms"
+	  SrcPort		  7
+	  DstBlock		  "Terminator9"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Calculate_Norms"
+	  SrcPort		  1
+	  DstBlock		  "Terminator5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Calculate_Norms"
+	  SrcPort		  2
+	  DstBlock		  "Terminator4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Calculate_Norms"
+	  SrcPort		  3
+	  DstBlock		  "Terminator3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Calculate_Norms"
+	  SrcPort		  4
+	  DstBlock		  "Terminator2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Calculate_Norms"
+	  SrcPort		  5
+	  DstBlock		  "Terminator1"
+	  DstPort		  1
 	}
       }
     }
@@ -16952,8 +17064,8 @@ Model {
       BlockType		      SubSystem
       Name		      "SubNetwork1"
       SID		      "3943"
-      Ports		      [0, 1, 0, 0, 0, 4, 4]
-      Position		      [434, 175, 496, 265]
+      Ports		      [0, 0, 0, 0, 0, 4, 4]
+      Position		      [436, 175, 499, 265]
       ZOrder		      1601
       BlockRotation	      270
       BlockMirror	      on
@@ -16968,7 +17080,7 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"SubNetwork1"
-	Location		[-8, -8, 1448, 868]
+	Location		[-8, 0, 1448, 876]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -17062,261 +17174,18 @@ Model {
 	  DisplayOption		  "bar"
 	}
 	Block {
-	  BlockType		  SubSystem
-	  Name			  "Pwer_losses"
-	  SID			  "3950"
-	  Ports			  [2, 4]
-	  Position		  [975, 21, 1090, 139]
-	  ZOrder		  1583
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
-	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
-	  System {
-	    Name		    "Pwer_losses"
-	    Location		    [-8, -8, 1448, 868]
-	    Open		    off
-	    ModelBrowserVisibility  off
-	    ModelBrowserWidth	    200
-	    ScreenColor		    "white"
-	    PaperOrientation	    "landscape"
-	    PaperPositionMode	    "auto"
-	    PaperType		    "A4"
-	    PaperUnits		    "centimeters"
-	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
-	    TiledPageScale	    1
-	    ShowPageBoundaries	    off
-	    ZoomFactor		    "80"
-	    Block {
-	      BlockType		      Inport
-	      Name		      "U_abc"
-	      SID		      "3951"
-	      Position		      [20, 128, 50, 142]
-	      ZOrder		      243
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Inport
-	      Name		      "I_abc"
-	      SID		      "3952"
-	      Position		      [20, 378, 50, 392]
-	      ZOrder		      248
-	      Port		      "2"
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Demux
-	      Name		      "Demux1"
-	      SID		      "3953"
-	      Ports		      [1, 4]
-	      Position		      [235, 267, 240, 503]
-	      ZOrder		      246
-	      ShowName		      off
-	      DisplayOption	      "bar"
-	    }
-	    Block {
-	      BlockType		      Demux
-	      Name		      "Demux3"
-	      SID		      "3954"
-	      Ports		      [1, 4]
-	      Position		      [235, 17, 240, 253]
-	      ZOrder		      242
-	      ShowName		      off
-	      DisplayOption	      "bar"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "P Q in1"
-	      SID		      "3955"
-	      Ports		      [2, 1]
-	      Position		      [540, 211, 620, 269]
-	      ZOrder		      251
-	      ShowName		      off
-	      LibraryVersion	      "1.664"
-	      SourceBlock	      "powerlib_extras/Measurements/Active & Reactive\nPower"
-	      SourceType	      "Active & Reactive Power "
-	      f1		      "Source_Frequency(3)"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "P Q in3"
-	      SID		      "3956"
-	      Ports		      [2, 1]
-	      Position		      [540, 32, 620, 88]
-	      ZOrder		      224
-	      ShowName		      off
-	      LibraryVersion	      "1.664"
-	      SourceBlock	      "powerlib_extras/Measurements/Active & Reactive\nPower"
-	      SourceType	      "Active & Reactive Power "
-	      f1		      "Source_Frequency(1)"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "P Q in4"
-	      SID		      "3957"
-	      Ports		      [2, 1]
-	      Position		      [540, 91, 620, 149]
-	      ZOrder		      229
-	      ShowName		      off
-	      LibraryVersion	      "1.664"
-	      SourceBlock	      "powerlib_extras/Measurements/Active & Reactive\nPower"
-	      SourceType	      "Active & Reactive Power "
-	      f1		      "Source_Frequency(2)"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "P Q in5"
-	      SID		      "3958"
-	      Ports		      [2, 1]
-	      Position		      [540, 151, 620, 209]
-	      ZOrder		      230
-	      ShowName		      off
-	      LibraryVersion	      "1.664"
-	      SourceBlock	      "powerlib_extras/Measurements/Active & Reactive\nPower"
-	      SourceType	      "Active & Reactive Power "
-	      f1		      "Source_Frequency(3)"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "PQ_R"
-	      SID		      "3959"
-	      Position		      [690, 53, 720, 67]
-	      ZOrder		      244
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "PQ_S"
-	      SID		      "3960"
-	      Position		      [690, 113, 720, 127]
-	      ZOrder		      249
-	      Port		      "2"
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "PQ_T"
-	      SID		      "3961"
-	      Position		      [690, 173, 720, 187]
-	      ZOrder		      250
-	      Port		      "3"
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "PQ_N"
-	      SID		      "3962"
-	      Position		      [690, 233, 720, 247]
-	      ZOrder		      252
-	      Port		      "4"
-	      IconDisplay	      "Port number"
-	    }
-	    Line {
-	      SrcBlock		      "Demux1"
-	      SrcPort		      4
-	      Points		      [262, 0; 0, -220]
-	      DstBlock		      "P Q in1"
-	      DstPort		      2
-	    }
-	    Line {
-	      SrcBlock		      "Demux3"
-	      SrcPort		      4
-	      DstBlock		      "P Q in1"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "P Q in1"
-	      SrcPort		      1
-	      DstBlock		      "PQ_N"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "I_abc"
-	      SrcPort		      1
-	      DstBlock		      "Demux1"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "U_abc"
-	      SrcPort		      1
-	      DstBlock		      "Demux3"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Demux1"
-	      SrcPort		      3
-	      Points		      [229, 0; 0, -220]
-	      DstBlock		      "P Q in5"
-	      DstPort		      2
-	    }
-	    Line {
-	      SrcBlock		      "Demux1"
-	      SrcPort		      2
-	      Points		      [173, 0; 0, -220]
-	      DstBlock		      "P Q in4"
-	      DstPort		      2
-	    }
-	    Line {
-	      SrcBlock		      "Demux1"
-	      SrcPort		      1
-	      Points		      [124, 0; 0, -220]
-	      DstBlock		      "P Q in3"
-	      DstPort		      2
-	    }
-	    Line {
-	      SrcBlock		      "Demux3"
-	      SrcPort		      3
-	      DstBlock		      "P Q in5"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Demux3"
-	      SrcPort		      2
-	      DstBlock		      "P Q in4"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Demux3"
-	      SrcPort		      1
-	      DstBlock		      "P Q in3"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "P Q in5"
-	      SrcPort		      1
-	      DstBlock		      "PQ_T"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "P Q in4"
-	      SrcPort		      1
-	      DstBlock		      "PQ_S"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "P Q in3"
-	      SrcPort		      1
-	      DstBlock		      "PQ_R"
-	      DstPort		      1
-	    }
-	  }
+	  BlockType		  Terminator
+	  Name			  "Terminator"
+	  SID			  "4555"
+	  Position		  [1025, 40, 1045, 60]
+	  ZOrder		  1598
 	}
 	Block {
-	  BlockType		  Sum
-	  Name			  "Sum"
-	  SID			  "3963"
-	  Ports			  [4, 1]
-	  Position		  [1150, 65, 1180, 95]
-	  ZOrder		  1584
-	  ShowName		  off
-	  IconShape		  "round"
-	  Inputs		  "++++"
-	  InputSameDT		  off
-	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
-	  SaturateOnIntegerOverflow off
+	  BlockType		  Terminator
+	  Name			  "Terminator1"
+	  SID			  "4556"
+	  Position		  [1025, 100, 1045, 120]
+	  ZOrder		  1599
 	}
 	Block {
 	  BlockType		  Reference
@@ -17628,21 +17497,6 @@ Model {
 	  Port			  "8"
 	  Side			  "Right"
 	}
-	Block {
-	  BlockType		  Outport
-	  Name			  "Loss"
-	  SID			  "4471"
-	  Position		  [1220, 73, 1250, 87]
-	  ZOrder		  1597
-	  IconDisplay		  "Port number"
-	}
-	Line {
-	  SrcBlock		  "Pwer_losses"
-	  SrcPort		  4
-	  Points		  [70, 0]
-	  DstBlock		  "Sum"
-	  DstPort		  4
-	}
 	Line {
 	  SrcBlock		  "Current Measurement3"
 	  SrcPort		  1
@@ -17672,18 +17526,6 @@ Model {
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "Mux1"
-	  SrcPort		  1
-	  DstBlock		  "Pwer_losses"
-	  DstPort		  2
-	}
-	Line {
-	  SrcBlock		  "Mux"
-	  SrcPort		  1
-	  DstBlock		  "Pwer_losses"
-	  DstPort		  1
-	}
-	Line {
 	  SrcBlock		  "Voltage Measurement4"
 	  SrcPort		  1
 	  Points		  [0, -145]
@@ -17710,25 +17552,6 @@ Model {
 	  Points		  [0, -5]
 	  DstBlock		  "Mux"
 	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "Pwer_losses"
-	  SrcPort		  3
-	  DstBlock		  "Sum"
-	  DstPort		  3
-	}
-	Line {
-	  SrcBlock		  "Pwer_losses"
-	  SrcPort		  1
-	  Points		  [70, 0]
-	  DstBlock		  "Sum"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "Pwer_losses"
-	  SrcPort		  2
-	  DstBlock		  "Sum"
-	  DstPort		  2
 	}
 	Line {
 	  LineType		  "Connection"
@@ -17957,9 +17780,15 @@ Model {
 	  }
 	}
 	Line {
-	  SrcBlock		  "Sum"
+	  SrcBlock		  "Mux"
 	  SrcPort		  1
-	  DstBlock		  "Loss"
+	  DstBlock		  "Terminator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux1"
+	  SrcPort		  1
+	  DstBlock		  "Terminator1"
 	  DstPort		  1
 	}
       }
@@ -17968,8 +17797,8 @@ Model {
       BlockType		      SubSystem
       Name		      "SubNetwork2"
       SID		      "3984"
-      Ports		      [0, 1, 0, 0, 0, 4, 4]
-      Position		      [584, 175, 646, 265]
+      Ports		      [0, 0, 0, 0, 0, 4, 4]
+      Position		      [586, 175, 649, 265]
       ZOrder		      1602
       BlockRotation	      270
       BlockMirror	      on
@@ -17984,7 +17813,7 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"SubNetwork2"
-	Location		[-8, -8, 1448, 868]
+	Location		[-8, 0, 1448, 876]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -18078,261 +17907,18 @@ Model {
 	  DisplayOption		  "bar"
 	}
 	Block {
-	  BlockType		  SubSystem
-	  Name			  "Pwer_losses"
-	  SID			  "3991"
-	  Ports			  [2, 4]
-	  Position		  [975, 21, 1090, 139]
-	  ZOrder		  1583
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
-	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
-	  System {
-	    Name		    "Pwer_losses"
-	    Location		    [-8, -8, 1448, 868]
-	    Open		    off
-	    ModelBrowserVisibility  off
-	    ModelBrowserWidth	    200
-	    ScreenColor		    "white"
-	    PaperOrientation	    "landscape"
-	    PaperPositionMode	    "auto"
-	    PaperType		    "A4"
-	    PaperUnits		    "centimeters"
-	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
-	    TiledPageScale	    1
-	    ShowPageBoundaries	    off
-	    ZoomFactor		    "80"
-	    Block {
-	      BlockType		      Inport
-	      Name		      "U_abc"
-	      SID		      "3992"
-	      Position		      [20, 128, 50, 142]
-	      ZOrder		      243
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Inport
-	      Name		      "I_abc"
-	      SID		      "3993"
-	      Position		      [20, 378, 50, 392]
-	      ZOrder		      248
-	      Port		      "2"
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Demux
-	      Name		      "Demux1"
-	      SID		      "3994"
-	      Ports		      [1, 4]
-	      Position		      [235, 267, 240, 503]
-	      ZOrder		      246
-	      ShowName		      off
-	      DisplayOption	      "bar"
-	    }
-	    Block {
-	      BlockType		      Demux
-	      Name		      "Demux3"
-	      SID		      "3995"
-	      Ports		      [1, 4]
-	      Position		      [235, 17, 240, 253]
-	      ZOrder		      242
-	      ShowName		      off
-	      DisplayOption	      "bar"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "P Q in1"
-	      SID		      "3996"
-	      Ports		      [2, 1]
-	      Position		      [540, 211, 620, 269]
-	      ZOrder		      251
-	      ShowName		      off
-	      LibraryVersion	      "1.664"
-	      SourceBlock	      "powerlib_extras/Measurements/Active & Reactive\nPower"
-	      SourceType	      "Active & Reactive Power "
-	      f1		      "Source_Frequency(3)"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "P Q in3"
-	      SID		      "3997"
-	      Ports		      [2, 1]
-	      Position		      [540, 32, 620, 88]
-	      ZOrder		      224
-	      ShowName		      off
-	      LibraryVersion	      "1.664"
-	      SourceBlock	      "powerlib_extras/Measurements/Active & Reactive\nPower"
-	      SourceType	      "Active & Reactive Power "
-	      f1		      "Source_Frequency(1)"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "P Q in4"
-	      SID		      "3998"
-	      Ports		      [2, 1]
-	      Position		      [540, 91, 620, 149]
-	      ZOrder		      229
-	      ShowName		      off
-	      LibraryVersion	      "1.664"
-	      SourceBlock	      "powerlib_extras/Measurements/Active & Reactive\nPower"
-	      SourceType	      "Active & Reactive Power "
-	      f1		      "Source_Frequency(2)"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "P Q in5"
-	      SID		      "3999"
-	      Ports		      [2, 1]
-	      Position		      [540, 151, 620, 209]
-	      ZOrder		      230
-	      ShowName		      off
-	      LibraryVersion	      "1.664"
-	      SourceBlock	      "powerlib_extras/Measurements/Active & Reactive\nPower"
-	      SourceType	      "Active & Reactive Power "
-	      f1		      "Source_Frequency(3)"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "PQ_R"
-	      SID		      "4000"
-	      Position		      [690, 53, 720, 67]
-	      ZOrder		      244
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "PQ_S"
-	      SID		      "4001"
-	      Position		      [690, 113, 720, 127]
-	      ZOrder		      249
-	      Port		      "2"
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "PQ_T"
-	      SID		      "4002"
-	      Position		      [690, 173, 720, 187]
-	      ZOrder		      250
-	      Port		      "3"
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "PQ_N"
-	      SID		      "4003"
-	      Position		      [690, 233, 720, 247]
-	      ZOrder		      252
-	      Port		      "4"
-	      IconDisplay	      "Port number"
-	    }
-	    Line {
-	      SrcBlock		      "P Q in3"
-	      SrcPort		      1
-	      DstBlock		      "PQ_R"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "P Q in4"
-	      SrcPort		      1
-	      DstBlock		      "PQ_S"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "P Q in5"
-	      SrcPort		      1
-	      DstBlock		      "PQ_T"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Demux3"
-	      SrcPort		      1
-	      DstBlock		      "P Q in3"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Demux3"
-	      SrcPort		      2
-	      DstBlock		      "P Q in4"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Demux3"
-	      SrcPort		      3
-	      DstBlock		      "P Q in5"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Demux1"
-	      SrcPort		      1
-	      Points		      [124, 0; 0, -220]
-	      DstBlock		      "P Q in3"
-	      DstPort		      2
-	    }
-	    Line {
-	      SrcBlock		      "Demux1"
-	      SrcPort		      2
-	      Points		      [173, 0; 0, -220]
-	      DstBlock		      "P Q in4"
-	      DstPort		      2
-	    }
-	    Line {
-	      SrcBlock		      "Demux1"
-	      SrcPort		      3
-	      Points		      [229, 0; 0, -220]
-	      DstBlock		      "P Q in5"
-	      DstPort		      2
-	    }
-	    Line {
-	      SrcBlock		      "U_abc"
-	      SrcPort		      1
-	      DstBlock		      "Demux3"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "I_abc"
-	      SrcPort		      1
-	      DstBlock		      "Demux1"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "P Q in1"
-	      SrcPort		      1
-	      DstBlock		      "PQ_N"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Demux3"
-	      SrcPort		      4
-	      DstBlock		      "P Q in1"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Demux1"
-	      SrcPort		      4
-	      Points		      [262, 0; 0, -220]
-	      DstBlock		      "P Q in1"
-	      DstPort		      2
-	    }
-	  }
+	  BlockType		  Terminator
+	  Name			  "Terminator"
+	  SID			  "4557"
+	  Position		  [980, 40, 1000, 60]
+	  ZOrder		  1598
 	}
 	Block {
-	  BlockType		  Sum
-	  Name			  "Sum"
-	  SID			  "4004"
-	  Ports			  [4, 1]
-	  Position		  [1150, 65, 1180, 95]
-	  ZOrder		  1584
-	  ShowName		  off
-	  IconShape		  "round"
-	  Inputs		  "++++"
-	  InputSameDT		  off
-	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
-	  SaturateOnIntegerOverflow off
+	  BlockType		  Terminator
+	  Name			  "Terminator1"
+	  SID			  "4558"
+	  Position		  [980, 100, 1000, 120]
+	  ZOrder		  1599
 	}
 	Block {
 	  BlockType		  Reference
@@ -18644,14 +18230,6 @@ Model {
 	  Port			  "8"
 	  Side			  "Right"
 	}
-	Block {
-	  BlockType		  Outport
-	  Name			  "Loss"
-	  SID			  "4472"
-	  Position		  [1210, 73, 1240, 87]
-	  ZOrder		  1597
-	  IconDisplay		  "Port number"
-	}
 	Line {
 	  LineType		  "Connection"
 	  SrcBlock		  "Transf-L  Line -R4"
@@ -18878,31 +18456,6 @@ Model {
 	  DstPort		  RConn1
 	}
 	Line {
-	  SrcBlock		  "Pwer_losses"
-	  SrcPort		  2
-	  DstBlock		  "Sum"
-	  DstPort		  2
-	}
-	Line {
-	  SrcBlock		  "Pwer_losses"
-	  SrcPort		  1
-	  Points		  [70, 0]
-	  DstBlock		  "Sum"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "Pwer_losses"
-	  SrcPort		  3
-	  DstBlock		  "Sum"
-	  DstPort		  3
-	}
-	Line {
-	  SrcBlock		  "Sum"
-	  SrcPort		  1
-	  DstBlock		  "Loss"
-	  DstPort		  1
-	}
-	Line {
 	  SrcBlock		  "Voltage Measurement"
 	  SrcPort		  1
 	  Points		  [0, -5]
@@ -18933,14 +18486,14 @@ Model {
 	Line {
 	  SrcBlock		  "Mux"
 	  SrcPort		  1
-	  DstBlock		  "Pwer_losses"
+	  DstBlock		  "Terminator"
 	  DstPort		  1
 	}
 	Line {
 	  SrcBlock		  "Mux1"
 	  SrcPort		  1
-	  DstBlock		  "Pwer_losses"
-	  DstPort		  2
+	  DstBlock		  "Terminator1"
+	  DstPort		  1
 	}
 	Line {
 	  SrcBlock		  "Current Measurement"
@@ -18970,21 +18523,14 @@ Model {
 	  DstBlock		  "Mux1"
 	  DstPort		  4
 	}
-	Line {
-	  SrcBlock		  "Pwer_losses"
-	  SrcPort		  4
-	  Points		  [70, 0]
-	  DstBlock		  "Sum"
-	  DstPort		  4
-	}
       }
     }
     Block {
       BlockType		      SubSystem
       Name		      "SubNetwork3"
       SID		      "4025"
-      Ports		      [0, 1, 0, 0, 0, 4, 4]
-      Position		      [734, 175, 796, 265]
+      Ports		      [0, 0, 0, 0, 0, 4, 4]
+      Position		      [736, 175, 799, 265]
       ZOrder		      1603
       BlockRotation	      270
       BlockMirror	      on
@@ -18999,7 +18545,7 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"SubNetwork3"
-	Location		[-8, -8, 1448, 868]
+	Location		[-8, 0, 1448, 876]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -19093,261 +18639,18 @@ Model {
 	  DisplayOption		  "bar"
 	}
 	Block {
-	  BlockType		  SubSystem
-	  Name			  "Pwer_losses"
-	  SID			  "4032"
-	  Ports			  [2, 4]
-	  Position		  [975, 21, 1090, 139]
-	  ZOrder		  1583
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
-	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
-	  System {
-	    Name		    "Pwer_losses"
-	    Location		    [-8, -8, 1448, 868]
-	    Open		    off
-	    ModelBrowserVisibility  off
-	    ModelBrowserWidth	    200
-	    ScreenColor		    "white"
-	    PaperOrientation	    "landscape"
-	    PaperPositionMode	    "auto"
-	    PaperType		    "A4"
-	    PaperUnits		    "centimeters"
-	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
-	    TiledPageScale	    1
-	    ShowPageBoundaries	    off
-	    ZoomFactor		    "80"
-	    Block {
-	      BlockType		      Inport
-	      Name		      "U_abc"
-	      SID		      "4033"
-	      Position		      [20, 128, 50, 142]
-	      ZOrder		      243
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Inport
-	      Name		      "I_abc"
-	      SID		      "4034"
-	      Position		      [20, 378, 50, 392]
-	      ZOrder		      248
-	      Port		      "2"
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Demux
-	      Name		      "Demux1"
-	      SID		      "4035"
-	      Ports		      [1, 4]
-	      Position		      [235, 267, 240, 503]
-	      ZOrder		      246
-	      ShowName		      off
-	      DisplayOption	      "bar"
-	    }
-	    Block {
-	      BlockType		      Demux
-	      Name		      "Demux3"
-	      SID		      "4036"
-	      Ports		      [1, 4]
-	      Position		      [235, 17, 240, 253]
-	      ZOrder		      242
-	      ShowName		      off
-	      DisplayOption	      "bar"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "P Q in1"
-	      SID		      "4037"
-	      Ports		      [2, 1]
-	      Position		      [540, 211, 620, 269]
-	      ZOrder		      251
-	      ShowName		      off
-	      LibraryVersion	      "1.664"
-	      SourceBlock	      "powerlib_extras/Measurements/Active & Reactive\nPower"
-	      SourceType	      "Active & Reactive Power "
-	      f1		      "Source_Frequency(3)"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "P Q in3"
-	      SID		      "4038"
-	      Ports		      [2, 1]
-	      Position		      [540, 32, 620, 88]
-	      ZOrder		      224
-	      ShowName		      off
-	      LibraryVersion	      "1.664"
-	      SourceBlock	      "powerlib_extras/Measurements/Active & Reactive\nPower"
-	      SourceType	      "Active & Reactive Power "
-	      f1		      "Source_Frequency(1)"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "P Q in4"
-	      SID		      "4039"
-	      Ports		      [2, 1]
-	      Position		      [540, 91, 620, 149]
-	      ZOrder		      229
-	      ShowName		      off
-	      LibraryVersion	      "1.664"
-	      SourceBlock	      "powerlib_extras/Measurements/Active & Reactive\nPower"
-	      SourceType	      "Active & Reactive Power "
-	      f1		      "Source_Frequency(2)"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "P Q in5"
-	      SID		      "4040"
-	      Ports		      [2, 1]
-	      Position		      [540, 151, 620, 209]
-	      ZOrder		      230
-	      ShowName		      off
-	      LibraryVersion	      "1.664"
-	      SourceBlock	      "powerlib_extras/Measurements/Active & Reactive\nPower"
-	      SourceType	      "Active & Reactive Power "
-	      f1		      "Source_Frequency(3)"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "PQ_R"
-	      SID		      "4041"
-	      Position		      [690, 53, 720, 67]
-	      ZOrder		      244
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "PQ_S"
-	      SID		      "4042"
-	      Position		      [690, 113, 720, 127]
-	      ZOrder		      249
-	      Port		      "2"
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "PQ_T"
-	      SID		      "4043"
-	      Position		      [690, 173, 720, 187]
-	      ZOrder		      250
-	      Port		      "3"
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "PQ_N"
-	      SID		      "4044"
-	      Position		      [690, 233, 720, 247]
-	      ZOrder		      252
-	      Port		      "4"
-	      IconDisplay	      "Port number"
-	    }
-	    Line {
-	      SrcBlock		      "Demux1"
-	      SrcPort		      4
-	      Points		      [262, 0; 0, -220]
-	      DstBlock		      "P Q in1"
-	      DstPort		      2
-	    }
-	    Line {
-	      SrcBlock		      "Demux3"
-	      SrcPort		      4
-	      DstBlock		      "P Q in1"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "P Q in1"
-	      SrcPort		      1
-	      DstBlock		      "PQ_N"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "I_abc"
-	      SrcPort		      1
-	      DstBlock		      "Demux1"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "U_abc"
-	      SrcPort		      1
-	      DstBlock		      "Demux3"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Demux1"
-	      SrcPort		      3
-	      Points		      [229, 0; 0, -220]
-	      DstBlock		      "P Q in5"
-	      DstPort		      2
-	    }
-	    Line {
-	      SrcBlock		      "Demux1"
-	      SrcPort		      2
-	      Points		      [173, 0; 0, -220]
-	      DstBlock		      "P Q in4"
-	      DstPort		      2
-	    }
-	    Line {
-	      SrcBlock		      "Demux1"
-	      SrcPort		      1
-	      Points		      [124, 0; 0, -220]
-	      DstBlock		      "P Q in3"
-	      DstPort		      2
-	    }
-	    Line {
-	      SrcBlock		      "Demux3"
-	      SrcPort		      3
-	      DstBlock		      "P Q in5"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Demux3"
-	      SrcPort		      2
-	      DstBlock		      "P Q in4"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Demux3"
-	      SrcPort		      1
-	      DstBlock		      "P Q in3"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "P Q in5"
-	      SrcPort		      1
-	      DstBlock		      "PQ_T"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "P Q in4"
-	      SrcPort		      1
-	      DstBlock		      "PQ_S"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "P Q in3"
-	      SrcPort		      1
-	      DstBlock		      "PQ_R"
-	      DstPort		      1
-	    }
-	  }
+	  BlockType		  Terminator
+	  Name			  "Terminator"
+	  SID			  "4559"
+	  Position		  [980, 40, 1000, 60]
+	  ZOrder		  1599
 	}
 	Block {
-	  BlockType		  Sum
-	  Name			  "Sum"
-	  SID			  "4045"
-	  Ports			  [4, 1]
-	  Position		  [1150, 65, 1180, 95]
-	  ZOrder		  1584
-	  ShowName		  off
-	  IconShape		  "round"
-	  Inputs		  "++++"
-	  InputSameDT		  off
-	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
-	  SaturateOnIntegerOverflow off
+	  BlockType		  Terminator
+	  Name			  "Terminator1"
+	  SID			  "4560"
+	  Position		  [980, 100, 1000, 120]
+	  ZOrder		  1600
 	}
 	Block {
 	  BlockType		  Reference
@@ -19659,21 +18962,6 @@ Model {
 	  Port			  "8"
 	  Side			  "Right"
 	}
-	Block {
-	  BlockType		  Outport
-	  Name			  "Loss"
-	  SID			  "4473"
-	  Position		  [1205, 73, 1235, 87]
-	  ZOrder		  1597
-	  IconDisplay		  "Port number"
-	}
-	Line {
-	  SrcBlock		  "Pwer_losses"
-	  SrcPort		  4
-	  Points		  [70, 0]
-	  DstBlock		  "Sum"
-	  DstPort		  4
-	}
 	Line {
 	  SrcBlock		  "Current Measurement3"
 	  SrcPort		  1
@@ -19705,13 +18993,13 @@ Model {
 	Line {
 	  SrcBlock		  "Mux1"
 	  SrcPort		  1
-	  DstBlock		  "Pwer_losses"
-	  DstPort		  2
+	  DstBlock		  "Terminator1"
+	  DstPort		  1
 	}
 	Line {
 	  SrcBlock		  "Mux"
 	  SrcPort		  1
-	  DstBlock		  "Pwer_losses"
+	  DstBlock		  "Terminator"
 	  DstPort		  1
 	}
 	Line {
@@ -19741,31 +19029,6 @@ Model {
 	  Points		  [0, -5]
 	  DstBlock		  "Mux"
 	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "Sum"
-	  SrcPort		  1
-	  DstBlock		  "Loss"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "Pwer_losses"
-	  SrcPort		  3
-	  DstBlock		  "Sum"
-	  DstPort		  3
-	}
-	Line {
-	  SrcBlock		  "Pwer_losses"
-	  SrcPort		  1
-	  Points		  [70, 0]
-	  DstBlock		  "Sum"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "Pwer_losses"
-	  SrcPort		  2
-	  DstBlock		  "Sum"
-	  DstPort		  2
 	}
 	Line {
 	  LineType		  "Connection"
@@ -19994,19 +19257,6 @@ Model {
 	  }
 	}
       }
-    }
-    Block {
-      BlockType		      Sum
-      Name		      "Sum"
-      SID		      "4474"
-      Ports		      [6, 1]
-      Position		      [60, 44, 85, 131]
-      ZOrder		      1608
-      ShowName		      off
-      Inputs		      "++++++"
-      InputSameDT	      off
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
     }
     Block {
       BlockType		      SubSystem
@@ -20512,7 +19762,7 @@ Model {
       BlockType		      SubSystem
       Name		      "TransNetwork1"
       SID		      "668"
-      Ports		      [0, 1, 0, 0, 0, 4, 4]
+      Ports		      [0, 0, 0, 0, 0, 4, 4]
       Position		      [340, 47, 400, 133]
       ZOrder		      324
       FontName		      "Times New Roman"
@@ -20620,261 +19870,18 @@ Model {
 	  DisplayOption		  "bar"
 	}
 	Block {
-	  BlockType		  SubSystem
-	  Name			  "Power_losses"
-	  SID			  "3588"
-	  Ports			  [2, 4]
-	  Position		  [975, 21, 1090, 139]
-	  ZOrder		  1583
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
-	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
-	  System {
-	    Name		    "Power_losses"
-	    Location		    [-8, 0, 1448, 876]
-	    Open		    off
-	    ModelBrowserVisibility  off
-	    ModelBrowserWidth	    200
-	    ScreenColor		    "white"
-	    PaperOrientation	    "landscape"
-	    PaperPositionMode	    "auto"
-	    PaperType		    "A4"
-	    PaperUnits		    "centimeters"
-	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
-	    TiledPageScale	    1
-	    ShowPageBoundaries	    off
-	    ZoomFactor		    "80"
-	    Block {
-	      BlockType		      Inport
-	      Name		      "U_abc"
-	      SID		      "3589"
-	      Position		      [20, 128, 50, 142]
-	      ZOrder		      243
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Inport
-	      Name		      "I_abc"
-	      SID		      "3590"
-	      Position		      [20, 378, 50, 392]
-	      ZOrder		      248
-	      Port		      "2"
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Demux
-	      Name		      "Demux1"
-	      SID		      "3591"
-	      Ports		      [1, 4]
-	      Position		      [235, 267, 240, 503]
-	      ZOrder		      246
-	      ShowName		      off
-	      DisplayOption	      "bar"
-	    }
-	    Block {
-	      BlockType		      Demux
-	      Name		      "Demux3"
-	      SID		      "3592"
-	      Ports		      [1, 4]
-	      Position		      [235, 17, 240, 253]
-	      ZOrder		      242
-	      ShowName		      off
-	      DisplayOption	      "bar"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "P Q in1"
-	      SID		      "3603"
-	      Ports		      [2, 1]
-	      Position		      [540, 211, 620, 269]
-	      ZOrder		      251
-	      ShowName		      off
-	      LibraryVersion	      "1.664"
-	      SourceBlock	      "powerlib_extras/Measurements/Active & Reactive\nPower"
-	      SourceType	      "Active & Reactive Power "
-	      f1		      "Source_Frequency(3)"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "P Q in3"
-	      SID		      "3593"
-	      Ports		      [2, 1]
-	      Position		      [540, 32, 620, 88]
-	      ZOrder		      224
-	      ShowName		      off
-	      LibraryVersion	      "1.664"
-	      SourceBlock	      "powerlib_extras/Measurements/Active & Reactive\nPower"
-	      SourceType	      "Active & Reactive Power "
-	      f1		      "Source_Frequency(1)"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "P Q in4"
-	      SID		      "3594"
-	      Ports		      [2, 1]
-	      Position		      [540, 91, 620, 149]
-	      ZOrder		      229
-	      ShowName		      off
-	      LibraryVersion	      "1.664"
-	      SourceBlock	      "powerlib_extras/Measurements/Active & Reactive\nPower"
-	      SourceType	      "Active & Reactive Power "
-	      f1		      "Source_Frequency(2)"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "P Q in5"
-	      SID		      "3595"
-	      Ports		      [2, 1]
-	      Position		      [540, 151, 620, 209]
-	      ZOrder		      230
-	      ShowName		      off
-	      LibraryVersion	      "1.664"
-	      SourceBlock	      "powerlib_extras/Measurements/Active & Reactive\nPower"
-	      SourceType	      "Active & Reactive Power "
-	      f1		      "Source_Frequency(3)"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "PQ_R"
-	      SID		      "3596"
-	      Position		      [690, 53, 720, 67]
-	      ZOrder		      244
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "PQ_S"
-	      SID		      "3597"
-	      Position		      [690, 113, 720, 127]
-	      ZOrder		      249
-	      Port		      "2"
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "PQ_T"
-	      SID		      "3598"
-	      Position		      [690, 173, 720, 187]
-	      ZOrder		      250
-	      Port		      "3"
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "PQ_N"
-	      SID		      "3604"
-	      Position		      [690, 233, 720, 247]
-	      ZOrder		      252
-	      Port		      "4"
-	      IconDisplay	      "Port number"
-	    }
-	    Line {
-	      SrcBlock		      "P Q in3"
-	      SrcPort		      1
-	      DstBlock		      "PQ_R"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "P Q in4"
-	      SrcPort		      1
-	      DstBlock		      "PQ_S"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "P Q in5"
-	      SrcPort		      1
-	      DstBlock		      "PQ_T"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Demux3"
-	      SrcPort		      1
-	      DstBlock		      "P Q in3"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Demux3"
-	      SrcPort		      2
-	      DstBlock		      "P Q in4"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Demux3"
-	      SrcPort		      3
-	      DstBlock		      "P Q in5"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Demux1"
-	      SrcPort		      1
-	      Points		      [124, 0; 0, -220]
-	      DstBlock		      "P Q in3"
-	      DstPort		      2
-	    }
-	    Line {
-	      SrcBlock		      "Demux1"
-	      SrcPort		      2
-	      Points		      [173, 0; 0, -220]
-	      DstBlock		      "P Q in4"
-	      DstPort		      2
-	    }
-	    Line {
-	      SrcBlock		      "Demux1"
-	      SrcPort		      3
-	      Points		      [229, 0; 0, -220]
-	      DstBlock		      "P Q in5"
-	      DstPort		      2
-	    }
-	    Line {
-	      SrcBlock		      "U_abc"
-	      SrcPort		      1
-	      DstBlock		      "Demux3"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "I_abc"
-	      SrcPort		      1
-	      DstBlock		      "Demux1"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "P Q in1"
-	      SrcPort		      1
-	      DstBlock		      "PQ_N"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Demux3"
-	      SrcPort		      4
-	      DstBlock		      "P Q in1"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Demux1"
-	      SrcPort		      4
-	      Points		      [262, 0; 0, -220]
-	      DstBlock		      "P Q in1"
-	      DstPort		      2
-	    }
-	  }
+	  BlockType		  Terminator
+	  Name			  "Terminator"
+	  SID			  "4548"
+	  Position		  [980, 40, 1000, 60]
+	  ZOrder		  1597
 	}
 	Block {
-	  BlockType		  Sum
-	  Name			  "Sum"
-	  SID			  "3600"
-	  Ports			  [4, 1]
-	  Position		  [1150, 65, 1180, 95]
-	  ZOrder		  1584
-	  ShowName		  off
-	  IconShape		  "round"
-	  Inputs		  "++++"
-	  InputSameDT		  off
-	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
-	  SaturateOnIntegerOverflow off
+	  BlockType		  Terminator
+	  Name			  "Terminator1"
+	  SID			  "4550"
+	  Position		  [980, 100, 1000, 120]
+	  ZOrder		  1599
 	}
 	Block {
 	  BlockType		  Reference
@@ -21186,14 +20193,6 @@ Model {
 	  Port			  "8"
 	  Side			  "Right"
 	}
-	Block {
-	  BlockType		  Outport
-	  Name			  "Loss"
-	  SID			  "4468"
-	  Position		  [1210, 73, 1240, 87]
-	  ZOrder		  1596
-	  IconDisplay		  "Port number"
-	}
 	Line {
 	  LineType		  "Connection"
 	  SrcBlock		  "Transf-L  Line -R4"
@@ -21419,31 +20418,6 @@ Model {
 	  DstPort		  RConn1
 	}
 	Line {
-	  SrcBlock		  "Power_losses"
-	  SrcPort		  2
-	  DstBlock		  "Sum"
-	  DstPort		  2
-	}
-	Line {
-	  SrcBlock		  "Power_losses"
-	  SrcPort		  1
-	  Points		  [70, 0]
-	  DstBlock		  "Sum"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "Power_losses"
-	  SrcPort		  3
-	  DstBlock		  "Sum"
-	  DstPort		  3
-	}
-	Line {
-	  SrcBlock		  "Sum"
-	  SrcPort		  1
-	  DstBlock		  "Loss"
-	  DstPort		  1
-	}
-	Line {
 	  SrcBlock		  "Voltage Measurement"
 	  SrcPort		  1
 	  Points		  [0, -5]
@@ -21474,14 +20448,14 @@ Model {
 	Line {
 	  SrcBlock		  "Mux"
 	  SrcPort		  1
-	  DstBlock		  "Power_losses"
+	  DstBlock		  "Terminator"
 	  DstPort		  1
 	}
 	Line {
 	  SrcBlock		  "Mux1"
 	  SrcPort		  1
-	  DstBlock		  "Power_losses"
-	  DstPort		  2
+	  DstBlock		  "Terminator1"
+	  DstPort		  1
 	}
 	Line {
 	  SrcBlock		  "Current Measurement"
@@ -21511,20 +20485,13 @@ Model {
 	  DstBlock		  "Mux1"
 	  DstPort		  4
 	}
-	Line {
-	  SrcBlock		  "Power_losses"
-	  SrcPort		  4
-	  Points		  [70, 0]
-	  DstBlock		  "Sum"
-	  DstPort		  4
-	}
       }
     }
     Block {
       BlockType		      SubSystem
       Name		      "TransNetwork2"
       SID		      "4066"
-      Ports		      [0, 1, 0, 0, 0, 4, 4]
+      Ports		      [0, 0, 0, 0, 0, 4, 4]
       Position		      [510, 47, 570, 133]
       ZOrder		      1604
       FontName		      "Times New Roman"
@@ -21538,7 +20505,7 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"TransNetwork2"
-	Location		[-8, -8, 1448, 868]
+	Location		[-8, 0, 1448, 876]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -21632,261 +20599,18 @@ Model {
 	  DisplayOption		  "bar"
 	}
 	Block {
-	  BlockType		  SubSystem
-	  Name			  "Pwer_losses"
-	  SID			  "4073"
-	  Ports			  [2, 4]
-	  Position		  [975, 21, 1090, 139]
-	  ZOrder		  1583
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
-	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
-	  System {
-	    Name		    "Pwer_losses"
-	    Location		    [-8, -8, 1448, 868]
-	    Open		    off
-	    ModelBrowserVisibility  off
-	    ModelBrowserWidth	    200
-	    ScreenColor		    "white"
-	    PaperOrientation	    "landscape"
-	    PaperPositionMode	    "auto"
-	    PaperType		    "A4"
-	    PaperUnits		    "centimeters"
-	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
-	    TiledPageScale	    1
-	    ShowPageBoundaries	    off
-	    ZoomFactor		    "80"
-	    Block {
-	      BlockType		      Inport
-	      Name		      "U_abc"
-	      SID		      "4074"
-	      Position		      [20, 128, 50, 142]
-	      ZOrder		      243
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Inport
-	      Name		      "I_abc"
-	      SID		      "4075"
-	      Position		      [20, 378, 50, 392]
-	      ZOrder		      248
-	      Port		      "2"
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Demux
-	      Name		      "Demux1"
-	      SID		      "4076"
-	      Ports		      [1, 4]
-	      Position		      [235, 267, 240, 503]
-	      ZOrder		      246
-	      ShowName		      off
-	      DisplayOption	      "bar"
-	    }
-	    Block {
-	      BlockType		      Demux
-	      Name		      "Demux3"
-	      SID		      "4077"
-	      Ports		      [1, 4]
-	      Position		      [235, 17, 240, 253]
-	      ZOrder		      242
-	      ShowName		      off
-	      DisplayOption	      "bar"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "P Q in1"
-	      SID		      "4078"
-	      Ports		      [2, 1]
-	      Position		      [540, 211, 620, 269]
-	      ZOrder		      251
-	      ShowName		      off
-	      LibraryVersion	      "1.664"
-	      SourceBlock	      "powerlib_extras/Measurements/Active & Reactive\nPower"
-	      SourceType	      "Active & Reactive Power "
-	      f1		      "Source_Frequency(3)"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "P Q in3"
-	      SID		      "4079"
-	      Ports		      [2, 1]
-	      Position		      [540, 32, 620, 88]
-	      ZOrder		      224
-	      ShowName		      off
-	      LibraryVersion	      "1.664"
-	      SourceBlock	      "powerlib_extras/Measurements/Active & Reactive\nPower"
-	      SourceType	      "Active & Reactive Power "
-	      f1		      "Source_Frequency(1)"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "P Q in4"
-	      SID		      "4080"
-	      Ports		      [2, 1]
-	      Position		      [540, 91, 620, 149]
-	      ZOrder		      229
-	      ShowName		      off
-	      LibraryVersion	      "1.664"
-	      SourceBlock	      "powerlib_extras/Measurements/Active & Reactive\nPower"
-	      SourceType	      "Active & Reactive Power "
-	      f1		      "Source_Frequency(2)"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "P Q in5"
-	      SID		      "4081"
-	      Ports		      [2, 1]
-	      Position		      [540, 151, 620, 209]
-	      ZOrder		      230
-	      ShowName		      off
-	      LibraryVersion	      "1.664"
-	      SourceBlock	      "powerlib_extras/Measurements/Active & Reactive\nPower"
-	      SourceType	      "Active & Reactive Power "
-	      f1		      "Source_Frequency(3)"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "PQ_R"
-	      SID		      "4082"
-	      Position		      [690, 53, 720, 67]
-	      ZOrder		      244
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "PQ_S"
-	      SID		      "4083"
-	      Position		      [690, 113, 720, 127]
-	      ZOrder		      249
-	      Port		      "2"
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "PQ_T"
-	      SID		      "4084"
-	      Position		      [690, 173, 720, 187]
-	      ZOrder		      250
-	      Port		      "3"
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "PQ_N"
-	      SID		      "4085"
-	      Position		      [690, 233, 720, 247]
-	      ZOrder		      252
-	      Port		      "4"
-	      IconDisplay	      "Port number"
-	    }
-	    Line {
-	      SrcBlock		      "Demux1"
-	      SrcPort		      4
-	      Points		      [262, 0; 0, -220]
-	      DstBlock		      "P Q in1"
-	      DstPort		      2
-	    }
-	    Line {
-	      SrcBlock		      "Demux3"
-	      SrcPort		      4
-	      DstBlock		      "P Q in1"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "P Q in1"
-	      SrcPort		      1
-	      DstBlock		      "PQ_N"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "I_abc"
-	      SrcPort		      1
-	      DstBlock		      "Demux1"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "U_abc"
-	      SrcPort		      1
-	      DstBlock		      "Demux3"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Demux1"
-	      SrcPort		      3
-	      Points		      [229, 0; 0, -220]
-	      DstBlock		      "P Q in5"
-	      DstPort		      2
-	    }
-	    Line {
-	      SrcBlock		      "Demux1"
-	      SrcPort		      2
-	      Points		      [173, 0; 0, -220]
-	      DstBlock		      "P Q in4"
-	      DstPort		      2
-	    }
-	    Line {
-	      SrcBlock		      "Demux1"
-	      SrcPort		      1
-	      Points		      [124, 0; 0, -220]
-	      DstBlock		      "P Q in3"
-	      DstPort		      2
-	    }
-	    Line {
-	      SrcBlock		      "Demux3"
-	      SrcPort		      3
-	      DstBlock		      "P Q in5"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Demux3"
-	      SrcPort		      2
-	      DstBlock		      "P Q in4"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Demux3"
-	      SrcPort		      1
-	      DstBlock		      "P Q in3"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "P Q in5"
-	      SrcPort		      1
-	      DstBlock		      "PQ_T"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "P Q in4"
-	      SrcPort		      1
-	      DstBlock		      "PQ_S"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "P Q in3"
-	      SrcPort		      1
-	      DstBlock		      "PQ_R"
-	      DstPort		      1
-	    }
-	  }
+	  BlockType		  Terminator
+	  Name			  "Terminator"
+	  SID			  "4551"
+	  Position		  [1025, 40, 1045, 60]
+	  ZOrder		  1598
 	}
 	Block {
-	  BlockType		  Sum
-	  Name			  "Sum"
-	  SID			  "4086"
-	  Ports			  [4, 1]
-	  Position		  [1150, 65, 1180, 95]
-	  ZOrder		  1584
-	  ShowName		  off
-	  IconShape		  "round"
-	  Inputs		  "++++"
-	  InputSameDT		  off
-	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
-	  SaturateOnIntegerOverflow off
+	  BlockType		  Terminator
+	  Name			  "Terminator1"
+	  SID			  "4552"
+	  Position		  [1025, 95, 1045, 115]
+	  ZOrder		  1599
 	}
 	Block {
 	  BlockType		  Reference
@@ -22198,21 +20922,6 @@ Model {
 	  Port			  "8"
 	  Side			  "Right"
 	}
-	Block {
-	  BlockType		  Outport
-	  Name			  "Loss"
-	  SID			  "4469"
-	  Position		  [1210, 73, 1240, 87]
-	  ZOrder		  1597
-	  IconDisplay		  "Port number"
-	}
-	Line {
-	  SrcBlock		  "Pwer_losses"
-	  SrcPort		  4
-	  Points		  [70, 0]
-	  DstBlock		  "Sum"
-	  DstPort		  4
-	}
 	Line {
 	  SrcBlock		  "Current Measurement3"
 	  SrcPort		  1
@@ -22242,18 +20951,6 @@ Model {
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "Mux1"
-	  SrcPort		  1
-	  DstBlock		  "Pwer_losses"
-	  DstPort		  2
-	}
-	Line {
-	  SrcBlock		  "Mux"
-	  SrcPort		  1
-	  DstBlock		  "Pwer_losses"
-	  DstPort		  1
-	}
-	Line {
 	  SrcBlock		  "Voltage Measurement4"
 	  SrcPort		  1
 	  Points		  [0, -145]
@@ -22280,31 +20977,6 @@ Model {
 	  Points		  [0, -5]
 	  DstBlock		  "Mux"
 	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "Sum"
-	  SrcPort		  1
-	  DstBlock		  "Loss"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "Pwer_losses"
-	  SrcPort		  3
-	  DstBlock		  "Sum"
-	  DstPort		  3
-	}
-	Line {
-	  SrcBlock		  "Pwer_losses"
-	  SrcPort		  1
-	  Points		  [70, 0]
-	  DstBlock		  "Sum"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "Pwer_losses"
-	  SrcPort		  2
-	  DstBlock		  "Sum"
-	  DstPort		  2
 	}
 	Line {
 	  LineType		  "Connection"
@@ -22532,13 +21204,26 @@ Model {
 	    Points		    [0, -10]
 	  }
 	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "Terminator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux1"
+	  SrcPort		  1
+	  Points		  [55, 0]
+	  DstBlock		  "Terminator1"
+	  DstPort		  1
+	}
       }
     }
     Block {
       BlockType		      SubSystem
       Name		      "TransNetwork3"
       SID		      "4107"
-      Ports		      [0, 1, 0, 0, 0, 4, 4]
+      Ports		      [0, 0, 0, 0, 0, 4, 4]
       Position		      [655, 47, 715, 133]
       ZOrder		      1605
       FontName		      "Times New Roman"
@@ -22552,7 +21237,7 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"TransNetwork3"
-	Location		[-8, -8, 1448, 868]
+	Location		[-8, 0, 1448, 876]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -22564,7 +21249,7 @@ Model {
 	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"80"
+	ZoomFactor		"100"
 	Block {
 	  BlockType		  Reference
 	  Name			  "Current Measurement"
@@ -22646,261 +21331,18 @@ Model {
 	  DisplayOption		  "bar"
 	}
 	Block {
-	  BlockType		  SubSystem
-	  Name			  "Pwer_losses"
-	  SID			  "4114"
-	  Ports			  [2, 4]
-	  Position		  [975, 21, 1090, 139]
-	  ZOrder		  1583
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
-	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
-	  System {
-	    Name		    "Pwer_losses"
-	    Location		    [-8, -8, 1448, 868]
-	    Open		    off
-	    ModelBrowserVisibility  off
-	    ModelBrowserWidth	    200
-	    ScreenColor		    "white"
-	    PaperOrientation	    "landscape"
-	    PaperPositionMode	    "auto"
-	    PaperType		    "A4"
-	    PaperUnits		    "centimeters"
-	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
-	    TiledPageScale	    1
-	    ShowPageBoundaries	    off
-	    ZoomFactor		    "80"
-	    Block {
-	      BlockType		      Inport
-	      Name		      "U_abc"
-	      SID		      "4115"
-	      Position		      [20, 128, 50, 142]
-	      ZOrder		      243
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Inport
-	      Name		      "I_abc"
-	      SID		      "4116"
-	      Position		      [20, 378, 50, 392]
-	      ZOrder		      248
-	      Port		      "2"
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Demux
-	      Name		      "Demux1"
-	      SID		      "4117"
-	      Ports		      [1, 4]
-	      Position		      [235, 267, 240, 503]
-	      ZOrder		      246
-	      ShowName		      off
-	      DisplayOption	      "bar"
-	    }
-	    Block {
-	      BlockType		      Demux
-	      Name		      "Demux3"
-	      SID		      "4118"
-	      Ports		      [1, 4]
-	      Position		      [235, 17, 240, 253]
-	      ZOrder		      242
-	      ShowName		      off
-	      DisplayOption	      "bar"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "P Q in1"
-	      SID		      "4119"
-	      Ports		      [2, 1]
-	      Position		      [540, 211, 620, 269]
-	      ZOrder		      251
-	      ShowName		      off
-	      LibraryVersion	      "1.664"
-	      SourceBlock	      "powerlib_extras/Measurements/Active & Reactive\nPower"
-	      SourceType	      "Active & Reactive Power "
-	      f1		      "Source_Frequency(3)"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "P Q in3"
-	      SID		      "4120"
-	      Ports		      [2, 1]
-	      Position		      [540, 32, 620, 88]
-	      ZOrder		      224
-	      ShowName		      off
-	      LibraryVersion	      "1.664"
-	      SourceBlock	      "powerlib_extras/Measurements/Active & Reactive\nPower"
-	      SourceType	      "Active & Reactive Power "
-	      f1		      "Source_Frequency(1)"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "P Q in4"
-	      SID		      "4121"
-	      Ports		      [2, 1]
-	      Position		      [540, 91, 620, 149]
-	      ZOrder		      229
-	      ShowName		      off
-	      LibraryVersion	      "1.664"
-	      SourceBlock	      "powerlib_extras/Measurements/Active & Reactive\nPower"
-	      SourceType	      "Active & Reactive Power "
-	      f1		      "Source_Frequency(2)"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "P Q in5"
-	      SID		      "4122"
-	      Ports		      [2, 1]
-	      Position		      [540, 151, 620, 209]
-	      ZOrder		      230
-	      ShowName		      off
-	      LibraryVersion	      "1.664"
-	      SourceBlock	      "powerlib_extras/Measurements/Active & Reactive\nPower"
-	      SourceType	      "Active & Reactive Power "
-	      f1		      "Source_Frequency(3)"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "PQ_R"
-	      SID		      "4123"
-	      Position		      [690, 53, 720, 67]
-	      ZOrder		      244
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "PQ_S"
-	      SID		      "4124"
-	      Position		      [690, 113, 720, 127]
-	      ZOrder		      249
-	      Port		      "2"
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "PQ_T"
-	      SID		      "4125"
-	      Position		      [690, 173, 720, 187]
-	      ZOrder		      250
-	      Port		      "3"
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "PQ_N"
-	      SID		      "4126"
-	      Position		      [690, 233, 720, 247]
-	      ZOrder		      252
-	      Port		      "4"
-	      IconDisplay	      "Port number"
-	    }
-	    Line {
-	      SrcBlock		      "P Q in3"
-	      SrcPort		      1
-	      DstBlock		      "PQ_R"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "P Q in4"
-	      SrcPort		      1
-	      DstBlock		      "PQ_S"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "P Q in5"
-	      SrcPort		      1
-	      DstBlock		      "PQ_T"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Demux3"
-	      SrcPort		      1
-	      DstBlock		      "P Q in3"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Demux3"
-	      SrcPort		      2
-	      DstBlock		      "P Q in4"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Demux3"
-	      SrcPort		      3
-	      DstBlock		      "P Q in5"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Demux1"
-	      SrcPort		      1
-	      Points		      [124, 0; 0, -220]
-	      DstBlock		      "P Q in3"
-	      DstPort		      2
-	    }
-	    Line {
-	      SrcBlock		      "Demux1"
-	      SrcPort		      2
-	      Points		      [173, 0; 0, -220]
-	      DstBlock		      "P Q in4"
-	      DstPort		      2
-	    }
-	    Line {
-	      SrcBlock		      "Demux1"
-	      SrcPort		      3
-	      Points		      [229, 0; 0, -220]
-	      DstBlock		      "P Q in5"
-	      DstPort		      2
-	    }
-	    Line {
-	      SrcBlock		      "U_abc"
-	      SrcPort		      1
-	      DstBlock		      "Demux3"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "I_abc"
-	      SrcPort		      1
-	      DstBlock		      "Demux1"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "P Q in1"
-	      SrcPort		      1
-	      DstBlock		      "PQ_N"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Demux3"
-	      SrcPort		      4
-	      DstBlock		      "P Q in1"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Demux1"
-	      SrcPort		      4
-	      Points		      [262, 0; 0, -220]
-	      DstBlock		      "P Q in1"
-	      DstPort		      2
-	    }
-	  }
+	  BlockType		  Terminator
+	  Name			  "Terminator"
+	  SID			  "4553"
+	  Position		  [1025, 40, 1045, 60]
+	  ZOrder		  1598
 	}
 	Block {
-	  BlockType		  Sum
-	  Name			  "Sum"
-	  SID			  "4127"
-	  Ports			  [4, 1]
-	  Position		  [1150, 65, 1180, 95]
-	  ZOrder		  1584
-	  ShowName		  off
-	  IconShape		  "round"
-	  Inputs		  "++++"
-	  InputSameDT		  off
-	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
-	  SaturateOnIntegerOverflow off
+	  BlockType		  Terminator
+	  Name			  "Terminator1"
+	  SID			  "4554"
+	  Position		  [1025, 100, 1045, 120]
+	  ZOrder		  1599
 	}
 	Block {
 	  BlockType		  Reference
@@ -23212,14 +21654,6 @@ Model {
 	  Port			  "8"
 	  Side			  "Right"
 	}
-	Block {
-	  BlockType		  Outport
-	  Name			  "Loss"
-	  SID			  "4470"
-	  Position		  [1205, 73, 1235, 87]
-	  ZOrder		  1597
-	  IconDisplay		  "Port number"
-	}
 	Line {
 	  LineType		  "Connection"
 	  SrcBlock		  "Transf-L  Line -R4"
@@ -23446,31 +21880,6 @@ Model {
 	  DstPort		  RConn1
 	}
 	Line {
-	  SrcBlock		  "Pwer_losses"
-	  SrcPort		  2
-	  DstBlock		  "Sum"
-	  DstPort		  2
-	}
-	Line {
-	  SrcBlock		  "Pwer_losses"
-	  SrcPort		  1
-	  Points		  [70, 0]
-	  DstBlock		  "Sum"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "Pwer_losses"
-	  SrcPort		  3
-	  DstBlock		  "Sum"
-	  DstPort		  3
-	}
-	Line {
-	  SrcBlock		  "Sum"
-	  SrcPort		  1
-	  DstBlock		  "Loss"
-	  DstPort		  1
-	}
-	Line {
 	  SrcBlock		  "Voltage Measurement"
 	  SrcPort		  1
 	  Points		  [0, -5]
@@ -23497,18 +21906,6 @@ Model {
 	  Points		  [0, -145]
 	  DstBlock		  "Mux"
 	  DstPort		  4
-	}
-	Line {
-	  SrcBlock		  "Mux"
-	  SrcPort		  1
-	  DstBlock		  "Pwer_losses"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "Mux1"
-	  SrcPort		  1
-	  DstBlock		  "Pwer_losses"
-	  DstPort		  2
 	}
 	Line {
 	  SrcBlock		  "Current Measurement"
@@ -23539,11 +21936,16 @@ Model {
 	  DstPort		  4
 	}
 	Line {
-	  SrcBlock		  "Pwer_losses"
-	  SrcPort		  4
-	  Points		  [70, 0]
-	  DstBlock		  "Sum"
-	  DstPort		  4
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "Terminator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux1"
+	  SrcPort		  1
+	  DstBlock		  "Terminator1"
+	  DstPort		  1
 	}
       }
     }
@@ -23551,7 +21953,7 @@ Model {
       BlockType		      SubSystem
       Name		      "Transformator"
       SID		      "715"
-      Ports		      [1, 0, 0, 0, 0, 0, 4]
+      Ports		      [0, 0, 0, 0, 0, 0, 4]
       Position		      [110, 47, 170, 133]
       ZOrder		      325
       FontName		      "Times New Roman"
@@ -23566,7 +21968,7 @@ Model {
       System {
 	Name			"Transformator"
 	Location		[-8, 0, 1448, 876]
-	Open			on
+	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -23577,15 +21979,7 @@ Model {
 	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"100"
-	Block {
-	  BlockType		  Inport
-	  Name			  "Netw. Loss"
-	  SID			  "4498"
-	  Position		  [1210, 18, 1240, 32]
-	  ZOrder		  1609
-	  IconDisplay		  "Port number"
-	}
+	ZoomFactor		"80"
 	Block {
 	  BlockType		  MATLABFcn
 	  Name			  " R_USource_sign"
@@ -23615,210 +22009,6 @@ Model {
 	  ZOrder		  488
 	  MATLABFcn		  "sqrt(2)*Urms_Source(3)*sin(2*pi*Source_Frequency(2)*u+Phase_Source(3))"
 	  SampleTime		  "sample"
-	}
-	Block {
-	  BlockType		  SubSystem
-	  Name			  "3_Phase_P_Q"
-	  SID			  "4478"
-	  Ports			  [2, 3]
-	  Position		  [1170, 47, 1285, 143]
-	  ZOrder		  1599
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
-	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
-	  System {
-	    Name		    "3_Phase_P_Q"
-	    Location		    [-8, 0, 1370, 780]
-	    Open		    off
-	    ModelBrowserVisibility  off
-	    ModelBrowserWidth	    200
-	    ScreenColor		    "white"
-	    PaperOrientation	    "landscape"
-	    PaperPositionMode	    "auto"
-	    PaperType		    "A4"
-	    PaperUnits		    "centimeters"
-	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
-	    TiledPageScale	    1
-	    ShowPageBoundaries	    off
-	    ZoomFactor		    "80"
-	    Block {
-	      BlockType		      Inport
-	      Name		      "U_abc"
-	      SID		      "4479"
-	      Position		      [20, 98, 50, 112]
-	      ZOrder		      243
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Inport
-	      Name		      "I_abc"
-	      SID		      "4480"
-	      Position		      [20, 288, 50, 302]
-	      ZOrder		      248
-	      Port		      "2"
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Demux
-	      Name		      "Demux1"
-	      SID		      "4481"
-	      Ports		      [1, 3]
-	      Position		      [235, 205, 240, 385]
-	      ZOrder		      246
-	      ShowName		      off
-	      Outputs		      "3"
-	      DisplayOption	      "bar"
-	    }
-	    Block {
-	      BlockType		      Demux
-	      Name		      "Demux3"
-	      SID		      "4482"
-	      Ports		      [1, 3]
-	      Position		      [235, 15, 240, 195]
-	      ZOrder		      242
-	      ShowName		      off
-	      Outputs		      "3"
-	      DisplayOption	      "bar"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "P Q in3"
-	      SID		      "4483"
-	      Ports		      [2, 1]
-	      Position		      [540, 32, 620, 88]
-	      ZOrder		      224
-	      ShowName		      off
-	      LibraryVersion	      "1.664"
-	      SourceBlock	      "powerlib_extras/Measurements/Active & Reactive\nPower"
-	      SourceType	      "Active & Reactive Power "
-	      f1		      "Source_Frequency(1)"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "P Q in4"
-	      SID		      "4484"
-	      Ports		      [2, 1]
-	      Position		      [540, 91, 620, 149]
-	      ZOrder		      229
-	      ShowName		      off
-	      LibraryVersion	      "1.664"
-	      SourceBlock	      "powerlib_extras/Measurements/Active & Reactive\nPower"
-	      SourceType	      "Active & Reactive Power "
-	      f1		      "Source_Frequency(2)"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "P Q in5"
-	      SID		      "4485"
-	      Ports		      [2, 1]
-	      Position		      [540, 151, 620, 209]
-	      ZOrder		      230
-	      ShowName		      off
-	      LibraryVersion	      "1.664"
-	      SourceBlock	      "powerlib_extras/Measurements/Active & Reactive\nPower"
-	      SourceType	      "Active & Reactive Power "
-	      f1		      "Source_Frequency(3)"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "PQ_R"
-	      SID		      "4486"
-	      Position		      [690, 53, 720, 67]
-	      ZOrder		      244
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "PQ_S"
-	      SID		      "4487"
-	      Position		      [690, 113, 720, 127]
-	      ZOrder		      249
-	      Port		      "2"
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "PQ_T"
-	      SID		      "4488"
-	      Position		      [690, 173, 720, 187]
-	      ZOrder		      250
-	      Port		      "3"
-	      IconDisplay	      "Port number"
-	    }
-	    Line {
-	      SrcBlock		      "P Q in3"
-	      SrcPort		      1
-	      DstBlock		      "PQ_R"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "P Q in4"
-	      SrcPort		      1
-	      DstBlock		      "PQ_S"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "P Q in5"
-	      SrcPort		      1
-	      DstBlock		      "PQ_T"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Demux3"
-	      SrcPort		      1
-	      DstBlock		      "P Q in3"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Demux3"
-	      SrcPort		      2
-	      DstBlock		      "P Q in4"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Demux3"
-	      SrcPort		      3
-	      DstBlock		      "P Q in5"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Demux1"
-	      SrcPort		      1
-	      Points		      [124, 0; 0, -160]
-	      DstBlock		      "P Q in3"
-	      DstPort		      2
-	    }
-	    Line {
-	      SrcBlock		      "Demux1"
-	      SrcPort		      2
-	      Points		      [173, 0; 0, -160]
-	      DstBlock		      "P Q in4"
-	      DstPort		      2
-	    }
-	    Line {
-	      SrcBlock		      "Demux1"
-	      SrcPort		      3
-	      Points		      [229, 0; 0, -160]
-	      DstBlock		      "P Q in5"
-	      DstPort		      2
-	    }
-	    Line {
-	      SrcBlock		      "U_abc"
-	      SrcPort		      1
-	      DstBlock		      "Demux3"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "I_abc"
-	      SrcPort		      1
-	      DstBlock		      "Demux1"
-	      DstPort		      1
-	    }
-	  }
 	}
 	Block {
 	  BlockType		  SubSystem
@@ -24580,18 +22770,6 @@ Model {
 	  Measurements		  "None"
 	}
 	Block {
-	  BlockType		  Mux
-	  Name			  "Mux"
-	  SID			  "4497"
-	  Ports			  [3, 1]
-	  Position		  [910, 155, 1070, 160]
-	  ZOrder		  1608
-	  BlockRotation		  270
-	  ShowName		  off
-	  Inputs		  "3"
-	  DisplayOption		  "bar"
-	}
-	Block {
 	  BlockType		  Reference
 	  Name			  "Neutral"
 	  SID			  "1537"
@@ -24645,17 +22823,11 @@ Model {
 	  SaturateOnIntegerOverflow off
 	}
 	Block {
-	  BlockType		  Sum
-	  Name			  "Sum"
-	  SID			  "4490"
-	  Ports			  [4, 1]
-	  Position		  [1390, 21, 1410, 139]
-	  ZOrder		  1600
-	  ShowName		  off
-	  Inputs		  "++++"
-	  InputSameDT		  off
-	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
-	  SaturateOnIntegerOverflow off
+	  BlockType		  Terminator
+	  Name			  "Terminator"
+	  SID			  "4547"
+	  Position		  [1335, 130, 1355, 150]
+	  ZOrder		  1613
 	}
 	Block {
 	  BlockType		  ToFile
@@ -24693,19 +22865,6 @@ Model {
 	  ShowName		  off
 	  Filename		  "saved_data/U_traf_saved.mat"
 	  MatrixName		  "U_traf_saved"
-	  SaveFormat		  "Timeseries"
-	  SampleTime		  "sample"
-	}
-	Block {
-	  BlockType		  ToFile
-	  Name			  "To File3"
-	  SID			  "4477"
-	  Ports			  [1]
-	  Position		  [1425, 65, 1645, 95]
-	  ZOrder		  1612
-	  ShowName		  off
-	  Filename		  "saved_data/PQ_NetwLoss_saved.mat"
-	  MatrixName		  "PQ_NetwLoss_saved"
 	  SaveFormat		  "Timeseries"
 	  SampleTime		  "sample"
 	}
@@ -24774,54 +22933,6 @@ Model {
 	  Setx0			  off
 	  InitialVoltage	  "0"
 	  Measurements		  "None"
-	}
-	Block {
-	  BlockType		  Reference
-	  Name			  "Voltage Measurement"
-	  SID			  "4494"
-	  Ports			  [0, 1, 0, 0, 0, 2]
-	  Position		  [923, 245, 947, 270]
-	  ZOrder		  1604
-	  BlockRotation		  270
-	  ShowName		  off
-	  LibraryVersion	  "1.2191"
-	  SourceBlock		  "powerlib/Measurements/Voltage Measurement"
-	  SourceType		  "Voltage Measurement"
-	  PhasorSimulation	  off
-	  OutputType		  "Complex"
-	  PSBequivalent		  "0"
-	}
-	Block {
-	  BlockType		  Reference
-	  Name			  "Voltage Measurement1"
-	  SID			  "4495"
-	  Ports			  [0, 1, 0, 0, 0, 2]
-	  Position		  [978, 245, 1002, 270]
-	  ZOrder		  1606
-	  BlockRotation		  270
-	  ShowName		  off
-	  LibraryVersion	  "1.2191"
-	  SourceBlock		  "powerlib/Measurements/Voltage Measurement"
-	  SourceType		  "Voltage Measurement"
-	  PhasorSimulation	  off
-	  OutputType		  "Complex"
-	  PSBequivalent		  "0"
-	}
-	Block {
-	  BlockType		  Reference
-	  Name			  "Voltage Measurement2"
-	  SID			  "4496"
-	  Ports			  [0, 1, 0, 0, 0, 2]
-	  Position		  [1033, 245, 1057, 270]
-	  ZOrder		  1607
-	  BlockRotation		  270
-	  ShowName		  off
-	  LibraryVersion	  "1.2191"
-	  SourceBlock		  "powerlib/Measurements/Voltage Measurement"
-	  SourceType		  "Voltage Measurement"
-	  PhasorSimulation	  off
-	  OutputType		  "Complex"
-	  PSBequivalent		  "0"
 	}
 	Block {
 	  BlockType		  Constant
@@ -25000,104 +23111,45 @@ Model {
 	  LineType		  "Connection"
 	  SrcBlock		  "Transf-L  Line -R2"
 	  SrcPort		  LConn1
-	  Points		  [-19, 0]
-	  Branch {
-	    ConnectType		    "DEST_DEST"
-	    SrcBlock		    "Voltage Measurement1"
-	    SrcPort		    LConn1
-	    Points		    [0, 37; -119, 0; 0, 93]
-	  }
-	  Branch {
-	    ConnectType		    "DEST_SRC"
-	    DstBlock		    "Controlled voltage source1"
-	    DstPort		    RConn1
-	  }
+	  DstBlock		  "Controlled voltage source1"
+	  DstPort		  RConn1
 	}
 	Line {
 	  LineType		  "Connection"
 	  SrcBlock		  "Transf-L  Line -R3"
 	  SrcPort		  LConn1
-	  Points		  [-8, 0]
-	  Branch {
-	    ConnectType		    "DEST_DEST"
-	    SrcBlock		    "Voltage Measurement2"
-	    SrcPort		    LConn1
-	    Points		    [0, 48; -163, 0; 0, 127]
-	  }
-	  Branch {
-	    ConnectType		    "DEST_SRC"
-	    DstBlock		    "Controlled voltage source2"
-	    DstPort		    RConn1
-	  }
+	  DstBlock		  "Controlled voltage source2"
+	  DstPort		  RConn1
 	}
 	Line {
 	  LineType		  "Connection"
 	  SrcBlock		  "Transf-L  Line -R1"
 	  SrcPort		  LConn1
-	  Points		  [-36, 0]
-	  Branch {
-	    ConnectType		    "DEST_DEST"
-	    SrcBlock		    "Voltage Measurement"
-	    SrcPort		    LConn1
-	    Points		    [0, 28; -81, 0; 0, 57]
-	  }
-	  Branch {
-	    ConnectType		    "DEST_SRC"
-	    DstBlock		    "Controlled voltage source"
-	    DstPort		    RConn1
-	  }
+	  DstBlock		  "Controlled voltage source"
+	  DstPort		  RConn1
 	}
 	Line {
 	  LineType		  "Connection"
 	  SrcBlock		  "Conncection_Measurements"
 	  SrcPort		  LConn1
-	  Points		  [-195, 0]
-	  Branch {
-	    ConnectType		    "DEST_DEST"
-	    SrcBlock		    "Voltage Measurement"
-	    SrcPort		    LConn2
-	    Points		    [0, 59; 35, 0; 0, 26; 10, 0]
-	  }
-	  Branch {
-	    ConnectType		    "DEST_SRC"
-	    DstBlock		    "Transf-L  Line -R1"
-	    DstPort		    RConn1
-	  }
+	  DstBlock		  "Transf-L  Line -R1"
+	  DstPort		  RConn1
 	}
 	Line {
 	  LineType		  "Connection"
 	  SrcBlock		  "Conncection_Measurements"
 	  SrcPort		  LConn2
-	  Points		  [-152, 0; 0, 15; -33, 0]
-	  Branch {
-	    ConnectType		    "DEST_DEST"
-	    SrcBlock		    "Voltage Measurement1"
-	    SrcPort		    LConn2
-	    Points		    [0, 130]
-	  }
-	  Branch {
-	    ConnectType		    "DEST_SRC"
-	    DstBlock		    "Transf-L  Line -R2"
-	    DstPort		    RConn1
-	  }
+	  Points		  [-152, 0; 0, 15]
+	  DstBlock		  "Transf-L  Line -R2"
+	  DstPort		  RConn1
 	}
 	Line {
 	  LineType		  "Connection"
 	  SrcBlock		  "Conncection_Measurements"
 	  SrcPort		  LConn3
-	  Points		  [-130, 0]
-	  Branch {
-	    ConnectType		    "DEST_SRC"
-	    Points		    [-43, 0; 0, 30]
-	    DstBlock		    "Transf-L  Line -R3"
-	    DstPort		    RConn1
-	  }
-	  Branch {
-	    ConnectType		    "DEST_DEST"
-	    SrcBlock		    "Voltage Measurement2"
-	    SrcPort		    LConn2
-	    Points		    [0, 145]
-	  }
+	  Points		  [-173, 0; 0, 30]
+	  DstBlock		  "Transf-L  Line -R3"
+	  DstPort		  RConn1
 	}
 	Line {
 	  LineType		  "Connection"
@@ -25289,66 +23341,10 @@ Model {
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "Voltage Measurement"
-	  SrcPort		  1
-	  DstBlock		  "Mux"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "Voltage Measurement1"
-	  SrcPort		  1
-	  DstBlock		  "Mux"
-	  DstPort		  2
-	}
-	Line {
-	  SrcBlock		  "Voltage Measurement2"
-	  SrcPort		  1
-	  DstBlock		  "Mux"
-	  DstPort		  3
-	}
-	Line {
-	  SrcBlock		  "Mux"
-	  SrcPort		  1
-	  Points		  [0, -80]
-	  DstBlock		  "3_Phase_P_Q"
-	  DstPort		  1
-	}
-	Line {
 	  SrcBlock		  "Conncection_Measurements"
 	  SrcPort		  2
-	  Points		  [11, 0; 0, -187; -155, 0; 0, -68]
-	  DstBlock		  "3_Phase_P_Q"
-	  DstPort		  2
-	}
-	Line {
-	  SrcBlock		  "Netw. Loss"
-	  SrcPort		  1
-	  Points		  [106, 0; 0, 10]
-	  DstBlock		  "Sum"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "3_Phase_P_Q"
-	  SrcPort		  1
-	  DstBlock		  "Sum"
-	  DstPort		  2
-	}
-	Line {
-	  SrcBlock		  "3_Phase_P_Q"
-	  SrcPort		  2
-	  DstBlock		  "Sum"
-	  DstPort		  3
-	}
-	Line {
-	  SrcBlock		  "3_Phase_P_Q"
-	  SrcPort		  3
-	  DstBlock		  "Sum"
-	  DstPort		  4
-	}
-	Line {
-	  SrcBlock		  "Sum"
-	  SrcPort		  1
-	  DstBlock		  "To File3"
+	  Points		  [14, 0; 0, -235]
+	  DstBlock		  "Terminator"
 	  DstPort		  1
 	}
       }
@@ -25361,7 +23357,7 @@ Model {
       Position		      [110, 175, 170, 199]
       ZOrder		      1
       ShowName		      off
-      LibraryVersion	      "*1.2191"
+      LibraryVersion	      "1.2191"
       UserDataPersistent      on
       UserData		      "DataTag0"
       FontName		      "Times New Roman"
@@ -25504,6 +23500,7 @@ Model {
       LineType		      "Connection"
       SrcBlock		      "HouseHold3"
       SrcPort		      LConn4
+      Points		      [0, -47; 5, 0]
       DstBlock		      "SubNetwork3"
       DstPort		      RConn4
     }
@@ -25511,6 +23508,7 @@ Model {
       LineType		      "Connection"
       SrcBlock		      "HouseHold3"
       SrcPort		      LConn2
+      Points		      [0, -47; -5, 0]
       DstBlock		      "SubNetwork3"
       DstPort		      RConn2
     }
@@ -25525,6 +23523,7 @@ Model {
       LineType		      "Connection"
       SrcBlock		      "HouseHold3"
       SrcPort		      LConn1
+      Points		      [0, -16; -10, 0]
       DstBlock		      "SubNetwork3"
       DstPort		      RConn1
     }
@@ -25532,6 +23531,7 @@ Model {
       LineType		      "Connection"
       SrcBlock		      "HouseHold2"
       SrcPort		      LConn4
+      Points		      [0, -47; 5, 0]
       DstBlock		      "SubNetwork2"
       DstPort		      RConn4
     }
@@ -25546,6 +23546,7 @@ Model {
       LineType		      "Connection"
       SrcBlock		      "HouseHold2"
       SrcPort		      LConn2
+      Points		      [0, -47; -5, 0]
       DstBlock		      "SubNetwork2"
       DstPort		      RConn2
     }
@@ -25553,6 +23554,7 @@ Model {
       LineType		      "Connection"
       SrcBlock		      "HouseHold2"
       SrcPort		      LConn1
+      Points		      [0, -47; -10, 0]
       DstBlock		      "SubNetwork2"
       DstPort		      RConn1
     }
@@ -25562,15 +23564,16 @@ Model {
       SrcPort		      RConn1
       Points		      [0, 35]
       Branch {
+	ConnectType		"DEST_SRC"
+	Points			[10, 0]
+	DstBlock		"HouseHold1"
+	DstPort			LConn1
+      }
+      Branch {
 	ConnectType		"DEST_DEST"
 	SrcBlock		"Asynchronous Inverter"
 	SrcPort			RConn1
-	Points			[60, 0]
-      }
-      Branch {
-	ConnectType		"DEST_SRC"
-	DstBlock		"HouseHold1"
-	DstPort			LConn1
+	Points			[50, 0]
       }
     }
     Line {
@@ -25579,15 +23582,16 @@ Model {
       SrcPort		      RConn2
       Points		      [0, 55]
       Branch {
+	ConnectType		"DEST_SRC"
+	Points			[5, 0]
+	DstBlock		"HouseHold1"
+	DstPort			LConn2
+      }
+      Branch {
 	ConnectType		"DEST_DEST"
 	SrcBlock		"Asynchronous Inverter"
 	SrcPort			RConn2
-	Points			[70, 0]
-      }
-      Branch {
-	ConnectType		"DEST_SRC"
-	DstBlock		"HouseHold1"
-	DstPort			LConn2
+	Points			[65, 0]
       }
     }
     Line {
@@ -25611,7 +23615,7 @@ Model {
       LineType		      "Connection"
       SrcBlock		      "SubNetwork1"
       SrcPort		      RConn4
-      Points		      [0, 95]
+      Points		      [0, 95; -5, 0]
       Branch {
 	ConnectType		"DEST_DEST"
 	SrcBlock		"Asynchronous Inverter"
@@ -25628,7 +23632,7 @@ Model {
       LineType		      "Connection"
       SrcBlock		      "TransNetwork1"
       SrcPort		      RConn1
-      Points		      [30, 0]
+      Points		      [30, 0; 0, 15]
       Branch {
 	ConnectType		"DEST_DEST"
 	SrcBlock		"SubNetwork1"
@@ -25646,7 +23650,7 @@ Model {
       LineType		      "Connection"
       SrcBlock		      "TransNetwork1"
       SrcPort		      RConn2
-      Points		      [45, 0]
+      Points		      [45, 0; 0, 10]
       Branch {
 	ConnectType		"DEST_DEST"
 	SrcBlock		"SubNetwork1"
@@ -25664,7 +23668,7 @@ Model {
       LineType		      "Connection"
       SrcBlock		      "TransNetwork1"
       SrcPort		      RConn3
-      Points		      [60, 0]
+      Points		      [60, 0; 0, 5]
       Branch {
 	ConnectType		"DEST_DEST"
 	SrcBlock		"SubNetwork1"
@@ -25699,7 +23703,7 @@ Model {
       LineType		      "Connection"
       SrcBlock		      "TransNetwork2"
       SrcPort		      RConn1
-      Points		      [10, 0]
+      Points		      [10, 0; 0, 15]
       Branch {
 	ConnectType		"DEST_DEST"
 	SrcBlock		"SubNetwork2"
@@ -25717,7 +23721,7 @@ Model {
       LineType		      "Connection"
       SrcBlock		      "TransNetwork2"
       SrcPort		      RConn2
-      Points		      [25, 0]
+      Points		      [25, 0; 0, 10]
       Branch {
 	ConnectType		"DEST_DEST"
 	SrcBlock		"SubNetwork2"
@@ -25735,7 +23739,7 @@ Model {
       LineType		      "Connection"
       SrcBlock		      "TransNetwork2"
       SrcPort		      RConn3
-      Points		      [40, 0]
+      Points		      [40, 0; 0, 5]
       Branch {
 	ConnectType		"DEST_DEST"
 	SrcBlock		"SubNetwork2"
@@ -25765,54 +23769,6 @@ Model {
 	DstBlock		"TransNetwork3"
 	DstPort			LConn4
       }
-    }
-    Line {
-      SrcBlock		      "TransNetwork1"
-      SrcPort		      1
-      Points		      [13, 0; 0, -27; -387, 0; 0, 17]
-      DstBlock		      "Sum"
-      DstPort		      1
-    }
-    Line {
-      SrcBlock		      "TransNetwork2"
-      SrcPort		      1
-      Points		      [4, 0; 0, -34; -563, 0; 0, 39]
-      DstBlock		      "Sum"
-      DstPort		      2
-    }
-    Line {
-      SrcBlock		      "TransNetwork3"
-      SrcPort		      1
-      Points		      [71, 0; 0, -43; -789, 0; 0, 63]
-      DstBlock		      "Sum"
-      DstPort		      3
-    }
-    Line {
-      SrcBlock		      "SubNetwork3"
-      SrcPort		      1
-      Points		      [0, 28; -741, 0; 0, -203]
-      DstBlock		      "Sum"
-      DstPort		      4
-    }
-    Line {
-      SrcBlock		      "SubNetwork2"
-      SrcPort		      1
-      Points		      [0, 15; -580, 0; 0, -175]
-      DstBlock		      "Sum"
-      DstPort		      5
-    }
-    Line {
-      SrcBlock		      "SubNetwork1"
-      SrcPort		      1
-      Points		      [0, 7; -414, 0; 0, -152]
-      DstBlock		      "Sum"
-      DstPort		      6
-    }
-    Line {
-      SrcBlock		      "Sum"
-      SrcPort		      1
-      DstBlock		      "Transformator"
-      DstPort		      1
     }
   }
 }

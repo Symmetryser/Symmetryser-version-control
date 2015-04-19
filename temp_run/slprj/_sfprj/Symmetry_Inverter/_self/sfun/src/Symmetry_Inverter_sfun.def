@@ -1,0 +1,3 @@
+LIBRARY Symmetry_Inverter_sfun.mexw64
+EXPORTS
+mexFunction

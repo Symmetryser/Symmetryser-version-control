@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.138"
+    ComputedModelVersion    "1.140"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -68,12 +68,12 @@ Model {
 	LoadSaveID		"3509"
 	Extents			[1328.0, 606.0]
 	ZoomFactor		[0.8]
-	Offset			[-22.802592751085285, -59.91708390943586]
+	Offset			[0.0, 0.0]
       }
     }
   }
-  PhysicalModelingChecksum "1335285557"
-  PhysicalModelingParameterChecksum "792635773"
+  PhysicalModelingChecksum "2457493939"
+  PhysicalModelingParameterChecksum "3653942329"
   PhysicalModelingProducts "Power_System_Blocks"
   Created		  "Thu Oct 02 12:18:57 2014"
   Creator		  "gorbep"
@@ -81,9 +81,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Neukirchner László"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sun Apr 19 15:02:01 2015"
-  RTWModifiedTimeStamp	  351355774
-  ModelVersionFormat	  "1.%<AutoIncrement:138>"
+  LastModifiedDate	  "Tue Apr 21 14:26:17 2015"
+  RTWModifiedTimeStamp	  351526965
+  ModelVersionFormat	  "1.%<AutoIncrement:140>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1092,16 +1092,14 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "80"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "3581"
+    SIDHighWatermark	    "3758"
     Block {
       BlockType		      SubSystem
-      Name		      "Load System"
-      SID		      "1650"
+      Name		      "HouseHold1\n"
+      SID		      "3587"
       Ports		      [0, 0, 0, 0, 0, 4]
-      Position		      [1060, 17, 1120, 103]
-      ZOrder		      530
-      FontName		      "Times New Roman"
-      FontSize		      12
+      Position		      [470, 177, 510, 238]
+      ZOrder		      1635
       MinAlgLoopOccurrences   off
       PropExecContextOutsideSubsystem off
       RTWSystemCode	      "Auto"
@@ -1110,7 +1108,7 @@ Model {
       RequestExecContextInheritance off
       MaskHideContents	      off
       System {
-	Name			"Load System"
+	Name			"HouseHold1\n"
 	Location		[-8, 0, 1370, 780]
 	Open			off
 	ModelBrowserVisibility	off
@@ -1129,7 +1127,7 @@ Model {
 	  Name			  "Breaker1"
 	  SID			  "3534"
 	  Ports			  [1, 0, 0, 0, 0, 1, 1]
-	  Position		  [730, 265, 785, 305]
+	  Position		  [975, 255, 1030, 295]
 	  ZOrder		  1592
 	  NamePlacement		  "alternate"
 	  ShowName		  off
@@ -1151,7 +1149,7 @@ Model {
 	  Name			  "Breaker13"
 	  SID			  "3535"
 	  Ports			  [1, 0, 0, 0, 0, 1, 1]
-	  Position		  [730, 200, 785, 240]
+	  Position		  [975, 190, 1030, 230]
 	  ZOrder		  1591
 	  NamePlacement		  "alternate"
 	  ShowName		  off
@@ -1173,7 +1171,7 @@ Model {
 	  Name			  "Breaker2"
 	  SID			  "3536"
 	  Ports			  [1, 0, 0, 0, 0, 1, 1]
-	  Position		  [730, 330, 785, 370]
+	  Position		  [975, 320, 1030, 360]
 	  ZOrder		  1593
 	  NamePlacement		  "alternate"
 	  ShowName		  off
@@ -1195,7 +1193,7 @@ Model {
 	  Name			  "Breaker3"
 	  SID			  "3554"
 	  Ports			  [1, 0, 0, 0, 0, 1, 1]
-	  Position		  [730, 475, 785, 515]
+	  Position		  [975, 465, 1030, 505]
 	  ZOrder		  1609
 	  NamePlacement		  "alternate"
 	  ShowName		  off
@@ -1217,7 +1215,7 @@ Model {
 	  Name			  "Breaker4"
 	  SID			  "3555"
 	  Ports			  [1, 0, 0, 0, 0, 1, 1]
-	  Position		  [730, 400, 785, 440]
+	  Position		  [975, 390, 1030, 430]
 	  ZOrder		  1608
 	  NamePlacement		  "alternate"
 	  ShowName		  off
@@ -1239,7 +1237,7 @@ Model {
 	  Name			  "Breaker5"
 	  SID			  "3556"
 	  Ports			  [1, 0, 0, 0, 0, 1, 1]
-	  Position		  [730, 555, 785, 595]
+	  Position		  [975, 545, 1030, 585]
 	  ZOrder		  1610
 	  NamePlacement		  "alternate"
 	  ShowName		  off
@@ -1261,7 +1259,7 @@ Model {
 	  Name			  "Breaker6"
 	  SID			  "1826"
 	  Ports			  [1, 0, 0, 0, 0, 1, 1]
-	  Position		  [730, 650, 785, 690]
+	  Position		  [975, 640, 1030, 680]
 	  ZOrder		  1615
 	  NamePlacement		  "alternate"
 	  ShowName		  off
@@ -1283,7 +1281,7 @@ Model {
 	  Name			  "Breaker7"
 	  SID			  "3564"
 	  Ports			  [1, 0, 0, 0, 0, 1, 1]
-	  Position		  [730, 730, 785, 770]
+	  Position		  [975, 720, 1030, 760]
 	  ZOrder		  1621
 	  NamePlacement		  "alternate"
 	  ShowName		  off
@@ -1305,7 +1303,7 @@ Model {
 	  Name			  "Breaker8"
 	  SID			  "3567"
 	  Ports			  [1, 0, 0, 0, 0, 1, 1]
-	  Position		  [730, 805, 785, 845]
+	  Position		  [975, 795, 1030, 835]
 	  ZOrder		  1624
 	  NamePlacement		  "alternate"
 	  ShowName		  off
@@ -1327,7 +1325,7 @@ Model {
 	  Name			  "RL_load"
 	  SID			  "3557"
 	  Ports			  [0, 0, 0, 0, 0, 1, 1]
-	  Position		  [900, 406, 970, 434]
+	  Position		  [1145, 396, 1215, 424]
 	  ZOrder		  1604
 	  ShowName		  off
 	  LibraryVersion	  "1.2191"
@@ -1350,7 +1348,7 @@ Model {
 	  Name			  "RL_load1"
 	  SID			  "3558"
 	  Ports			  [0, 0, 0, 0, 0, 1, 1]
-	  Position		  [900, 481, 970, 509]
+	  Position		  [1145, 471, 1215, 499]
 	  ZOrder		  1611
 	  ShowName		  off
 	  LibraryVersion	  "1.2191"
@@ -1373,7 +1371,7 @@ Model {
 	  Name			  "RL_load2"
 	  SID			  "3559"
 	  Ports			  [0, 0, 0, 0, 0, 1, 1]
-	  Position		  [900, 561, 970, 589]
+	  Position		  [1145, 551, 1215, 579]
 	  ZOrder		  1612
 	  ShowName		  off
 	  LibraryVersion	  "1.2191"
@@ -1396,7 +1394,7 @@ Model {
 	  Name			  "R_load"
 	  SID			  "3538"
 	  Ports			  [0, 0, 0, 0, 0, 1, 1]
-	  Position		  [900, 206, 970, 234]
+	  Position		  [1145, 196, 1215, 224]
 	  ZOrder		  1587
 	  ShowName		  off
 	  LibraryVersion	  "1.2191"
@@ -1419,7 +1417,7 @@ Model {
 	  Name			  "R_load1"
 	  SID			  "3539"
 	  Ports			  [0, 0, 0, 0, 0, 1, 1]
-	  Position		  [900, 271, 970, 299]
+	  Position		  [1145, 261, 1215, 289]
 	  ZOrder		  1594
 	  ShowName		  off
 	  LibraryVersion	  "1.2191"
@@ -1442,7 +1440,7 @@ Model {
 	  Name			  "R_load2"
 	  SID			  "3540"
 	  Ports			  [0, 0, 0, 0, 0, 1, 1]
-	  Position		  [900, 336, 970, 364]
+	  Position		  [1145, 326, 1215, 354]
 	  ZOrder		  1595
 	  ShowName		  off
 	  LibraryVersion	  "1.2191"
@@ -1465,7 +1463,7 @@ Model {
 	  Name			  "Series RLC Branch"
 	  SID			  "1897"
 	  Ports			  [0, 0, 0, 0, 0, 1, 1]
-	  Position		  [925, 686, 995, 714]
+	  Position		  [1170, 676, 1240, 704]
 	  ZOrder		  1618
 	  BlockMirror		  on
 	  LibraryVersion	  "1.2191"
@@ -1488,7 +1486,7 @@ Model {
 	  Name			  "Series RLC Branch1"
 	  SID			  "3565"
 	  Ports			  [0, 0, 0, 0, 0, 1, 1]
-	  Position		  [925, 766, 995, 794]
+	  Position		  [1170, 756, 1240, 784]
 	  ZOrder		  1622
 	  BlockMirror		  on
 	  LibraryVersion	  "1.2191"
@@ -1511,7 +1509,7 @@ Model {
 	  Name			  "Series RLC Branch2"
 	  SID			  "3568"
 	  Ports			  [0, 0, 0, 0, 0, 1, 1]
-	  Position		  [925, 841, 995, 869]
+	  Position		  [1170, 831, 1240, 859]
 	  ZOrder		  1625
 	  BlockMirror		  on
 	  LibraryVersion	  "1.2191"
@@ -1534,7 +1532,7 @@ Model {
 	  Name			  "Timer"
 	  SID			  "3550"
 	  Ports			  [0, 9]
-	  Position		  [110, 20, 160, 160]
+	  Position		  [640, 20, 690, 160]
 	  ZOrder		  1603
 	  MinAlgLoopOccurrences	  off
 	  PropExecContextOutsideSubsystem off
@@ -1557,7 +1555,7 @@ Model {
 	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
+	    ZoomFactor		    "40"
 	    Block {
 	      BlockType		      Clock
 	      Name		      "Clock"
@@ -2033,7 +2031,7 @@ Model {
 	  Name			  "Universal Bridge"
 	  SID			  "1829"
 	  Ports			  [0, 0, 0, 0, 0, 2, 2]
-	  Position		  [840, 654, 885, 716]
+	  Position		  [1085, 644, 1130, 706]
 	  ZOrder		  1614
 	  ShowName		  off
 	  LibraryVersion	  "1.2191"
@@ -2058,7 +2056,7 @@ Model {
 	  Name			  "Universal Bridge1"
 	  SID			  "3566"
 	  Ports			  [0, 0, 0, 0, 0, 2, 2]
-	  Position		  [840, 734, 885, 796]
+	  Position		  [1085, 724, 1130, 786]
 	  ZOrder		  1620
 	  ShowName		  off
 	  LibraryVersion	  "1.2191"
@@ -2083,7 +2081,7 @@ Model {
 	  Name			  "Universal Bridge2"
 	  SID			  "3569"
 	  Ports			  [0, 0, 0, 0, 0, 2, 2]
-	  Position		  [840, 809, 885, 871]
+	  Position		  [1085, 799, 1130, 861]
 	  ZOrder		  1623
 	  ShowName		  off
 	  LibraryVersion	  "1.2191"
@@ -2106,51 +2104,53 @@ Model {
 	Block {
 	  BlockType		  PMIOPort
 	  Name			  "R"
-	  SID			  "1771"
-	  Position		  [110, 223, 140, 237]
-	  ZOrder		  388
+	  SID			  "3588"
+	  Position		  [20, 213, 50, 227]
+	  ZOrder		  1626
 	  Port			  "1"
 	  Side			  "Left"
 	}
 	Block {
 	  BlockType		  PMIOPort
 	  Name			  "S"
-	  SID			  "1772"
-	  Position		  [110, 288, 140, 302]
-	  ZOrder		  389
+	  SID			  "3589"
+	  Position		  [50, 278, 80, 292]
+	  ZOrder		  1627
 	  Port			  "2"
 	  Side			  "Left"
 	}
 	Block {
 	  BlockType		  PMIOPort
 	  Name			  "T"
-	  SID			  "1773"
-	  Position		  [110, 353, 140, 367]
-	  ZOrder		  390
+	  SID			  "3590"
+	  Position		  [85, 343, 115, 357]
+	  ZOrder		  1628
 	  Port			  "3"
 	  Side			  "Left"
 	}
 	Block {
 	  BlockType		  PMIOPort
 	  Name			  "N"
-	  SID			  "1774"
-	  Position		  [110, 973, 140, 987]
-	  ZOrder		  391
+	  SID			  "3591"
+	  Position		  [145, 850, 175, 865]
+	  ZOrder		  1629
+	  BlockRotation		  270
+	  BlockMirror		  on
 	  Port			  "4"
 	  Side			  "Left"
-	}
-	Line {
-	  LineType		  "Connection"
-	  SrcBlock		  "R_load1"
-	  SrcPort		  LConn1
-	  DstBlock		  "Breaker1"
-	  DstPort		  RConn1
 	}
 	Line {
 	  LineType		  "Connection"
 	  SrcBlock		  "R_load2"
 	  SrcPort		  LConn1
 	  DstBlock		  "Breaker2"
+	  DstPort		  RConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  SrcBlock		  "R_load1"
+	  SrcPort		  LConn1
+	  DstBlock		  "Breaker1"
 	  DstPort		  RConn1
 	}
 	Line {
@@ -2167,7 +2167,7 @@ Model {
 	  Points		  [37, 0]
 	  Branch {
 	    ConnectType		    "DEST_DEST"
-	    Points		    [1022, 420; 0, 75]
+	    Points		    [1267, 410; 0, 75]
 	    Branch {
 	      ConnectType	      "SRC_DEST"
 	      SrcBlock		      "RL_load"
@@ -2176,10 +2176,10 @@ Model {
 	    }
 	    Branch {
 	      ConnectType	      "SRC_DEST"
-	      Points		      [1022, 350; 0, 70]
+	      Points		      [1267, 340; 0, 70]
 	      Branch {
 		ConnectType		"SRC_DEST"
-		Points			[1022, 285; 0, 65]
+		Points			[1267, 275; 0, 65]
 		Branch {
 		  ConnectType		  "SRC_DEST"
 		  SrcBlock		  "R_load"
@@ -2206,10 +2206,16 @@ Model {
 	    Points		    [0, 80]
 	    Branch {
 	      ConnectType	      "DEST_DEST"
-	      Points		      [809, 980; 213, 0; 0, -405]
+	      Points		      [1054, 970; 213, 0; 0, -405]
 	      Branch {
 		ConnectType		"SRC_DEST"
-		Points			[809, 855; 0, 125]
+		SrcBlock		"N"
+		SrcPort			RConn1
+		Points			[0, 92; 894, -2]
+	      }
+	      Branch {
+		ConnectType		"SRC_DEST"
+		Points			[1054, 845; 0, 125]
 		Branch {
 		  ConnectType		  "SRC_DEST"
 		  SrcBlock		  "Universal Bridge2"
@@ -2218,7 +2224,7 @@ Model {
 		}
 		Branch {
 		  ConnectType		  "SRC_DEST"
-		  Points		  [809, 780; 0, 75]
+		  Points		  [1054, 770; 0, 75]
 		  Branch {
 		    ConnectType		    "SRC_DEST"
 		    SrcBlock		    "Universal Bridge1"
@@ -2232,12 +2238,6 @@ Model {
 		    Points		    [-16, 0; 0, 80]
 		  }
 		}
-	      }
-	      Branch {
-		ConnectType		"SRC_DEST"
-		SrcBlock		"N"
-		SrcPort			RConn1
-		Points			[654, 0]
 	      }
 	    }
 	    Branch {
@@ -2336,145 +2336,145 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  SrcBlock		  "R"
-	  SrcPort		  RConn1
-	  Points		  [241, 0]
+	  SrcBlock		  "Breaker6"
+	  SrcPort		  LConn1
+	  Points		  [-319, 0; 0, -250]
 	  Branch {
 	    ConnectType		    "DEST_DEST"
-	    Points		    [396, 430; 0, -200]
-	    Branch {
-	      ConnectType	      "SRC_DEST"
-	      SrcBlock		      "Breaker6"
-	      SrcPort		      LConn1
-	      Points		      [-319, 0; 0, -250]
-	    }
-	    Branch {
-	      ConnectType	      "SRC_DEST"
-	      SrcBlock		      "Breaker4"
-	      SrcPort		      LConn1
-	      Points		      [-319, 0]
-	    }
+	    SrcBlock		    "Breaker4"
+	    SrcPort		    LConn1
+	    Points		    [-319, 0]
 	  }
 	  Branch {
 	    ConnectType		    "DEST_SRC"
-	    DstBlock		    "Breaker13"
-	    DstPort		    LConn1
+	    Points		    [0, -200]
+	    Branch {
+	      ConnectType	      "DEST_DEST"
+	      SrcBlock		      "R"
+	      SrcPort		      RConn1
+	      Points		      [576, 0]
+	    }
+	    Branch {
+	      ConnectType	      "DEST_SRC"
+	      DstBlock		      "Breaker13"
+	      DstPort		      LConn1
+	    }
 	  }
 	}
 	Line {
 	  LineType		  "Connection"
-	  SrcBlock		  "S"
-	  SrcPort		  RConn1
-	  Points		  [309, 0]
+	  SrcBlock		  "Breaker7"
+	  SrcPort		  LConn1
+	  Points		  [-251, 0; 0, -255]
 	  Branch {
 	    ConnectType		    "DEST_DEST"
-	    Points		    [464, 505; 0, -210]
-	    Branch {
-	      ConnectType	      "SRC_DEST"
-	      SrcBlock		      "Breaker7"
-	      SrcPort		      LConn1
-	      Points		      [-251, 0; 0, -255]
-	    }
-	    Branch {
-	      ConnectType	      "SRC_DEST"
-	      SrcBlock		      "Breaker3"
-	      SrcPort		      LConn1
-	      Points		      [-251, 0]
-	    }
+	    SrcBlock		    "Breaker3"
+	    SrcPort		    LConn1
+	    Points		    [-251, 0]
 	  }
 	  Branch {
 	    ConnectType		    "DEST_SRC"
-	    DstBlock		    "Breaker1"
-	    DstPort		    LConn1
+	    Points		    [0, -210]
+	    Branch {
+	      ConnectType	      "DEST_DEST"
+	      SrcBlock		      "S"
+	      SrcPort		      RConn1
+	      Points		      [614, 0]
+	    }
+	    Branch {
+	      ConnectType	      "DEST_SRC"
+	      DstBlock		      "Breaker1"
+	      DstPort		      LConn1
+	    }
 	  }
 	}
 	Line {
 	  LineType		  "Connection"
-	  SrcBlock		  "T"
-	  SrcPort		  RConn1
-	  Points		  [371, 0]
+	  SrcBlock		  "Breaker8"
+	  SrcPort		  LConn1
+	  Points		  [-189, 0; 0, -250]
 	  Branch {
 	    ConnectType		    "DEST_DEST"
-	    Points		    [526, 585; 0, -225]
-	    Branch {
-	      ConnectType	      "SRC_DEST"
-	      SrcBlock		      "Breaker8"
-	      SrcPort		      LConn1
-	      Points		      [-189, 0; 0, -250]
-	    }
-	    Branch {
-	      ConnectType	      "SRC_DEST"
-	      SrcBlock		      "Breaker5"
-	      SrcPort		      LConn1
-	      Points		      [-189, 0]
-	    }
+	    SrcBlock		    "Breaker5"
+	    SrcPort		    LConn1
+	    Points		    [-189, 0]
 	  }
 	  Branch {
 	    ConnectType		    "DEST_SRC"
-	    DstBlock		    "Breaker2"
-	    DstPort		    LConn1
+	    Points		    [0, -225]
+	    Branch {
+	      ConnectType	      "DEST_DEST"
+	      SrcBlock		      "T"
+	      SrcPort		      RConn1
+	      Points		      [641, 0]
+	    }
+	    Branch {
+	      ConnectType	      "DEST_SRC"
+	      DstBlock		      "Breaker2"
+	      DstPort		      LConn1
+	    }
 	  }
 	}
 	Line {
 	  SrcBlock		  "Timer"
 	  SrcPort		  1
-	  Points		  [532, 0; 0, 180]
+	  Points		  [247, 0; 0, 170]
 	  DstBlock		  "Breaker13"
 	  DstPort		  1
 	}
 	Line {
 	  SrcBlock		  "Timer"
 	  SrcPort		  2
-	  Points		  [514, 0; 0, 230]
+	  Points		  [229, 0; 0, 220]
 	  DstBlock		  "Breaker1"
 	  DstPort		  1
 	}
 	Line {
 	  SrcBlock		  "Timer"
 	  SrcPort		  3
-	  Points		  [499, 0; 0, 280]
+	  Points		  [214, 0; 0, 270]
 	  DstBlock		  "Breaker2"
 	  DstPort		  1
 	}
 	Line {
 	  SrcBlock		  "Timer"
 	  SrcPort		  4
-	  Points		  [485, 0; 0, 335]
+	  Points		  [200, 0; 0, 325]
 	  DstBlock		  "Breaker4"
 	  DstPort		  1
 	}
 	Line {
 	  SrcBlock		  "Timer"
 	  SrcPort		  5
-	  Points		  [469, 0; 0, 395]
+	  Points		  [184, 0; 0, 385]
 	  DstBlock		  "Breaker3"
 	  DstPort		  1
 	}
 	Line {
 	  SrcBlock		  "Timer"
 	  SrcPort		  6
-	  Points		  [453, 0; 0, 460]
+	  Points		  [168, 0; 0, 450]
 	  DstBlock		  "Breaker5"
 	  DstPort		  1
 	}
 	Line {
 	  SrcBlock		  "Timer"
 	  SrcPort		  7
-	  Points		  [439, 0; 0, 540]
+	  Points		  [154, 0; 0, 530]
 	  DstBlock		  "Breaker6"
 	  DstPort		  1
 	}
 	Line {
 	  SrcBlock		  "Timer"
 	  SrcPort		  8
-	  Points		  [424, 0; 0, 605]
+	  Points		  [139, 0; 0, 595]
 	  DstBlock		  "Breaker7"
 	  DstPort		  1
 	}
 	Line {
 	  SrcBlock		  "Timer"
 	  SrcPort		  9
-	  Points		  [410, 0; 0, 665]
+	  Points		  [125, 0; 0, 655]
 	  DstBlock		  "Breaker8"
 	  DstPort		  1
 	}
@@ -2482,7 +2482,7 @@ Model {
     }
     Block {
       BlockType		      SubSystem
-      Name		      "Network"
+      Name		      "Network_ohmic"
       SID		      "668"
       Ports		      [0, 0, 0, 0, 0, 4, 4]
       Position		      [340, 18, 400, 102]
@@ -2497,7 +2497,7 @@ Model {
       RequestExecContextInheritance off
       MaskHideContents	      off
       System {
-	Name			"Network"
+	Name			"Network_ohmic"
 	Location		[-8, 0, 1370, 780]
 	Open			off
 	ModelBrowserVisibility	off
@@ -2524,8 +2524,8 @@ Model {
 	  SourceType		  "Series RLC Branch"
 	  LConnTagsString	  "__new0"
 	  RConnTagsString	  "__new0"
-	  BranchType		  "RL"
-	  Resistance		  "R_Network(1)"
+	  BranchType		  "R"
+	  Resistance		  "Wire_resistence"
 	  Inductance		  "L_Network(1)"
 	  SetiL0		  off
 	  InitialCurrent	  "0"
@@ -2547,8 +2547,8 @@ Model {
 	  SourceType		  "Series RLC Branch"
 	  LConnTagsString	  "__new0"
 	  RConnTagsString	  "__new0"
-	  BranchType		  "RL"
-	  Resistance		  "R_Network(2)"
+	  BranchType		  "R"
+	  Resistance		  "Wire_resistence"
 	  Inductance		  "L_Network(2)"
 	  SetiL0		  off
 	  InitialCurrent	  "0"
@@ -2570,90 +2570,12 @@ Model {
 	  SourceType		  "Series RLC Branch"
 	  LConnTagsString	  "__new0"
 	  RConnTagsString	  "__new0"
-	  BranchType		  "RL"
-	  Resistance		  "R_Network(3)"
+	  BranchType		  "R"
+	  Resistance		  "Wire_resistence"
 	  Inductance		  "L_Network(3)"
 	  SetiL0		  off
 	  InitialCurrent	  "0"
 	  Capacitance		  "1.0"
-	  Setx0			  off
-	  InitialVoltage	  "0"
-	  Measurements		  "None"
-	}
-	Block {
-	  BlockType		  Reference
-	  Name			  "Transf-L  Line -R4"
-	  SID			  "490"
-	  Ports			  [0, 0, 0, 0, 0, 1, 1]
-	  Position		  [441, 90, 469, 160]
-	  ZOrder		  194
-	  BlockRotation		  270
-	  BlockMirror		  on
-	  NamePlacement		  "alternate"
-	  ShowName		  off
-	  LibraryVersion	  "1.2191"
-	  SourceBlock		  "powerlib/Elements/Series RLC Branch"
-	  SourceType		  "Series RLC Branch"
-	  LConnTagsString	  "__new0"
-	  RConnTagsString	  "__new0"
-	  BranchType		  "C"
-	  Resistance		  "i"
-	  Inductance		  "0.003185"
-	  SetiL0		  off
-	  InitialCurrent	  "0"
-	  Capacitance		  "C_Network(1)"
-	  Setx0			  off
-	  InitialVoltage	  "0"
-	  Measurements		  "None"
-	}
-	Block {
-	  BlockType		  Reference
-	  Name			  "Transf-L  Line -R5"
-	  SID			  "742"
-	  Ports			  [0, 0, 0, 0, 0, 1, 1]
-	  Position		  [441, 235, 469, 305]
-	  ZOrder		  212
-	  BlockRotation		  270
-	  BlockMirror		  on
-	  NamePlacement		  "alternate"
-	  ShowName		  off
-	  LibraryVersion	  "1.2191"
-	  SourceBlock		  "powerlib/Elements/Series RLC Branch"
-	  SourceType		  "Series RLC Branch"
-	  LConnTagsString	  "__new0"
-	  RConnTagsString	  "__new0"
-	  BranchType		  "C"
-	  Resistance		  "i"
-	  Inductance		  "0.003185"
-	  SetiL0		  off
-	  InitialCurrent	  "0"
-	  Capacitance		  "C_Network(2)"
-	  Setx0			  off
-	  InitialVoltage	  "0"
-	  Measurements		  "None"
-	}
-	Block {
-	  BlockType		  Reference
-	  Name			  "Transf-L  Line -R7"
-	  SID			  "743"
-	  Ports			  [0, 0, 0, 0, 0, 1, 1]
-	  Position		  [441, 395, 469, 465]
-	  ZOrder		  213
-	  BlockRotation		  270
-	  BlockMirror		  on
-	  NamePlacement		  "alternate"
-	  ShowName		  off
-	  LibraryVersion	  "1.2191"
-	  SourceBlock		  "powerlib/Elements/Series RLC Branch"
-	  SourceType		  "Series RLC Branch"
-	  LConnTagsString	  "__new0"
-	  RConnTagsString	  "__new0"
-	  BranchType		  "C"
-	  Resistance		  "i"
-	  Inductance		  "0.003185"
-	  SetiL0		  off
-	  InitialCurrent	  "0"
-	  Capacitance		  "C_Network(2)"
 	  Setx0			  off
 	  InitialVoltage	  "0"
 	  Measurements		  "None"
@@ -2671,8 +2593,8 @@ Model {
 	  SourceType		  "Series RLC Branch"
 	  LConnTagsString	  "__new0"
 	  RConnTagsString	  "__new0"
-	  BranchType		  "RL"
-	  Resistance		  "R_Network(4)"
+	  BranchType		  "R"
+	  Resistance		  "Wire_resistence"
 	  Inductance		  "L_Network(4)"
 	  SetiL0		  off
 	  InitialCurrent	  "0"
@@ -2685,7 +2607,7 @@ Model {
 	  BlockType		  PMIOPort
 	  Name			  "R"
 	  SID			  "669"
-	  Position		  [200, 58, 230, 72]
+	  Position		  [235, 58, 265, 72]
 	  ZOrder		  201
 	  Port			  "1"
 	  Side			  "Left"
@@ -2694,7 +2616,7 @@ Model {
 	  BlockType		  PMIOPort
 	  Name			  "U"
 	  SID			  "670"
-	  Position		  [1020, 58, 1050, 72]
+	  Position		  [525, 58, 555, 72]
 	  ZOrder		  202
 	  BlockMirror		  on
 	  Port			  "2"
@@ -2704,7 +2626,7 @@ Model {
 	  BlockType		  PMIOPort
 	  Name			  "S"
 	  SID			  "671"
-	  Position		  [200, 203, 230, 217]
+	  Position		  [235, 203, 265, 217]
 	  ZOrder		  203
 	  Port			  "3"
 	  Side			  "Left"
@@ -2713,7 +2635,7 @@ Model {
 	  BlockType		  PMIOPort
 	  Name			  "V"
 	  SID			  "672"
-	  Position		  [1020, 203, 1050, 217]
+	  Position		  [525, 203, 555, 217]
 	  ZOrder		  204
 	  BlockMirror		  on
 	  Port			  "4"
@@ -2723,7 +2645,7 @@ Model {
 	  BlockType		  PMIOPort
 	  Name			  "T"
 	  SID			  "673"
-	  Position		  [200, 348, 230, 362]
+	  Position		  [235, 348, 265, 362]
 	  ZOrder		  205
 	  Port			  "5"
 	  Side			  "Left"
@@ -2732,7 +2654,7 @@ Model {
 	  BlockType		  PMIOPort
 	  Name			  "W"
 	  SID			  "674"
-	  Position		  [1020, 348, 1050, 362]
+	  Position		  [525, 348, 555, 362]
 	  ZOrder		  206
 	  BlockMirror		  on
 	  Port			  "6"
@@ -2742,7 +2664,7 @@ Model {
 	  BlockType		  PMIOPort
 	  Name			  "N"
 	  SID			  "675"
-	  Position		  [200, 558, 230, 572]
+	  Position		  [235, 558, 265, 572]
 	  ZOrder		  207
 	  Port			  "7"
 	  Side			  "Left"
@@ -2751,533 +2673,77 @@ Model {
 	  BlockType		  PMIOPort
 	  Name			  "n"
 	  SID			  "1616"
-	  Position		  [1020, 558, 1050, 572]
+	  Position		  [525, 558, 555, 572]
 	  ZOrder		  522
 	  BlockMirror		  on
 	  Port			  "8"
 	  Side			  "Right"
-	}
-	Line {
-	  LineType		  "Connection"
-	  SrcBlock		  "Transf-L  Line -R4"
-	  SrcPort		  LConn1
-	  Points		  [0, -10]
-	  Branch {
-	    ConnectType		    "DEST_SRC"
-	    DstBlock		    "Transf-L  Line -R1"
-	    DstPort		    RConn1
-	  }
-	  Branch {
-	    ConnectType		    "DEST_DEST"
-	    SrcBlock		    "U"
-	    SrcPort		    RConn1
-	    Points		    [-550, 0]
-	  }
-	}
-	Line {
-	  LineType		  "Connection"
-	  SrcBlock		  "Transf-L  Line -R2"
-	  SrcPort		  RConn1
-	  Points		  [20, 0]
-	  Branch {
-	    ConnectType		    "DEST_SRC"
-	    DstBlock		    "Transf-L  Line -R5"
-	    DstPort		    LConn1
-	  }
-	  Branch {
-	    ConnectType		    "DEST_DEST"
-	    SrcBlock		    "V"
-	    SrcPort		    RConn1
-	    Points		    [-550, 0]
-	  }
-	}
-	Line {
-	  LineType		  "Connection"
-	  SrcBlock		  "Transf-L  Line -R7"
-	  SrcPort		  LConn1
-	  Points		  [0, -25]
-	  Branch {
-	    ConnectType		    "DEST_DEST"
-	    SrcBlock		    "W"
-	    SrcPort		    RConn1
-	    Points		    [-550, 0]
-	  }
-	  Branch {
-	    ConnectType		    "DEST_SRC"
-	    DstBlock		    "Transf-L  Line -R3"
-	    DstPort		    RConn1
-	  }
-	}
-	Line {
-	  LineType		  "Connection"
-	  SrcBlock		  "Transf-L  Line -R3"
-	  SrcPort		  LConn1
-	  DstBlock		  "T"
-	  DstPort		  RConn1
-	}
-	Line {
-	  LineType		  "Connection"
-	  SrcBlock		  "Transf-L  Line -R2"
-	  SrcPort		  LConn1
-	  DstBlock		  "S"
-	  DstPort		  RConn1
-	}
-	Line {
-	  LineType		  "Connection"
-	  SrcBlock		  "R"
-	  SrcPort		  RConn1
-	  DstBlock		  "Transf-L  Line -R1"
-	  DstPort		  LConn1
-	}
-	Line {
-	  LineType		  "Connection"
-	  Points		  [523, 315; 0, 180; -1, 0; 0, 70]
-	  Branch {
-	    ConnectType		    "SRC_DEST"
-	    SrcBlock		    "Transf-L  Line -R4"
-	    SrcPort		    RConn1
-	    Points		    [0, 9; 68, 0; 0, 131]
-	  }
-	  Branch {
-	    ConnectType		    "SRC_DEST"
-	    SrcBlock		    "Transf-L  Line -R5"
-	    SrcPort		    RConn1
-	    Points		    [0, -5; 68, 0]
-	  }
-	  Branch {
-	    ConnectType		    "DEST_DEST"
-	    SrcBlock		    "n"
-	    SrcPort		    RConn1
-	    Points		    [-483, 0]
-	  }
-	  Branch {
-	    ConnectType		    "DEST_SRC"
-	    Points		    [-67, 0]
-	    Branch {
-	      ConnectType	      "DEST_SRC"
-	      DstBlock		      "Transf-L  Line -R7"
-	      DstPort		      RConn1
-	    }
-	    Branch {
-	      ConnectType	      "DEST_DEST"
-	      SrcBlock		      "Transf-L  Line -R9"
-	      SrcPort		      RConn1
-	      Points		      [10, 0]
-	    }
-	  }
-	}
-	Line {
-	  LineType		  "Connection"
-	  SrcBlock		  "Transf-L  Line -R9"
-	  SrcPort		  LConn1
-	  DstBlock		  "N"
-	  DstPort		  RConn1
-	}
-      }
-    }
-    Block {
-      BlockType		      SubSystem
-      Name		      "Network1"
-      SID		      "3518"
-      Ports		      [0, 0, 0, 0, 0, 4, 4]
-      Position		      [545, 18, 605, 102]
-      ZOrder		      1594
-      FontName		      "Times New Roman"
-      FontSize		      12
-      MinAlgLoopOccurrences   off
-      PropExecContextOutsideSubsystem off
-      RTWSystemCode	      "Auto"
-      FunctionWithSeparateData off
-      Opaque		      off
-      RequestExecContextInheritance off
-      MaskHideContents	      off
-      System {
-	Name			"Network1"
-	Location		[-8, 0, 1370, 780]
-	Open			off
-	ModelBrowserVisibility	off
-	ModelBrowserWidth	200
-	ScreenColor		"white"
-	PaperOrientation	"landscape"
-	PaperPositionMode	"auto"
-	PaperType		"A4"
-	PaperUnits		"centimeters"
-	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
-	TiledPageScale		1
-	ShowPageBoundaries	off
-	ZoomFactor		"80"
-	Block {
-	  BlockType		  Reference
-	  Name			  "Transf-L  Line -R1"
-	  SID			  "3519"
-	  Ports			  [0, 0, 0, 0, 0, 1, 1]
-	  Position		  [350, 51, 420, 79]
-	  ZOrder		  191
-	  ShowName		  off
-	  LibraryVersion	  "1.2191"
-	  SourceBlock		  "powerlib/Elements/Series RLC Branch"
-	  SourceType		  "Series RLC Branch"
-	  LConnTagsString	  "__new0"
-	  RConnTagsString	  "__new0"
-	  BranchType		  "RL"
-	  Resistance		  "R_Network(1)"
-	  Inductance		  "L_Network(1)"
-	  SetiL0		  off
-	  InitialCurrent	  "0"
-	  Capacitance		  "1.0"
-	  Setx0			  off
-	  InitialVoltage	  "0"
-	  Measurements		  "None"
-	}
-	Block {
-	  BlockType		  Reference
-	  Name			  "Transf-L  Line -R2"
-	  SID			  "3520"
-	  Ports			  [0, 0, 0, 0, 0, 1, 1]
-	  Position		  [350, 196, 420, 224]
-	  ZOrder		  209
-	  ShowName		  off
-	  LibraryVersion	  "1.2191"
-	  SourceBlock		  "powerlib/Elements/Series RLC Branch"
-	  SourceType		  "Series RLC Branch"
-	  LConnTagsString	  "__new0"
-	  RConnTagsString	  "__new0"
-	  BranchType		  "RL"
-	  Resistance		  "R_Network(2)"
-	  Inductance		  "L_Network(2)"
-	  SetiL0		  off
-	  InitialCurrent	  "0"
-	  Capacitance		  "1.0"
-	  Setx0			  off
-	  InitialVoltage	  "0"
-	  Measurements		  "None"
-	}
-	Block {
-	  BlockType		  Reference
-	  Name			  "Transf-L  Line -R3"
-	  SID			  "3521"
-	  Ports			  [0, 0, 0, 0, 0, 1, 1]
-	  Position		  [350, 341, 420, 369]
-	  ZOrder		  210
-	  ShowName		  off
-	  LibraryVersion	  "1.2191"
-	  SourceBlock		  "powerlib/Elements/Series RLC Branch"
-	  SourceType		  "Series RLC Branch"
-	  LConnTagsString	  "__new0"
-	  RConnTagsString	  "__new0"
-	  BranchType		  "RL"
-	  Resistance		  "R_Network(3)"
-	  Inductance		  "L_Network(3)"
-	  SetiL0		  off
-	  InitialCurrent	  "0"
-	  Capacitance		  "1.0"
-	  Setx0			  off
-	  InitialVoltage	  "0"
-	  Measurements		  "None"
-	}
-	Block {
-	  BlockType		  Reference
-	  Name			  "Transf-L  Line -R4"
-	  SID			  "3522"
-	  Ports			  [0, 0, 0, 0, 0, 1, 1]
-	  Position		  [441, 90, 469, 160]
-	  ZOrder		  194
-	  BlockRotation		  270
-	  BlockMirror		  on
-	  NamePlacement		  "alternate"
-	  ShowName		  off
-	  LibraryVersion	  "1.2191"
-	  SourceBlock		  "powerlib/Elements/Series RLC Branch"
-	  SourceType		  "Series RLC Branch"
-	  LConnTagsString	  "__new0"
-	  RConnTagsString	  "__new0"
-	  BranchType		  "C"
-	  Resistance		  "i"
-	  Inductance		  "0.003185"
-	  SetiL0		  off
-	  InitialCurrent	  "0"
-	  Capacitance		  "C_Network(1)"
-	  Setx0			  off
-	  InitialVoltage	  "0"
-	  Measurements		  "None"
-	}
-	Block {
-	  BlockType		  Reference
-	  Name			  "Transf-L  Line -R5"
-	  SID			  "3523"
-	  Ports			  [0, 0, 0, 0, 0, 1, 1]
-	  Position		  [441, 235, 469, 305]
-	  ZOrder		  212
-	  BlockRotation		  270
-	  BlockMirror		  on
-	  NamePlacement		  "alternate"
-	  ShowName		  off
-	  LibraryVersion	  "1.2191"
-	  SourceBlock		  "powerlib/Elements/Series RLC Branch"
-	  SourceType		  "Series RLC Branch"
-	  LConnTagsString	  "__new0"
-	  RConnTagsString	  "__new0"
-	  BranchType		  "C"
-	  Resistance		  "i"
-	  Inductance		  "0.003185"
-	  SetiL0		  off
-	  InitialCurrent	  "0"
-	  Capacitance		  "C_Network(2)"
-	  Setx0			  off
-	  InitialVoltage	  "0"
-	  Measurements		  "None"
-	}
-	Block {
-	  BlockType		  Reference
-	  Name			  "Transf-L  Line -R7"
-	  SID			  "3524"
-	  Ports			  [0, 0, 0, 0, 0, 1, 1]
-	  Position		  [441, 395, 469, 465]
-	  ZOrder		  213
-	  BlockRotation		  270
-	  BlockMirror		  on
-	  NamePlacement		  "alternate"
-	  ShowName		  off
-	  LibraryVersion	  "1.2191"
-	  SourceBlock		  "powerlib/Elements/Series RLC Branch"
-	  SourceType		  "Series RLC Branch"
-	  LConnTagsString	  "__new0"
-	  RConnTagsString	  "__new0"
-	  BranchType		  "C"
-	  Resistance		  "i"
-	  Inductance		  "0.003185"
-	  SetiL0		  off
-	  InitialCurrent	  "0"
-	  Capacitance		  "C_Network(2)"
-	  Setx0			  off
-	  InitialVoltage	  "0"
-	  Measurements		  "None"
-	}
-	Block {
-	  BlockType		  Reference
-	  Name			  "Transf-L  Line -R9"
-	  SID			  "3525"
-	  Ports			  [0, 0, 0, 0, 0, 1, 1]
-	  Position		  [360, 551, 430, 579]
-	  ZOrder		  214
-	  ShowName		  off
-	  LibraryVersion	  "1.2191"
-	  SourceBlock		  "powerlib/Elements/Series RLC Branch"
-	  SourceType		  "Series RLC Branch"
-	  LConnTagsString	  "__new0"
-	  RConnTagsString	  "__new0"
-	  BranchType		  "RL"
-	  Resistance		  "R_Network(4)"
-	  Inductance		  "L_Network(4)"
-	  SetiL0		  off
-	  InitialCurrent	  "0"
-	  Capacitance		  "1.0"
-	  Setx0			  off
-	  InitialVoltage	  "0"
-	  Measurements		  "None"
-	}
-	Block {
-	  BlockType		  PMIOPort
-	  Name			  "R"
-	  SID			  "3526"
-	  Position		  [200, 58, 230, 72]
-	  ZOrder		  201
-	  Port			  "1"
-	  Side			  "Left"
-	}
-	Block {
-	  BlockType		  PMIOPort
-	  Name			  "U"
-	  SID			  "3527"
-	  Position		  [1020, 58, 1050, 72]
-	  ZOrder		  202
-	  BlockMirror		  on
-	  Port			  "2"
-	  Side			  "Right"
-	}
-	Block {
-	  BlockType		  PMIOPort
-	  Name			  "S"
-	  SID			  "3528"
-	  Position		  [200, 203, 230, 217]
-	  ZOrder		  203
-	  Port			  "3"
-	  Side			  "Left"
-	}
-	Block {
-	  BlockType		  PMIOPort
-	  Name			  "V"
-	  SID			  "3529"
-	  Position		  [1020, 203, 1050, 217]
-	  ZOrder		  204
-	  BlockMirror		  on
-	  Port			  "4"
-	  Side			  "Right"
-	}
-	Block {
-	  BlockType		  PMIOPort
-	  Name			  "T"
-	  SID			  "3530"
-	  Position		  [200, 348, 230, 362]
-	  ZOrder		  205
-	  Port			  "5"
-	  Side			  "Left"
-	}
-	Block {
-	  BlockType		  PMIOPort
-	  Name			  "W"
-	  SID			  "3531"
-	  Position		  [1020, 348, 1050, 362]
-	  ZOrder		  206
-	  BlockMirror		  on
-	  Port			  "6"
-	  Side			  "Right"
-	}
-	Block {
-	  BlockType		  PMIOPort
-	  Name			  "N"
-	  SID			  "3532"
-	  Position		  [200, 558, 230, 572]
-	  ZOrder		  207
-	  Port			  "7"
-	  Side			  "Left"
-	}
-	Block {
-	  BlockType		  PMIOPort
-	  Name			  "n"
-	  SID			  "3533"
-	  Position		  [1020, 558, 1050, 572]
-	  ZOrder		  522
-	  BlockMirror		  on
-	  Port			  "8"
-	  Side			  "Right"
-	}
-	Line {
-	  LineType		  "Connection"
-	  SrcBlock		  "Transf-L  Line -R9"
-	  SrcPort		  LConn1
-	  DstBlock		  "N"
-	  DstPort		  RConn1
-	}
-	Line {
-	  LineType		  "Connection"
-	  SrcBlock		  "Transf-L  Line -R9"
-	  SrcPort		  RConn1
-	  Points		  [10, 0]
-	  Branch {
-	    ConnectType		    "DEST_SRC"
-	    DstBlock		    "Transf-L  Line -R7"
-	    DstPort		    RConn1
-	  }
-	  Branch {
-	    ConnectType		    "DEST_DEST"
-	    Points		    [522, 565; -67, 0]
-	    Branch {
-	      ConnectType	      "SRC_DEST"
-	      SrcBlock		      "n"
-	      SrcPort		      RConn1
-	      Points		      [-483, 0]
-	    }
-	    Branch {
-	      ConnectType	      "SRC_DEST"
-	      Points		      [523, 315; 0, 180; -1, 0; 0, 70]
-	      Branch {
-		ConnectType		"SRC_DEST"
-		SrcBlock		"Transf-L  Line -R5"
-		SrcPort			RConn1
-		Points			[0, -5; 68, 0]
-	      }
-	      Branch {
-		ConnectType		"SRC_DEST"
-		SrcBlock		"Transf-L  Line -R4"
-		SrcPort			RConn1
-		Points			[0, 9; 68, 0; 0, 131]
-	      }
-	    }
-	  }
-	}
-	Line {
-	  LineType		  "Connection"
-	  SrcBlock		  "R"
-	  SrcPort		  RConn1
-	  DstBlock		  "Transf-L  Line -R1"
-	  DstPort		  LConn1
-	}
-	Line {
-	  LineType		  "Connection"
-	  SrcBlock		  "Transf-L  Line -R2"
-	  SrcPort		  LConn1
-	  DstBlock		  "S"
-	  DstPort		  RConn1
-	}
-	Line {
-	  LineType		  "Connection"
-	  SrcBlock		  "Transf-L  Line -R3"
-	  SrcPort		  LConn1
-	  DstBlock		  "T"
-	  DstPort		  RConn1
-	}
-	Line {
-	  LineType		  "Connection"
-	  Points		  [455, 355; -20, 0]
-	  DstBlock		  "Transf-L  Line -R3"
-	  DstPort		  RConn1
-	  Branch {
-	    ConnectType		    "SRC_DEST"
-	    SrcBlock		    "W"
-	    SrcPort		    RConn1
-	    Points		    [-550, 0]
-	  }
-	  Branch {
-	    ConnectType		    "SRC_DEST"
-	    SrcBlock		    "Transf-L  Line -R7"
-	    SrcPort		    LConn1
-	    Points		    [0, -25]
-	  }
-	}
-	Line {
-	  LineType		  "Connection"
-	  SrcBlock		  "V"
-	  SrcPort		  RConn1
-	  Points		  [-550, 0]
-	  Branch {
-	    ConnectType		    "DEST_SRC"
-	    DstBlock		    "Transf-L  Line -R5"
-	    DstPort		    LConn1
-	  }
-	  Branch {
-	    ConnectType		    "DEST_DEST"
-	    SrcBlock		    "Transf-L  Line -R2"
-	    SrcPort		    RConn1
-	    Points		    [20, 0]
-	  }
 	}
 	Line {
 	  LineType		  "Connection"
 	  SrcBlock		  "U"
 	  SrcPort		  RConn1
-	  Points		  [-550, 0]
-	  Branch {
-	    ConnectType		    "DEST_SRC"
-	    DstBlock		    "Transf-L  Line -R1"
-	    DstPort		    RConn1
-	  }
-	  Branch {
-	    ConnectType		    "DEST_DEST"
-	    SrcBlock		    "Transf-L  Line -R4"
-	    SrcPort		    LConn1
-	    Points		    [0, -10]
-	  }
+	  DstBlock		  "Transf-L  Line -R1"
+	  DstPort		  RConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  SrcBlock		  "V"
+	  SrcPort		  RConn1
+	  DstBlock		  "Transf-L  Line -R2"
+	  DstPort		  RConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  SrcBlock		  "W"
+	  SrcPort		  RConn1
+	  DstBlock		  "Transf-L  Line -R3"
+	  DstPort		  RConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  SrcBlock		  "Transf-L  Line -R3"
+	  SrcPort		  LConn1
+	  DstBlock		  "T"
+	  DstPort		  RConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  SrcBlock		  "Transf-L  Line -R2"
+	  SrcPort		  LConn1
+	  DstBlock		  "S"
+	  DstPort		  RConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  SrcBlock		  "R"
+	  SrcPort		  RConn1
+	  DstBlock		  "Transf-L  Line -R1"
+	  DstPort		  LConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  SrcBlock		  "Transf-L  Line -R9"
+	  SrcPort		  LConn1
+	  DstBlock		  "N"
+	  DstPort		  RConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  SrcBlock		  "n"
+	  SrcPort		  RConn1
+	  DstBlock		  "Transf-L  Line -R9"
+	  DstPort		  RConn1
 	}
       }
     }
     Block {
       BlockType		      SubSystem
-      Name		      "Subsystem"
+      Name		      "Synchroniser_Inverter"
       SID		      "3509"
-      Ports		      [0, 0, 0, 0, 0, 0, 4]
-      Position		      [770, 168, 830, 252]
-      ZOrder		      1593
+      Ports		      [0, 0, 0, 0, 0, 4]
+      Position		      [470, 287, 510, 348]
+      ZOrder		      1634
       MinAlgLoopOccurrences   off
       PropExecContextOutsideSubsystem off
       RTWSystemCode	      "Auto"
@@ -3286,7 +2752,7 @@ Model {
       RequestExecContextInheritance off
       MaskHideContents	      off
       System {
-	Name			"Subsystem"
+	Name			"Synchroniser_Inverter"
 	Location		[-8, 0, 1370, 780]
 	Open			on
 	ModelBrowserVisibility	off
@@ -12042,7 +11508,7 @@ Model {
 	  ZOrder		  852
 	  Floating		  off
 	  Location		  [6, 43, 1376, 762]
-	  Open			  on
+	  Open			  off
 	  NumInputPorts		  "1"
 	  List {
 	    ListType		    AxesTitles
@@ -12060,8 +11526,8 @@ Model {
 	  }
 	  ShowLegends		  on
 	  LegendLocations	  "0.83564     0.92003     0.14234     0.02828"
-	  YMin			  "65000"
-	  YMax			  "140000"
+	  YMin			  "137464"
+	  YMax			  "137464"
 	  SaveName		  "ScopeData2"
 	  DataFormat		  "StructureWithTime"
 	  LimitDataPoints	  off
@@ -12119,12 +11585,12 @@ Model {
 	  BlockType		  PMIOPort
 	  Name			  "R"
 	  SID			  "3511"
-	  Position		  [598, 20, 628, 35]
+	  Position		  [600, 20, 630, 35]
 	  ZOrder		  1594
 	  BlockRotation		  270
 	  BlockMirror		  on
 	  Port			  "1"
-	  Side			  "Right"
+	  Side			  "Left"
 	}
 	Block {
 	  BlockType		  PMIOPort
@@ -12135,29 +11601,29 @@ Model {
 	  BlockRotation		  270
 	  BlockMirror		  on
 	  Port			  "2"
-	  Side			  "Right"
+	  Side			  "Left"
 	}
 	Block {
 	  BlockType		  PMIOPort
 	  Name			  "T"
 	  SID			  "3515"
-	  Position		  [697, 20, 727, 35]
+	  Position		  [695, 20, 725, 35]
 	  ZOrder		  1598
 	  BlockRotation		  270
 	  BlockMirror		  on
 	  Port			  "3"
-	  Side			  "Right"
+	  Side			  "Left"
 	}
 	Block {
 	  BlockType		  PMIOPort
 	  Name			  "N"
 	  SID			  "3517"
-	  Position		  [743, 20, 773, 35]
+	  Position		  [745, 20, 775, 35]
 	  ZOrder		  1600
 	  BlockRotation		  270
 	  BlockMirror		  on
 	  Port			  "4"
-	  Side			  "Right"
+	  Side			  "Left"
 	}
 	Line {
 	  SrcBlock		  "Calculate_Norms"
@@ -12225,7 +11691,7 @@ Model {
 	    ConnectType		    "DEST_DEST"
 	    SrcBlock		    "Current Control"
 	    SrcPort		    RConn1
-	    Points		    [53, 0]
+	    Points		    [55, 0]
 	  }
 	  Branch {
 	    ConnectType		    "DEST_SRC"
@@ -12261,7 +11727,7 @@ Model {
 	    ConnectType		    "DEST_DEST"
 	    SrcBlock		    "Current Control"
 	    SrcPort		    RConn3
-	    Points		    [152, 0]
+	    Points		    [150, 0]
 	  }
 	  Branch {
 	    ConnectType		    "DEST_SRC"
@@ -12279,7 +11745,7 @@ Model {
 	    ConnectType		    "DEST_DEST"
 	    SrcBlock		    "Current Control"
 	    SrcPort		    RConn4
-	    Points		    [198, 0]
+	    Points		    [200, 0]
 	  }
 	  Branch {
 	    ConnectType		    "DEST_SRC"
@@ -14267,124 +13733,100 @@ Model {
       LineType		      "Connection"
       SrcBlock		      "Timed Breakers"
       SrcPort		      RConn1
-      DstBlock		      "Network"
+      DstBlock		      "Network_ohmic"
       DstPort		      LConn1
     }
     Line {
       LineType		      "Connection"
       SrcBlock		      "Timed Breakers"
       SrcPort		      RConn3
-      DstBlock		      "Network"
+      DstBlock		      "Network_ohmic"
       DstPort		      LConn3
     }
     Line {
       LineType		      "Connection"
       SrcBlock		      "Timed Breakers"
       SrcPort		      RConn4
-      DstBlock		      "Network"
+      DstBlock		      "Network_ohmic"
       DstPort		      LConn4
     }
     Line {
       LineType		      "Connection"
       SrcBlock		      "Timed Breakers"
       SrcPort		      RConn2
-      DstBlock		      "Network"
+      DstBlock		      "Network_ohmic"
       DstPort		      LConn2
     }
     Line {
       LineType		      "Connection"
-      SrcBlock		      "Network"
+      SrcBlock		      "Network_ohmic"
       SrcPort		      RConn1
-      DstBlock		      "Network1"
-      DstPort		      LConn1
+      Points		      [38, 0; 0, 155; 1, 0]
+      Branch {
+	ConnectType		"DEST_DEST"
+	SrcBlock		"Synchroniser_Inverter"
+	SrcPort			LConn1
+	Points			[-1, 0; 0, -110]
+      }
+      Branch {
+	ConnectType		"DEST_DEST"
+	SrcBlock		"HouseHold1\n"
+	SrcPort			LConn1
+	Points			[-1, 0]
+      }
     }
     Line {
       LineType		      "Connection"
-      SrcBlock		      "Network"
+      SrcBlock		      "Network_ohmic"
       SrcPort		      RConn2
-      DstBlock		      "Network1"
-      DstPort		      LConn2
+      Points		      [23, 0; 0, 150]
+      Branch {
+	ConnectType		"DEST_DEST"
+	SrcBlock		"Synchroniser_Inverter"
+	SrcPort			LConn2
+	Points			[-17, 0; 0, -110]
+      }
+      Branch {
+	ConnectType		"DEST_DEST"
+	SrcBlock		"HouseHold1\n"
+	SrcPort			LConn2
+	Points			[-17, 0]
+      }
     }
     Line {
       LineType		      "Connection"
-      SrcBlock		      "Network"
+      SrcBlock		      "Network_ohmic"
       SrcPort		      RConn3
-      DstBlock		      "Network1"
-      DstPort		      LConn3
+      Points		      [11, 0; 0, 145; 2, 0]
+      Branch {
+	ConnectType		"DEST_DEST"
+	SrcBlock		"Synchroniser_Inverter"
+	SrcPort			LConn3
+	Points			[-27, 0; 0, -110]
+      }
+      Branch {
+	ConnectType		"DEST_DEST"
+	SrcBlock		"HouseHold1\n"
+	SrcPort			LConn3
+	Points			[-27, 0]
+      }
     }
     Line {
       LineType		      "Connection"
-      SrcBlock		      "Network"
+      SrcBlock		      "Network_ohmic"
       SrcPort		      RConn4
-      DstBlock		      "Network1"
-      DstPort		      LConn4
-    }
-    Line {
-      LineType		      "Connection"
-      SrcBlock		      "Network1"
-      SrcPort		      RConn1
-      Points		      [231, 0]
+      Points		      [0, 140]
       Branch {
 	ConnectType		"DEST_DEST"
-	SrcBlock		"Subsystem"
-	SrcPort			RConn1
-	Points			[6, 0; 0, -150]
+	SrcBlock		"Synchroniser_Inverter"
+	SrcPort			LConn4
+	Points			[-40, 0; 0, -110]
       }
-      Branch {
-	ConnectType		"DEST_SRC"
-	DstBlock		"Load System"
-	DstPort			LConn1
-      }
-    }
-    Line {
-      LineType		      "Connection"
-      SrcBlock		      "Network1"
-      SrcPort		      RConn4
-      Points		      [309, 0]
       Branch {
 	ConnectType		"DEST_DEST"
-	SrcBlock		"Subsystem"
-	SrcPort			RConn4
-	Points			[84, 0; 0, -150]
-      }
-      Branch {
-	ConnectType		"DEST_SRC"
-	DstBlock		"Load System"
-	DstPort			LConn4
-      }
-    }
-    Line {
-      LineType		      "Connection"
-      SrcBlock		      "Network1"
-      SrcPort		      RConn2
-      Points		      [256, 0]
-      Branch {
-	ConnectType		"DEST_DEST"
-	SrcBlock		"Subsystem"
-	SrcPort			RConn2
-	Points			[31, 0; 0, -150]
-      }
-      Branch {
-	ConnectType		"DEST_SRC"
-	DstBlock		"Load System"
-	DstPort			LConn2
-      }
-    }
-    Line {
-      LineType		      "Connection"
-      SrcBlock		      "Network1"
-      SrcPort		      RConn3
-      Points		      [281, 0]
-      Branch {
-	ConnectType		"DEST_DEST"
-	SrcBlock		"Subsystem"
-	SrcPort			RConn3
-	Points			[56, 0; 0, -150]
-      }
-      Branch {
-	ConnectType		"DEST_SRC"
-	DstBlock		"Load System"
-	DstPort			LConn3
+	SrcBlock		"HouseHold1\n"
+	SrcPort			LConn4
+	Points			[-40, 0]
       }
     }
   }
@@ -14419,11 +13861,13 @@ Stateflow {
     created		    "26-Dec-2014 17:23:03"
     isLibrary		    0
     firstTarget		    107
+    debug {
+    }
     sfVersion		    76014001.0015
   }
   chart {
     id			    2
-    name		    "Subsystem/Calculate_Norms/Mearusement_calc/geometrial norm"
+    name		    "Synchroniser_Inverter/Calculate_Norms/Mearusement_calc/geometrial norm"
     windowPosition	    [357.331 483.407 167 391]
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 1280 1024 1.041050272174191]
@@ -14432,6 +13876,8 @@ Stateflow {
     firstJunction	    11
     viewObj		    2
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    10
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -14652,13 +14098,13 @@ Stateflow {
   }
   instance {
     id			    13
-    name		    "Subsystem/Calculate_Norms/Mearusement_calc/geometrial norm"
+    name		    "Synchroniser_Inverter/Calculate_Norms/Mearusement_calc/geometrial norm"
     machine		    1
     chart		    2
   }
   chart {
     id			    14
-    name		    "Subsystem/Calculate_Norms/Mearusement_calc/vectorial norm old"
+    name		    "Synchroniser_Inverter/Calculate_Norms/Mearusement_calc/vectorial norm old"
     windowPosition	    [357.331 483.407 167 391]
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 1280 1024 1.041050272174191]
@@ -14667,6 +14113,8 @@ Stateflow {
     firstJunction	    23
     viewObj		    14
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    10
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -14884,13 +14332,13 @@ Stateflow {
   }
   instance {
     id			    25
-    name		    "Subsystem/Calculate_Norms/Mearusement_calc/vectorial norm old"
+    name		    "Synchroniser_Inverter/Calculate_Norms/Mearusement_calc/vectorial norm old"
     machine		    1
     chart		    14
   }
   chart {
     id			    26
-    name		    "Subsystem/Calculate_Norms/Mearusement_calc/regular norm"
+    name		    "Synchroniser_Inverter/Calculate_Norms/Mearusement_calc/regular norm"
     windowPosition	    [357.331 483.407 167 391]
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 1280 1024 1.041050272174191]
@@ -14899,6 +14347,8 @@ Stateflow {
     firstJunction	    35
     viewObj		    26
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    11
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -15116,13 +14566,13 @@ Stateflow {
   }
   instance {
     id			    37
-    name		    "Subsystem/Calculate_Norms/Mearusement_calc/regular norm"
+    name		    "Synchroniser_Inverter/Calculate_Norms/Mearusement_calc/regular norm"
     machine		    1
     chart		    26
   }
   chart {
     id			    38
-    name		    "Subsystem/Current Control/controller/MATLAB Function1"
+    name		    "Synchroniser_Inverter/Current Control/controller/MATLAB Function1"
     windowPosition	    [357.12 483.496 167 391]
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 1280 1024 1.041666666666667]
@@ -15131,6 +14581,8 @@ Stateflow {
     firstJunction	    44
     viewObj		    38
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    11
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -15283,13 +14735,13 @@ Stateflow {
   }
   instance {
     id			    46
-    name		    "Subsystem/Current Control/controller/MATLAB Function1"
+    name		    "Synchroniser_Inverter/Current Control/controller/MATLAB Function1"
     machine		    1
     chart		    38
   }
   chart {
     id			    47
-    name		    "Subsystem/Current Control/controller/MATLAB Function"
+    name		    "Synchroniser_Inverter/Current Control/controller/MATLAB Function"
     windowPosition	    [357.12 483.496 167 391]
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 1280 1024 1.041666666666667]
@@ -15298,6 +14750,8 @@ Stateflow {
     firstJunction	    53
     viewObj		    47
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    11
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -15449,13 +14903,13 @@ Stateflow {
   }
   instance {
     id			    55
-    name		    "Subsystem/Current Control/controller/MATLAB Function"
+    name		    "Synchroniser_Inverter/Current Control/controller/MATLAB Function"
     machine		    1
     chart		    47
   }
   chart {
     id			    56
-    name		    "Subsystem/Calculate_Norms/Mearusement_calc/geometrial norm meaned"
+    name		    "Synchroniser_Inverter/Calculate_Norms/Mearusement_calc/geometrial norm meaned"
     windowPosition	    [357.331 483.407 167 391]
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 1280 1024 1.041050272174191]
@@ -15464,6 +14918,8 @@ Stateflow {
     firstJunction	    66
     viewObj		    56
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    11
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -15707,13 +15163,13 @@ Stateflow {
   }
   instance {
     id			    68
-    name		    "Subsystem/Calculate_Norms/Mearusement_calc/geometrial norm meaned"
+    name		    "Synchroniser_Inverter/Calculate_Norms/Mearusement_calc/geometrial norm meaned"
     machine		    1
     chart		    56
   }
   chart {
     id			    69
-    name		    "Subsystem/Calculate_Norms/Mearusement_calc/vectorial norm new"
+    name		    "Synchroniser_Inverter/Calculate_Norms/Mearusement_calc/vectorial norm new"
     windowPosition	    [357.331 483.407 167 391]
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 1280 1024 1.041050272174191]
@@ -15722,6 +15178,8 @@ Stateflow {
     firstJunction	    78
     viewObj		    69
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    10
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -15939,13 +15397,13 @@ Stateflow {
   }
   instance {
     id			    80
-    name		    "Subsystem/Calculate_Norms/Mearusement_calc/vectorial norm new"
+    name		    "Synchroniser_Inverter/Calculate_Norms/Mearusement_calc/vectorial norm new"
     machine		    1
     chart		    69
   }
   chart {
     id			    81
-    name		    "Subsystem/Calculate_Norms/Mearusement_calc/vectorial norm old meaned"
+    name		    "Synchroniser_Inverter/Calculate_Norms/Mearusement_calc/vectorial norm old meaned"
     windowPosition	    [357.331 483.407 167 391]
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 1280 1024 1.041050272174191]
@@ -15954,6 +15412,8 @@ Stateflow {
     firstJunction	    91
     viewObj		    81
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    11
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -16194,13 +15654,13 @@ Stateflow {
   }
   instance {
     id			    93
-    name		    "Subsystem/Calculate_Norms/Mearusement_calc/vectorial norm old meaned"
+    name		    "Synchroniser_Inverter/Calculate_Norms/Mearusement_calc/vectorial norm old meaned"
     machine		    1
     chart		    81
   }
   chart {
     id			    94
-    name		    "Subsystem/Calculate_Norms/Mearusement_calc/vectorial norm new meaned"
+    name		    "Synchroniser_Inverter/Calculate_Norms/Mearusement_calc/vectorial norm new meaned"
     windowPosition	    [357.331 483.407 167 391]
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 1280 1024 1.041050272174191]
@@ -16209,6 +15669,8 @@ Stateflow {
     firstJunction	    104
     viewObj		    94
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    11
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -16449,7 +15911,7 @@ Stateflow {
   }
   instance {
     id			    106
-    name		    "Subsystem/Calculate_Norms/Mearusement_calc/vectorial norm new meaned"
+    name		    "Synchroniser_Inverter/Calculate_Norms/Mearusement_calc/vectorial norm new meaned"
     machine		    1
     chart		    94
   }

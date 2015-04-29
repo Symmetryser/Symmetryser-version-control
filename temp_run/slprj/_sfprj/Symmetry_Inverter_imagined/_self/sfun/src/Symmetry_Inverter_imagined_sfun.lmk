@@ -9,14 +9,8 @@ OBJECTS = \
 	"lccstub.obj"\
 	"Symmetry_Inverter_imagined_sfun.obj"\
 	"c1_Symmetry_Inverter_imagined.obj"\
-	"c2_Symmetry_Inverter_imagined.obj"\
-	"c3_Symmetry_Inverter_imagined.obj"\
 	"c4_Symmetry_Inverter_imagined.obj"\
 	"c5_Symmetry_Inverter_imagined.obj"\
-	"c6_Symmetry_Inverter_imagined.obj"\
-	"c7_Symmetry_Inverter_imagined.obj"\
-	"c8_Symmetry_Inverter_imagined.obj"\
-	"c9_Symmetry_Inverter_imagined.obj"\
 	"Symmetry_Inverter_imagined_sfun_registry.obj"\
 	"C:\Program Files\MATLAB\R2013a\sys\lcc\mex\lccdef.def"\
 	"C:\Program Files\MATLAB\R2013a\stateflow\c\mex\lib\win32\sfc_mexlcc.lib"\
@@ -42,21 +36,9 @@ Symmetry_Inverter_imagined_sfun.obj :	"Symmetry_Inverter_imagined_sfun.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "Symmetry_Inverter_imagined_sfun.c"
 c1_Symmetry_Inverter_imagined.obj :	"c1_Symmetry_Inverter_imagined.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c1_Symmetry_Inverter_imagined.c"
-c2_Symmetry_Inverter_imagined.obj :	"c2_Symmetry_Inverter_imagined.c"
-	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c2_Symmetry_Inverter_imagined.c"
-c3_Symmetry_Inverter_imagined.obj :	"c3_Symmetry_Inverter_imagined.c"
-	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c3_Symmetry_Inverter_imagined.c"
 c4_Symmetry_Inverter_imagined.obj :	"c4_Symmetry_Inverter_imagined.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c4_Symmetry_Inverter_imagined.c"
 c5_Symmetry_Inverter_imagined.obj :	"c5_Symmetry_Inverter_imagined.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c5_Symmetry_Inverter_imagined.c"
-c6_Symmetry_Inverter_imagined.obj :	"c6_Symmetry_Inverter_imagined.c"
-	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c6_Symmetry_Inverter_imagined.c"
-c7_Symmetry_Inverter_imagined.obj :	"c7_Symmetry_Inverter_imagined.c"
-	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c7_Symmetry_Inverter_imagined.c"
-c8_Symmetry_Inverter_imagined.obj :	"c8_Symmetry_Inverter_imagined.c"
-	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c8_Symmetry_Inverter_imagined.c"
-c9_Symmetry_Inverter_imagined.obj :	"c9_Symmetry_Inverter_imagined.c"
-	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c9_Symmetry_Inverter_imagined.c"
 Symmetry_Inverter_imagined_sfun_registry.obj :	"Symmetry_Inverter_imagined_sfun_registry.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "Symmetry_Inverter_imagined_sfun_registry.c"

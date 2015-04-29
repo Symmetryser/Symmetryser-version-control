@@ -79,7 +79,7 @@ legend('Ideal','Real','Uion','Intersection')
 hold off
 %drawnow;
 pause(str2num(answer{3}));
-asd=[i,VEC_OLD_saved.data(i),GEO_saved.data(i)]
+%asd=[i,VEC_OLD_saved.data(i),GEO_saved.data(i)]
 
 end
 

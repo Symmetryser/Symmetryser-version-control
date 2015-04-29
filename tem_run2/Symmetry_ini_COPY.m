@@ -3,7 +3,7 @@ clear all;
 close all;
 %% Simulation initialisation parameters
 CLK=1000;                                           %[sample/s]
-tfin=20;                                           %[s]
+tfin=100;                                           %[s]
 sample=10e-5;                                       %[s/sample]
 t=0:sample:tfin;                                    %[tick]
 %% FFT
@@ -20,6 +20,7 @@ L_Source=[3.185e-3, 3.185e-3, 3.185e-3];            %[H]
 Butterworth_filter_order=8;
 Butterworth_passband_frequency=5000;
 %% Network parameters
+Network_lenght=[1,1,1,1,1,1];
 Network_Wire_Resistance=0.4;
 R_Network=[0.4, 0.4, 0.4, 0.4];                     %[Ohm]
 L_Network=[3.185e-3, 3.185e-3, 3.185e-3, 3.185e-3]; %[H]
@@ -55,7 +56,7 @@ k_symmetrcal_gain=1e2;                              %[Gain of symmetrycal]
 PV_Power_Capacity=2e4;
 PowerGain=[1e-5,1e-5,0];
 Start_Control=1;
-P_gain=1e-4;                                     %[divide by 10 if simulating malfunction]
+P_gain=5e-5;                                     %[divide by 10 if simulating malfunction]
 stair_sample=0.02;
 mask_sample=0.1;
 switch_sample=0.02;

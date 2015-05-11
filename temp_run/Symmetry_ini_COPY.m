@@ -4,7 +4,7 @@ close all;
 
 %% Simulation initialisation parameters
 CLK=1000;                                           %[sample/s]
-tfin=20;                                           %[s]
+tfin=40;                                           %[s]
 sample=10e-5;                                       %[s/sample]
 t=0:sample:tfin;                                    %[tick]
 
@@ -55,12 +55,12 @@ START_Load_RC=[100,100,0.001];                             %[Boolean in time]
 %% Power Controller
 k_symmetrcal_gain=1e1;                              %[Gain of symmetrycal]
 k_nullify_slope=1/10; 
-k_nullify_time=10;
+k_nullify_time=25;
 PV_Power_Capacity=5e3;
 PowerGain=[1e-5,1e-5,0];                            %[PID]
 
 %% Symmetry
-Start_Control=0.5;
+Start_Control=5;
 P_gain=5e-5;                                     %[divide by 10 if simulating malfunction]
 stair_sample=0.02;
 mask_sample=0.1;

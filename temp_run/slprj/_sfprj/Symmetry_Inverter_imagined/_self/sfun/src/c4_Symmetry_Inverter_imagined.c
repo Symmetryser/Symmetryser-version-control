@@ -239,7 +239,7 @@ static void sf_c4_Symmetry_Inverter_imagined
   c4_b_CC = (real_T (*)[3])ssGetOutputPortSignal(chartInstance->S, 1);
   c4_b_amp = (real_T *)ssGetInputPortSignal(chartInstance->S, 0);
   _sfTime_ = (real_T)ssGetT(chartInstance->S);
-  _SFD_CC_CALL(CHART_ENTER_SFUNCTION_TAG, 3U, chartInstance->c4_sfEvent);
+  _SFD_CC_CALL(CHART_ENTER_SFUNCTION_TAG, 1U, chartInstance->c4_sfEvent);
   _SFD_DATA_RANGE_CHECK(*c4_b_amp, 0U);
   for (c4_i2 = 0; c4_i2 < 3; c4_i2++) {
     _SFD_DATA_RANGE_CHECK((*c4_b_CC)[c4_i2], 1U);
@@ -251,7 +251,7 @@ static void sf_c4_Symmetry_Inverter_imagined
 
   _SFD_DATA_RANGE_CHECK(*c4_b_t, 3U);
   chartInstance->c4_sfEvent = CALL_EVENT;
-  _SFD_CC_CALL(CHART_ENTER_DURING_FUNCTION_TAG, 3U, chartInstance->c4_sfEvent);
+  _SFD_CC_CALL(CHART_ENTER_DURING_FUNCTION_TAG, 1U, chartInstance->c4_sfEvent);
   c4_hoistedGlobal = *c4_b_amp;
   c4_b_hoistedGlobal = *c4_b_t;
   c4_amp = c4_hoistedGlobal;
@@ -279,20 +279,20 @@ static void sf_c4_Symmetry_Inverter_imagined
     c4_CC[c4_i5] = 0.0;
   }
 
-  _SFD_EML_CALL(0U, chartInstance->c4_sfEvent, 5);
+  _SFD_EML_CALL(0U, chartInstance->c4_sfEvent, 8);
   c4_CC_mtx[0] = c4_amp;
   c4_CC_mtx[3] = 50.0;
-  c4_CC_mtx[6] = c4_phase[0];
+  c4_CC_mtx[6] = 0.0;
   c4_CC_mtx[9] = 0.0;
   c4_CC_mtx[1] = c4_amp;
   c4_CC_mtx[4] = 50.0;
-  c4_CC_mtx[7] = c4_phase[0] - 2.0943951023931953;
+  c4_CC_mtx[7] = -2.0943951023931953;
   c4_CC_mtx[10] = 0.0;
   c4_CC_mtx[2] = c4_amp;
   c4_CC_mtx[5] = 50.0;
-  c4_CC_mtx[8] = c4_phase[0] - 4.1887902047863905;
+  c4_CC_mtx[8] = -4.1887902047863905;
   c4_CC_mtx[11] = 0.0;
-  _SFD_EML_CALL(0U, chartInstance->c4_sfEvent, 13);
+  _SFD_EML_CALL(0U, chartInstance->c4_sfEvent, 16);
   c4_b = c4_CC_mtx[3];
   c4_y = 6.2831853071795862 * c4_b;
   c4_a = c4_y;
@@ -333,13 +333,13 @@ static void sf_c4_Symmetry_Inverter_imagined
     c4_CC[c4_i6] = c4_j_y[c4_i6];
   }
 
-  _SFD_EML_CALL(0U, chartInstance->c4_sfEvent, -13);
+  _SFD_EML_CALL(0U, chartInstance->c4_sfEvent, -16);
   _SFD_SYMBOL_SCOPE_POP();
   for (c4_i7 = 0; c4_i7 < 3; c4_i7++) {
     (*c4_b_CC)[c4_i7] = c4_CC[c4_i7];
   }
 
-  _SFD_CC_CALL(EXIT_OUT_OF_FUNCTION_TAG, 3U, chartInstance->c4_sfEvent);
+  _SFD_CC_CALL(EXIT_OUT_OF_FUNCTION_TAG, 1U, chartInstance->c4_sfEvent);
   _SFD_CHECK_FOR_STATE_INCONSISTENCY(_Symmetry_Inverter_imaginedMachineNumber_,
     chartInstance->chartNumber, chartInstance->instanceNumber);
 }
@@ -782,10 +782,10 @@ extern void utFree(void*);
 
 void sf_c4_Symmetry_Inverter_imagined_get_check_sum(mxArray *plhs[])
 {
-  ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(633476332U);
-  ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(3593379129U);
-  ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(3134667233U);
-  ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(4006316550U);
+  ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(360799177U);
+  ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(2096256761U);
+  ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(2704157681U);
+  ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(1534322109U);
 }
 
 mxArray *sf_c4_Symmetry_Inverter_imagined_get_autoinheritance_info(void)
@@ -797,7 +797,7 @@ mxArray *sf_c4_Symmetry_Inverter_imagined_get_autoinheritance_info(void)
     autoinheritanceFields);
 
   {
-    mxArray *mxChecksum = mxCreateString("SejQJQPLKIzkCiabyXOz6F");
+    mxArray *mxChecksum = mxCreateString("kWdqI56RZmoy4NIG1OdcKE");
     mxSetField(mxAutoinheritanceInfo,0,"checksum",mxChecksum);
   }
 
@@ -987,7 +987,7 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
 
         /* Initialization of MATLAB Function Model Coverage */
         _SFD_CV_INIT_EML(0,1,1,0,0,0,0,0,0,0,0);
-        _SFD_CV_INIT_EML_FCN(0,0,"eML_blk_kernel",0,-1,646);
+        _SFD_CV_INIT_EML_FCN(0,0,"eML_blk_kernel",0,-1,740);
         _SFD_TRANS_COV_WTS(0,0,0,1,0);
         if (chartAlreadyPresent==0) {
           _SFD_TRANS_COV_MAPS(0,
@@ -1043,7 +1043,7 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
 
 static const char* sf_get_instance_specialization(void)
 {
-  return "aqabbMzr8EZxSk5U9LsRMB";
+  return "iSMDRJtdsuRUsnAaL3F3j";
 }
 
 static void sf_opaque_initialize_c4_Symmetry_Inverter_imagined(void
@@ -1229,10 +1229,10 @@ static void mdlSetWorkWidths_c4_Symmetry_Inverter_imagined(SimStruct *S)
   }
 
   ssSetOptions(S,ssGetOptions(S)|SS_OPTION_WORKS_WITH_CODE_REUSE);
-  ssSetChecksum0(S,(3216676653U));
-  ssSetChecksum1(S,(284053387U));
-  ssSetChecksum2(S,(1815025021U));
-  ssSetChecksum3(S,(2864013558U));
+  ssSetChecksum0(S,(1509214272U));
+  ssSetChecksum1(S,(915391392U));
+  ssSetChecksum2(S,(4151454385U));
+  ssSetChecksum3(S,(1677055331U));
   ssSetmdlDerivatives(S, NULL);
   ssSetExplicitFCSSCtrl(S,1);
   ssSupportsMultipleExecInstances(S,1);

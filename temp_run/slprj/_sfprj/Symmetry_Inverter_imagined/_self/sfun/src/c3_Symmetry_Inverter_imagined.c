@@ -190,7 +190,7 @@ static void sf_c3_Symmetry_Inverter_imagined
   c3_REG_norm = (real_T *)ssGetOutputPortSignal(chartInstance->S, 1);
   c3_amplitude_R = (real_T *)ssGetInputPortSignal(chartInstance->S, 0);
   _sfTime_ = (real_T)ssGetT(chartInstance->S);
-  _SFD_CC_CALL(CHART_ENTER_SFUNCTION_TAG, 2U, chartInstance->c3_sfEvent);
+  _SFD_CC_CALL(CHART_ENTER_SFUNCTION_TAG, 1U, chartInstance->c3_sfEvent);
   _SFD_DATA_RANGE_CHECK(*c3_amplitude_R, 0U);
   _SFD_DATA_RANGE_CHECK(*c3_REG_norm, 1U);
   _SFD_DATA_RANGE_CHECK(*c3_amplitude_S, 2U);
@@ -308,7 +308,7 @@ static void c3_chartstep_c3_Symmetry_Inverter_imagined
   c3_b_amplitude_S = (real_T *)ssGetInputPortSignal(chartInstance->S, 1);
   c3_b_REG_norm = (real_T *)ssGetOutputPortSignal(chartInstance->S, 1);
   c3_b_amplitude_R = (real_T *)ssGetInputPortSignal(chartInstance->S, 0);
-  _SFD_CC_CALL(CHART_ENTER_DURING_FUNCTION_TAG, 2U, chartInstance->c3_sfEvent);
+  _SFD_CC_CALL(CHART_ENTER_DURING_FUNCTION_TAG, 1U, chartInstance->c3_sfEvent);
   c3_hoistedGlobal = *c3_b_amplitude_R;
   c3_b_hoistedGlobal = *c3_b_amplitude_S;
   c3_c_hoistedGlobal = *c3_b_amplitude_T;
@@ -476,7 +476,7 @@ static void c3_chartstep_c3_Symmetry_Inverter_imagined
   _SFD_EML_CALL(0U, chartInstance->c3_sfEvent, -14);
   _SFD_SYMBOL_SCOPE_POP();
   *c3_b_REG_norm = c3_REG_norm;
-  _SFD_CC_CALL(EXIT_OUT_OF_FUNCTION_TAG, 2U, chartInstance->c3_sfEvent);
+  _SFD_CC_CALL(EXIT_OUT_OF_FUNCTION_TAG, 1U, chartInstance->c3_sfEvent);
 }
 
 static void initSimStructsc3_Symmetry_Inverter_imagined

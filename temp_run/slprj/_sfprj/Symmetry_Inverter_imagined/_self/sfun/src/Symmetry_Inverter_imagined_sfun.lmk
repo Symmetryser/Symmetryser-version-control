@@ -9,6 +9,7 @@ OBJECTS = \
 	"lccstub.obj"\
 	"Symmetry_Inverter_imagined_sfun.obj"\
 	"c1_Symmetry_Inverter_imagined.obj"\
+	"c3_Symmetry_Inverter_imagined.obj"\
 	"c4_Symmetry_Inverter_imagined.obj"\
 	"c5_Symmetry_Inverter_imagined.obj"\
 	"Symmetry_Inverter_imagined_sfun_registry.obj"\
@@ -36,6 +37,8 @@ Symmetry_Inverter_imagined_sfun.obj :	"Symmetry_Inverter_imagined_sfun.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "Symmetry_Inverter_imagined_sfun.c"
 c1_Symmetry_Inverter_imagined.obj :	"c1_Symmetry_Inverter_imagined.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c1_Symmetry_Inverter_imagined.c"
+c3_Symmetry_Inverter_imagined.obj :	"c3_Symmetry_Inverter_imagined.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c3_Symmetry_Inverter_imagined.c"
 c4_Symmetry_Inverter_imagined.obj :	"c4_Symmetry_Inverter_imagined.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c4_Symmetry_Inverter_imagined.c"
 c5_Symmetry_Inverter_imagined.obj :	"c5_Symmetry_Inverter_imagined.c"

@@ -3,6 +3,7 @@
 #include "Symmetry_Inverter_imagined_sfun.h"
 #include "Symmetry_Inverter_imagined_sfun_debug_macros.h"
 #include "c1_Symmetry_Inverter_imagined.h"
+#include "c3_Symmetry_Inverter_imagined.h"
 #include "c4_Symmetry_Inverter_imagined.h"
 #include "c5_Symmetry_Inverter_imagined.h"
 
@@ -34,6 +35,11 @@ unsigned int sf_Symmetry_Inverter_imagined_method_dispatcher(SimStruct
 {
   if (chartFileNumber==1) {
     c1_Symmetry_Inverter_imagined_method_dispatcher(simstructPtr, method, data);
+    return 1;
+  }
+
+  if (chartFileNumber==3) {
+    c3_Symmetry_Inverter_imagined_method_dispatcher(simstructPtr, method, data);
     return 1;
   }
 
@@ -80,10 +86,10 @@ unsigned int sf_Symmetry_Inverter_imagined_process_check_sum_call( int nlhs,
       ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(0U);
       ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(0U);
     } else if (!strcmp(commandName,"makefile")) {
-      ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(997668412U);
-      ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(702886966U);
-      ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(348167729U);
-      ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(3589282353U);
+      ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(26462945U);
+      ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(3054059497U);
+      ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(4086618368U);
+      ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(2167780738U);
     } else if (nrhs==3 && !strcmp(commandName,"chart")) {
       unsigned int chartFileNumber;
       chartFileNumber = (unsigned int)mxGetScalar(prhs[2]);
@@ -93,6 +99,14 @@ unsigned int sf_Symmetry_Inverter_imagined_process_check_sum_call( int nlhs,
           extern void sf_c1_Symmetry_Inverter_imagined_get_check_sum(mxArray
             *plhs[]);
           sf_c1_Symmetry_Inverter_imagined_get_check_sum(plhs);
+          break;
+        }
+
+       case 3:
+        {
+          extern void sf_c3_Symmetry_Inverter_imagined_get_check_sum(mxArray
+            *plhs[]);
+          sf_c3_Symmetry_Inverter_imagined_get_check_sum(plhs);
           break;
         }
 
@@ -127,10 +141,10 @@ unsigned int sf_Symmetry_Inverter_imagined_process_check_sum_call( int nlhs,
       return 0;
     }
   } else {
-    ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(4132052412U);
-    ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(3175313035U);
-    ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(3687265834U);
-    ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(3669684679U);
+    ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(2702894331U);
+    ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(1848812169U);
+    ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(2870661965U);
+    ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(3723092825U);
   }
 
   return 1;
@@ -179,9 +193,22 @@ unsigned int sf_Symmetry_Inverter_imagined_autoinheritance_info( int nlhs,
         break;
       }
 
+     case 3:
+      {
+        if (strcmp(aiChksum, "NrBsKEkFV12tmzXsduVsZB") == 0) {
+          extern mxArray
+            *sf_c3_Symmetry_Inverter_imagined_get_autoinheritance_info(void);
+          plhs[0] = sf_c3_Symmetry_Inverter_imagined_get_autoinheritance_info();
+          break;
+        }
+
+        plhs[0] = mxCreateDoubleMatrix(0,0,mxREAL);
+        break;
+      }
+
      case 4:
       {
-        if (strcmp(aiChksum, "SejQJQPLKIzkCiabyXOz6F") == 0) {
+        if (strcmp(aiChksum, "kWdqI56RZmoy4NIG1OdcKE") == 0) {
           extern mxArray
             *sf_c4_Symmetry_Inverter_imagined_get_autoinheritance_info(void);
           plhs[0] = sf_c4_Symmetry_Inverter_imagined_get_autoinheritance_info();
@@ -246,6 +273,17 @@ unsigned int sf_Symmetry_Inverter_imagined_get_eml_resolved_functions_info( int
           *sf_c1_Symmetry_Inverter_imagined_get_eml_resolved_functions_info(void);
         mxArray *persistentMxArray = (mxArray *)
           sf_c1_Symmetry_Inverter_imagined_get_eml_resolved_functions_info();
+        plhs[0] = mxDuplicateArray(persistentMxArray);
+        mxDestroyArray(persistentMxArray);
+        break;
+      }
+
+     case 3:
+      {
+        extern const mxArray
+          *sf_c3_Symmetry_Inverter_imagined_get_eml_resolved_functions_info(void);
+        mxArray *persistentMxArray = (mxArray *)
+          sf_c3_Symmetry_Inverter_imagined_get_eml_resolved_functions_info();
         plhs[0] = mxDuplicateArray(persistentMxArray);
         mxDestroyArray(persistentMxArray);
         break;
@@ -318,9 +356,19 @@ unsigned int sf_Symmetry_Inverter_imagined_third_party_uses_info( int nlhs,
         }
       }
 
+     case 3:
+      {
+        if (strcmp(tpChksum, "iFEmVdwOmuRS3l88HaCuD") == 0) {
+          extern mxArray *sf_c3_Symmetry_Inverter_imagined_third_party_uses_info
+            (void);
+          plhs[0] = sf_c3_Symmetry_Inverter_imagined_third_party_uses_info();
+          break;
+        }
+      }
+
      case 4:
       {
-        if (strcmp(tpChksum, "aqabbMzr8EZxSk5U9LsRMB") == 0) {
+        if (strcmp(tpChksum, "iSMDRJtdsuRUsnAaL3F3j") == 0) {
           extern mxArray *sf_c4_Symmetry_Inverter_imagined_third_party_uses_info
             (void);
           plhs[0] = sf_c4_Symmetry_Inverter_imagined_third_party_uses_info();
@@ -350,7 +398,7 @@ void Symmetry_Inverter_imagined_debug_initialize(struct SfDebugInstanceStruct*
   debugInstance)
 {
   _Symmetry_Inverter_imaginedMachineNumber_ = sf_debug_initialize_machine
-    (debugInstance,"Symmetry_Inverter_imagined","sfun",0,3,0,0,0);
+    (debugInstance,"Symmetry_Inverter_imagined","sfun",0,4,0,0,0);
   sf_debug_set_machine_event_thresholds(debugInstance,
     _Symmetry_Inverter_imaginedMachineNumber_,0,0);
   sf_debug_set_machine_data_thresholds(debugInstance,

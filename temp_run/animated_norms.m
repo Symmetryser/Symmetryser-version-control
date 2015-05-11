@@ -17,7 +17,7 @@ Phase_1=[0,-2/3*pi,-4/3*pi];                     %[rad]
 prompt = {'Enter the START time','Enter END time','Animation speed','Animation Detail'};
         dlg_title = 'Inspect animated norms';
         num_lines = 1;
-        defAns = {'0.9','5','0.01','100'};
+        defAns = {'0.1','40','0.001','1000'};
         options = 'off';
         answer = inputdlg(prompt,dlg_title,num_lines,defAns,options);
         if str2num(answer{1})>max(V_AMP_saved.time)||str2num(answer{2})>max(V_AMP_saved.time)

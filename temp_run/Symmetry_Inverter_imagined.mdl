@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.162"
+    ComputedModelVersion    "1.176"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -42,7 +42,7 @@ Model {
       $ObjectID		      3
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [0.0, 0.0, 1280.0, 720.0]
+      Location		      [81.0, 8.0, 1280.0, 720.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		4
@@ -65,15 +65,15 @@ Model {
 	$ClassName		"Simulink.EditorInfo"
 	IsActive		[1]
 	ViewObjType		"SimulinkSubsys"
-	LoadSaveID		"1987"
+	LoadSaveID		"1915"
 	Extents			[1230.0, 546.0]
-	ZoomFactor		[1.0]
-	Offset			[6.0, 157.50912686283482]
+	ZoomFactor		[0.6]
+	Offset			[43.333333333333293, 326.66666666666669]
       }
     }
   }
-  PhysicalModelingChecksum "1816944801"
-  PhysicalModelingParameterChecksum "1039336150"
+  PhysicalModelingChecksum "3286237469"
+  PhysicalModelingParameterChecksum "575955755"
   PhysicalModelingProducts "Power_System_Blocks"
   Created		  "Thu Oct 02 12:18:57 2014"
   Creator		  "gorbep"
@@ -81,9 +81,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Neukirchner László"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri May 08 17:48:01 2015"
-  RTWModifiedTimeStamp	  353008065
-  ModelVersionFormat	  "1.%<AutoIncrement:162>"
+  LastModifiedDate	  "Sat May 30 18:28:02 2015"
+  RTWModifiedTimeStamp	  354911240
+  ModelVersionFormat	  "1.%<AutoIncrement:176>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1086,7 +1086,7 @@ Model {
   }
   System {
     Name		    "Symmetry_Inverter_imagined"
-    Location		    [2, 0, 1364, 720]
+    Location		    [100, 109, 1380, 829]
     Open		    off
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -1098,9 +1098,9 @@ Model {
     TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "125"
+    ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "5633"
+    SIDHighWatermark	    "5650"
     Block {
       BlockType		      Constant
       Name		      "Constant"
@@ -1183,7 +1183,7 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"Loads"
-	Location		[2, 2, 1364, 728]
+	Location		[0, 0, 1280, 720]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -1195,7 +1195,7 @@ Model {
 	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"100"
+	ZoomFactor		"50"
 	Block {
 	  BlockType		  Reference
 	  Name			  "Breaker1"
@@ -1434,7 +1434,7 @@ Model {
 	  MaskHideContents	  off
 	  System {
 	    Name		    "Conncection_Measurements"
-	    Location		    [2, 2, 1364, 728]
+	    Location		    [0, 0, 1280, 720]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -1446,7 +1446,7 @@ Model {
 	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "125"
+	    ZoomFactor		    "50"
 	    Block {
 	      BlockType		      SubSystem
 	      Name		      "3phasePQ"
@@ -23016,7 +23016,7 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"Network_ohmic6"
-	Location		[2, 2, 1364, 728]
+	Location		[0, 0, 1280, 720]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -28167,7 +28167,7 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"Symmetriser"
-	Location		[0, 0, 1280, 720]
+	Location		[81, 8, 1361, 728]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -28196,8 +28196,8 @@ Model {
 	  MaskHideContents	  off
 	  System {
 	    Name		    "Calculate_Norms"
-	    Location		    [0, 0, 1280, 720]
-	    Open		    on
+	    Location		    [81, 8, 1361, 728]
+	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -28214,7 +28214,7 @@ Model {
 	      Name		      "Mearusement_calc"
 	      SID		      "1915"
 	      Ports		      [3, 4]
-	      Position		      [370, 194, 500, 701]
+	      Position		      [370, 375, 505, 505]
 	      ZOrder		      847
 	      MinAlgLoopOccurrences   off
 	      PropExecContextOutsideSubsystem off
@@ -28225,8 +28225,8 @@ Model {
 	      MaskHideContents	      off
 	      System {
 		Name			"Mearusement_calc"
-		Location		[0, 0, 1280, 720]
-		Open			off
+		Location		[81, 8, 1361, 728]
+		Open			on
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -29700,7 +29700,7 @@ Model {
 	      Name		      "To File1"
 	      SID		      "5633"
 	      Ports		      [1]
-	      Position		      [695, 617, 950, 653]
+	      Position		      [710, 542, 965, 578]
 	      ZOrder		      1591
 	      ShowName		      off
 	      Filename		      "saved_data/REG_saved.mat"
@@ -29713,7 +29713,7 @@ Model {
 	      Name		      "To File3"
 	      SID		      "3242"
 	      Ports		      [1]
-	      Position		      [710, 257, 965, 293]
+	      Position		      [710, 337, 965, 373]
 	      ZOrder		      1575
 	      ShowName		      off
 	      Filename		      "saved_data/GEO_saved.mat"
@@ -29726,7 +29726,7 @@ Model {
 	      Name		      "To File4"
 	      SID		      "2605"
 	      Ports		      [1]
-	      Position		      [710, 427, 965, 463]
+	      Position		      [710, 407, 965, 443]
 	      ZOrder		      1573
 	      ShowName		      off
 	      Filename		      "saved_data/V_AMP_saved.mat"
@@ -29739,7 +29739,7 @@ Model {
 	      Name		      "To File5"
 	      SID		      "2604"
 	      Ports		      [1]
-	      Position		      [710, 517, 965, 553]
+	      Position		      [710, 477, 965, 513]
 	      ZOrder		      1572
 	      ShowName		      off
 	      Filename		      "saved_data/V_ANG_saved.mat"
@@ -29752,7 +29752,7 @@ Model {
 	      Name		      "Voltage Measurement"
 	      SID		      "1981"
 	      Ports		      [0, 1, 0, 0, 0, 2]
-	      Position		      [290, 333, 315, 357]
+	      Position		      [290, 383, 315, 407]
 	      ZOrder		      837
 	      ShowName		      off
 	      LibraryVersion	      "1.2191"
@@ -29782,7 +29782,7 @@ Model {
 	      Name		      "Voltage Measurement2"
 	      SID		      "1983"
 	      Ports		      [0, 1, 0, 0, 0, 2]
-	      Position		      [290, 523, 315, 547]
+	      Position		      [290, 473, 315, 497]
 	      ZOrder		      839
 	      ShowName		      off
 	      LibraryVersion	      "1.2191"
@@ -29796,7 +29796,7 @@ Model {
 	      BlockType		      PMIOPort
 	      Name		      "R"
 	      SID		      "1991"
-	      Position		      [20, 325, 35, 355]
+	      Position		      [20, 375, 35, 405]
 	      ZOrder		      852
 	      Port		      "1"
 	      Side		      "Left"
@@ -29814,7 +29814,7 @@ Model {
 	      BlockType		      PMIOPort
 	      Name		      "T"
 	      SID		      "1993"
-	      Position		      [20, 515, 35, 545]
+	      Position		      [20, 465, 35, 495]
 	      ZOrder		      854
 	      Port		      "3"
 	      Side		      "Left"
@@ -29823,7 +29823,7 @@ Model {
 	      BlockType		      PMIOPort
 	      Name		      "N"
 	      SID		      "1994"
-	      Position		      [20, 585, 35, 615]
+	      Position		      [20, 510, 35, 540]
 	      ZOrder		      855
 	      Port		      "4"
 	      Side		      "Left"
@@ -29832,7 +29832,7 @@ Model {
 	      BlockType		      Outport
 	      Name		      "GEO"
 	      SID		      "3240"
-	      Position		      [610, 268, 640, 282]
+	      Position		      [600, 388, 630, 402]
 	      ZOrder		      1570
 	      IconDisplay	      "Port number"
 	    }
@@ -29840,7 +29840,7 @@ Model {
 	      BlockType		      Outport
 	      Name		      "ANG"
 	      SID		      "3542"
-	      Position		      [610, 488, 640, 502]
+	      Position		      [600, 448, 630, 462]
 	      ZOrder		      1590
 	      Port		      "2"
 	      IconDisplay	      "Port number"
@@ -29848,21 +29848,18 @@ Model {
 	    Line {
 	      SrcBlock		      "Voltage Measurement"
 	      SrcPort		      1
-	      Points		      [23, 0; 0, -65]
 	      DstBlock		      "Mearusement_calc"
 	      DstPort		      1
 	    }
 	    Line {
 	      SrcBlock		      "Voltage Measurement1"
 	      SrcPort		      1
-	      Points		      [22, 0; 0, 10]
 	      DstBlock		      "Mearusement_calc"
 	      DstPort		      2
 	    }
 	    Line {
 	      SrcBlock		      "Voltage Measurement2"
 	      SrcPort		      1
-	      Points		      [21, 0; 0, 85]
 	      DstBlock		      "Mearusement_calc"
 	      DstPort		      3
 	    }
@@ -29880,12 +29877,18 @@ Model {
 	      Points		      [-59, 0]
 	      Branch {
 		ConnectType		"DEST_SRC"
-		Points			[0, -95]
+		Points			[0, 35]
+		DstBlock		"N"
+		DstPort			RConn1
+	      }
+	      Branch {
+		ConnectType		"DEST_SRC"
+		Points			[0, -45]
 		Branch {
 		  ConnectType		  "DEST_DEST"
 		  SrcBlock		  "Voltage Measurement"
 		  SrcPort		  LConn2
-		  Points		  [-59, 0; 0, 95]
+		  Points		  [-59, 0; 0, 45]
 		}
 		Branch {
 		  ConnectType		  "DEST_DEST"
@@ -29893,12 +29896,6 @@ Model {
 		  SrcPort		  LConn2
 		  Points		  [-59, 0]
 		}
-	      }
-	      Branch {
-		ConnectType		"DEST_SRC"
-		Points			[0, 60]
-		DstBlock		"N"
-		DstPort			RConn1
 	      }
 	    }
 	    Line {
@@ -29918,30 +29915,29 @@ Model {
 	    Line {
 	      SrcBlock		      "Mearusement_calc"
 	      SrcPort		      3
-	      Points		      [0, 25; 77, 0]
+	      Points		      [72, 0]
 	      Branch {
-		Points			[0, -40]
-		DstBlock		"ANG"
+		Points			[0, 40]
+		DstBlock		"To File5"
 		DstPort			1
 	      }
 	      Branch {
-		DstBlock		"To File5"
+		DstBlock		"ANG"
 		DstPort			1
 	      }
 	    }
 	    Line {
 	      SrcBlock		      "Mearusement_calc"
 	      SrcPort		      2
-	      Points		      [0, 60]
 	      DstBlock		      "To File4"
 	      DstPort		      1
 	    }
 	    Line {
 	      SrcBlock		      "Mearusement_calc"
 	      SrcPort		      1
-	      Points		      [0, 15; 28, 0]
+	      Points		      [23, 0]
 	      Branch {
-		Points			[0, -40; 142, 0; 0, 40]
+		Points			[0, -40]
 		DstBlock		"To File3"
 		DstPort			1
 	      }
@@ -29953,6 +29949,7 @@ Model {
 	    Line {
 	      SrcBlock		      "Mearusement_calc"
 	      SrcPort		      4
+	      Points		      [2, 0; 0, 75]
 	      DstBlock		      "To File1"
 	      DstPort		      1
 	    }
@@ -37203,7 +37200,7 @@ Model {
 	    MarkerStyles	    "none|none|none|none|none|none"
 	  }
 	  ShowLegends		  on
-	  LegendLocations	  "0.83104     0.91312     0.14487    0.030761"
+	  LegendLocations	  "0.83271     0.91452     0.14487    0.030761"
 	  YMin			  "0"
 	  YMax			  "140000"
 	  SaveName		  "ScopeData2"
@@ -37342,6 +37339,191 @@ Model {
 	    DstBlock		    "Current Control"
 	    DstPort		    1
 	  }
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Symmetryc Ohmic Load"
+      SID		      "5646"
+      Ports		      [0, 0, 0, 0, 0, 4]
+      Position		      [1180, 252, 1220, 313]
+      ZOrder		      1627
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"Symmetryc Ohmic Load"
+	Location		[0, 0, 1280, 720]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Reference
+	  Name			  "R_load"
+	  SID			  "5637"
+	  Ports			  [0, 0, 0, 0, 0, 1, 1]
+	  Position		  [175, 21, 245, 49]
+	  ZOrder		  1615
+	  ShowName		  off
+	  LibraryVersion	  "1.2191"
+	  SourceBlock		  "powerlib/Elements/Series RLC Branch"
+	  SourceType		  "Series RLC Branch"
+	  LConnTagsString	  "__new0"
+	  RConnTagsString	  "__new0"
+	  BranchType		  "R"
+	  Resistance		  "50"
+	  Inductance		  "0.003185"
+	  SetiL0		  off
+	  InitialCurrent	  "0"
+	  Capacitance		  "1.0"
+	  Setx0			  off
+	  InitialVoltage	  "0"
+	  Measurements		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "R_load1"
+	  SID			  "5638"
+	  Ports			  [0, 0, 0, 0, 0, 1, 1]
+	  Position		  [175, 86, 245, 114]
+	  ZOrder		  1619
+	  ShowName		  off
+	  LibraryVersion	  "1.2191"
+	  SourceBlock		  "powerlib/Elements/Series RLC Branch"
+	  SourceType		  "Series RLC Branch"
+	  LConnTagsString	  "__new0"
+	  RConnTagsString	  "__new0"
+	  BranchType		  "R"
+	  Resistance		  "50"
+	  Inductance		  "0.003185"
+	  SetiL0		  off
+	  InitialCurrent	  "0"
+	  Capacitance		  "1.0"
+	  Setx0			  off
+	  InitialVoltage	  "0"
+	  Measurements		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "R_load2"
+	  SID			  "5639"
+	  Ports			  [0, 0, 0, 0, 0, 1, 1]
+	  Position		  [175, 151, 245, 179]
+	  ZOrder		  1620
+	  ShowName		  off
+	  LibraryVersion	  "1.2191"
+	  SourceBlock		  "powerlib/Elements/Series RLC Branch"
+	  SourceType		  "Series RLC Branch"
+	  LConnTagsString	  "__new0"
+	  RConnTagsString	  "__new0"
+	  BranchType		  "R"
+	  Resistance		  "50"
+	  Inductance		  "0.003185"
+	  SetiL0		  off
+	  InitialCurrent	  "0"
+	  Capacitance		  "1.0"
+	  Setx0			  off
+	  InitialVoltage	  "0"
+	  Measurements		  "None"
+	}
+	Block {
+	  BlockType		  PMIOPort
+	  Name			  "A"
+	  SID			  "5647"
+	  Position		  [25, 28, 55, 42]
+	  ZOrder		  1624
+	  Port			  "1"
+	  Side			  "Left"
+	}
+	Block {
+	  BlockType		  PMIOPort
+	  Name			  "B"
+	  SID			  "5648"
+	  Position		  [25, 93, 55, 107]
+	  ZOrder		  1625
+	  Port			  "2"
+	  Side			  "Left"
+	}
+	Block {
+	  BlockType		  PMIOPort
+	  Name			  "C"
+	  SID			  "5649"
+	  Position		  [25, 158, 55, 172]
+	  ZOrder		  1626
+	  Port			  "3"
+	  Side			  "Left"
+	}
+	Block {
+	  BlockType		  PMIOPort
+	  Name			  "N"
+	  SID			  "5650"
+	  Position		  [25, 228, 55, 242]
+	  ZOrder		  1627
+	  Port			  "4"
+	  Side			  "Left"
+	}
+	Line {
+	  LineType		  "Connection"
+	  SrcBlock		  "R_load2"
+	  SrcPort		  RConn1
+	  Points		  [13, 0]
+	  Branch {
+	    ConnectType		    "DEST_DEST"
+	    SrcBlock		    "N"
+	    SrcPort		    RConn1
+	    Points		    [204, 0; -1, -70]
+	  }
+	  Branch {
+	    ConnectType		    "DEST_DEST"
+	    Points		    [273, 100; 0, 65]
+	    Branch {
+	      ConnectType	      "SRC_DEST"
+	      SrcBlock		      "R_load"
+	      SrcPort		      RConn1
+	      Points		      [13, 0; 0, 65]
+	    }
+	    Branch {
+	      ConnectType	      "SRC_DEST"
+	      SrcBlock		      "R_load1"
+	      SrcPort		      RConn1
+	      Points		      [13, 0]
+	    }
+	  }
+	}
+	Line {
+	  LineType		  "Connection"
+	  SrcBlock		  "A"
+	  SrcPort		  RConn1
+	  DstBlock		  "R_load"
+	  DstPort		  LConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  SrcBlock		  "B"
+	  SrcPort		  RConn1
+	  DstBlock		  "R_load1"
+	  DstPort		  LConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  SrcBlock		  "C"
+	  SrcPort		  RConn1
+	  DstBlock		  "R_load2"
+	  DstPort		  LConn1
 	}
       }
     }
@@ -43454,7 +43636,7 @@ Model {
       Position		      [110, 360, 170, 384]
       ZOrder		      1
       ShowName		      off
-      LibraryVersion	      "1.2191"
+      LibraryVersion	      "*1.2191"
       UserDataPersistent      on
       UserData		      "DataTag0"
       FontName		      "Times New Roman"
@@ -43669,32 +43851,68 @@ Model {
       SrcBlock		      "Network_ohmic2"
       SrcPort		      RConn4
       Points		      [70, 0]
-      DstBlock		      "Network_ohmic6"
-      DstPort		      LConn4
+      Branch {
+	ConnectType		"DEST_DEST"
+	SrcBlock		"Symmetryc Ohmic Load"
+	SrcPort			LConn4
+	Points			[-125, 0]
+      }
+      Branch {
+	ConnectType		"DEST_SRC"
+	DstBlock		"Network_ohmic6"
+	DstPort			LConn4
+      }
     }
     Line {
       LineType		      "Connection"
       SrcBlock		      "Network_ohmic2"
       SrcPort		      RConn3
       Points		      [60, 0]
-      DstBlock		      "Network_ohmic6"
-      DstPort		      LConn3
+      Branch {
+	ConnectType		"DEST_DEST"
+	SrcBlock		"Symmetryc Ohmic Load"
+	SrcPort			LConn3
+	Points			[-135, 0]
+      }
+      Branch {
+	ConnectType		"DEST_SRC"
+	DstBlock		"Network_ohmic6"
+	DstPort			LConn3
+      }
     }
     Line {
       LineType		      "Connection"
       SrcBlock		      "Network_ohmic2"
       SrcPort		      RConn2
       Points		      [50, 0]
-      DstBlock		      "Network_ohmic6"
-      DstPort		      LConn2
+      Branch {
+	ConnectType		"DEST_DEST"
+	SrcBlock		"Symmetryc Ohmic Load"
+	SrcPort			LConn2
+	Points			[-145, 0]
+      }
+      Branch {
+	ConnectType		"DEST_SRC"
+	DstBlock		"Network_ohmic6"
+	DstPort			LConn2
+      }
     }
     Line {
       LineType		      "Connection"
       SrcBlock		      "Network_ohmic2"
       SrcPort		      RConn1
       Points		      [40, 0]
-      DstBlock		      "Network_ohmic6"
-      DstPort		      LConn1
+      Branch {
+	ConnectType		"DEST_DEST"
+	SrcBlock		"Symmetryc Ohmic Load"
+	SrcPort			LConn1
+	Points			[-155, 0]
+      }
+      Branch {
+	ConnectType		"DEST_SRC"
+	DstBlock		"Network_ohmic6"
+	DstPort			LConn1
+      }
     }
     Line {
       LineType		      "Connection"
@@ -43969,7 +44187,10 @@ Stateflow {
     firstTransition	    12
     firstJunction	    11
     viewObj		    2
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    10
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -43994,15 +44215,14 @@ Stateflow {
     decomposition	    CLUSTER_STATE
     eml {
       isEML		      1
-      script		      "function GEO_norm = fcn(amplitude_R,amplitude_S,amplitude_T,phase_R,phase_S,phase_T)\n%#codegen\n"
-      "\nx1=[0,0,0,0];\ny1=[0,0,0,0];\nx2=[0,0,0,0];\ny2=[0,0,0,0];\n\nGEO_norm=0;\n\ncoder.extrinsic('geometry_solver'"
-      ")\n\n        %% Ideal parameters\n        Amplitude_1=[325.3,325.3,325.3];                     %[V]\n        %Ph"
-      "ase_1=[-1.5855,2.6033,0.5089];\n        Phase_1=[0,-2/3*pi,-4/3*pi];                     %[rad]\n      \n       "
-      " %% Real parameters\n        Amplitude_2=[amplitude_R,amplitude_S,amplitude_T];\n        Phase_2=[phase_R,phase_"
-      "S,phase_T];\n        %Extension of the vectors with the first element to get closed triangles on\n        %plots"
-      " and for use as polygons\n        Amplitude_1_ex=[Amplitude_1 Amplitude_1(1)];\n        Phase_1_ex=[Phase_1 Phas"
-      "e_1(1)];\n        Amplitude_2_ex=[Amplitude_2 Amplitude_2(1)];\n        Phase_2_ex=[Phase_2 Phase_2(1)];\n      "
-      "  \n        GEO_norm=geometry_solver(Amplitude_1_ex, Phase_1_ex, Amplitude_2_ex, Phase_2_ex);   \n        "
+      script		      "function GEO_norm = fcn(amplitude_R,amplitude_S,amplitude_T,phase_R,phase_S,phase_T)\n% declarati"
+      "on\nx1=[0,0,0,0];\ny1=[0,0,0,0];\nx2=[0,0,0,0];\ny2=[0,0,0,0];\nGEO_norm=0;\ncoder.extrinsic('geometry_solver_ex"
+      "panded_3')\n%% Ideal parameters\nAmplitude_1=[325.3,325.3,325.3];                     %[V]\n%Phase_1=[-1.5855,2."
+      "6033,0.5089];\nPhase_1=[0,-2/3*pi,-4/3*pi];                     %[rad]\n%% Real parameters\nAmplitude_2=[amplitu"
+      "de_R,amplitude_S,amplitude_T];\nPhase_2=[phase_R,phase_S,phase_T];\n%Extension of the vectors with the first ele"
+      "ment to get closed triangles on\nAmplitude_1_ex=[Amplitude_1 Amplitude_1(1)];\nPhase_1_ex=[Phase_1 Phase_1(1)];\n"
+      "Amplitude_2_ex=[Amplitude_2 Amplitude_2(1)];\nPhase_2_ex=[Phase_2 Phase_2(1)];\n\nGEO_norm=geometry_solver_expan"
+      "ded_3(Amplitude_1_ex, Phase_1_ex, Amplitude_2_ex, Phase_2_ex);   \n\n        "
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
@@ -44205,8 +44425,6 @@ Stateflow {
     firstJunction	    23
     viewObj		    14
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    11
     decomposition	    CLUSTER_CHART
     type		    EML_CHART

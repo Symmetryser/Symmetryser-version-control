@@ -4,7 +4,7 @@ close all;
 
 %% Simulation initialisation parameters
 CLK=1000;                                           %[sample/s]
-tfin=40;                                           %[s]
+tfin=10;                                           %[s]
 sample=10e-5;                                       %[s/sample]
 t=0:sample:tfin;                                    %[tick]
 
@@ -37,12 +37,18 @@ NetworkBreaker=[1e5,1e5,1e5,1e5];                %[Break RSTN line at given sim.
 
 %% Loads
 Load_Wire_Resistance=[0.1,0.2];                     %[Ohm]
-Switch_Load_R= [1,0,0];                             %[Boolean]
-Switch_Load_RL=[0,1,0];                             %[Boolean]
-Switch_Load_RC=[0,0,1];                             %[Boolean]
-START_Load_R= [0.001,100,100];                             %[Boolean in time]
-START_Load_RL=[100,0.001,100];                             %[Boolean in time]
-START_Load_RC=[100,100,0.001];                             %[Boolean in time]
+% Switch_Load_R= [0,0,0];                             %[Boolean]
+% Switch_Load_RL=[0,0,0];                             %[Boolean]
+% Switch_Load_RC=[0,0,0];                             %[Boolean]
+START_Load_R= [100,100,100];                             %[Boolean in time]
+START_Load_RL=[100,100,100];                             %[Boolean in time]
+START_Load_RC=[100,100,100];                             %[Boolean in time]
+% Switch_Load_R= [1,0,0];                             %[Boolean]
+% Switch_Load_RL=[0,1,0];                             %[Boolean]
+% Switch_Load_RC=[0,0,1];                             %[Boolean]
+% START_Load_R= [0.001,100,100];                             %[Boolean in time]
+% START_Load_RL=[100,0.001,100];                             %[Boolean in time]
+% START_Load_RC=[100,100,0.001];                             %[Boolean in time]
 %          %%Ohmic Loads%%%
           Load_R=[50,50,50];                         %[Ohm]
 %          %%Inductive Loads%%%
@@ -60,7 +66,7 @@ PV_Power_Capacity=5e3;
 PowerGain=[1e-5,1e-5,0];                            %[PID]
 
 %% Symmetry
-Start_Control=5;
+Start_Control=1;
 P_gain=5e-5;                                     %[divide by 10 if simulating malfunction]
 stair_sample=0.02;
 mask_sample=0.1;
